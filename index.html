@@ -1696,7 +1696,7 @@ function expandOutfitSelection(profile,overwrite=false){
  const previous=outfitSetForValue(profile.outfitExpandedFrom);
  if(previous&&profile.outfitExpandedFrom!==base)for(const [field,raw]of Object.entries(previous)){
   const values=asList(profile.detail?.[field]),value=outfitDetailValue(field,raw);
-  if(!set[field]&&values.length===1&&values[0]===value&&!profile.detailCustom?.[field]?.trim())profile.detail[field]=[];
+  if(values.length===1&&values[0]===value&&!profile.detailCustom?.[field]?.trim())profile.detail[field]=[];
  }
  for(const [field,raw]of Object.entries(set)){
   if(!overwrite&&(asList(profile.detail?.[field]).length||profile.detailCustom?.[field]?.trim()||profile.outfitExcluded?.[base]?.[field]?.includes(raw)))continue;
