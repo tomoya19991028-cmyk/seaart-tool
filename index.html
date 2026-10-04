@@ -3304,11 +3304,21 @@ function scRailEntries(){
  return [{root:ruProduction,section:'selection',owner:personKey,creature:activeCreatureId,visible:true},{root:person,section:'person',owner:personKey,creature:activeCreatureId,visible:!!personKey&&allPeople().some(p=>p.id===personKey)&&personGroup!=='adult'&&characterKind!=='creature'},{root:creature,section:'creature',owner:personKey,creature:activeCreatureId,visible:!!currentCreature()},{root:adult,section:'adult',owner:personKey,creature:activeCreatureId,visible:adultReady()&&!!personKey}];
 }
 
+// Optional provenance inside existing main maintenance data; never candidate storage.
+// Old saves have no copyOrigins. Entries are used only to detect an explicit re-copy.
+function maCopyOrigins(value){
+ const result={};if(!value||typeof value!=='object'||Array.isArray(value))return result;
+ for(const [key,row]of Object.entries(value)){let pair;try{pair=JSON.parse(key)}catch{continue}
+  if(!Array.isArray(pair)||pair.length!==2||!pair.every(v=>typeof v==='string')||row?.source!=='simple-manga'||typeof row.sourceCardId!=='string'||typeof row.sourceOptionId!=='string')continue;
+  result[key]={source:'simple-manga',sourceCardId:row.sourceCardId,sourceOptionId:row.sourceOptionId};
+ }return result;
+}
+
 function maNormalize(value){
  const v=value&&typeof value==='object'&&!Array.isArray(value)?value:{};
  const text=x=>typeof x==='string'?x:'';
  const cards=(Array.isArray(v.cards)?v.cards:[]).filter(c=>c&&typeof c.id==='string'&&typeof c.name==='string').map(c=>({id:c.id,name:c.name,section:scSection(c),...pgNormalizePlacement(c),type:c.type==='linked'?'linked':'normal',multiple:c.multiple!==false,weights:c.weights!==false,output:text(c.output)||'extra',hidden:!!c.hidden,options:(Array.isArray(c.options)?c.options:[]).filter(o=>o&&typeof o.id==='string'&&typeof o.name==='string').map(o=>({id:o.id,name:o.name,value:text(o.value),note:text(o.note),refs:(Array.isArray(o.refs)?o.refs:[]).filter(r=>r&&typeof r.target==='string'&&typeof r.key==='string').map(r=>({target:r.target,key:r.key}))}))}));
- return {version:1,cards:[...new Map(cards.map(c=>[c.id,c])).values()],hidden:[...new Set((Array.isArray(v.hidden)?v.hidden:[]).filter(x=>typeof x==='string'))],origin:v.origin&&typeof v.origin==='object'&&!Array.isArray(v.origin)?maCopy(v.origin):{},...(v.foundations&&typeof v.foundations==='object'&&!Array.isArray(v.foundations)?{foundations:maCopy(v.foundations)}:{})};
+ return {version:1,cards:[...new Map(cards.map(c=>[c.id,c])).values()],hidden:[...new Set((Array.isArray(v.hidden)?v.hidden:[]).filter(x=>typeof x==='string'))],origin:v.origin&&typeof v.origin==='object'&&!Array.isArray(v.origin)?maCopy(v.origin):{},...(v.copyOrigins&&typeof v.copyOrigins==='object'&&!Array.isArray(v.copyOrigins)?{copyOrigins:maCopyOrigins(v.copyOrigins)}:{}),...(v.foundations&&typeof v.foundations==='object'&&!Array.isArray(v.foundations)?{foundations:maCopy(v.foundations)}:{})};
 }
 function maKey(source,key){return JSON.stringify([source,key])}
 function maIsHidden(source,key){if(source?.startsWith('catalog:'))key=catalog[source.slice(8)]?.find(r=>r.id===key||r.value===key)?.id||key;return mainMaintenance.hidden.includes(maKey(source,key))}
@@ -3596,6 +3606,7 @@ function mbReadBackup(input){
     check(object(o)&&id(o.id)&&str(o.name));for(const k of ['value','note'])if(has(o,k))check(str(o[k]));const refs=has(o,'refs')?o.refs:[];check(Array.isArray(refs));refs.forEach(r=>check(object(r)&&str(r.target)&&str(r.key)));return {id:o.id,name:o.name,value:o.value||'',note:o.note||'',refs:refs.map(r=>({target:r.target,key:r.key}))};
    })};
   })}
+  if(has(m,'copyOrigins')){check(object(m.copyOrigins));const origins=maCopyOrigins(m.copyOrigins);check(Object.keys(origins).length===Object.keys(m.copyOrigins).length);state.mainMaintenance.copyOrigins=origins;}
   if(has(m,'hidden'))state.mainMaintenance.hidden=strings(m.hidden);
   if(has(m,'origin')){check(object(m.origin)&&Object.values(m.origin).every(x=>['standard','added'].includes(x)));state.mainMaintenance.origin=maCopy(m.origin)}
  }
@@ -4046,23 +4057,89 @@ function smReadonly(value){
  if(value&&typeof value==='object')return Object.freeze(Object.fromEntries(Object.entries(value).map(([k,v])=>[k,smReadonly(v)])));
  return value;
 }
+// Main -> manga adapters are read-only. Each source/candidate is identified by
+// its existing canonical card ID and candidate ID, not by display text.
+function smSourceVisible(t){
+ if(!t||!maTargetAllowed(t))return false;
+ if(t.kind==='main')return !!maCard(t.field)&&!maCard(t.field).hidden;
+ if(t.section==='selection'){
+  const key=Object.keys(selectionCardByKey).find(k=>selectionCardByKey[k].fields.includes(t.field));
+  if(key&&hiddenCategories.has(key))return false;
+ }
+ return true;
+}
+function smSpecialReason(t){
+ if(t.color||['character','outfit','hairColor','eyeColor'].includes(t.field))return '特殊形式のためカードごとの取り込み対象外';
+ return '';
+}
+function smSuggestedRole(t){
+ const key=t.kind==='main'?maCard(t.field)?.output:t.field;
+ if(t.section==='selection')return ({composition:'before',style:'before',background:'background',weather:'background',time:'background',lighting:'background'})[key]||'none';
+ return 'none'; // Person/creature/adult scopes need an explicit manga output choice.
+}
+function smImportSource(target){
+ const t=candidateAddTarget(target);if(!t||!smSourceVisible(t))return null;
+ const c=t.kind==='main'?maCard(t.field):null;
+ return smReadonly({targetId:t.id,sourceCardId:maCanonical(t),name:t.label,section:t.section,type:c?.type==='linked'?'linked':'normal',multiple:c?c.multiple!==false:t.kind==='creature'?!creatureFields[t.field]?.single:!singleFields.has(t.field)&&t.field!=='bust',weights:c?c.weights!==false:true,role:smSuggestedRole(t),adult:t.section==='adult',specialReason:smSpecialReason(t)});
+}
+function smImportSources(mode='options'){
+ return smReadonly(candidateAddTargets().map(t=>smImportSource(t.id)).filter(s=>s&&(mode==='linked'?s.type==='linked':s.type==='normal')));
+}
+function smImportRows(target){
+ const s=smImportSource(target),t=candidateAddTarget(target);if(!s)return smReadonly([]);
+ return smReadonly(maRows(t).filter(r=>!maIsHidden(maCanonical(t),r.key)&&(t.kind!=='main'||maOptionAllowed(maCard(t.field),r.raw))).map(r=>({source:'main',sourceCardId:s.sourceCardId,sourceOptionId:r.key,targetId:t.id,name:r.name,tag:r.value,group:r.group||'',adult:s.adult,origin:maOrigin(t,r),refs:s.type==='linked'?(Array.isArray(r.raw.refs)?r.raw.refs:[]).map(ref=>({target:ref.target,key:ref.key})):[]})));
+}
+function smLinkedPlan(target,keys){
+ const source=smImportSource(target);if(!source||source.type!=='linked')return {ok:false,message:'取り込み元の連動カードが見つかりません。'};
+ const rows=smImportRows(target),selected=keys.map(key=>rows.find(r=>r.sourceOptionId===key));
+ if(!selected.length||selected.some(r=>!r))return {ok:false,message:'連動候補が見つからないか、現在は使用できません。'};
+ const dependencies=new Map(),links=[];
+ for(const row of selected){
+  if(!row.refs.length)return {ok:false,message:'参照先のない連動候補は取り込めません。'};
+  const refs=[];
+  for(const ref of row.refs){
+   const dep=smImportSource(ref.target);
+   if(!dep)return {ok:false,message:'関連カードが見つからないか、非表示・成人未確認です。取り込みを中止しました。'};
+   if(dep.type==='linked')return {ok:false,message:'連動型から連動型への多段連動は取り込めません。'};
+   if(dep.specialReason)return {ok:false,message:dep.name+'：'+dep.specialReason+'。既存の専用共有を使用してください。'};
+   const option=smImportRows(ref.target).find(r=>r.sourceOptionId===ref.key);
+   if(!option)return {ok:false,message:'関連候補が見つからないか、非表示・成人未確認です。取り込みを中止しました。'};
+   const key=JSON.stringify([option.sourceCardId,option.sourceOptionId]);
+   dependencies.set(key,{source:dep,option});refs.push(key);
+  }
+  links.push({option:row,refs:[...new Set(refs)]});
+ }
+ return smReadonly({ok:true,source,links,dependencies:[...dependencies].map(([key,dep])=>({key,...dep}))});
+}
+function smAdultConfirmed(){return adultReady()}
+function smReferenceNeedsAdult(target){return candidateAddTarget(target)?.section==='adult'||String(target).startsWith('adult:')||target==='detail:bust'}
+
 function smMainTargets(){
- return smReadonly(candidateAddTargets().filter(t=>maTargetAllowed(t)&&['catalog','detail','adult','creature','scene','main'].includes(t.kind)&&(t.kind!=='main'||maCard(t.field)?.type==='normal')).map(t=>({id:t.id,label:t.label,section:t.section,color:!!t.color,group:t.group||'',noGroup:!!t.noGroup})));
+ return smReadonly(candidateAddTargets().filter(t=>smSourceVisible(t)&&['catalog','detail','adult','creature','scene','main'].includes(t.kind)&&(t.kind!=='main'||maCard(t.field)?.type==='normal')).map(t=>({id:t.id,label:t.label,section:t.section,color:!!t.color,group:t.group||'',noGroup:!!t.noGroup})));
 }
 function smMainRows(target){
  const t=candidateAddTarget(target);
- if(!maTargetAllowed(t)||t.kind==='main'&&maCard(t.field)?.type!=='normal')return smReadonly([]);
+ if(!smSourceVisible(t)||t.kind==='main'&&maCard(t.field)?.type!=='normal')return smReadonly([]);
  return smReadonly(maRows(t).filter(r=>!maIsHidden(maCanonical(t),r.key)).map(r=>[r.name,r.value,r.group||'']));
 }
 // Explicit copy registration uses the same stores, IDs, origin map and Undo as maintenance.
 // Nothing identifying the manga source is kept on the main candidate.
-function smCopyToMain(target,entry,classification='',displayColor=''){
+// Manga -> main creates only ordinary added candidates. Provenance is optional
+// maintenance metadata for duplicate detection; it never drives synchronization.
+function smCopyToMain(target,entry,classification='',displayColor='',source=null,allowDuplicate=false){
  const t=candidateAddTarget(target);
- if(!maTargetAllowed(t)||!['catalog','detail','adult','creature','scene','main'].includes(t.kind)||t.kind==='main'&&maCard(t.field)?.type!=='normal')return {ok:false,message:'転送先が見つからないか、現在は使用できません。'};
+ if(!smSourceVisible(t)||!['catalog','detail','adult','creature','scene','main'].includes(t.kind)||t.kind==='main'&&maCard(t.field)?.type!=='normal')return {ok:false,message:'コピー先が見つからないか、現在は使用できません。'};
  if(!Array.isArray(entry)||typeof entry[0]!=='string'||typeof entry[1]!=='string'||!entry[0].trim()||!entry[1].trim())return {ok:false,message:'日本語名と英語タグがある候補を選んでください。'};
  const name=entry[0].trim(),value=entry[1].trim(),group=t.group||String(classification||'').trim();
- if(t.color&&!validCandidateColor(displayColor))return {ok:false,message:'転送先の表示色を指定してください。'};
- if(maRows(t).some(r=>r.name===name||r.value.trim().toLowerCase()===value.toLowerCase()))return {ok:false,message:'転送先に同じ日本語名または英語タグがあります。'};
+ if(t.color&&!validCandidateColor(displayColor))return {ok:false,message:'コピー先の表示色を指定してください。'};
+ const provenance=source&&typeof source.sourceCardId==='string'&&typeof source.sourceOptionId==='string'?{source:'simple-manga',sourceCardId:source.sourceCardId,sourceOptionId:source.sourceOptionId}:null;
+ const rows=maRows(t);
+ if(provenance)for(const [key,old]of Object.entries(mainMaintenance.copyOrigins||{})){
+  if(old?.source!==provenance.source||old.sourceCardId!==provenance.sourceCardId||old.sourceOptionId!==provenance.sourceOptionId)continue;
+  let pair;try{pair=JSON.parse(key)}catch{continue}
+  if(pair?.[0]===maCanonical(t)&&rows.some(r=>r.key===pair[1]))return {ok:true,already:true,key:pair[1],message:'同じ候補はコピー先へ追加済みです。メイン側の編集内容を維持します。'};
+ }
+ if(!allowDuplicate&&rows.some(r=>r.name===name||r.value.trim().toLowerCase()===value.toLowerCase()))return {ok:false,duplicate:true,message:'同じ名前・英語タグの候補があります。別候補として登録する場合は確認欄を選んでください。'};
  const before=maSnapshot(),history=undoHistory.slice(),key='ma-'+crypto.randomUUID();
  maMaintenanceUndo('簡易漫画の候補をメインへコピー');
  try{
@@ -4075,13 +4152,14 @@ function smCopyToMain(target,entry,classification='',displayColor=''){
    personOptionEdits[t.id+'|'+key]={name,value,group,...(t.color?{color:displayColor}:{})};
   }
   mainMaintenance.origin[maKey(maCanonical(t),key)]='added';
+  if(provenance){mainMaintenance.copyOrigins??={};mainMaintenance.copyOrigins[maKey(maCanonical(t),key)]=provenance;}
   if(!persist())throw Error('保存できませんでした。コピーは登録していません。');
  }catch(error){
   catalog=maCopy(before.catalog);mainMaintenance=maCopy(before.mainMaintenance);detailPresetCustom=maCopy(before.detailPresetCustom);adultCustom=maCopy(before.adultCustom);candidateExtras=maCopy(before.candidateExtras);personOptionEdits=maCopy(before.personOptionEdits);
   undoHistory.splice(0,undoHistory.length,...history);
   return {ok:false,message:error.message||'コピーを登録できませんでした。'};
  }
- maRefresh();return {ok:true,key,message:'メインツールへ追加候補としてコピーしました。以後はそれぞれ独立して管理できます。'};
+ maRefresh();return {ok:true,key,message:'メインツールへ通常の追加候補としてコピーしました。以後はそれぞれ独立して管理できます。'};
 }
 
 let sharedCharacterSignature='',sharedCharacterView=[];
@@ -4118,6 +4196,117 @@ const window=new Proxy(realWindow,{get(target,key){if(key==='scrollTo')return (.
 'use strict';
 const B=JSON.parse(document.getElementById('data').textContent),$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const sharedIds=new Set(['7','24','12']);
+// Tuple columns 0..2 remain Japanese name / tag / classification. The optional
+// fourth column holds a stable local ID and provenance; CSV remains three columns.
+const CM_COPY_ROLES=[['none','出力位置を選択してください（現在は出力しない）'],['person1','人物1'],['person2','人物2'],['before','全体：品質・固定設定'],['relation','全体：関係性・動作'],['background','全体：背景・時間・天候'],['effect','全体：エフェクト'],['other','全体：漫画表現・その他']];
+function cmCandidateMeta(row){return row&&row[3]&&typeof row[3]==='object'&&!Array.isArray(row[3])?row[3]:null}
+function cmEnsureOptionId(row){let meta=cmCandidateMeta(row);if(!meta){meta={};row[3]=meta}if(typeof meta.id!=='string'||!meta.id)meta.id='cm-option-'+crypto.randomUUID();return meta.id}
+function cmCarryOption(old,row){const next=row.slice(0,3),meta=cmCandidateMeta(old);if(meta)next[3]=cmCopy(meta);return next}
+function cmIsLinked(c){return c?.type==='linked'}
+const CM_ADULT_TRANSFER_IDS=new Set(['16','17','18','19','21','23','25','26']);
+function cmTransferAllowed(c,row){return !!c&&!cmIsShared(c)&&!cmIsLinked(c)&&cmCandidateAllowed(c,row)&&(!CM_ADULT_TRANSFER_IDS.has(c.id)||smAdultConfirmed())}
+function cmCandidateAllowed(c,row){
+ const ref=cmReference(c),adult=c?.importAdult||c?.referenceAdult||cmCandidateMeta(row)?.adult||ref&&smReferenceNeedsAdult(ref.target);
+ return !adult||smAdultConfirmed();
+}
+function cmCopyDestinations(){return cmState().cards.filter(c=>!cmIsShared(c)&&!cmIsLinked(c)&&!CM_SPECIAL.has(c.id)&&c.mode==='list'&&(!c.importAdult||smAdultConfirmed()))}
+function cmFindCopiedOption(sourceCardId,sourceOptionId){
+ for(const c of cmCopyDestinations())for(const row of c.options){const m=cmCandidateMeta(row);if(m?.source==='main'&&m.sourceCardId===sourceCardId&&m.sourceOptionId===sourceOptionId)return {card:c,row};}
+ return null;
+}
+function cmFindImportedCard(sourceCardId,type='normal'){return cmState().cards.find(c=>!cmIsShared(c)&&c.importSource?.source==='main'&&c.importSource.sourceCardId===sourceCardId&&(cmIsLinked(c)?'linked':'normal')===type)}
+function cmAppendMainOption(c,option){
+ const same=c.options.find(row=>{const m=cmCandidateMeta(row);return m?.source==='main'&&m.sourceCardId===option.sourceCardId&&m.sourceOptionId===option.sourceOptionId});
+ if(same)return {row:same,added:false}; // Re-import never overwrites the independent copy.
+ const row=[option.name,option.tag,option.group,{id:'cm-option-'+crypto.randomUUID(),source:'main',sourceCardId:option.sourceCardId,sourceOptionId:option.sourceOptionId,adult:!!option.adult}];c.options.push(row);return {row,added:true};
+}
+function cmCreateImportedCard(source,role){
+ const c=cmAddCard(source.name);c.multiple=source.multiple;c.weights=source.weights;c.role=CM_COPY_ROLES.some(r=>r[0]===role)?role:'none';c.importAdult=!!source.adult;
+ c.importSource={source:'main',sourceCardId:source.sourceCardId,sourceTargetId:source.targetId,type:source.type};
+ if(source.type==='linked'){c.type='linked';c.role='none';c.weights=false;c.multiple=false;}
+ return c;
+}
+// One native maintenance save/Undo covers the entire import, including dependencies.
+function cmImportAtomic(change){
+ const before=cmCopy(S.simple),history=cmCopy(S.cardMaintenanceUndo||[]),signature=cmLastMaintenance,previous=cmLastSimple;
+ try{const result=change();if(!result.ok)return result;save();if(!storageOK)throw Error('保存できませんでした。取り込みを元に戻しました。');render();return result;}
+ catch(e){S.simple=before;S.cardMaintenanceUndo=history;cmLastMaintenance=signature;cmLastSimple=previous;cmState();render();return {ok:false,message:e.message||'取り込みを中止しました。'};}
+}
+function cmImportMainOptions(target,keys,destination){
+ const source=smImportSource(target),c=cmCopyDestinations().find(c=>c.id===destination);
+ if(!source||source.type!=='normal'||!c)return {ok:false,message:'取り込み元または追加先が見つからないか、現在は使用できません。'};
+ const available=smImportRows(target),rows=[...new Set(keys)].map(key=>available.find(o=>o.sourceOptionId===key));
+ if(!rows.length||rows.some(o=>!o||!o.tag.trim()))return {ok:false,message:'取り込む候補が見つからないか、安全にコピーできません。'};
+ return cmImportAtomic(()=>{let added=0;for(const row of rows)if(cmAppendMainOption(c,row).added)added++;return {ok:true,cardId:c.id,added,reused:rows.length-added,message:added+'件をコピー／'+(rows.length-added)+'件は追加済みです。'};});
+}
+function cmImportMainCard(target,role){
+ const source=smImportSource(target);if(!source||source.type!=='normal'||source.specialReason)return {ok:false,message:source?.specialReason||'取り込み元の通常カードが見つかりません。'};
+ const rows=smImportRows(target);if(rows.some(row=>!row.tag.trim()))return {ok:false,message:'英語タグのない候補を含むため、カードを取り込めません。'};
+ return cmImportAtomic(()=>{let c=cmFindImportedCard(source.sourceCardId),created=!c,added=0;if(!c)c=cmCreateImportedCard(source,role);if(c.mode!=='list')throw Error('既存コピーの表示形式が変更されています。候補だけ追加から追加先を選んでください。');for(const row of rows)if(cmAppendMainOption(c,row).added)added++;return {ok:true,cardId:c.id,created,added,message:(created?'カードをコピーしました。':'既存コピーを再利用しました。')+added+'件の候補を追加しました。'};});
+}
+function cmLinkedDependencyStatus(plan){
+ if(!plan.ok)return plan;const missing=[];
+ for(const d of plan.dependencies){const found=cmFindCopiedOption(d.option.sourceCardId,d.option.sourceOptionId);if(!found)missing.push(d);}
+ return {ok:true,missing};
+}
+function cmLinkedImportPlan(target,keys){
+ const source=smImportSource(target);if(!source||source.type!=='linked')return {ok:false,message:'取り込み元の連動カードが見つかりません。'};
+ const available=smImportRows(target),unique=[...new Set(keys)],existing=cmFindImportedCard(source.sourceCardId,'linked');
+ if(!unique.length||unique.some(key=>!available.some(r=>r.sourceOptionId===key)))return {ok:false,message:'連動候補が見つからないか、現在は使用できません。'};
+ const newKeys=unique.filter(key=>!existing?.options.some(row=>{const m=cmCandidateMeta(row);return m?.sourceCardId===source.sourceCardId&&m.sourceOptionId===key}));
+ if(!newKeys.length)return {ok:true,source,links:[],dependencies:[],reused:unique.length};
+ return {...smLinkedPlan(target,newKeys),reused:unique.length-newKeys.length};
+}
+// Dependency resolution copies missing normal options once, then stores LOCAL
+// card/option IDs. Linked application never looks up or modifies the main master.
+function cmImportMainLinked(target,keys,includeDependencies,roles={}){
+ const plan=cmLinkedImportPlan(target,keys);if(!plan.ok)return plan;
+ const status=cmLinkedDependencyStatus(plan);if(status.missing.length&&!includeDependencies)return {ok:false,message:'この連動カードには関連カード・候補が必要です。「関連データも一緒に追加」を選んでください。'};
+ return cmImportAtomic(()=>{
+  const resolved=new Map();let added=0,created=0;
+  for(const dep of plan.dependencies){
+   let found=cmFindCopiedOption(dep.option.sourceCardId,dep.option.sourceOptionId);
+   if(!found){let c=cmFindImportedCard(dep.source.sourceCardId);if(c&&c.mode!=='list')throw Error('関連カードの既存コピーが候補一覧形式ではありません。');if(!c){c=cmCreateImportedCard(dep.source,roles[dep.source.sourceCardId]||dep.source.role);created++;}const result=cmAppendMainOption(c,dep.option);if(result.added)added++;found={card:c,row:result.row};}
+   if(!cmCandidateAllowed(found.card,found.row))throw Error('関連候補の成人確認を完了してください。');
+   resolved.set(dep.key,{cardId:found.card.id,optionId:cmEnsureOptionId(found.row)});
+  }
+  let c=cmFindImportedCard(plan.source.sourceCardId,'linked');if(!c){c=cmCreateImportedCard(plan.source,'none');created++;}
+  for(const link of plan.links){const result=cmAppendMainOption(c,{...link.option,tag:''});if(result.added){added++;result.row[3].refs=link.refs.map(key=>({...resolved.get(key)}));result.row[3].adult=link.option.adult||link.refs.some(key=>plan.dependencies.find(d=>d.key===key)?.option.adult);}}
+  return {ok:true,cardId:c.id,added,created,message:'連動カードと関連データを取り込みました。既存のコピーは再利用しました。'};
+ });
+}
+function cmPickCopiedOption(c,row){
+ const optionId=cmEnsureOptionId(row),old=S.simple[c.id]||[],same=old.find(x=>x.optionId===optionId||!x.optionId&&x.label===row[0]&&x.tag===row[1]);
+ const pick={label:row[0],tag:row[1],weight:same?.weight||1,optionId,...(c.importAdult||cmCandidateMeta(row)?.adult?{adult:true}:{})};
+ if(c.multiple){if(!same)S.simple[c.id]=[...old,pick];}else S.simple[c.id]=[pick];
+}
+function cmApplyImportedLinked(c,row){
+ const refs=cmCandidateMeta(row)?.refs;if(!cmIsLinked(c)||!Array.isArray(refs)||!refs.length)return {ok:false,message:'連動先がありません。'};
+ if(!cmCandidateAllowed(c,row))return {ok:false,message:'メイン側で成人確認を完了してください。'};
+ const resolved=[];
+ for(const ref of refs){
+  const target=cmCard(ref.cardId),option=target?.options.find(o=>cmCandidateMeta(o)?.id===ref.optionId);
+  if(!target||cmIsLinked(target)||cmIsShared(target)||target.mode!=='list'||!option||!cmCandidateAllowed(target,option))return {ok:false,message:'連動先が見つからないか、現在は使用できません。通常カードを確認してください。'};
+  resolved.push({target,option});
+ }
+ for(const {target,option}of resolved)cmPickCopiedOption(target,option);
+ S.simple[c.id]=[{label:row[0],tag:'',weight:1,optionId:cmCandidateMeta(row).id}];
+ return {ok:true,message:resolved.length+'件の通常候補を選択しました。'};
+}
+function cmEditLinkedCard(id){cmOpen('連動カード編集',()=>{
+ const c=cmCard(id),root=cmNode('div');root.append(btn('← カード一覧',cmManagement,'mini'));const label=cmLabel(root,'カード名',cmInput(c.label));
+ root.append(btn('カード名を保存',()=>{c.label=label.value.trim()||c.label;save();cmEditLinkedCard(id)},'primary'),btn('連動候補を確認',()=>cmLinkedOptions(id)));
+ note(root,'取り込んだ連動候補は簡易漫画内の通常候補を選択します。連動先の新規作成・変更はメイン側で行い、必要に応じて取り込んでください。選択解除後も適用先の選択は残ります。');
+ root.append(btn('このカードを削除',()=>{if(!confirm('カードと入力内容を削除しますか？'))return;const m=cmState();m.cards=m.cards.filter(x=>x.id!==id);m.order=m.order.filter(x=>x!==id);delete S.simple[id];save();cmManagement()},'danger'));return root;
+})}
+function cmLinkedOptions(id){cmOpen('連動候補の管理',()=>{
+ const c=cmCard(id),root=cmNode('div');root.append(btn('← カード編集',()=>cmEditCard(id),'mini'));const search=cmInput('','連動候補を検索'),list=cmNode('div');root.append(search,list);
+ const draw=()=>{list.replaceChildren();for(const row of c.options.filter(o=>cmCandidateAllowed(c,o)&&o[0].includes(search.value))){const section=cmNode('section','cm-option-row'),name=cmLabel(section,'日本語名',cmInput(row[0]));
+  for(const ref of cmCandidateMeta(row)?.refs||[]){const dest=cmCard(ref.cardId),option=dest?.options.find(o=>cmCandidateMeta(o)?.id===ref.optionId);note(section,dest&&option?dest.label+' → '+option[0]:'連動先が見つかりません');}
+  const tools=cmNode('div','cm-tools');tools.append(btn('名前を保存',()=>{if(!name.value.trim())return;cmReplaceOption(c,c.options.indexOf(row),[name.value.trim(),'',row[2]||'']);save();draw()},'mini'),btn('適用',()=>{const result=cmApplyImportedLinked(c,row);toast(result.message);if(result.ok){save();render()}},'mini'),btn('削除',()=>{if(!confirm('この連動候補を削除しますか？適用先の選択は残ります。'))return;c.options.splice(c.options.indexOf(row),1);save();draw()},'danger mini'));section.append(tools);list.append(section);
+ }};search.oninput=draw;draw();return root;
+})}
+
 // Optional per-card setting: mainReference: {target: candidateAddTargets() ID}.
 // The three legacy cards keep their original sources when old saves have no setting.
 const CM_LEGACY_SOURCES=Object.freeze({'7':'character','24':'character','12':'outfit'});
@@ -4136,13 +4325,13 @@ function cmReferenceOptions(card){
  return smMainRows(source.target);
 }
 function cmConfigureReference(c,target){
- if(!c||sharedIds.has(String(c.id))||CM_SPECIAL.has(String(c.id)))return {ok:false,message:'この専用カードは既存の参照先を使用します。'};
+ if(!c||cmIsLinked(c)||sharedIds.has(String(c.id))||CM_SPECIAL.has(String(c.id)))return {ok:false,message:'この専用カードは既存の参照先を使用します。'};
  if(target&&!smMainTargets().some(t=>t.id===target))return {ok:false,message:'参照先が見つからないか、現在は使用できません。'};
  if(!target){
-  if(cmReference(c)){const own=cmCopy(c.localOptions||[]);delete c.mainReference;delete c.options;Object.defineProperty(c,'options',{configurable:true,writable:true,enumerable:true,value:own});c.mode=c.localMode||'list';delete c.localOptions;delete c.localMode;}
+  if(cmReference(c)){const own=cmCopy(c.localOptions||[]);delete c.mainReference;delete c.options;Object.defineProperty(c,'options',{configurable:true,writable:true,enumerable:true,value:own});c.mode=c.localMode||'list';delete c.localOptions;delete c.localMode;delete c.referenceAdult;}
  }else{
   if(!cmReference(c)){c.localOptions=cmCopy(c.options);c.localMode=c.mode;}
-  c.mainReference={target};c.mode='list';bindSharedCard(c);
+  c.mainReference={target};c.referenceAdult=smReferenceNeedsAdult(target);c.mode='list';bindSharedCard(c);
  }
  return {ok:true};
 }
@@ -4154,15 +4343,16 @@ function cmReferenceEditor(id){cmOpen('候補の参照元',()=>{
  note(root,'メイン候補は読み取り専用です。独自候補は保持し、参照を解除すると元の候補に戻ります。選択済みのタグは変更しません。');
  root.append(btn('保存',()=>{const result=cmConfigureReference(c,select.value);if(!result.ok)return toast(result.message);save();render();cmEditCard(id)},'primary'));return root;
 })}
-function cmTransferCandidate(id,catalog,index,target,classification,color){
- const c=cmCard(id);if(!c||cmIsShared(c))return {ok:false,message:'共有参照候補は転送できません。'};
- const rows=catalog?cmCatalogRows(catalog):c.options,row=rows[index];
+function cmTransferCandidate(id,catalog,index,target,classification,color,allowDuplicate=false){
+ const c=cmCard(id),rows=catalog?cmCatalogRows(catalog):c?.options,row=rows?.[index];
+ if(!cmTransferAllowed(c,row))return {ok:false,message:'共有参照・連動候補、成人未確認の候補はコピーできません。'};
  if(!row)return {ok:false,message:'送信元の候補が見つかりません。'};
- return smCopyToMain(target,cmCopy(row),classification,color);
+ const source={sourceCardId:c.id+(catalog?':'+catalog:''),sourceOptionId:cmEnsureOptionId(row)};
+ const result=smCopyToMain(target,cmCopy(row),classification,color,source,allowDuplicate);if(result.ok)save();return result;
 }
 function cmTransferDialog(id,catalog,index){
- if(cmIsShared(id))return toast('共有参照候補は転送できません。');
- cmOpen('メインツールへ送る',()=>{
+ if(!cmTransferAllowed(cmCard(id),(catalog?cmCatalogRows(catalog):cmCard(id)?.options)?.[index]))return toast('この候補は現在メインへコピーできません。');
+ cmOpen('メインへコピー',()=>{
   const c=cmCard(id),row=(catalog?cmCatalogRows(catalog):c.options)[index],root=cmNode('div');root.append(btn('← 候補のメンテナンス',()=>cmOptions(id,catalog),'mini'));
   if(!row){note(root,'送信元の候補が見つかりません。');return root;}
   const original=JSON.stringify(row),targets=smMainTargets();root.append(cmNode('strong','',row[0]));note(root,row[1]||'英語タグが空です。候補を編集してから送ってください。');
@@ -4170,10 +4360,11 @@ function cmTransferDialog(id,catalog,index){
   const group=cmLabel(root,'転送先の分類',cmInput(row[2]||'')),color=cmLabel(root,'転送先の表示色',cmInput(/^#[0-9a-f]{6}$/i.test(row[2]||'')?row[2]:'#687487'));color.type='color';
   const update=()=>{const t=targets.find(t=>t.id===destination.value);group.readOnly=!!t?.group;group.value=t?.group||row[2]||'';color.parentElement.style.display=t?.color?'':'none';};update();
   note(root,'選んだ転送先へ新しい追加候補をコピーします。送信後は自動同期せず、メイン側の候補管理で編集・複製・削除できます。');
-  root.append(btn('メインツールへコピー登録',()=>{
+  const duplicate=cmNode('input');duplicate.type='checkbox';cmLabel(root,'同じ名前・タグがある場合も別候補として登録',duplicate);
+  root.append(btn('メインへコピー登録',()=>{
    const current=(catalog?cmCatalogRows(catalog):cmCard(id)?.options)?.[index];
    if(JSON.stringify(current)!==original)return toast('送信元が変更されました。候補一覧から選び直してください。');
-   const result=cmTransferCandidate(id,catalog,index,destination.value,group.value,color.value);toast(result.message);if(result.ok)cmOptions(id,catalog);
+   const result=cmTransferCandidate(id,catalog,index,destination.value,group.value,color.value,duplicate.checked);toast(result.message);if(result.ok)cmOptions(id,catalog);
   },'primary'));return root;
  });
 }
@@ -5000,16 +5191,18 @@ function cmAddCard(label){const m=cmState();let id='custom_'+Date.now().toString
 function cmSaveLayout(name){const m=cmState(),p={id:'layout_'+Date.now().toString(36),name:name.trim(),order:[...m.order],hidden:[...m.hidden]};if(!p.name)throw Error('配置名を入力してください');const old=m.presets.find(x=>x.name===p.name);if(old){p.id=old.id;m.presets[m.presets.indexOf(old)]=p}else m.presets.push(p);return p}
 function cmApplyLayout(p){const m=cmState(),ids=m.cards.map(c=>c.id);m.order=[...new Set([...p.order,...m.order,...ids])].filter(id=>ids.includes(id));m.hidden=(p.hidden||[]).filter(id=>ids.includes(id));simpleInputPage=0}
 function cmStandardLayout(){const m=cmState();m.order=[...CM_STANDARD_ORDER,...m.cards.filter(c=>c.custom).map(c=>c.id)];m.hidden=m.cards.filter(c=>c.custom).map(c=>c.id);simpleInputPage=0}
-function cmReplaceOption(c,index,row){if(cmIsShared(c))return false;const old=c.options[index];c.options[index]=row;for(const x of S.simple[c.id]||[])if(x.tag===old[1]&&x.label===old[0]){x.label=row[0];x.tag=row[1]}const fav=cmState().favorites[c.id]||[];const at=fav.indexOf(cmOptionKey(old));if(at>=0)fav[at]=cmOptionKey(row)}
+function cmReplaceOption(c,index,row){if(cmIsShared(c))return false;const old=c.options[index];row=cmCarryOption(old,row);c.options[index]=row;for(const x of S.simple[c.id]||[])if(x.tag===old[1]&&x.label===old[0]){x.label=row[0];x.tag=row[1]}const fav=cmState().favorites[c.id]||[];const at=fav.indexOf(cmOptionKey(old));if(at>=0)fav[at]=cmOptionKey(row)}
 function cmPalette(c){return c.palette==='own'?c.ownColors:cmState().colors}
 function cmColorText(c,tag){if(!c.color)return tag;const colors=(S.simple._cardColors?.[c.id]||[]).map(o=>o[1]).filter(Boolean);if(!colors.length)return tag;const color=colors.join(' and ');return c.colorOutput==='independent'?join([tag,color]):String(c.colorTemplate||'{color} {tag}').split('{color}').join(color).split('{tag}').join(tag)}
 const cmSourceBefore=simpleSourceFieldParts;
 simpleSourceFieldParts=function(id,cfg,omitCount=false){
  const c=cmCard(id);if(!c)return cmSourceBefore(id,cfg,omitCount);
+ if(cmIsLinked(c)||c.role==='none'||!cmCandidateAllowed(c,null))return [];
  // A temporary read projection suppresses disabled weights without modifying the
  // saved values; the established special hair/wardrobe generators stay intact.
  const original=S.simple,view={...original};
- if(!c.weights){view[id]=(original[id]||[]).map(x=>({...x,weight:1}));if(String(id)==='9'&&original._hair)view._hair={...original._hair,weight:1};if(String(id)==='12'&&original._wardrobe)view._wardrobe=Object.fromEntries(Object.entries(original._wardrobe).map(([k,v])=>[k,Array.isArray(v)?v.map(x=>({...x,weight:1})):v]));}
+ view[id]=(original[id]||[]).filter(x=>!x.adult||smAdultConfirmed());
+ if(!c.weights){view[id]=view[id].map(x=>({...x,weight:1}));if(String(id)==='9'&&original._hair)view._hair={...original._hair,weight:1};if(String(id)==='12'&&original._wardrobe)view._wardrobe=Object.fromEntries(Object.entries(original._wardrobe).map(([k,v])=>[k,Array.isArray(v)?v.map(x=>({...x,weight:1})):v]));}
  let parts;
  try{S.simple=view;if(c.custom){parts=(view[id]||[]).map(x=>weightPromptTag(sourcePromptParts(cmColorText(c,x.tag)).join(', '),c.weights?x.weight||1:1)).filter(Boolean);parts.push(...sourcePromptParts(view['extra_'+id]));}
  else if(c.color&&!CM_SPECIAL.has(c.id)){
@@ -5051,13 +5244,13 @@ function cmInput(value='',placeholder=''){const x=cmNode('input');x.value=value;
 function cmSelect(values,value,change){const s=cmNode('select');values.forEach(([v,t])=>{const o=cmNode('option','',t);o.value=v;s.append(o)});s.value=String(value);s.onchange=e=>change(e.target.value);return s}
 function cmCheck(parent,title,value,change){const wrap=cmNode('label','cm-check'),x=cmNode('input');x.type='checkbox';x.checked=!!value;x.onchange=e=>change(e.target.checked);wrap.append(x,cmNode('span','',title));parent.append(wrap)}
 function cmManagement(){cmOpen('カード管理',()=>{
- const root=cmNode('div'),tools=cmNode('div','cm-tools');tools.append(btn('＋ カード追加',()=>{const c=cmAddCard('新しいカード');save();cmEditCard(c.id)},'primary'),btn('配置プリセット',cmLayouts),btn('標準カラーパレット',()=>cmPaletteEditor(null)));root.append(tools);note(root,'カード名の「編集」から候補・選択方式・色・重みを設定できます。画面の並び替えでは出力順は変わりません。');
+ const root=cmNode('div'),tools=cmNode('div','cm-tools');tools.append(btn('＋ カード追加',()=>{const c=cmAddCard('新しいカード');save();cmEditCard(c.id)},'primary'),btn('メインから追加',cmImportMain),btn('配置プリセット',cmLayouts),btn('標準カラーパレット',()=>cmPaletteEditor(null)));root.append(tools);note(root,'カード名の「編集」から候補・選択方式・色・重みを設定できます。画面の並び替えでは出力順は変わりません。');
  note(root,'非表示は画面だけに適用します。選択済みの内容は出力に残るので、不要なタグは解除してください。');
  const m=cmState();m.order.forEach((id,i)=>{const c=cmCard(id),row=cmNode('section','cm-manager-row');const name=cmNode('strong','',c.label),actions=cmNode('div','cm-row-actions');
  actions.append(btn('編集',()=>cmEditCard(id),'mini'),btn('↑',()=>{cmMove(m.order,i,-1);save();cmManagement()},'mini'),btn('↓',()=>{cmMove(m.order,i,1);save();cmManagement()},'mini'));actions.children[1].disabled=i===0;actions.children[2].disabled=i===m.order.length-1;
  cmCheck(actions,'表示',!m.hidden.includes(id),on=>{m.hidden=on?m.hidden.filter(x=>x!==id):[...m.hidden,id];save()});row.append(name,actions);root.append(row)});return root;
 })}
-function cmEditCard(id){cmOpen('カード編集',()=>{
+function cmEditCard(id){if(cmIsLinked(cmCard(id)))return cmEditLinkedCard(id);cmOpen('カード編集',()=>{
  const c=cmCard(id),root=cmNode('div');root.append(btn('← カード一覧',cmManagement,'mini'));
  const label=cmLabel(root,'カード名',cmInput(c.label));label.onchange=()=>{c.label=label.value.trim()||c.label;save()};
  const specialized=CM_SPECIAL.has(id);
@@ -5069,7 +5262,7 @@ function cmEditCard(id){cmOpen('カード編集',()=>{
   root.append(btn('候補の追加・編集・並び替え',()=>cmOptions(id)));
  }
  cmCheck(root,'個別タグの重み設定を使う',c.weights,v=>{c.weights=v;save()});note(root,'OFFでは通常の重みで出力します。以前の数値は保持します。');
- if(!['7','24'].includes(id))cmLabel(root,'プロンプトの出力先',cmSelect([['person1','人物1'],['person2','人物2'],['before','全体：品質・固定設定'],['relation','全体：関係性・動作'],['background','全体：背景・時間・天候'],['effect','全体：エフェクト'],['other','全体：漫画表現・その他']],c.role,v=>{c.role=v;save()}));
+ if(!['7','24'].includes(id))cmLabel(root,'プロンプトの出力先',cmSelect([['none','出力しない／未設定'],['person1','人物1'],['person2','人物2'],['before','全体：品質・固定設定'],['relation','全体：関係性・動作'],['background','全体：背景・時間・天候'],['effect','全体：エフェクト'],['other','全体：漫画表現・その他']],c.role,v=>{c.role=v;save()}));
  if(!specialized){
   cmCheck(root,'色の選択を付ける',c.color,v=>{c.color=v;save();cmEditCard(id)});
   if(c.color){cmCheck(root,'複数の色を選べるようにする',c.colorMultiple,v=>{c.colorMultiple=v;save()});cmLabel(root,'使用する色リスト',cmSelect([['shared','標準パレット'],['own','このカード専用']],c.palette,v=>{c.palette=v;if(v==='own'&&!c.ownColors.length)c.ownColors=cmCopy(cmState().colors);save();cmEditCard(id)}));root.append(btn('色リストを編集',()=>cmPaletteEditor(c.palette==='own'?id:null,id)));cmLabel(root,'色の出力方法',cmSelect([['prefix','候補と色を組み合わせる'],['independent','色を独立タグとして出力']],c.colorOutput,v=>{c.colorOutput=v;save()}));const pattern=cmLabel(root,'組み合わせ方（{color}＝色、{tag}＝候補）',cmInput(c.colorTemplate));pattern.onchange=()=>{c.colorTemplate=pattern.value||'{color} {tag}';save()};}
@@ -5085,16 +5278,16 @@ function cmParseRows(text){
  if(quoted)throw Error('引用符が閉じていません');row.push(cell);rows.push(row);
  const result=rows.filter(r=>r.some(x=>x.trim())).map(r=>r.map(x=>x.trim()));if(result[0]&&/^(日本語|日本語名|表示名)$/.test(result[0][0]))result.shift();return result;
 }
-function cmOptions(id,catalog=null){cmOpen('候補のメンテナンス',()=>{
+function cmOptions(id,catalog=null){if(cmIsLinked(cmCard(id)))return cmLinkedOptions(id);cmOpen('候補のメンテナンス',()=>{
  const c=cmCard(id),rows=catalog?cmCatalogRows(catalog):c.options,root=cmNode('div');root.append(btn('← カード編集',()=>cmEditCard(id),'mini'));
  const search=cmInput('','候補を検索'),list=cmNode('div');root.append(search);
- const draw=()=>{list.replaceChildren();const matching=rows.map((o,i)=>({o,i})).filter(x=>x.o.join(' ').toLowerCase().includes(search.value.toLowerCase()));note(list,matching.length+'件');matching.slice(0,80).forEach(({o,i})=>{const row=cmNode('section','cm-option-row'),jp=cmInput(o[0]),en=cmInput(o[1]),category=cmInput(o[2]||'');cmLabel(row,'日本語名',jp);cmLabel(row,'英語タグ',en);cmLabel(row,'分類（任意）',category);const tools=cmNode('div','cm-row-actions');tools.append(btn('更新',()=>{if(!jp.value.trim()){toast('日本語名を入力してください');return}const entry=[jp.value.trim(),en.value.trim(),category.value.trim()];if(catalog)rows[i]=entry;else cmReplaceOption(c,i,entry);save();draw()},'mini'),btn('↑',()=>{cmMove(rows,i,-1);save();draw()},'mini'),btn('↓',()=>{cmMove(rows,i,1);save();draw()},'mini'),btn('削除',()=>{if(!confirm('この候補を削除しますか？選択済みの入力は残ります。'))return;rows.splice(i,1);save();draw()},'danger mini'));if(!cmIsShared(c))tools.append(btn('メインツールへ送る',()=>cmTransferDialog(id,catalog,i),'mini'));row.append(tools);list.append(row)});if(matching.length>80)note(list,'検索して絞り込むと、残りの候補も編集できます。')};
+ const draw=()=>{list.replaceChildren();const matching=rows.map((o,i)=>({o,i})).filter(x=>cmCandidateAllowed(c,x.o)&&x.o.slice(0,3).join(' ').toLowerCase().includes(search.value.toLowerCase()));note(list,matching.length+'件');matching.slice(0,80).forEach(({o,i})=>{const row=cmNode('section','cm-option-row'),jp=cmInput(o[0]),en=cmInput(o[1]),category=cmInput(o[2]||'');cmLabel(row,'日本語名',jp);cmLabel(row,'英語タグ',en);cmLabel(row,'分類（任意）',category);const tools=cmNode('div','cm-row-actions');tools.append(btn('更新',()=>{if(!jp.value.trim()){toast('日本語名を入力してください');return}const entry=[jp.value.trim(),en.value.trim(),category.value.trim()];if(catalog)rows[i]=cmCarryOption(rows[i],entry);else cmReplaceOption(c,i,entry);save();draw()},'mini'),btn('↑',()=>{cmMove(rows,i,-1);save();draw()},'mini'),btn('↓',()=>{cmMove(rows,i,1);save();draw()},'mini'),btn('削除',()=>{if(!confirm('この候補を削除しますか？選択済みの入力は残ります。'))return;rows.splice(i,1);save();draw()},'danger mini'));if(cmTransferAllowed(c,o))tools.append(btn('メインへコピー',()=>cmTransferDialog(id,catalog,i),'mini'));row.append(tools);list.append(row)});if(matching.length>80)note(list,'検索して絞り込むと、残りの候補も編集できます。')};
  search.oninput=draw;const add=cmNode('details'),summary=cmNode('summary','','＋ 候補を追加／まとめて取り込む');add.append(summary);const jp=cmLabel(add,'日本語名',cmInput()),en=cmLabel(add,'英語タグ（空欄可）',cmInput()),cat=cmLabel(add,'分類（任意）',cmInput());
  add.append(btn('1件追加',()=>{if(!jp.value.trim()){toast('日本語名を入力してください');return}rows.push([jp.value.trim(),en.value.trim(),cat.value.trim()]);save();jp.value='';en.value='';draw()},'primary'));
  const bulk=cmNode('textarea');bulk.placeholder='日本語名\t英語タグ\t分類\nExcelからコピーした表、またはCSVを貼り付け';cmLabel(add,'まとめて追加（1列目＝日本語、2列目＝英語、3列目＝分類）',bulk);
  const importRows=text=>{try{const parsed=cmParseRows(text);if(parsed.some(r=>r.length<2||!r[0]))throw Error('各行に日本語名と英語タグの列が必要です');let count=0;for(const r of parsed){const entry=r.slice(0,3);if(!rows.some(o=>o[0]===entry[0]&&o[1]===entry[1])){rows.push(entry);count++}}save();draw();toast(count+'件を追加しました')}catch(e){toast(e.message)}};
  add.append(btn('貼り付けた表を追加',()=>importRows(bulk.value)));const file=cmNode('input');file.type='file';file.accept='.csv,.tsv,.txt';file.onchange=async()=>{if(file.files[0])importRows(await file.files[0].text())};add.append(file);note(add,'Excelファイルは表をコピーして貼り付けるか、CSVとして保存して取り込めます。');
- root.append(add,btn('候補CSVを書き出す',()=>download(c.label+'_候補.csv','\ufeff'+[['日本語名','英語タグ','分類'],...rows].map(r=>r.map(x=>'"'+String(x||'').replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv;charset=utf-8')),list);draw();return root;
+ root.append(add,btn('候補CSVを書き出す',()=>download(c.label+'_候補.csv','\ufeff'+[['日本語名','英語タグ','分類'],...rows].map(r=>r.slice(0,3).map(x=>'"'+String(x||'').replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv;charset=utf-8')),list);draw();return root;
 })}
 function cmCatalogRows(key){const m=cmState();m.specialCatalogs??={};if(!m.specialCatalogs[key]){
  if(key==='hair')m.specialCatalogs[key]=HAIR_COLORS.map(c=>[c.label,c.name,c.hex]);
@@ -5125,29 +5318,29 @@ function cmSelectCandidates(id){
  if(!cmSelectionDialog)cmSelectionDialog=cmDialogShell('managedCandidateDialog');const {d,title,body,actions}=cmSelectionDialog,c=cmCard(id);title.textContent=c.label;body.replaceChildren();actions.querySelectorAll('.cm-list-menu').forEach(x=>x.remove());
  const search=cmInput('','日本語・英語で検索'),filters=cmNode('div','cm-tools'),selected=cmNode('div'),grid=cmNode('div','choice-card-grid'),footer=cmNode('div');grid.style.gridTemplateColumns=`repeat(${c.columns||2},minmax(0,1fr))`;
  let mode='all',category='',work='',sort='default',gender=id==='7'?'女性':id==='24'?'男性':'すべて',limit=80;
- const character=['7','24'].includes(id),characterInfo=o=>B.characters.find(ch=>ch.tag===o[1]),classes=[...new Set(c.options.map(o=>o[2]).filter(Boolean))];
+ const character=['7','24'].includes(id),characterInfo=o=>B.characters.find(ch=>ch.tag===o[1]),classes=[...new Set(c.options.filter(o=>cmCandidateAllowed(c,o)).map(o=>o[2]).filter(Boolean))];
  const works=character?[...new Set(c.options.map(o=>characterInfo(o)?.work||o[2]).filter(Boolean))]:[];
  const filterSelect=cmSelect([['','すべて'],...works.map(x=>['work:'+x,x]),...classes.map(x=>['category:'+x,'分類：'+x])],'',v=>{work=v.startsWith('work:')?v.slice(5):'';category=v.startsWith('category:')?v.slice(9):'';limit=80;draw()});
  const sortSelect=cmSelect([['default','登録順'],['name','名前順（昇順）'],['nameDesc','名前順（降順）'],['selected','選択済みを先頭']],sort,v=>{sort=v;draw()});
  actions.prepend(cmInstantControl('絞り込み',filterSelect),cmInstantControl('並び替え',sortSelect));
  const searchRow=cmNode('div','cm-tools');searchRow.append(search);body.append(searchRow,filters,selected,grid,footer);
  const draw=()=>{
-  const picks=S.simple[id]||[];filters.replaceChildren();
+  const picks=(S.simple[id]||[]).filter(x=>!x.adult||smAdultConfirmed());filters.replaceChildren();
   for(const label of (character?['すべて','男性','女性','性別なし']:['すべて'])){const active=mode==='all'&&gender===label;filters.append(btn(label,()=>{mode='all';gender=label;limit=80;draw()},active?'primary mini':'mini'));}
   filters.append(btn('★お気に入り',()=>{mode=mode==='favorite'?'all':'favorite';limit=80;draw()},mode==='favorite'?'primary mini':'mini'));
   selected.replaceChildren();for(const [i,x]of picks.entries()){const row=cmNode('div','selection'),text=cmNode('span','',x.label);row.append(text);if(c.weights)row.append(cmSelect(SEPARATION_WEIGHTS.map(w=>[String(w),w===1?'1.0 通常':String(w)]),x.weight||1,v=>{x.weight=Number(v);save()}));row.append(btn('×',()=>{picks.splice(i,1);save();draw()},'mini'));selected.append(row)}
   grid.replaceChildren();const favorites=cmState().favorites[id]||[];
-  const list=c.options.filter(o=>[...o,...(characterInfo(o)?.aliases||[])].join(' ').toLowerCase().includes(search.value.toLowerCase())&&(!category||o[2]===category)&&(!work||(characterInfo(o)?.work||o[2])===work)&&(mode!=='favorite'||favorites.includes(cmOptionKey(o)))&&(!character||gender==='すべて'||(characterInfo(o)?.gender||'性別なし')===gender));
+  const list=c.options.filter(o=>cmCandidateAllowed(c,o)&&[...o.slice(0,3),...(characterInfo(o)?.aliases||[])].join(' ').toLowerCase().includes(search.value.toLowerCase())&&(!category||o[2]===category)&&(!work||(characterInfo(o)?.work||o[2])===work)&&(mode!=='favorite'||favorites.includes(cmOptionKey(o)))&&(!character||gender==='すべて'||(characterInfo(o)?.gender||'性別なし')===gender));
   if(sort==='name'||sort==='nameDesc')list.sort((a,b)=>(sort==='name'?1:-1)*a[0].localeCompare(b[0],'ja',{numeric:true}));
   if(sort==='selected')list.sort((a,b)=>Number(picks.some(x=>x.tag===b[1]&&x.label===b[0]))-Number(picks.some(x=>x.tag===a[1]&&x.label===a[0])));
   list.sort((a,b)=>Number(favorites.includes(cmOptionKey(b)))-Number(favorites.includes(cmOptionKey(a))));
   for(const o of list.slice(0,limit)){const chosen=picks.some(x=>x.tag===o[1]&&x.label===o[0]),wrap=cmNode('div','cm-candidate'),b=btn('',()=>{
-   if(chosen){S.simple[id]=picks.filter(x=>!(x.tag===o[1]&&x.label===o[0]))}else if(!c.multiple)S.simple[id]=[{label:o[0],tag:o[1],weight:1}];else (S.simple[id]??=[]).push({label:o[0],tag:o[1],weight:1});save();draw();if(!c.multiple){d.close();render()}
+   if(cmIsLinked(c)){const result=cmApplyImportedLinked(c,o);toast(result.message);if(!result.ok)return;}else if(chosen){S.simple[id]=picks.filter(x=>!(x.tag===o[1]&&x.label===o[0]))}else if(cmCandidateMeta(o)){cmPickCopiedOption(c,o)}else if(!c.multiple)S.simple[id]=[{label:o[0],tag:o[1],weight:1}];else (S.simple[id]??=[]).push({label:o[0],tag:o[1],weight:1});save();draw();if(!c.multiple){d.close();render()}
   },'option-card'+(chosen?' selected':''));b.setAttribute('aria-pressed',String(chosen));b.append(cmNode('strong','',o[0]));if(o[2])b.append(cmNode('small','',o[2]));if(S.showEnglish)b.append(cmNode('small','',o[1]));const star=btn(favorites.includes(cmOptionKey(o))?'★':'☆',()=>{const m=cmState(),list=m.favorites[id]??=[],key=cmOptionKey(o);if(list.includes(key))m.favorites[id]=list.filter(x=>x!==key);else list.push(key);save();draw()},'cm-star mini');star.setAttribute('aria-label',o[0]+'のお気に入り');wrap.append(b,star);grid.append(wrap)}
   footer.replaceChildren();note(footer,list.length+'件');if(list.length>limit)footer.append(btn('さらに80件',()=>{limit+=80;draw()}));
  };
  search.oninput=()=>{limit=80;draw()};cmCheck(searchRow,'英語を表示',S.showEnglish,v=>{S.showEnglish=v;save();draw()});draw();
- const custom=cmNode('details'),summary=cmNode('summary','','自由入力／候補の編集');custom.append(summary);const jp=cmLabel(custom,'日本語名（省略可）',cmInput()),tag=cmLabel(custom,'英語タグ',cmInput());custom.append(btn('選択中へ追加',()=>{if(!tag.value.trim())return;const x={label:jp.value.trim()||tag.value.trim(),tag:tag.value.trim(),weight:1};if(c.multiple)(S.simple[id]??=[]).push(x);else S.simple[id]=[x];save();draw()}),btn('候補をメンテナンス',()=>{d.close();cmOptions(id)}));body.append(custom);
+ const custom=cmNode('details'),summary=cmNode('summary','','自由入力／候補の編集');custom.append(summary);const jp=cmLabel(custom,'日本語名（省略可）',cmInput()),tag=cmLabel(custom,'英語タグ',cmInput());custom.append(btn('選択中へ追加',()=>{if(!tag.value.trim())return;const x={label:jp.value.trim()||tag.value.trim(),tag:tag.value.trim(),weight:1};if(c.multiple)(S.simple[id]??=[]).push(x);else S.simple[id]=[x];save();draw()}),btn('候補をメンテナンス',()=>{d.close();cmOptions(id)}));if(!cmIsLinked(c))body.append(custom);
  if(!d.open)d.showModal();
 }
 function cmColorPicker(id){if(!cmSelectionDialog)cmSelectionDialog=cmDialogShell('managedCandidateDialog');const {d,title,body,actions}=cmSelectionDialog,c=cmCard(id);actions.querySelectorAll('.cm-list-menu').forEach(x=>x.remove());title.textContent=c.label+'の色';body.replaceChildren();S.simple._cardColors??={};const grid=cmNode('div','palette-grid');body.append(grid);const draw=()=>{grid.replaceChildren();const selected=S.simple._cardColors[id]||[];for(const o of cmPalette(c)){const hex=/^#[0-9a-f]{6}$/i.test(o[2]||'')?o[2]:'#999999';const color={label:o[0],hex};grid.append(swatchButton(color,selected.some(x=>x[1]===o[1]),()=>{if(c.colorMultiple)S.simple._cardColors[id]=selected.some(x=>x[1]===o[1])?selected.filter(x=>x[1]!==o[1]):[...selected,cmCopy(o)];else S.simple._cardColors[id]=[cmCopy(o)];save();draw()}))}};draw();body.append(btn('未指定／色を解除',()=>{delete S.simple._cardColors[id];save();draw()}));if(!d.open)d.showModal()}
@@ -5155,7 +5348,7 @@ const cmOriginalPicker=pickerField;
 function cmMakeCard(c){
  if(CM_SPECIAL.has(c.id)){const f=B.manga.find(f=>String(f.id)===c.id),card=cmOriginalPicker({...f,label:c.label},S.simple);const title=card.querySelector('strong');if(title)title.textContent=c.label;return card;}
  const card=cmNode('section','compact-option-card cm-editable-card'),title=cmNode('strong','',c.label),content=cmNode('div','cm-card-content');card.dataset.cardId=c.id;card.append(title,content);
- const draw=()=>{content.replaceChildren();const picks=S.simple[c.id]||[];card.classList.toggle('configured',picks.length>0);
+ const draw=()=>{content.replaceChildren();if(!cmCandidateAllowed(c,null)){note(content,'メイン側で成人確認を完了してください。');return;}const picks=(S.simple[c.id]||[]).filter(x=>!x.adult||smAdultConfirmed());card.classList.toggle('configured',picks.length>0);
  if(c.mode==='binary'){const actions=cmNode('div','inline-card-actions');for(const label of ['あり','なし']){const o=c.options.find(o=>o[0]===label)||[label,''];const on=picks[0]?.label===label;const b=btn(label,()=>{S.simple[c.id]=[{label:o[0],tag:o[1],weight:picks[0]?.weight||1}];save();draw()},on?'primary':'secondary');b.setAttribute('aria-pressed',String(on));actions.append(b)}content.append(actions);if(c.weights&&picks.length)content.append(cmSelect(SEPARATION_WEIGHTS.map(w=>[String(w),w===1?'1.0 通常':String(w)]),picks[0].weight||1,v=>{picks[0].weight=Number(v);save()}));}
  else{const chips=cmNode('div','cm-inline-chips');for(const [i,x]of picks.entries()){const chip=cmNode('span','card-selected-chip');chip.append(cmNode('span','',x.label),btn('×',()=>{picks.splice(i,1);save();draw()},'card-chip-remove'));chips.append(chip)}if(picks.length)content.append(chips);else content.append(cmNode('span','compact-option-value','未指定'));const pick=btn('タップして設定',()=>cmSelectCandidates(c.id),'cm-open-candidates');content.append(pick);card.onclick=e=>{if(!e.target.closest('button,select,input'))cmSelectCandidates(c.id)};}
  if(c.color){const colors=S.simple._cardColors?.[c.id]||[];content.append(btn('色：'+(colors.map(o=>o[0]).join('／')||'未指定'),()=>cmColorPicker(c.id),'secondary cm-color-button'));}
@@ -5285,7 +5478,7 @@ function cmRenderDuplicateRows(root,options,rebuild){
  for(const group of groups){const section=cmNode('section','cm-option-row');section.append(cmNode('strong','',group[0].tag));group.forEach(item=>{const row=cmNode('div','cm-duplicate-row');row.append(cmNode('span','',item.label),btn('この候補を削除',()=>{if(!confirm('この候補を削除しますか？選択済みの入力は残ります。'))return;options.splice(item.index,1);save();rebuild()},'danger mini'));section.append(row)});root.append(section)}
 }
 cmManagement=function(){cmOpen('カード管理',()=>{
- const root=cmNode('div'),tools=cmNode('div','cm-tools');tools.append(btn('＋ カード追加',()=>{const c=cmAddCard('新しいカード');save();cmEditCard(c.id)},'primary'),btn('配置プリセット',cmLayouts),btn('標準色',()=>cmPaletteEditor(null)));
+ const root=cmNode('div'),tools=cmNode('div','cm-tools');tools.append(btn('＋ カード追加',()=>{const c=cmAddCard('新しいカード');save();cmEditCard(c.id)},'primary'),btn('メインから追加',cmImportMain),btn('配置プリセット',cmLayouts),btn('標準色',()=>cmPaletteEditor(null)));
  const undoButton=btn('↶ 取り消し',cmUndoMaintenance,'mini');undoButton.disabled=!S.cardMaintenanceUndo?.length;tools.append(undoButton);root.append(tools);
  const search=cmInput(cmManagerQuery,'カード名を検索'),role=cmSelect([['all','すべて'],['person1','人物1'],['person2','人物2'],['global','全体設定'],['custom','追加カード'],['hidden','非表示']],cmManagerRole,v=>{cmManagerRole=v;draw()});const searchbar=cmNode('div','cm-manager-search');searchbar.append(search,role);root.append(searchbar);const list=cmNode('div');root.append(list);
  search.oninput=()=>{cmManagerQuery=search.value;draw()};
@@ -5373,7 +5566,7 @@ directOptions=function(f,store,single,adult,refresh){
 const sharedEditBefore=cmEditCard;
 cmEditCard=function(id){id=String(id);if(!cmIsShared(id))return sharedEditBefore(id);cmOpen('カード編集',()=>{
  const c=cmCard(id),root=cmNode('div');root.append(btn('← カード一覧',cmManagement,'mini'));note(root,'メインツールのデータを使用しています。候補の追加・編集はメインツールで行ってください。');
- if(!sharedIds.has(id)){root.append(btn('候補の参照元を設定',()=>cmReferenceEditor(id)));note(root,'参照先：'+(smMainTargets().find(t=>t.id===cmReference(c).target)?.label||'現在は使用できません'));cmCheck(root,'複数の候補を同時選択',c.multiple,v=>{c.multiple=v;save()});cmLabel(root,'プロンプトの出力先',cmSelect([['person1','人物1'],['person2','人物2'],['before','全体：品質・固定設定'],['relation','全体：関係性・動作'],['background','全体：背景・時間・天候'],['effect','全体：エフェクト'],['other','全体：漫画表現・その他']],c.role,v=>{c.role=v;save()}));}
+ if(!sharedIds.has(id)){root.append(btn('候補の参照元を設定',()=>cmReferenceEditor(id)));note(root,'参照先：'+(smMainTargets().find(t=>t.id===cmReference(c).target)?.label||'現在は使用できません'));cmCheck(root,'複数の候補を同時選択',c.multiple,v=>{c.multiple=v;save()});cmLabel(root,'プロンプトの出力先',cmSelect([['none','出力しない／未設定'],['person1','人物1'],['person2','人物2'],['before','全体：品質・固定設定'],['relation','全体：関係性・動作'],['background','全体：背景・時間・天候'],['effect','全体：エフェクト'],['other','全体：漫画表現・その他']],c.role,v=>{c.role=v;save()}));}
  const label=cmLabel(root,'カード名',cmInput(c.label));label.onchange=()=>{c.label=label.value.trim()||c.label;save()};
  cmCheck(root,'個別タグの重み設定を使う',c.weights,v=>{c.weights=v;save()});
  if(id!=='12')cmLabel(root,'候補リストの列数',cmSelect([['1','1列'],['2','2列'],['3','3列']],c.columns,v=>{c.columns=Number(v);save()}));
@@ -5396,6 +5589,61 @@ const integrationCss=document.createElement('style');integrationCss.textContent=
 .simple-only dialog{max-width:calc(100vw - 20px)}
 `;document.head.append(integrationCss);
 // Only lifecycle access is exposed; input objects are not shared with the main tool.
+function cmImportMain(){cmOpen('メインから追加',()=>{
+ const root=cmNode('div');root.append(btn('← カード管理',cmManagement,'mini'));note(root,'メイン側は読み取り専用です。取り込んだ候補・カードは簡易漫画側の独立コピーとなり、自動同期しません。');
+ for(const [mode,label]of [['options','候補だけ追加'],['card','カードごと追加'],['linked','連動型カードを追加']])root.append(btn(label,()=>cmImportSourceScreen(mode),'cm-import-action'));
+ return root;
+})}
+function cmImportSourceScreen(mode){cmOpen('メインから追加：取り込み元',()=>{
+ const root=cmNode('div');root.append(btn('← 戻る',cmImportMain,'mini'));const sources=smImportSources(mode),sections=[...new Set(sources.map(s=>s.section))];
+ const section=cmLabel(root,'大分類',cmSelect(sections.map(id=>[id,candidateAddSections.find(r=>r[0]===id)?.[1]||'場面']),sections[0]||'',()=>draw()));
+ const source=cmLabel(root,'メインカード',cmSelect([],'',()=>describe())),description=cmNode('p','muted');root.append(description);
+ const describe=()=>{const s=sources.find(s=>s.targetId===source.value);description.textContent=s?(mode==='card'&&s.specialReason?s.specialReason:s.type==='linked'?'通常候補を選択する連動カードを独立コピーします。':'標準候補・追加候補をコピーできます。'): '現在取り込めるカードがありません。';next.disabled=!s||mode==='card'&&!!s.specialReason;};
+ const draw=()=>{source.replaceChildren();for(const s of sources.filter(s=>s.section===section.value)){const option=cmNode('option','',s.name+(mode==='card'&&s.specialReason?'（特殊形式）':''));option.value=s.targetId;source.append(option);}describe();};
+ const next=btn(mode==='options'?'候補を選ぶ':'内容を確認',()=>{if(mode==='options')cmImportOptionScreen(source.value);else cmImportReview(mode,source.value)},'primary');root.append(next);draw();
+ note(root,'非表示の項目・候補、成人未確認の項目は取り込み一覧に表示しません。');return root;
+})}
+function cmImportOptionScreen(target,chosen=new Set(),query=''){cmOpen('メインから追加：候補を選択',()=>{
+ const source=smImportSource(target),root=cmNode('div');root.append(btn('← 取り込み元',()=>cmImportSourceScreen('options'),'mini'));if(!source){note(root,'取り込み元を利用できません。');return root;}root.append(cmNode('strong','',source.name));
+ const rows=smImportRows(target),search=cmInput(query,'候補名・英語タグ・分類で検索'),count=cmNode('p'),list=cmNode('div','cm-import-list');let limit=60;root.append(search,count);
+ const next=btn('追加先を選ぶ',()=>cmImportDestinationScreen(target,[...chosen],search.value),'primary'),more=btn('さらに60件',()=>{limit+=60;draw()},'mini');root.append(next,list,more);
+ const draw=()=>{list.replaceChildren();const q=search.value.normalize('NFKC').toLowerCase(),matching=rows.filter(o=>(o.name+' '+o.tag+' '+o.group).normalize('NFKC').toLowerCase().includes(q));
+  count.textContent='選択 '+chosen.size+'件 ／ 検索結果 '+matching.length+'件';next.disabled=!chosen.size;more.style.display=matching.length>limit?'':'none';
+  for(const o of matching.slice(0,limit)){const b=btn('',()=>{if(chosen.has(o.sourceOptionId))chosen.delete(o.sourceOptionId);else chosen.add(o.sourceOptionId);draw()},'option-card cm-import-option'+(chosen.has(o.sourceOptionId)?' selected':''));b.setAttribute('aria-pressed',String(chosen.has(o.sourceOptionId)));b.append(cmNode('strong','',o.name),cmNode('small','',(o.origin==='standard'?'標準':'追加')+(o.group?' · '+o.group:'')),cmNode('small','',o.tag));list.append(b);}
+ };search.oninput=()=>{limit=60;draw()};draw();return root;
+})}
+function cmImportDestinationScreen(target,keys,query){cmOpen('メインから追加：追加先',()=>{
+ const root=cmNode('div');root.append(btn('← 候補を選択',()=>cmImportOptionScreen(target,new Set(keys),query),'mini'));note(root,keys.length+'件の候補をコピーします。共有参照・専用・連動型カードは追加先に使用しません。');
+ const destination=cmLabel(root,'追加先の簡易漫画カード',cmSelect(cmCopyDestinations().map(c=>[c.id,c.label]),'',()=>{}));
+ const copy=btn('選択した候補をコピー',()=>{const result=cmImportMainOptions(target,keys,destination.value);toast(result.message);if(result.ok)cmOptions(result.cardId)},'primary');copy.disabled=!destination.options.length;root.append(copy);if(!destination.options.length)note(root,'通常の候補一覧カードを作成してから取り込んでください。');return root;
+})}
+function cmImportReview(mode,target){cmOpen('メインから追加：内容確認',()=>{
+ const source=smImportSource(target),root=cmNode('div');root.append(btn('← 取り込み元',()=>cmImportSourceScreen(mode),'mini'));if(!source){note(root,'取り込み元を利用できません。');return root;}root.append(cmNode('strong','',source.name));
+ if(mode==='card'){
+  if(source.specialReason){note(root,source.specialReason);return root;}
+  note(root,smImportRows(target).length+'件の候補を含む通常カードをコピーします。カード名・選択方式・重み設定を初期値として引き継ぎます。');
+  const role=cmLabel(root,'簡易漫画の出力位置',cmSelect(CM_COPY_ROLES,source.role,()=>{}));note(root,'不明な出力位置は自動で割り当てません。未選択の間はプロンプトへ出力しません。');
+  root.append(btn('カードごとコピー',()=>{const result=cmImportMainCard(target,role.value);toast(result.message);if(result.ok)cmEditCard(result.cardId)},'primary'));return root;
+ }
+ const keys=smImportRows(target).map(r=>r.sourceOptionId),plan=cmLinkedImportPlan(target,keys);if(!plan.ok){note(root,plan.message);return root;}
+ const status=cmLinkedDependencyStatus(plan),roles={},missingCards=[...new Map(status.missing.map(d=>[d.source.sourceCardId,d.source])).values()];
+ note(root,(plan.links.length+(plan.reused||0))+'件の連動候補。'+(plan.reused?'追加済みの'+plan.reused+'件は編集内容・連動先を維持して再利用します。':'')+(status.missing.length?'この連動カードには関連カード・候補が必要です。':'必要な関連候補は簡易漫画側に存在します。'));
+ const include=cmNode('input');include.type='checkbox';include.checked=false;if(status.missing.length)cmLabel(root,'関連カード・候補も一緒に追加（不足 '+status.missing.length+'件）',include);
+ for(const s of missingCards){const existing=cmFindImportedCard(s.sourceCardId);if(existing){note(root,'既存カードに不足候補を追加：'+existing.label);continue;}const role=cmLabel(root,s.name+' の出力位置',cmSelect(CM_COPY_ROLES,s.role,()=>{}));roles[s.sourceCardId]=role;}
+ const details=cmNode('details');details.append(cmNode('summary','','連動先の一覧'));for(const dep of plan.dependencies){const found=cmFindCopiedOption(dep.option.sourceCardId,dep.option.sourceOptionId);note(details,dep.source.name+' → '+dep.option.name+(found?'（既存コピーを再利用）':'（追加が必要）'));}root.append(details);
+ note(root,'適用時は簡易漫画内の通常候補を選択します。多段連動や特殊形式を含む場合は取り込みを中止します。');
+ root.append(btn('連動カードをコピー',()=>{const result=cmImportMainLinked(target,keys,include.checked,Object.fromEntries(Object.entries(roles).map(([k,v])=>[k,v.value])));toast(result.message);if(result.ok)cmEditCard(result.cardId)},'primary'));return root;
+})}
+const cmImportStyle=cmNode('style');cmImportStyle.textContent=`
+.cm-import-action{display:block;width:100%;margin:10px 0;min-height:42px}
+.cm-import-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:10px 0}
+.cm-import-option{min-width:0;text-align:left;padding:12px!important;height:auto!important;min-height:64px;overflow-wrap:anywhere}
+.cm-import-option strong,.cm-import-option small{display:block;overflow-wrap:anywhere}
+.cm-import-option small{font-size:11px;color:var(--muted);margin-top:4px}
+.cm-import-option.selected{border:1px solid var(--accent);background:var(--accent-dark)}
+.cm-dialog .cm-label>input[type=checkbox]{width:20px;min-height:20px;display:inline-block;margin-left:8px}
+`;document.head.append(cmImportStyle);
+
 host.simpleManga={refresh:()=>render(),positive:()=>currentPositive(),negative:()=>currentNegative(),snapshot:()=>simpleOnlySnapshot()};
 
 S.page='studio';render();
