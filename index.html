@@ -4254,7 +4254,7 @@ function cmEnsureOptionId(row){let meta=cmCandidateMeta(row);if(!meta){meta={};r
 function cmCarryOption(old,row){const next=row.slice(0,3),meta=cmCandidateMeta(old);if(meta)next[3]=cmCopy(meta);return next}
 function cmIsLinked(c){return c?.type==='linked'}
 const CM_ADULT_TRANSFER_IDS=new Set(['16','17','18','19','21','23','25','26']);
-function cmTransferAllowed(c,row){return !!c&&!cmIsShared(c)&&!cmIsLinked(c)&&cmCandidateAllowed(c,row)&&(!CM_ADULT_TRANSFER_IDS.has(c.id)||smAdultConfirmed())}
+function cmTransferAllowed(c,row){return !!c&&!cmIsShared(c)&&!cmIsLinked(c)&&cmCandidateMeta(row)?.source!=='main'&&cmCandidateAllowed(c,row)&&(!CM_ADULT_TRANSFER_IDS.has(c.id)||smAdultConfirmed())}
 function cmCandidateAllowed(c,row){
  const ref=cmReference(c),adult=c?.importAdult||c?.referenceAdult||cmCandidateMeta(row)?.adult||ref&&smReferenceNeedsAdult(ref.target);
  return !adult||smAdultConfirmed();
@@ -4395,7 +4395,7 @@ function cmReferenceEditor(id){cmOpen('候補の参照元',()=>{
 })}
 function cmTransferCandidate(id,catalog,index,target,classification,color,allowDuplicate=false){
  const c=cmCard(id),rows=catalog?cmCatalogRows(catalog):c?.options,row=rows?.[index];
- if(!cmTransferAllowed(c,row))return {ok:false,message:'共有参照・連動候補、成人未確認の候補はコピーできません。'};
+ if(!cmTransferAllowed(c,row))return {ok:false,message:'共有参照・メイン由来のコピー・連動候補、成人未確認の候補はコピーできません。'};
  if(!row)return {ok:false,message:'送信元の候補が見つかりません。'};
  const source={sourceCardId:c.id+(catalog?':'+catalog:''),sourceOptionId:cmEnsureOptionId(row)};
  const result=smCopyToMain(target,cmCopy(row),classification,color,source,allowDuplicate);if(result.ok)save();return result;
