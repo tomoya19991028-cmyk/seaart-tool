@@ -1542,7 +1542,6 @@ function renderWeatherTimeDialog(){const body=weatherTimeDialog.querySelector('.
 for(const k of Object.keys(labels)){if(choiceLaunches[k])continue;const launch=node('button','選ぶ','choiceLaunch');launch.type='button';launch.dataset.category=k;$('picker-'+k).prepend(launch);choiceLaunches[k]=launch;launch.onclick=()=>openChoiceDialog(k)}
 function renderCategoryPages(){if(window.appReady)layoutChoices()}
 function renderPeoplePages(){if(window.appReady)layoutPeople()}
-function updateChoiceLaunch(k){const launch=choiceLaunches[k];if(launch)launch.textContent=labels[k]+' · '+selected[k].length+'件選択 / '+catalog[k].length+'件';const weightButton=choiceWeightButtons[k];if(weightButton){weightButton.hidden=!selected[k].length;weightButton.textContent='強調：'+(Number(weights[k])===1?'通常':Number(weights[k]).toFixed(1))}}
 const optionPages={choice:0,person:0,scene:0};
 function renderPagedOptions(root,entries,kind,makeRow){for(const entry of entries)root.append(makeRow(entry));if(!entries.length)root.append(node('p','該当する選択肢がありません','small'))}
 
@@ -4979,7 +4978,6 @@ let undo=null,pickerState=null;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));storageOK=true}catch{storageOK=false}const x=$('#saveStatus');if(x)x.textContent=storageOK?'このブラウザに自動保存中':'自動保存できません。設定ファイルを保存してください';const out=$('#specialOut');if(out)out.value=specialPrompt(S.page==='nsfw'?'nsfw':'simple')}
 function toast(t){$('#toast').textContent=t;$('#toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').style.display='none',2600)}
 function mutate(fn){undo=JSON.stringify(S);fn();save();render()}
-function go(page){S.page=page;save();render();window.scrollTo(0,0)}
 function btn(t,fn,cls=''){const b=document.createElement('button');b.textContent=t;b.className=cls;b.onclick=fn;return b}
 function title(step,t,desc){return `<div class="eyebrow">${esc(step)}</div><h1>${esc(t)}</h1><p class="muted">${esc(desc)}</p>`}
 function route(text){return `<div class="route">${esc(text)}</div>`}
@@ -4996,8 +4994,6 @@ function comicState(type){if(!S.comics[type]){const cfg=B.comics[type],v={cells:
 function valueTag(f,v){return f.options.find(o=>o[0]===v)?.[1]??v??''}
 function comicPrompt(type){const cfg=B.comics[type],st=comicState(type),c=st.cells;let count=parseInt(c.B6)||cfg.panels.length;count=Math.max(1,Math.min(count,cfg.panels.length));const settings=cfg.settings.filter(f=>!['ストーリープリセット','ベース元','登場人物'].includes(f.label)).map(f=>valueTag(f,c[f.key]));let prev={};const panels=cfg.panels.slice(0,count).map((fs,i)=>{let vals={};fs.forEach(f=>vals[f.label]=c[f.key]||'');const inherit=vals['前コマ引継ぎ']||'なし';let names=inherit==='主役のみ'?['主役']:inherit==='主役+構図'?['主役','構図']:inherit==='主役+構図+背景'?['主役','構図','背景']:inherit==='基本項目すべて'?['主役','構図','体勢','表情','行動・状況','背景']:[];names.forEach(k=>{if(!vals[k])vals[k]=prev[k]||''});prev=vals;return `Panel ${i+1}: `+join(fs.filter(f=>f.label!=='前コマ引継ぎ').map(f=>vals[f.label]?valueTag(f,vals[f.label]):''))});const base=type==='NSFWコマ割り'?specialPrompt('nsfw'):mainPrompt();return [join(settings),base,...panels].filter(Boolean).join(',\n')}
 function comicNegative(type){const st=comicState(type),cfg=B.comics[type];return join([type==='NSFWコマ割り'?S.nsfw.negative||'':negativePrompt(),cfg.negative.find(o=>o[0]===st.neg)?.[1],st.extraNeg])}
-function render(){const page=S.page;const tabs=[['home','⌂','制作'],['people','◉','人物'],['common','◇','共通'],['comic','▦','漫画'],['output','↗','出力']];$('#bottom').innerHTML=tabs.map(([p,icon,t])=>`<button data-nav="${p}" class="${page===p?'active':''}"><span class="navicon">${icon}</span>${t}</button>`).join('');$$('[data-nav]').forEach(b=>b.onclick=()=>go(b.dataset.nav));({home:homePage,people:peoplePage,common:commonPage,solo:soloPage,negative:negativePage,nsfw:()=>specialPage('nsfw'),simple:()=>specialPage('simple'),comic:comicPage,output:outputPage,settings:settingsPage,source:sourcePage}[page]||homePage)()}
-function menu(){openChoices('ページ一覧',[['制作の流れ','home'],['人物1・人物2','people'],['共通・関係性','common'],['1人行為専用 → 人物へ適用','solo'],['通常ネガティブ','negative'],['通常の完成プロンプト','output'],['コマ割り・4コマ特化','comic'],['NSFW入力（独立）','nsfw'],['NSFWコマ割り','nsfwcomic'],['簡易漫画（独立）','simple'],['保存・読み込み・リセット','settings'],['元データを検索','source']],o=>{if(o[1]==='nsfwcomic'){S.comicType='NSFWコマ割り';go('comic')}else go(o[1])})}
 $('#menu').onclick=menu;$('#closePicker').onclick=()=>$('#picker').close();$('#pickerSearch').oninput=()=>drawChoices();
 function openChoices(t,options,fn,selected=[]){pickerState={options,fn,selected,title:t};$('#pickerTitle').textContent=t;$('#pickerSearch').value='';$('#picker').showModal();drawChoices()}
 function drawChoices(){const q=$('#pickerSearch').value.toLowerCase(),ps=pickerState;const list=ps.options.filter(o=>o.join(' ').toLowerCase().includes(q));$('#pickerBody').innerHTML=`<p class="hint">${list.length}件${list.length>150?' · 検索して絞り込めます':''}</p>`;list.slice(0,150).forEach(o=>{const b=btn(o[0],()=>{ps.fn(o);if(ps.keepOpen)drawChoices();else $('#picker').close()},'choice'+(ps.selected.includes(o[0])?' selected':''));if(o[1]&&o[1]!==o[0]&&!['home','people','common','solo','negative','output','comic','nsfw','nsfwcomic','simple','settings','source'].includes(o[1])){const sm=document.createElement('small');sm.textContent=o[1];b.append(sm)}$('#pickerBody').append(b)})}
@@ -5290,7 +5286,6 @@ specialPrompt=function(mode){const text=simplePromptBeforeCommaCleanup(mode);ret
 
 // Favorites and selected-item chips on setting cards.
 S.favorites??={};
-function favoriteKey(o){return JSON.stringify([pickerState?.title||'',o[1]||o[0]])}
 function favoriteList(){return S.favorites[pickerState?.title||'']||[]}
 function isFavorite(o){return favoriteList().includes(o[1]||o[0])}
 function toggleFavorite(o){const title=pickerState?.title||'';const list=S.favorites[title]??=[];const key=o[1]||o[0],i=list.indexOf(key);if(i<0)list.push(key);else list.splice(i,1);S.favorites[title]=list;save();drawChoices()}
@@ -5830,7 +5825,6 @@ separatedSimplePrompt=function(){
 let cmDialog=null,cmBody=null,cmTitle=null,cmSelectionDialog=null;
 function cmNode(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el}
 function cmDialogShell(id){const d=cmNode('dialog','cm-dialog');d.id=id;const head=cmNode('div','dialog-head'),row=cmNode('div','row between cm-dialog-title-row'),title=cmNode('h2'),actions=cmNode('div','cm-head-actions'),close=btn('閉じる',()=>d.close(),'mini');actions.append(close);row.append(title,actions);head.append(row);const body=cmNode('div','dialog-body');d.append(head,body);d.addEventListener('close',()=>render());document.body.append(d);return {d,title,body,actions}}
-function cmHeaderMenu(label){const d=cmNode('details','cm-list-menu'),summary=cmNode('summary','',label+' ▾'),body=cmNode('div','cm-menu-body');d.append(summary,body);return {d,body}}
 function cmInstantControl(label,select){const wrap=cmNode('label','cm-list-menu cm-instant-control'),caption=cmNode('span','',label+' ▾');select.setAttribute('aria-label',label);wrap.append(caption,select);return wrap}
 function cmOpen(title,build){if(!cmDialog){const x=cmDialogShell('cardManagerDialog');cmDialog=x.d;cmBody=x.body;cmTitle=x.title}cmTitle.textContent=title;cmBody.replaceChildren(build());if(!cmDialog.open)cmDialog.showModal()}
 function cmLabel(parent,title,input){const label=cmNode('label','cm-label',title);label.append(input);parent.append(label);return input}
