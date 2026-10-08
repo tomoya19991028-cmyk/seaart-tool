@@ -505,7 +505,106 @@ const personFeatureGroups=['耳・角','牙・爪','尻尾','翼','皮膚・鱗'
 function personDetailEnabled(field){return field!=='damage'||personDamageEnabled}
 const detailOptions={
  damage:{label:'傷・汚れ・ダメージ',options:[]},
- bodyFeatures:{label:'身体・特殊特徴',options:[]},
+ bodyFeatures:{label:'身体・特殊特徴',options:[
+  ["cat ears", "猫耳", "耳・角"],
+  ["fox ears", "狐耳", "耳・角"],
+  ["wolf ears", "狼耳", "耳・角"],
+  ["dog ears", "犬耳", "耳・角"],
+  ["rabbit ears", "兎耳", "耳・角"],
+  ["bear ears", "熊耳", "耳・角"],
+  ["mouse ears", "鼠耳", "耳・角"],
+  ["deer ears", "鹿耳", "耳・角"],
+  ["cow ears", "牛耳", "耳・角"],
+  ["horse ears", "馬耳", "耳・角"],
+  ["pointy ears", "エルフ耳", "耳・角"],
+  ["long pointy ears", "長い尖り耳", "耳・角"],
+  ["demon horns", "悪魔の角", "耳・角"],
+  ["dragon horns", "竜の角", "耳・角"],
+  ["goat horns", "山羊角", "耳・角"],
+  ["bull horns", "牛角", "耳・角"],
+  ["antlers", "鹿角", "耳・角"],
+  ["single horn", "一本角", "耳・角"],
+  ["two horns", "二本角", "耳・角"],
+  ["multiple horns", "複数の角", "耳・角"],
+  ["fang", "八重歯", "牙・爪"],
+  ["sharp fangs", "鋭い牙", "牙・爪"],
+  ["vampire fangs", "吸血鬼の牙", "牙・爪"],
+  ["animal fangs", "獣の牙", "牙・爪"],
+  ["long fangs", "長い牙", "牙・爪"],
+  ["sharp claws", "鋭い爪", "牙・爪"],
+  ["long claws", "長い爪", "牙・爪"],
+  ["animal claws", "獣の爪", "牙・爪"],
+  ["black claws", "黒い爪", "牙・爪"],
+  ["hooked claws", "鉤爪", "牙・爪"],
+  ["paw pads", "肉球", "牙・爪"],
+  ["cat tail", "猫の尻尾", "尻尾"],
+  ["fox tail", "狐の尻尾", "尻尾"],
+  ["wolf tail", "狼の尻尾", "尻尾"],
+  ["dog tail", "犬の尻尾", "尻尾"],
+  ["rabbit tail", "兎の尻尾", "尻尾"],
+  ["cow tail", "牛の尻尾", "尻尾"],
+  ["horse tail", "馬の尻尾", "尻尾"],
+  ["dragon tail", "竜の尻尾", "尻尾"],
+  ["demon tail", "悪魔の尻尾", "尻尾"],
+  ["snake tail", "蛇の尻尾", "尻尾"],
+  ["fish tail", "魚の尻尾", "尻尾"],
+  ["fluffy tail", "ふさふさの尻尾", "尻尾"],
+  ["long tail", "長い尻尾", "尻尾"],
+  ["multiple tails", "複数の尻尾", "尻尾"],
+  ["nine tails", "九本の尻尾", "尻尾"],
+  ["angel wings", "天使の翼", "翼"],
+  ["black feathered wings", "黒い羽根の翼", "翼"],
+  ["white feathered wings", "白い羽根の翼", "翼"],
+  ["bird wings", "鳥の翼", "翼"],
+  ["demon wings", "悪魔の翼", "翼"],
+  ["bat wings", "コウモリの翼", "翼"],
+  ["dragon wings", "竜の翼", "翼"],
+  ["butterfly wings", "蝶の翼", "翼"],
+  ["moth wings", "蛾の翼", "翼"],
+  ["insect wings", "昆虫の翼", "翼"],
+  ["small wings", "小さな翼", "翼"],
+  ["large wings", "大きな翼", "翼"],
+  ["four wings", "四枚の翼", "翼"],
+  ["six wings", "六枚の翼", "翼"],
+  ["dragon scales", "竜の鱗", "皮膚・鱗"],
+  ["snake scales", "蛇の鱗", "皮膚・鱗"],
+  ["fish scales", "魚の鱗", "皮膚・鱗"],
+  ["partially scaled skin", "部分的な鱗", "皮膚・鱗"],
+  ["fully scaled body", "全身の鱗", "皮膚・鱗"],
+  ["body fur", "獣毛", "皮膚・鱗"],
+  ["patches of fur", "部分的な獣毛", "皮膚・鱗"],
+  ["body feathers", "羽毛", "皮膚・鱗"],
+  ["reptile skin", "爬虫類の皮膚", "皮膚・鱗"],
+  ["skin markings", "特殊な肌模様", "皮膚・鱗"],
+  ["glowing skin markings", "発光する肌模様", "皮膚・鱗"],
+  ["animal legs", "獣脚", "四肢・特殊部位"],
+  ["bird legs", "鳥脚", "四肢・特殊部位"],
+  ["dragon legs", "竜脚", "四肢・特殊部位"],
+  ["hooves", "蹄", "四肢・特殊部位"],
+  ["animal hands", "獣の手", "四肢・特殊部位"],
+  ["clawed hands", "鉤爪の手", "四肢・特殊部位"],
+  ["extra arms", "追加の腕", "四肢・特殊部位"],
+  ["four arms", "四本腕", "四肢・特殊部位"],
+  ["tentacles", "触手", "四肢・特殊部位"],
+  ["tentacles on back", "背中の触手", "四肢・特殊部位"],
+  ["tentacles on head", "頭部の触手", "四肢・特殊部位"],
+  ["antennae", "昆虫の触角", "四肢・特殊部位"],
+  ["dorsal fin", "背びれ", "四肢・特殊部位"],
+  ["fish fins", "魚のひれ", "四肢・特殊部位"],
+  ["halo", "光輪", "超常・恒常特徴"],
+  ["black halo", "黒い光輪", "超常・恒常特徴"],
+  ["multiple halos", "複数の光輪", "超常・恒常特徴"],
+  ["floating rings", "浮遊する輪", "超常・恒常特徴"],
+  ["wings of light", "光の翼", "超常・恒常特徴"],
+  ["flaming wings", "炎の翼", "超常・恒常特徴"],
+  ["ice wings", "氷の翼", "超常・恒常特徴"],
+  ["lightning wings", "雷の翼", "超常・恒常特徴"],
+  ["water wings", "水の翼", "超常・恒常特徴"],
+  ["shadow wings", "影の翼", "超常・恒常特徴"],
+  ["energy wings", "エネルギー翼", "超常・恒常特徴"],
+  ["glowing horns", "発光する角", "超常・恒常特徴"],
+  ["magical markings", "魔法の紋様", "超常・恒常特徴"]
+ ]},
  skinColor:{label:'肌の色',options:[['pale skin','色白','明るい'],['fair skin','明るい肌','明るい'],['light skin','薄い肌色','明るい'],['natural skin tone','自然な肌色','標準'],['warm skin tone','暖色寄りの肌','標準'],['olive skin','オリーブ色の肌','中間'],['tan skin','小麦色の肌','日焼け'],['tanned skin','日焼けした肌','日焼け'],['brown skin','褐色の肌','濃い'],['dark skin','濃い褐色の肌','濃い'],['deep dark skin','深い褐色の肌','濃い']]},
  skin:{label:'肌の状態',options:importedSkin},
  bust:{label:'胸の大きさ（成人のみ）',options:importedBust},
@@ -1046,11 +1145,21 @@ function collectWeightEntries(){
  return entries
 }
 
-function profileDetailTags(p,field){if(field==='damage')return [];const tags=[];
+function profileDetailTags(p,field,deduplicate=true){if(field==='damage')return [];const tags=[];
   const value=p.detail?.[field],custom=(p.detailCustom?.[field]||'').trim(),key=['upper','lower','head','hands','feet','legwear','bust'].includes(field)?'clothingDetail':field.startsWith('effect')?'effect':field;
   for(const v of asList(value)){const raw=personOutputValue('detail:'+field,v),effectShade=field==='effect'?p.itemColors?.effect?.[v]?.primary||asList(p.detail?.effectColor).at(-1)?.split(' ')[0]:'',t=effectShade?colorizedItemValue(raw,effectShade):itemColorTag(p,field,raw,v);tags.push(explicitWeight(['effect','effectAura','effectDisplay'].includes(field)&&typeof subjectEffectTag==='function'?subjectEffectTag(p,field,t):t,p.itemWeights?.[field]?.[v]??p.effectWeights?.[field]?.[v]??globalTagWeight(key,v)))}
   if(custom)tags.push(field.startsWith('effect')?personEffectTag(custom,p,field):profileTag(custom,key));
- return tags;
+ return deduplicate?profileFeatureDetailTags(p,field,tags):tags;
+}
+// Resolve only full-tag overlaps with bodyFeatures, within this person's output.
+function profileFeatureDetailTags(p,field,tags){
+ if(!asList(p.detail?.bodyFeatures).length&&!p.detailCustom?.bodyFeatures?.trim())return tags;
+ const read=tag=>{if(typeof subjectWeightedValue==='function')return subjectWeightedValue(tag);const match=String(tag).match(/^\((.*):([0-9]+(?:\.[0-9]+)?)\)$/s);return match?{value:match[1],weight:Number(match[2])}:{value:tag,weight:1}};
+ const key=tag=>{const part=read(tag);return {...part,value:String(part.value??'').normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase()}};
+ const features=(field==='bodyFeatures'?tags:profileDetailTags(p,'bodyFeatures',false)).map(key);
+ if(field!=='bodyFeatures')return tags.filter(tag=>{const part=key(tag);return !features.some(feature=>feature.value===part.value&&(feature.weight===part.weight||part.weight===1&&feature.weight!==1))});
+ const others=Object.keys(detailOptions).filter(other=>other!=='bodyFeatures'&&other!=='damage').flatMap(other=>profileDetailTags(p,other,false)).map(key),seen=new Set();
+ return tags.filter(tag=>{const part=key(tag),signature=JSON.stringify([part.value,part.weight]);if(part.weight===1&&others.some(other=>other.value===part.value&&other.weight!==1)||seen.has(signature))return false;seen.add(signature);return true});
 }
 function profileTags(p,{subjects=true,poses=true,expressions=true,placement=true,effects=true,direction=true,categories=null}={}){expandOutfitSelection(p);
  const groups=Object.fromEntries(['outfit','expression','pose','hairStyle','hairColor','eyeColor','body'].map(k=>[k,[]]));
@@ -1863,7 +1972,7 @@ function personFeatureCard(profile,grid,person,p,field){
     result.push({box:{pickerApi:api},title:detailOptions[sourceField].label,tab:group,ownerId:person.id,refreshCard:refresh});
    }
   }
-  const order=field==='bodyFeatures'?[...personFeatureGroups,'超常・場面効果']:candidateDisplayGroups['detail:damage'];return cachedEntries=result.sort((a,b)=>(order.indexOf(a.tab)<0?order.length:order.indexOf(a.tab))-(order.indexOf(b.tab)<0?order.length:order.indexOf(b.tab)));
+  const order=field==='bodyFeatures'?[...personFeatureGroups,'超常・場面効果']:candidateDisplayGroups['detail:damage'];return cachedEntries=result.sort((a,b)=>(order.indexOf(a.tab)<0?order.length:order.indexOf(a.tab))-(order.indexOf(b.tab)<0?order.length:order.indexOf(b.tab))||Number(b.box.pickerApi.source==='detail:'+field)-Number(a.box.pickerApi.source==='detail:'+field));
  }
  function refresh(){renderUnifiedCard(card,launch,config.label,entries().flatMap(entry=>asList(entry.box.pickerApi.getValues()).map(value=>adultCardEntry(entry,value))))}
  launch.onclick=()=>openGroupedPersonDisplay(field,config.label,entries(),launch,person);
@@ -3349,7 +3458,7 @@ function adultDisplayPicker(entry){const api=entry.box.pickerApi;return {...api,
 function adultDisplayEntries(){return adultDisplaySession.entries.filter(e=>e.tab===adultDisplaySession.tab)}
 function adultDisplayRows(picker){const rows=personPickerOptions(picker.source,picker.options),known=new Set(rows.map(x=>x[0]));for(const value of asList(picker.getValues()))if(!known.has(value))rows.push([value,personOptionEdits[picker.source+'|'+value]?.name||value,'既存データ']);return picker.featureGroup?rows.map(row=>[row[0],row[1],picker.featureGroup]):rows}
 function adultDisplayGroups(){const select=$('personChoiceGroup');select.replaceChildren();const all=node('option','すべての分類');all.value='';select.append(all);for(const group of [...new Set(adultDisplayEntries().flatMap(e=>personCharacterCandidateGroups(adultDisplayPicker(e),adultDisplayRows(adultDisplayPicker(e))).map(x=>x[2]||'未分類')))].sort(new Intl.Collator('ja').compare)){const option=node('option',group);option.value=group;select.append(option)}}
-function openAdultDisplay(key,title,entries,launch,person,adult){const tabs=['skin','details','feet','bodyFeatures','damage'].includes(key)?[...new Set(entries.map(e=>e.tab||e.title))]:key==='exposure'?['露出','衣装状態']:key==='action'?['動作','接触']:key==='scene'?['場面','演出']:['表情'];entries=entries.map(e=>({...e,tab:e.tab||(key==='exposure'?(e.field==='clothing'?'衣装状態':'露出'):key==='action'?(e.field==='contact'?'接触':'動作'):key==='scene'?(e.field==='phase'?'場面':'演出'):'表情')}));activePersonPicker=adultDisplayPicker(entries[0]);personQuickMode='all';configurePersonCustom();configureQuickTendencies('personQuickTabs',false,'audience');adultDisplaySession={key,title,entries,tabs,tab:tabs[0],person,adult};lastPersonLaunch=launch;personBefore={root:window.scrollY||0,inner:$('workspaceMain').scrollTop||0};$('personChoiceTitle').textContent=(key==='scene'?'場面全体':person.name)+'：'+title;$('personChoiceSearch').value='';$('personChoiceDialog').classList.add('adultDisplayDialog');adultDisplayTabs.hidden=tabs.length<2;adultDisplayTabs.classList.toggle('scrollableTabs',tabs.length>2);adultDisplayTabs.classList.toggle('simpleTabs',['skin','details','feet'].includes(key));updatePersonCandidateControls();adultDisplayGroups();renderPersonChoiceDialog();$('personChoiceDialog').showModal()}
+function openAdultDisplay(key,title,entries,launch,person,adult){const tabs=['skin','details','feet','bodyFeatures','damage'].includes(key)?[...new Set(entries.map(e=>e.tab||e.title))]:key==='exposure'?['露出','衣装状態']:key==='action'?['動作','接触']:key==='scene'?['場面','演出']:['表情'];entries=entries.map(e=>({...e,tab:e.tab||(key==='exposure'?(e.field==='clothing'?'衣装状態':'露出'):key==='action'?(e.field==='contact'?'接触':'動作'):key==='scene'?(e.field==='phase'?'場面':'演出'):'表情')}));activePersonPicker=adultDisplayPicker(entries[0]);personQuickMode='all';configurePersonCustom();configureQuickTendencies('personQuickTabs',false,'audience');adultDisplaySession={key,title,entries,tabs,tab:tabs[0],person,adult};lastPersonLaunch=launch;personBefore={root:window.scrollY||0,inner:$('workspaceMain').scrollTop||0};$('personChoiceTitle').textContent=(key==='scene'?'場面全体':person.name)+'：'+title;$('personChoiceSearch').value='';$('personChoiceDialog').classList.add('adultDisplayDialog');adultDisplayTabs.hidden=tabs.length<2;adultDisplayTabs.dataset.feature=key==='bodyFeatures'?'bodyFeatures':'';adultDisplayTabs.classList.toggle('scrollableTabs',tabs.length>2);adultDisplayTabs.classList.toggle('simpleTabs',['skin','details','feet'].includes(key));updatePersonCandidateControls();adultDisplayGroups();renderPersonChoiceDialog();$('personChoiceDialog').showModal()}
 function openGroupedPersonDisplay(key,title,entries,launch,person){openAdultDisplayBeforeAudit(key,title,entries.map(entry=>({...entry,tab:entry.tab||entry.title})),launch,person,null)}
 const renderPersonChoiceBeforeAdultUI=renderPersonChoiceDialog;
 renderPersonChoiceDialog=function(){if(!adultDisplaySession)return renderPersonChoiceBeforeAdultUI();const s=adultDisplaySession,root=$('personChoiceChoices'),scroll=root.scrollTop,importerBefore=$('importedSituationPicker');if(importerBefore&&root.contains(importerBefore)){$('adultFields').prepend(importerBefore);off(importerBefore,true)}root.replaceChildren();adultDisplayTabs.replaceChildren();for(const tab of s.tabs){const count=s.entries.filter(e=>e.tab===tab).reduce((n,e)=>n+asList(adultDisplayPicker(e).getValues()).length,0),button=node('button',tab+(count?' · '+count:''),'secondary');button.type='button';button.dataset.adultTab=tab;button.setAttribute('role','tab');button.setAttribute('aria-selected',String(s.tab===tab));button.classList.toggle('active',s.tab===tab);button.onclick=()=>{s.tab=tab;activePersonPicker=adultDisplayPicker(adultDisplayEntries()[0]);if(!s.audit)updatePersonCandidateControls();adultDisplayGroups();closePersonSort();renderPersonChoiceDialog();root.scrollTop=0};adultDisplayTabs.append(button)}
@@ -4721,6 +4830,8 @@ if ('serviceWorker' in navigator) {
 #personChoiceDialog #adultDisplayTabs:not([hidden]){margin:0 0 8px;gap:5px}
 #personChoiceDialog #adultDisplayTabs>button{border-radius:8px;border:1px solid var(--border);background:#222e3e;color:var(--text);font-weight:700}
 #personChoiceDialog #adultDisplayTabs>button.active{background:#5652b6;border-color:var(--border);color:#fff}
+#personChoiceDialog #adultDisplayTabs[data-feature="bodyFeatures"]:not([hidden]){display:flex;max-width:100%;overflow-x:auto;overflow-y:hidden;flex-shrink:0;touch-action:pan-x}
+#personChoiceDialog #adultDisplayTabs[data-feature="bodyFeatures"]>button{flex:0 0 auto;width:auto;min-width:80px;height:44px;min-height:44px;padding:8px;white-space:nowrap;overflow-wrap:normal}
 </style><style id="simpleMangaHostStyle">body[data-simple-manga-open="true"]> :not(#simpleMangaTool):not(script):not(style){display:none!important}#simpleMangaTool{position:fixed;inset:0;z-index:1000;overflow:auto;background:#0c1421;overscroll-behavior:contain}#simpleMangaTool[hidden]{display:none!important}</style><section id="simpleMangaTool" hidden aria-label="簡易漫画専用"></section><script id="simpleMangaIntegration">
 (()=>{
 'use strict';const realDocument=document,realWindow=window;
