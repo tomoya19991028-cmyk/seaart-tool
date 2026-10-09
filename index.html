@@ -1353,6 +1353,21 @@ characterCollectionAdditions.push(
  {"id":"character-extension-9cdd13d9b4ab1b04","name":"藤木遊作（遊戯王VRAINS）","value":"Yusaku Fujiki (Yu-Gi-Oh! VRAINS)","group":"遊戯王VRAINS","gender":"男性"},
  {"id":"character-extension-f22e086f70e87630","name":"王道遊我（遊戯王SEVENS）","value":"Yuga Ohdo (Yu-Gi-Oh! SEVENS)","group":"遊戯王SEVENS","gender":"男性"}
 );
+// Round 3 B4: fixed IDs, explicit genders, and a shared Dragon Quest group.
+characterCollectionAdditions.push(
+ {"id":"character-extension-061c2bc2d9e13ade","name":"アリーナ（ドラゴンクエスト）","value":"Alena (Dragon Quest IV)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-15fd920200d0c969","name":"マーニャ（ドラゴンクエスト）","value":"Maya (Dragon Quest IV)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-feac27696763b238","name":"ミネア（ドラゴンクエスト）","value":"Meena (Dragon Quest IV)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-c25b3d12fd474942","name":"ビアンカ（ドラゴンクエスト）","value":"Bianca (Dragon Quest V)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-b69d41176b190cb1","name":"フローラ（ドラゴンクエスト）","value":"Nera (Dragon Quest V)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-d9f9746478bb7185","name":"ゼシカ（ドラゴンクエスト）","value":"Jessica Albert (Dragon Quest VIII)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-6eeda753cd81805e","name":"ベロニカ（ドラゴンクエスト）","value":"Veronica (Dragon Quest XI)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-7a6e4a4b242d6a85","name":"セーニャ（ドラゴンクエスト）","value":"Serena (Dragon Quest XI)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-65c23b7e05090bc7","name":"マルティナ（ドラゴンクエスト）","value":"Jade (Dragon Quest XI)","group":"ドラゴンクエスト","gender":"女性"},
+ {"id":"character-extension-e69edc3d57495123","name":"カミュ（ドラゴンクエスト）","value":"Erik (Dragon Quest XI)","group":"ドラゴンクエスト","gender":"男性"},
+ {"id":"character-extension-bcffb3ad8d52c980","name":"シルビア（ドラゴンクエスト）","value":"Sylvando (Dragon Quest XI)","group":"ドラゴンクエスト","gender":"男性"},
+ {"id":"character-extension-bb3caec90fb5d60f","name":"テリー（ドラゴンクエスト）","value":"Terry (Dragon Quest VI)","group":"ドラゴンクエスト","gender":"男性"}
+);
 for(const {gender,...row} of characterCollectionAdditions){
  const canonical=characterCanonicalValue(row.value,row.name).normalize('NFKC').toLowerCase();
  if(catalog.character.some(old=>old.name.normalize('NFKC')===row.name.normalize('NFKC')||characterCanonicalValue(old.value,old.name).normalize('NFKC').toLowerCase()===canonical))continue;
@@ -1401,6 +1416,20 @@ outfitSetSupplements.push(
  {"id":"set-character-c55696c721e1b753","name":"榊遊矢の代表衣装","value":"red sleeveless top with a white short cape, green trousers","group":"キャラクター代表衣装","parts":{"upper":"red sleeveless top with a white short cape","lower":"green trousers","head":"brown goggles on the head"}},
  {"id":"set-character-9cdd13d9b4ab1b04","name":"藤木遊作の代表衣装","value":"navy school blazer with white piping over a white shirt and a blue tie, navy school trousers","group":"キャラクター代表衣装","parts":{"upper":"navy school blazer with white piping over a white shirt and a blue tie","lower":"navy school trousers"}},
  {"id":"set-character-f22e086f70e87630","name":"王道遊我の代表衣装","value":"red jacket over a yellow shirt, dark shorts","group":"キャラクター代表衣装","parts":{"upper":"red jacket over a yellow shirt","lower":"dark shorts"}}
+);
+outfitSetSupplements.push(
+ {"id":"set-character-061c2bc2d9e13ade","name":"アリーナの代表衣装","value":"yellow sleeveless minidress with a blue cape, black tights","group":"キャラクター代表衣装","parts":{"upper":"yellow sleeveless minidress with a blue cape","head":"blue pointed hat","accessory":"orange gloves","legwear":"black tights"}},
+ {"id":"set-character-15fd920200d0c969","name":"マーニャの代表衣装","value":"purple dancer top with gold trim, purple bottoms with a yellow hip drape","group":"キャラクター代表衣装","parts":{"upper":"purple dancer top with gold trim","lower":"purple bottoms with a yellow hip drape","accessory":"gold dancer jewelry"}},
+ {"id":"set-character-feac27696763b238","name":"ミネアの代表衣装","value":"long yellow dress with pale sleeves","group":"キャラクター代表衣装","parts":{"upper":"long yellow dress with pale sleeves","head":"green gemstone circlet","accessory":"gold necklace"}},
+ {"id":"set-character-c25b3d12fd474942","name":"ビアンカの代表衣装","value":"turquoise dress with a yellow cape","group":"キャラクター代表衣装","parts":{"upper":"turquoise dress with a yellow cape","accessory":"brown waist belt"}},
+ {"id":"set-character-b69d41176b190cb1","name":"フローラの代表衣装","value":"white and purple strapless bodice, long purple skirt with a white overskirt","group":"キャラクター代表衣装","parts":{"upper":"white and purple strapless bodice","lower":"long purple skirt with a white overskirt","head":"purple hair ribbon","accessory":"long white gloves"}},
+ {"id":"set-character-d9f9746478bb7185","name":"ゼシカの代表衣装","value":"purple off-shoulder blouse with a yellow corset, long red skirt","group":"キャラクター代表衣装","parts":{"upper":"purple off-shoulder blouse with a yellow corset","lower":"long red skirt","accessory":"blue earrings"}},
+ {"id":"set-character-6eeda753cd81805e","name":"ベロニカの代表衣装","value":"red hooded dress over a cream blouse","group":"キャラクター代表衣装","parts":{"upper":"red hooded dress over a cream blouse","head":"long red hood","accessory":"blue bracelets"}},
+ {"id":"set-character-7a6e4a4b242d6a85","name":"セーニャの代表衣装","value":"green dress with cream puff sleeves","group":"キャラクター代表衣装","parts":{"upper":"green dress with cream puff sleeves","head":"green hairband","accessory":"yellow waist sash"}},
+ {"id":"set-character-65c23b7e05090bc7","name":"マルティナの代表衣装","value":"green halter top over a black underlayer, green split overskirt over black shorts","group":"キャラクター代表衣装","parts":{"upper":"green halter top over a black underlayer","lower":"green split overskirt over black shorts","accessory":"black choker"}},
+ {"id":"set-character-e69edc3d57495123","name":"カミュの代表衣装","value":"green hooded coat, blue trousers","group":"キャラクター代表衣装","parts":{"upper":"green hooded coat","lower":"blue trousers","accessory":"red waist sash"}},
+ {"id":"set-character-bcffb3ad8d52c980","name":"シルビアの代表衣装","value":"gray entertainer tunic with red sleeves and diamond panels, light trousers","group":"キャラクター代表衣装","parts":{"upper":"gray entertainer tunic with red sleeves and diamond panels","lower":"light trousers","accessory":"pom-pom neck decoration"}},
+ {"id":"set-character-bb3caec90fb5d60f","name":"テリーの代表衣装","value":"teal tunic with a metal chest plate over black sleeves, white trousers","group":"キャラクター代表衣装","parts":{"upper":"teal tunic with a metal chest plate over black sleeves","lower":"white trousers","head":"teal cap","accessory":"brown waist belt"}}
 );
 for(const {parts,...row} of outfitSetSupplements){
  if(catalog.outfit.some(old=>old.id===row.id||old.value.toLowerCase()===row.value.toLowerCase()))continue;
@@ -1573,6 +1602,15 @@ for(const [field,rows] of Object.entries({
  "lower":[["blue school trousers","青い学生服のズボン","キャラクターの衣装"],["blue miniskirt","青系ミニスカート","キャラクターの衣装"],["purple miniskirt","紫系ミニスカート","キャラクターの衣装"],["light gray trousers","淡い灰色のズボン","キャラクターの衣装"],["blue pleated miniskirt","青いプリーツミニスカート","キャラクターの衣装"],["green trousers","緑のズボン","キャラクターの衣装"],["navy school trousers","紺色の学生服ズボン","キャラクターの衣装"]],
  "accessory":[["Millennium Puzzle pendant and a choker","千年パズルのペンダント＋チョーカー","キャラクターの衣装"],["silver-studded straps","銀の鋲付きストラップ","キャラクターの衣装"],["long white gloves","白いロンググローブ","キャラクターの衣装"],["blue fingerless gloves","青い指なし手袋","キャラクターの衣装"],["rose pendant","薔薇のペンダント","キャラクターの衣装"],["Emperor Key pendant","皇の鍵ペンダント","キャラクターの衣装"]],
  "head":[["brown goggles on the head","頭に載せた茶色のゴーグル","キャラクターの衣装"]]
+}))for(const row of rows)
+ if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
+// B4 outfit parts are standard candidates before builtin snapshots and automatic expansion.
+for(const [field,rows] of Object.entries({
+ "upper":[["yellow sleeveless minidress with a blue cape","黄色い袖なしミニドレス＋青いケープ","キャラクターの衣装"],["purple dancer top with gold trim","金色の縁取りがある紫の踊り子トップス","キャラクターの衣装"],["long yellow dress with pale sleeves","黄色のロングドレス＋淡い色の袖","キャラクターの衣装"],["turquoise dress with a yellow cape","ターコイズ色のドレス＋黄色のケープ","キャラクターの衣装"],["white and purple strapless bodice","白と紫の肩出しボディス","キャラクターの衣装"],["purple off-shoulder blouse with a yellow corset","紫のオフショルダーブラウス＋黄色のコルセット","キャラクターの衣装"],["red hooded dress over a cream blouse","赤いフード付きドレス＋クリーム色のブラウス","キャラクターの衣装"],["green dress with cream puff sleeves","緑のドレス＋クリーム色のパフスリーブ","キャラクターの衣装"],["green halter top over a black underlayer","緑のホルタートップ＋黒いインナー","キャラクターの衣装"],["green hooded coat","緑のフード付きコート","キャラクターの衣装"],["gray entertainer tunic with red sleeves and diamond panels","灰色の芸人風チュニック＋赤い袖＋菱形模様のパネル","キャラクターの衣装"],["teal tunic with a metal chest plate over black sleeves","青緑のチュニック＋金属胸当て＋黒い袖","キャラクターの衣装"]],
+ "head":[["blue pointed hat","青いとんがり帽子","キャラクターの衣装"],["green gemstone circlet","緑の宝石のサークレット","キャラクターの衣装"],["purple hair ribbon","紫の髪のリボン","キャラクターの衣装"],["long red hood","長い赤いフード","キャラクターの衣装"],["green hairband","緑のヘアバンド","キャラクターの衣装"],["teal cap","青緑の帽子","キャラクターの衣装"]],
+ "accessory":[["orange gloves","オレンジの手袋","キャラクターの衣装"],["gold dancer jewelry","金色の踊り子の装飾","キャラクターの衣装"],["brown waist belt","茶色の腰ベルト","キャラクターの衣装"],["blue earrings","青いイヤリング","キャラクターの衣装"],["blue bracelets","青いブレスレット","キャラクターの衣装"],["yellow waist sash","黄色の腰帯","キャラクターの衣装"],["red waist sash","赤い腰帯","キャラクターの衣装"],["pom-pom neck decoration","首元のポンポン飾り","キャラクターの衣装"]],
+ "legwear":[["black tights","黒いタイツ","キャラクターの衣装"]],
+ "lower":[["purple bottoms with a yellow hip drape","紫の下半身衣装＋黄色の腰布","キャラクターの衣装"],["long purple skirt with a white overskirt","紫のロングスカート＋白いオーバースカート","キャラクターの衣装"],["long red skirt","赤いロングスカート","キャラクターの衣装"],["green split overskirt over black shorts","緑のスリット入りオーバースカート＋黒いショートパンツ","キャラクターの衣装"]]
 }))for(const row of rows)
  if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
 // A single stable hairstyle candidate also restores through the existing additions snapshot.
@@ -4018,6 +4056,195 @@ Object.assign(characterBasicPresets,expandCharacterBasicPresets({
     "primary": "brown and red hair with golden highlights",
     "secondary": "blonde hair",
     "mode": "streak"
+   }
+  }
+ ]
+}));
+Object.assign(characterBasicPresets,expandCharacterBasicPresets({
+ "Alena (Dragon Quest IV)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "flipped-out ends"
+   ],
+   "outfit": "yellow sleeveless minidress with a blue cape, black tights",
+   "hair": {
+    "primary": "orange hair"
+   },
+   "eyes": {
+    "left": "red eyes"
+   }
+  }
+ ],
+ "Maya (Dragon Quest IV)": [
+  {
+   "hairStyle": [
+    "long hair"
+   ],
+   "outfit": "purple dancer top with gold trim, purple bottoms with a yellow hip drape",
+   "hair": {
+    "primary": "purple hair"
+   },
+   "detail": {
+    "skin": [
+     "dark skin"
+    ]
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Meena (Dragon Quest IV)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "center part"
+   ],
+   "outfit": "long yellow dress with pale sleeves",
+   "hair": {
+    "primary": "purple hair"
+   },
+   "detail": {
+    "skin": [
+     "dark skin"
+    ]
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Bianca (Dragon Quest V)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "loose side braid"
+   ],
+   "outfit": "turquoise dress with a yellow cape",
+   "hair": {
+    "primary": "blonde hair"
+   },
+   "eyes": {
+    "left": "blue eyes"
+   }
+  }
+ ],
+ "Nera (Dragon Quest V)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "half-up hairstyle"
+   ],
+   "outfit": "white and purple strapless bodice, long purple skirt with a white overskirt",
+   "hair": {
+    "primary": "blue hair"
+   },
+   "eyes": {
+    "left": "blue eyes"
+   }
+  }
+ ],
+ "Jessica Albert (Dragon Quest VIII)": [
+  {
+   "hairStyle": [
+    "twintails"
+   ],
+   "outfit": "purple off-shoulder blouse with a yellow corset, long red skirt",
+   "hair": {
+    "primary": "orange hair"
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Veronica (Dragon Quest XI)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "braided hair"
+   ],
+   "outfit": "red hooded dress over a cream blouse",
+   "hair": {
+    "primary": "blonde hair"
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Serena (Dragon Quest XI)": [
+  {
+   "hairStyle": [
+    "long hair"
+   ],
+   "outfit": "green dress with cream puff sleeves",
+   "hair": {
+    "primary": "blonde hair"
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Jade (Dragon Quest XI)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "high ponytail"
+   ],
+   "outfit": "green halter top over a black underlayer, green split overskirt over black shorts",
+   "hair": {
+    "primary": "deep purple hair"
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Erik (Dragon Quest XI)": [
+  {
+   "hairStyle": [
+    "spiky short hair",
+    "slicked-back hair"
+   ],
+   "outfit": "green hooded coat, blue trousers",
+   "hair": {
+    "primary": "turquoise hair"
+   },
+   "eyes": {
+    "left": "blue eyes"
+   }
+  }
+ ],
+ "Sylvando (Dragon Quest XI)": [
+  {
+   "hairStyle": [
+    "medium hair",
+    "slicked-back hair"
+   ],
+   "outfit": "gray entertainer tunic with red sleeves and diamond panels, light trousers",
+   "hair": {
+    "primary": "black hair"
+   },
+   "clearAppearance": [
+    "eyes"
+   ]
+  }
+ ],
+ "Terry (Dragon Quest VI)": [
+  {
+   "hairStyle": [
+    "short hair",
+    "straight hair"
+   ],
+   "outfit": "teal tunic with a metal chest plate over black sleeves, white trousers",
+   "hair": {
+    "primary": "silver hair"
+   },
+   "eyes": {
+    "left": "gray eyes"
    }
   }
  ]
