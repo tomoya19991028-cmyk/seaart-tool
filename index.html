@@ -504,7 +504,34 @@ const personDamageEnabled=true;
 const personFeatureGroups=['耳・角','牙・爪','尻尾','翼','皮膚・鱗','四肢・特殊部位','超常・恒常特徴'];
 function personDetailEnabled(field){return field!=='damage'||personDamageEnabled}
 const detailOptions={
- damage:{label:'傷・汚れ・ダメージ',options:[['abrasions','擦り傷','傷・あざ'],['cut on cheek','頬の切り傷','傷・あざ'],['bruise','あざ','傷・あざ'],['bandages','包帯','処置・包帯'],['mud on skin','肌の泥汚れ','肌の汚れ'],['dirty torn clothes','衣服の汚れ・破損','衣服の汚れ・破損'],['blood on skin','肌への血の付着','血の付着・流血']]},
+ damage:{label:'傷・汚れ・ダメージ',options:[['abrasions','擦り傷','傷・あざ'],['cut on cheek','頬の切り傷','傷・あざ'],['bruise','あざ','傷・あざ'],['bandages','包帯','処置・包帯'],['mud on skin','肌の泥汚れ','肌の汚れ'],['dirty torn clothes','衣服の汚れ・破損','衣服の汚れ・破損'],['blood on skin','肌への血の付着','血の付着・流血'],
+  ['missing left arm', '左腕欠損', '欠損・切断'],
+  ['missing right arm', '右腕欠損', '欠損・切断'],
+  ['missing both arms', '両腕欠損', '欠損・切断'],
+  ['missing left hand', '左手欠損', '欠損・切断'],
+  ['missing right hand', '右手欠損', '欠損・切断'],
+  ['missing left leg', '左脚欠損', '欠損・切断'],
+  ['missing right leg', '右脚欠損', '欠損・切断'],
+  ['missing both legs', '両脚欠損', '欠損・切断'],
+  ['missing left foot', '左足欠損', '欠損・切断'],
+  ['missing right foot', '右足欠損', '欠損・切断'],
+  ['missing fingers', '指の欠損', '欠損・切断'],
+  ['missing left eye', '左目欠損', '欠損・切断'],
+  ['missing right eye', '右目欠損', '欠損・切断'],
+  ['missing left ear', '左耳欠損', '欠損・切断'],
+  ['missing right ear', '右耳欠損', '欠損・切断'],
+  ['severed arm', '腕の切断', '欠損・切断'],
+  ['severed leg', '脚の切断', '欠損・切断'],
+  ['prosthetic left arm', '左義手', '欠損の補助・処置'],
+  ['prosthetic right arm', '右義手', '欠損の補助・処置'],
+  ['prosthetic left leg', '左義足', '欠損の補助・処置'],
+  ['prosthetic right leg', '右義足', '欠損の補助・処置'],
+  ['prosthetic left eye', '左義眼', '欠損の補助・処置'],
+  ['prosthetic right eye', '右義眼', '欠損の補助・処置'],
+  ['eyepatch over left eye', '左眼帯', '欠損の補助・処置'],
+  ['eyepatch over right eye', '右眼帯', '欠損の補助・処置'],
+  ['bandaged stump', '欠損部の包帯', '欠損の補助・処置']
+ ]},
  bodyFeatures:{label:'身体・特殊特徴',options:[
   ["cat ears", "猫耳", "耳・角"],
   ["fox ears", "狐耳", "耳・角"],
@@ -1697,7 +1724,7 @@ const candidateDisplayGroups={
  'catalog:hairStyle':['長さ','基本スタイル','結ぶ・まとめる','編み髪','前髪・顔まわり','質感・特殊'],
  'catalog:outfit':['普段着','制服・職業','フォーマル','和装・文化','スポーツ','ファンタジー','SF・特殊'],
  'catalog:style':['アニメ・漫画','イラスト','写実・3D','絵画・技法'],
- 'detail:bodyFeatures':personFeatureGroups, 'detail:damage':['傷・あざ','処置・包帯','肌の汚れ','衣服の汚れ・破損','血の付着・流血'],
+ 'detail:bodyFeatures':personFeatureGroups, 'detail:damage':['傷・あざ','処置・包帯','肌の汚れ','衣服の汚れ・破損','血の付着・流血','欠損・切断','欠損の補助・処置'],
  'detail:skinColor':['明るい','標準・中間','日焼け','濃い'], 'detail:skin':['質感','状態','仕上げ'],
  'detail:eyeDetail':['形・印象','瞳孔','特殊'],
  'detail:upper':['トップス','シャツ・ブラウス','ニット','上着・コート','フォーマル','和装・文化','戦闘・ファンタジー'],
@@ -1941,6 +1968,9 @@ function outfitSlotLabel(field,value){return outfitPartNames[value]||detailOptio
 function resetOutfitSlots(profile,fields){const base=item('outfit',asList(profile.outfit).at(-1))?.value;for(const field of fields){delete profile.outfitExcluded?.[base]?.[field];profile.detail??={};profile.detail[field]=[];if(profile.detailCustom)profile.detailCustom[field]='';delete profile.itemWeights?.[field];delete profile.itemColors?.[field];const raw=outfitSetForValue(base)?.[field];if(raw)setOutfitDetail(profile,field,raw,base)}profile.outfitExpandedFrom=base||''}
 function profileMultiPicker(parent,title,options,getValues,setValues,ownerName='',modalOnly=false,customConfig=null,weightControl=null,personId=null,sourceOverride=''){const source=sourceOverride||personPickerSource(title,options);options=personPickerOptions(source,options);const context=personItemContext(source,personId),updateValues=values=>{const before=asList(getValues());setValues(values);for(const removed of before.filter(v=>!asList(getValues()).includes(v)))context?.remove(removed)};const box=node('div',undefined,'personPicker'),launch=node('button','選ぶ','personLaunch'),disclosure=node('details'),summary=node('summary'),body=node('div',undefined,'personPickerBody'),search=node('input'),list=node('div',undefined,'personPickerList'),chips=node('div',undefined,'chips');launch.type='button';search.type='search';search.placeholder=title+'を検索';search.setAttribute('aria-label',title+'を検索');const checks=new Map();function refresh(){const values=asList(getValues()),extra=!!customConfig?.get()?.trim(),total=values.length+Number(extra);summary.textContent=title+(total?' · '+total+'件設定':' · 未設定');launch.replaceChildren(node('strong',cardTitle(title)),...(!total?[node('small','未設定')]:[]));box.classList.toggle('hasSelection',!!total);chips.replaceChildren();for(const value of values){const option=options.find(([v])=>v===value),name=option?.[1]||value,wrap=node('span',undefined,'personSelectedItem'),open=node('button',undefined,'personSelectedOpen'),remove=node('button','×','personSelectedRemove'),details=[context?.colorable&&simpleColorAllowed(context.field,value)&&context?.color(value)&&itemColorPalette.find(x=>x[0]===context.color(value))?.[1],context&&personWeightLabel(context.weight(value))].filter(Boolean);open.type='button';open.append(node('span',name,'personSelectedName'));if(details.length)open.append(node('small',details.join('・')));open.onclick=event=>{event.stopPropagation();return context?openPersonItemDetails(context,value,name,refresh,()=>{updateValues(values.filter(v=>v!==value));refresh();dirty()}):launch.click()};remove.type='button';remove.setAttribute('aria-label',name+'を解除');remove.onclick=event=>{event.stopPropagation();saveUndo('項目を解除');updateValues(values.filter(v=>v!==value));weightControl?.set(value,null);const check=checks.get(value);if(check)check.checked=false;refresh();dirty()};if(context?.colorable&&simpleColorAllowed(context.field,value)&&context?.color(value)){const dot=node('span',undefined,'itemColorDot');dot.style.background=itemColorPalette.find(x=>x[0]===context.color(value))?.[2]||'transparent';wrap.append(dot)}wrap.append(open,remove);chips.append(wrap)}if(extra){const customChip=node('button','追加: '+customConfig.get().trim().slice(0,32)+' ×','chip');customChip.type='button';customChip.onclick=()=>{customConfig.set('');refresh();dirty()};chips.prepend(customChip)}updatePersonBadges()}
 function renderList(){list.replaceChildren();checks.clear();const query=search.value.normalize('NFKC').toLowerCase().trim();let found=0;for(const [value,name,group] of options){if(!personManualCandidateAllowed(source,value,name,query,asList(getValues()).includes(value),'person:'+title,{source,ownerId:personId})||!(name+' '+value+' '+(group||'')).normalize('NFKC').toLowerCase().includes(query))continue;found++;const label=node('label'),check=node('input');check.type='checkbox';check.checked=asList(getValues()).includes(value);check.onchange=()=>{const current=asList(getValues());updateValues(check.checked?[...current,value]:current.filter(v=>v!==value));refresh();dirty()};checks.set(value,check);label.append(check,node('span',name));if(source){const edit=node('button','編集','tiny personOptionEdit');edit.type='button';edit.onclick=e=>{e.preventDefault();e.stopPropagation();openPersonOptionEditor({source},value,name,group)};label.append(edit)}list.append(label)}if(!found)list.append(node('p','該当する選択肢がありません','small'))}search.oninput=renderList;body.append(search,list);disclosure.append(summary,body);box.append(launch);if(!modalOnly)box.append(disclosure);box.append(chips);parent.append(box);launch.onclick=()=>{personQuickMode='all';activePersonPicker={title,options,source,ownerId:personId,getValues,setValues:updateValues,refresh,customConfig,audienceField:Object.entries(detailOptions).find(([field,config])=>detailClothingFields.has(field)&&config.options===options)?.[0]||null};lastPersonLaunch=launch;personBefore={root:window.scrollY||0,inner:$('workspaceMain').scrollTop||0};$('personChoiceTitle').textContent=(ownerName?ownerName+'：':'')+cardTitle(title);$('personChoiceSearch').value='';optionPages.person=0;configurePersonCustom();renderPersonChoiceDialog();$('personChoiceDialog').showModal()};if(!modalOnly)renderList();refresh();box.refresh=refresh;box.dataset.pickerSource=source||'';box.dataset.pickerTitle=cardTitle(title);box.dataset.ownerId=personId||'';box.pickerApi={open:()=>launch.click(),getValues,setValues:updateValues,refresh,options,source};box.addEventListener('click',event=>{if(event.target.closest('button,input,select,dialog,details'))return;launch.click()});return box}
+function personDamageOverlap(values){
+ const picked=new Set(values.map(value=>personOutputValue('detail:damage',value).trim().toLowerCase()));return ['arms','legs'].some(part=>picked.has('missing both '+part)&&['left','right'].some(side=>picked.has('missing '+side+' '+part.slice(0,-1))));
+}
 // A view of existing feature candidates: never copy their values to another field.
 function personFeatureGroup(field,row){
  const value=(row[0]||'').toLowerCase();
@@ -3500,6 +3530,7 @@ function openAdultDisplay(key,title,entries,launch,person,adult){const tabs=['sk
 function openGroupedPersonDisplay(key,title,entries,launch,person){openAdultDisplayBeforeAudit(key,title,entries.map(entry=>({...entry,tab:entry.tab||entry.title})),launch,person,null)}
 const renderPersonChoiceBeforeAdultUI=renderPersonChoiceDialog;
 renderPersonChoiceDialog=function(){if(!adultDisplaySession)return renderPersonChoiceBeforeAdultUI();const s=adultDisplaySession,root=$('personChoiceChoices'),scroll=root.scrollTop,importerBefore=$('importedSituationPicker');if(importerBefore&&root.contains(importerBefore)){$('adultFields').prepend(importerBefore);off(importerBefore,true)}root.replaceChildren();adultDisplayTabs.replaceChildren();for(const tab of s.tabs){const count=s.entries.filter(e=>e.tab===tab).reduce((n,e)=>n+asList(adultDisplayPicker(e).getValues()).length,0),button=node('button',tab+(count?' · '+count:''),'secondary');button.type='button';button.dataset.adultTab=tab;button.setAttribute('role','tab');button.setAttribute('aria-selected',String(s.tab===tab));button.classList.toggle('active',s.tab===tab);button.onclick=()=>{s.tab=tab;activePersonPicker=adultDisplayPicker(adultDisplayEntries()[0]);if(!s.audit)updatePersonCandidateControls();adultDisplayGroups();closePersonSort();renderPersonChoiceDialog();root.scrollTop=0};adultDisplayTabs.append(button)}
+ if(s.key==='damage'&&personDamageOverlap(s.entries.flatMap(entry=>asList(adultDisplayPicker(entry).getValues()))))root.append(node('p','左右と両側の欠損指定が重複しています。','hint'));
  if(s.key==='bodyFeatures')root.append(node('p','既存の特徴は元の項目に保存します。超常・場面効果はエフェクトとして扱います。','hint'));
  if(s.key==='expression')root.append(node('p','通常と共通の表情は、人物ページの「表情」で設定できます。','hint'));
  if(s.key==='scene')root.append(node('p','すべての人物で共有する設定です。背景・時間・光・構図は通常の選択ページを使います。','hint'));
