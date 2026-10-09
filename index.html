@@ -1319,6 +1319,23 @@ characterCollectionAdditions.push(
  {"id":"character-extension-cc9933ae886c8448","name":"ゼイユ（ポケットモンスター）","value":"Carmine (Pokemon)","group":"ポケットモンスター","gender":"女性"},
  {"id":"character-extension-ef919c1730ae1e09","name":"タロ（ポケットモンスター）","value":"Lacey (Pokemon)","group":"ポケットモンスター","gender":"女性"}
 );
+// Round 3 B2: explicit male genders and fixed IDs; preserve existing works/rows.
+characterCollectionAdditions.push(
+ {"id":"character-extension-9296eaf3dd2aa95c","name":"茶渡泰虎（BLEACH）","value":"Yasutora Sado (Bleach)","group":"BLEACH","gender":"男性"},
+ {"id":"character-extension-9cc938087df44cf4","name":"山本元柳斎重國（BLEACH）","value":"Shigekuni Genryusai Yamamoto (Bleach)","group":"BLEACH","gender":"男性"},
+ {"id":"character-extension-0603f08f39bef6f2","name":"涅マユリ（BLEACH）","value":"Mayuri Kurotsuchi (Bleach)","group":"BLEACH","gender":"男性"},
+ {"id":"character-extension-d472fe3f3bd14c2c","name":"浮竹十四郎（BLEACH）","value":"Jushiro Ukitake (Bleach)","group":"BLEACH","gender":"男性"},
+ {"id":"character-extension-52bb87c71beb037b","name":"市丸ギン（BLEACH）","value":"Gin Ichimaru (Bleach)","group":"BLEACH","gender":"男性"},
+ {"id":"character-extension-df32a765c266163f","name":"平子真子（BLEACH）","value":"Shinji Hirako (Bleach)","group":"BLEACH","gender":"男性"},
+ {"id":"character-extension-479ab9673ab5f772","name":"東堂葵（呪術廻戦）","value":"Aoi Todo (Jujutsu Kaisen)","group":"呪術廻戦","gender":"男性"},
+ {"id":"character-extension-7c40cf2441127285","name":"脹相（呪術廻戦）","value":"Choso (Jujutsu Kaisen)","group":"呪術廻戦","gender":"男性"},
+ {"id":"character-extension-741f6d8db6032e08","name":"秤金次（呪術廻戦）","value":"Kinji Hakari (Jujutsu Kaisen)","group":"呪術廻戦","gender":"男性"},
+ {"id":"character-extension-ef1fb3eb8820c488","name":"日車寛見（呪術廻戦）","value":"Hiromi Higuruma (Jujutsu Kaisen)","group":"呪術廻戦","gender":"男性"},
+ {"id":"character-extension-31f5ed7d2dd92b60","name":"不死川玄弥（鬼滅の刃）","value":"Genya Shinazugawa (Demon Slayer)","group":"鬼滅の刃","gender":"男性"},
+ {"id":"character-extension-27b1cce5be5cdecb","name":"錆兎（鬼滅の刃）","value":"Sabito (Demon Slayer)","group":"鬼滅の刃","gender":"男性"},
+ {"id":"character-extension-1aa7c0fbe164752e","name":"黒死牟（鬼滅の刃）","value":"Kokushibo (Demon Slayer)","group":"鬼滅の刃","gender":"男性"},
+ {"id":"character-extension-c1307252d0916eba","name":"継国縁壱（鬼滅の刃）","value":"Yoriichi Tsugikuni (Demon Slayer)","group":"鬼滅の刃","gender":"男性"}
+);
 for(const {gender,...row} of characterCollectionAdditions){
  const canonical=characterCanonicalValue(row.value,row.name).normalize('NFKC').toLowerCase();
  if(catalog.character.some(old=>old.name.normalize('NFKC')===row.name.normalize('NFKC')||characterCanonicalValue(old.value,old.name).normalize('NFKC').toLowerCase()===canonical))continue;
@@ -1337,6 +1354,20 @@ outfitSetSupplements.push(
  {"id":"set-character-8c1d1e8939024079","name":"コルニの代表衣装","value":"white and red sporty dress, black shorts","group":"キャラクター代表衣装","parts":{"upper":"white and red sporty dress","lower":"black shorts","head":"white helmet with red accents","feet":"roller skates"}},
  {"id":"set-character-cc9933ae886c8448","name":"ゼイユの代表衣装","value":"navy school tracksuit with a yellow belt","group":"キャラクター代表衣装","parts":{"upper":"navy school tracksuit with a yellow belt","head":"yellow headband"}},
  {"id":"set-character-ef919c1730ae1e09","name":"タロの代表衣装","value":"pink long coat over a white shirt with a red tie, navy trousers","group":"キャラクター代表衣装","parts":{"upper":"pink long coat over a white shirt with a red tie","lower":"navy trousers","head":"butterfly hair clips"}}
+);
+outfitSetSupplements.push(
+ {"id":"set-character-9296eaf3dd2aa95c","name":"茶渡泰虎の代表衣装","value":"green patterned long-sleeved shirt, black trousers","group":"キャラクター代表衣装","parts":{"upper":"green patterned long-sleeved shirt","lower":"black trousers","accessory":"gold necklace"}},
+ {"id":"set-character-0603f08f39bef6f2","name":"涅マユリの代表衣装","value":"black shihakusho with a white captain haori and a purple collar","group":"キャラクター代表衣装","parts":{"upper":"black shihakusho with a white captain haori and a purple collar","head":"golden head covering"}},
+ {"id":"set-character-52bb87c71beb037b","name":"市丸ギンの代表衣装","value":"white high-collared Arrancar robe with black trim","group":"キャラクター代表衣装","parts":{"upper":"white high-collared Arrancar robe with black trim","accessory":"light blue waist sash"}},
+ {"id":"set-character-df32a765c266163f","name":"平子真子の代表衣装","value":"white shirt with a black tie and a white captain haori, black hakama","group":"キャラクター代表衣装","parts":{"upper":"white shirt with a black tie and a white captain haori","lower":"black hakama"}},
+ {"id":"set-character-479ab9673ab5f772","name":"東堂葵の代表衣装","value":"bare upper body with a broad white waist wrap, dark blue trousers","group":"キャラクター代表衣装","parts":{"upper":"bare upper body with a broad white waist wrap","lower":"dark blue trousers"}},
+ {"id":"set-character-7c40cf2441127285","name":"脹相の代表衣装","value":"white wide-sleeved robe with a purple vest and scarf, white baggy trousers","group":"キャラクター代表衣装","parts":{"upper":"white wide-sleeved robe with a purple vest and scarf","lower":"white baggy trousers"}},
+ {"id":"set-character-741f6d8db6032e08","name":"秤金次の代表衣装","value":"black padded hooded coat, brown trousers","group":"キャラクター代表衣装","parts":{"upper":"black padded hooded coat","lower":"brown trousers"}},
+ {"id":"set-character-ef1fb3eb8820c488","name":"日車寛見の代表衣装","value":"black suit jacket over a white shirt with a green tie, black suit trousers","group":"キャラクター代表衣装","parts":{"upper":"black suit jacket over a white shirt with a green tie","lower":"black suit trousers","accessory":"lawyer lapel badge"}},
+ {"id":"set-character-31f5ed7d2dd92b60","name":"不死川玄弥の代表衣装","value":"dark green Demon Slayer uniform with a purple sleeveless haori, dark green uniform trousers","group":"キャラクター代表衣装","parts":{"upper":"dark green Demon Slayer uniform with a purple sleeveless haori","lower":"dark green uniform trousers","accessory":"white waist belt"}},
+ {"id":"set-character-27b1cce5be5cdecb","name":"錆兎の代表衣装","value":"cream haori over a geometric-patterned kimono, black hakama","group":"キャラクター代表衣装","parts":{"upper":"cream haori over a geometric-patterned kimono","lower":"black hakama","head":"white fox mask with red markings","accessory":"blue waist cord"}},
+ {"id":"set-character-1aa7c0fbe164752e","name":"黒死牟の代表衣装","value":"purple and black patterned kimono, black hakama","group":"キャラクター代表衣装","parts":{"upper":"purple and black patterned kimono","lower":"black hakama"}},
+ {"id":"set-character-c1307252d0916eba","name":"継国縁壱の代表衣装","value":"red haori over a pale kimono, black hakama","group":"キャラクター代表衣装","parts":{"upper":"red haori over a pale kimono","lower":"black hakama"}}
 );
 for(const {parts,...row} of outfitSetSupplements){
  if(catalog.outfit.some(old=>old.id===row.id||old.value.toLowerCase()===row.value.toLowerCase()))continue;
@@ -1495,10 +1526,20 @@ for(const [field,rows] of Object.entries({
  ]
 }))for(const row of rows)
  if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
+// B2 preset dependencies: register before automatic outfit parts and builtin snapshots.
+for(const [field,rows] of Object.entries({
+ "upper":[["green patterned long-sleeved shirt","緑色の柄入り長袖シャツ","キャラクターの衣装"],["black shihakusho with a white captain haori and a purple collar","黒い死覇装＋白い隊長羽織＋紫の襟","キャラクターの衣装"],["white high-collared Arrancar robe with black trim","黒い縁取りの白い高襟破面風衣装","キャラクターの衣装"],["white shirt with a black tie and a white captain haori","白シャツ＋黒ネクタイ＋白い隊長羽織","キャラクターの衣装"],["bare upper body with a broad white waist wrap","上半身露出＋白い幅広の腰布","キャラクターの衣装"],["white wide-sleeved robe with a purple vest and scarf","白い広袖の服＋紫のベストとスカーフ","キャラクターの衣装"],["black padded hooded coat","黒いフード付きの厚手の上着","キャラクターの衣装"],["black suit jacket over a white shirt with a green tie","黒いスーツ上着＋白シャツ＋緑のネクタイ","キャラクターの衣装"],["dark green Demon Slayer uniform with a purple sleeveless haori","濃緑の鬼殺隊制服＋紫の袖なし羽織","キャラクターの衣装"],["cream haori over a geometric-patterned kimono","クリーム色の羽織＋幾何学模様の着物","キャラクターの衣装"],["purple and black patterned kimono","紫と黒の模様入り着物","キャラクターの衣装"],["red haori over a pale kimono","赤い羽織＋淡い色の着物","キャラクターの衣装"]],
+ "lower":[["dark blue trousers","濃青色のズボン","キャラクターの衣装"],["white baggy trousers","白いゆったりしたズボン","キャラクターの衣装"],["black suit trousers","黒いスーツのズボン","キャラクターの衣装"],["dark green uniform trousers","濃緑の制服ズボン","キャラクターの衣装"]],
+ "accessory":[["white waist cord","白い腰ひも","キャラクターの衣装"],["light blue waist sash","水色の腰帯","キャラクターの衣装"],["lawyer lapel badge","弁護士の襟章","キャラクターの衣装"],["white waist belt","白い腰ベルト","キャラクターの衣装"],["blue waist cord","青い腰ひも","キャラクターの衣装"]],
+ "head":[["golden head covering","涅マユリ：金色の頭部装束","キャラクターの特徴"],["white fox mask with red markings","錆兎：赤い模様の白い狐面","キャラクターの特徴"]]
+}))for(const row of rows)
+ if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
 // A single stable hairstyle candidate also restores through the existing additions snapshot.
 if(!catalog.hairStyle.some(row=>row.value==='bald')){catalog.hairStyle.push({id:'hairStyle-bald',name:'髪なし',value:'bald',group:'基本'});actionCatalogAdditions.hairStyle.push(['髪なし','bald','基本'])}
 // Kris uses teal in the original Crystal illustration; preserve existing turquoise IDs/tags.
 if(!catalog.hairColor.some(row=>row.value==='teal hair')){catalog.hairColor.push({id:'hairColor-teal',name:'青緑の髪（ティール）',value:'teal hair',group:'鮮やかな色'});(actionCatalogAdditions.hairColor??=[]).push(['青緑の髪（ティール）','teal hair','鮮やかな色'])}
+// Required B2 colors; do not replace or rename existing color candidates.
+for(const {field,...row} of [{"field":"hairColor","id":"hairColor-dark-reddish-purple","name":"濃い赤紫の髪","value":"dark reddish purple hair","group":"淡色・濃淡"},{"field":"eyeColor","id":"eyeColor-reddish-brown","name":"赤褐色の目","value":"reddish brown eyes","group":"自然色"}])if(!catalog[field].some(old=>old.value===row.value)){catalog[field].push(row);(actionCatalogAdditions[field]??=[]).push([row.name,row.value,row.group])}
 const standardGroupByValue=Object.fromEntries(Object.entries(catalog).map(([k,rows])=>[k,new Map(rows.map(x=>[x.value.toLowerCase(),x.group]))]));
 actionCatalogAdditions.outfit.push(...outfitAudienceAdditions);
 const dynamicCompositionChoice={id:'composition-dynamic-angle-bundle',name:'ダイナミック',value:'dynamic angle, dynamic composition, dramatic perspective',group:'迫力・臨場感'};if(!catalog.composition.some(x=>x.id===dynamicCompositionChoice.id||x.value===dynamicCompositionChoice.value))catalog.composition.push(dynamicCompositionChoice);
@@ -1690,6 +1731,12 @@ for(const row of outfitSetSupplements)for(const [field,raw] of Object.entries(ro
  const config=detailOptions[field];if(!config||config.options.some(option=>option[0]===raw)||MB_BUILTIN_DELTA.detailBuiltin[field]?.added?.some(option=>option[0]===raw))continue;
  config.options.push([raw,outfitPartNames[raw]||row.name,row.group]);
 }
+// B2 preset dependencies: register before automatic outfit parts and builtin snapshots.
+for(const [field,rows] of Object.entries({
+ "skin":[["long white beard","山本元柳斎重國：長い白い髭","キャラクターの特徴"],["black and white face paint","涅マユリ：白黒の顔の塗装","キャラクターの特徴"],["dark horizontal stripe across the nose","脹相：鼻を横切る黒い線","キャラクターの特徴"],["red birthmark on the forehead","継国縁壱：額の痣","キャラクターの特徴"]],
+ "eyeDetail":[["six eyes on the face","黒死牟：顔の六眼","キャラクターの特徴"]]
+}))for(const row of rows)
+ if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
 const detailBuiltin=Object.fromEntries(Object.entries(detailOptions).map(([k,v])=>[k,v.options.map(x=>[...x])]));
 // 基本は従来の7項目。問題別は生成結果に応じて任意に追加する。
 const negativeProblemGroups={
@@ -3449,6 +3496,262 @@ Object.assign(characterBasicPresets,expandCharacterBasicPresets({
   }
  ]
 }));
+Object.assign(characterBasicPresets,expandCharacterBasicPresets({
+ "Yasutora Sado (Bleach)": [
+  {
+   "hairStyle": [
+    "short hair",
+    "messy hair"
+   ],
+   "outfit": "green patterned long-sleeved shirt, black trousers",
+   "hair": {
+    "primary": "dark brown hair"
+   },
+   "clearAppearance": [
+    "eyes"
+   ]
+  }
+ ],
+ "Shigekuni Genryusai Yamamoto (Bleach)": [
+  {
+   "hairStyle": [
+    "bald"
+   ],
+   "outfit": "black shinigami robes and white captain haori",
+   "detail": {
+    "skin": [
+     "long white beard",
+     "scar on the forehead"
+    ],
+    "accessory": [
+     "white waist cord"
+    ]
+   },
+   "clearAppearance": [
+    "eyes",
+    "hair"
+   ]
+  }
+ ],
+ "Mayuri Kurotsuchi (Bleach)": [
+  {
+   "hairStyle": [],
+   "outfit": "black shihakusho with a white captain haori and a purple collar",
+   "detail": {
+    "skin": [
+     "black and white face paint"
+    ]
+   },
+   "clearAppearance": [
+    "eyes",
+    "hair"
+   ]
+  }
+ ],
+ "Jushiro Ukitake (Bleach)": [
+  {
+   "hairStyle": [
+    "long hair"
+   ],
+   "outfit": "black shinigami robes and white captain haori",
+   "hair": {
+    "primary": "white hair"
+   },
+   "eyes": {
+    "left": "brown eyes"
+   },
+   "detail": {
+    "accessory": [
+     "white waist cord"
+    ]
+   }
+  }
+ ],
+ "Gin Ichimaru (Bleach)": [
+  {
+   "hairStyle": [
+    "short hair"
+   ],
+   "outfit": "white high-collared Arrancar robe with black trim",
+   "hair": {
+    "primary": "silver hair"
+   },
+   "eyes": {
+    "left": "light blue eyes"
+   },
+   "detail": {
+    "eyeDetail": [
+     "narrow eyes"
+    ]
+   }
+  }
+ ],
+ "Shinji Hirako (Bleach)": [
+  {
+   "hairStyle": [
+    "bob cut",
+    "blunt bangs"
+   ],
+   "outfit": "white shirt with a black tie and a white captain haori, black hakama",
+   "hair": {
+    "primary": "blonde hair"
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Aoi Todo (Jujutsu Kaisen)": [
+  {
+   "hairStyle": [
+    "hair bun",
+    "slicked-back hair"
+   ],
+   "outfit": "bare upper body with a broad white waist wrap, dark blue trousers",
+   "hair": {
+    "primary": "black hair"
+   },
+   "eyes": {
+    "left": "black eyes"
+   },
+   "detail": {
+    "skin": [
+     "scar on the left side of the face"
+    ]
+   }
+  }
+ ],
+ "Choso (Jujutsu Kaisen)": [
+  {
+   "hairStyle": [
+    "short hair",
+    "pigtails"
+   ],
+   "outfit": "white wide-sleeved robe with a purple vest and scarf, white baggy trousers",
+   "hair": {
+    "primary": "dark brown hair"
+   },
+   "detail": {
+    "skin": [
+     "dark horizontal stripe across the nose"
+    ]
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Kinji Hakari (Jujutsu Kaisen)": [
+  {
+   "hairStyle": [
+    "slicked-back hair"
+   ],
+   "outfit": "black padded hooded coat, brown trousers",
+   "hair": {
+    "primary": "blonde hair"
+   },
+   "clearAppearance": [
+    "eyes"
+   ]
+  }
+ ],
+ "Hiromi Higuruma (Jujutsu Kaisen)": [
+  {
+   "hairStyle": [
+    "short hair",
+    "messy hair"
+   ],
+   "outfit": "black suit jacket over a white shirt with a green tie, black suit trousers",
+   "hair": {
+    "primary": "dark brown hair"
+   },
+   "clearAppearance": [
+    "eyes"
+   ]
+  }
+ ],
+ "Genya Shinazugawa (Demon Slayer)": [
+  {
+   "hairStyle": [
+    "spiky short hair",
+    "shaved sides"
+   ],
+   "outfit": "dark green Demon Slayer uniform with a purple sleeveless haori, dark green uniform trousers",
+   "hair": {
+    "primary": "black hair"
+   },
+   "detail": {
+    "skin": [
+     "facial scars"
+    ]
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Sabito (Demon Slayer)": [
+  {
+   "hairStyle": [
+    "short hair",
+    "spiky short hair"
+   ],
+   "outfit": "cream haori over a geometric-patterned kimono, black hakama",
+   "hair": {
+    "primary": "orange hair"
+   },
+   "clearAppearance": [
+    "eyes"
+   ]
+  }
+ ],
+ "Kokushibo (Demon Slayer)": [
+  {
+   "hairStyle": [
+    "long hair"
+   ],
+   "outfit": "purple and black patterned kimono, black hakama",
+   "hair": {
+    "primary": "black hair",
+    "secondary": "dark reddish purple hair",
+    "mode": "tips"
+   },
+   "eyes": {
+    "left": "red eyes"
+   },
+   "detail": {
+    "eyeDetail": [
+     "six eyes on the face"
+    ]
+   }
+  }
+ ],
+ "Yoriichi Tsugikuni (Demon Slayer)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "ponytail"
+   ],
+   "outfit": "red haori over a pale kimono, black hakama",
+   "hair": {
+    "primary": "black hair",
+    "secondary": "crimson hair",
+    "mode": "tips"
+   },
+   "eyes": {
+    "left": "reddish brown eyes"
+   },
+   "detail": {
+    "skin": [
+     "red birthmark on the forehead"
+    ],
+    "accessory": [
+     "hanafuda earrings"
+    ]
+   }
+  }
+ ]
+}));
 function characterPresetList(personId){
  if(!selected.character.includes(personId))return [];
  const character=item('character',personId);if(!character)return [];
@@ -3458,6 +3761,11 @@ function characterPresetList(personId){
 function resolveCharacterPreset(preset){
  const patch={};const existing=(field,value)=>{const row=catalog[field].find(x=>x.id===value||x.value.normalize('NFKC').toLowerCase()===value.normalize('NFKC').toLowerCase());if(!row)throw Error('必要な候補が見つかりません：'+value);return row.id};
  const modes=(field,value)=>{if(!structuralBuiltin[field].some(row=>row[0]===value))throw Error('未対応の色モードです');return value};
+ // Only presets that explicitly request a clear use this opt-in contract.
+ if(preset.clearAppearance!==undefined){
+  if(!Array.isArray(preset.clearAppearance)||preset.clearAppearance.some(field=>!['hair','eyes'].includes(field)))throw Error('未対応の外見解除項目です');
+  patch.clearAppearance=[...new Set(preset.clearAppearance)];
+ }
  if(preset.hair?.primary){patch.hairPrimary=existing('hairColor',preset.hair.primary);patch.hairColor=patch.hairPrimary}
  if(preset.hair?.secondary)patch.hairSecondary=existing('hairColor',preset.hair.secondary);
  if(preset.hair?.mode)patch.hairMode=modes('hairMode',preset.hair.mode);
@@ -3472,13 +3780,21 @@ function resolveCharacterPreset(preset){
   }
   return patch;
 }
+function clearCharacterPresetAppearance(profile,fields){
+ for(const field of fields||[]){
+  const keys=field==='hair'?['hairPrimary','hairSecondary','hairColor','hairMode','hairStyle']:['eyeLeft','eyeRight','eyeColor','eyeMode'];
+  for(const key of keys)delete profile[key];
+  delete profile.colorWeights?.[field==='hair'?'hair':'eye'];
+  if(field==='hair'){delete profile.itemWeights?.hairStyle;delete profile.itemColors?.hairStyle}
+ }
+}
 function applyCharacterBasicPreset(presetId){
  const owner=personKey,preset=characterPresetList(owner).find(x=>x.id===presetId);
  if(!preset||!allPeople().some(x=>x.id===owner))return false;
  let patch;try{patch=resolveCharacterPreset(preset)}catch(error){shortToast(error.message);return false}
  if(!Object.keys(patch).length)return false;
  saveUndo('キャラ基本設定を適用');const profile=profiles[owner]??={};
-  const {detail,...appearance}=patch;Object.assign(profile,appearance);
+  const {detail,clearAppearance,...appearance}=patch;clearCharacterPresetAppearance(profile,clearAppearance);Object.assign(profile,appearance);
   if(detail){expandOutfitSelection(profile);profile.detail??={};for(const [field,values] of Object.entries(detail)){
    if(detailClothingFields.has(field)&&(asList(profile.detail[field]).length||profile.detailCustom?.[field]?.trim()))continue;
    profile.detail[field]=values.slice();
