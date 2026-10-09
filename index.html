@@ -383,6 +383,7 @@ dialog{background:var(--bg);color:var(--text);border:1px solid var(--border);bor
 #creatureQuickTabs button{min-height:32px;padding:5px 3px;font-size:.76rem}
 #creatureFieldTabs{display:flex}
 #creatureFieldTabs button{min-height:32px;padding:5px 3px;font-size:.76rem}
+#creaturePresetControls>button,#creatureFeatureControls>button{min-height:44px;flex:none}
 #creatureChoices{min-height:0;overflow-x:hidden;overflow-y:auto;flex:0 1 auto;border-top:1px solid var(--border);scrollbar-width:thin}
 #creatureChoices .modalOption{display:flex;align-items:center;gap:7px;min-width:0;padding:8px 0;margin:0;border-bottom:1px solid var(--border)}
 #creatureChoices .creatureOptionPick{display:flex;align-items:center;gap:8px;flex:1;min-width:0;min-height:44px;text-align:left;padding:7px 8px;font-size:.88rem;overflow-wrap:anywhere;background:transparent;border:0}
@@ -2456,8 +2457,269 @@ const creatureFields={
  // Keep the old field and values in snapshots. Display them through abilities/effects.
  equipment:{name:'旧装備・演出',options:[['wearing armor','鎧'],['wearing a collar','首輪'],['breathing fire','炎を吐く'],['surrounded by an aura','オーラ'],['magical energy','魔力'],['surrounded by smoke','煙']]}
 };
+// Creature masters are definitions only; individuals keep the existing fields.
+const creatureBasicPresets=Object.freeze([
+ {
+  id:"creature-pokemon-0025",name:"ピカチュウ",englishName:"Pikachu",
+  value:"pikachu (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"small",color:"yellow",surface:"fur",
+   features:Object.freeze(["long pointed ears", "black-tipped ears", "red cheek patches", "lightning bolt-shaped tail", "brown stripes on the back"])})
+ },
+ {
+  id:"creature-pokemon-0006",name:"リザードン",englishName:"Charizard",
+  value:"charizard (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"large",color:"orange",surface:"skin",
+   features:Object.freeze(["cream-colored belly", "bat-like wings", "blue-green wing membranes", "long tail", "flame at the tip of the tail", "two backward-pointing head horns"])})
+ },
+ {
+  id:"creature-pokemon-0003",name:"フシギバナ",englishName:"Venusaur",
+  value:"venusaur (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"quadruped",size:"large",color:"green",surface:"skin",
+   features:Object.freeze(["stocky body", "large pink flower on the back", "broad leaves around the flower", "mottled skin", "short sturdy legs"])})
+ },
+ {
+  id:"creature-pokemon-0009",name:"カメックス",englishName:"Blastoise",
+  value:"blastoise (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"large",color:"blue",surface:"skin",
+   features:Object.freeze(["brown shell", "cream-colored belly", "two water cannons protruding from the shell", "short thick tail", "sturdy limbs"])})
+ },
+ {
+  id:"creature-pokemon-0133",name:"イーブイ",englishName:"Eevee",
+  value:"eevee (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"quadruped",size:"small",color:"brown",surface:"fur",
+   features:Object.freeze(["large pointed ears", "cream-colored neck ruff", "bushy tail", "cream-colored tail tip"])})
+ },
+ {
+  id:"creature-pokemon-0448",name:"ルカリオ",englishName:"Lucario",
+  value:"lucario (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"medium-sized",color:"blue",surface:"fur",
+   features:Object.freeze(["black facial mask", "cream-colored chest fur", "long pointed ears", "black appendages behind the head", "spike on the chest", "spikes on the backs of the forepaws"])})
+ },
+ {
+  id:"creature-pokemon-0094",name:"ゲンガー",englishName:"Gengar",
+  value:"gengar (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"medium-sized",color:"purple",surface:"",
+   features:Object.freeze(["round stocky body", "short pointed ears", "spiky back", "red eyes", "wide toothy grin", "short limbs"])})
+ },
+ {
+  id:"creature-pokemon-0282",name:"サーナイト",englishName:"Gardevoir",
+  value:"gardevoir (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"humanoid creature",size:"medium-sized",color:"white",surface:"",
+   features:Object.freeze(["green head crest", "green upper body", "white gown-shaped lower body", "red chest crest", "slender arms"])})
+ },
+ {
+  id:"creature-pokemon-0475",name:"エルレイド",englishName:"Gallade",
+  value:"gallade (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"humanoid creature",size:"medium-sized",color:"white",surface:"",
+   features:Object.freeze(["green helmet-like head crest", "blue-green head fin", "red chest crest", "green blade-like elbows", "slender white legs"])})
+ },
+ {
+  id:"creature-pokemon-0150",name:"ミュウツー",englishName:"Mewtwo",
+  value:"mewtwo (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"medium-sized",color:"",surface:"",
+   features:Object.freeze(["pale lavender body", "long purple tail", "short pointed ears", "large thighs", "three rounded fingers on each hand", "tube connecting the back of the head to the upper back"])})
+ },
+ {
+  id:"creature-pokemon-0151",name:"ミュウ",englishName:"Mew",
+  value:"mew (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"small",color:"pink",surface:"",
+   features:Object.freeze(["small rounded head", "short triangular ears", "large blue eyes", "long thin tail", "rounded tail tip", "large hind paws"])})
+ },
+ {
+  id:"creature-pokemon-0384",name:"レックウザ",englishName:"Rayquaza",
+  value:"rayquaza (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"serpentine body",size:"large",color:"green",surface:"",
+   features:Object.freeze(["elongated serpentine body", "yellow ring markings along the body", "red-edged fins", "two small clawed arms", "elongated head fins"])})
+ },
+ {
+  id:"creature-pokemon-0445",name:"ガブリアス",englishName:"Garchomp",
+  value:"garchomp (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"large",color:"blue",surface:"",
+   features:Object.freeze(["dark blue body", "red chest and belly", "yellow marking on the snout", "hammerhead-like head", "fin-like forearms", "dorsal fin", "long tail"])})
+ },
+ {
+  id:"creature-pokemon-0571",name:"ゾロアーク",englishName:"Zoroark",
+  value:"zoroark (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"bipedal",size:"medium-sized",color:"gray",surface:"fur",
+   features:Object.freeze(["dark gray body", "large red mane", "black markings in the mane", "red claws", "pointed ears", "blue bead-like band near the end of the mane"])})
+ },
+ {
+  id:"creature-pokemon-0700",name:"ニンフィア",englishName:"Sylveon",
+  value:"sylveon (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"quadruped",size:"small",color:"white",surface:"fur",
+   features:Object.freeze(["pink ears and paws", "large blue eyes", "bow-shaped appendages", "ribbon-like feelers with pink and blue tips"])})
+ },
+ {
+  id:"creature-pokemon-0197",name:"ブラッキー",englishName:"Umbreon",
+  value:"umbreon (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"quadruped",size:"small",color:"black",surface:"fur",
+   features:Object.freeze(["long pointed ears", "red eyes", "yellow ring markings on the ears and tail", "yellow ring marking on the forehead", "yellow ring markings on the legs"])})
+ },
+ {
+  id:"creature-pokemon-0471",name:"グレイシア",englishName:"Glaceon",
+  value:"glaceon (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"quadruped",size:"small",color:"light blue",surface:"fur",
+   features:Object.freeze(["long pointed ears", "dark blue ear interiors", "dark blue paws", "dark blue diamond-shaped markings on the back", "diamond-shaped tail tip", "long head flaps"])})
+ },
+ {
+  id:"creature-pokemon-0359",name:"アブソル",englishName:"Absol",
+  value:"absol (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"quadruped",size:"medium-sized",color:"white",surface:"fur",
+   features:Object.freeze(["dark blue face", "dark blue paws", "crescent-shaped horn on the side of the head", "short scythe-shaped tail", "thick neck fur"])})
+ },
+ {
+  id:"creature-pokemon-0059",name:"ウインディ",englishName:"Arcanine",
+  value:"arcanine (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"quadruped",size:"large",color:"orange",surface:"fur",
+   features:Object.freeze(["black stripes on the body", "cream-colored mane", "cream-colored leg tufts", "large curled fluffy tail", "canine muzzle"])})
+ },
+ {
+  id:"creature-pokemon-0350",name:"ミロカロス",englishName:"Milotic",
+  value:"milotic (pokemon)",work:"ポケットモンスター",featureGroup:"ポケモン固有",
+  appearance:Object.freeze({type:"serpentine body",size:"large",color:"",surface:"",
+   features:Object.freeze(["cream-colored serpentine body", "red eyes", "long pink head fins", "long red eyebrow-like appendages", "blue and pink scales on the tail", "black outlines between the tail scales", "fan-shaped tail fin"])})
+ },
+].map(preset=>Object.freeze(preset)));
+const creatureGenericFeatures=new Set(creatureFields.features.options.map(row=>row[0]));
+const creatureFeatureLabels={
+ "long pointed ears":"長く尖った耳",
+ "black-tipped ears":"黒い耳先",
+ "red cheek patches":"赤い頬の模様",
+ "lightning bolt-shaped tail":"稲妻型の尻尾",
+ "brown stripes on the back":"背中の茶色い縞",
+ "cream-colored belly":"クリーム色の腹",
+ "bat-like wings":"コウモリ状の翼",
+ "blue-green wing membranes":"青緑色の翼膜",
+ "long tail":"長い尻尾",
+ "flame at the tip of the tail":"尻尾の先の炎",
+ "two backward-pointing head horns":"後ろ向きの2本の頭角",
+ "stocky body":"ずんぐりした体",
+ "large pink flower on the back":"背中の大きなピンクの花",
+ "broad leaves around the flower":"花の周りの幅広い葉",
+ "mottled skin":"まだら模様の皮膚",
+ "short sturdy legs":"短く頑丈な脚",
+ "brown shell":"茶色の甲羅",
+ "two water cannons protruding from the shell":"甲羅から伸びる2本の水砲",
+ "short thick tail":"短く太い尻尾",
+ "sturdy limbs":"頑丈な四肢",
+ "large pointed ears":"大きく尖った耳",
+ "cream-colored neck ruff":"クリーム色の首周りの毛",
+ "bushy tail":"ふさふさの尻尾",
+ "cream-colored tail tip":"クリーム色の尻尾の先",
+ "black facial mask":"黒い顔のマスク模様",
+ "cream-colored chest fur":"クリーム色の胸の毛",
+ "black appendages behind the head":"頭の後ろの黒い付属部",
+ "spike on the chest":"胸のトゲ",
+ "spikes on the backs of the forepaws":"前足の甲のトゲ",
+ "round stocky body":"丸くずんぐりした体",
+ "short pointed ears":"短く尖った耳",
+ "spiky back":"トゲのある背中",
+ "red eyes":"赤い目",
+ "wide toothy grin":"歯を見せた大きな笑顔",
+ "short limbs":"短い四肢",
+ "green head crest":"緑色の頭の突起",
+ "green upper body":"緑色の上半身",
+ "white gown-shaped lower body":"白いガウン状の下半身",
+ "red chest crest":"赤い胸の突起",
+ "slender arms":"細い腕",
+ "green helmet-like head crest":"緑色の兜状の頭の突起",
+ "blue-green head fin":"青緑色の頭のひれ",
+ "green blade-like elbows":"緑色の刃状の肘",
+ "slender white legs":"細い白い脚",
+ "pale lavender body":"淡いラベンダー色の体",
+ "long purple tail":"長い紫色の尻尾",
+ "large thighs":"大きな太もも",
+ "three rounded fingers on each hand":"両手にそれぞれ3本の丸い指",
+ "tube connecting the back of the head to the upper back":"後頭部と背中上部をつなぐ管",
+ "small rounded head":"小さく丸い頭",
+ "short triangular ears":"短い三角の耳",
+ "large blue eyes":"大きな青い目",
+ "long thin tail":"長く細い尻尾",
+ "rounded tail tip":"丸い尻尾の先",
+ "large hind paws":"大きな後ろ足",
+ "elongated serpentine body":"細長い蛇状の体",
+ "yellow ring markings along the body":"体に沿った黄色い輪模様",
+ "red-edged fins":"赤い縁のひれ",
+ "two small clawed arms":"爪のある2本の小さな腕",
+ "elongated head fins":"長い頭のひれ",
+ "dark blue body":"濃い青色の体",
+ "red chest and belly":"赤い胸と腹",
+ "yellow marking on the snout":"鼻先の黄色い模様",
+ "hammerhead-like head":"ハンマーヘッド状の頭",
+ "fin-like forearms":"ひれ状の前腕",
+ "dorsal fin":"背びれ",
+ "dark gray body":"濃い灰色の体",
+ "large red mane":"大きな赤いたてがみ",
+ "black markings in the mane":"たてがみの黒い模様",
+ "red claws":"赤い爪",
+ "pointed ears":"尖った耳",
+ "blue bead-like band near the end of the mane":"たてがみの先近くの青い玉状の留め具",
+ "pink ears and paws":"ピンクの耳と足",
+ "bow-shaped appendages":"蝶結び状の付属部",
+ "ribbon-like feelers with pink and blue tips":"先がピンクと青のリボン状の触角",
+ "yellow ring markings on the ears and tail":"耳と尻尾の黄色い輪模様",
+ "yellow ring marking on the forehead":"額の黄色い輪模様",
+ "yellow ring markings on the legs":"脚の黄色い輪模様",
+ "dark blue ear interiors":"耳の内側の濃い青色",
+ "dark blue paws":"濃い青色の足",
+ "dark blue diamond-shaped markings on the back":"背中の濃い青色のひし形模様",
+ "diamond-shaped tail tip":"ひし形の尻尾の先",
+ "long head flaps":"長く垂れた頭の付属部",
+ "dark blue face":"濃い青色の顔",
+ "crescent-shaped horn on the side of the head":"頭の側面の三日月状の角",
+ "short scythe-shaped tail":"短い鎌状の尻尾",
+ "thick neck fur":"厚い首の毛",
+ "black stripes on the body":"体の黒い縞",
+ "cream-colored mane":"クリーム色のたてがみ",
+ "cream-colored leg tufts":"クリーム色の脚の房毛",
+ "large curled fluffy tail":"大きく巻いたふさふさの尻尾",
+ "canine muzzle":"犬型の口先",
+ "cream-colored serpentine body":"クリーム色の蛇状の体",
+ "long pink head fins":"長いピンクの頭のひれ",
+ "long red eyebrow-like appendages":"長い赤い眉状の付属部",
+ "blue and pink scales on the tail":"尻尾の青とピンクの鱗",
+ "black outlines between the tail scales":"尻尾の鱗の間の黒い縁取り",
+ "fan-shaped tail fin":"扇状の尾びれ"
+};
+const creaturePresetBySpecies=new Map(),creaturePresetIds=new Set(),creatureFeatureOwnerIndex=new Map(),creatureFeatureGroups=new Map();
+for(const preset of creatureBasicPresets){
+ if(creaturePresetIds.has(preset.id)||creaturePresetBySpecies.has(preset.value))throw new Error('Creature基本外見のID・種類が重複しています');
+ creaturePresetIds.add(preset.id);creaturePresetBySpecies.set(preset.value,preset);
+ if(!creatureFields.species.options.some(row=>row[0]===preset.value))creatureFields.species.options.push([preset.value,preset.name,preset.work]);
+ for(const value of preset.appearance.features){
+  if(creatureGenericFeatures.has(value))continue;
+  if(!creatureFeatureOwnerIndex.has(value))creatureFeatureOwnerIndex.set(value,new Set());
+  creatureFeatureOwnerIndex.get(value).add(preset.id);creatureFeatureGroups.set(value,preset.featureGroup);
+  if(!creatureFields.features.options.some(row=>row[0]===value))creatureFields.features.options.push([value,creatureFeatureLabels[value]||value,preset.featureGroup]);
+ }
+}
+function creaturePresetForSpecies(value){return creaturePresetBySpecies.get(value)||null}
+function creatureCandidateOwners(value){return [...(creatureFeatureOwnerIndex.get(value)||[])]}
+function creatureFeatureAllowed(c,value,selected=false){
+ const owners=creatureFeatureOwnerIndex.get(value);
+ return selected||creatureOtherFeaturesVisible||!owners||owners.has(creaturePresetForSpecies(c?.species)?.id)||!!candidateExtras.creature?.features?.some(row=>row.value===value);
+}
+function resolveCreatureBasicPreset(preset){
+ if(!preset||creaturePresetBySpecies.get(preset.value)!==preset)throw new Error('基本外見が見つかりません');
+ const appearance=preset.appearance;
+ if(maIsHidden('creature:species',preset.value)||!creatureFields.species.options.some(row=>row[0]===preset.value))throw new Error('種類の候補が未登録または非表示です');
+ for(const field of ['type','size','color','surface','features']){
+  const value=appearance[field],values=field==='features'?value:value?[value]:[];
+  if(field==='features'?(!Array.isArray(value)||new Set(value).size!==value.length):typeof value!=='string')throw new Error('基本外見の定義が不正です');
+  for(const key of values)if(typeof key!=='string'||!key||!creatureFields[field].options.some(row=>row[0]===key)||maIsHidden('creature:'+field,key))throw new Error(creatureFields[field].name+'の候補が未登録または非表示です：'+creatureLabel(field,key));
+ }
+ return {...appearance,features:[...appearance.features]};
+}
+function applyCreatureBasicPreset(presetId,creatureId=activeCreatureId){
+ const c=creatures.find(row=>row.id===creatureId),preset=creatureBasicPresets.find(row=>row.id===presetId);
+ if(!c||!preset||c.species!==preset.value){shortToast('現在の生物の種類と基本外見が一致しません');return false}
+ let appearance;try{appearance=resolveCreatureBasicPreset(preset)}catch(error){shortToast(error.message);return false}
+ saveUndo('生物の基本外見を適用');
+ for(const field of ['type','size','color','surface','features']){c[field]=appearance[field];delete tagWeights[creatureWeightField(c,field)]}
+ creatureChanged();shortToast('基本外見を適用しました');return true;
+}
 const creatureGroups=[['type','種類・体格',['species','type','size']],['appearance','外見・体表',['color','surface']],['features','身体的特徴',['features']],['action','行動・状態',['actions','states']],['element','属性・能力',['elements','abilities']],['equipment','位置・演出',['position','depth','direction','effects']]];
-let creatures=[],activeCreatureId='',characterKind='person',creaturePicker=null,creatureQuickMode='all';
+let creatures=[],activeCreatureId='',characterKind='person',creaturePicker=null,creatureQuickMode='all',creatureOtherFeaturesVisible=false;
 function normalizeCreatures(value){
  const seen=new Set(),text=v=>typeof v==='string'?v.trim():'';
  return (Array.isArray(value)?value:[]).filter(x=>x&&typeof x==='object'&&!Array.isArray(x)).map(x=>{
@@ -2520,7 +2782,7 @@ function renderCreatures(){
  const root=$('creatureGrid');if(!root.children.length)for(const group of creatureGroups){const card=node('div',undefined,'personPicker creatureCard'),launch=node('button',undefined,'personLaunch');card.dataset.creatureGroup=group[0];launch.type='button';launch.onclick=()=>openCreaturePicker(group[0]);card.append(launch);card.addEventListener('click',e=>{if(!e.target.closest('button'))launch.click()});root.append(card)}
  for(const group of creatureGroups){const card=root.querySelector('[data-creature-group="'+group[0]+'"]');renderUnifiedCard(card,card.querySelector('.personLaunch'),group[1],creatureEntries(group))}
 }
-function openCreaturePicker(groupKey,field){const group=creatureGroups.find(x=>x[0]===groupKey);if(!group)return;creaturePicker={group,field:group[2].includes(field)?field:group[2][0],category:'',sort:'default'};closeCandidateCategories();$('creatureSortMenu').hidden=true;creatureQuickMode='all';$('creatureSearch').value='';renderCreaturePicker();$('creatureDialog').showModal()}
+function openCreaturePicker(groupKey,field){const group=creatureGroups.find(x=>x[0]===groupKey);if(!group)return;creatureOtherFeaturesVisible=false;creaturePicker={group,field:group[2].includes(field)?field:group[2][0],category:'',sort:'default'};closeCandidateCategories();$('creatureSortMenu').hidden=true;creatureQuickMode='all';$('creatureSearch').value='';renderCreaturePicker();$('creatureDialog').showModal()}
 function changeCreatureValue(field,value,checked){
  saveUndo('生物の設定');const c=ensureCreature();
  if(creatureFields[field].single)c[field]=checked?value:'';
@@ -2556,6 +2818,8 @@ function renderCreatureColorPalette(list,matches,picked){
 function renderCreaturePicker(){
  if(!creaturePicker)return;const {group,field}=creaturePicker,c=currentCreature(),config=creatureFields[field],position=field==='position';
  $('creatureDialogTitle').textContent=(c?creatureName(c):'生物')+'：'+group[1];
+ const preset=creaturePresetForSpecies(c?.species);$('creaturePresetControls').hidden=group[0]!=='type'||!preset;$('creatureBasicPresetApply').onclick=preset?()=>applyCreatureBasicPreset(preset.id,c.id):null;
+ $('creatureFeatureControls').hidden=field!=='features';$('creatureOtherFeatures').setAttribute('aria-pressed',String(creatureOtherFeaturesVisible));$('creatureOtherFeatures').classList.toggle('active',creatureOtherFeaturesVisible);
  const tabs=$('creatureFieldTabs');tabs.hidden=group[2].length===1;tabs.replaceChildren();for(const key of group[2]){const b=node('button',creatureFields[key].name,'secondary');b.type='button';b.classList.toggle('active',key===field);b.setAttribute('aria-pressed',String(key===field));b.onclick=()=>{creaturePicker.field=key;creaturePicker.category='';creatureQuickMode='all';$('creatureSearch').value='';renderCreaturePicker();$('creatureChoices').scrollTop=0};tabs.append(b)}
  $('creatureSortOpen').hidden=position;$('creatureSortMenu').hidden=true;$('creatureSortOpen').setAttribute('aria-expanded','false');
  const categories=creatureCategoryOptions(field);$('creatureCategory').replaceChildren(...[['','すべての分類'],...categories.map(v=>[v,v])].map(([v,n])=>{const o=node('option',n);o.value=v;return o}));$('creatureCategory').value=creaturePicker.category||'';syncCandidateCategories();
@@ -2563,7 +2827,7 @@ function renderCreaturePicker(){
  const list=$('creatureChoices');list.replaceChildren();if(position){$('creatureCandidateCount').textContent='位置9種・奥行き3種（それぞれ1つ選択）';renderCreaturePosition(list,c);return}
  const q=$('creatureSearch').value.normalize('NFKC').toLowerCase().trim(),kind='creature:'+field,picked=new Set(creatureValues(c,field));
  const options=[...config.options];for(const value of picked)if(!options.some(x=>x[0]===value))options.push([value,creatureLabel(field,value)]);
- let matches=options.filter(([value,name])=>(!maIsHidden('creature:'+field,value)||picked.has(value))&&(value+' '+name+' '+creatureCategory(field,value)).normalize('NFKC').toLowerCase().includes(q)&&(!creaturePicker.category||creatureCategory(field,value)===creaturePicker.category));
+ let matches=options.filter(([value,name])=>(field!=='features'||creatureFeatureAllowed(c,value,picked.has(value)))&&(!maIsHidden('creature:'+field,value)||picked.has(value))&&(value+' '+name+' '+creatureCategory(field,value)).normalize('NFKC').toLowerCase().includes(q)&&(!creaturePicker.category||creatureCategory(field,value)===creaturePicker.category));
  if(creaturePicker.sort==='name')matches.sort((a,b)=>a[1].localeCompare(b[1],'ja'));else if(creaturePicker.sort==='group')matches.sort((a,b)=>creatureCategory(field,a[0]).localeCompare(creatureCategory(field,b[0]),'ja')||a[1].localeCompare(b[1],'ja'));
  if(creatureQuickMode==='selected')matches=matches.filter(([value])=>picked.has(value));else if(creatureQuickMode==='favorite')matches=matches.filter(([value])=>usageFavorite(kind,value));
  $('creatureCandidateCount').textContent=matches.length+'件を表示'+(config.single?'（1つ選択）':'');quickTabUpdate('creatureQuickTabs',creatureQuickMode);
@@ -4904,11 +5168,15 @@ creatureIdentityDialog.id='creatureIdentityDialog';creatureIdentity.id='creature
 creatureIdentityHead.append(creatureIdentityTitle,creatureIdentityClose);$('removeCreature').textContent='この生物を削除';$('removeCreature').className='secondary';creatureIdentityPerson.append(creatureIdentityName,$('removeCreature'));creatureIdentityBody.append(creatureIdentityPerson);creatureIdentityDialog.append(creatureIdentityHead,creatureIdentityBody);document.body.append(creatureIdentityDialog);$('addCreature').before(creatureIdentity);
 $('removeCreature').addEventListener('click',()=>creatureIdentityDialog.close());
 creatureIdentity.onclick=()=>{const c=currentCreature();if(!c)return;creatureIdentityName.textContent=creatureName(c);$('removeCreature').setAttribute('aria-label',creatureName(c)+'を削除');openDialog('creatureIdentityDialog')};
+const creaturePresetControls=node('div',undefined,'simpleTools'),creatureBasicPresetApply=node('button','基本外見を適用','secondary');
+creaturePresetControls.id='creaturePresetControls';creaturePresetControls.hidden=true;creatureBasicPresetApply.id='creatureBasicPresetApply';creatureBasicPresetApply.type='button';creaturePresetControls.append(creatureBasicPresetApply);$('creatureSearchLabel').before(creaturePresetControls);
+const creatureFeatureControls=node('div',undefined,'simpleTools'),creatureOtherFeatures=node('button','他のCreatureの特徴も表示','secondary');
+creatureFeatureControls.id='creatureFeatureControls';creatureFeatureControls.hidden=true;creatureOtherFeatures.id='creatureOtherFeatures';creatureOtherFeatures.type='button';creatureOtherFeatures.setAttribute('aria-pressed','false');creatureOtherFeatures.onclick=()=>{creatureOtherFeaturesVisible=!creatureOtherFeaturesVisible;renderCreaturePicker()};creatureFeatureControls.append(creatureOtherFeatures);$('creatureCandidateCount').before(creatureFeatureControls);
 $('creatureSearch').oninput=renderCreaturePicker;
 const creatureSpeciesGroups={
  'ドラゴン系':['dragon','wyvern'], '獣系':['wolf','fox','large feline','bear','beast'], '鳥・飛行系':['bird','bird of prey'], '水棲系':['fish','marine mammal','aquatic monster','aquatic creature'], '爬虫類':['snake','large reptile','reptile'], '昆虫・節足系':['insect','spider','crustacean'], '人型・霊的':['goblin','orc','giant','demon','angelic creature','spirit creature'], 'アンデッド':['undead creature','skeleton','zombie','ghost'], '無機物・異形':['golem','mechanical lifeform','slime creature','tentacled creature','giant creature']
 };
-function creatureCategory(field,value){if(field==='species')return Object.keys(creatureSpeciesGroups).find(k=>creatureSpeciesGroups[k].includes(value))||'その他';if(field==='features')return ['horns','multiple horns','fangs','claws','sharp claws','spikes','spines along the back'].includes(value)?'角・牙・爪': ['wings','large wings','small wings','tail','long tail','mane','long neck','large ears','fins','shell'].includes(value)?'翼・体の特徴':'複数・特殊';return ''}
+function creatureCategory(field,value){if(field==='species'&&creaturePresetForSpecies(value))return creatureFields.species.options.find(row=>row[0]===value)?.[2]??creaturePresetForSpecies(value).work;if(field==='features'&&creatureFeatureGroups.has(value))return creatureFields.features.options.find(row=>row[0]===value)?.[2]??creatureFeatureGroups.get(value);if(field==='species')return Object.keys(creatureSpeciesGroups).find(k=>creatureSpeciesGroups[k].includes(value))||'その他';if(field==='features')return ['horns','multiple horns','fangs','claws','sharp claws','spikes','spines along the back'].includes(value)?'角・牙・爪': ['wings','large wings','small wings','tail','long tail','mane','long neck','large ears','fins','shell'].includes(value)?'翼・体の特徴':'複数・特殊';return ''}
 function creatureCategoryOptions(field){return [...new Set(creatureFields[field].options.map(([v])=>creatureCategory(field,v)).filter(Boolean))]}
 $('creatureDialog').querySelector('.dialogHead').classList.add('candidateHeader');$('creatureChoices').classList.add('candidateList');$('creatureFieldTabs').classList.add('simpleTabs');$('creatureQuickTabs').classList.add('candidateQuickTabs');
 const creatureCategorySelect=node('select');creatureCategorySelect.id='creatureCategory';const categoryHolder=node('div');categoryHolder.hidden=true;categoryHolder.append(creatureCategorySelect);$('creatureDialog').append(categoryHolder);creatureCategorySelect.onchange=()=>{creaturePicker.category=creatureCategorySelect.value;renderCreaturePicker()};
