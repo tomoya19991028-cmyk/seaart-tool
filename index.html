@@ -1336,6 +1336,23 @@ characterCollectionAdditions.push(
  {"id":"character-extension-1aa7c0fbe164752e","name":"黒死牟（鬼滅の刃）","value":"Kokushibo (Demon Slayer)","group":"鬼滅の刃","gender":"男性"},
  {"id":"character-extension-c1307252d0916eba","name":"継国縁壱（鬼滅の刃）","value":"Yoriichi Tsugikuni (Demon Slayer)","group":"鬼滅の刃","gender":"男性"}
 );
+// Round 3 B3: fixed IDs and explicit genders; keep series groups and existing rows.
+characterCollectionAdditions.push(
+ {"id":"character-extension-e65b4804dabe1c34","name":"武藤遊戯（遊戯王）","value":"Yugi Muto (Yu-Gi-Oh!)","group":"遊戯王","gender":"男性"},
+ {"id":"character-extension-53e3a6553978f137","name":"闇遊戯（アテム）（遊戯王）","value":"Yami Yugi (Yu-Gi-Oh!)","group":"遊戯王","gender":"男性"},
+ {"id":"character-extension-54faa4f8c892ca03","name":"海馬瀬人（遊戯王）","value":"Seto Kaiba (Yu-Gi-Oh!)","group":"遊戯王","gender":"男性"},
+ {"id":"character-extension-06d505a24a0e440a","name":"城之内克也（遊戯王）","value":"Joey Wheeler (Yu-Gi-Oh!)","group":"遊戯王","gender":"男性"},
+ {"id":"character-extension-d1944d954fa30a2e","name":"真崎杏子（遊戯王）","value":"Tea Gardner (Yu-Gi-Oh!)","group":"遊戯王","gender":"女性"},
+ {"id":"character-extension-e1489fbb5c131d55","name":"孔雀舞（遊戯王）","value":"Mai Valentine (Yu-Gi-Oh!)","group":"遊戯王","gender":"女性"},
+ {"id":"character-extension-41da4c0de1f87b42","name":"遊城十代（遊戯王GX）","value":"Jaden Yuki (Yu-Gi-Oh! GX)","group":"遊戯王GX","gender":"男性"},
+ {"id":"character-extension-d51d828ab77bb032","name":"天上院明日香（遊戯王GX）","value":"Alexis Rhodes (Yu-Gi-Oh! GX)","group":"遊戯王GX","gender":"女性"},
+ {"id":"character-extension-7c66b8a2a14808dc","name":"不動遊星（遊戯王5D's）","value":"Yusei Fudo (Yu-Gi-Oh! 5D's)","group":"遊戯王5D's","gender":"男性"},
+ {"id":"character-extension-33e751559c09dfcf","name":"十六夜アキ（遊戯王5D's）","value":"Akiza Izinski (Yu-Gi-Oh! 5D's)","group":"遊戯王5D's","gender":"女性"},
+ {"id":"character-extension-25a15d1eaf6efb87","name":"九十九遊馬（遊戯王ZEXAL）","value":"Yuma Tsukumo (Yu-Gi-Oh! ZEXAL)","group":"遊戯王ZEXAL","gender":"男性"},
+ {"id":"character-extension-c55696c721e1b753","name":"榊遊矢（遊戯王ARC-V）","value":"Yuya Sakaki (Yu-Gi-Oh! ARC-V)","group":"遊戯王ARC-V","gender":"男性"},
+ {"id":"character-extension-9cdd13d9b4ab1b04","name":"藤木遊作（遊戯王VRAINS）","value":"Yusaku Fujiki (Yu-Gi-Oh! VRAINS)","group":"遊戯王VRAINS","gender":"男性"},
+ {"id":"character-extension-f22e086f70e87630","name":"王道遊我（遊戯王SEVENS）","value":"Yuga Ohdo (Yu-Gi-Oh! SEVENS)","group":"遊戯王SEVENS","gender":"男性"}
+);
 for(const {gender,...row} of characterCollectionAdditions){
  const canonical=characterCanonicalValue(row.value,row.name).normalize('NFKC').toLowerCase();
  if(catalog.character.some(old=>old.name.normalize('NFKC')===row.name.normalize('NFKC')||characterCanonicalValue(old.value,old.name).normalize('NFKC').toLowerCase()===canonical))continue;
@@ -1368,6 +1385,22 @@ outfitSetSupplements.push(
  {"id":"set-character-27b1cce5be5cdecb","name":"錆兎の代表衣装","value":"cream haori over a geometric-patterned kimono, black hakama","group":"キャラクター代表衣装","parts":{"upper":"cream haori over a geometric-patterned kimono","lower":"black hakama","head":"white fox mask with red markings","accessory":"blue waist cord"}},
  {"id":"set-character-1aa7c0fbe164752e","name":"黒死牟の代表衣装","value":"purple and black patterned kimono, black hakama","group":"キャラクター代表衣装","parts":{"upper":"purple and black patterned kimono","lower":"black hakama"}},
  {"id":"set-character-c1307252d0916eba","name":"継国縁壱の代表衣装","value":"red haori over a pale kimono, black hakama","group":"キャラクター代表衣装","parts":{"upper":"red haori over a pale kimono","lower":"black hakama"}}
+);
+outfitSetSupplements.push(
+ {"id":"set-character-e65b4804dabe1c34","name":"武藤遊戯の代表衣装","value":"blue school jacket over a dark shirt, blue school trousers","group":"キャラクター代表衣装","parts":{"upper":"blue school jacket over a dark shirt","lower":"blue school trousers","accessory":"Millennium Puzzle pendant and a choker"}},
+ {"id":"set-character-53e3a6553978f137","name":"闇遊戯（アテム）の代表衣装","value":"blue jacket draped over a black sleeveless shirt, blue school trousers","group":"キャラクター代表衣装","parts":{"upper":"blue jacket draped over a black sleeveless shirt","lower":"blue school trousers","accessory":"Millennium Puzzle pendant and a choker"}},
+ {"id":"set-character-54faa4f8c892ca03","name":"海馬瀬人の代表衣装","value":"white high-collared long coat over a black top, black trousers","group":"キャラクター代表衣装","parts":{"upper":"white high-collared long coat over a black top","lower":"black trousers","accessory":"silver-studded straps"}},
+ {"id":"set-character-06d505a24a0e440a","name":"城之内克也の代表衣装","value":"blue open jacket over a light teal shirt, dark trousers","group":"キャラクター代表衣装","parts":{"upper":"blue open jacket over a light teal shirt","lower":"dark trousers"}},
+ {"id":"set-character-d1944d954fa30a2e","name":"真崎杏子の代表衣装","value":"mint green sleeveless blouse with a pale yellow collar, blue miniskirt","group":"キャラクター代表衣装","parts":{"upper":"mint green sleeveless blouse with a pale yellow collar","lower":"blue miniskirt"}},
+ {"id":"set-character-e1489fbb5c131d55","name":"孔雀舞の代表衣装","value":"purple cropped vest over a white corset top, purple miniskirt, purple boots","group":"キャラクター代表衣装","parts":{"upper":"purple cropped vest over a white corset top","accessory":"long white gloves","lower":"purple miniskirt","feet":"purple boots"}},
+ {"id":"set-character-41da4c0de1f87b42","name":"遊城十代の代表衣装","value":"red Slifer Red jacket over a black shirt, light gray trousers","group":"キャラクター代表衣装","parts":{"upper":"red Slifer Red jacket over a black shirt","lower":"light gray trousers"}},
+ {"id":"set-character-d51d828ab77bb032","name":"天上院明日香の代表衣装","value":"white and blue sleeveless school uniform top, blue pleated miniskirt","group":"キャラクター代表衣装","parts":{"upper":"white and blue sleeveless school uniform top","lower":"blue pleated miniskirt","accessory":"blue fingerless gloves"}},
+ {"id":"set-character-7c66b8a2a14808dc","name":"不動遊星の代表衣装","value":"navy jacket with orange shoulder pads over a black and red shirt, dark trousers","group":"キャラクター代表衣装","parts":{"upper":"navy jacket with orange shoulder pads over a black and red shirt","lower":"dark trousers"}},
+ {"id":"set-character-33e751559c09dfcf","name":"十六夜アキの代表衣装","value":"wine-colored corset dress with white puff sleeves","group":"キャラクター代表衣装","parts":{"upper":"wine-colored corset dress with white puff sleeves","accessory":"rose pendant"}},
+ {"id":"set-character-25a15d1eaf6efb87","name":"九十九遊馬の代表衣装","value":"red short jacket over a sleeveless black shirt, light gray trousers","group":"キャラクター代表衣装","parts":{"upper":"red short jacket over a sleeveless black shirt","lower":"light gray trousers","accessory":"Emperor Key pendant"}},
+ {"id":"set-character-c55696c721e1b753","name":"榊遊矢の代表衣装","value":"red sleeveless top with a white short cape, green trousers","group":"キャラクター代表衣装","parts":{"upper":"red sleeveless top with a white short cape","lower":"green trousers","head":"brown goggles on the head"}},
+ {"id":"set-character-9cdd13d9b4ab1b04","name":"藤木遊作の代表衣装","value":"navy school blazer with white piping over a white shirt and a blue tie, navy school trousers","group":"キャラクター代表衣装","parts":{"upper":"navy school blazer with white piping over a white shirt and a blue tie","lower":"navy school trousers"}},
+ {"id":"set-character-f22e086f70e87630","name":"王道遊我の代表衣装","value":"red jacket over a yellow shirt, dark shorts","group":"キャラクター代表衣装","parts":{"upper":"red jacket over a yellow shirt","lower":"dark shorts"}}
 );
 for(const {parts,...row} of outfitSetSupplements){
  if(catalog.outfit.some(old=>old.id===row.id||old.value.toLowerCase()===row.value.toLowerCase()))continue;
@@ -1534,12 +1567,22 @@ for(const [field,rows] of Object.entries({
  "head":[["golden head covering","涅マユリ：金色の頭部装束","キャラクターの特徴"],["white fox mask with red markings","錆兎：赤い模様の白い狐面","キャラクターの特徴"]]
 }))for(const row of rows)
  if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
+// B3 preset dependencies: register before builtin snapshots, without moving old candidates.
+for(const [field,rows] of Object.entries({
+ "upper":[["blue school jacket over a dark shirt","青い学生服風ジャケット＋暗色シャツ","キャラクターの衣装"],["blue jacket draped over a black sleeveless shirt","黒い袖なしシャツ＋肩掛けの青いジャケット","キャラクターの衣装"],["white high-collared long coat over a black top","白い高襟ロングコート＋黒い上着","キャラクターの衣装"],["blue open jacket over a light teal shirt","青い前開きジャケット＋淡い青緑のシャツ","キャラクターの衣装"],["mint green sleeveless blouse with a pale yellow collar","ミントグリーンのノースリーブ上着＋淡い黄色の襟","キャラクターの衣装"],["purple cropped vest over a white corset top","紫のショートベスト＋白いコルセット風トップス","キャラクターの衣装"],["red Slifer Red jacket over a black shirt","赤いオシリス・レッドのジャケット＋黒いシャツ","キャラクターの衣装"],["white and blue sleeveless school uniform top","白と青の袖なし制服トップス","キャラクターの衣装"],["navy jacket with orange shoulder pads over a black and red shirt","オレンジ肩当ての紺色ジャケット＋黒と赤のシャツ","キャラクターの衣装"],["wine-colored corset dress with white puff sleeves","ワイン色のコルセット風ドレス＋白いパフスリーブ","キャラクターの衣装"],["red short jacket over a sleeveless black shirt","赤い短いジャケット＋黒い袖なしシャツ","キャラクターの衣装"],["red sleeveless top with a white short cape","赤い袖なしトップス＋白い短いケープ","キャラクターの衣装"],["navy school blazer with white piping over a white shirt and a blue tie","白縁の紺色学生服＋白シャツ＋青いネクタイ","キャラクターの衣装"],["red jacket over a yellow shirt","赤いジャケット＋黄色いシャツ","キャラクターの衣装"]],
+ "lower":[["blue school trousers","青い学生服のズボン","キャラクターの衣装"],["blue miniskirt","青系ミニスカート","キャラクターの衣装"],["purple miniskirt","紫系ミニスカート","キャラクターの衣装"],["light gray trousers","淡い灰色のズボン","キャラクターの衣装"],["blue pleated miniskirt","青いプリーツミニスカート","キャラクターの衣装"],["green trousers","緑のズボン","キャラクターの衣装"],["navy school trousers","紺色の学生服ズボン","キャラクターの衣装"]],
+ "accessory":[["Millennium Puzzle pendant and a choker","千年パズルのペンダント＋チョーカー","キャラクターの衣装"],["silver-studded straps","銀の鋲付きストラップ","キャラクターの衣装"],["long white gloves","白いロンググローブ","キャラクターの衣装"],["blue fingerless gloves","青い指なし手袋","キャラクターの衣装"],["rose pendant","薔薇のペンダント","キャラクターの衣装"],["Emperor Key pendant","皇の鍵ペンダント","キャラクターの衣装"]],
+ "head":[["brown goggles on the head","頭に載せた茶色のゴーグル","キャラクターの衣装"]]
+}))for(const row of rows)
+ if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
 // A single stable hairstyle candidate also restores through the existing additions snapshot.
 if(!catalog.hairStyle.some(row=>row.value==='bald')){catalog.hairStyle.push({id:'hairStyle-bald',name:'髪なし',value:'bald',group:'基本'});actionCatalogAdditions.hairStyle.push(['髪なし','bald','基本'])}
 // Kris uses teal in the original Crystal illustration; preserve existing turquoise IDs/tags.
 if(!catalog.hairColor.some(row=>row.value==='teal hair')){catalog.hairColor.push({id:'hairColor-teal',name:'青緑の髪（ティール）',value:'teal hair',group:'鮮やかな色'});(actionCatalogAdditions.hairColor??=[]).push(['青緑の髪（ティール）','teal hair','鮮やかな色'])}
 // Required B2 colors; do not replace or rename existing color candidates.
 for(const {field,...row} of [{"field":"hairColor","id":"hairColor-dark-reddish-purple","name":"濃い赤紫の髪","value":"dark reddish purple hair","group":"淡色・濃淡"},{"field":"eyeColor","id":"eyeColor-reddish-brown","name":"赤褐色の目","value":"reddish brown eyes","group":"自然色"}])if(!catalog[field].some(old=>old.value===row.value)){catalog[field].push(row);(actionCatalogAdditions[field]??=[]).push([row.name,row.value,row.group])}
+// Composite colors use the existing palette and two-color modes.
+for(const {field,...row} of [{"field":"hairColor","id":"hairColor-black-magenta","name":"黒とマゼンタの髪","value":"black and magenta hair","group":"多色"},{"field":"hairColor","id":"hairColor-magenta","name":"マゼンタの髪","value":"magenta hair","group":"鮮やかな色"},{"field":"hairColor","id":"hairColor-brown-red-gold","name":"茶・赤・金の髪","value":"brown and red hair with golden highlights","group":"多色"}])if(!catalog[field].some(old=>old.value===row.value)){catalog[field].push(row);(actionCatalogAdditions[field]??=[]).push([row.name,row.value,row.group])}
 const standardGroupByValue=Object.fromEntries(Object.entries(catalog).map(([k,rows])=>[k,new Map(rows.map(x=>[x.value.toLowerCase(),x.group]))]));
 actionCatalogAdditions.outfit.push(...outfitAudienceAdditions);
 const dynamicCompositionChoice={id:'composition-dynamic-angle-bundle',name:'ダイナミック',value:'dynamic angle, dynamic composition, dramatic perspective',group:'迫力・臨場感'};if(!catalog.composition.some(x=>x.id===dynamicCompositionChoice.id||x.value===dynamicCompositionChoice.value))catalog.composition.push(dynamicCompositionChoice);
@@ -1735,6 +1778,11 @@ for(const row of outfitSetSupplements)for(const [field,raw] of Object.entries(ro
 for(const [field,rows] of Object.entries({
  "skin":[["long white beard","山本元柳斎重國：長い白い髭","キャラクターの特徴"],["black and white face paint","涅マユリ：白黒の顔の塗装","キャラクターの特徴"],["dark horizontal stripe across the nose","脹相：鼻を横切る黒い線","キャラクターの特徴"],["red birthmark on the forehead","継国縁壱：額の痣","キャラクターの特徴"]],
  "eyeDetail":[["six eyes on the face","黒死牟：顔の六眼","キャラクターの特徴"]]
+}))for(const row of rows)
+ if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
+// B3 preset dependencies: register before builtin snapshots, without moving old candidates.
+for(const [field,rows] of Object.entries({
+ "skin":[["golden cheek marking","不動遊星：頬の金色のマーカー","キャラクターの特徴"]]
 }))for(const row of rows)
  if(!detailOptions[field].options.some(old=>old[0].toLowerCase()===row[0].toLowerCase()))detailOptions[field].options.push(row);
 const detailBuiltin=Object.fromEntries(Object.entries(detailOptions).map(([k,v])=>[k,v.options.map(x=>[...x])]));
@@ -3748,6 +3796,228 @@ Object.assign(characterBasicPresets,expandCharacterBasicPresets({
     "accessory": [
      "hanafuda earrings"
     ]
+   }
+  }
+ ]
+}));
+Object.assign(characterBasicPresets,expandCharacterBasicPresets({
+ "Yugi Muto (Yu-Gi-Oh!)": [
+  {
+   "hairStyle": [
+    "spiky short hair"
+   ],
+   "outfit": "blue school jacket over a dark shirt, blue school trousers",
+   "hair": {
+    "primary": "black and magenta hair",
+    "mode": "streak",
+    "secondary": "blonde hair"
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Yami Yugi (Yu-Gi-Oh!)": [
+  {
+   "hairStyle": [
+    "spiky short hair"
+   ],
+   "outfit": "blue jacket draped over a black sleeveless shirt, blue school trousers",
+   "hair": {
+    "primary": "black and magenta hair",
+    "mode": "streak",
+    "secondary": "blonde hair"
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Seto Kaiba (Yu-Gi-Oh!)": [
+  {
+   "hairStyle": [
+    "short hair",
+    "straight hair"
+   ],
+   "outfit": "white high-collared long coat over a black top, black trousers",
+   "hair": {
+    "primary": "brown hair"
+   },
+   "eyes": {
+    "left": "blue eyes"
+   }
+  }
+ ],
+ "Joey Wheeler (Yu-Gi-Oh!)": [
+  {
+   "hairStyle": [
+    "medium hair",
+    "messy hair"
+   ],
+   "outfit": "blue open jacket over a light teal shirt, dark trousers",
+   "hair": {
+    "primary": "blonde hair"
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Tea Gardner (Yu-Gi-Oh!)": [
+  {
+   "hairStyle": [
+    "bob cut"
+   ],
+   "outfit": "mint green sleeveless blouse with a pale yellow collar, blue miniskirt",
+   "hair": {
+    "primary": "brown hair"
+   },
+   "eyes": {
+    "left": "blue eyes"
+   }
+  }
+ ],
+ "Mai Valentine (Yu-Gi-Oh!)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "wavy hair"
+   ],
+   "outfit": "purple cropped vest over a white corset top, purple miniskirt, purple boots",
+   "hair": {
+    "primary": "blonde hair"
+   },
+   "eyes": {
+    "left": "purple eyes"
+   }
+  }
+ ],
+ "Jaden Yuki (Yu-Gi-Oh! GX)": [
+  {
+   "hairStyle": [
+    "short hair",
+    "spiky short hair"
+   ],
+   "outfit": "red Slifer Red jacket over a black shirt, light gray trousers",
+   "hair": {
+    "primary": "brown hair"
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Alexis Rhodes (Yu-Gi-Oh! GX)": [
+  {
+   "hairStyle": [
+    "long hair"
+   ],
+   "outfit": "white and blue sleeveless school uniform top, blue pleated miniskirt",
+   "hair": {
+    "primary": "honey blonde hair"
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Yusei Fudo (Yu-Gi-Oh! 5D's)": [
+  {
+   "hairStyle": [
+    "spiky short hair"
+   ],
+   "outfit": "navy jacket with orange shoulder pads over a black and red shirt, dark trousers",
+   "hair": {
+    "primary": "black hair",
+    "mode": "streak",
+    "secondary": "blonde hair"
+   },
+   "eyes": {
+    "left": "blue eyes"
+   },
+   "detail": {
+    "skin": [
+     "golden cheek marking"
+    ]
+   }
+  }
+ ],
+ "Akiza Izinski (Yu-Gi-Oh! 5D's)": [
+  {
+   "hairStyle": [
+    "long hair",
+    "half-up hairstyle"
+   ],
+   "outfit": "wine-colored corset dress with white puff sleeves",
+   "hair": {
+    "primary": "crimson hair"
+   },
+   "eyes": {
+    "left": "brown eyes"
+   }
+  }
+ ],
+ "Yuma Tsukumo (Yu-Gi-Oh! ZEXAL)": [
+  {
+   "hairStyle": [
+    "spiky short hair"
+   ],
+   "outfit": "red short jacket over a sleeveless black shirt, light gray trousers",
+   "hair": {
+    "primary": "navy blue hair",
+    "mode": "streak",
+    "secondary": "magenta hair"
+   },
+   "eyes": {
+    "left": "red eyes"
+   }
+  }
+ ],
+ "Yuya Sakaki (Yu-Gi-Oh! ARC-V)": [
+  {
+   "hairStyle": [
+    "spiky short hair"
+   ],
+   "outfit": "red sleeveless top with a white short cape, green trousers",
+   "hair": {
+    "primary": "green hair",
+    "mode": "inner",
+    "secondary": "red hair"
+   },
+   "eyes": {
+    "left": "red eyes"
+   }
+  }
+ ],
+ "Yusaku Fujiki (Yu-Gi-Oh! VRAINS)": [
+  {
+   "hairStyle": [
+    "spiky short hair"
+   ],
+   "outfit": "navy school blazer with white piping over a white shirt and a blue tie, navy school trousers",
+   "hair": {
+    "primary": "blue hair",
+    "mode": "streak",
+    "secondary": "magenta hair"
+   },
+   "eyes": {
+    "left": "green eyes"
+   }
+  }
+ ],
+ "Yuga Ohdo (Yu-Gi-Oh! SEVENS)": [
+  {
+   "hairStyle": [
+    "spiky short hair"
+   ],
+   "outfit": "red jacket over a yellow shirt, dark shorts",
+   "eyes": {
+    "left": "green eyes"
+   },
+   "hair": {
+    "primary": "brown and red hair with golden highlights",
+    "secondary": "blonde hair",
+    "mode": "streak"
    }
   }
  ]
