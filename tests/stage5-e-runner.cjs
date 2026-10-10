@@ -1,4 +1,4 @@
-// Replays the existing browser suites without changing their fixtures/assertions.
+// Replays 12 existing suites; environment and legacy-key fixture adapters preserve their safety assertions.
 const fs=require('fs'),path=require('path'),{spawnSync}=require('child_process');
 const root=process.env.RESULT_DIR||'/workspace/seaart-stage5-e';
 const url=process.env.TARGET_URL||'http://127.0.0.1:8765/seaart-tool/index.html';
