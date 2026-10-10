@@ -8841,99 +8841,140 @@ for(const id of ['editor','personOptionEditor'])$(id).addEventListener('close',(
 </script><script id="creatureAdultQualificationFoundation">
 // Stage 5-A: fail-closed qualification only. No UI, output, grants or persistent schema.
 // Trusted definitions are shipped with the tool, never imported from user catalogs.
-const creatureAdultSubjectDefinitions=Object.freeze([]);
-const creatureAdultAuthorizations=new Map(),creatureAdultPendingStates=new Map();
+const creatureAdultSubjectDefinitions=Object.freeze([]),creatureAdultPolicyRevision=1;
+const creatureAdultAuthorizations=new Map(),creatureAdultPendingStates=new Map(),creatureAdultPendingQuarantine=new Map();
 let creatureAdultAuthorizationEpoch=0;
-function creatureAdultEvidence(value){return afObject(value)&&typeof value.source==='string'&&/^https:\/\/\S+$/.test(value.source)&&typeof value.note==='string'&&value.note.trim().length>0}
+const creatureAdultProjectionFields=['features','surface','bodyValues','bodyFeatures','emittedTokens'];
+function creatureAdultStrings(v){return Array.isArray(v)&&v.every(x=>typeof x==='string'&&x.trim()===x&&x)&&new Set(v).size===v.length}
+function creatureAdultDate(v){if(typeof v!=='string'||!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z)?$/.test(v))return false;const time=Date.parse(v);return Number.isFinite(time)&&time<=Date.now()&&new Date(time).toISOString().slice(0,10)===v.slice(0,10)}
+function creatureAdultEvidence(v){return afObject(v)&&typeof v.source==='string'&&/^https:\/\/\S+$/.test(v.source)&&typeof v.title==='string'&&v.title.trim().length>0&&creatureAdultDate(v.checkedAt)&&typeof v.note==='string'&&v.note.trim().length>0}
 function validateCreatureAdultDefinition(d){
  afSafeJson(d);afAssert(afObject(d)&&typeof d.id==='string'&&d.id&&Number.isInteger(d.revision)&&d.revision>0);afValidateOwner(d.ownerRef);afAssert(d.ownerRef.kind==='creature');
- const strings=v=>Array.isArray(v)&&v.every(x=>typeof x==='string'&&x.trim()===x&&x)&&new Set(v).size===v.length;
- afAssert(strings(d.identityTokens)&&d.identityTokens.length&&strings(d.formIds)&&d.formIds.length);
+ afAssert(creatureAdultStrings(d.identityTokens)&&d.identityTokens.length&&creatureAdultStrings(d.formIds)&&d.formIds.length);
  afAssert(afObject(d.age)&&['adult','minor','unknown'].includes(d.age.status)&&creatureAdultEvidence(d.age.evidence));
  if(d.age.status==='adult')afAssert(Number.isFinite(d.age.minimumYears)&&d.age.minimumYears>=18);
- afAssert(afObject(d.humanoid)&&['human','animal','monster','unknown'].includes(d.humanoid.bodyPlan)&&strings(d.humanoid.modes)&&d.humanoid.modes.length&&d.humanoid.modes.every(x=>['semi','full'].includes(x))&&creatureAdultEvidence(d.humanoid.evidence));
- for(const k of ['features','bodyValues','bodyFeatures'])afAssert(strings(d.humanoid[k]));
- afAssert(afObject(d.exclusions)&&['identityTokens','formIds','features'].every(k=>strings(d.exclusions[k]))&&typeof d.exclusions.excluded==='boolean');
- afAssert(strings(d.scopes)&&d.scopes.length&&d.scopes.every(x=>['normal','manga','panel'].includes(x)));
- afAssert(afObject(d.partners)&&typeof d.partners.solo==='boolean'&&strings(d.partners.ownerKeys));return d;
+ afAssert(afObject(d.humanoid)&&['human','animal','monster','unknown'].includes(d.humanoid.bodyPlan)&&creatureAdultStrings(d.humanoid.modes)&&d.humanoid.modes.length&&d.humanoid.modes.every(x=>['semi','full'].includes(x))&&creatureAdultEvidence(d.humanoid.evidence));
+ for(const k of creatureAdultProjectionFields)afAssert(creatureAdultStrings(d.humanoid[k]));
+ afAssert(afObject(d.exclusions)&&['identityTokens','formIds','features'].every(k=>creatureAdultStrings(d.exclusions[k]))&&typeof d.exclusions.excluded==='boolean');
+ afAssert(creatureAdultStrings(d.scopes)&&d.scopes.length&&d.scopes.every(x=>['normal','manga','panel'].includes(x)));
+ afAssert(afObject(d.partners)&&typeof d.partners.solo==='boolean'&&creatureAdultStrings(d.partners.ownerKeys));return d;
 }
+function creatureAdultProjectionKey(s){return JSON.stringify({actorRef:s.actorRef,owner:afOwnerKey(s.ownerRef),species:s.ownerRef?.value,mode:s.mode,formId:s.formId,formRevision:s.formRevision,identity:s.identity?.slice().sort(),structure:s.structure,policyRevision:creatureAdultPolicyRevision})}
 function creatureAdultContextKey(subject,context,definition){
- // Compare the full canonical context, not a short non-cryptographic digest.
- return JSON.stringify({actorRef:subject.actorRef,owner:afOwnerKey(subject.ownerRef),mode:subject.mode,formId:subject.formId,identity:subject.identity.slice().sort(),structure:subject.structure,definition:[definition.id,definition.revision],scope:context.scope,partners:context.partners.map(p=>({actorRef:p.actorRef,ownerKey:p.ownerKey,contextKey:p.contextKey})).sort((a,b)=>a.actorRef.localeCompare(b.actorRef)),globalEnabled:subject.globalEnabled});
+ // Complete canonical context; partner projection keys avoid circular receipt dependencies.
+ return JSON.stringify({subject:creatureAdultProjectionKey(subject),definition:[definition.id,definition.revision],scope:context.scope,partners:context.partners.map(p=>({actorRef:p.actorRef,ownerKey:p.ownerKey,contextKey:p.contextKey})).sort((a,b)=>a.actorRef.localeCompare(b.actorRef)),globalEnabled:subject.globalEnabled});
+}
+function creatureAdultReceiptMatches(s,key,d,confirmation,authorization,epoch){
+ return !!(confirmation?.confirmed===true&&typeof confirmation.receiptId==='string'&&confirmation.receiptId&&confirmation.actorRef===s.actorRef&&confirmation.mode===s.mode&&creatureAdultDate(confirmation.confirmedAt)&&confirmation.contextKey===key&&confirmation.definitionId===d.id&&confirmation.definitionRevision===d.revision&&authorization?.receiptId===confirmation.receiptId&&authorization.contextKey===key&&authorization.epoch===epoch);
 }
 function evaluateCreatureAdultEligibility(subject,context,definitions,confirmation=null,authorization=null,epoch=0){
- const result={baseEligible:false,allowed:false,reason:'invalid-context',contextKey:null,definitionId:null};
- const deny=reason=>({...result,reason});
+ const result={baseEligible:false,allowed:false,reason:'invalid-context',contextKey:null,definitionId:null},deny=reason=>({...result,reason});
  try{
   afSafeJson(subject);afSafeJson(context);if(!afObject(subject)||!afObject(context)||!Array.isArray(definitions))return deny('invalid-context');
   if(!subject.exists||subject.duplicate)return deny(subject.duplicate?'duplicate-uuid':'missing-actor');
   if(subject.ownerRef?.kind!=='creature'||!subject.ownerMatches)return deny('owner-mismatch');afValidateOwner(subject.ownerRef);
   if(subject.quarantined)return deny('quarantined');if(!['semi','full'].includes(subject.mode))return deny('native-or-invalid-mode');
-  if(!Array.isArray(subject.identity)||!subject.identity.length||subject.identity.some(x=>typeof x!=='string'||!x))return deny('unknown-identity');
+  if(!creatureAdultStrings(subject.identity)||!subject.identity.length)return deny('unknown-identity');
   const same=(a,b)=>JSON.stringify(a.slice().sort())===JSON.stringify(b.slice().sort());
   const owned=definitions.filter(d=>afOwnerKey(d?.ownerRef)===afOwnerKey(subject.ownerRef));
-  if(!owned.length)return deny('no-trusted-definition');for(const d of owned)validateCreatureAdultDefinition(d);
+  if(!owned.length)return deny('no-trusted-definition');for(const d of definitions)validateCreatureAdultDefinition(d);
   if(new Set(definitions.map(d=>d.id)).size!==definitions.length)return deny('ambiguous-definition');
   const matches=owned.filter(d=>same(d.identityTokens,subject.identity)&&d.formIds.includes(subject.formId));
   if(matches.length!==1)return deny(matches.length?'ambiguous-definition':owned.some(d=>same(d.identityTokens,subject.identity))?'unknown-form':'unknown-identity');
   const d=matches[0];result.definitionId=d.id;
   if(d.age.status!=='adult')return deny(d.age.status==='minor'?'minor':'age-unknown');
-  if(d.humanoid.bodyPlan!=='human'||!d.humanoid.modes.includes(subject.mode)||!subject.structure?.valid)return deny('nonhuman-structure');
-  for(const k of ['features','bodyValues','bodyFeatures'])if(!Array.isArray(subject.structure[k])||subject.structure[k].some(x=>!d.humanoid[k].includes(x)))return deny('unverified-structure');
+  if(!Number.isInteger(subject.formRevision)||subject.formRevision<1||d.humanoid.bodyPlan!=='human'||!d.humanoid.modes.includes(subject.mode)||!subject.structure?.valid)return deny('nonhuman-structure');
+  // Every actually emitted non-identity token requires explicit review. Unknown free text
+  // and aliases cannot pass using the original candidate value or inheritance regex.
+  for(const k of creatureAdultProjectionFields)if(!creatureAdultStrings(subject.structure[k])||subject.structure[k].some(x=>!d.humanoid[k].includes(x)))return deny('unverified-structure');
   if(d.exclusions.excluded||d.exclusions.formIds.includes(subject.formId)||subject.identity.some(x=>d.exclusions.identityTokens.includes(x))||subject.structure.features.some(x=>d.exclusions.features.includes(x)))return deny('excluded');
-  if(!['normal','manga','panel'].includes(context.scope)||!Array.isArray(context.partners)||context.partners.some(p=>!afObject(p)||typeof p.actorRef!=='string'||typeof p.ownerKey!=='string'||typeof p.contextKey!=='string')||new Set(context.partners.map(p=>p.actorRef)).size!==context.partners.length||context.partners.some(p=>p.actorRef===subject.actorRef))return deny('invalid-scope');
-  result.baseEligible=true;result.contextKey=creatureAdultContextKey(subject,context,d);
+  result.baseEligible=true;
+  if(!['normal','manga','panel'].includes(context.scope)||!Array.isArray(context.partners)||context.partners.some(p=>!afObject(p)||typeof p.actorRef!=='string'||!p.actorRef.startsWith('creature:')||typeof p.ownerKey!=='string'||typeof p.contextKey!=='string')||new Set(context.partners.map(p=>p.actorRef)).size!==context.partners.length||context.partners.some(p=>p.actorRef===subject.actorRef))return deny('invalid-scope');
+  result.contextKey=creatureAdultContextKey(subject,context,d);
   if(!d.scopes.includes(context.scope))return deny('scope-not-allowed');
   if(!context.partners.length&&!d.partners.solo||context.partners.some(p=>!d.partners.ownerKeys.includes(p.ownerKey)||!p.baseEligible||!p.sessionAuthorized))return deny('partner-not-allowed');
   if(subject.globalEnabled!==true)return deny('global-off');
-  if(!confirmation||confirmation.confirmed!==true||confirmation.contextKey!==result.contextKey||confirmation.definitionId!==d.id||confirmation.definitionRevision!==d.revision)return deny('confirmation-required');
-  if(!authorization||authorization.contextKey!==result.contextKey||authorization.epoch!==epoch)return deny('session-authorization-required');
+  if(!confirmation||confirmation.confirmed!==true||typeof confirmation.receiptId!=='string'||!confirmation.receiptId||confirmation.actorRef!==subject.actorRef||confirmation.mode!==subject.mode||!creatureAdultDate(confirmation.confirmedAt)||confirmation.contextKey!==result.contextKey||confirmation.definitionId!==d.id||confirmation.definitionRevision!==d.revision)return deny('confirmation-required');
+  if(!creatureAdultReceiptMatches(subject,result.contextKey,d,confirmation,authorization,epoch))return deny('session-authorization-required');
   return {...result,allowed:true,reason:'allowed'};
  }catch{return deny('invalid-definition-or-state')}
+}
+function creatureAdultUnweightedTag(tag){const m=/^\((.*):(?:\d+(?:\.\d+)?|\.\d+)\)$/.exec(tag);return (m?m[1]:tag).trim()}
+function creatureAdultStructure(c,a,inheritance){
+ const p=anthroAppearanceRecord(a,true);validateAnthroInheritance(inheritance);
+ const raw=inheritance.features.mode==='custom'?inheritance.features.values:inheritance.features.mode==='inherit'?creatureValues(c,'features').filter(v=>creatureFeatureCompatibility(v)==='compatible'):[];
+ for(const v of raw)afAssert(creatureFields.features.options.some(x=>x[0]===v)&&!maIsHidden('creature:features',v));
+ const tokens=rows=>[...new Set(rows.map(creatureAdultUnweightedTag).filter(Boolean))].sort(),identity=new Set(actorIdentityTags('creature:'+c.id,c.species||'creature',creatureWeightContext(c,'species').weight(c.species||'creature')).map(creatureAdultUnweightedTag));
+ const scaffold=new Set(['anthropomorphic humanoid','humanized humanoid','one humanoid body','gijinka']);
+ return {valid:true,features:tokens(raw.map(v=>personOutputValue('creature:features',v))),surface:tokens(inheritance.surface==='inherit'&&['fur','scales','feathers','smooth skin'].includes(c.surface)?[c.surface]:[]),bodyValues:tokens(profileTags(p,{subjects:false,poses:false,placement:false,effects:true,damage:false,categories:['body']})),bodyFeatures:tokens(profileDetailTags(p,'bodyFeatures')),emittedTokens:tokens(creatureAnthroPromptTags(c).filter(v=>!identity.has(creatureAdultUnweightedTag(v))&&!scaffold.has(creatureAdultUnweightedTag(v))))};
 }
 function creatureAdultSubject(ref){
  const rows=typeof ref==='string'&&ref.startsWith('creature:')?creatures.filter(c=>'creature:'+c.id===ref):[],c=rows[0],owner=c&&actorOwnerForRef(ref),entry=actorExtensions.byActor[ref];
  if(!c||!owner)return {actorRef:typeof ref==='string'?ref:'',exists:false};
- const mode=creatureRepresentationMode(c),applied=entry?.appliedForm,formId=applied?.formId||actorFormsForOwner(owner).find(f=>f.origin==='standard')?.id||'',a=['semi','full'].includes(mode)?creatureHumanAppearance(c,mode):null,inheritance=a&&creatureInheritance(c,mode);
- let structure={valid:false,features:[],bodyValues:[],bodyFeatures:[]};
- if(a)try{anthroAppearanceRecord(a,true);validateAnthroInheritance(inheritance);const features=inheritance.features.mode==='custom'?inheritance.features.values:inheritance.features.mode==='inherit'?asList(c.features).filter(v=>creatureFeatureCompatibility(v)==='compatible'):[];structure={valid:!features.some(v=>['conflict','nonhuman'].includes(creatureFeatureCompatibility(v)))&&!a.detailCustom.bodyFeatures,features:[...features],bodyValues:a.body.slice(),bodyFeatures:a.detail.bodyFeatures.slice(),appearance:afCopy(a),inheritance:afCopy(inheritance),native:actorCurrentAppearance(ref)}}catch{}
+ const mode=creatureRepresentationMode(c),applied=entry?.appliedForm,standard=actorFormsForOwner(owner).find(f=>f.origin==='standard'),formId=applied?applied.formId:standard?.id||'',formRevision=applied?applied.revision:standard?.revision||0,a=['semi','full'].includes(mode)?creatureHumanAppearance(c,mode):null;
+ let structure={valid:false,...Object.fromEntries(creatureAdultProjectionFields.map(k=>[k,[]]))};if(a)try{structure=creatureAdultStructure(c,a,creatureInheritance(c,mode))}catch{}
  let identity;try{if(applied)validateActorFormIdentity(applied.identity);identity=actorIdentityValues(ref,c.species)}catch{identity=[]}
- return {actorRef:ref,exists:true,duplicate:rows.length!==1,ownerRef:owner,ownerMatches:!entry||afOwnerKey(entry.ownerRef)===afOwnerKey(owner),quarantined:!!actorExtensions.quarantined?.some(x=>x.actorRef===ref),mode,formId,identity,structure,globalEnabled:adultScene.enabled===true};
+ return {actorRef:ref,exists:true,duplicate:rows.length!==1,ownerRef:owner,ownerMatches:!entry||afOwnerKey(entry.ownerRef)===afOwnerKey(owner),quarantined:!!actorExtensions.quarantined?.some(x=>x.actorRef===ref),mode,formId,formRevision,identity,structure,globalEnabled:adultScene.enabled===true};
 }
-function creatureAdultContext(context={}){
+function creatureAdultConfirmation(s){const pending=creatureAdultPendingStates.get(s.actorRef);return pending&&afOwnerKey(pending.ownerRef)===afOwnerKey(s.ownerRef)?pending.byMode[s.mode]?.confirmation:null}
+function creatureAdultRosterContexts(subjects,scope,definitions){
+ return subjects.map(s=>({scope,partners:subjects.filter(p=>p.actorRef!==s.actorRef).map(p=>({actorRef:p.actorRef,ownerKey:afOwnerKey(p.ownerRef),contextKey:JSON.stringify({projection:creatureAdultProjectionKey(p),definitions:definitions.filter(d=>afOwnerKey(d.ownerRef)===afOwnerKey(p.ownerRef)).map(d=>[d.id,d.revision])}),baseEligible:false,sessionAuthorized:false}))}));
+}
+function evaluateCreatureAdultRoster(subjects,scope,definitions,confirmations,authorizations,epoch){
+ afAssert(Array.isArray(subjects)&&subjects.length&&new Set(subjects.map(s=>s.actorRef)).size===subjects.length,'個体参照が重複しています');const contexts=creatureAdultRosterContexts(subjects,scope,definitions),qualifications=subjects.map((s,i)=>evaluateCreatureAdultEligibility(s,contexts[i],definitions));
+ // Each participant's own receipt covers the same scope and reciprocal complete roster.
+ const live=subjects.map((s,i)=>{const q=qualifications[i],d=definitions.find(d=>d.id===q.definitionId),ctx=contexts[i];return !!(q.baseEligible&&d&&s.globalEnabled&&d.scopes.includes(scope)&&(ctx.partners.length?ctx.partners.every(p=>d.partners.ownerKeys.includes(p.ownerKey)):d.partners.solo)&&creatureAdultReceiptMatches(s,q.contextKey,d,confirmations.get(s.actorRef),authorizations.get(s.actorRef),epoch))});
+ return contexts.map((ctx,i)=>({...ctx,partners:ctx.partners.map(p=>{const j=subjects.findIndex(s=>s.actorRef===p.actorRef);return {...p,baseEligible:qualifications[j].baseEligible,sessionAuthorized:live[j]&&live.every((v,k)=>k===i||v)}})}));
+}
+function creatureAdultContext(context={},ref){
  afAssert(afObject(context)&&['normal','manga','panel'].includes(context.scope||'normal')&&Array.isArray(context.partnerRefs||[])&&(context.partnerRefs||[]).every(r=>typeof r==='string'&&r.startsWith('creature:')),'成人判定contextが不正です');
- const refs=context.partnerRefs||[];afAssert(new Set(refs).size===refs.length,'相手の個体参照が重複しています');
- return {scope:context.scope||'normal',partners:refs.map(ref=>{const s=creatureAdultSubject(ref),ctx={scope:context.scope||'normal',partners:[]},q=evaluateCreatureAdultEligibility(s,ctx,creatureAdultSubjectDefinitions);const auth=creatureAdultAuthorizations.get(ref);return {actorRef:ref,ownerKey:afOwnerKey(s.ownerRef),contextKey:q.contextKey||'',baseEligible:q.baseEligible,sessionAuthorized:!!q.contextKey&&auth?.epoch===creatureAdultAuthorizationEpoch&&auth.contextKey===q.contextKey}})};
+ const refs=[ref,...(context.partnerRefs||[])];afAssert(typeof ref==='string'&&new Set(refs).size===refs.length,'相手の個体参照が不正です');const subjects=refs.map(creatureAdultSubject),confirmations=new Map(subjects.map(s=>[s.actorRef,creatureAdultConfirmation(s)]));return evaluateCreatureAdultRoster(subjects,context.scope||'normal',creatureAdultSubjectDefinitions,confirmations,creatureAdultAuthorizations,creatureAdultAuthorizationEpoch)[0];
 }
 function creatureAdultEligibility(ref,context={}){
- try{const s=creatureAdultSubject(ref);if(context.ownerRef&&afOwnerKey(context.ownerRef)!==afOwnerKey(s.ownerRef))s.ownerMatches=false;const c=creatureAdultContext(context),pending=creatureAdultPendingStates.get(ref),confirmation=pending&&afOwnerKey(pending.ownerRef)===afOwnerKey(s.ownerRef)?pending.byMode[s.mode]?.confirmation:null;return evaluateCreatureAdultEligibility(s,c,creatureAdultSubjectDefinitions,confirmation,creatureAdultAuthorizations.get(ref),creatureAdultAuthorizationEpoch)}catch{return {baseEligible:false,allowed:false,reason:'invalid-context',contextKey:null,definitionId:null}}
+ try{const s=creatureAdultSubject(ref);if(context.ownerRef&&afOwnerKey(context.ownerRef)!==afOwnerKey(s.ownerRef))s.ownerMatches=false;return evaluateCreatureAdultEligibility(s,creatureAdultContext(context,ref),creatureAdultSubjectDefinitions,creatureAdultConfirmation(s),creatureAdultAuthorizations.get(ref),creatureAdultAuthorizationEpoch)}catch{return {baseEligible:false,allowed:false,reason:'invalid-context',contextKey:null,definitionId:null}}
 }
 function evaluateCreatureAdultDraft(subject,context,definitions,request){
- const base=evaluateCreatureAdultEligibility(subject,context,definitions);const match=base.baseEligible&&base.contextKey&&subject.globalEnabled===true&&['confirmation-required','session-authorization-required'].includes(base.reason);
+ const base=evaluateCreatureAdultEligibility(subject,context,definitions),match=base.baseEligible&&base.contextKey&&subject.globalEnabled===true&&['confirmation-required','session-authorization-required'].includes(base.reason);
  const draftAllowed=!!(match&&request?.confirmed===true&&request.contextKey===base.contextKey&&request.definitionId===base.definitionId&&request.definitionRevision===definitions.find(d=>d.id===base.definitionId)?.revision);
  return {...base,allowed:false,draftAllowed,reason:draftAllowed?'draft-only':base.reason};
 }
-function creatureAdultDraftAllowed(ref,context={},request=null){try{afSafeJson(request);const s=creatureAdultSubject(ref);if(context.ownerRef&&afOwnerKey(context.ownerRef)!==afOwnerKey(s.ownerRef))s.ownerMatches=false;return evaluateCreatureAdultDraft(s,creatureAdultContext(context),creatureAdultSubjectDefinitions,request)}catch{return {baseEligible:false,allowed:false,draftAllowed:false,reason:'invalid-context',contextKey:null,definitionId:null}}}
+function creatureAdultDraftAllowed(ref,context={},request=null){try{afSafeJson(request);const s=creatureAdultSubject(ref);if(context.ownerRef&&afOwnerKey(context.ownerRef)!==afOwnerKey(s.ownerRef))s.ownerMatches=false;return evaluateCreatureAdultDraft(s,creatureAdultContext(context,ref),creatureAdultSubjectDefinitions,request)}catch{return {baseEligible:false,allowed:false,draftAllowed:false,reason:'invalid-context',contextKey:null,definitionId:null}}}
 function creatureAdultPendingState(ref){
  const subject=creatureAdultSubject(ref),owner=subject.ownerRef;afAssert(subject.exists&&!subject.duplicate&&subject.ownerMatches&&!subject.quarantined&&owner?.kind==='creature','対象Creatureの参照が不正です');const saved=creatureAdultPendingStates.get(ref);
  return saved&&afOwnerKey(saved.ownerRef)===afOwnerKey(owner)?afCopy(saved):{ownerRef:afCopy(owner),byMode:Object.fromEntries(['semi','full'].map(mode=>[mode,{contextKey:null,confirmation:{confirmed:false},selections:{},weights:{},scene:{}}]))};
 }
-function stageCreatureAdultState(ref,mode,value){
- afAssert(['semi','full'].includes(mode),'成人設定は擬人化モード専用です');afSafeJson(value);afAssert(afObject(value)&&Object.keys(value).every(k=>['contextKey','confirmation','selections','weights','scene'].includes(k))&&([null,undefined].includes(value.contextKey)||typeof value.contextKey==='string'));
+function creatureAdultPendingOptions(field){return field==='bust'?detailOptions.bust.options:adultPresets[field]?.items||adultBodyOptions[field]||adultSharedBase[field]||[]}
+function validateCreatureAdultPendingMode(ref,mode,value){
+ afSafeJson(value);afAssert(afObject(value)&&Object.keys(value).every(k=>['contextKey','confirmation','selections','weights','scene'].includes(k))&&([null,undefined].includes(value.contextKey)||typeof value.contextKey==='string'));
  afAssert(afObject(value.confirmation)&&typeof value.confirmation.confirmed==='boolean'&&afObject(value.selections)&&afObject(value.weights)&&afObject(value.scene),'準備stateが不正です');
- for(const rows of Object.values(value.selections))afAssert(Array.isArray(rows)&&rows.every(v=>typeof v==='string'&&v)&&new Set(rows).size===rows.length);
- for(const map of Object.values(value.weights)){afAssert(afObject(map));for(const n of Object.values(map))afAssert(typeof n==='number'&&Number.isFinite(n)&&n>=0,'準備stateの重みが不正です')}
+ const fields=['bust','exposure','clothing','bustShape','bustFocus','nipple','areola','action','contact','expression','target'],sceneFields=['mood','phase','focus','extra'];
+ afAssert(Object.keys(value.selections).every(k=>fields.includes(k))&&Object.keys(value.scene).every(k=>sceneFields.includes(k)),'未対応の準備fieldです');
+ for(const [field,rows]of [...Object.entries(value.selections),...Object.entries(value.scene)]){
+  if(field==='extra'){afAssert(typeof rows==='string'&&rows.length<=16000);continue}
+  if(field==='target'){afAssert(rows===null||typeof rows==='string'&&rows!==ref&&creatureAdultSubject(rows).exists&&!creatureAdultSubject(rows).duplicate&&creatureAdultSubject(rows).ownerMatches);continue}
+  const options=[...creatureAdultPendingOptions(field),...(adultCustom[field]||[])],source=field==='bust'?'detail:bust':'adult:'+field;
+  afAssert(creatureAdultStrings(rows)&&rows.every(v=>options.some(row=>row[0]===v)&&!maIsHidden(source,v)),'準備候補が未登録または非表示です');
+ }
+ for(const [field,map]of Object.entries(value.weights)){afAssert(fields.includes(field)&&field!=='target'||sceneFields.includes(field)&&field!=='extra');afAssert(afObject(map));const selected=value.selections[field]||value.scene[field]||[];for(const [v,n]of Object.entries(map))afAssert(selected.includes(v)&&typeof n==='number'&&Number.isFinite(n)&&n>=0,'準備stateの重みまたは参照が不正です')}
+ if(value.confirmation.confirmed){const r=value.confirmation;afAssert(typeof r.receiptId==='string'&&r.receiptId&&r.actorRef===ref&&r.mode===mode&&creatureAdultDate(r.confirmedAt)&&r.contextKey===value.contextKey&&typeof r.definitionId==='string'&&r.definitionId&&Number.isInteger(r.definitionRevision)&&r.definitionRevision>0,'準備確認receiptが不正です')}
+ else afAssert(Object.keys(value.confirmation).every(k=>k==='confirmed'),'未確認receiptが不正です');
+}
+function stageCreatureAdultState(ref,mode,value){
+ afAssert(['semi','full'].includes(mode),'成人設定は擬人化モード専用です');validateCreatureAdultPendingMode(ref,mode,value);
  const next=creatureAdultPendingState(ref);next.byMode[mode]=afCopy(value);creatureAdultPendingStates.set(ref,next);creatureAdultAuthorizations.delete(ref);return afCopy(next);
 }
-function revokeCreatureAdultAuthorizations(clearPending=false){
- creatureAdultAuthorizationEpoch++;creatureAdultAuthorizations.clear();
- if(clearPending)creatureAdultPendingStates.clear();else for(const [ref,state]of creatureAdultPendingStates){const owner=actorOwnerForRef(ref);if(!owner||afOwnerKey(owner)!==afOwnerKey(state.ownerRef))creatureAdultPendingStates.delete(ref)}
+function pruneCreatureAdultAuthorizations(authorizations,evaluate){const revoked=[];for(const [ref,auth]of authorizations)try{if(!evaluate(ref,auth))revoked.push(ref)}catch{revoked.push(ref)}for(const ref of revoked)authorizations.delete(ref);return revoked}
+function refreshCreatureAdultAuthorizations(){
+ pruneCreatureAdultAuthorizations(creatureAdultAuthorizations,(ref,auth)=>creatureAdultEligibility(ref,{scope:auth.scope||'normal',partnerRefs:auth.partnerRefs||[]}).allowed);
+ for(const [ref,state]of creatureAdultPendingStates){const s=creatureAdultSubject(ref);if(!s.exists||s.duplicate||s.quarantined||!s.ownerMatches||afOwnerKey(s.ownerRef)!==afOwnerKey(state.ownerRef)){creatureAdultPendingQuarantine.set(ref+'|'+afOwnerKey(state.ownerRef),afCopy(state));creatureAdultPendingStates.delete(ref)}}
 }
-// Revocation is conservative and never participates in Undo or serialized snapshots.
-// No issuing API is present in 5-A: trusted registry and live authorization Map stay empty.
-const creatureAdultBeforeDirty=dirty;dirty=function(...args){revokeCreatureAdultAuthorizations();return creatureAdultBeforeDirty(...args)};
-const creatureAdultBeforeChanged=creatureChanged;creatureChanged=function(...args){revokeCreatureAdultAuthorizations();return creatureAdultBeforeChanged(...args)};
-const creatureAdultBeforeRestore=restoreWorking;restoreWorking=function(...args){revokeCreatureAdultAuthorizations(true);return creatureAdultBeforeRestore(...args)};
+function revokeCreatureAdultAuthorizations(clearPending=false){creatureAdultAuthorizationEpoch++;creatureAdultAuthorizations.clear();if(clearPending){creatureAdultPendingStates.clear();creatureAdultPendingQuarantine.clear()}}
+// Live permissions never enter snapshots. Context-stable edits retain live receipts;
+// load/import/history invalidate all. Undo may retain an unchanged, still-live receipt.
+// No issuing API is present in 5-A: shipped registry and production authorization Map stay empty.
+const creatureAdultBeforeDirty=dirty;dirty=function(...args){refreshCreatureAdultAuthorizations();return creatureAdultBeforeDirty(...args)};
+const creatureAdultBeforeChanged=creatureChanged;creatureChanged=function(...args){refreshCreatureAdultAuthorizations();return creatureAdultBeforeChanged(...args)};
+const creatureAdultBeforeRestore=restoreWorking;restoreWorking=function(...args){if(!undoBusy)revokeCreatureAdultAuthorizations(true);try{return creatureAdultBeforeRestore(...args)}finally{refreshCreatureAdultAuthorizations()}};
 const creatureAdultBeforeManagement=mbAssign;mbAssign=function(...args){revokeCreatureAdultAuthorizations(true);return creatureAdultBeforeManagement(...args)};
 window.addEventListener('pagehide',()=>revokeCreatureAdultAuthorizations(true));
 </script></body></html>
