@@ -1253,6 +1253,7 @@ let actorFormInitialized=false;
 let actorStandardForms=null,actorFormStorageReady=false,actorFormImportBusy=false,actorFormStorageError='',actorFormLastBundle=null;
 const afObject=v=>!!v&&typeof v==='object'&&!Array.isArray(v),afCopy=v=>JSON.parse(JSON.stringify(v));
 function afAssert(ok,message='形態・保存データの形式が不正です'){if(!ok)throw Error(message)}
+function afStorageMessage(error){if(error?.name==='QuotaExceededError')return 'ブラウザの保存容量が不足しています。';if(error?.name==='SecurityError')return 'ブラウザの保存機能を利用できません。';const message=String(error?.message||'保存できませんでした');return [...Object.values(actorFormStorageKeys),...Object.values(actorFormLegacyStorageKeys)].some(key=>message.includes(key))?'保存できませんでした。既存データは保持されています。':message}
 function afSafeJson(v,depth=0){afAssert(depth<60);if(v&&typeof v==='object')for(const [key,value]of Object.entries(v)){afAssert(!['__proto__','prototype','constructor'].includes(key));afSafeJson(value,depth+1)}else afAssert(v===null||['string','boolean','number'].includes(typeof v)&&(!(typeof v==='number')||Number.isFinite(v)))}
 function afOwnerKey(owner){return owner?.kind==='person'?(owner.catalogId?'person:catalog:'+owner.catalogId+':'+owner.value:owner.originalId?'person:original:'+owner.originalId:''):owner?.kind==='creature'?'creature:'+owner.masterId+':'+owner.value:''}
 function afValidateOwner(owner){afAssert(afObject(owner)&&['person','creature'].includes(owner.kind));if(owner.kind==='person')afAssert(typeof owner.catalogId==='string'&&typeof owner.value==='string'||typeof owner.originalId==='string');else afAssert(typeof owner.masterId==='string'&&typeof owner.value==='string');afAssert(!!afOwnerKey(owner));return afCopy(owner)}
@@ -1356,7 +1357,7 @@ function afBootstrap(){
   const raw=localStorage.getItem('seaart-prompt-builder-v3')||localStorage.getItem('seaart-prompt-builder-v2'),settings=raw?JSON.parse(raw):null,work=JSON.parse(localStorage.getItem('SeaArt_working_state_v1')||'null'),history=JSON.parse(localStorage.getItem('SeaArt_generated_prompts_v1')||'[]');
   if(settings){afSafeJson(settings);afAssert([2,3].includes(settings.version));afValidateSettings(settings)}if(work){afAssert(work.version===1);afSafeJson(work);afValidateWorking(work.working)}afSafeJson(history);afValidateHistory(history);
   if(settings){delete settings.actorFormCatalog;for(const f of settings.favorites)f.actorExtensions={version:3,byActor:{}}}if(work)work.working.actorExtensions={version:3,byActor:{}};for(const h of history)if(h.working)h.working.actorExtensions={version:3,byActor:{}};return {settings,working:work?{version:2,working:work.working}:null,history,migrating:true};
- }catch(error){actorFormStorageError='保存データを保護するため、読み込み・保存を停止しました。'+error.message;return {settings:null,working:null,history:[],blocked:true}}
+ }catch(error){actorFormStorageError='保存データを保護するため、読み込み・保存を停止しました。'+afStorageMessage(error);return {settings:null,working:null,history:[],blocked:true}}
 }
 const actorFormStartup=afBootstrap();
 function afCommitBundle(settings,working,history){
@@ -1369,7 +1370,7 @@ function afCommitBundle(settings,working,history){
  try{localStorage.setItem(actorFormStorageKeys.journal,journalText);owns=true;checkOwner();for(const key of ['settings','working','history']){checkOwner();localStorage.setItem(actorFormStorageKeys[key],bundle[key])}for(const key of ['settings','working','history'])afAssert(localStorage.getItem(actorFormStorageKeys[key])===bundle[key],'保存の再読込検証に失敗しました');checkOwner();localStorage.setItem(actorFormStorageKeys.marker,JSON.stringify(bundle.marker));afAssert(JSON.stringify(afReadDiskBundle())===JSON.stringify(bundle),'保存確定の検証に失敗しました');
   // Always refresh the journal, including working, favorites and history extension v2/v3.
   journal.phase='committed';committedText=JSON.stringify(journal);localStorage.setItem(actorFormStorageKeys.journal,committedText);checkOwner();afJournal(JSON.parse(committedText));actorFormLastBundle=bundle;actorFormStorageReady=true;actorFormStorageError='';actorExtensions=afCopy(working.actorExtensions);try{localStorage.removeItem(actorFormStorageKeys.journal)}catch{}return true;
- }catch(error){actorFormStorageError=error.message;const raw=localStorage.getItem(actorFormStorageKeys.journal);if(owns&&(raw===journalText||raw===committedText)){try{for(const k of ['settings','working','history','marker','journal']){if(localStorage.getItem(actorFormStorageKeys[k])===rawBefore[k])continue;if(rawBefore[k]===null)localStorage.removeItem(actorFormStorageKeys[k]);else localStorage.setItem(actorFormStorageKeys[k],rawBefore[k])}}catch{actorFormStorageError+='。保存は停止中です。再読み込みしてください';actorFormStartup.blocked=true}}
+ }catch(error){actorFormStorageError=afStorageMessage(error);const raw=localStorage.getItem(actorFormStorageKeys.journal);if(owns&&(raw===journalText||raw===committedText)){try{for(const k of ['settings','working','history','marker','journal']){if(localStorage.getItem(actorFormStorageKeys[k])===rawBefore[k])continue;if(rawBefore[k]===null)localStorage.removeItem(actorFormStorageKeys[k]);else localStorage.setItem(actorFormStorageKeys[k],rawBefore[k])}}catch{actorFormStorageError+='。保存は停止中です。再読み込みしてください';actorFormStartup.blocked=true}}
   actorFormStorageReady=!!previous;if(!previous)actorFormStartup.blocked=true;throw error;
  }
 }
@@ -1414,7 +1415,7 @@ function afValidateBackup(input){
 
 function afSaveSettings(settings){
  if(actorFormImportBusy||!actorFormInitialized)return true;
- const before=afCopy(actorExtensions);try{afPruneExtensions();afCommitBundle(settings,captureWorking(),promptHistory);return true}catch(error){actorExtensions=before;storageAvailable=false;$('storageStatus').textContent='保存を中止しました。旧データは保持されています：'+error.message;return false}
+ const before=afCopy(actorExtensions);try{afPruneExtensions();afCommitBundle(settings,captureWorking(),promptHistory);return true}catch(error){actorExtensions=before;storageAvailable=false;$('storageStatus').textContent='保存を中止しました。旧データは保持されています：'+afStorageMessage(error);return false}
 }
 
 const storageKey=actorFormStorageKeys.settings;
