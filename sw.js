@@ -1,4 +1,4 @@
-const CACHE_NAME = 'seaart-tool-pwa-v4-stage5e-result-access-v1';
+const CACHE_NAME = 'seaart-tool-pwa-v4-stage5e-result-access-v1-http-cache-v1';
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,10 +9,20 @@ const APP_SHELL = [
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL))
-  );
-  self.skipWaiting();
+  event.waitUntil((async () => {
+    const cacheWasPresent = (await caches.keys()).includes(CACHE_NAME);
+    try {
+      const cache = await caches.open(CACHE_NAME);
+      // addAll commits the complete shell atomically; only HTML bypasses HTTP cache.
+      await cache.addAll(APP_SHELL.map(url =>
+        url === './' || url === './index.html' ? new Request(url, { cache: 'reload' }) : url
+      ));
+      await self.skipWaiting();
+    } catch (error) {
+      if (!cacheWasPresent) await caches.delete(CACHE_NAME);
+      throw error;
+    }
+  })());
 });
 
 self.addEventListener('activate', event => {
@@ -26,17 +36,23 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 
-  if (event.request.mode === 'navigate') {
+  const url = new URL(event.request.url);
+  const isAppHTML = url.origin === self.location.origin && (
+    url.pathname === new URL('./', self.registration.scope).pathname ||
+    url.pathname === new URL('./index.html', self.registration.scope).pathname
+  );
+  if (event.request.mode === 'navigate' || isAppHTML) {
     event.respondWith(
-      fetch(event.request)
+      fetch(new Request(event.request, { cache: 'reload' }))
         .then(response => {
           if (response && response.ok) {
             const copy = response.clone();
-            caches.open(CACHE_NAME).then(cache => cache.put('./index.html', copy));
+            event.waitUntil(caches.open(CACHE_NAME)
+              .then(cache => cache.put('./index.html', copy)).catch(() => {}));
           }
           return response;
         })
-        .catch(() => caches.match('./index.html'))
+        .catch(() => caches.open(CACHE_NAME).then(cache => cache.match('./index.html')))
     );
     return;
   }

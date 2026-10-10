@@ -1,0 +1,58 @@
+// Real Chromium + Service Worker + fresh HTTP-cache entries. No cache disabling or clearing.
+const fs=require('fs'),path=require('path'),http=require('http'),crypto=require('crypto'),assert=require('assert/strict'),{execFileSync}=require('child_process'),{chromium}=require('playwright');
+const repo=path.resolve(__dirname,'..'),root=process.env.RESULT_DIR||'/workspace/seaart-pwa-http-cache-fix';
+fs.mkdirSync(root,{recursive:true});
+const pinned='7840822252d90d0234186c310841c2eb09322d23',legacy='06fe5246eb2a49fad6d913d1bb2dafcbfac9b47e';
+const git=(ref,file)=>execFileSync('git',['show',ref+':'+file],{cwd:repo,maxBuffer:16*1024*1024});
+const targetHTML=fs.readFileSync(repo+'/index.html'),targetSW=fs.readFileSync(repo+'/sw.js'),oldHTML=git(legacy,'index.html');
+const digest=b=>crypto.createHash('sha256').update(b).digest('hex'),cacheName=b=>b.toString().match(/const CACHE_NAME = '([^']+)'/)[1];
+const before=process.env.REPRODUCE_BEFORE==='1',newSW=before?git(pinned,'sw.js'):targetSW,newName=cacheName(newSW),checks=[],scenarios=[];
+let html=oldHTML,sw=git(legacy,'sw.js'),failure=null;const requests=[];
+const server=http.createServer((req,res)=>{const file=req.url.split('?')[0].split('/').pop()||'index.html';requests.push({file,failure,cacheControl:req.headers['cache-control']||null,pragma:req.headers.pragma||null,at:Date.now()});
+ if(file==='index.html'&&failure==='disconnect'){req.socket.destroy();return}
+ if((file==='index.html'&&failure==='html')||(file==='manifest.json'&&failure==='manifest')){res.writeHead(503);res.end('fixture unavailable');return}
+ try{const bytes=file==='index.html'?html:file==='sw.js'?sw:fs.readFileSync(repo+'/'+file);res.writeHead(200,{'Content-Type':file.endsWith('.js')?'application/javascript':file.endsWith('.json')?'application/json':file.endsWith('.png')?'image/png':'text/html;charset=utf-8','Cache-Control':file==='index.html'?'max-age=600':'no-store','ETag':'"'+digest(bytes)+'"'});res.end(bytes)}catch{res.writeHead(404);res.end()}
+});
+async function poll(p,fn,arg){const end=Date.now()+60000;while(Date.now()<end){if(await p.evaluate(fn,arg))return;await p.waitForTimeout(100)}throw Error('browser condition timed out')}
+const ready=p=>p.waitForFunction(()=>actorFormStorageReady&&navigator.serviceWorker.controller);
+const cacheHTML=(p,name,file='index.html')=>p.evaluate(async({name,file})=>{const r=await(await caches.open(name)).match(new URL('./'+file,location.href));return r?await r.text():null},{name,file});
+const disk=p=>p.evaluate(()=>Object.fromEntries(Object.entries(localStorage)));
+const update=p=>p.evaluate(async()=>{await(await navigator.serviceWorker.getRegistration()).update()});
+async function installed(p){await poll(p,async name=>{const r=await navigator.serviceWorker.getRegistration();return !r.installing&&r.active?.state==='activated'&&(await caches.keys()).includes(name)&&!!await(await caches.open(name)).match(new URL('./index.html',location.href))},newName)}
+async function draft(p){await p.evaluate(()=>{restoreCreatures([{id:'http-cache-a',species:'pikachu (pokemon)'},{id:'http-cache-b',species:'pikachu (pokemon)'}]);applyActorForm('creature:http-cache-a');setCreatureRepresentation('creature:http-cache-a','semi');openCreatureHumanEditor('creature:http-cache-a','semi');creatureHumanEditorState.byMode.semi.record.faceDirection='facing viewer';creatureHumanEditorState.byMode.full.record.faceDirection='facing left';saveCreatureHumanEditor();clearTimeout(workingSaveTimer);saveCurrentWorking();openCreatureHumanEditor('creature:http-cache-a','semi');creatureHumanEditorState.byMode.semi.record.gaze='looking up';window.fixtureNotReloaded=true})}
+(async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port+'/app/',browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});try{
+ for(const oldRef of before?[legacy]:[legacy,pinned]){
+  html=oldHTML;sw=git(oldRef,'sw.js');failure=null;const ctx=await browser.newContext(),p=await ctx.newPage(),responses=[],errors=[];
+  p.on('pageerror',e=>errors.push(e.message));const cdp=await ctx.newCDPSession(p);await cdp.send('Network.enable');cdp.on('Network.responseReceived',e=>{if(/\/app\/(index.html)?$/.test(e.response.url))responses.push({url:e.response.url,fromDiskCache:!!e.response.fromDiskCache,fromServiceWorker:!!e.response.fromServiceWorker,cacheControl:e.response.headers['Cache-Control']})});
+  await p.goto(base+'index.html');await ready(p);await p.reload();await ready(p);await draft(p);const beforeDisk=await disk(p);html=targetHTML;sw=newSW;await update(p);await installed(p);
+  const initial=digest(await cacheHTML(p,newName));
+  if(before){assert.equal(initial,digest(oldHTML));scenarios.push({oldRef,newName,oldHTML:digest(oldHTML),targetHTML:digest(targetHTML),actualNewCacheHTML:initial,staleHTMLReproduced:true,responses});await ctx.close();continue}
+  assert.equal(initial,digest(targetHTML));assert.equal(digest(await cacheHTML(p,newName,'')),digest(targetHTML));assert.equal(await p.evaluate(()=>window.fixtureNotReloaded&&creatureHumanEditorChanged()),true);assert.deepEqual(await disk(p),beforeDisk);assert(!(await p.evaluate(()=>caches.keys())).includes(cacheName(git(oldRef,'sw.js'))));
+  checks.push(oldRef+': HTTP max-age600 old HTML bypassed during complete install; draft/disk retained, old cache removed only after activation');
+  const fresh=await ctx.newPage();await fresh.goto(base);await ready(fresh);
+  const projection=await fresh.evaluate(()=>({creatures:afCopy(creatures),extensions:afCopy(actorExtensions)}));assert.equal(projection.creatures.length,2);
+  // Direct HTML GET must also revalidate, even when both HTTP cache and Cache Storage are populated.
+  html=Buffer.concat([targetHTML,Buffer.from('\r\n<!-- network revision fixture -->\r\n')]);const direct=await fresh.evaluate(async()=>await(await fetch('./index.html')).text());assert.equal(digest(direct),digest(html));await poll(fresh,async expected=>{const r=await(await caches.open(expected.name)).match(new URL('./index.html',location.href));return r&&new TextEncoder().encode(await r.text()).length===expected.bytes},{name:newName,bytes:html.length});
+  let response=await fresh.goto(base);assert.equal(digest(await response.body()),digest(html));await ready(fresh);html=targetHTML;response=await fresh.goto(base+'index.html');assert.equal(digest(await response.body()),digest(targetHTML));await ready(fresh);
+  checks.push(oldRef+': direct index GET and root/index navigations bypass stale HTTP cache; asset policy unchanged');
+  await ctx.setOffline(true);await fresh.goto(base);await ready(fresh);assert.deepEqual(await fresh.evaluate(()=>({creatures:afCopy(creatures),extensions:afCopy(actorExtensions)})),projection);
+  await fresh.evaluate(()=>{setCreatureRepresentation('creature:http-cache-a','full');openCreatureHumanEditor('creature:http-cache-a','full');creatureHumanEditorState.byMode.full.record.gaze='looking down';saveCreatureHumanEditor();clearTimeout(workingSaveTimer);saveCurrentWorking()});const offline=await fresh.evaluate(()=>afCopy(actorExtensions));await fresh.reload();await ready(fresh);assert.deepEqual(await fresh.evaluate(()=>afCopy(actorExtensions)),offline);assert.equal(await fresh.evaluate(()=>resultAccessPermissions.size+creatureAdultAuthorizations.size),0);
+  await ctx.setOffline(false);await fresh.reload();await ready(fresh);assert.deepEqual(await fresh.evaluate(()=>afCopy(actorExtensions)),offline);assert.equal(await p.evaluate(()=>window.fixtureNotReloaded&&creatureHumanEditorChanged()),true);
+  checks.push(oldRef+': old/new tabs coexist; migration, native/semi/full independence, offline startup/save/reload, online return and empty grants');
+  assert.deepEqual(errors,[]);scenarios.push({oldRef,newName,initialNewCacheHTML:initial,rootCacheHTML:digest(targetHTML),httpCacheDisabled:false,responses,errors});await ctx.close();
+ }
+ if(!before){
+  for(const kind of ['html','manifest','disconnect']){
+   html=targetHTML;sw=git(pinned,'sw.js');failure=null;const c=await browser.newContext(),p=await c.newPage();await p.goto(base+'index.html');await ready(p);await draft(p);await p.evaluate(()=>{window.notices=[];const original=toast;toast=m=>{notices.push(m);return original(m)}});const beforeDisk=await disk(p),oldName=cacheName(sw);
+   failure=kind;sw=newSW;await p.evaluate(async()=>{window.updateFailed=false;const r=await navigator.serviceWorker.getRegistration();r.addEventListener('updatefound',()=>{const w=r.installing;w.addEventListener('statechange',()=>{if(w.state==='redundant')window.updateFailed=true})},{once:true});await r.update()});await poll(p,()=>window.updateFailed);
+   assert((await p.evaluate(()=>caches.keys())).includes(oldName));assert(!(await p.evaluate(()=>caches.keys())).includes(newName));assert.deepEqual(await disk(p),beforeDisk);assert(await p.evaluate(()=>window.fixtureNotReloaded&&creatureHumanEditorChanged()));
+   const offline=await c.newPage();await c.setOffline(true);await offline.goto(base);await ready(offline);await c.setOffline(false);await offline.evaluate(()=>{clearTimeout(workingSaveTimer);actorFormStartup.blocked=true});await offline.close();const retryDisk=await disk(p);
+   failure=null;await update(p);await installed(p);assert.equal(digest(await cacheHTML(p,newName)),digest(targetHTML));assert.deepEqual(await disk(p),retryDisk);assert(await p.evaluate(()=>window.fixtureNotReloaded&&creatureHumanEditorChanged()));assert(await p.evaluate(()=>notices.some(m=>m.includes('更新の準備'))));await c.setOffline(true);const f=await c.newPage();await f.goto(base+'index.html');await ready(f);assert.equal(await f.evaluate(()=>resultAccessPermissions.size+creatureAdultAuthorizations.size),0);
+   checks.push(kind+': failed addAll retains old worker/cache/storage, candidate cache removed, old offline boots; retry/notice/new offline boot succeed without forced reload');await c.close();
+  }
+  // Brand new installation, then offline generation/save/navigation with the actual worker.
+  html=targetHTML;sw=newSW;failure=null;const c=await browser.newContext(),p=await c.newPage();await p.goto(base+'index.html');await ready(p);p.on('dialog',d=>d.accept());assert.equal(digest(await cacheHTML(p,newName)),digest(targetHTML));await draft(p);await p.evaluate(()=>closeCreatureHumanEditor());await c.setOffline(true);await p.reload();await ready(p);await p.evaluate(()=>{scene.extra='offline fixture';persist();clearTimeout(workingSaveTimer);saveCurrentWorking();generate()});await p.reload();await ready(p);assert.equal(await p.evaluate(()=>scene.extra),'offline fixture');await c.setOffline(false);await p.reload();await ready(p);checks.push('fresh install, offline reload/generation/save/restore and online return');await c.close();
+ }
+ const result={passed:true,mode:before?'before-reproduction':'after-fix',checks,scenarios,requests,targetHTMLSHA256:digest(targetHTML),targetSWSHA256:digest(newSW),newName,realChromium:true,realServiceWorker:true,scope:'localhost isolated contexts, HTML max-age600, assets no-store for deterministic failure injection',physicalDevice:false,publicPages:false};fs.writeFileSync(root+'/'+(before?'http-cache-before-results.json':'http-cache-after-results.json'),JSON.stringify(result,null,2));console.log('PASS '+result.mode+' '+checks.length+' groups');
+ }finally{await browser.close();await new Promise(r=>server.close(r))}
+})().catch(e=>{fs.writeFileSync(root+'/http-cache-'+(before?'before':'after')+'-failure.json',JSON.stringify({passed:false,error:e.stack,requests},null,2));console.error(e.stack);server.close();process.exitCode=1});
