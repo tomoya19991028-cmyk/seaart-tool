@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=require('playwright');
 (async()=>{const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});try{
  const context=await browser.newContext({serviceWorkers:'block'}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());
- await page.goto(process.argv[2]||'http://127.0.0.1:8765/seaart-tool/index.html');await page.waitForFunction(()=>appReady&&actorFormStorageReady);
+ await page.goto(process.argv[2]||process.env.TARGET_URL||'http://127.0.0.1:8765/seaart-tool/index.html');await page.waitForFunction(()=>appReady&&actorFormStorageReady);
  const result=await page.evaluate(()=>{
   const tests=[],check=(ok,label)=>{if(!ok)throw Error(label);tests.push(label)},eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b),clone=afCopy;
   check(creatureAdultSubjectDefinitions.length===0&&Object.isFrozen(creatureAdultSubjectDefinitions),'production registry empty and immutable');

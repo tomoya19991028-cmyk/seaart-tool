@@ -1,7 +1,7 @@
 // Additional reference-derived safety tests; synthetic definitions never enter the shipped registry.
 const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=require('playwright');
 (async()=>{const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});try{
- const context=await browser.newContext({serviceWorkers:'block'}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());await page.goto(process.argv[2]||'http://127.0.0.1:8765/seaart-tool/index.html');await page.waitForFunction(()=>actorFormStorageReady);
+ const context=await browser.newContext({serviceWorkers:'block'}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());await page.goto(process.argv[2]||process.env.TARGET_URL||'http://127.0.0.1:8765/seaart-tool/index.html');await page.waitForFunction(()=>actorFormStorageReady);
  const result=await page.evaluate(()=>{
   const tests=[],check=(ok,label)=>{if(!ok)throw Error(label);tests.push(label)},ref='creature:reference-a',ref2='creature:reference-b',ctx={scope:'normal',partners:[]};
   restoreCreatures([{id:'reference-a',species:'pikachu (pokemon)'},{id:'reference-b',species:'pikachu (pokemon)'}]);applyActorForm(ref);setCreatureRepresentation(ref,'full');setCreatureRepresentation(ref2,'full');adultScene.enabled=true;

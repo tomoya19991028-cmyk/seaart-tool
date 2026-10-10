@@ -1,7 +1,7 @@
 // Stage 5-B isolated Chromium tests. No trusted definitions or production grants are registered.
 const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=require('playwright');
-const url=process.argv[2]||'http://127.0.0.1:8765/seaart-tool/index.html',baseline=process.env.STAGE5_A_URL||'http://127.0.0.1:8765/seaart-stage5-b/baseline.html',out=process.argv[3],results={checks:[],faults:[],migration:[]};
-(async()=>{const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});try{
+const url=process.argv[2]||process.env.TARGET_URL||'http://127.0.0.1:8765/seaart-tool/index.html',baseline=process.env.STAGE5_A_URL||'http://127.0.0.1:8765/seaart-stage5-b/baseline.html',out=process.argv[3],results={checks:[],faults:[],migration:[]};
+(async()=>{const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});try{
  const ctx=await browser.newContext({serviceWorkers:'block'}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));p.on('dialog',d=>d.accept());await p.goto(url);await p.waitForFunction(()=>actorFormStorageReady);
  results.checks=await p.evaluate(()=>{
  const checks=[],check=(v,m)=>{if(!v)throw Error(m);checks.push(m)},copy=afCopy,ref='creature:formal-a',other='creature:formal-b';restoreCreatures([{id:'formal-a',species:'pikachu (pokemon)'},{id:'formal-b',species:'pikachu (pokemon)'}]);setCreatureRepresentation(ref,'semi');setCreatureRepresentation(other,'semi');
