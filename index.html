@@ -237,6 +237,15 @@ dialog{background:var(--bg);color:var(--text);border:1px solid var(--border);bor
 .characterPresetInfo{flex:1;min-width:0}.characterPresetInfo strong{display:block;font-size:.72rem;font-weight:600}.characterPresetInfo small{display:block;color:var(--muted);font-size:.62rem;line-height:1.35;overflow-wrap:anywhere}
 .characterPresetBar button,.characterPresetBar select{flex:none;width:auto;min-width:0;min-height:34px;height:34px;padding:4px 8px;font-size:.69rem;white-space:nowrap}
 .characterPresetBar select{max-width:32%;padding-right:20px}.characterPresetBar[hidden]{display:none}
+
+/* Form controls share existing buttons and candidate rows; only the form list scrolls. */
+.actorFormControls{min-width:0;max-width:100%;flex-wrap:wrap}.actorFormControls.actorFormMulti .characterPresetInfo{flex-basis:100%}
+.actorFormControls button,.actorFormControls select{min-height:44px;height:44px;box-sizing:border-box}.actorFormControls select,.actorFormControls .actorFormLaunch{flex:1;min-width:0;width:0;max-width:none;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+#creaturePresetControls>.actorFormLaunch{flex:1;min-width:44px}
+.actorFormControls .actorFormLaunch[hidden],.actorFormControls select[hidden],.actorFormControls button[hidden]{display:none}
+.actorFormControls .actorFormStatus{flex-basis:100%;color:var(--muted);font-size:.65rem;overflow-wrap:anywhere}.actorFormControls small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.actorFormControls small[hidden]{display:none}
+.actorFormDialog{width:min(540px,calc(100vw - 20px));max-width:calc(100vw - 20px);height:min(620px,90dvh);max-height:90dvh;padding:0;overflow:hidden;box-sizing:border-box}.actorFormDialog[open]{display:flex;flex-direction:column}.actorFormDialog>.dialogHead{flex:none;padding:12px 14px}.actorFormDialog .dialogHead button{min-height:44px}
+.actorFormDialog>input{flex:none;width:calc(100% - 28px);margin:0 14px 10px;box-sizing:border-box;min-width:0;min-height:44px}.actorFormDialog>input[hidden]{display:none}.actorFormDialog>.actorFormList{flex:1;min-height:0;max-height:none;padding:0 14px 12px;overflow:auto;overscroll-behavior:contain}.actorFormOption{width:100%;min-width:0;min-height:44px;text-align:left;overflow-wrap:anywhere}.actorFormOption.active{border-color:var(--accent);color:var(--accent)}
 /* The five production steps share one compact, fixed navigation row. */
 #mangaFlowNav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
 #mangaFlowNav button{min-width:0;min-height:36px;padding:7px 2px;font-size:.7rem;white-space:nowrap}
@@ -1308,11 +1317,16 @@ function afEnsureRegistry(){
  for(const preset of creatureBasicPresets){const id='form-creature-'+preset.id+'-standard';forms.set(id,Object.freeze({id,ownerRef:Object.freeze({kind:'creature',masterId:preset.id,value:preset.value}),name:'標準',origin:'standard',revision:1,legacyPresetId:preset.id,identity:Object.freeze({mode:'inherit',tokens:Object.freeze([])}),appearanceRef:Object.freeze({kind:'creatureBasicPreset',id:preset.id}),applyPolicy:'legacy-creature-five-fields'}))}actorStandardForms=forms;return forms;
 }
 function actorOwnerForRef(ref){
- if(typeof ref!=='string')return null;if(ref.startsWith('person:')){const id=ref.slice(7);if(id==='custom'||!selected.character.includes(id))return null;const original=originalCharacters.find(r=>r.id===id);if(original)return {kind:'person',originalId:id};const row=catalog.character.find(r=>r.id===id);return row?{kind:'person',catalogId:id,value:characterCanonicalValue(row.value,row.name)}:null}
+ if(typeof ref!=='string')return null;if(ref.startsWith('person:')){const id=ref.slice(7);if(id==='custom')return null;const original=originalCharacters.find(r=>r.id===id);if(original)return {kind:'person',originalId:id};if(!selected.character.includes(id))return null;const row=catalog.character.find(r=>r.id===id);return row?{kind:'person',catalogId:id,value:characterCanonicalValue(row.value,row.name)}:null}
  if(ref.startsWith('creature:')){const c=creatures.find(r=>r.id===ref.slice(9));if(!c)return null;const preset=creaturePresetForSpecies(c.species);return {kind:'creature',masterId:preset?.id||'generic-species:'+c.species,value:c.species}}return null;
 }
-function resolveActorForm(ownerRef,formId){const standard=afEnsureRegistry().get(formId),custom=actorFormCatalog.customForms.find(f=>f.id===formId),form=standard||custom;return form&&afOwnerKey(form.ownerRef)===afOwnerKey(ownerRef)?form:null}
-function actorFormsForOwner(ownerRef){return [...afEnsureRegistry().values(),...actorFormCatalog.customForms].filter(f=>afOwnerKey(f.ownerRef)===afOwnerKey(ownerRef))}
+function actorFormOwnerMatches(a,b){
+ if(!a||!b)return false;if(afOwnerKey(a)===afOwnerKey(b))return true;
+ if(a.kind!=='person'||b.kind!=='person'||!a.catalogId||!b.catalogId||a.value!==b.value)return false;
+ return [a,b].every(owner=>{const row=catalog.character.find(r=>r.id===owner.catalogId);return row&&characterCanonicalValue(row.value,row.name)===owner.value});
+}
+function resolveActorForm(ownerRef,formId){const standard=afEnsureRegistry().get(formId),custom=actorFormCatalog.customForms.find(f=>f.id===formId),form=standard||custom;return form&&actorFormOwnerMatches(form.ownerRef,ownerRef)?form:null}
+function actorFormsForOwner(ownerRef){return [...afEnsureRegistry().values(),...actorFormCatalog.customForms].filter(f=>actorFormOwnerMatches(f.ownerRef,ownerRef))}
 function actorFormLegacyPreset(form){if(form?.origin!=='standard')return null;const ref=form.appearanceRef;return ref.kind==='characterBasicPreset'?characterBasicPresets[ref.value]?.find(p=>p.id===ref.id)||null:creatureBasicPresets.find(p=>p.id===ref.id)||null}
 function actorExtensionFor(ref){const value=actorExtensions.byActor[ref],ownerRef=actorOwnerForRef(ref);return value?afCopy(value):ownerRef&&ref?.startsWith('creature:')?{ownerRef,representation:{mode:'normal',overrides:{semi:{},full:{}}},humanProfile:{},adult:{confirmed:false,profile:{},eligibilitySignature:null}}:null}
 function afRestoreExtensions(value,idMap={},sourceCreatures=[]){
@@ -1321,12 +1335,12 @@ function afRestoreExtensions(value,idMap={},sourceCreatures=[]){
  for(const [ref,entry]of Object.entries(incoming.byActor)){let target=ref,copy=afCopy(entry),reason='';if(ref.startsWith('person:')){const old=ref.slice(7),id=idMap[old]||old;target='person:'+id;if(copy.ownerRef.catalogId===old&&id!==old)copy.ownerRef.catalogId=id}else if(counts.get(ref.slice(9))>1)reason='duplicate-creature-id';
   if(ref.startsWith('person:')&&target!==ref){const prefix='form-person-'+encodeURIComponent(ref.slice(7))+'-';if(copy.selectedFormId?.startsWith(prefix)){const candidate='form-person-'+encodeURIComponent(target.slice(7))+'-'+copy.selectedFormId.slice(prefix.length),form=afEnsureRegistry().get(candidate);if(form&&afOwnerKey(form.ownerRef)===afOwnerKey(copy.ownerRef))copy.selectedFormId=candidate}}
   if(!reason&&targetCounts.get(target)>1)reason='ambiguous-actor-remap';const owner=actorOwnerForRef(target);if(!reason&&(!owner||afOwnerKey(owner)!==afOwnerKey(copy.ownerRef)))reason='missing-actor-or-owner';if(!reason&&copy.selectedFormId&&!resolveActorForm(owner,copy.selectedFormId))reason='unknown-form';
-  if(reason)quarantined.push({actorRef:ref,reason,value:copy});else next.byActor[target]=copy;
+  if(reason){quarantined.push({actorRef:ref,reason,value:afCopy(copy)});if(reason==='unknown-form'&&copy.appliedForm){delete copy.selectedFormId;next.byActor[target]=copy}}else next.byActor[target]=copy;
  }if(quarantined.length)next.quarantined=quarantined;actorExtensions=next;
 }
 function setActorExtension(ref,value){afAssert(actorFormStorageReady,'保存移行が完了していません');const owner=actorOwnerForRef(ref);afAssert(owner&&afOwnerKey(owner)===afOwnerKey(value.ownerRef),'個体と所有者が一致しません');if(value.selectedFormId)afAssert(resolveActorForm(owner,value.selectedFormId),'形態参照が不明です');const next=afValidateExtensions({version:1,byActor:{...actorExtensions.byActor,[ref]:value},...(actorExtensions.quarantined?{quarantined:actorExtensions.quarantined}:{})});saveUndo('個体の拡張設定');actorExtensions=next;dirty();return true}
 function afPruneExtensions(){
- for(const [ref,entry]of Object.entries(actorExtensions.byActor)){const owner=actorOwnerForRef(ref);if(!owner){delete actorExtensions.byActor[ref];continue}const reason=afOwnerKey(owner)!==afOwnerKey(entry.ownerRef)?'owner-changed':entry.selectedFormId&&!resolveActorForm(owner,entry.selectedFormId)?'unknown-form':'';if(reason){(actorExtensions.quarantined||=[]).push({actorRef:ref,reason,value:afCopy(entry)});delete actorExtensions.byActor[ref]}}
+ for(const [ref,entry]of Object.entries(actorExtensions.byActor)){const owner=actorOwnerForRef(ref);if(!owner){delete actorExtensions.byActor[ref];continue}const reason=afOwnerKey(owner)!==afOwnerKey(entry.ownerRef)?'owner-changed':entry.selectedFormId&&!resolveActorForm(owner,entry.selectedFormId)?'unknown-form':'';if(reason){(actorExtensions.quarantined||=[]).push({actorRef:ref,reason,value:afCopy(entry)});if(reason==='unknown-form'&&entry.appliedForm)delete entry.selectedFormId;else delete actorExtensions.byActor[ref]}}
 }
 function afValidateBackup(input){
  afSafeJson(input);afAssert(afObject(input)&&input.format==='SeaArt Prompt Builder'&&[3,4].includes(input.version),'未対応のバックアップversionです');afValidateSettings(input);afAssert(input.catalog&&Object.keys(labels).filter(k=>k!=='mood').every(k=>Array.isArray(input.catalog[k])));if(input.workingState){afValidateWorking(input.workingState);afAssert(Array.isArray(input.workingState.originalCharacters)&&afObject(input.workingState.adultScene));if(input.version===4)afAssert(input.workingState.actorExtensions!==undefined)}if(input.promptHistory)afValidateHistory(input.promptHistory);
@@ -2045,7 +2059,7 @@ function persist(nextCatalog=catalog,nextFavorites=favorites){try{selectedMood=s
 function node(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n}
 function markGenerationDirty(){const button=$('mobileGenerate');button.dataset.updateNeeded='true';button.setAttribute('aria-label','更新あり・生成')}
 function markGenerationFresh(){const button=$('mobileGenerate');delete button.dataset.updateNeeded;button.setAttribute('aria-label','生成')}
-function dirty(){afPruneExtensions();updateSceneVisibility();if(window.appReady){updateSummaries();updatePersonBadges();renderSelectionCardSummaries();refreshFinishSummaries()}markGenerationDirty();scheduleWorkingSave()}
+function dirty(){afPruneExtensions();if(window.appReady)renderCharacterPresetBar();updateSceneVisibility();if(window.appReady){updateSummaries();updatePersonBadges();renderSelectionCardSummaries();refreshFinishSummaries()}markGenerationDirty();scheduleWorkingSave()}
 function item(k,id){return catalog[k].find(x=>x.id===id)}
 function renderChoices(k){const list=$('list-'+k);list.replaceChildren();const query=$('search-'+k).value.normalize('NFKC').toLowerCase().trim();const groupRank=new Map();for(const x of catalog[k])if(!groupRank.has(x.group||''))groupRank.set(x.group||'',groupRank.size);const filtered=catalog[k].filter(x=>(!maIsHidden('catalog:'+k,x.id)||selected[k].includes(x.id))&&environmentMatch(k,x)&&!globalHiddenValues[k].has(x.value)&&(k!=='pose'||!['B','C','D'].includes(poseAuditClass(x)))&&(x.name+' '+x.value+' '+(x.group||'')).normalize('NFKC').toLowerCase().includes(query)).sort((a,b)=>groupRank.get(a.group||'')-groupRank.get(b.group||''));let lastGroup=null;
 for(const x of filtered){if(x.group&&x.group!==lastGroup){list.append(node('p',x.group,'group'));lastGroup=x.group}const row=node('div',undefined,'choice'),label=node('label'),check=node('input');check.type='checkbox';check.checked=selected[k].includes(x.id);check.onchange=()=>{if(check.checked)selected[k]=singleFields.has(k)?[x.id]:[...selected[k],x.id];else selected[k]=selected[k].filter(id=>id!==x.id);if(singleFields.has(k))for(const other of list.querySelectorAll('input[type=checkbox]'))if(other!==check)other.checked=false;renderChips(k);if(k==='character')renderProfiles();dirty()};label.append(check,node('span',x.name));const edit=node('button','編集','edit');edit.type='button';edit.setAttribute('aria-label',x.name+'を編集');edit.onclick=()=>openEditor(k,x);row.append(label,edit);list.append(row)}if(!filtered.length)list.append(node('p','該当する選択肢がありません','small'));$('count-'+k).textContent=`${labels[k]} · ${selected[k].length}件選択 / ${catalog[k].length}件`;const option=Array.from($('mobileCategory').options).find(o=>o.value===k);if(option)option.textContent=labels[k]+(selected[k].length?`（${selected[k].length}件選択）`:'');}
@@ -3218,12 +3232,7 @@ function resolveCreatureBasicPreset(preset){
  return {...appearance,features:[...appearance.features]};
 }
 function applyCreatureBasicPreset(presetId,creatureId=activeCreatureId){
- const c=creatures.find(row=>row.id===creatureId),preset=creatureBasicPresets.find(row=>row.id===presetId);
- if(!c||!preset||c.species!==preset.value){shortToast('現在の生物の種類と基本外見が一致しません');return false}
- let appearance;try{appearance=resolveCreatureBasicPreset(preset)}catch(error){shortToast(error.message);return false}
- saveUndo('生物の基本外見を適用');
- for(const field of ['type','size','color','surface','features']){c[field]=appearance[field];delete tagWeights[creatureWeightField(c,field)]}
- creatureChanged();shortToast('基本外見を適用しました');return true;
+ const ref='creature:'+creatureId,owner=actorOwnerForRef(ref),form=owner&&actorFormsForOwner(owner).find(f=>f.origin==='standard'&&f.legacyPresetId===presetId);return form?applyActorForm(ref,form.id):false;
 }
 const creatureGroups=[['type','種類・体格',['species','type','size']],['appearance','外見・体表',['color','surface']],['features','身体的特徴',['features']],['action','行動・状態',['actions','states']],['element','属性・能力',['elements','abilities']],['equipment','位置・演出',['position','depth','direction','effects']]];
 let creatures=[],activeCreatureId='',characterKind='person',creaturePicker=null,creatureQuickMode='all',creatureOtherFeaturesVisible=false;
@@ -3256,13 +3265,13 @@ function editCreatureTag(c,field,value){if(!creatureWeightable(field,value)){ope
 function creatureFieldPromptTags(c,field){return [...creatureValues(c,field).filter(v=>v!=='none').map(v=>explicitWeight(v,creatureWeightContext(c,field).weight(v))),...scTags('creature',c,field)]}
 function creaturePromptTags(c,{includeActions=true,includePlacement=true,includeEffects=true}={}){
  const weight=(field,value)=>creatureWeightContext(c,field).weight(value),tag=(field,value)=>value?explicitWeight(value,weight(field,value)):'';
- let species=c.species||'creature',type=c.type||'';if(type===species)type='';
+ const identity=actorIdentityValues('creature:'+c.id,c.species||'creature'),identityChanged=identity.length!==1||identity[0]!== (c.species||'creature');let species=identity[0]||c.species||'creature',type=c.type||'';if(type===species)type='';
  const shapedWeight=['species','type','size'].some(field=>c[field]&&weight(field,c[field])!==1);
- let shape;if(!shapedWeight){if(species==='dragon'&&['western dragon','eastern dragon'].includes(type)){species=type;type=''}shape=[c.size,species].filter(Boolean).join(' ')}
- else{shape=tag('species',species);if(species==='dragon'&&['western dragon','eastern dragon'].includes(type))type=type.replace(' dragon','')}
+ let shape;if(!shapedWeight){if(!identityChanged&&species==='dragon'&&['western dragon','eastern dragon'].includes(type)){species=type;type=''}shape=[c.size,species].filter(Boolean).join(' ')}
+ else{shape=explicitWeight(species,weight('species',c.species||'creature'));if(!identityChanged&&species==='dragon'&&['western dragon','eastern dragon'].includes(type))type=type.replace(' dragon','')}
  const surface=creatureValues(c,'surface')[0]||'',appearance=c.color&&surface&&weight('color',c.color)===weight('surface',surface)?[explicitWeight(c.color+' '+surface,weight('color',c.color))]:c.color&&surface?[tag('color',c.color),tag('surface',surface)]:[c.color?explicitWeight(c.color+' body',weight('color',c.color)):tag('surface',surface)];
  const features=creatureValues(c,'features').filter(v=>!({horns:['multiple horns'],wings:['large wings','small wings'],tail:['long tail'],claws:['sharp claws'],spikes:['spines along the back']}[v]||[]).some(specific=>c.features.includes(specific)));
- const tags=[shape,...scTags('creature',c,'species'),...scTags('creature',c,'type'),type?explicitWeight(type,weight('type',c.type)):'',shapedWeight?tag('size',c.size):'',...scTags('creature',c,'size'),...appearance,...scTags('creature',c,'color'),...scTags('creature',c,'surface'),...features.map(v=>tag('features',v)),...scTags('creature',c,'features'),...['actions','states','elements','abilities'].filter(field=>includeActions||field!=='actions').flatMap(field=>field==='actions'&&typeof subjectActionValue==='function'?[...creatureValues(c,field).filter(v=>v!=='none').map(v=>explicitWeight(subjectActionValue(c,v),weight(field,v))),...scTags('creature',c,field)]:creatureFieldPromptTags(c,field)),...(includePlacement?[c.position,...scTags('creature',c,'position'),c.depth,...scTags('creature',c,'depth'),c.direction,...scTags('creature',c,'direction')]:[]),...(includeEffects?[...creatureValues(c,'effects').map(v=>tag('effects',v)),...scTags('creature',c,'effects')]:[]),...scTags('creature',c,'equipment'),...scTags('creature',c,null,Object.keys(creatureFields))];
+ const tags=[shape,...identity.slice(1),...scTags('creature',c,'species'),...scTags('creature',c,'type'),type?explicitWeight(type,weight('type',c.type)):'',shapedWeight?tag('size',c.size):'',...scTags('creature',c,'size'),...appearance,...scTags('creature',c,'color'),...scTags('creature',c,'surface'),...features.map(v=>tag('features',v)),...scTags('creature',c,'features'),...['actions','states','elements','abilities'].filter(field=>includeActions||field!=='actions').flatMap(field=>field==='actions'&&typeof subjectActionValue==='function'?[...creatureValues(c,field).filter(v=>v!=='none').map(v=>explicitWeight(subjectActionValue(c,v),weight(field,v))),...scTags('creature',c,field)]:creatureFieldPromptTags(c,field)),...(includePlacement?[c.position,...scTags('creature',c,'position'),c.depth,...scTags('creature',c,'depth'),c.direction,...scTags('creature',c,'direction')]:[]),...(includeEffects?[...creatureValues(c,'effects').map(v=>tag('effects',v)),...scTags('creature',c,'effects')]:[]),...scTags('creature',c,'equipment'),...scTags('creature',c,null,Object.keys(creatureFields))];
  if(includeActions&&typeof subjectActor==='function'){const actor=subjectActor(c);if(actor)tags.push(...subjectSettingTags(actor))}
  return [...new Set(tags.filter(Boolean))];
 }
@@ -3291,11 +3300,11 @@ function renderCreatures(){
 }
 function openCreaturePicker(groupKey,field){const group=creatureGroups.find(x=>x[0]===groupKey);if(!group)return;creatureOtherFeaturesVisible=false;creaturePicker={group,field:group[2].includes(field)?field:group[2][0],category:'',sort:'default'};closeCandidateCategories();$('creatureSortMenu').hidden=true;creatureQuickMode='all';$('creatureSearch').value='';renderCreaturePicker();$('creatureDialog').showModal()}
 function changeCreatureValue(field,value,checked){
- saveUndo('生物の設定');const c=ensureCreature();
+ saveUndo('生物の設定');const c=ensureCreature(),previous=field==='species'?afCopy(actorExtensions.byActor['creature:'+c.id]||null):null;
  if(creatureFields[field].single)c[field]=checked?value:'';
  else if(!checked)removeCreatureValue(c,field,value);
  else{let current=[...(c[field]||[])];if(['abilities','effects'].includes(field))c.equipment=(c.equipment||[]).filter(x=>x!==value);if(field==='elements')current=value==='none'?[]:current.filter(x=>x!=='none');c[field]=[...new Set([...current,value])]}
- if(checked&&value)usageRemember('creature:'+field,value);creatureChanged();
+ if(field==='species')actorSpeciesChanged(c,previous);if(checked&&value)usageRemember('creature:'+field,value);creatureChanged();
 }
 function creatureStar(field,value,name){const kind='creature:'+field,star=node('button',usageFavorite(kind,value)?'★':'☆','quickStar');star.type='button';star.setAttribute('aria-pressed',String(usageFavorite(kind,value)));star.setAttribute('aria-label',name+'のお気に入り');star.onclick=()=>{toggleUsageFavorite(kind,value);renderCreaturePicker()};return star}
 function creatureCandidateRow(field,value,name,selected){
@@ -3325,7 +3334,7 @@ function renderCreatureColorPalette(list,matches,picked){
 function renderCreaturePicker(){
  if(!creaturePicker)return;const {group,field}=creaturePicker,c=currentCreature(),config=creatureFields[field],position=field==='position';
  $('creatureDialogTitle').textContent=(c?creatureName(c):'生物')+'：'+group[1];
- const preset=creaturePresetForSpecies(c?.species);$('creaturePresetControls').hidden=group[0]!=='type'||!preset;$('creatureBasicPresetApply').onclick=preset?()=>applyCreatureBasicPreset(preset.id,c.id):null;
+ const ref=c?'creature:'+c.id:'',forms=c?actorFormsForOwner(actorOwnerForRef(ref)):[];$('creaturePresetControls').hidden=group[0]!=='type'||!forms.length;if(c)renderActorFormControls(ref,$('creaturePresetControls'),$('creatureFormSelect'),$('creatureBasicPresetApply'),$('creatureFormStatus'));
  $('creatureFeatureControls').hidden=field!=='features';$('creatureOtherFeatures').setAttribute('aria-pressed',String(creatureOtherFeaturesVisible));$('creatureOtherFeatures').classList.toggle('active',creatureOtherFeaturesVisible);
  const tabs=$('creatureFieldTabs');tabs.hidden=group[2].length===1;tabs.replaceChildren();for(const key of group[2]){const b=node('button',creatureFields[key].name,'secondary');b.type='button';b.classList.toggle('active',key===field);b.setAttribute('aria-pressed',String(key===field));b.onclick=()=>{creaturePicker.field=key;creaturePicker.category='';creatureQuickMode='all';$('creatureSearch').value='';renderCreaturePicker();$('creatureChoices').scrollTop=0};tabs.append(b)}
  $('creatureSortOpen').hidden=position;$('creatureSortMenu').hidden=true;$('creatureSortOpen').setAttribute('aria-expanded','false');
@@ -3377,7 +3386,7 @@ function subjectPromptBlocks(personPrompts,creaturePrompts,naturalLanguage=false
 function subjectScopedTags(actor,tags){return tags.map(tag=>{const {value,weight}=subjectWeightedValue(tag);return explicitWeight(value.includes(actor.label)?value:actor.label+': '+value,weight)})}
 function normalSubjectOutput(people){
  const active=activePromptCreatures(),actors=subjectActors().filter(actor=>actor.kind==='character'||active.some(c=>c.id===actor.id)),context={scopedActions:true,compactRelations:true},scene=subjectSeparationMode==='standard'?['single continuous scene','shared environment','unified background perspective']:[];
- const personPrompts=people.map(person=>{const p=profiles[person.id]||{},name=person.kind==='original'?[person.type&&person.type!=='person'?person.type:'person',person.name].filter(Boolean).join(', '):person.name;return [explicitWeight(name,tagWeights.character?.[person.name]??Number($('weight').value)),...profileTags(p,{subjects:false,poses:false,placement:false,effects:false,direction:false}),...adultPersonPrompt(person,people)].join(', ')});
+ const personPrompts=people.map(person=>{const p=profiles[person.id]||{},name=person.kind==='original'?[person.type&&person.type!=='person'?person.type:'person',person.name].filter(Boolean).join(', '):person.name;return [...actorIdentityTags('person:'+person.id,name,tagWeights.character?.[person.name]??Number($('weight').value)),...profileTags(p,{subjects:false,poses:false,placement:false,effects:false,direction:false}),...adultPersonPrompt(person,people)].join(', ')});
  const creaturePrompts=active.map(c=>'Creature '+String.fromCharCode(65+creatures.indexOf(c))+': '+creaturePromptTags(c,{includeActions:false,includePlacement:false,includeEffects:false}).join(', '));
  for(const actor of actors){const p=actor.record,person=actor.kind==='character',position=person?p.position2d||p.position&&p.position!=='auto'&&p.position!=='center'?p.position2d||p.position:people.length===2?(actor.index===0?'left':'right'):people.length>2?'position '+(actor.index+1):'':p.position;
   if(position)scene.push(actor.label+' '+(position.startsWith('position ')?'at '+position:'on the '+position.replace(/-/g,' ')));if(p.depth)scene.push(actor.label+' '+(p.depth==='front'?'in the foreground':p.depth==='back'?'in the background':p.depth));if(person?p.faceDirection:p.direction)scene.push(actor.label+' '+(person?p.faceDirection:p.direction));
@@ -3440,7 +3449,7 @@ function updateNormalScenePreview(){const p=normalScenePresets.find(x=>x.id===$(
 function openNormalScene(){normalSceneQuick='all';$('normalSceneSearch').value='';renderNormalScene();$('normalSceneDialog').showModal()}
 
 function generate(){migratePersonalItemMetadata();normalizeAllSelections();migratePersonOnlySelections();if(typeof migrateRelocatedPoseSelections==='function')migrateRelocatedPoseSelections();migrateCategoryWeights();const charWeight=Number($('weight').value).toFixed(1),custom=$('customCharacter').value.trim(),people=[...selected.character.filter(id=>item('character',id)).map(id=>({id,name:item('character',id).value,kind:'catalog'})),...originalCharacters.map(o=>({id:o.id,name:o.name.trim(),type:o.type,kind:'original'})),...(custom?[{id:'custom',name:custom,kind:'custom'}]:[])],count=people.length,multi=count>1,activeOrder=modelOrder(),sections={};
-for(const k of activeOrder){sections[k]=[];if(k==='character'){people.forEach((person,i)=>{const p=profiles[person.id]||{},position=p.position2d||p.position&&p.position!=='auto'&&p.position!=='center'?p.position2d||p.position:(count===2?(i===0?'left':'right'):`position ${i+1}`),name=person.kind==='original'?[person.type&&person.type!=='person'?person.type:'person',person.name].filter(Boolean).join(', '):person.name,tags=[explicitWeight(name,tagWeights.character?.[person.name]??Number(charWeight)),...profileTags(p),...adultPersonPrompt(person,people)];sections[k].push(multi?`${position} person: ${tags.join(', ')}`:tags.join(', '))})}else for(const id of selected[k]){const x=item(k,id);if(x)sections[k].push(weighted(x.value,k))}}
+for(const k of activeOrder){sections[k]=[];if(k==='character'){people.forEach((person,i)=>{const p=profiles[person.id]||{},position=p.position2d||p.position&&p.position!=='auto'&&p.position!=='center'?p.position2d||p.position:(count===2?(i===0?'left':'right'):`position ${i+1}`),name=person.kind==='original'?[person.type&&person.type!=='person'?person.type:'person',person.name].filter(Boolean).join(', '):person.name,tags=[...actorIdentityTags('person:'+person.id,name,tagWeights.character?.[person.name]??Number(charWeight)),...profileTags(p),...adultPersonPrompt(person,people)];sections[k].push(multi?`${position} person: ${tags.join(', ')}`:tags.join(', '))})}else for(const id of selected[k]){const x=item(k,id);if(x)sections[k].push(weighted(x.value,k))}}
 for(const k of activeOrder)sections[k].push(...maNormalTags(k));
 const personPrompts=[...(sections.character||[])],creaturePrompts=creaturePromptGroups(),subjectCount=count+creaturePrompts.length;const scoped=subjectCount>1&&subjectSeparationMode!=='strong'?normalSubjectOutput(people):null,subjectScene=scoped?.scene||[];if(scoped){personPrompts.splice(0,personPrompts.length,...scoped.people);creaturePrompts.splice(0,creaturePrompts.length,...scoped.creatures)}sections.character??=[];if(creaturePrompts.length>1)sections.character.push(creaturePrompts.length+' creatures');sections.character.push(...creaturePrompts);
 for(const key of ['hairColor','eyeColor'])if(sections[key])sections[key]=sharedColorTags(key).map(tag=>weighted(tag,key));
@@ -4044,7 +4053,7 @@ $('mangaStoryGenre').onchange=()=>{const {story}=mangaStorySelection();story.gen
 $('mangaStoryPattern').onchange=()=>{mangaStorySelection().story.pattern=$('mangaStoryPattern').value;mangaStoryPreview=null;renderMangaStory();scheduleWorkingSave()};
 $('mangaStoryPreviewOpen').onclick=previewMangaStory;$('mangaStoryApply').onclick=applyMangaStory;$('undoMangaStory').onclick=undoMangaStory;
 
-function mangaPeople(){const custom=$('customCharacter').value.trim();return [...selected.character.filter(id=>item('character',id)).map(id=>({id,name:item('character',id).name,tag:item('character',id).value})),...originalCharacters.map(o=>({id:o.id,name:o.name||'オリジナル人物',tag:[o.type==='person'?'':o.type,o.name].filter(Boolean).join(', ')||'original person'})),...(custom?[{id:'custom',name:custom,tag:custom}]:[])]}
+function mangaPeople(){const custom=$('customCharacter').value.trim();return [...selected.character.filter(id=>item('character',id)).map(id=>({id,name:item('character',id).name,tag:actorIdentityTags('person:'+id,item('character',id).value).join(', ')})),...originalCharacters.map(o=>({id:o.id,name:o.name||'オリジナル人物',tag:actorIdentityTags('person:'+o.id,[o.type==='person'?'':o.type,o.name].filter(Boolean).join(', ')||'original person').join(', ')})),...(custom?[{id:'custom',name:custom,tag:custom}]:[])]}
 function mangaCreatures(){return mangaState.storyAdult?[]:creatures.map((record,index)=>({id:record.id,name:creatureName(record,index),label:'Creature '+String.fromCharCode(65+index),record}))}
 function mangaCreatureConfigured(panel){return mangaCreatures().some(actor=>{const entry=panel.creatures?.[actor.id];return entry&&(entry.enabled===false||entry.position||entry.action||Object.prototype.hasOwnProperty.call(entry,'actionTarget')||Object.prototype.hasOwnProperty.call(entry,'subjectRelation'))})}
 function mangaCreatureIdentity(actor){return actor.label+': '+creaturePromptTags(actor.record,{includeActions:false,includePlacement:false}).join(', ')}
@@ -5057,32 +5066,122 @@ function clearCharacterPresetAppearance(profile,fields){
  }
 }
 function applyCharacterBasicPreset(presetId){
- const owner=personKey,preset=characterPresetList(owner).find(x=>x.id===presetId);
- if(!preset||!allPeople().some(x=>x.id===owner))return false;
- let patch;try{patch=resolveCharacterPreset(preset)}catch(error){shortToast(error.message);return false}
- if(!Object.keys(patch).length)return false;
- saveUndo('キャラ基本設定を適用');const profile=profiles[owner]??={};
-  const {detail,clearAppearance,...appearance}=patch;clearCharacterPresetAppearance(profile,clearAppearance);Object.assign(profile,appearance);
-  if(detail){expandOutfitSelection(profile);profile.detail??={};for(const [field,values] of Object.entries(detail)){
-   if(detailClothingFields.has(field)&&(asList(profile.detail[field]).length||profile.detailCustom?.[field]?.trim()))continue;
-   profile.detail[field]=values.slice();
-  }}
-  profile.characterPresetHistory={character:item('character',owner).value,presetId:preset.id,label:preset.name,appliedAt:new Date().toISOString()};
- const scroll=$('workspaceMain').scrollTop;renderProfiles();layoutPeople();$('workspaceMain').scrollTop=scroll;dirty();shortToast('「'+preset.name+'」の基本設定を適用しました');return true;
+ const ref='person:'+personKey,owner=actorOwnerForRef(ref),form=owner&&actorFormsForOwner(owner).find(f=>f.origin==='standard'&&f.legacyPresetId===presetId);return form?applyActorForm(ref,form.id):false;
 }
 function renderCharacterPresetBar(){
- const root=$('characterPresetBar');if(!root)return;
- const person=allPeople().find(x=>x.id===personKey);root.hidden=!person;root.classList.toggle('hidden',!person);if(!person)return;
- const choices=characterPresetList(person.id),select=$('characterPresetSelect'),button=$('characterPresetApply'),status=$('characterPresetStatus');
- const key=item('character',person.id)?.value||person.id,history=profiles[person.id]?.characterPresetHistory,previous=root.dataset.character===key?select.value:'';
- root.dataset.character=key;select.replaceChildren();for(const preset of choices){const option=node('option',preset.name);option.value=preset.id;select.append(option)}
- select.value=choices.some(x=>x.id===previous)?previous:choices.some(x=>x.id===history?.presetId)?history.presetId:choices[0]?.id||'';
- select.hidden=choices.length<2;button.hidden=!choices.length;button.textContent=choices.length>1?'適用':'キャラ基本設定を適用';button.disabled=false;
- button.title='登録された髪・目・特徴・衣装セットを変更します。衣装部位の個別変更は維持します。';
- if(choices.length)try{resolveCharacterPreset(choices.find(x=>x.id===select.value))}catch(error){button.disabled=true;button.title=error.message}
- status.textContent=!choices.length?'このキャラクターの基本設定は未登録':history&&history.character===key?'「'+history.label+'」の適用履歴あり':'';
- status.hidden=!status.textContent;button.onclick=()=>applyCharacterBasicPreset(select.value);select.onchange=()=>renderCharacterPresetBar();
+ const root=$('characterPresetBar');if(!root)return;const person=allPeople().find(x=>x.id===personKey);root.hidden=!person;root.classList.toggle('hidden',!person);if(!person)return;
+ const ref='person:'+person.id,select=$('characterPresetSelect'),button=$('characterPresetApply'),status=$('characterPresetStatus');renderActorFormControls(ref,root,select,button,status);
+ const choices=actorOwnerForRef(ref)?actorFormsForOwner(actorOwnerForRef(ref)):[];button.textContent=choices.length>1?'基本外見を適用':'キャラ基本設定を適用';
+ if(!choices.length){status.textContent='このキャラクターの基本設定は未登録';status.hidden=false}else if(!status.textContent){const history=profiles[person.id]?.characterPresetHistory;if(history&&history.character===item('character',person.id)?.value){status.textContent='「'+history.label+'」の適用履歴あり';status.hidden=false}}
 }
+// Stage 2: selection is independent of application; legacy appearance contracts remain separate.
+function actorSelectedForm(ref){
+ const owner=actorOwnerForRef(ref);if(!owner)return null;const entry=actorExtensions.byActor[ref],forms=actorFormsForOwner(owner);
+ const explicit=entry&&afOwnerKey(entry.ownerRef)===afOwnerKey(owner)?resolveActorForm(owner,entry.selectedFormId):null;
+ return explicit||resolveActorForm(owner,actorFormCatalog.defaultByOwner[afOwnerKey(owner)])||forms[0]||null;
+}
+function actorCurrentAppearance(ref,record){
+ if(ref.startsWith('creature:')){const c=record||creatures.find(c=>c.id===ref.slice(9));return c?Object.fromEntries(['type','size','color','surface','features'].map(k=>[k,k==='features'?[...(c[k]||[])]:c[k]||''])):null}
+ const p=afCopy(record||profiles[ref.slice(7)]||{});expandOutfitSelection(p);
+ const value=(field,id)=>item(field,id)?.value||id||'';
+ return {hair:{primary:value('hairColor',p.hairPrimary||p.hairColor),secondary:value('hairColor',p.hairSecondary),mode:p.hairMode||'single'},eyes:{left:value('eyeColor',p.eyeLeft||p.eyeColor),right:value('eyeColor',p.eyeRight),mode:p.eyeMode||'same'},hairStyle:asList(p.hairStyle).map(id=>value('hairStyle',id)),outfit:asList(p.outfit).map(id=>value('outfit',id)),detail:Object.fromEntries(['eyeDetail','skin',...detailClothingFields,'legwear','carry'].map(k=>[k,{values:asList(p.detail?.[k]),custom:p.detailCustom?.[k]||''}]))};
+}
+function actorFormStatus(ref){
+ const owner=actorOwnerForRef(ref),entry=actorExtensions.byActor[ref];if(!owner||!entry||afOwnerKey(entry.ownerRef)!==afOwnerKey(owner))return '';
+ const selected=actorSelectedForm(ref),applied=entry.appliedForm;
+ if(!applied)return entry.selectedFormId&&selected?'選択：'+selected.name+'（未適用）':'';
+ const missing=!resolveActorForm(owner,applied.formId),changed=applied.appearanceDigest!==afHash(JSON.stringify(actorCurrentAppearance(ref)));
+ const history=(missing?'適用履歴：':'適用済み：')+applied.label+(missing?'（参照元なし）':'')+(changed?'・個別変更あり':'');
+ return selected&&(selected.id!==applied.formId||selected.revision!==applied.revision)?'選択：'+selected.name+'（未適用）／'+history:history;
+}
+function refreshActorFormUI(){renderCharacterPresetBar();if(creaturePicker&&$('creatureDialog').open)renderCreaturePicker()}
+function actorFormTransaction(ref,label,change){
+ afAssert(actorFormStorageReady,'保存移行が完了していません');const owner=actorOwnerForRef(ref);afAssert(owner,'対象の個体が見つかりません');
+ const id=ref.split(':').slice(1).join(':'),person=ref.startsWith('person:'),record=person?profiles[id]:creatures.find(c=>c.id===id),extensions=afCopy(actorExtensions),weights=afCopy(tagWeights),history=undoHistory.slice();
+ saveUndo(label);
+ try{change();afValidateExtensions(actorExtensions);if(person){const scroll=$('workspaceMain').scrollTop;renderProfiles();layoutPeople();$('workspaceMain').scrollTop=scroll;dirty()}else creatureChanged();afAssert(persist(),'設定を保存できませんでした');refreshActorFormUI();return true}
+ catch(error){if(person){if(record===undefined)delete profiles[id];else profiles[id]=record}else{const index=creatures.findIndex(c=>c.id===id);if(index>=0)creatures[index]=record}actorExtensions=extensions;tagWeights=weights;undoHistory.splice(0,undoHistory.length,...history);$('undoOpen').disabled=!undoHistory.length;clearTimeout(workingSaveTimer);try{renderProfiles();layoutPeople();renderCreatures();refreshActorFormUI()}catch{}throw error}
+}
+function selectActorForm(ref,formId){
+ try{const owner=actorOwnerForRef(ref),form=owner&&resolveActorForm(owner,formId);afAssert(form,'この個体の形態が見つかりません');const current=actorExtensions.byActor[ref];if(current?.selectedFormId===formId&&afOwnerKey(current.ownerRef)===afOwnerKey(owner))return true;
+  return actorFormTransaction(ref,'原作形態を選択',()=>{actorExtensions.byActor[ref]={...afCopy(current||actorExtensionFor(ref)||{}),ownerRef:owner,selectedFormId:formId}});
+ }catch(error){refreshActorFormUI();shortToast(error.message);return false}
+}
+function validateActorFormIdentity(identity){
+ afValidateIdentity(identity);afAssert(identity.mode!=='replace'||identity.tokens.length>0,'置換用の識別タグがありません');
+ for(const tag of identity.tokens)afAssert(tag.trim()===tag&&tag.length>0&&tag.length<=500&&!/[\r\n\x00-\x1f]/.test(tag)&&tag!=='BREAK'&&!/^\(.+:\s*\d+(?:\.\d+)?\)$/.test(tag),'識別タグは重み構文を含まない単独のタグを指定してください');
+}
+function validatePersonFormAppearance(source){
+ afAssert(afObject(source),'人物の外見定義が不正です');afValidateAppearance({kind:'person'},source);
+ for(const field of ['hair','eyes'])if(source[field]!==undefined){afAssert(afObject(source[field]),'色の定義が不正です');const keys=field==='hair'?['primary','secondary','mode']:['left','right','mode'];afAssert(Object.keys(source[field]).every(k=>keys.includes(k))&&Object.values(source[field]).every(v=>typeof v==='string'),'色の定義が不正です')}
+ if(source.hairStyle!==undefined)afAssert(Array.isArray(source.hairStyle)&&source.hairStyle.every(v=>typeof v==='string'&&v.length>0),'髪型の定義が不正です');
+ if(source.outfit!==undefined)afAssert(typeof source.outfit==='string','衣装の定義が不正です');
+ if(source.detail!==undefined)afAssert(afObject(source.detail)&&Object.values(source.detail).every(v=>Array.isArray(v)&&v.every(x=>typeof x==='string'&&x.length>0)),'詳細外見の定義が不正です');
+ if(source.hair?.mode&&source.hair.mode!=='single')afAssert(source.hair.primary&&source.hair.secondary,'2色髪の色が不足しています');
+ if(source.eyes?.mode==='odd')afAssert(source.eyes.left&&source.eyes.right,'左右の目色が不足しています');
+}
+function validateActorAppearanceWeights(ref,record){
+ const valid=value=>afAssert((typeof value==='number'||typeof value==='string'&&value.trim()!=='')&&Number.isFinite(Number(value))&&Number(value)>=0,'外見または識別タグの強調度が不正です');
+ if(ref.startsWith('creature:')){valid(creatureWeightContext(record,'species').weight(record.species));return}
+ const id=ref.slice(7),name=item('character',id)?.value;valid(tagWeights.character?.[name]??Number($('weight').value));
+ for(const kind of ['hair','eye'])for(const weight of Object.values(record.colorWeights?.[kind]||{}))valid(weight);
+ for(const field of ['hairStyle','outfit'])for(const key of asList(record[field])){const row=item(field,key);if(row)valid(record.itemWeights?.[field]?.[row.value]??globalTagWeight(field,row.value))}
+ for(const field of ['eyeDetail','skin',...detailClothingFields,'legwear','carry'])for(const value of asList(record.detail?.[field]))valid(record.itemWeights?.[field]?.[value]??globalTagWeight('detail:'+field,value));
+}
+function buildActorApplyPlan(ref,formId=actorSelectedForm(ref)?.id){
+ afAssert(actorFormStorageReady,'保存移行が完了していません');const owner=actorOwnerForRef(ref),form=owner&&resolveActorForm(owner,formId);afAssert(form,'この個体の形態が見つかりません');validateActorFormIdentity(form.identity);
+ const master=actorFormLegacyPreset(form);if(form.origin==='standard')afAssert(master,'標準形態の参照元が見つかりません');
+ const id=ref.slice(ref.startsWith('person:')?7:9),record=ref.startsWith('person:')?profiles[id]||{}:creatures.find(c=>c.id===id),next=afCopy(record),resetWeights=[];
+ if(owner.kind==='person'){
+  const source=master?Object.fromEntries(['hair','eyes','hairStyle','outfit','detail','clearAppearance'].filter(k=>master[k]!==undefined).map(k=>[k,master[k]])):form.appearance;validatePersonFormAppearance(source);
+  const patch=resolveCharacterPreset(source);afAssert(Object.keys(patch).length,'適用できる外見がありません');
+  for(const field of ['hairPrimary','hairSecondary','hairColor','hairStyle','eyeLeft','eyeRight','eyeColor','outfit'])for(const key of asList(patch[field])){const catalogField=field.startsWith('hair')&&field!=='hairStyle'?'hairColor':field.startsWith('eye')?'eyeColor':field;afAssert(!maIsHidden('catalog:'+catalogField,key),'必要な外見候補が非表示です')}
+  for(const [field,values]of Object.entries(patch.detail||{}))for(const value of values)afAssert(!maIsHidden('detail:'+field,value),'必要な特徴候補が非表示です');
+  for(const field of ['hairMode','eyeMode'])if(patch[field])afAssert(!maIsHidden('structural:'+field,patch[field]),'必要な色モードが非表示です');
+  for(const outfitId of patch.outfit||[])for(const [field,raw]of Object.entries(outfitSetForValue(item('outfit',outfitId).value)||{})){const value=outfitDetailValue(field,raw);afAssert(detailOptions[field]?.options.some(row=>row[0]===value)&&!maIsHidden('detail:'+field,value),'必要な衣装部位の候補が未登録または非表示です')}
+  const {detail,clearAppearance,...appearance}=patch;clearCharacterPresetAppearance(next,clearAppearance);Object.assign(next,appearance);
+  if(detail){expandOutfitSelection(next);next.detail??={};for(const [field,values]of Object.entries(detail)){if(detailClothingFields.has(field)&&(asList(next.detail[field]).length||next.detailCustom?.[field]?.trim()))continue;next.detail[field]=values.slice()}}
+  next.characterPresetHistory={character:item('character',id)?.value||owner.value||id,presetId:form.legacyPresetId||form.id,label:form.name};
+ }else{
+  const source=master?resolveCreatureBasicPreset(master):form.appearance;afAssert(afObject(source)&&!maIsHidden('creature:species',record.species)&&creatureFields.species.options.some(row=>row[0]===record.species),'種類の候補が未登録または非表示です');
+  for(const field of ['type','size','color','surface','features']){const value=source[field];afAssert(field==='features'?Array.isArray(value)&&new Set(value).size===value.length:typeof value==='string','基本外見の定義が不正です');for(const key of field==='features'?value:value?[value]:[])afAssert(typeof key==='string'&&key&&creatureFields[field].options.some(row=>row[0]===key)&&!maIsHidden('creature:'+field,key),'必要な外見候補が未登録または非表示です');next[field]=afCopy(value);resetWeights.push(creatureWeightField(record,field))}
+ }
+ validateActorAppearanceWeights(ref,next);
+ const stateDigest=afHash(JSON.stringify({record,entry:actorExtensions.byActor[ref]||null,weights:tagWeights}));
+ return {actorRef:ref,ownerRef:owner,formId:form.id,revision:form.revision,label:form.name,identity:afCopy(form.identity),formDigest:afHash(JSON.stringify(form)),stateDigest,next,resetWeights,appearance:actorCurrentAppearance(ref,next)};
+}
+function commitActorApplyPlan(plan){
+ const fresh=buildActorApplyPlan(plan.actorRef,plan.formId);afAssert(JSON.stringify(fresh)===JSON.stringify(plan),'適用前に設定または形態が変更されました');
+ return actorFormTransaction(plan.actorRef,'基本外見を適用',()=>{const ref=plan.actorRef,id=ref.slice(ref.startsWith('person:')?7:9),at=new Date().toISOString(),next=afCopy(plan.next);if(ref.startsWith('person:')){next.characterPresetHistory.appliedAt=at;profiles[id]=next}else creatures[creatures.findIndex(c=>c.id===id)]=next;for(const key of plan.resetWeights)delete tagWeights[key];
+  actorExtensions.byActor[ref]={...afCopy(actorExtensions.byActor[ref]||actorExtensionFor(ref)||{}),ownerRef:plan.ownerRef,selectedFormId:plan.formId,appliedForm:{formId:plan.formId,revision:plan.revision,label:plan.label,identity:afCopy(plan.identity),appliedAt:at,appearanceDigest:afHash(JSON.stringify(plan.appearance)),appearance:afCopy(plan.appearance)}};
+ });
+}
+function applyActorForm(ref,formId=actorSelectedForm(ref)?.id){try{const result=commitActorApplyPlan(buildActorApplyPlan(ref,formId));if(result)shortToast('基本外見を適用しました');return result}catch(error){shortToast(error.message);return false}}
+function actorSpeciesChanged(c,previous){
+ const ref='creature:'+c.id,owner=actorOwnerForRef(ref);if(!previous||afOwnerKey(previous.ownerRef)===afOwnerKey(owner))return;
+ (actorExtensions.quarantined||=[]).push({actorRef:ref,reason:'owner-changed',value:afCopy(previous)});
+ const next={ownerRef:owner};for(const field of ['representation','humanProfile','adult'])if(previous[field]!==undefined)next[field]=afCopy(previous[field]);delete actorExtensions.byActor[ref];const form=actorSelectedForm(ref);if(form)next.selectedFormId=form.id;actorExtensions.byActor[ref]=next;
+}
+// Only applied snapshots affect identifiers. Original logical weight keys remain unchanged.
+var actorIdentityOwnerOverrides=null;
+function actorIdentityState(ref){const entry=actorExtensions.byActor[ref],owner=actorIdentityOwnerOverrides?.get(ref)||actorOwnerForRef(ref),identity=entry&&owner&&afOwnerKey(entry.ownerRef)===afOwnerKey(owner)?entry.appliedForm?.identity:null;if(identity)try{validateActorFormIdentity(identity)}catch{return null}return identity}
+function actorIdentityValues(ref,base){const identity=actorIdentityState(ref);if(!identity||identity.mode==='inherit')return [base];const values=identity.mode==='augment'?[base,...identity.tokens]:identity.tokens;return [...new Set(values.filter(Boolean))]}
+function actorIdentityTags(ref,base,weight=1){const values=actorIdentityValues(ref,base);return values.map((value,index)=>explicitWeight(value,index===0?weight:1))}
+function renderActorFormControls(ref,root,select,apply,status){
+ const forms=actorOwnerForRef(ref)?actorFormsForOwner(actorOwnerForRef(ref)):[],selected=actorSelectedForm(ref);root.classList.add('actorFormControls');root.classList.toggle('actorFormMulti',forms.length>1);
+ let launch=root.querySelector('.actorFormLaunch');if(!launch){launch=node('button',undefined,'secondary actorFormLaunch');launch.type='button';apply.before(launch)}
+ select.replaceChildren(...forms.map(form=>{const option=node('option',form.name);option.value=form.id;return option}));select.value=selected?.id||'';select.hidden=forms.length<2||forms.length>=4;select.setAttribute('aria-label','原作形態');select.dataset.actorFormControl='';select.onchange=()=>selectActorForm(ref,select.value);
+ launch.hidden=forms.length<4;launch.textContent=selected?.name||'原作形態を選択';launch.title=selected?.name||'';launch.setAttribute('aria-label','原作形態：'+(selected?.name||'未選択'));launch.onclick=()=>openActorFormDialog(ref,launch);
+ apply.hidden=!forms.length;apply.disabled=!selected||!actorFormStorageReady;apply.title='選択した形態の基本外見を適用します。選択だけでは現在の外見を変更しません。';if(selected)try{buildActorApplyPlan(ref,selected.id)}catch(error){apply.disabled=true;apply.title=error.message}apply.onclick=()=>applyActorForm(ref);
+ status.textContent=actorFormStatus(ref);status.title=status.textContent;status.hidden=!status.textContent;
+}
+function openActorFormDialog(ref,trigger){
+ const owner=actorOwnerForRef(ref);if(!owner)return;let dialog=$('actorFormDialog');
+ if(!dialog){dialog=node('dialog',undefined,'utilityDialog actorFormDialog');dialog.id='actorFormDialog';const head=node('div',undefined,'dialogHead'),title=node('h2','原作形態'),close=node('button','閉じる','secondary'),search=node('input'),list=node('div',undefined,'candidateChoices actorFormList');title.id='actorFormDialogTitle';dialog.setAttribute('aria-labelledby',title.id);close.id='actorFormClose';close.type='button';close.onclick=()=>dialog.close();search.id='actorFormSearch';search.type='search';search.placeholder='形態名を検索';search.setAttribute('aria-label','形態名を検索');list.id='actorFormList';head.append(title,close);dialog.append(head,search,list);document.body.append(dialog)}
+ const search=$('actorFormSearch'),list=$('actorFormList'),forms=actorFormsForOwner(owner);search.value='';search.hidden=forms.length<8;
+ const render=()=>{list.replaceChildren();const selected=actorSelectedForm(ref),query=search.value.normalize('NFKC').toLowerCase();for(const form of forms.filter(f=>f.name.normalize('NFKC').toLowerCase().includes(query))){const row=node('div',undefined,'modalOption'),pick=node('button',form.name,'quiet actorFormOption');pick.type='button';pick.classList.toggle('active',selected?.id===form.id);pick.setAttribute('aria-pressed',String(selected?.id===form.id));pick.title=form.name;pick.onclick=()=>{if(afOwnerKey(actorOwnerForRef(ref))!==afOwnerKey(owner)){shortToast('対象の個体が変更されました');dialog.close();return}if(selectActorForm(ref,form.id))dialog.close()};row.append(pick);list.append(row)}if(!list.children.length)list.append(node('p','形態がありません','hint'))};search.oninput=render;render();dialog.onclose=()=>requestAnimationFrame(()=>{if(trigger?.isConnected&&!trigger.hidden)trigger.focus({preventScroll:true})});dialog.showModal();$('actorFormClose').focus({preventScroll:true});
+}
+
 function layoutPeople(){if(!window.appReady)return;const persons=allPeople(),cards=[...$('profiles').children].filter(x=>x.classList.contains('profile'));if(!persons.some(p=>p.id===personKey))personKey=persons[0]?.id||'';const selector=$('personSwitch'),sig=JSON.stringify(persons.map(p=>[p.id,p.name]));if(selector.dataset.options!==sig){selector.replaceChildren();for(const p of persons){const o=node('option',p.name);o.value=p.id;selector.append(o)}if(!persons.length){const o=node('option','人物が未選択です');o.value='';selector.append(o)}selector.dataset.options=sig}selector.value=personKey;selector.disabled=!persons.length;renderCharacterPresetBar();$('personOverviewOpen').disabled=characterKind==='creature'?!creatures.length:!persons.length;$('personIdentity').disabled=!persons.length;$('openRelations').disabled=persons.length<2;off($('peopleEmpty'),!!persons.length);off($('personTabs'),!persons.length);const adult=personGroup==='adult'&&!!persons.length;off($('profiles'),adult||!persons.length);off($('adultSceneSection'),!adult);off($('adultSubtabs'),!adult);off($('personPager'),true);
 for(const b of $('personTabs').children)b.classList.toggle('active',b.dataset.group===personGroup);updatePersonBadges();
 for(const card of cards)off(card,card.dataset.personId!==personKey);
@@ -5260,7 +5359,7 @@ document.addEventListener('click',event=>{if(undoBusy)return;const t=event.targe
  if(t.closest('#choiceDialogChoices .pickedRemove,#choiceDialogChoices .modalOption,#personChoiceChoices .modalOption,#selectedOverviewBody .overviewRemove,#selectedOverviewBody .overviewWeight,#selectedOverviewBody .overviewRow button[aria-label$="を解除"],#pickers .cardSelectionRemove,#choiceDialogChoices .pickedWeight,#colorPaletteChoices .paletteChoice,#colorPaletteModes button,#positionDialog button[data-direction]'))saveUndo('選択');
  else if(t.closest('#applyMangaPagePreset'))saveUndo('プリセット');
 },true);
-document.addEventListener('change',event=>{if(undoBusy)return;const t=event.target;if(t.matches('#choiceDialogChoices input[type=checkbox],#personChoiceChoices input[type=checkbox]'))return;if(t.closest('#profiles,#adultSceneSection')&&t.matches('input[type=checkbox],select'))saveUndo('設定')},true);
+document.addEventListener('change',event=>{if(undoBusy)return;const t=event.target;if(t.matches('#choiceDialogChoices input[type=checkbox],#personChoiceChoices input[type=checkbox]'))return;if(!t.hasAttribute('data-actor-form-control')&&t.closest('#profiles,#adultSceneSection')&&t.matches('input[type=checkbox],select'))saveUndo('設定')},true);
 $('mobileGenerate').onclick=()=>{if(document.body.dataset.mobileTab==='manga'){generateManga();mangaView='output';layoutManga();toast('漫画プロンプトを生成しました')}else{generate();setResult('positive');showMobileTab('result');toast('プロンプトを生成しました')}};
 // Use a temporary text box for clipboard fallback; never focus a hidden result pane.
 async function copyOutput(id){const value=$(id).value;if(!value){toast('先にプロンプトを生成してください');return}try{await navigator.clipboard.writeText(value)}catch{const area=node('textarea');area.value=value;area.style.cssText='position:fixed;left:0;top:0;width:1px;height:1px;opacity:0';document.body.append(area);area.focus({preventScroll:true});area.select();const success=document.execCommand('copy');area.remove();if(!success){toast('コピーできません。結果の文章を長押ししてください');return}}toast('コピーしました')}
@@ -5676,7 +5775,7 @@ creatureIdentityHead.append(creatureIdentityTitle,creatureIdentityClose);$('remo
 $('removeCreature').addEventListener('click',()=>creatureIdentityDialog.close());
 creatureIdentity.onclick=()=>{const c=currentCreature();if(!c)return;creatureIdentityName.textContent=creatureName(c);$('removeCreature').setAttribute('aria-label',creatureName(c)+'を削除');openDialog('creatureIdentityDialog')};
 const creaturePresetControls=node('div',undefined,'simpleTools'),creatureBasicPresetApply=node('button','基本外見を適用','secondary');
-creaturePresetControls.id='creaturePresetControls';creaturePresetControls.hidden=true;creatureBasicPresetApply.id='creatureBasicPresetApply';creatureBasicPresetApply.type='button';creaturePresetControls.append(creatureBasicPresetApply);$('creatureSearchLabel').before(creaturePresetControls);
+creaturePresetControls.id='creaturePresetControls';creaturePresetControls.hidden=true;creatureBasicPresetApply.id='creatureBasicPresetApply';creatureBasicPresetApply.type='button';const creatureFormSelect=node('select'),creatureFormStatus=node('small',undefined,'actorFormStatus');creatureFormSelect.id='creatureFormSelect';creatureFormSelect.hidden=true;creatureFormStatus.id='creatureFormStatus';creatureFormStatus.setAttribute('aria-live','polite');creatureFormStatus.hidden=true;creaturePresetControls.append(creatureFormSelect,creatureBasicPresetApply,creatureFormStatus);$('creatureSearchLabel').before(creaturePresetControls);
 const creatureFeatureControls=node('div',undefined,'simpleTools'),creatureOtherFeatures=node('button','他のCreatureの特徴も表示','secondary');
 creatureFeatureControls.id='creatureFeatureControls';creatureFeatureControls.hidden=true;creatureOtherFeatures.id='creatureOtherFeatures';creatureOtherFeatures.type='button';creatureOtherFeatures.setAttribute('aria-pressed','false');creatureOtherFeatures.onclick=()=>{creatureOtherFeaturesVisible=!creatureOtherFeaturesVisible;renderCreaturePicker()};creatureFeatureControls.append(creatureOtherFeatures);$('creatureCandidateCount').before(creatureFeatureControls);
 $('creatureSearch').oninput=renderCreaturePicker;
@@ -6048,7 +6147,7 @@ refreshCandidateExtras=function(){maExtrasRefresh();for(const [kind,fields] of [
 const maScenePrompt=normalScenePrompt;
 normalScenePrompt=function(...args){const tags=maScenePrompt(...args);return tags.map(tag=>{for(const [field] of Object.entries(normalSceneFields))for(const value of normalSceneValues(field)){const edit=personOptionEdits['scene:'+field+'|'+value];if(edit&&tag===weighted(value,'sceneElement'))return explicitWeight(edit.value,globalTagWeight('sceneElement',value))}return tag})};
 const maCreaturePrompts=creaturePromptGroups;
-creaturePromptGroups=function(){const edits=Object.entries(personOptionEdits).filter(([key,v])=>key.startsWith('creature:')&&v?.value);if(!edits.length)return maCreaturePrompts();const original=creatures,originalWeights=tagWeights;try{creatures=maCopy(creatures);tagWeights=maCopy(tagWeights);for(const c of original)for(const [key,edit] of edits){const split=key.indexOf('|'),field=key.slice(9,split),value=key.slice(split+1),map=tagWeights[creatureWeightField(c,field)];if(map&&map[value]!==undefined)map[edit.value]=map[value]}for(const c of creatures)for(const [key,edit] of edits){const split=key.indexOf('|'),field=key.slice(9,split),value=key.slice(split+1);if(creatureFields[field]?.single){if(c[field]===value)c[field]=edit.value}else if(Array.isArray(c[field]))c[field]=c[field].map(v=>v===value?edit.value:v)}return maCreaturePrompts()}finally{creatures=original;tagWeights=originalWeights}};
+creaturePromptGroups=function(){const edits=Object.entries(personOptionEdits).filter(([key,v])=>key.startsWith('creature:')&&v?.value);if(!edits.length)return maCreaturePrompts();const original=creatures,originalWeights=tagWeights,originalOwners=actorIdentityOwnerOverrides;try{actorIdentityOwnerOverrides=new Map(original.map(c=>['creature:'+c.id,actorOwnerForRef('creature:'+c.id)]));creatures=maCopy(creatures);tagWeights=maCopy(tagWeights);for(const c of original)for(const [key,edit] of edits){const split=key.indexOf('|'),field=key.slice(9,split),value=key.slice(split+1),map=tagWeights[creatureWeightField(c,field)];if(map&&map[value]!==undefined)map[edit.value]=map[value]}for(const c of creatures)for(const [key,edit] of edits){const split=key.indexOf('|'),field=key.slice(9,split),value=key.slice(split+1);if(creatureFields[field]?.single){if(c[field]===value)c[field]=edit.value}else if(Array.isArray(c[field]))c[field]=c[field].map(v=>v===value?edit.value:v)}return maCreaturePrompts()}finally{creatures=original;tagWeights=originalWeights;actorIdentityOwnerOverrides=originalOwners}};
 function maButton(text,fn,cls='secondary'){const b=node('button',text,cls);b.type='button';b.onclick=fn;return b}
 function maInput(value='',type='text'){const x=node('input');x.type=type;x.value=value;return x}
 function maField(root,label,input){const wrap=node('label',label,'maField');wrap.append(input);root.append(wrap);return input}
