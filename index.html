@@ -9126,6 +9126,10 @@ function protectCreatureAdultEditor(){
   creatureAdultAuthorizations.delete(s.ref);for(const d of document.querySelectorAll('dialog[open][data-creature-adult]'))d.close();if(activePersonPicker?.actorEditor?.adult)$('personChoiceDialog').close();s.tab='basic';s.page=0;renderCreatureHumanEditor();shortToast('対象条件が変わりました。個別確認が必要です');
  }
 }
+// A local candidate/favorite commit may advance the bundle while the actor draft
+// stays untouched. Rebase only our known revision and unchanged committed actor;
+// a stale external writer still fails afCommitBundle and cannot rebase a draft.
+const caEditorBeforePersist=persist;persist=function(...args){const s=creatureHumanEditorState,before=actorFormLastBundle?.marker.revision,result=caEditorBeforePersist(...args);try{if(result&&s&&s===creatureHumanEditorState&&!s.committing&&s.adultRevision===before&&JSON.stringify(actorExtensions.byActor[s.ref]||null)===s.extensionBefore&&JSON.stringify(creatures.find(c=>'creature:'+c.id===s.ref))===s.nativeBefore&&JSON.stringify(creatureAdultState(s.ref))===JSON.stringify(s.adultBefore))s.adultRevision=actorFormLastBundle.marker.revision}catch{}return result};
 const caEditorBeforeDirty=dirty;dirty=function(...args){const result=caEditorBeforeDirty(...args);protectCreatureAdultEditor();return result};
 const caEditorBeforeChanged=creatureChanged;creatureChanged=function(...args){const result=caEditorBeforeChanged(...args);protectCreatureAdultEditor();return result};
 const caEditorBeforeRevoke=revokeCreatureAdultAuthorizations;revokeCreatureAdultAuthorizations=function(...args){const result=caEditorBeforeRevoke(...args);protectCreatureAdultEditor();return result};
