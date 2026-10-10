@@ -52,7 +52,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
   let failed=false;try{stageCreatureAdultState(ref,'semi',{...full,weights:{x:{y:-1}}})}catch{failed=true}check(failed,'invalid pending weight rejected');
   failed=false;try{stageCreatureAdultState(ref,'semi',{...full,unexpected:true})}catch{failed=true}check(failed,'extra pending keys rejected');
   check(before===JSON.stringify(captureWorking())&&formsBefore===JSON.stringify(actorFormCatalog)&&peopleBefore===JSON.stringify(profiles)&&adultPeopleBefore===JSON.stringify(adultScene.people)&&undoBefore===undoHistory.length,'pending state not mixed with committed snapshots or Undo');
-  const rows=actorExtensions.byActor[ref];rows.adult={confirmed:true,profile:{fixture:true}};
+  const legacy=captureWorking();legacy.actorExtensions.version=2;legacy.actorExtensions.byActor[ref].adult={confirmed:true,profile:{fixture:true}};restoreWorking(legacy);const rows=actorExtensions.byActor[ref];if(!rows.adult.legacyPayload?.confirmed||rows.adult.confirmed)throw Error('legacy confirmation not quarantined');
   check(!creatureAdultEligibility(ref).allowed,'legacy saved confirmed cannot authorize');
   const diskBefore=JSON.stringify(captureWorking());saveCurrentWorking();check(diskBefore===JSON.stringify(captureWorking()),'save leaves legacy fields unchanged');
   check(!localStorage.getItem(actorFormStorageKeys.working).includes('fixture-receipt'),'unfinished pending schema not persisted');
