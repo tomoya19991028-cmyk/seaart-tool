@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "id": "T08",
+      "passed": false,
+      "error": "page.evaluate: Error: snapshot draft separate Undo\n    at window.hTestCheck (eval at evaluate (:311:30), <anonymous>:1:903)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:761)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-horror/tests/horror/contracts.cjs:12:23\n    at test (/workspace/seaart-horror/tests/horror/contracts.cjs:5:522)\n    at async /workspace/seaart-horror/tests/horror/contracts.cjs:12:1",
+      "pageErrors": []
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false
+}

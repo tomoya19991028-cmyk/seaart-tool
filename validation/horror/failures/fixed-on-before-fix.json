@@ -1,0 +1,20 @@
+{
+  "before": [
+    {
+      "featureId": "horror-feature-glowing-eyes",
+      "semanticKey": "horror-feature-glowing-eyes",
+      "tag": "glowing eyes",
+      "weight": 1.4,
+      "continuity": "persistent"
+    }
+  ],
+  "after": [
+    {
+      "featureId": "horror-feature-glowing-eyes",
+      "semanticKey": "horror-feature-glowing-eyes",
+      "tag": "intensely glowing eyes",
+      "weight": 1.4,
+      "continuity": "persistent"
+    }
+  ]
+}

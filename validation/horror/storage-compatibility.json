@@ -1,0 +1,28 @@
+{
+  "rootVersion": 5,
+  "settingsVersion": 5,
+  "workingVersion": 2,
+  "historyVersion": 2,
+  "markerVersion": 1,
+  "journalVersion": 2,
+  "horrorVersion": 1,
+  "namespace": "creature-adult-v1/result-access-v1/motif-person-v1/horror-v1",
+  "keys": {
+    "settings": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+    "working": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+    "history": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+    "marker": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+    "journal": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1"
+  },
+  "actorExtensionsVersion": 4,
+  "adultVersion": 1,
+  "humanProfileVersion": 1,
+  "actorFormCatalogVersion": 1,
+  "oldKeysDeleted": false,
+  "oldReaders": "v3/v4 namespaces read-only; legacy reader retained",
+  "permanentUndo": false,
+  "undoSessionLimit": 10,
+  "importLimitBytes": 10485760,
+  "softWarningCount": 1000,
+  "hardCountLimit": null
+}

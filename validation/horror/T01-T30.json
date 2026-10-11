@@ -1,0 +1,188 @@
+{
+  "productCommit": "6673f871caa8c9611137629d4cd13b7bfc77f8d1",
+  "passed": true,
+  "tests": [
+    {
+      "id": "T01",
+      "description": "怪異未設定：固定全文・12dataset",
+      "passed": true,
+      "evidence": "r1.json + fixed-comparison.json"
+    },
+    {
+      "id": "T02",
+      "description": "normal：怪異抑制・選択保持",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T03",
+      "description": "対象ID別分離・元データ不変",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T04",
+      "description": "三値構造・元特徴／追加特徴の分離",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T05",
+      "description": "コマID・全payload・RAM画像の追従",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T06",
+      "description": "hidden slot ID・固定ON実強度維持",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T07",
+      "description": "変更コマの検出・プレビュー非破壊",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T08",
+      "description": "変更前全文固定・状態／構造／元特徴・依存グループ",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T09",
+      "description": "有効subsetの原子的部分確定",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T10",
+      "description": "依存変更／候補編集による再確認",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T11",
+      "description": "下書き永続保存・pagehide・reload・生成無作用",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T12",
+      "description": "独立Undo・削除復活ID・30日履歴・期限切れ拒否",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T13",
+      "description": "3way非競合統合・同field競合",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T14",
+      "description": "ancestor欠落：同内容no-op／明示競合",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T15",
+      "description": "tombstone：30日境界・期限延長防止",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T16",
+      "description": "trash：明示復元・古backup再削除防止",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T17",
+      "description": "期限切れbackup：保留・救出・非適用",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T18",
+      "description": "救出：依存ごとの確認再計算",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T19",
+      "description": "対応先不明：無期限保持・確定不可",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T20",
+      "description": "手動mapping：元Refs維持・再確認",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T21",
+      "description": "range：端点・内挿入・normal／off・transient禁止",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T22",
+      "description": "漫画全体／コマ別：共通identityへの変化混入防止",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T23",
+      "description": "7モデル×3分離×単独／複数＝42構成",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T24",
+      "description": "draft／trashの独立OFF・選択書出し",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T25",
+      "description": "未知schema・重複ID・危険key・不正日時・10MB超",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T26",
+      "description": "成人条件・生成結果保護・権限非復活",
+      "passed": true,
+      "evidence": "contracts.json"
+    },
+    {
+      "id": "T27",
+      "description": "簡易漫画：固定snapshot／全文一致",
+      "passed": true,
+      "evidence": "ui.json"
+    },
+    {
+      "id": "T28",
+      "description": "スマホ6viewport・44px操作・重なり防止",
+      "passed": true,
+      "evidence": "ui.json"
+    },
+    {
+      "id": "T29",
+      "description": "旧版4writerと新5キーの共存",
+      "passed": true,
+      "evidence": "pwa.json"
+    },
+    {
+      "id": "T30",
+      "description": "実SW：offline起動／編集／統合／保存／reload／online復帰",
+      "passed": true,
+      "evidence": "pwa.json"
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

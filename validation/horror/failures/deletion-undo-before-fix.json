@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "id": "T12",
+      "passed": false,
+      "error": "page.evaluate: Error: deletion Undo explicitly restores new incarnation and original 30-day marker\n    at window.hTestCheck (eval at evaluate (:311:30), <anonymous>:1:903)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:789)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-horror/tests/horror/contracts.cjs:16:23\n    at test (/workspace/seaart-horror/tests/horror/contracts.cjs:5:522)\n    at async /workspace/seaart-horror/tests/horror/contracts.cjs:16:1",
+      "pageErrors": []
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false
+}

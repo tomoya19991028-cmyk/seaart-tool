@@ -55,3 +55,17 @@ RESULT_DIR=/workspace/horror-retest/motif-boundaries node tests/creature-motif-p
 `scripts/integrate-horror.py` は基点HTMLに対する一度だけの検証付き変更。
 `scripts/embed-horror.py` はsourceを単一HTMLへ埋め込む。既存のCRLFを維持する。
 `HORROR_BUILD_HTML` を指定すると、基点から隔離ファイルを再生成して製品とbytes比較できる。
+
+最終製品commitは `6673f871caa8c9611137629d4cd13b7bfc77f8d1`。読込中の編集拒否と1,000項目のreload一致、削除Undoの新incarnation／30日履歴保持／期限切れ拒否、固定ONの実強度、候補編集後の確認失効、変更前の状態・構造・元特徴を含む一括固定も検証する。固定案の `fixedFacets` は既存の怪異設定だけを保持し、新しい生成候補ではない。同じコマの依存グループはまとめて確認・確定する。
+
+固定比較の完全なコマンド例：
+
+```sh
+mkdir -p /workspace/horror-retest/fixed
+ln -s /workspace/seaart-creature-motif-integration1/baseline /workspace/horror-retest/fixed/baseline
+RESULT_DIR=/workspace/horror-retest/fixed \
+CURRENT_RESULTS=/workspace/horror-retest/r1/r1-generation-fulltext.json \
+node tests/creature-motif-person-fixed-baseline.cjs
+```
+
+最終の機械可読結果と全文比較資料は `validation/horror/` に保存する。失敗した試行はローカルの別ディレクトリに残し、修正と再実行を最終報告に記録する。fixtureの修正は新規テストだけで行い、既存原本・expectedは変更しない。
