@@ -1,0 +1,422 @@
+{
+  "passed": true,
+  "viewports": [
+    {
+      "width": 360,
+      "height": 640,
+      "passed": true,
+      "initial": {
+        "dialog": {
+          "left": 7.203125,
+          "right": 352.796875,
+          "top": 24,
+          "bottom": 640,
+          "height": 616
+        },
+        "body": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 108,
+          "bottom": 570,
+          "height": 462
+        },
+        "header": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 25,
+          "bottom": 94,
+          "height": 69
+        },
+        "footer": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "buttons": [
+          {
+            "left": 278.71875,
+            "right": 339.796875,
+            "top": 37,
+            "bottom": 81,
+            "height": 44
+          },
+          {
+            "left": 20.203125,
+            "right": 123.21875,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 131.21875,
+            "right": 234.234375,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "bodyScrollable": true,
+        "dialogOverflow": "hidden",
+        "rootOverflow": false
+      },
+      "created": {
+        "overflow": false,
+        "entryHeight": 44,
+        "sourceStillPresent": true,
+        "columns": "163.5px 163.5px"
+      },
+      "focusReturned": true,
+      "undo": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "initial": {
+        "dialog": {
+          "left": 7.203125,
+          "right": 352.796875,
+          "top": 60,
+          "bottom": 800,
+          "height": 740
+        },
+        "body": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 144,
+          "bottom": 730,
+          "height": 586
+        },
+        "header": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 61,
+          "bottom": 130,
+          "height": 69
+        },
+        "footer": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "buttons": [
+          {
+            "left": 278.71875,
+            "right": 339.796875,
+            "top": 73,
+            "bottom": 117,
+            "height": 44
+          },
+          {
+            "left": 20.203125,
+            "right": 123.21875,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 131.21875,
+            "right": 234.234375,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "bodyScrollable": true,
+        "dialogOverflow": "hidden",
+        "rootOverflow": false
+      },
+      "created": {
+        "overflow": false,
+        "entryHeight": 44,
+        "sourceStillPresent": true,
+        "columns": "163.5px 163.5px"
+      },
+      "focusReturned": true,
+      "undo": true
+    },
+    {
+      "width": 393,
+      "height": 640,
+      "passed": true,
+      "initial": {
+        "dialog": {
+          "left": 7.859375,
+          "right": 385.125,
+          "top": 24,
+          "bottom": 640,
+          "height": 616
+        },
+        "body": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 108,
+          "bottom": 570,
+          "height": 462
+        },
+        "header": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 25,
+          "bottom": 94,
+          "height": 69
+        },
+        "footer": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "buttons": [
+          {
+            "left": 311.046875,
+            "right": 372.125,
+            "top": 37,
+            "bottom": 81,
+            "height": 44
+          },
+          {
+            "left": 20.859375,
+            "right": 123.875,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 131.875,
+            "right": 234.890625,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "bodyScrollable": true,
+        "dialogOverflow": "hidden",
+        "rootOverflow": false
+      },
+      "created": {
+        "overflow": false,
+        "entryHeight": 44,
+        "sourceStillPresent": true,
+        "columns": "180px 180px"
+      },
+      "focusReturned": true,
+      "undo": true
+    },
+    {
+      "width": 393,
+      "height": 800,
+      "passed": true,
+      "initial": {
+        "dialog": {
+          "left": 7.859375,
+          "right": 385.125,
+          "top": 60,
+          "bottom": 800,
+          "height": 740
+        },
+        "body": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 144,
+          "bottom": 730,
+          "height": 586
+        },
+        "header": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 61,
+          "bottom": 130,
+          "height": 69
+        },
+        "footer": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "buttons": [
+          {
+            "left": 311.046875,
+            "right": 372.125,
+            "top": 73,
+            "bottom": 117,
+            "height": 44
+          },
+          {
+            "left": 20.859375,
+            "right": 123.875,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 131.875,
+            "right": 234.890625,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "bodyScrollable": true,
+        "dialogOverflow": "hidden",
+        "rootOverflow": false
+      },
+      "created": {
+        "overflow": false,
+        "entryHeight": 44,
+        "sourceStillPresent": true,
+        "columns": "180px 180px"
+      },
+      "focusReturned": true,
+      "undo": true
+    },
+    {
+      "width": 430,
+      "height": 640,
+      "passed": true,
+      "initial": {
+        "dialog": {
+          "left": 8.59375,
+          "right": 421.390625,
+          "top": 24,
+          "bottom": 640,
+          "height": 616
+        },
+        "body": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 108,
+          "bottom": 570,
+          "height": 462
+        },
+        "header": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 25,
+          "bottom": 94,
+          "height": 69
+        },
+        "footer": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "buttons": [
+          {
+            "left": 347.3125,
+            "right": 408.390625,
+            "top": 37,
+            "bottom": 81,
+            "height": 44
+          },
+          {
+            "left": 21.59375,
+            "right": 124.609375,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 132.609375,
+            "right": 235.625,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "bodyScrollable": true,
+        "dialogOverflow": "hidden",
+        "rootOverflow": false
+      },
+      "created": {
+        "overflow": false,
+        "entryHeight": 44,
+        "sourceStillPresent": true,
+        "columns": "198.5px 198.5px"
+      },
+      "focusReturned": true,
+      "undo": true
+    },
+    {
+      "width": 430,
+      "height": 800,
+      "passed": true,
+      "initial": {
+        "dialog": {
+          "left": 8.59375,
+          "right": 421.390625,
+          "top": 60,
+          "bottom": 800,
+          "height": 740
+        },
+        "body": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 144,
+          "bottom": 730,
+          "height": 586
+        },
+        "header": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 61,
+          "bottom": 130,
+          "height": 69
+        },
+        "footer": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "buttons": [
+          {
+            "left": 347.3125,
+            "right": 408.390625,
+            "top": 73,
+            "bottom": 117,
+            "height": 44
+          },
+          {
+            "left": 21.59375,
+            "right": 124.609375,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 132.609375,
+            "right": 235.625,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "bodyScrollable": true,
+        "dialogOverflow": "hidden",
+        "rootOverflow": false
+      },
+      "created": {
+        "overflow": false,
+        "entryHeight": 44,
+        "sourceStillPresent": true,
+        "columns": "198.5px 198.5px"
+      },
+      "focusReturned": true,
+      "undo": true
+    }
+  ],
+  "simpleMangaEqual": true,
+  "physicalDevice": false,
+  "publicOrigin": false
+}

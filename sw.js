@@ -1,4 +1,4 @@
-const CACHE_NAME = 'seaart-tool-pwa-v4-stage5e-result-access-v1-http-cache-v1';
+const CACHE_NAME = 'seaart-tool-pwa-v4-motif-person-v1-http-cache-v1';
 const APP_SHELL = [
   './',
   './index.html',
