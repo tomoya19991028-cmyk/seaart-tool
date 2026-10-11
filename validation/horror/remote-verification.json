@@ -1,0 +1,62 @@
+{
+  "verifiedUTC": "2026-10-11T17:53:53.383405+00:00",
+  "repo": "tomoya19991028-cmyk/seaart-tool",
+  "branch": "feat/horror-tab-manga-draft-integration",
+  "savedRemoteHEAD": "cd681362f4e13f26bd074e44000e07aa7247aa07",
+  "productCommit": "6673f871caa8c9611137629d4cd13b7bfc77f8d1",
+  "gitRemoteHEADMatchesGitHubAPI": true,
+  "products": {
+    "index.html": {
+      "bytes": 3887032,
+      "sha256": "2e946f6e68720a4f73bdce7ec1c9266ee277d530289c3d24039cc803101de80d",
+      "equalToValidatedLocal": true,
+      "source": "GitHub contents API raw response at immutable commit"
+    },
+    "sw.js": {
+      "bytes": 2314,
+      "sha256": "5bd6b46a6f41f91b541feb62c0946751b4eab87c081bd6522241c1d549e66c31",
+      "equalToValidatedLocal": true,
+      "source": "GitHub contents API raw response at immutable commit"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "equalToValidatedLocal": true,
+      "source": "GitHub contents API raw response at immutable commit"
+    },
+    "icon-192.png": {
+      "bytes": 1369,
+      "sha256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+      "equalToValidatedLocal": true,
+      "source": "fetched Git commit tree"
+    },
+    "icon-512.png": {
+      "bytes": 3717,
+      "sha256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+      "equalToValidatedLocal": true,
+      "source": "fetched Git commit tree"
+    },
+    "icon-maskable-512.png": {
+      "bytes": 14905,
+      "sha256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78",
+      "equalToValidatedLocal": true,
+      "source": "fetched Git commit tree"
+    }
+  },
+  "mainBefore": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "mainAfter": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "mainUnchanged": true,
+  "pagesSource": {
+    "branch": "main",
+    "path": "/"
+  },
+  "pagesBuild": {
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "status": "built",
+    "created_at": "2026-10-11T06:08:35Z",
+    "updated_at": "2026-10-11T06:09:16Z"
+  },
+  "pagesBuildUnchanged": true,
+  "mainMerged": false,
+  "publicPWAUpdated": false
+}

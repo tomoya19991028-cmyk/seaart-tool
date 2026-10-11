@@ -107,7 +107,7 @@ SWの新cache名は `seaart-tool-pwa-v5-horror-v1-http-cache-v1`。network-first
 | sw.js | 2,314 | 5bd6b46a6f41f91b541feb62c0946751b4eab87c081bd6522241c1d549e66c31 |
 | manifest.json | 762 | d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f |
 
-[全製品・source・保護した原本の同一性](validation/horror/product-identity.json)。専用ブランチpush後のremote HEAD／製品照合は保存監査へ追記する。main／Pagesへ反映する操作は行わない。
+[全製品・source・保護した原本の同一性](validation/horror/product-identity.json)。専用ブランチへ通常pushし、remote HEAD `cd681362f4e13f26bd074e44000e07aa7247aa07` をgit fetch／ls-remote／GitHub APIで確認済み。GitHubから再取得したHTML・SW・manifestの全bytes／SHA-256と、Git treeのicon3件がローカル検証済み製品に一致した。[保存監査](validation/horror/remote-verification.json)。main HEADとPages buildは基点のまま。保存監査を含む後続commitも同じ製品bytesを保持し、最終remote HEADは最終回答で報告する。
 
 ## 9. 失敗記録・未解決事項
 

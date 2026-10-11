@@ -156,6 +156,11 @@
       "path": "ui.json",
       "bytes": 8954,
       "sha256": "7ef97e24e5af7955a4134c86c9abcf63c7c851ac30f29a94b094068c3be34bde"
+    },
+    {
+      "path": "remote-verification.json",
+      "bytes": 2190,
+      "sha256": "15ca83e69d26d247a35eae296d67aace3683edd6dee779269b1f738cacc6783e"
     }
   ]
 }
