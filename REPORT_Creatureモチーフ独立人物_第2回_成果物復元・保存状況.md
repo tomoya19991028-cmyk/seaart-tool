@@ -1,0 +1,9 @@
+# 第2回 成果物復元・保存状況
+
+2026-10-11。前回ローカル作業ツリーは本環境に存在せず、ユーザー添付から製品HTMLと報告書3件を回収した。添付原本、SHA-256 manifest、検証済みtar.gzを/workspace/seaart-artifact-recovery-20261011T112758Zに保存。
+
+index.htmlは3,789,047 bytes、SHA-256 a4ba6a92c90bcceab8117fc9406447f7fdd5802469ae9a7afa7f172f35a1e431、Git blob 433a37c97253cde3a3d0311fc426b446d1cc6491で報告済み値に完全一致。最新mainは5b5bb03589dcc9a661402395d6c3db20cfd4cf52。製品差分は末尾creatureMotifIndependentPersonスクリプト1件のみ、+13,497 bytes。SW、manifest、既存テスト原本、固定fixtureは変更していない。3報告書は添付原本と同一内容で正規ファイル名に保存する。
+
+第2回新規テスト3件、tests/README-creature-motif-person-integration2.md、tests/results/creature-motif-person-integration2/の元の実行記録・画像・失敗記録は未回収。元報告書のPASSは前回の報告内容であり、本環境で再実行したPASSを意味しない。今回の観測は別ディレクトリに保存し、元expected baselineは変更しない。
+
+現時点は回収済み成果物の専用ブランチ保存段階。必須検証の不足があるためmain統合・SW公開更新・Pages新規deploymentは実施しない。保存対象一式の回収完了とも報告しない。
