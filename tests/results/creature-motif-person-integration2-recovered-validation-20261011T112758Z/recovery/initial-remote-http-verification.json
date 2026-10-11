@@ -1,0 +1,54 @@
+{
+  "head": "f6326a9ced70ea5abdf281f3c6b942caad9e6f90",
+  "files": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 3789047,
+      "sha256": "a4ba6a92c90bcceab8117fc9406447f7fdd5802469ae9a7afa7f172f35a1e431",
+      "match_local": true
+    },
+    {
+      "path": "sw.js",
+      "http_status": 200,
+      "bytes": 2320,
+      "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a",
+      "match_local": true
+    },
+    {
+      "path": "manifest.json",
+      "http_status": 200,
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "match_local": true
+    },
+    {
+      "path": "REPORT_Creatureモチーフ独立人物_第2回_実装検証結果.md",
+      "http_status": 200,
+      "bytes": 7958,
+      "sha256": "4be4be489165f4b369dc137d5d6ceb312341de9404b2d931383299e236b48faf",
+      "match_local": true
+    },
+    {
+      "path": "REPORT_Creatureモチーフ独立人物_第2回_候補対応表.md",
+      "http_status": 200,
+      "bytes": 17295,
+      "sha256": "47daaac2a8db81cbef37d404dd2fdb2b3bce56ccd88d454f7377a30d82d8ddbe",
+      "match_local": true
+    },
+    {
+      "path": "REPORT_Creatureモチーフ独立人物_第2回_仕様影響分析.md",
+      "http_status": 200,
+      "bytes": 10491,
+      "sha256": "8128ce8b4be971efc0db46e5d99b42845bfdccb2d2367ac2ec87bfa450fc88eb",
+      "match_local": true
+    },
+    {
+      "path": "REPORT_Creatureモチーフ独立人物_第2回_成果物復元・保存状況.md",
+      "http_status": 200,
+      "bytes": 1443,
+      "sha256": "493f3513515f50070b4b651f8105aeeb8418ace7230c8e4f2775911b16eb8428",
+      "match_local": true
+    }
+  ]
+}

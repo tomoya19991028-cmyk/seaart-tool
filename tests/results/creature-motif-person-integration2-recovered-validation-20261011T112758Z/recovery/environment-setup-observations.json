@@ -1,0 +1,11 @@
+[
+  {
+    "status": "failed",
+    "action": "prepare readonly historical baseline",
+    "reason": "Mistyped commit SHA 326b4e482f17d4bd946056ed2e3fdda30b43d0; git show rejected before any fixture content was written."
+  },
+  {
+    "status": "corrected",
+    "commit": "326b4e482f17d4bd94605696ed2e3fdda30b43d0"
+  }
+]

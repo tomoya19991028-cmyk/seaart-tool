@@ -1,0 +1,7 @@
+{
+  "suite": "final-r1",
+  "test": "creature-motif-person-r1.cjs",
+  "exit_code": 0,
+  "seconds": 80.48,
+  "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/final-r1"
+}

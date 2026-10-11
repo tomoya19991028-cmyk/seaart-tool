@@ -1,0 +1,30 @@
+[
+  {
+    "source": "/tmp/codex-remote-attachments/01a12a93-6b3e-76eb-a65e-4843f694c0a2/28e7cfd5-b83a-4c9a-9dc4-eb0087cc6856/1-index.html",
+    "preserved": "/workspace/seaart-artifact-recovery-20261011T112758Z/original-attachments/1-index.html",
+    "bytes": 3789047,
+    "sha256": "a4ba6a92c90bcceab8117fc9406447f7fdd5802469ae9a7afa7f172f35a1e431",
+    "git_blob": "433a37c97253cde3a3d0311fc426b446d1cc6491"
+  },
+  {
+    "source": "/tmp/codex-remote-attachments/01a12a93-6b3e-76eb-a65e-4843f694c0a2/28e7cfd5-b83a-4c9a-9dc4-eb0087cc6856/2-REPORT_Creatureモチーフ独立人物_第2回_実装検証結果-1.md",
+    "preserved": "/workspace/seaart-artifact-recovery-20261011T112758Z/original-attachments/2-REPORT_Creatureモチーフ独立人物_第2回_実装検証結果-1.md",
+    "bytes": 7958,
+    "sha256": "4be4be489165f4b369dc137d5d6ceb312341de9404b2d931383299e236b48faf",
+    "git_blob": "02b195c89bdc433a9ed9142620c83ca26d31c9ae"
+  },
+  {
+    "source": "/tmp/codex-remote-attachments/01a12a93-6b3e-76eb-a65e-4843f694c0a2/28e7cfd5-b83a-4c9a-9dc4-eb0087cc6856/3-REPORT_Creatureモチーフ独立人物_第2回_候補対応表.md",
+    "preserved": "/workspace/seaart-artifact-recovery-20261011T112758Z/original-attachments/3-REPORT_Creatureモチーフ独立人物_第2回_候補対応表.md",
+    "bytes": 17295,
+    "sha256": "47daaac2a8db81cbef37d404dd2fdb2b3bce56ccd88d454f7377a30d82d8ddbe",
+    "git_blob": "a4d12f64d829d731cb4d4463d56124e24d6a60ec"
+  },
+  {
+    "source": "/tmp/codex-remote-attachments/01a12a93-6b3e-76eb-a65e-4843f694c0a2/28e7cfd5-b83a-4c9a-9dc4-eb0087cc6856/4-REPORT_Creatureモチーフ独立人物_第2回_仕様影響分析-1.md",
+    "preserved": "/workspace/seaart-artifact-recovery-20261011T112758Z/original-attachments/4-REPORT_Creatureモチーフ独立人物_第2回_仕様影響分析-1.md",
+    "bytes": 10491,
+    "sha256": "8128ce8b4be971efc0db46e5d99b42845bfdccb2d2367ac2ec87bfa450fc88eb",
+    "git_blob": "339b4cfcdd3bd46bb605dabd382b3e7bd02a8599"
+  }
+]
