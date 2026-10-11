@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "originalTestSHA256": "e7af4b06f2e0de1469ad11d12d578ecab29c3847749c8bdcb6560fa35ebffce0",
+  "originalArtifactSHA256": "e66ce65757f985a23c03d05f1d69d60d214e5169fc093abf72182cfda483d832",
+  "outputFingerprint": "7d283415876bc135f201d347063f641fa33ef7f0cc341843d050908195693b5d",
+  "counts": {
+    "normal": 210,
+    "manga": 210,
+    "panels": 420
+  },
+  "datasets": {
+    "catalog": "5e3983aee701217043996aedf330fecd61ae6bceec5b2e4bd4ce64cd649566be",
+    "characterBasicPresets": "07c5dd5cca30d21c7469f379d4679f5f3151a370887d365a6d2a2f265e09b505",
+    "detailOptions": "db188463d3b382cba5db15c685753729c21db7f80467c1acf3837d5d019a38e3",
+    "outfitSets": "1c462ff2912df52a795eafb38a5f444b9efc916cdba0a7814b3a253dbb9d00b2",
+    "genders": "46246caf0096977eba2b1d513ae42b45baf813454baf30642a24e8599f122e6b",
+    "creatureBasicPresets": "691064b84afb1fa838db0901aaddfdd8a49f0dde5df7a4f509222c80eea26b46",
+    "creatureCandidateBase": "09abf3abd2b9edbe9bf49651dabd03795916b1d730936a184812fdde031892df",
+    "owners": "df033ad7cc44ce8a2572f44a6981058c4fe930dc7727b16b35acd33cc97ea8c9",
+    "adapters": "37b3f49337724978a73a23100db97f61ba75bd4670593315c61c0249b517e234",
+    "creatureFields": "26cdf7b4f3945ba620966ce3b7cda2bf47883e4b0faa0cdfb7e0074197071e80",
+    "creatureFeatureLabels": "d83df8fe3048f6e362f367611f3d37f517f62e8a50f23ff347fcb8612e3c716c",
+    "creatureSpeciesGroups": "348ec996716a5e4d6304652b0b9655e12f07246b948c7d1422676162a5ee5656"
+  },
+  "deepCompared": true,
+  "rawGeneratorBodies": {
+    "generate": "31ff208941531b3b147963688d5e92e70dcfb5b99f665266d3210f7da5584633",
+    "generateManga": "90dd76733592a0aaf4bf5b9fbdf6e2190c6569eb92063d87e74ad6e792db76e9"
+  },
+  "inlineScriptSyntax": 13,
+  "utf8": true,
+  "CRLF": true,
+  "files": {
+    "index.html": {
+      "sha256": "a4ba6a92c90bcceab8117fc9406447f7fdd5802469ae9a7afa7f172f35a1e431",
+      "bytes": 3789047
+    },
+    "sw.js": {
+      "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a",
+      "bytes": 2320
+    },
+    "manifest.json": {
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "bytes": 762
+    }
+  }
+}

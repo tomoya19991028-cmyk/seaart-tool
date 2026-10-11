@@ -1,0 +1,44 @@
+[
+  {
+    "suite": "feature",
+    "test": "creature-motif-person.cjs",
+    "exit_code": 0,
+    "seconds": 152.13,
+    "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/feature"
+  },
+  {
+    "suite": "boundaries",
+    "test": "creature-motif-person-boundaries.cjs",
+    "exit_code": 0,
+    "seconds": 42.59,
+    "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/boundaries"
+  },
+  {
+    "suite": "legacy-regression",
+    "test": "creature-motif-person-legacy-regression.cjs",
+    "exit_code": 0,
+    "seconds": 70.03,
+    "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/legacy-regression"
+  },
+  {
+    "suite": "ui",
+    "test": "creature-motif-person-ui.cjs",
+    "exit_code": 0,
+    "seconds": 71.04,
+    "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/ui"
+  },
+  {
+    "suite": "pwa",
+    "test": "creature-motif-person-pwa.cjs",
+    "exit_code": 0,
+    "seconds": 33.7,
+    "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/pwa"
+  },
+  {
+    "suite": "final-r1",
+    "test": "creature-motif-person-r1.cjs",
+    "exit_code": 0,
+    "seconds": 80.48,
+    "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/final-r1"
+  }
+]

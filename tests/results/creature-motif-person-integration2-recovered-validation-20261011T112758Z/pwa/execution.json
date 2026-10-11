@@ -1,0 +1,7 @@
+{
+  "suite": "pwa",
+  "test": "creature-motif-person-pwa.cjs",
+  "exit_code": 0,
+  "seconds": 33.7,
+  "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/pwa"
+}

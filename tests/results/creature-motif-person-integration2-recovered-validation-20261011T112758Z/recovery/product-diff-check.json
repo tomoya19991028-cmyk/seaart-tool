@@ -1,0 +1,12 @@
+{
+  "base_main": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "old_bytes": 3775550,
+  "new_bytes": 3789047,
+  "delta_bytes": 13497,
+  "script_tags": 13,
+  "changed_script_indexes_zero_based": [
+    12
+  ],
+  "only_motif_script_changed": true,
+  "before_and_after_script_bytes_equal": true
+}

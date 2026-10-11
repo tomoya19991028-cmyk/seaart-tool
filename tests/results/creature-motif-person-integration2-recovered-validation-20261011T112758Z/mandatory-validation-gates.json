@@ -1,0 +1,17 @@
+{
+  "recovered_html_identity": "PASS",
+  "recovered_files_remote_save": "PASS",
+  "requested_saved_artifact_set_complete": "INCOMPLETE: original three R2 tests, R2 test README and original R2 execution records missing",
+  "latest_main_diff": "PASS: motif script only",
+  "existing_regressions": "PASS: seven suites plus syntax, see records",
+  "r2_48_contracts": "NOT RUN",
+  "r2_7_reimport_failure_cases": "NOT RUN",
+  "r2_21_21_42_extended_appearance_fulltext": "NOT RUN (R1 feature suite 21/21/42 is a different test)",
+  "r2_six_viewports_including_reimport": "NOT RUN (R1 six viewports passed)",
+  "r2_original_three_tests_syntax": "NOT RUN: sources missing",
+  "sw_release_cache_bump": "PENDING",
+  "sw_release_cache_bump_tests": "NOT RUN (existing 9-case older migration suite passed)",
+  "main_integration": "BLOCKED",
+  "r2_pages_deployment": "NOT PERFORMED",
+  "public_r2_pwa_acceptance": "NOT RUN"
+}

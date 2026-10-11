@@ -1,0 +1,9 @@
+{
+  "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+  "node": "v24.19.0",
+  "playwright": "1.62.1",
+  "font": "NotoSansCJK-Regular.ttc: \"Noto Sans CJK JP\" \"Regular\"",
+  "origin": "local HTTP",
+  "physical_device": false,
+  "public_pwa_acceptance": false
+}

@@ -1,0 +1,7 @@
+{
+  "suite": "boundaries",
+  "test": "creature-motif-person-boundaries.cjs",
+  "exit_code": 0,
+  "seconds": 42.59,
+  "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/boundaries"
+}

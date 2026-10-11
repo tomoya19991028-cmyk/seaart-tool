@@ -1,0 +1,74 @@
+[
+  {
+    "path": "/workspace/seaart-r1-save-worktree/index.html",
+    "commit": "326b4e482f17d4bd94605696ed2e3fdda30b43d0",
+    "sha256": "fafddf9ea6040430529e74453de5df2091acb665c1d76c612c4189f21b1c8353",
+    "bytes": 3754243
+  },
+  {
+    "path": "/workspace/seaart-r1-save-worktree/sw.js",
+    "commit": "326b4e482f17d4bd94605696ed2e3fdda30b43d0",
+    "sha256": "91cd2a62257239b189c7f634d03019942f9968c2c47598695144b9f23092485a",
+    "bytes": 2329
+  },
+  {
+    "path": "/workspace/seaart-r1-save-worktree/manifest.json",
+    "commit": "326b4e482f17d4bd94605696ed2e3fdda30b43d0",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+    "bytes": 762
+  },
+  {
+    "path": "/workspace/seaart-r1-save-worktree/icon-192.png",
+    "commit": "326b4e482f17d4bd94605696ed2e3fdda30b43d0",
+    "sha256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+    "bytes": 1369
+  },
+  {
+    "path": "/workspace/seaart-r1-save-worktree/icon-512.png",
+    "commit": "326b4e482f17d4bd94605696ed2e3fdda30b43d0",
+    "sha256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+    "bytes": 3717
+  },
+  {
+    "path": "/workspace/seaart-r1-save-worktree/icon-maskable-512.png",
+    "commit": "326b4e482f17d4bd94605696ed2e3fdda30b43d0",
+    "sha256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78",
+    "bytes": 14905
+  },
+  {
+    "path": "/workspace/seaart-creature-motif-integration1/baseline/index.html",
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+    "bytes": 3775550
+  },
+  {
+    "path": "/workspace/seaart-creature-motif-integration1/baseline/sw.js",
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a",
+    "bytes": 2320
+  },
+  {
+    "path": "/workspace/seaart-creature-motif-integration1/baseline/manifest.json",
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+    "bytes": 762
+  },
+  {
+    "path": "/workspace/seaart-creature-motif-integration1/baseline/icon-192.png",
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "sha256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+    "bytes": 1369
+  },
+  {
+    "path": "/workspace/seaart-creature-motif-integration1/baseline/icon-512.png",
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "sha256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+    "bytes": 3717
+  },
+  {
+    "path": "/workspace/seaart-creature-motif-integration1/baseline/icon-maskable-512.png",
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "sha256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78",
+    "bytes": 14905
+  }
+]

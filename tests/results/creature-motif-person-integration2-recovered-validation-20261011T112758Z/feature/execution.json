@@ -1,0 +1,7 @@
+{
+  "suite": "feature",
+  "test": "creature-motif-person.cjs",
+  "exit_code": 0,
+  "seconds": 152.13,
+  "result_dir": "/workspace/seaart-artifact-recovery-20261011T112758Z/revalidation/feature"
+}

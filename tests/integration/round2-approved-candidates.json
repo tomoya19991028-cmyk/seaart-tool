@@ -1,0 +1,1388 @@
+[
+  {
+    "field": "outfit",
+    "id": "outfit-0",
+    "value": "casual clothes",
+    "name": "普段着",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-10",
+    "value": "formal suit",
+    "name": "スーツ",
+    "group": "フォーマル・舞台"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-11",
+    "value": "tuxedo",
+    "name": "タキシード",
+    "group": "フォーマル・舞台"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-12",
+    "value": "kimono",
+    "name": "和服",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-13",
+    "value": "yukata",
+    "name": "浴衣",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-15",
+    "value": "hakama",
+    "name": "袴",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-17",
+    "value": "hanfu",
+    "name": "漢服",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-19",
+    "value": "gothic outfit",
+    "name": "ゴシック衣装",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-24",
+    "value": "lab coat",
+    "name": "研究者の白衣",
+    "group": "制服・職業"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-25",
+    "value": "chef uniform",
+    "name": "シェフの服",
+    "group": "制服・職業"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-26",
+    "value": "pilot uniform",
+    "name": "パイロット服",
+    "group": "制服・職業"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-27",
+    "value": "spacesuit",
+    "name": "宇宙服",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-31",
+    "value": "wizard robe",
+    "name": "魔法使いのローブ",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-33",
+    "value": "adventurer outfit",
+    "name": "冒険者の服",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-34",
+    "value": "cleric robes",
+    "name": "僧侶の服",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-36",
+    "value": "pirate outfit",
+    "name": "海賊服",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-37",
+    "value": "cowboy outfit",
+    "name": "カウボーイ服",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-43",
+    "value": "tracksuit",
+    "name": "ジャージ",
+    "group": "制服・職業"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-44",
+    "value": "sportswear",
+    "name": "スポーツウェア",
+    "group": "制服・職業"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-45",
+    "value": "pajamas",
+    "name": "パジャマ",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-46",
+    "value": "hoodie",
+    "name": "パーカー",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-47",
+    "value": "sweater",
+    "name": "セーター",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-48",
+    "value": "long coat",
+    "name": "ロングコート",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-49",
+    "value": "leather jacket",
+    "name": "レザージャケット",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-50",
+    "value": "cyberpunk outfit",
+    "name": "サイバーパンク衣装",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-51",
+    "value": "steampunk outfit",
+    "name": "スチームパンク衣装",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-55",
+    "value": "t-shirt",
+    "name": "Tシャツ",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-57",
+    "value": "blouse",
+    "name": "ブラウス",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-58",
+    "value": "cardigan",
+    "name": "カーディガン",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-59",
+    "value": "denim jacket",
+    "name": "デニムジャケット",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-60",
+    "value": "jeans",
+    "name": "ジーンズ",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-61",
+    "value": "overalls",
+    "name": "オーバーオール",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-62",
+    "value": "one-piece dress",
+    "name": "ワンピース",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-63",
+    "value": "summer dress",
+    "name": "サマードレス",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-64",
+    "value": "winter clothes",
+    "name": "冬服",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-65",
+    "value": "spring outfit",
+    "name": "春服",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-66",
+    "value": "raincoat",
+    "name": "レインコート",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-67",
+    "value": "trench coat",
+    "name": "トレンチコート",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-68",
+    "value": "puffer jacket",
+    "name": "ダウンジャケット",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-69",
+    "value": "coat and scarf",
+    "name": "マフラー付きコート",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-78",
+    "value": "workwear",
+    "name": "作業着",
+    "group": "制服・職業"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-81",
+    "value": "light armor",
+    "name": "軽装の鎧",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-83",
+    "value": "robe and cape",
+    "name": "ローブとマント",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-84",
+    "value": "royal attire",
+    "name": "王族の衣装",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-87",
+    "value": "elven outfit",
+    "name": "エルフの衣装",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-88",
+    "value": "priest robes",
+    "name": "神官服",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-89",
+    "value": "martial arts uniform",
+    "name": "武道着",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-92",
+    "value": "hunter outfit",
+    "name": "狩人の服",
+    "group": "ファンタジー・戦闘"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-96",
+    "value": "casual kimono",
+    "name": "着流し",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-97",
+    "value": "jinbei",
+    "name": "甚平",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-98",
+    "value": "hanbok",
+    "name": "韓服",
+    "group": "文化・イベント"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-109",
+    "value": "hiking outfit",
+    "name": "登山服",
+    "group": "スポーツ・趣味"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-110",
+    "value": "ski suit",
+    "name": "スキーウェア",
+    "group": "スポーツ・趣味"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-119",
+    "value": "smart casual office outfit",
+    "name": "オフィスカジュアル",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-123",
+    "value": "denim coordinated outfit",
+    "name": "デニムのセットアップ",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-139",
+    "value": "men's shirt and slacks",
+    "name": "メンズ：シャツとスラックス",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-142",
+    "value": "men's casual suit",
+    "name": "メンズ：カジュアルスーツ",
+    "group": "フォーマル・舞台"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-150",
+    "value": "women's blouse and long skirt",
+    "name": "レディース：ブラウスとロングスカート",
+    "group": "日常・季節"
+  },
+  {
+    "field": "outfit",
+    "id": "outfit-151",
+    "value": "women's pantsuit",
+    "name": "レディース：パンツスーツ",
+    "group": "フォーマル・舞台"
+  },
+  {
+    "field": "outfit",
+    "id": "set-tshirt-jeans",
+    "value": "t-shirt and jeans",
+    "name": "Tシャツ＋デニム",
+    "group": "普段着"
+  },
+  {
+    "field": "outfit",
+    "id": "set-sweater-and-long-skirt",
+    "value": "sweater and long skirt",
+    "name": "ニット＋ロングスカート",
+    "group": "普段着"
+  },
+  {
+    "field": "outfit",
+    "id": "set-wizard-outfit",
+    "value": "wizard outfit",
+    "name": "魔法使い",
+    "group": "ファンタジー"
+  },
+  {
+    "field": "outfit",
+    "id": "set-priest-outfit",
+    "value": "priest outfit",
+    "name": "僧侶",
+    "group": "ファンタジー"
+  },
+  {
+    "field": "outfit",
+    "id": "set-formal-gown",
+    "value": "formal gown",
+    "name": "フォーマルドレス",
+    "group": "フォーマル"
+  },
+  {
+    "field": "outfit",
+    "id": "set-combat-suit",
+    "value": "combat suit",
+    "name": "戦闘スーツ",
+    "group": "SF"
+  },
+  {
+    "field": "upper",
+    "id": "white blouse",
+    "value": "white blouse",
+    "name": "白いブラウス",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "shirt",
+    "value": "shirt",
+    "name": "シャツ",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "jacket",
+    "value": "jacket",
+    "name": "ジャケット",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "hoodie",
+    "value": "hoodie",
+    "name": "パーカー",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "sweater",
+    "value": "sweater",
+    "name": "セーター",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "robe",
+    "value": "robe",
+    "name": "ローブ",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "polo shirt",
+    "value": "polo shirt",
+    "name": "ポロシャツ",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "denim shirt",
+    "value": "denim shirt",
+    "name": "デニムシャツ",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "striped shirt",
+    "value": "striped shirt",
+    "name": "ボーダーシャツ",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "oversized sweater",
+    "value": "oversized sweater",
+    "name": "オーバーサイズのセーター",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "cardigan",
+    "value": "cardigan",
+    "name": "カーディガン",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "turtleneck sweater",
+    "value": "turtleneck sweater",
+    "name": "タートルネック",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "vest",
+    "value": "vest",
+    "name": "ベスト",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "waistcoat",
+    "value": "waistcoat",
+    "name": "ジレ",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "long-sleeved blouse",
+    "value": "long-sleeved blouse",
+    "name": "長袖ブラウス",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "kimono top",
+    "value": "kimono top",
+    "name": "着物の上衣",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "tailored blazer",
+    "value": "tailored blazer",
+    "name": "テーラードジャケット",
+    "group": "フォーマル"
+  },
+  {
+    "field": "upper",
+    "id": "silk blouse",
+    "value": "silk blouse",
+    "name": "シルクブラウス",
+    "group": "フォーマル"
+  },
+  {
+    "field": "upper",
+    "id": "dress shirt",
+    "value": "dress shirt",
+    "name": "ドレスシャツ",
+    "group": "フォーマル"
+  },
+  {
+    "field": "upper",
+    "id": "formal waistcoat",
+    "value": "formal waistcoat",
+    "name": "フォーマルベスト",
+    "group": "フォーマル"
+  },
+  {
+    "field": "upper",
+    "id": "embroidered jacket",
+    "value": "embroidered jacket",
+    "name": "刺繍入りジャケット",
+    "group": "フォーマル"
+  },
+  {
+    "field": "upper",
+    "id": "chainmail shirt",
+    "value": "chainmail shirt",
+    "name": "鎖帷子",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "ceremonial robes",
+    "value": "ceremonial robes",
+    "name": "儀式のローブ",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "mage cloak",
+    "value": "mage cloak",
+    "name": "魔術師のマント",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "armored jacket",
+    "value": "armored jacket",
+    "name": "装甲ジャケット",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "military coat",
+    "value": "military coat",
+    "name": "軍用コート",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "high-collared tunic",
+    "value": "high-collared tunic",
+    "name": "ハイカラーのチュニック",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "fur-lined cloak",
+    "value": "fur-lined cloak",
+    "name": "毛皮付きマント",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "upper",
+    "id": "t-shirt",
+    "value": "t-shirt",
+    "name": "Tシャツ",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "blouse",
+    "value": "blouse",
+    "name": "ブラウス",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "denim jacket",
+    "value": "denim jacket",
+    "name": "デニムジャケット",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "trench coat",
+    "value": "trench coat",
+    "name": "トレンチコート",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "puffer jacket",
+    "value": "puffer jacket",
+    "name": "ダウンジャケット",
+    "group": "普段着"
+  },
+  {
+    "field": "upper",
+    "id": "leather jacket",
+    "value": "leather jacket",
+    "name": "レザージャケット",
+    "group": "普段着"
+  },
+  {
+    "field": "lower",
+    "id": "long skirt",
+    "value": "long skirt",
+    "name": "ロングスカート",
+    "group": "スカート・ドレス"
+  },
+  {
+    "field": "lower",
+    "id": "trousers",
+    "value": "trousers",
+    "name": "ズボン",
+    "group": "パンツ"
+  },
+  {
+    "field": "lower",
+    "id": "shorts",
+    "value": "shorts",
+    "name": "ショートパンツ",
+    "group": "パンツ"
+  },
+  {
+    "field": "lower",
+    "id": "leggings",
+    "value": "leggings",
+    "name": "レギンス",
+    "group": "パンツ"
+  },
+  {
+    "field": "lower",
+    "id": "hakama pants",
+    "value": "hakama pants",
+    "name": "袴",
+    "group": "パンツ"
+  },
+  {
+    "field": "lower",
+    "id": "pleated skirt",
+    "value": "pleated skirt",
+    "name": "プリーツスカート",
+    "group": "スカート・ドレス"
+  },
+  {
+    "field": "lower",
+    "id": "flared skirt",
+    "value": "flared skirt",
+    "name": "フレアスカート",
+    "group": "スカート・ドレス"
+  },
+  {
+    "field": "lower",
+    "id": "pencil skirt",
+    "value": "pencil skirt",
+    "name": "タイトスカート",
+    "group": "スカート・ドレス"
+  },
+  {
+    "field": "lower",
+    "id": "layered skirt",
+    "value": "layered skirt",
+    "name": "重ねスカート",
+    "group": "スカート・ドレス"
+  },
+  {
+    "field": "lower",
+    "id": "asymmetrical skirt",
+    "value": "asymmetrical skirt",
+    "name": "アシンメトリーのスカート",
+    "group": "スカート・ドレス"
+  },
+  {
+    "field": "lower",
+    "id": "long dress skirt",
+    "value": "long dress skirt",
+    "name": "ドレスのロングスカート",
+    "group": "スカート・ドレス"
+  },
+  {
+    "field": "lower",
+    "id": "wide-leg pants",
+    "value": "wide-leg pants",
+    "name": "ワイドパンツ",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "skinny jeans",
+    "value": "skinny jeans",
+    "name": "スキニージーンズ",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "cargo pants",
+    "value": "cargo pants",
+    "name": "カーゴパンツ",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "leather pants",
+    "value": "leather pants",
+    "name": "レザーパンツ",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "denim shorts",
+    "value": "denim shorts",
+    "name": "デニムショートパンツ",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "culottes",
+    "value": "culottes",
+    "name": "キュロット",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "track pants",
+    "value": "track pants",
+    "name": "トラックパンツ",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "slacks",
+    "value": "slacks",
+    "name": "スラックス",
+    "group": "パンツ・カジュアル"
+  },
+  {
+    "field": "lower",
+    "id": "armored skirt",
+    "value": "armored skirt",
+    "name": "鎧付きスカート",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "lower",
+    "id": "leather trousers",
+    "value": "leather trousers",
+    "name": "革のズボン",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "lower",
+    "id": "tabard",
+    "value": "tabard",
+    "name": "タバード",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "lower",
+    "id": "split skirt",
+    "value": "split skirt",
+    "name": "スリット入りスカート",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "lower",
+    "id": "battle kilt",
+    "value": "battle kilt",
+    "name": "戦闘用キルト",
+    "group": "戦闘・幻想"
+  },
+  {
+    "field": "lower",
+    "id": "jeans",
+    "value": "jeans",
+    "name": "ジーンズ",
+    "group": "普段着"
+  },
+  {
+    "field": "feet",
+    "id": "boots",
+    "value": "boots",
+    "name": "ブーツ",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "high heels",
+    "value": "high heels",
+    "name": "ハイヒール",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "sneakers",
+    "value": "sneakers",
+    "name": "スニーカー",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "sandals",
+    "value": "sandals",
+    "name": "サンダル",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "ankle boots",
+    "value": "ankle boots",
+    "name": "ショートブーツ",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "knee-high boots",
+    "value": "knee-high boots",
+    "name": "膝丈ブーツ",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "combat boots",
+    "value": "combat boots",
+    "name": "コンバットブーツ",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "platform boots",
+    "value": "platform boots",
+    "name": "厚底ブーツ",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "loafers",
+    "value": "loafers",
+    "name": "ローファー",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "ballet flats",
+    "value": "ballet flats",
+    "name": "バレエシューズ",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "dress shoes",
+    "value": "dress shoes",
+    "name": "革靴",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "Mary Jane shoes",
+    "value": "Mary Jane shoes",
+    "name": "ストラップシューズ",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "geta sandals",
+    "value": "geta sandals",
+    "name": "下駄",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "wooden clogs",
+    "value": "wooden clogs",
+    "name": "木靴",
+    "group": "靴"
+  },
+  {
+    "field": "feet",
+    "id": "armored boots",
+    "value": "armored boots",
+    "name": "装甲ブーツ",
+    "group": "幻想・戦闘"
+  },
+  {
+    "field": "feet",
+    "id": "greaves",
+    "value": "greaves",
+    "name": "すねの鎧",
+    "group": "幻想・戦闘"
+  },
+  {
+    "field": "feet",
+    "id": "winged sandals",
+    "value": "winged sandals",
+    "name": "翼付きサンダル",
+    "group": "幻想・戦闘"
+  },
+  {
+    "field": "legwear",
+    "id": "thighhigh socks",
+    "value": "thighhigh socks",
+    "name": "ニーソックス",
+    "group": "靴下"
+  },
+  {
+    "field": "legwear",
+    "id": "knee socks",
+    "value": "knee socks",
+    "name": "ハイソックス",
+    "group": "靴下"
+  },
+  {
+    "field": "legwear",
+    "id": "tights",
+    "value": "tights",
+    "name": "タイツ",
+    "group": "靴下"
+  },
+  {
+    "field": "legwear",
+    "id": "stockings",
+    "value": "stockings",
+    "name": "ストッキング",
+    "group": "靴下"
+  },
+  {
+    "field": "legwear",
+    "id": "leggings",
+    "value": "leggings",
+    "name": "レギンス",
+    "group": "脚装備"
+  },
+  {
+    "field": "legwear",
+    "id": "leg armor",
+    "value": "leg armor",
+    "name": "脚甲",
+    "group": "脚装備"
+  },
+  {
+    "field": "legwear",
+    "id": "ankle socks",
+    "value": "ankle socks",
+    "name": "くるぶし丈の靴下",
+    "group": "靴下・脚"
+  },
+  {
+    "field": "legwear",
+    "id": "patterned tights",
+    "value": "patterned tights",
+    "name": "柄タイツ",
+    "group": "靴下・脚"
+  },
+  {
+    "field": "legwear",
+    "id": "leg warmers",
+    "value": "leg warmers",
+    "name": "レッグウォーマー",
+    "group": "靴下・脚"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "cat ears",
+    "value": "cat ears",
+    "name": "猫耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "fox ears",
+    "value": "fox ears",
+    "name": "狐耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "wolf ears",
+    "value": "wolf ears",
+    "name": "狼耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "dog ears",
+    "value": "dog ears",
+    "name": "犬耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "rabbit ears",
+    "value": "rabbit ears",
+    "name": "兎耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "bear ears",
+    "value": "bear ears",
+    "name": "熊耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "mouse ears",
+    "value": "mouse ears",
+    "name": "鼠耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "deer ears",
+    "value": "deer ears",
+    "name": "鹿耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "cow ears",
+    "value": "cow ears",
+    "name": "牛耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "horse ears",
+    "value": "horse ears",
+    "name": "馬耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "pointy ears",
+    "value": "pointy ears",
+    "name": "エルフ耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "long pointy ears",
+    "value": "long pointy ears",
+    "name": "長い尖り耳",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "demon horns",
+    "value": "demon horns",
+    "name": "悪魔の角",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "dragon horns",
+    "value": "dragon horns",
+    "name": "竜の角",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "goat horns",
+    "value": "goat horns",
+    "name": "山羊角",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "bull horns",
+    "value": "bull horns",
+    "name": "牛角",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "antlers",
+    "value": "antlers",
+    "name": "鹿角",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "single horn",
+    "value": "single horn",
+    "name": "一本角",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "two horns",
+    "value": "two horns",
+    "name": "二本角",
+    "group": "耳・角"
+  },
+  {
+    "field": "bodyFeatures",
+    "id": "multiple horns",
+    "value": "multiple horns",
+    "name": "複数の角",
+    "group": "耳・角"
+  },
+  {
+    "field": "accessory",
+    "id": "earrings",
+    "value": "earrings",
+    "name": "イヤリング",
+    "group": "宝飾"
+  },
+  {
+    "field": "accessory",
+    "id": "necklace",
+    "value": "necklace",
+    "name": "ネックレス",
+    "group": "宝飾"
+  },
+  {
+    "field": "accessory",
+    "id": "choker",
+    "value": "choker",
+    "name": "チョーカー",
+    "group": "宝飾"
+  },
+  {
+    "field": "accessory",
+    "id": "cape",
+    "value": "cape",
+    "name": "マント",
+    "group": "布・装身具"
+  },
+  {
+    "field": "accessory",
+    "id": "belt",
+    "value": "belt",
+    "name": "ベルト",
+    "group": "布・装身具"
+  },
+  {
+    "field": "accessory",
+    "id": "brooch",
+    "value": "brooch",
+    "name": "ブローチ",
+    "group": "宝飾"
+  },
+  {
+    "field": "accessory",
+    "id": "eyepatch",
+    "value": "eyepatch",
+    "name": "眼帯",
+    "group": "布・装身具"
+  },
+  {
+    "field": "accessory",
+    "id": "scarf",
+    "value": "scarf",
+    "name": "スカーフ",
+    "group": "布・装身具"
+  },
+  {
+    "field": "accessory",
+    "id": "pendant",
+    "value": "pendant",
+    "name": "ペンダント",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "locket",
+    "value": "locket",
+    "name": "ロケットペンダント",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "pearl necklace",
+    "value": "pearl necklace",
+    "name": "真珠のネックレス",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "gold earrings",
+    "value": "gold earrings",
+    "name": "金のイヤリング",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "silver earrings",
+    "value": "silver earrings",
+    "name": "銀のイヤリング",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "gemstone brooch",
+    "value": "gemstone brooch",
+    "name": "宝石のブローチ",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "armlet",
+    "value": "armlet",
+    "name": "アームレット",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "anklet",
+    "value": "anklet",
+    "name": "アンクレット",
+    "group": "ジュエリー"
+  },
+  {
+    "field": "accessory",
+    "id": "amulet",
+    "value": "amulet",
+    "name": "お守り",
+    "group": "幻想・装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "magic talisman",
+    "value": "magic talisman",
+    "name": "魔法の護符",
+    "group": "幻想・装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "feathered cape",
+    "value": "feathered cape",
+    "name": "羽飾りのマント",
+    "group": "幻想・装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "ornate epaulettes",
+    "value": "ornate epaulettes",
+    "name": "飾り肩章",
+    "group": "幻想・装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "decorative chains",
+    "value": "decorative chains",
+    "name": "装飾チェーン",
+    "group": "幻想・装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "apron",
+    "value": "apron",
+    "name": "エプロン",
+    "group": "衣装装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "bracelets",
+    "value": "bracelets",
+    "name": "ブレスレット",
+    "group": "装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "rings",
+    "value": "rings",
+    "name": "指輪",
+    "group": "装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "jeweled ring",
+    "value": "jeweled ring",
+    "name": "宝石の指輪",
+    "group": "装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "wristwatch",
+    "value": "wristwatch",
+    "name": "腕時計",
+    "group": "装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "bangles",
+    "value": "bangles",
+    "name": "バングル",
+    "group": "装飾"
+  },
+  {
+    "field": "accessory",
+    "id": "hand jewelry",
+    "value": "hand jewelry",
+    "name": "ハンドジュエリー",
+    "group": "装飾"
+  }
+]
