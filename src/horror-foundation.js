@@ -2,7 +2,7 @@
 const horrorVersion=1,horrorRetentionMs=30*24*60*60*1000;
 const horrorEmptyState=()=>({version:1,byActor:{},byManga:{},unresolved:[]});
 const horrorEmptyWorkspace=()=>({version:1,drafts:[],trash:[],itemTombstones:[],mergeLog:[],recoveryPending:[]});
-let horrorState=horrorEmptyState(),horrorWorkspace=horrorEmptyWorkspace(),horrorCatalogChanges={version:1,features:[]},horrorStaging=0,hActionBusy=false;
+let horrorState=horrorEmptyState(),horrorWorkspace=horrorEmptyWorkspace(),horrorCatalogChanges={version:1,features:[]},horrorStaging=0,hActionBusy=false,hImportPending=false;
 const hCopy=value=>value===undefined?undefined:JSON.parse(JSON.stringify(value));
 const hObject=value=>!!value&&typeof value==='object'&&!Array.isArray(value);
 const hAssert=(value,message='怪異データの形式が不正です')=>{if(!value)throw Error(message)};
