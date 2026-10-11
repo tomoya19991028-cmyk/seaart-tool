@@ -1,0 +1,80 @@
+{
+  "status": "APPROVED",
+  "main": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "questions": [
+    {
+      "id": "Q1",
+      "topic": "保存形式",
+      "recommended": "root JSON v5＋独立したhorror-v1の新5キー。既存actorExtensions v4等は維持。旧v3/v4は専用readerで読み、旧キーを削除せず旧版へ新JSONを渡した場合は拒否。",
+      "impact": "旧writerとの分離と新schemaが必要。現行namespaceへの追加は採用しない。"
+    },
+    {
+      "id": "Q2",
+      "topic": "独立怪異",
+      "recommended": "新Creature UUID＋別horror metadata。Creature一覧にも表示。初期基本種類は既存ghost／demon／undead creature。元対象とのリンクなし。",
+      "impact": "新kindの追加は避ける。Creature一覧への表示も承認範囲に含める。"
+    },
+    {
+      "id": "Q3",
+      "topic": "自由入力人物",
+      "recommended": "customを直接永続対象にせず、ユーザー操作でoriginal人物へ複製した後に利用。自動変換なし。",
+      "impact": "customのownerはnullで、文字列だけでは恒久IDにできない。"
+    },
+    {
+      "id": "Q4",
+      "topic": "漫画対象",
+      "recommended": "通常漫画1〜6コマ。簡易漫画は生成・snapshotの回帰保護だけとし怪異連携を追加しない。",
+      "impact": "7コマ以上と簡易漫画への追加連携は今回の対象外。"
+    },
+    {
+      "id": "Q5",
+      "topic": "非表示と削除",
+      "recommended": "count減少は非表示としてslot／IDを保持。明示削除だけpanel IDを廃止し、対応先不明の下書きを保持。preset／story適用はIDを維持し、漫画resetは新mangaId。",
+      "impact": "挿入・削除・並び替えはpanel全体とRAM画像配置もIDに追従。隠れたslotも含め6slot上限。"
+    },
+    {
+      "id": "Q6",
+      "topic": "タブ配置",
+      "recommended": "既存5タブの最後に「ホラー・怪異」。navだけ横スワイプ。内部3ページ×6カード、主要操作44px以上。",
+      "impact": "既存タブを改名せず、文書横はみ出しを防ぐ。"
+    },
+    {
+      "id": "Q7",
+      "topic": "初期候補・強度",
+      "recommended": "別紙の種類6／特徴12／強度低中高。種類は表示優先だけ。強度は輝く目・黒い霧のparameterのみ。その他のタグ／重み／品質は不変。",
+      "impact": "正式候補が資料にないので、この具体案の承認が必要。構造は条件判定に使い、未選択タグを自動追加しない。"
+    },
+    {
+      "id": "Q8",
+      "topic": "通常状態",
+      "recommended": "normalでは怪異特徴、強度、元外見の除外／変更、構造上書き、継続範囲出力をすべて停止。保存値は残す。",
+      "impact": "通常に戻せば元の人物／Creature外見へ戻る。"
+    },
+    {
+      "id": "Q9",
+      "topic": "生成競合",
+      "recommended": "競合がある生成操作全体を中止し、対象と理由を表示。既存結果とその保護状態を維持。勝手に候補や対象を除外して生成しない。",
+      "impact": "資料の「対象の怪異生成を中止」の範囲を明確化。片方優先や一部欠落での無警告生成を避ける。"
+    },
+    {
+      "id": "Q10",
+      "topic": "基本変更と固定",
+      "recommended": "変更前プレビューとsnapshotから固定案を下書きに作成。基本変更と固定は別Undo。確定直前に再照合する。",
+      "impact": "変更後に旧外見を推測せず、部分確定の確認を自動承認しない。"
+    },
+    {
+      "id": "Q11",
+      "topic": "名前付き保存",
+      "recommended": "まず確定設定を復元。同梱下書き／ゴミ箱は統合プレビューへ。両オプション初期OFF、含めるdraft／trashは個別選択可。全workspace置換なし。",
+      "impact": "履歴／通常Undoではworkspaceを巻き戻さない。旧importの未指定を削除命令にしない。"
+    },
+    {
+      "id": "Q12",
+      "topic": "容量・上限",
+      "recommended": "既存JSON import上限10MBを維持。1,000項目の性能・journal増幅を実測し警告値を決めて報告。容量不足は保存停止とexport案内。自動削除なし。",
+      "impact": "未測定の件数上限を新設しない。有効trash／対応先不明を削除せず、復旧journalがあれば保持する。"
+    }
+  ],
+  "userApproval": "Q1〜Q12と初期候補案を推奨どおり承認",
+  "implementationBase": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52"
+}

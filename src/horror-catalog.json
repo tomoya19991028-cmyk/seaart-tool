@@ -1,0 +1,262 @@
+{
+  "status": "APPROVED_Q1_Q12",
+  "types": [
+    {
+      "id": "horror-type-ghost",
+      "label": "霊体"
+    },
+    {
+      "id": "horror-type-aberrant",
+      "label": "異形"
+    },
+    {
+      "id": "horror-type-doll",
+      "label": "人形"
+    },
+    {
+      "id": "horror-type-beast",
+      "label": "獣性"
+    },
+    {
+      "id": "horror-type-shadow",
+      "label": "影"
+    },
+    {
+      "id": "horror-type-cursed",
+      "label": "呪い"
+    }
+  ],
+  "type_output_tags": false,
+  "primary_type_limit": 1,
+  "secondary_type_limit": 2,
+  "features": [
+    {
+      "id": "horror-feature-mask-face",
+      "label": "仮面のような顔",
+      "group": "頭・顔",
+      "tag": "mask-like face",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-cracked-face",
+      "label": "ひび割れた顔",
+      "group": "頭・顔",
+      "tag": "cracked face",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-glowing-eyes",
+      "label": "輝く目",
+      "group": "目・口",
+      "tag": "glowing eyes",
+      "source": "detailOptions.eyeDetail / glowing eyes / 輝く目 / 目の形・特徴",
+      "conflict": "horror-eye-style",
+      "structure": {},
+      "continuity": "persistent",
+      "intensityTags": {
+        "low": "faintly glowing eyes",
+        "medium": "glowing eyes",
+        "high": "intensely glowing eyes"
+      },
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-hollow-eyes",
+      "label": "空洞のような目",
+      "group": "目・口",
+      "tag": "hollow eyes",
+      "source": null,
+      "conflict": "horror-eye-style",
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-pale-skin",
+      "label": "色白",
+      "group": "皮膚・体表",
+      "tag": "pale skin",
+      "source": "detailOptions.skinColor / pale skin / 色白 / 明るい",
+      "conflict": "horror-skin-tone",
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-gray-skin",
+      "label": "灰色の肌",
+      "group": "皮膚・体表",
+      "tag": "gray skin",
+      "source": null,
+      "conflict": "horror-skin-tone",
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-long-fingers",
+      "label": "長い指",
+      "group": "四肢・体型",
+      "tag": "long fingers",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-sharp-claws",
+      "label": "鋭い爪",
+      "group": "四肢・体型",
+      "tag": "sharp claws",
+      "source": "detailOptions.bodyFeatures / sharp claws / 鋭い爪 / 牙・爪",
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-demon-horns",
+      "label": "悪魔の角",
+      "group": "翼・角・尻尾",
+      "tag": "demon horns",
+      "source": "detailOptions.bodyFeatures / demon horns / 悪魔の角 / 耳・角",
+      "conflict": null,
+      "structure": {
+        "horns": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-bat-wings",
+      "label": "コウモリの翼",
+      "group": "翼・角・尻尾",
+      "tag": "bat wings",
+      "source": "detailOptions.bodyFeatures / bat wings / コウモリの翼 / 翼",
+      "conflict": null,
+      "structure": {
+        "wings": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-black-mist",
+      "label": "黒い霧",
+      "group": "演出・動作",
+      "tag": "black mist",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "intensityTags": {
+        "low": "thin black mist",
+        "medium": "black mist",
+        "high": "dense black mist"
+      },
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-shadow-tendrils",
+      "label": "伸びる影",
+      "group": "演出・動作",
+      "tag": "shadow tendrils",
+      "source": "detailOptions.effect / shadow tendrils / 伸びる影 / 闇・影",
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    }
+  ],
+  "independent_species": [
+    {
+      "value": "ghost",
+      "label": "幽霊"
+    },
+    {
+      "value": "demon",
+      "label": "悪魔"
+    },
+    {
+      "value": "undead creature",
+      "label": "アンデッド"
+    }
+  ],
+  "intensity_values": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "intensity_applies_to": [
+    "horror-feature-glowing-eyes",
+    "horror-feature-black-mist"
+  ],
+  "structural_fields": [
+    "wings",
+    "horns",
+    "tail"
+  ],
+  "structural_values": [
+    "present",
+    "absent",
+    "unset"
+  ],
+  "structural_outputs_automatic": false
+}
