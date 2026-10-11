@@ -1,0 +1,1233 @@
+{
+  "passed": true,
+  "baselineURL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+  "targetURL": "http://127.0.0.1:8765/seaart-horror/index.html",
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "contracts": {
+    "passed": true,
+    "checks": [
+      "production registry frozen and empty",
+      "startup grants and resources empty",
+      "Native denied",
+      "unregistered full denied r1-a",
+      "unregistered full denied r1-b",
+      "unregistered full denied r1-c",
+      "unregistered full denied r1-d",
+      "mode cycle retains native records",
+      "mode cycle retains both human profiles",
+      "mode cycle retains both storage markers",
+      "getters return detached copies",
+      "person stores remain independent",
+      "adult not transferred to general profile r1-a",
+      "adult not transferred to general profile r1-b",
+      "adult not transferred to general profile r1-c",
+      "adult not transferred to general profile r1-d",
+      "ineligible editor hides confirmation and cards",
+      "production editor four tabs",
+      "production editor has no fifth tab or adult cards",
+      "shared six-card candidate adapter unchanged",
+      "unsaved general draft cannot confirm",
+      "maximum six cards basic/0",
+      "maximum six cards basic/1",
+      "maximum six cards hair/0",
+      "maximum six cards clothing/0",
+      "maximum six cards clothing/1",
+      "maximum six cards equipment/0",
+      "maximum six cards equipment/1",
+      "maximum six cards equipment/2",
+      "page changes preserve draft",
+      "ineligible adult draft commit rejected atomically",
+      "cancel discards both drafts",
+      "general save one Undo",
+      "general save target UUID and mode only",
+      "Undo restores general draft save",
+      "unchanged save no Undo",
+      "named save restore retains values without permission",
+      "ordinary history remains unprotected opt-in",
+      "history restore retains values without permission",
+      "management Undo restores stored values",
+      "owner change quarantines old extension",
+      "individual deletion removes extension",
+      "deletion Undo restores data without permission",
+      "unknown adult schema rejected atomically",
+      "saved confirmed record grants no authority",
+      "actual reload retains values and starts with no receipt grants",
+      "actual v4 download/import retains values without permission",
+      "actual v3 import preserves native actors, initializes extensions and grants none",
+      "actual browser pagehide persists pending ordinary state and retains markers"
+    ],
+    "extensions": {
+      "version": 4,
+      "byActor": {
+        "person:character-extension-504eb2aef9979888": {
+          "ownerRef": {
+            "kind": "person",
+            "catalogId": "character-extension-504eb2aef9979888",
+            "value": "Kris (Pokemon)"
+          },
+          "selectedFormId": "form-person-character-extension-504eb2aef9979888-standard",
+          "appliedForm": {
+            "formId": "form-person-character-extension-504eb2aef9979888-standard",
+            "revision": 1,
+            "label": "標準",
+            "identity": {
+              "mode": "inherit",
+              "tokens": []
+            },
+            "appliedAt": "2026-10-11T22:12:25.948Z",
+            "appearanceDigest": "d5a5508abc115d7a",
+            "appearance": {
+              "hair": {
+                "primary": "teal hair",
+                "secondary": "",
+                "mode": "single"
+              },
+              "eyes": {
+                "left": "blue eyes",
+                "right": "",
+                "mode": "same"
+              },
+              "hairStyle": [
+                "pigtails",
+                "spiky short hair"
+              ],
+              "outfit": [
+                "white jacket over a red top, yellow shorts over black cycling shorts"
+              ],
+              "detail": {
+                "eyeDetail": {
+                  "values": [],
+                  "custom": ""
+                },
+                "skin": {
+                  "values": [],
+                  "custom": ""
+                },
+                "upper": {
+                  "values": [
+                    "white jacket over a red top"
+                  ],
+                  "custom": ""
+                },
+                "lower": {
+                  "values": [
+                    "yellow shorts over black cycling shorts"
+                  ],
+                  "custom": ""
+                },
+                "head": {
+                  "values": [
+                    "yellow cap"
+                  ],
+                  "custom": ""
+                },
+                "hands": {
+                  "values": [],
+                  "custom": ""
+                },
+                "feet": {
+                  "values": [],
+                  "custom": ""
+                },
+                "accessory": {
+                  "values": [
+                    "pink shoulder bag"
+                  ],
+                  "custom": ""
+                },
+                "legwear": {
+                  "values": [],
+                  "custom": ""
+                },
+                "carry": {
+                  "values": [],
+                  "custom": ""
+                }
+              }
+            }
+          }
+        },
+        "person:character-extension-e65b4804dabe1c34": {
+          "ownerRef": {
+            "kind": "person",
+            "catalogId": "character-extension-e65b4804dabe1c34",
+            "value": "Yugi Muto (Yu-Gi-Oh!)"
+          },
+          "selectedFormId": "form-person-character-extension-e65b4804dabe1c34-standard",
+          "appliedForm": {
+            "formId": "form-person-character-extension-e65b4804dabe1c34-standard",
+            "revision": 1,
+            "label": "標準",
+            "identity": {
+              "mode": "inherit",
+              "tokens": []
+            },
+            "appliedAt": "2026-10-11T22:12:26.934Z",
+            "appearanceDigest": "4dde76806573fe68",
+            "appearance": {
+              "hair": {
+                "primary": "black and magenta hair",
+                "secondary": "blonde hair",
+                "mode": "streak"
+              },
+              "eyes": {
+                "left": "purple eyes",
+                "right": "",
+                "mode": "same"
+              },
+              "hairStyle": [
+                "spiky short hair"
+              ],
+              "outfit": [
+                "blue school jacket over a dark shirt, blue school trousers"
+              ],
+              "detail": {
+                "eyeDetail": {
+                  "values": [],
+                  "custom": ""
+                },
+                "skin": {
+                  "values": [],
+                  "custom": ""
+                },
+                "upper": {
+                  "values": [
+                    "blue school jacket over a dark shirt"
+                  ],
+                  "custom": ""
+                },
+                "lower": {
+                  "values": [
+                    "blue school trousers"
+                  ],
+                  "custom": ""
+                },
+                "head": {
+                  "values": [],
+                  "custom": ""
+                },
+                "hands": {
+                  "values": [],
+                  "custom": ""
+                },
+                "feet": {
+                  "values": [],
+                  "custom": ""
+                },
+                "accessory": {
+                  "values": [
+                    "Millennium Puzzle pendant and a choker"
+                  ],
+                  "custom": ""
+                },
+                "legwear": {
+                  "values": [],
+                  "custom": ""
+                },
+                "carry": {
+                  "values": [],
+                  "custom": ""
+                }
+              }
+            }
+          }
+        },
+        "creature:r1-a": {
+          "ownerRef": {
+            "kind": "creature",
+            "masterId": "creature-pokemon-0025",
+            "value": "pikachu (pokemon)"
+          },
+          "representation": {
+            "mode": "semi",
+            "overrides": {
+              "semi": {
+                "features": {
+                  "mode": "inherit",
+                  "values": []
+                },
+                "color": "inherit",
+                "surface": "inherit"
+              },
+              "full": {
+                "features": {
+                  "mode": "suppress",
+                  "values": []
+                },
+                "color": "suppress",
+                "surface": "suppress"
+              }
+            }
+          },
+          "humanProfile": {
+            "version": 1,
+            "byMode": {
+              "semi": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "blue hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "purple eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              },
+              "full": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "white hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "purple eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              }
+            }
+          },
+          "adult": {
+            "version": 1,
+            "confirmed": false,
+            "confirmation": null,
+            "eligibilitySignature": null,
+            "byMode": {
+              "semi": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-a_SEMI"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              },
+              "full": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-a_FULL"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              }
+            }
+          },
+          "selectedFormId": "form-creature-creature-pokemon-0025-standard",
+          "appliedForm": {
+            "formId": "form-creature-creature-pokemon-0025-standard",
+            "revision": 1,
+            "label": "標準",
+            "identity": {
+              "mode": "inherit",
+              "tokens": []
+            },
+            "appliedAt": "2026-10-11T22:12:27.623Z",
+            "appearanceDigest": "3fe8de00a182da0",
+            "appearance": {
+              "type": "bipedal",
+              "size": "small",
+              "color": "yellow",
+              "surface": "fur",
+              "features": [
+                "long pointed ears",
+                "black-tipped ears",
+                "red cheek patches",
+                "lightning bolt-shaped tail",
+                "brown stripes on the back"
+              ]
+            }
+          }
+        },
+        "creature:r1-b": {
+          "ownerRef": {
+            "kind": "creature",
+            "masterId": "creature-pokemon-0025",
+            "value": "pikachu (pokemon)"
+          },
+          "representation": {
+            "mode": "full",
+            "overrides": {
+              "semi": {
+                "features": {
+                  "mode": "inherit",
+                  "values": []
+                },
+                "color": "inherit",
+                "surface": "inherit"
+              },
+              "full": {
+                "features": {
+                  "mode": "suppress",
+                  "values": []
+                },
+                "color": "suppress",
+                "surface": "suppress"
+              }
+            }
+          },
+          "humanProfile": {
+            "version": 1,
+            "byMode": {
+              "semi": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "blue hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "green eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              },
+              "full": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "white hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "green eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              }
+            }
+          },
+          "adult": {
+            "version": 1,
+            "confirmed": false,
+            "confirmation": null,
+            "eligibilitySignature": null,
+            "byMode": {
+              "semi": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-b_SEMI"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              },
+              "full": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-b_FULL"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              }
+            }
+          },
+          "selectedFormId": "form-creature-creature-pokemon-0025-standard",
+          "appliedForm": {
+            "formId": "form-creature-creature-pokemon-0025-standard",
+            "revision": 1,
+            "label": "標準",
+            "identity": {
+              "mode": "inherit",
+              "tokens": []
+            },
+            "appliedAt": "2026-10-11T22:12:27.728Z",
+            "appearanceDigest": "3fe8de00a182da0",
+            "appearance": {
+              "type": "bipedal",
+              "size": "small",
+              "color": "yellow",
+              "surface": "fur",
+              "features": [
+                "long pointed ears",
+                "black-tipped ears",
+                "red cheek patches",
+                "lightning bolt-shaped tail",
+                "brown stripes on the back"
+              ]
+            }
+          }
+        },
+        "creature:r1-c": {
+          "ownerRef": {
+            "kind": "creature",
+            "masterId": "creature-pokemon-0006",
+            "value": "charizard (pokemon)"
+          },
+          "representation": {
+            "mode": "full",
+            "overrides": {
+              "semi": {
+                "features": {
+                  "mode": "inherit",
+                  "values": []
+                },
+                "color": "inherit",
+                "surface": "inherit"
+              },
+              "full": {
+                "features": {
+                  "mode": "suppress",
+                  "values": []
+                },
+                "color": "suppress",
+                "surface": "suppress"
+              }
+            }
+          },
+          "humanProfile": {
+            "version": 1,
+            "byMode": {
+              "semi": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "blue hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "green eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              },
+              "full": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "white hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "green eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              }
+            }
+          },
+          "adult": {
+            "version": 1,
+            "confirmed": false,
+            "confirmation": null,
+            "eligibilitySignature": null,
+            "byMode": {
+              "semi": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-c_SEMI"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              },
+              "full": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-c_FULL"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              }
+            }
+          },
+          "selectedFormId": "form-creature-creature-pokemon-0006-standard",
+          "appliedForm": {
+            "formId": "form-creature-creature-pokemon-0006-standard",
+            "revision": 1,
+            "label": "標準",
+            "identity": {
+              "mode": "inherit",
+              "tokens": []
+            },
+            "appliedAt": "2026-10-11T22:12:27.836Z",
+            "appearanceDigest": "e78cd7a5a4fe0195",
+            "appearance": {
+              "type": "bipedal",
+              "size": "large",
+              "color": "orange",
+              "surface": "skin",
+              "features": [
+                "cream-colored belly",
+                "bat-like wings",
+                "blue-green wing membranes",
+                "long tail",
+                "flame at the tip of the tail",
+                "two backward-pointing head horns"
+              ]
+            }
+          }
+        },
+        "creature:r1-d": {
+          "ownerRef": {
+            "kind": "creature",
+            "masterId": "creature-pokemon-0133",
+            "value": "eevee (pokemon)"
+          },
+          "representation": {
+            "mode": "full",
+            "overrides": {
+              "semi": {
+                "features": {
+                  "mode": "inherit",
+                  "values": []
+                },
+                "color": "inherit",
+                "surface": "inherit"
+              },
+              "full": {
+                "features": {
+                  "mode": "suppress",
+                  "values": []
+                },
+                "color": "suppress",
+                "surface": "suppress"
+              }
+            }
+          },
+          "humanProfile": {
+            "version": 1,
+            "byMode": {
+              "semi": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "blue hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "green eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              },
+              "full": {
+                "captureVersion": 1,
+                "hair": {
+                  "primary": "white hair",
+                  "secondary": "",
+                  "mode": "single"
+                },
+                "eyes": {
+                  "left": "green eyes",
+                  "right": "",
+                  "mode": "same"
+                },
+                "hairStyle": [
+                  "short hair"
+                ],
+                "outfit": [],
+                "body": [],
+                "expression": [],
+                "pose": [],
+                "detail": {
+                  "bodyFeatures": [],
+                  "skinColor": [],
+                  "skin": [],
+                  "upper": [],
+                  "lower": [],
+                  "head": [],
+                  "hands": [],
+                  "feet": [],
+                  "accessory": [],
+                  "weapon": [],
+                  "effect": [],
+                  "legwear": [],
+                  "armor": [],
+                  "carry": [],
+                  "effectColor": [],
+                  "effectPreset": [],
+                  "effectOrigin": [],
+                  "effectMotion": [],
+                  "effectImpact": [],
+                  "effectLight": [],
+                  "eyeDetail": [],
+                  "effectSource": [],
+                  "effectExpression": [],
+                  "weaponState": [],
+                  "armorState": [],
+                  "carryState": [],
+                  "effectAura": [],
+                  "effectDisplay": []
+                },
+                "detailCustom": {},
+                "weights": {
+                  "colorWeights": {},
+                  "itemWeights": {},
+                  "itemColors": {}
+                },
+                "gaze": "",
+                "faceDirection": ""
+              }
+            }
+          },
+          "adult": {
+            "version": 1,
+            "confirmed": false,
+            "confirmation": null,
+            "eligibilitySignature": null,
+            "byMode": {
+              "semi": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-d_SEMI"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              },
+              "full": {
+                "body": {
+                  "bust": ""
+                },
+                "profile": {
+                  "exposure": [],
+                  "clothing": [],
+                  "bustShape": [],
+                  "bustFocus": [],
+                  "nipple": [],
+                  "areola": [],
+                  "action": [],
+                  "contact": [],
+                  "expression": [],
+                  "target": null
+                },
+                "scene": {
+                  "mood": [],
+                  "phase": [],
+                  "focus": [],
+                  "extra": "R1_STORAGE_r1-d_FULL"
+                },
+                "weights": {
+                  "itemWeights": {}
+                },
+                "mainCardSelections": {},
+                "mainCardWeights": {}
+              }
+            }
+          },
+          "selectedFormId": "form-creature-creature-pokemon-0133-standard",
+          "appliedForm": {
+            "formId": "form-creature-creature-pokemon-0133-standard",
+            "revision": 1,
+            "label": "標準",
+            "identity": {
+              "mode": "inherit",
+              "tokens": []
+            },
+            "appliedAt": "2026-10-11T22:12:27.952Z",
+            "appearanceDigest": "1b4ef165853b64dd",
+            "appearance": {
+              "type": "quadruped",
+              "size": "small",
+              "color": "brown",
+              "surface": "fur",
+              "features": [
+                "large pointed ears",
+                "cream-colored neck ruff",
+                "bushy tail",
+                "cream-colored tail tip"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "keys": {
+      "settings": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+      "working": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+      "history": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+      "marker": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+      "journal": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1"
+    },
+    "productionDefinitions": 0
+  },
+  "matrix": {
+    "counts": {
+      "normal": 210,
+      "manga": 210,
+      "panels": 420
+    },
+    "dataCounts": {
+      "character": 1390,
+      "personPresets": 1384,
+      "species": 94,
+      "creaturePresets": 60,
+      "features": 275,
+      "creatureCandidates": 500,
+      "adapters": 1444
+    },
+    "markerComparisons": 210,
+    "baselineEqual": true,
+    "checks": 865,
+    "outputsSHA256": "7d283415876bc135f201d347063f641fa33ef7f0cc341843d050908195693b5d",
+    "fingerprints": {
+      "catalog": "5e3983aee701217043996aedf330fecd61ae6bceec5b2e4bd4ce64cd649566be",
+      "characterBasicPresets": "07c5dd5cca30d21c7469f379d4679f5f3151a370887d365a6d2a2f265e09b505",
+      "detailOptions": "db188463d3b382cba5db15c685753729c21db7f80467c1acf3837d5d019a38e3",
+      "outfitSets": "1c462ff2912df52a795eafb38a5f444b9efc916cdba0a7814b3a253dbb9d00b2",
+      "genders": "46246caf0096977eba2b1d513ae42b45baf813454baf30642a24e8599f122e6b",
+      "creatureBasicPresets": "691064b84afb1fa838db0901aaddfdd8a49f0dde5df7a4f509222c80eea26b46",
+      "creatureCandidateBase": "09abf3abd2b9edbe9bf49651dabd03795916b1d730936a184812fdde031892df",
+      "owners": "df033ad7cc44ce8a2572f44a6981058c4fe930dc7727b16b35acd33cc97ea8c9",
+      "adapters": "37b3f49337724978a73a23100db97f61ba75bd4670593315c61c0249b517e234",
+      "creatureFields": "26cdf7b4f3945ba620966ce3b7cda2bf47883e4b0faa0cdfb7e0074197071e80",
+      "creatureFeatureLabels": "d83df8fe3048f6e362f367611f3d37f517f62e8a50f23ff347fcb8612e3c716c",
+      "creatureSpeciesGroups": "348ec996716a5e4d6304652b0b9655e12f07246b948c7d1422676162a5ee5656"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "tests": [
+    {
+      "id": "I01",
+      "title": "10-entry limit: receipt Undo preserves all other nine entries",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n8 !== 9\n\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:31:500\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:31:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I10",
+      "title": "panel Undo write failure must preserve state/images/history and avoid success",
+      "passed": false,
+      "error": "locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#composeSlots select').first()\u001b[22m\n\u001b[2m    - locator resolved to <select aria-label=\"コマ1の配置\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    60 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at images (/workspace/seaart-horror/tests/horror/independent-edges.cjs:25:306)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:40:109\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:40:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I11",
+      "title": "pending image decode follows panel ID after reorder",
+      "passed": false,
+      "error": "locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#composeSlots select').first()\u001b[22m\n\u001b[2m    - locator resolved to <select aria-label=\"コマ1の配置\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    60 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at images (/workspace/seaart-horror/tests/horror/independent-edges.cjs:25:306)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:41:94\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:41:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I12",
+      "title": "pending image decode is canceled when its target panel was explicitly deleted",
+      "passed": false,
+      "error": "locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#composeSlots select').first()\u001b[22m\n\u001b[2m    - locator resolved to <select aria-label=\"コマ1の配置\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    60 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at images (/workspace/seaart-horror/tests/horror/independent-edges.cjs:25:306)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:42:120\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:42:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I17",
+      "title": "draft Undo of trash restore preserves a coherent deletion/restoration sequence",
+      "passed": true,
+      "detail": {
+        "active": false,
+        "trashed": true,
+        "mergeActive": false,
+        "mergeTrashed": true,
+        "expiry": "2026-11-10T21:52:42.968Z"
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "failed": [
+    "I01",
+    "I10",
+    "I11",
+    "I12"
+  ]
+}

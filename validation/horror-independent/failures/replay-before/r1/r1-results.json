@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "baselineURL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+  "targetURL": "http://127.0.0.1:8765/seaart-horror/index.html",
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/seaart-horror/index.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-horror/index.html\", waiting until \"load\"\u001b[22m\n\n    at page (/workspace/seaart-horror/tests/creature-stage5-remaining-r1.cjs:14:10)\n    at async /workspace/seaart-horror/tests/creature-stage5-remaining-r1.cjs:106:14"
+}

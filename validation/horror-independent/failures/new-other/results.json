@@ -1,0 +1,169 @@
+{
+  "tests": [
+    {
+      "id": "I02",
+      "title": "multiple partial commits and repeated real Undo",
+      "passed": true,
+      "detail": [
+        {
+          "undo": 3,
+          "active": 3
+        },
+        {
+          "undo": 2,
+          "active": 2
+        },
+        {
+          "undo": 1,
+          "active": 1
+        },
+        {
+          "undo": 0,
+          "active": 0
+        }
+      ]
+    },
+    {
+      "id": "I03",
+      "title": "editing another setting before Undo does not unconfirm the receipt",
+      "passed": true,
+      "detail": {
+        "first": {
+          "intensity": "medium",
+          "receipt": "applied"
+        },
+        "second": "recheck",
+        "undo": 0
+      }
+    },
+    {
+      "id": "I04",
+      "title": "editing the applied draft candidate then generation Undo preserves the edit",
+      "passed": true,
+      "detail": {
+        "weight": 1.7,
+        "receipt": null,
+        "local": null
+      }
+    },
+    {
+      "id": "I05",
+      "title": "candidate definition change invalidates a prepared multi-item commit",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true,
+        "status": "recheck"
+      }
+    },
+    {
+      "id": "I06",
+      "title": "conflicting same-field candidates leave a separately valid item atomic",
+      "passed": true,
+      "detail": {
+        "accepted": 1,
+        "rejected": 2,
+        "applied": [
+          false,
+          false,
+          true
+        ],
+        "firstPanel": null
+      }
+    },
+    {
+      "id": "I07",
+      "title": "multi-item commit write failure restores RAM/disk/both Undo histories",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "rejected": true,
+        "unchanged": true,
+        "applied": false
+      }
+    },
+    {
+      "id": "I13",
+      "title": "hidden-slot insert rejection protects image/data/settings of the sixth slot",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "I14",
+      "title": "merge preview invalidates after a new local draft edit",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "I15",
+      "title": "source actor deletion and manual mapping never use matching names automatically",
+      "passed": true,
+      "detail": {
+        "missing": "unresolved",
+        "status": "recheck",
+        "confirmed": "confirmed",
+        "originalUnchanged": true
+      }
+    },
+    {
+      "id": "I16",
+      "title": "reload preserves receipt/workspace but does not fabricate session Undo",
+      "passed": false,
+      "error": "page.evaluate: ReferenceError: ijson is not defined\n    at eval (eval at evaluate (:311:30), <anonymous>:1:94)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:46:398\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:46:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I17",
+      "title": "draft Undo of trash restore preserves a coherent deletion/restoration sequence",
+      "passed": true,
+      "detail": {
+        "active": false,
+        "trashed": true,
+        "mergeActive": false,
+        "mergeTrashed": true,
+        "expiry": "2026-11-10T22:00:11.873Z"
+      }
+    },
+    {
+      "id": "I18",
+      "title": "named save JSON carries horror settings and explicitly selected draft/trash",
+      "passed": true,
+      "detail": {
+        "root": 5,
+        "actor": "partial",
+        "drafts": 1,
+        "trash": 1,
+        "keys": [
+          "version",
+          "drafts",
+          "trash",
+          "itemTombstones",
+          "mergeLog",
+          "recoveryPending"
+        ]
+      }
+    },
+    {
+      "id": "I21",
+      "title": "two actual tabs reject stale writer without discarding either draft",
+      "passed": true,
+      "detail": {
+        "staleRejected": true,
+        "reloadedWinner": true,
+        "localDraftRetained": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "failed": [
+    "I16"
+  ]
+}

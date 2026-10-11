@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "id": "I34",
+      "title": "already-focused ordinary text field cannot edit or save while JSON reading is pending",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    pending: true,\n+   unchanged: false,\n+   value: 'BEFORE_IMPORTDURING_IMPORT'\n-   unchanged: true,\n-   value: 'BEFORE_IMPORT'\n  }\n\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:70:1208\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:70:2",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "failed": [
+    "I34"
+  ]
+}

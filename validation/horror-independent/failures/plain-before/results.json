@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "id": "I32",
+      "title": "plain working-state Undo save failure is atomic without any horror data",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    horrorConfigured: false,\n    injected: true,\n+   unchanged: false,\n+   undo: 0\n-   unchanged: true,\n-   undo: 1\n  }\n\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:68:988\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:68:2",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "failed": [
+    "I32"
+  ]
+}

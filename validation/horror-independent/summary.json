@@ -1,0 +1,50 @@
+{
+  "validatedProductCommit": "e4660a638988c8a7a2e55eed5fb1b1acb3f33bcd",
+  "initialRemoteHEAD": "be4f7f902d533d85614b3b560946e54c735e213a",
+  "mainHEAD": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "productSHA256": "9fe8950c1d4ecdd936edf635975aebdad4b01633fb6e498da37644cb1827d33d",
+  "allFinalRunnerExitCodesZero": true,
+  "allRunnerProductsIdentical": true,
+  "existingOriginalFilesUnchanged": 50,
+  "horrorRequiredT01T30": {
+    "passed": 30,
+    "failed": 0,
+    "notRun": 0
+  },
+  "additionalIndependent": {
+    "stateTransitions": 36,
+    "promptConfigurations": 8,
+    "touchViewports": 6,
+    "total": 50,
+    "passed": 50,
+    "failed": 0
+  },
+  "promptFullTextRows": 168,
+  "normalExplicitAttributionRows": 112,
+  "regression": {
+    "R1Contracts": 49,
+    "R1Assertions": 865,
+    "normalPairs": 210,
+    "mangaPairs": 210,
+    "panelPairs": 420,
+    "fixedDatasets": 12,
+    "nativeNormalPairs": 252,
+    "nativeMangaPairs": 252,
+    "existingAdultConfigurations": 21,
+    "motifR1Contracts": 36,
+    "motifCreationFailures": 8,
+    "motifMigrationCases": 8,
+    "motifBoundaries": 20,
+    "horrorStorageFailures": 14,
+    "horrorBoundaries": 20,
+    "realSWCases": 9
+  },
+  "physicalDevice": false,
+  "publicOriginUpdateTest": false,
+  "seaArtImageGeneration": false,
+  "productChanges": [
+    "index.html",
+    "src/horror-runtime.js",
+    "scripts/integrate-horror.py"
+  ]
+}

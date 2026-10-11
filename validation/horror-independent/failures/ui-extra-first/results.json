@@ -1,0 +1,56 @@
+{
+  "tests": [
+    {
+      "id": "U-360-640",
+      "width": 360,
+      "height": 640,
+      "passed": false,
+      "error": "locator.tap: Error: strict mode violation: getByLabel('候補を検索', { exact: true }) resolved to 8 elements:\n    1) <input type=\"search\" id=\"normalSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('場面・演出').getByLabel('候補を検索')\n    2) <input type=\"search\" id=\"creatureSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#creatureSearch')\n    3) <input type=\"search\" id=\"choiceDialogSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('項目を選ぶ').getByLabel('候補を検索')\n    4) <input type=\"search\" id=\"personChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('人物の設定を選ぶ').getByLabel('候補を検索')\n    5) <input type=\"search\" aria-label=\"候補を検索\" id=\"sceneChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#sceneChoiceSearch')\n    6) <input type=\"search\" aria-label=\"候補を検索\" id=\"mangaSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#mangaSceneSearch')\n    7) <input type=\"search\" aria-label=\"候補を検索\" placeholder=\"日本語・英語で検索\" id=\"simpleSelectionSearch\"/> aka locator('#simpleSelectionSearch')\n    8) <input type=\"text\" aria-label=\"候補を検索\"/> aka getByRole('textbox', { name: '候補を検索' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('候補を検索', { exact: true })\u001b[22m\n\n    at /workspace/seaart-horror/tests/horror/independent-ui.cjs:8:87",
+      "pageErrors": []
+    },
+    {
+      "id": "U-360-800",
+      "width": 360,
+      "height": 800,
+      "passed": false,
+      "error": "locator.tap: Error: strict mode violation: getByLabel('候補を検索', { exact: true }) resolved to 8 elements:\n    1) <input type=\"search\" id=\"normalSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('場面・演出').getByLabel('候補を検索')\n    2) <input type=\"search\" id=\"creatureSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#creatureSearch')\n    3) <input type=\"search\" id=\"choiceDialogSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('項目を選ぶ').getByLabel('候補を検索')\n    4) <input type=\"search\" id=\"personChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('人物の設定を選ぶ').getByLabel('候補を検索')\n    5) <input type=\"search\" aria-label=\"候補を検索\" id=\"sceneChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#sceneChoiceSearch')\n    6) <input type=\"search\" aria-label=\"候補を検索\" id=\"mangaSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#mangaSceneSearch')\n    7) <input type=\"search\" aria-label=\"候補を検索\" placeholder=\"日本語・英語で検索\" id=\"simpleSelectionSearch\"/> aka locator('#simpleSelectionSearch')\n    8) <input type=\"text\" aria-label=\"候補を検索\"/> aka getByRole('textbox', { name: '候補を検索' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('候補を検索', { exact: true })\u001b[22m\n\n    at /workspace/seaart-horror/tests/horror/independent-ui.cjs:8:87",
+      "pageErrors": []
+    },
+    {
+      "id": "U-393-640",
+      "width": 393,
+      "height": 640,
+      "passed": false,
+      "error": "locator.tap: Error: strict mode violation: getByLabel('候補を検索', { exact: true }) resolved to 8 elements:\n    1) <input type=\"search\" id=\"normalSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('場面・演出').getByLabel('候補を検索')\n    2) <input type=\"search\" id=\"creatureSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#creatureSearch')\n    3) <input type=\"search\" id=\"choiceDialogSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('項目を選ぶ').getByLabel('候補を検索')\n    4) <input type=\"search\" id=\"personChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('人物の設定を選ぶ').getByLabel('候補を検索')\n    5) <input type=\"search\" aria-label=\"候補を検索\" id=\"sceneChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#sceneChoiceSearch')\n    6) <input type=\"search\" aria-label=\"候補を検索\" id=\"mangaSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#mangaSceneSearch')\n    7) <input type=\"search\" aria-label=\"候補を検索\" placeholder=\"日本語・英語で検索\" id=\"simpleSelectionSearch\"/> aka locator('#simpleSelectionSearch')\n    8) <input type=\"text\" aria-label=\"候補を検索\"/> aka getByRole('textbox', { name: '候補を検索' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('候補を検索', { exact: true })\u001b[22m\n\n    at /workspace/seaart-horror/tests/horror/independent-ui.cjs:8:87",
+      "pageErrors": []
+    },
+    {
+      "id": "U-393-800",
+      "width": 393,
+      "height": 800,
+      "passed": false,
+      "error": "locator.tap: Error: strict mode violation: getByLabel('候補を検索', { exact: true }) resolved to 8 elements:\n    1) <input type=\"search\" id=\"normalSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('場面・演出').getByLabel('候補を検索')\n    2) <input type=\"search\" id=\"creatureSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#creatureSearch')\n    3) <input type=\"search\" id=\"choiceDialogSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('項目を選ぶ').getByLabel('候補を検索')\n    4) <input type=\"search\" id=\"personChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('人物の設定を選ぶ').getByLabel('候補を検索')\n    5) <input type=\"search\" aria-label=\"候補を検索\" id=\"sceneChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#sceneChoiceSearch')\n    6) <input type=\"search\" aria-label=\"候補を検索\" id=\"mangaSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#mangaSceneSearch')\n    7) <input type=\"search\" aria-label=\"候補を検索\" placeholder=\"日本語・英語で検索\" id=\"simpleSelectionSearch\"/> aka locator('#simpleSelectionSearch')\n    8) <input type=\"text\" aria-label=\"候補を検索\"/> aka getByRole('textbox', { name: '候補を検索' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('候補を検索', { exact: true })\u001b[22m\n\n    at /workspace/seaart-horror/tests/horror/independent-ui.cjs:8:87",
+      "pageErrors": []
+    },
+    {
+      "id": "U-430-640",
+      "width": 430,
+      "height": 640,
+      "passed": false,
+      "error": "locator.tap: Error: strict mode violation: getByLabel('候補を検索', { exact: true }) resolved to 8 elements:\n    1) <input type=\"search\" id=\"normalSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('場面・演出').getByLabel('候補を検索')\n    2) <input type=\"search\" id=\"creatureSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#creatureSearch')\n    3) <input type=\"search\" id=\"choiceDialogSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('項目を選ぶ').getByLabel('候補を検索')\n    4) <input type=\"search\" id=\"personChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('人物の設定を選ぶ').getByLabel('候補を検索')\n    5) <input type=\"search\" aria-label=\"候補を検索\" id=\"sceneChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#sceneChoiceSearch')\n    6) <input type=\"search\" aria-label=\"候補を検索\" id=\"mangaSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#mangaSceneSearch')\n    7) <input type=\"search\" aria-label=\"候補を検索\" placeholder=\"日本語・英語で検索\" id=\"simpleSelectionSearch\"/> aka locator('#simpleSelectionSearch')\n    8) <input type=\"text\" aria-label=\"候補を検索\"/> aka getByRole('textbox', { name: '候補を検索' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('候補を検索', { exact: true })\u001b[22m\n\n    at /workspace/seaart-horror/tests/horror/independent-ui.cjs:8:87",
+      "pageErrors": []
+    },
+    {
+      "id": "U-430-800",
+      "width": 430,
+      "height": 800,
+      "passed": false,
+      "error": "locator.tap: Error: strict mode violation: getByLabel('候補を検索', { exact: true }) resolved to 8 elements:\n    1) <input type=\"search\" id=\"normalSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('場面・演出').getByLabel('候補を検索')\n    2) <input type=\"search\" id=\"creatureSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#creatureSearch')\n    3) <input type=\"search\" id=\"choiceDialogSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('項目を選ぶ').getByLabel('候補を検索')\n    4) <input type=\"search\" id=\"personChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka getByLabel('人物の設定を選ぶ').getByLabel('候補を検索')\n    5) <input type=\"search\" aria-label=\"候補を検索\" id=\"sceneChoiceSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#sceneChoiceSearch')\n    6) <input type=\"search\" aria-label=\"候補を検索\" id=\"mangaSceneSearch\" placeholder=\"日本語・英語で検索\"/> aka locator('#mangaSceneSearch')\n    7) <input type=\"search\" aria-label=\"候補を検索\" placeholder=\"日本語・英語で検索\" id=\"simpleSelectionSearch\"/> aka locator('#simpleSelectionSearch')\n    8) <input type=\"text\" aria-label=\"候補を検索\"/> aka getByRole('textbox', { name: '候補を検索' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('候補を検索', { exact: true })\u001b[22m\n\n    at /workspace/seaart-horror/tests/horror/independent-ui.cjs:8:87",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "actualKeyboard": false,
+  "publicOrigin": false,
+  "passed": false
+}

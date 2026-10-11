@@ -1,0 +1,66 @@
+{
+  "tests": [
+    {
+      "id": "P01",
+      "scenario": "A-only",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 3\n\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:21:88"
+    },
+    {
+      "id": "P02",
+      "scenario": "B-only",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: B-only/standard/none: wrong panel actor 0 mask-like face\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:22:414"
+    },
+    {
+      "id": "P03",
+      "scenario": "different-A-B",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: different-A-B missing gray skin\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:23:64"
+    },
+    {
+      "id": "P04",
+      "scenario": "person-creature",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 3\n\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:21:88"
+    },
+    {
+      "id": "P05",
+      "scenario": "panel-normal",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 3\n\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:21:88"
+    },
+    {
+      "id": "P06",
+      "scenario": "local-overrides-global",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 3\n\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:21:88"
+    },
+    {
+      "id": "P07",
+      "scenario": "weighted-intensity",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 3\n\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:21:88"
+    },
+    {
+      "id": "P08",
+      "scenario": "replace-exclude",
+      "passed": false,
+      "rows": 21,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 3\n\n    at /workspace/seaart-horror/tests/horror/independent-prompts.cjs:21:88"
+    }
+  ],
+  "physicalDevice": false,
+  "seaArtImagesGenerated": false,
+  "passed": false,
+  "fullTextRows": 168,
+  "normalExplicitAttributionRows": 112,
+  "separationNoneLimitation": "Existing none mode emits a shared list; actor resolver isolation is tested but explicit normal actor blocks are intentionally absent."
+}

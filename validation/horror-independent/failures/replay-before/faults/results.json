@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "rows": [],
+  "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/seaart-horror/index.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-horror/index.html\", waiting until \"load\"\u001b[22m\n\n    at /workspace/seaart-horror/tests/horror/faults.cjs:3:376"
+}

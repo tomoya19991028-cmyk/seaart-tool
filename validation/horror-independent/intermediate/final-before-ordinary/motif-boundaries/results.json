@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": [
+    "deleted source rejects creation without Undo",
+    "saved semi/full previews independent",
+    "unknown/source extension fields rejected",
+    "ID downgrade with origin metadata rejected",
+    "source reference in owner rejected",
+    "adult additional-card weight storage rejected",
+    "manual person editing persists",
+    "person edits do not synchronize source",
+    "general user card selection can be saved",
+    "general user card survives bootstrap using matching settings",
+    "named restore retains classification and edited general appearance",
+    "history restore retains metadata without adult permission",
+    "reset removes motif working state",
+    "reset Undo restores motif classification without permission",
+    "real second-tab commit causes stale creation rejection and preserves disk/RAM/Undo",
+    "journal deletion failure does not undo committed save",
+    "leftover journal contains latest v4 bundle",
+    "leftover committed journal reload retains latest data",
+    "interrupted pending transaction recovers marker-matching prior bundle without partial person",
+    "committed namespace corruption blocks instead of legacy fallback or deletion"
+  ]
+}

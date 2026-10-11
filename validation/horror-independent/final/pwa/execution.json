@@ -1,0 +1,21 @@
+{
+  "command": [
+    "node",
+    "tests/horror/pwa.cjs"
+  ],
+  "cwd": "/workspace/seaart-horror",
+  "startUTC": "2026-10-11T22:29:28.762131+00:00",
+  "gitHEAD": "be4f7f902d533d85614b3b560946e54c735e213a",
+  "productSHA256Before": "9fe8950c1d4ecdd936edf635975aebdad4b01633fb6e498da37644cb1827d33d",
+  "testSHA256": "fb9abbf9ad2fee1d72f82f1272e1c16abbf9ceb7e2f8a194bf67b530c8119e23",
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-horror/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-horror-independent-20261011/final/pwa"
+  },
+  "publicOriginTest": false,
+  "physicalDevice": false,
+  "endUTC": "2026-10-11T22:30:41.665355+00:00",
+  "exitCode": 0,
+  "productSHA256After": "9fe8950c1d4ecdd936edf635975aebdad4b01633fb6e498da37644cb1827d33d"
+}

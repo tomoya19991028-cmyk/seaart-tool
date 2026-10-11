@@ -1,0 +1,261 @@
+{
+  "tests": [
+    {
+      "id": "I08",
+      "title": "real uploaded images/pixels/payload survive move, delete, and two Undo operations",
+      "passed": true,
+      "detail": {
+        "deletedUndo": true,
+        "originalRestored": true,
+        "rows": [
+          {
+            "id": "panel-e3ae780d-a5f1-499d-ada2-5046cec3605a",
+            "image": "fixture-0.png",
+            "pixel": [
+              255,
+              0,
+              0,
+              255
+            ],
+            "placement": "top",
+            "description": "identity-0",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-0"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "on",
+                      "weight": 1,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-2135e4c3-af1e-4e79-b8b2-8a2d10e6a2c9",
+            "image": "fixture-1.png",
+            "pixel": [
+              0,
+              255,
+              0,
+              255
+            ],
+            "placement": "bottom",
+            "description": "identity-1",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-1"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "off",
+                      "weight": 1.1,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-48bac05d-f4e5-4c88-94a5-eaad3e845e26",
+            "image": "fixture-2.png",
+            "pixel": [
+              0,
+              0,
+              255,
+              255
+            ],
+            "placement": "contain",
+            "description": "identity-2",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-2"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "on",
+                      "weight": 1.2,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-6df7f987-0b9a-48d0-9220-acf9102e893c",
+            "image": "fixture-3.png",
+            "pixel": [
+              255,
+              255,
+              0,
+              255
+            ],
+            "placement": "center",
+            "description": "identity-3",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-3"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "off",
+                      "weight": 1.3,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-eb7bd1d6-ab52-41ad-b32f-92fbb4de2d75",
+            "image": null,
+            "pixel": null,
+            "placement": "center",
+            "description": "identity-4",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-4"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "on",
+                      "weight": 1.4,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-fe8c83ca-9323-4956-aee1-15c8c3b18346",
+            "image": null,
+            "pixel": null,
+            "placement": "center",
+            "description": "identity-5",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-5"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "off",
+                      "weight": 1.5,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "I09",
+      "title": "panel forward-operation write failure preserves actual images and placement",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "rejected": true,
+        "unchanged": true,
+        "pixelsSame": true
+      }
+    },
+    {
+      "id": "I10",
+      "title": "panel Undo write failure must preserve state/images/history and avoid success",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:40:790\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:40:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I11",
+      "title": "pending image decode follows panel ID after reorder",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 2\n\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:41:1165\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:41:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I12",
+      "title": "pending image decode is canceled when its target panel was explicitly deleted",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:42:1097\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:42:2",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "failed": [
+    "I10",
+    "I11",
+    "I12"
+  ]
+}

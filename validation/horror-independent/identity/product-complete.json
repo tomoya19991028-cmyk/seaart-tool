@@ -1,0 +1,17 @@
+{
+  "generatedEqual": true,
+  "files": {
+    "index.html": {
+      "bytes": 3888088,
+      "sha256": "9fe8950c1d4ecdd936edf635975aebdad4b01633fb6e498da37644cb1827d33d"
+    },
+    "sw.js": {
+      "bytes": 2314,
+      "sha256": "5bd6b46a6f41f91b541feb62c0946751b4eab87c081bd6522241c1d549e66c31"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "tests": [
+    {
+      "id": "I20",
+      "title": "actual storage snapshots at six commit cut points recover one complete bundle",
+      "passed": true,
+      "detail": [
+        {
+          "cut": 1,
+          "key": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+          "phase": "pending",
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 2,
+          "key": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "phase": null,
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 3,
+          "key": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "phase": null,
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 4,
+          "key": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "phase": null,
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 5,
+          "key": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+          "phase": null,
+          "recovered": "next",
+          "passed": true
+        },
+        {
+          "cut": 6,
+          "key": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+          "phase": "committed",
+          "recovered": "next",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "I21",
+      "title": "two actual tabs reject stale writer without discarding either draft",
+      "passed": false,
+      "error": "page.evaluate: Error: 別タブで保存が更新されました\n    at hAssert (http://127.0.0.1:8765/seaart-horror/index.html:1260:65)\n    at hTransaction (http://127.0.0.1:8765/seaart-horror/index.html:9488:6)\n    at hSetActor (http://127.0.0.1:8765/seaart-horror/index.html:9491:38)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:5)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-horror/tests/horror/independent-edges.cjs:54:321\n    at async test (/workspace/seaart-horror/tests/horror/independent-edges.cjs:30:414)\n    at async /workspace/seaart-horror/tests/horror/independent-edges.cjs:54:2",
+      "pageErrors": []
+    },
+    {
+      "id": "I22",
+      "title": "actual JSON import preserves local unresolved/deletion/recovery data and merges selected draft/trash",
+      "passed": true,
+      "detail": {
+        "actualFileHandler": true,
+        "reloadKeepsBoth": true,
+        "pendingUnchanged": true
+      }
+    },
+    {
+      "id": "I23",
+      "title": "count 1 through 6 and reset preserve old draft references without guessing new IDs",
+      "passed": true,
+      "detail": {
+        "newManga": true,
+        "newPanels": true,
+        "oldReference": true,
+        "status": "unresolved",
+        "did": "draft-21658ca6-6531-443b-a8d1-562727ced445"
+      }
+    },
+    {
+      "id": "I24",
+      "title": "actual v3 and v4 writers migrate complete working data while retaining old keys",
+      "passed": true,
+      "detail": [
+        {
+          "target": "seaart-horror-validation/old-stage",
+          "passed": true
+        },
+        {
+          "target": "seaart-creature-motif-integration1/baseline",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "failed": [
+    "I21"
+  ]
+}

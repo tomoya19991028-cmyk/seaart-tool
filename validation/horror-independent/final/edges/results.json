@@ -1,0 +1,680 @@
+{
+  "tests": [
+    {
+      "id": "I01",
+      "title": "10-entry limit: receipt Undo preserves all other nine entries",
+      "passed": true,
+      "detail": {
+        "before": 10,
+        "after": 9,
+        "prefixEqual": true,
+        "receiptCleared": true
+      }
+    },
+    {
+      "id": "I02",
+      "title": "multiple partial commits and repeated real Undo",
+      "passed": true,
+      "detail": [
+        {
+          "undo": 3,
+          "active": 3
+        },
+        {
+          "undo": 2,
+          "active": 2
+        },
+        {
+          "undo": 1,
+          "active": 1
+        },
+        {
+          "undo": 0,
+          "active": 0
+        }
+      ]
+    },
+    {
+      "id": "I03",
+      "title": "editing another setting before Undo does not unconfirm the receipt",
+      "passed": true,
+      "detail": {
+        "first": {
+          "intensity": "medium",
+          "receipt": "applied"
+        },
+        "second": "recheck",
+        "undo": 0
+      }
+    },
+    {
+      "id": "I04",
+      "title": "editing the applied draft candidate then generation Undo preserves the edit",
+      "passed": true,
+      "detail": {
+        "weight": 1.7,
+        "receipt": null,
+        "local": null
+      }
+    },
+    {
+      "id": "I05",
+      "title": "candidate definition change invalidates a prepared multi-item commit",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true,
+        "status": "recheck"
+      }
+    },
+    {
+      "id": "I06",
+      "title": "conflicting same-field candidates leave a separately valid item atomic",
+      "passed": true,
+      "detail": {
+        "accepted": 1,
+        "rejected": 2,
+        "applied": [
+          false,
+          false,
+          true
+        ],
+        "firstPanel": null
+      }
+    },
+    {
+      "id": "I07",
+      "title": "multi-item commit write failure restores RAM/disk/both Undo histories",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "rejected": true,
+        "unchanged": true,
+        "applied": false
+      }
+    },
+    {
+      "id": "I08",
+      "title": "real uploaded images/pixels/payload survive move, delete, and two Undo operations",
+      "passed": true,
+      "detail": {
+        "deletedUndo": true,
+        "originalRestored": true,
+        "rows": [
+          {
+            "id": "panel-99e8e2ee-6216-438a-aa7b-088d84a34f87",
+            "image": "fixture-0.png",
+            "pixel": [
+              255,
+              0,
+              0,
+              255
+            ],
+            "placement": "top",
+            "description": "identity-0",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-0"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "on",
+                      "weight": 1,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-26e5ba4a-8794-4bde-a994-0e816577bdd3",
+            "image": "fixture-1.png",
+            "pixel": [
+              0,
+              255,
+              0,
+              255
+            ],
+            "placement": "bottom",
+            "description": "identity-1",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-1"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "off",
+                      "weight": 1.1,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-be142fbd-d771-49c0-97b0-5d96258d6da3",
+            "image": "fixture-2.png",
+            "pixel": [
+              0,
+              0,
+              255,
+              255
+            ],
+            "placement": "contain",
+            "description": "identity-2",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-2"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "on",
+                      "weight": 1.2,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-aefaaeda-0f5f-498f-b43f-8e6d1dca7e50",
+            "image": "fixture-3.png",
+            "pixel": [
+              255,
+              255,
+              0,
+              255
+            ],
+            "placement": "center",
+            "description": "identity-3",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-3"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "off",
+                      "weight": 1.3,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-626d46f7-be6f-49ab-8c82-1ebdb9c3f18c",
+            "image": null,
+            "pixel": null,
+            "placement": "center",
+            "description": "identity-4",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-4"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "on",
+                      "weight": 1.4,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          },
+          {
+            "id": "panel-29d8d733-c064-49f9-aea8-836611afc1b6",
+            "image": null,
+            "pixel": null,
+            "placement": "center",
+            "description": "identity-5",
+            "people": {
+              "original-independent-a": {
+                "enabled": true,
+                "damage": [
+                  "damage-5"
+                ]
+              }
+            },
+            "horror": {
+              "byActor": {
+                "person:original-independent-a": {
+                  "state": "inherit",
+                  "features": {
+                    "horror-feature-long-fingers": {
+                      "mode": "off",
+                      "weight": 1.5,
+                      "parameters": {}
+                    }
+                  },
+                  "structure": {},
+                  "originalFeaturePolicies": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "I09",
+      "title": "panel forward-operation write failure preserves actual images and placement",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "rejected": true,
+        "unchanged": true,
+        "pixelsSame": true
+      }
+    },
+    {
+      "id": "I10",
+      "title": "panel Undo write failure must preserve state/images/history and avoid success",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "pixelsSame": true,
+        "undo": 1
+      }
+    },
+    {
+      "id": "I11",
+      "title": "pending image decode follows panel ID after reorder",
+      "passed": true,
+      "detail": {
+        "target": 2,
+        "assigned": 2,
+        "otherImage": "fixture-1.png"
+      }
+    },
+    {
+      "id": "I12",
+      "title": "pending image decode is canceled when its target panel was explicitly deleted",
+      "passed": true,
+      "detail": {
+        "canceled": true,
+        "panelImagesUnchanged": true
+      }
+    },
+    {
+      "id": "I13",
+      "title": "hidden-slot insert rejection protects image/data/settings of the sixth slot",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "I14",
+      "title": "merge preview invalidates after a new local draft edit",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "I15",
+      "title": "source actor deletion and manual mapping never use matching names automatically",
+      "passed": true,
+      "detail": {
+        "missing": "unresolved",
+        "status": "recheck",
+        "confirmed": "confirmed",
+        "originalUnchanged": true
+      }
+    },
+    {
+      "id": "I16",
+      "title": "reload preserves receipt/workspace but does not fabricate session Undo",
+      "passed": true,
+      "detail": {
+        "durableReceipt": true,
+        "sessionUndoUnavailable": true
+      }
+    },
+    {
+      "id": "I17",
+      "title": "draft Undo of trash restore preserves a coherent deletion/restoration sequence",
+      "passed": true,
+      "detail": {
+        "active": false,
+        "trashed": true,
+        "mergeActive": false,
+        "mergeTrashed": true,
+        "expiry": "2026-11-10T22:24:57.421Z"
+      }
+    },
+    {
+      "id": "I18",
+      "title": "named save JSON carries horror settings and explicitly selected draft/trash",
+      "passed": true,
+      "detail": {
+        "root": 5,
+        "actor": "partial",
+        "drafts": 1,
+        "trash": 1,
+        "keys": [
+          "version",
+          "drafts",
+          "trash",
+          "itemTombstones",
+          "mergeLog",
+          "recoveryPending"
+        ]
+      }
+    },
+    {
+      "id": "I19",
+      "title": "horror-setting Undo write failure preserves RAM/disk/history",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "undo": 1
+      }
+    },
+    {
+      "id": "I20",
+      "title": "actual storage snapshots at six commit cut points recover one complete bundle",
+      "passed": true,
+      "detail": [
+        {
+          "cut": 1,
+          "key": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+          "phase": "pending",
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 2,
+          "key": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "phase": null,
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 3,
+          "key": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "phase": null,
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 4,
+          "key": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "phase": null,
+          "recovered": "previous",
+          "passed": true
+        },
+        {
+          "cut": 5,
+          "key": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+          "phase": null,
+          "recovered": "next",
+          "passed": true
+        },
+        {
+          "cut": 6,
+          "key": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+          "phase": "committed",
+          "recovered": "next",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "I21",
+      "title": "two actual tabs reject stale writer without discarding either draft",
+      "passed": true,
+      "detail": {
+        "staleRejected": true,
+        "reloadedWinner": true,
+        "localDraftRetained": true
+      }
+    },
+    {
+      "id": "I22",
+      "title": "actual JSON import preserves local unresolved/deletion/recovery data and merges selected draft/trash",
+      "passed": true,
+      "detail": {
+        "actualFileHandler": true,
+        "reloadKeepsBoth": true,
+        "pendingUnchanged": true
+      }
+    },
+    {
+      "id": "I23",
+      "title": "count 1 through 6 and reset preserve old draft references without guessing new IDs",
+      "passed": true,
+      "detail": {
+        "newManga": true,
+        "newPanels": true,
+        "oldReference": true,
+        "status": "unresolved",
+        "did": "draft-9086deee-054f-49a7-843f-dddf6c22df01"
+      }
+    },
+    {
+      "id": "I24",
+      "title": "actual v3 and v4 writers migrate complete working data while retaining old keys",
+      "passed": true,
+      "detail": [
+        {
+          "target": "seaart-horror-validation/old-stage",
+          "passed": true
+        },
+        {
+          "target": "seaart-creature-motif-integration1/baseline",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "I25",
+      "title": "receipt Undo save failure retains confirmed settings and all history entries",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "undo": 1,
+        "applied": true
+      }
+    },
+    {
+      "id": "I26",
+      "title": "same-field edits block direct receipt rollback, and two real Undo steps remain coherent",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true,
+        "first": {
+          "weight": 1,
+          "applied": true
+        },
+        "applied": false,
+        "undo": 0
+      }
+    },
+    {
+      "id": "I27",
+      "title": "draft and generation Undo alternate without crossing histories at ten entries",
+      "passed": true,
+      "detail": {
+        "capped": 10,
+        "draftUntouched": true,
+        "intensity": "medium",
+        "draftUndo": 9,
+        "undo": 0,
+        "name": "Rename 10"
+      }
+    },
+    {
+      "id": "I28",
+      "title": "reload persists panel IDs/settings but keeps images and placement session-only",
+      "passed": true,
+      "detail": {
+        "idsAndSettingsDurable": true,
+        "imagesSessionOnly": true,
+        "placementSessionOnly": true
+      }
+    },
+    {
+      "id": "I29",
+      "title": "real browser localStorage exhaustion rejects save without touching the saved bundle",
+      "passed": true,
+      "detail": {
+        "full": true,
+        "quotaName": "QuotaExceededError",
+        "chunks": 20,
+        "rejected": true,
+        "unchanged": true,
+        "message": "ブラウザの保存容量が不足しています。"
+      }
+    },
+    {
+      "id": "I30",
+      "title": "real pending File.text import blocks editing until import completes",
+      "passed": true,
+      "detail": {
+        "during": {
+          "rejected": true,
+          "unchanged": true
+        },
+        "after": {
+          "ready": true,
+          "failed": false,
+          "adult": 0
+        }
+      }
+    },
+    {
+      "id": "I31",
+      "title": "ordinary art-style Undo after partial commit is atomic on save failure",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "undo": 2,
+        "applied": true
+      }
+    },
+    {
+      "id": "I32",
+      "title": "plain working-state Undo save failure is atomic without any horror data",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "undo": 1,
+        "horrorConfigured": false
+      }
+    },
+    {
+      "id": "I33",
+      "title": "ordinary edit Undo then receipt Undo preserves draft workspace and correct style",
+      "passed": true,
+      "detail": {
+        "first": {
+          "styleSame": true,
+          "workspaceSame": true,
+          "applied": true,
+          "undo": 1
+        },
+        "applied": false,
+        "undo": 0
+      }
+    },
+    {
+      "id": "I34",
+      "title": "already-focused ordinary text field cannot edit or save while JSON reading is pending",
+      "passed": true,
+      "detail": {
+        "pending": true,
+        "value": "BEFORE_IMPORT",
+        "unchanged": true
+      }
+    },
+    {
+      "id": "I35",
+      "title": "invalid JSON and canceled import always restore the previous UI lock states",
+      "passed": true,
+      "detail": {
+        "invalidPreserved": true,
+        "canceledPreserved": true,
+        "previousInertStatePreserved": true
+      }
+    },
+    {
+      "id": "I36",
+      "title": "real JSON import save failure restores RAM/disk/histories and unlocks input",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "unlocked": true,
+        "failure": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true,
+  "failed": []
+}

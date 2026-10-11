@@ -1,0 +1,252 @@
+[
+  {
+    "file": "tests/common-access-stage5-d1-pwa.cjs",
+    "sha256": "e80489c859d7ffd17326ba111b814c1d4b051d50b832877d872bdfcad452e318",
+    "unchanged": true
+  },
+  {
+    "file": "tests/common-access-stage5-d1-quota.cjs",
+    "sha256": "a45612c9fce1c6a14af1010bc85fc9ff50885c8b72c084f8e4b5afd1282ba8b8",
+    "unchanged": true
+  },
+  {
+    "file": "tests/common-access-stage5-d1-state.cjs",
+    "sha256": "f601035ba114208853d95a98327b105e94da24adeab5243504c12c1dab6bb41a",
+    "unchanged": true
+  },
+  {
+    "file": "tests/common-access-stage5-d1.cjs",
+    "sha256": "bf3f1c90d266ed50fcca0c6216cbc102378678c8fddbce2963ad4f7e9d0f98f8",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-a-references.cjs",
+    "sha256": "6aef787c4156907f226b4efe6a171c25490109092f0e5ca3464485ac55c833b4",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-a.cjs",
+    "sha256": "ee5f9c0eee6c17073aaa2672f65f02809525a0d3c50192776bd67b383ed72307",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-b-pwa.cjs",
+    "sha256": "8b7ec5f3f9e8086e9f7de1f10492967dcaa748c8edf03ed4b106664faa8f528a",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-b-quota.cjs",
+    "sha256": "af25165bc7a28c6fd568e218a6b3ec1a42939999e5800c454723e1b8fb58003c",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-b.cjs",
+    "sha256": "d019e229a1f3b08530a1bededfef8f8517c1e36e11559389d2c92e0061bf1ba5",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-c-pwa.cjs",
+    "sha256": "4f79c678cd04d6bf09fc58181cc91ae45e63d9333ed051b77e0822e8ca51f69b",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-c-state.cjs",
+    "sha256": "5c8e68ff9e0dea690b5209d34a350e7b31d7151b1cfbbd758819d306bdf42fca",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-adult-stage5-c.cjs",
+    "sha256": "47bb246b7401cb312f479b110b2facdd58e48a657743eaa72763720fdc9368b0",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person-boundaries.cjs",
+    "sha256": "9e27d6bb3e2873a0f16e7667409165f15b501ede6a0891427a29ba413cf5c835",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person-fixed-baseline.cjs",
+    "sha256": "d5f524587e4efb869119410c962f4db99948c74dc057d46b83380c788bc475ac",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person-legacy-regression.cjs",
+    "sha256": "fa289787642925e93902b90a851492c0ff946de455783bbc8860fdff96a3cc5c",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person-pwa.cjs",
+    "sha256": "8e4777117ae44665d3b8e7b8c54ae1b8d456116207ad93d176a58063129acf93",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person-r1.cjs",
+    "sha256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person-save-boundary.cjs",
+    "sha256": "caea6c8eb398293f88b7b1826bc00d2df25a64cf6cc468f855b80d9f49101156",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person-ui.cjs",
+    "sha256": "e59f6e90cf1a8387679047d5fddfbb063e8fdcc6a6705a8c318e72627dfaaf79",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-motif-person.cjs",
+    "sha256": "b5e2aabb5e4844893d6dea4611b0d6ef249602ff28ade7813e7dfd00d9087f7a",
+    "unchanged": true
+  },
+  {
+    "file": "tests/creature-stage5-remaining-r1.cjs",
+    "sha256": "e7af4b06f2e0de1469ad11d12d578ecab29c3847749c8bdcb6560fa35ebffce0",
+    "unchanged": true
+  },
+  {
+    "file": "tests/fixtures/creature-motif-person-r1-original-baseline.json.gz",
+    "sha256": "5ddea7122b057a5b98d994163c5b42a2fa2f7c0dcfd39021afb12acd7ee3748c",
+    "unchanged": true
+  },
+  {
+    "file": "tests/pwa-http-cache-stage5.cjs",
+    "sha256": "cba7a1fff10a0bfedca8bf7f2f633a360cf6488760972f1b74a307367f5da351",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-baseline.json",
+    "sha256": "bfa51b390b7d2d45aee1b08676752eeea5236bfec99008ff4ab5f28f23708e52",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-boundaries.json",
+    "sha256": "9d6f79584a6970d6d619fb65375d852427fa74db9410010864f217d104b3e908",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-feature.json",
+    "sha256": "c8003bce1762323b55bff02304330f650e6cd8d019320b8a13fc49db9ea6bc4c",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-fixed-baseline.json",
+    "sha256": "e57c113ac436cfa5dc7dc6ee3fc98c4910407b095f514fb02e101278f0513538",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-legacy-regression.json",
+    "sha256": "1ec953ece9aa811e13f48e7e0045abf901aa6ecf0057a2f374673be0388604d4",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-pwa.json",
+    "sha256": "b3bde795a9bba8c3b257aa4c1f16f37a5950de42ccc65d5b7b07144b4516c536",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-r1.json",
+    "sha256": "7f6806725fb8bbc45c1f5cca42831dd964e4c8264104f247410c8835fb4df316",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-ui.json",
+    "sha256": "a489dce0b6e40728a16c62d058f6469f893a54009101647476e9cba0ed17f283",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-ui/preview-360-640.png",
+    "sha256": "64f8d03951b7066af07802f67799ceafa5c05d235c412b2baf5d9631fd753872",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-ui/preview-360-800.png",
+    "sha256": "77e136bd508e45b41b89b368eec4fd7f14b66ccce0c86eeeb164b1b90c6f3215",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-ui/preview-393-640.png",
+    "sha256": "8b0554ac7b1b57b3c93ea30fe32934c2517d194895e688fdf32ffff4962cf7c0",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-ui/preview-393-800.png",
+    "sha256": "e71c3d9d93e7df60f040c9a281b890014baab82b44ed7259172c6790c66d34ac",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-ui/preview-430-640.png",
+    "sha256": "0bf5263e1d9dbc719384f65627d542b15aab54873e692bc73bd26a9256ff590f",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-integration1-ui/preview-430-800.png",
+    "sha256": "bc5b251ebecc32ba0ac87826c09aeb3810a5981b8e3044b2beacfaa499c961e8",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-r1-fixed-comparison.json",
+    "sha256": "58e1f29a3bc171dfbb511e1b92034ecda28ef5fba5363832814fd6b0eb996702",
+    "unchanged": true
+  },
+  {
+    "file": "tests/results/creature-motif-person-save-boundary.json",
+    "sha256": "3b1031391c9d1494e7cbf7525f8160c0584753557243d8796076fa7030a2c1de",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-access.cjs",
+    "sha256": "81f8ebbbe2cd703c9096b7b51b1032f6a933766bd163a51338fdec30c123558a",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-boundaries.cjs",
+    "sha256": "636e6aff7b8acef78559c700b529161d152637cc17d738362588eb6f3b482fc1",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-copy-reset.cjs",
+    "sha256": "7736b3de2eb84c298d54a28def4ff2df9a59a26b872fbda1eefe676e6c6cf3b0",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-fingerprints.cjs",
+    "sha256": "f082b6f4861c1145d2f269b8452e52aab5488f3153194b90e36a2921543ca46a",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-generation.cjs",
+    "sha256": "ae5d7e9eac8443af43ba278b0f734c63744519f534abd2dd84111a046e5a41bd",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-interleavings.cjs",
+    "sha256": "9be5d0fe1acf0486d86a3f6305019c5fdfbeddff91a295592a24d0d5c11b0145",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-prepare.cjs",
+    "sha256": "cad889bec50f98bc1d83ef7573a7b490dea0eb061a973e8fec5238afbf349683",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-pwa.cjs",
+    "sha256": "d6205586472a393ddf47ffdbe2d3371f4fb644d987d00d585aa2215a14709d51",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-result-ui.cjs",
+    "sha256": "126b5e56d9f715e7a3d1c92793aeddfad6935ac9c65d8fd47503a902fdba1097",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-runner.cjs",
+    "sha256": "17b0a0c31a4a67c5a1ed5554ced3f506af634cee7404b43062e0d3760f5f4a8b",
+    "unchanged": true
+  },
+  {
+    "file": "tests/stage5-e-storage.cjs",
+    "sha256": "fed37dea30a89fae19c16a139d159ff3f97d341476f3f628f36f86f60cbbf94e",
+    "unchanged": true
+  }
+]

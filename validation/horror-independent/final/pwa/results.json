@@ -1,0 +1,40 @@
+{
+  "checks": [
+    "offline real SW launch restores durable draft",
+    "offline review/partial/trash restore/merge/save",
+    "offline reload keeps workspace and grants zero",
+    "online return keeps workspace"
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "T29": [
+    {
+      "target": "seaart-creature-motif-integration1/baseline",
+      "namespace": "creature-adult-v1/result-access-v1/motif-person-v1",
+      "version": 4,
+      "passed": true
+    },
+    {
+      "target": "seaart-r1-save-worktree",
+      "namespace": "creature-adult-v1/result-access-v1",
+      "version": 3,
+      "passed": true
+    },
+    {
+      "target": "seaart-tool",
+      "namespace": "creature-adult-v1/result-access-v1/motif-person-v1",
+      "version": 4,
+      "passed": true
+    },
+    {
+      "target": "seaart-horror-validation/old-stage",
+      "namespace": "legacy-stage5-d",
+      "version": 3,
+      "passed": true
+    }
+  ],
+  "T30": {
+    "passed": true
+  },
+  "passed": true
+}

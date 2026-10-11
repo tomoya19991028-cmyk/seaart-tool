@@ -1,0 +1,22 @@
+[
+  {
+    "workspacePath": "/workspace/seaart-horror-independent-20261011/final/boundaries/cancel-import.json",
+    "bytes": 444557,
+    "sha256": "a0fcebc3ce123c3997f6a87aa697c96b648d48bdd8374b23fdaf6afc3356502c"
+  },
+  {
+    "workspacePath": "/workspace/seaart-horror-independent-20261011/final/motif/motif-v4-export.json",
+    "bytes": 624609,
+    "sha256": "70f68cccc2c2827e064fcc047e95d9ea630f7338677b9ba9a35723e7275ccdab"
+  },
+  {
+    "workspacePath": "/workspace/seaart-horror-independent-20261011/final/r1/r1-v4-export.json",
+    "bytes": 761286,
+    "sha256": "7607e0141da91eb735b2a298ef61c599de06c812afe04ae5475af0e04817a093"
+  },
+  {
+    "workspacePath": "/workspace/seaart-horror-independent-20261011/final/r1/r1-v3-import.json",
+    "bytes": 465498,
+    "sha256": "59eca4f2ec5c9e97680c2e889a255987c5227bf505d63040446924c257ee1e99"
+  }
+]

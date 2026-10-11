@@ -1,0 +1,33 @@
+{
+  "remoteProductHEAD": "e4660a638988c8a7a2e55eed5fb1b1acb3f33bcd",
+  "files": [
+    {
+      "path": "index.html",
+      "url": "https://raw.githubusercontent.com/tomoya19991028-cmyk/seaart-tool/e4660a638988c8a7a2e55eed5fb1b1acb3f33bcd/index.html",
+      "status": 200,
+      "bytes": 3888088,
+      "sha256": "9fe8950c1d4ecdd936edf635975aebdad4b01633fb6e498da37644cb1827d33d",
+      "gitBlob": "9a296d26f58eab57e914388f1c8d21ef79336d42",
+      "matchesValidatedLocalBytes": true
+    },
+    {
+      "path": "sw.js",
+      "url": "https://raw.githubusercontent.com/tomoya19991028-cmyk/seaart-tool/e4660a638988c8a7a2e55eed5fb1b1acb3f33bcd/sw.js",
+      "status": 200,
+      "bytes": 2314,
+      "sha256": "5bd6b46a6f41f91b541feb62c0946751b4eab87c081bd6522241c1d549e66c31",
+      "gitBlob": "9296f067e837e09f2c8d02163caa7f91cb1aad1a",
+      "matchesValidatedLocalBytes": true
+    },
+    {
+      "path": "manifest.json",
+      "url": "https://raw.githubusercontent.com/tomoya19991028-cmyk/seaart-tool/e4660a638988c8a7a2e55eed5fb1b1acb3f33bcd/manifest.json",
+      "status": 200,
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "gitBlob": "0b9eee56bb9dbb59a1dd36f3ce997200f3e4a451",
+      "matchesValidatedLocalBytes": true
+    }
+  ],
+  "allMatch": true
+}

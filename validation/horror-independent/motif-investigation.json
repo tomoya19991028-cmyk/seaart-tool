@@ -1,0 +1,459 @@
+{
+  "base": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "horror": "be4f7f902d533d85614b3b560946e54c735e213a",
+  "motif": "7b3f9afd6cf1db20b74359fcf3f14fa4d8101841",
+  "horrorChangedHunks": 20,
+  "motifChangedHunks": 12,
+  "overlappingBaseHunks": [
+    {
+      "baseLine": 9376,
+      "horrorBaseRange": [
+        9376,
+        9376
+      ],
+      "motifBaseRange": [
+        9376,
+        9375
+      ],
+      "horrorLines": [
+        9411,
+        9651
+      ],
+      "motifLines": [
+        9430,
+        9433
+      ],
+      "basePrefix": "</script></body></html>"
+    }
+  ],
+  "motifHunks": [
+    {
+      "baseRange": [
+        9320,
+        9319
+      ],
+      "motifRange": [
+        9320,
+        9344
+      ],
+      "functions": [
+        "mfApplyImportGroups",
+        "mfResolveGeneralCandidate",
+        "mfValidateImportSelection"
+      ],
+      "oldPrefix": "",
+      "newPrefix": "// Reviewed import policy; not candidate data. Exact standard rows and owner-free values only.\nconst mfGeneralImportValues=Object.freeze({\"outfit\":[\"casual clothes\",\"formal suit\",\"tuxedo\",\"kimono\",\"yu"
+    },
+    {
+      "baseRange": [
+        9330,
+        9330
+      ],
+      "motifRange": [
+        9355,
+        9360
+      ],
+      "functions": [],
+      "oldPrefix": " if(a.outfit.length||Object.values(a.detail).some(v=>v.length))excluded.push('衣装・身体・装飾：今回の取込み対象外');if(Object.values(a.detailCustom).some(Boolean)||a.gaze||a.faceDirection)excluded.push('自由入力・視線・方向：取込み",
+      "newPrefix": " const specs=[['outfit','一般衣装セット','catalog'],['upper','上半身','detail'],['lower','下半身','detail'],['feet','靴','detail'],['legwear','靴下・レッグウェア','detail'],['bodyFeatures','一般の耳・角','detail'],['accessory','一"
+    },
+    {
+      "baseRange": [
+        9334,
+        9335
+      ],
+      "motifRange": [
+        9364,
+        9364
+      ],
+      "functions": [],
+      "oldPrefix": " afAssert(actorFormStorageReady&&!actorFormStartup.blocked,'保存の準備ができていません');afAssert(afObject(preview)&&Array.isArray(choices)&&new Set(choices).size===choices.length&&choices.every(k=>['hairColor','e",
+      "newPrefix": " const current=mfValidateImportSelection(preview,choices);"
+    },
+    {
+      "baseRange": [
+        9337,
+        9338
+      ],
+      "motifRange": [
+        9366,
+        9366
+      ],
+      "functions": [],
+      "oldPrefix": " const id='original-motif-'+crypto.randomUUID(),metadata={version:1,actorId:id,originKind:'creature-motif',createdAt:new Date().toISOString(),adultAccess:'denied'},profile={motifPersonId:id};\n for(con",
+      "newPrefix": " const id='original-motif-'+crypto.randomUUID(),metadata={version:1,actorId:id,originKind:'creature-motif',createdAt:new Date().toISOString(),adultAccess:'denied'},profile=mfApplyImportGroups({motifPe"
+    },
+    {
+      "baseRange": [
+        9351,
+        9350
+      ],
+      "motifRange": [
+        9379,
+        9388
+      ],
+      "functions": [
+        "mfReimportPerson",
+        "mfReimportTarget"
+      ],
+      "oldPrefix": "",
+      "newPrefix": "function mfReimportTarget(id){\n afAssert(mfIsMotif(id),'通常人物への上書き取込みはできません');mfValidateWorking(captureWorking(),afValidateExtensions(actorExtensions),{mainMaintenance});\n const rows=originalCharacters"
+    },
+    {
+      "baseRange": [
+        9355,
+        9354
+      ],
+      "motifRange": [
+        9393,
+        9405
+      ],
+      "functions": [
+        "mfExistingImportLabel",
+        "mfImportChoices",
+        "renderMotifPersonImportPlan"
+      ],
+      "oldPrefix": "",
+      "newPrefix": "function mfImportChoices(){return [...$('motifPersonImportBody').querySelectorAll('[data-motif-import]:checked')].map(x=>x.dataset.motifImport)}\nfunction mfExistingImportLabel(profile,key,group){\n if("
+    },
+    {
+      "baseRange": [
+        9356,
+        9357
+      ],
+      "motifRange": [
+        9407,
+        9408
+      ],
+      "functions": [],
+      "oldPrefix": " const s=mfImportState;if(!s)return;const root=$('motifPersonPreview');root.replaceChildren();try{s.preview=mfImportPreview($('motifPersonSource').value,$('motifPersonMode').value);for(const [key,g]of",
+      "newPrefix": " const s=mfImportState;if(!s)return;const root=$('motifPersonPreview');root.replaceChildren();try{s.preview=mfImportPreview($('motifPersonSource').value,$('motifPersonMode').value);for(const [key,g]of"
+    },
+    {
+      "baseRange": [
+        9360,
+        9361
+      ],
+      "motifRange": [
+        9411,
+        9413
+      ],
+      "functions": [
+        "openMotifPersonImport"
+      ],
+      "oldPrefix": "function openMotifPersonImport(trigger=$('motifPersonOpen')){\n const d=$('motifPersonImport'),body=$('motifPersonImportBody');body.replaceChildren();mfImportState={trigger,preview:null};",
+      "newPrefix": "function openMotifPersonImport(trigger=$('motifPersonOpen'),targetId=null){\n const d=$('motifPersonImport'),body=$('motifPersonImportBody');body.replaceChildren();let targetSignature=null;if(targetId)"
+    },
+    {
+      "baseRange": [
+        9365,
+        9367
+      ],
+      "motifRange": [
+        9417,
+        9420
+      ],
+      "functions": [],
+      "oldPrefix": " const field=(label,input)=>{const box=node('label',undefined,'field');box.append(node('span',label),input);body.append(box)};field('参考元Creature',source);field('保存済みの外見',mode);\n const preview=node('di",
+      "newPrefix": " if(targetId){const person=originalCharacters.find(r=>r.id===targetId);name.value=person.name;name.readOnly=true;type.value=person.type;type.disabled=true}\n const field=(label,input)=>{const box=node("
+    },
+    {
+      "baseRange": [
+        9369,
+        9368
+      ],
+      "motifRange": [
+        9422,
+        9422
+      ],
+      "functions": [
+        "mfRefreshReimportButton"
+      ],
+      "oldPrefix": "",
+      "newPrefix": "function mfRefreshReimportButton(){const button=$('motifPersonReimport');if(button)button.hidden=!mfIsMotif(personKey)||!originalCharacters.some(r=>r.id===personKey)}"
+    },
+    {
+      "baseRange": [
+        9373,
+        9373
+      ],
+      "motifRange": [
+        9427,
+        9427
+      ],
+      "functions": [],
+      "oldPrefix": "mfDialog.addEventListener('close',()=>{if(!mfDialog.open)closeMotifPersonImport()});mfCreate.onclick=()=>{if(!mfImportState?.preview||!$('motifPersonConfirm')?.checked){shortToast('作成前の確認を選択してください');r",
+      "newPrefix": "mfDialog.addEventListener('close',()=>{if(!mfDialog.open)closeMotifPersonImport()});mfCreate.onclick=()=>{if(!mfImportState?.preview||!$('motifPersonConfirm')?.checked){shortToast('作成前の確認を選択してください');r"
+    },
+    {
+      "baseRange": [
+        9376,
+        9375
+      ],
+      "motifRange": [
+        9430,
+        9433
+      ],
+      "functions": [],
+      "oldPrefix": "",
+      "newPrefix": "const mfReimport=node('button','このモチーフ人物へ一般外見を再取込み','secondary');mfReimport.id='motifPersonReimport';mfReimport.type='button';mfReimport.hidden=true;mfReimport.onclick=()=>{try{openMotifPersonImport(m"
+    }
+  ],
+  "originalTests": [
+    {
+      "file": "tests/common-access-stage5-d1-pwa.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/common-access-stage5-d1-quota.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/common-access-stage5-d1-state.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/common-access-stage5-d1.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-a-references.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-a.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-b-pwa.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-b-quota.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-b.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-c-pwa.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-c-state.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-adult-stage5-c.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person-boundaries.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person-fixed-baseline.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person-legacy-regression.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person-pwa.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person-r1.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person-save-boundary.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person-ui.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-motif-person.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/creature-stage5-remaining-r1.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/fixtures/creature-motif-person-r1-original-baseline.json.gz",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/pwa-http-cache-stage5.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-baseline.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-boundaries.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-feature.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-fixed-baseline.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-legacy-regression.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-pwa.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-r1.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-ui.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-ui/preview-360-640.png",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-ui/preview-360-800.png",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-ui/preview-393-640.png",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-ui/preview-393-800.png",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-ui/preview-430-640.png",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-integration1-ui/preview-430-800.png",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-r1-fixed-comparison.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/results/creature-motif-person-save-boundary.json",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-access.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-boundaries.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-copy-reset.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-fingerprints.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-generation.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-interleavings.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-prepare.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-pwa.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-result-ui.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-runner.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    },
+    {
+      "file": "tests/stage5-e-storage.cjs",
+      "horrorUnchanged": true,
+      "motifUnchanged": true
+    }
+  ],
+  "productSHA": {
+    "5b5bb03589dcc9a661402395d6c3db20cfd4cf52": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+    "be4f7f902d533d85614b3b560946e54c735e213a": "2e946f6e68720a4f73bdce7ec1c9266ee277d530289c3d24039cc803101de80d",
+    "7b3f9afd6cf1db20b74359fcf3f14fa4d8101841": "a4ba6a92c90bcceab8117fc9406447f7fdd5802469ae9a7afa7f172f35a1e431"
+  }
+}

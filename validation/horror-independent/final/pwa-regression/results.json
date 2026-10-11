@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "checks": [
+    "old real SW and max-age=600 HTML cached",
+    "HTML install failure retains old SW/cache/draft",
+    "retry installs new HTML despite old HTTP cache",
+    "update does not reload or discard old draft",
+    "new page migrates without touching old keys",
+    "old live tab save cannot overwrite or merge new bundle",
+    "offline reload restores person and no permissions",
+    "offline save/reload retains independent profile and native source",
+    "online return never merges old tab edits"
+  ],
+  "publicOrigin": false,
+  "physicalDevice": false,
+  "cache": {
+    "oldCache": "seaart-tool-pwa-v4-stage5e-result-access-v1-http-cache-v1",
+    "oldHash": "fafddf9ea6040430529e74453de5df2091acb665c1d76c612c4189f21b1c8353",
+    "newCache": "seaart-tool-pwa-v5-horror-v1-http-cache-v1",
+    "newHash": "9fe8950c1d4ecdd936edf635975aebdad4b01633fb6e498da37644cb1827d33d"
+  },
+  "updateNotice": {
+    "listenerSupported": true,
+    "observedText": true
+  },
+  "requests": [
+    {
+      "path": "/",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": ""
+    },
+    {
+      "path": "/sw.js",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": "max-age=0"
+    },
+    {
+      "path": "/favicon.ico",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": ""
+    },
+    {
+      "path": "/",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/index.html",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/manifest.json",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": ""
+    },
+    {
+      "path": "/icon-192.png",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": ""
+    },
+    {
+      "path": "/icon-512.png",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": ""
+    },
+    {
+      "path": "/icon-maskable-512.png",
+      "generation": "old",
+      "failure": "",
+      "cacheControl": ""
+    },
+    {
+      "path": "/sw.js",
+      "generation": "new",
+      "failure": "index.html",
+      "cacheControl": "max-age=0"
+    },
+    {
+      "path": "/",
+      "generation": "new",
+      "failure": "index.html",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/index.html",
+      "generation": "new",
+      "failure": "index.html",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/sw.js",
+      "generation": "new",
+      "failure": "",
+      "cacheControl": "max-age=0"
+    },
+    {
+      "path": "/",
+      "generation": "new",
+      "failure": "",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/index.html",
+      "generation": "new",
+      "failure": "",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/index.html",
+      "generation": "new",
+      "failure": "",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/index.html",
+      "generation": "new",
+      "failure": "",
+      "cacheControl": "no-cache"
+    }
+  ]
+}
