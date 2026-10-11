@@ -1,0 +1,4 @@
+FAIL M12 The expression evaluated to a falsy value:
+
+  assert.ok(Object.values(r).every(Boolean))
+

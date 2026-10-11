@@ -1,0 +1,13 @@
+PASS M01 approved mapping counts, IDs, Japanese names and English values match immutable report
+PASS M02 outfit every approved candidate: plan and real reimport preserve UUID/source/denied
+PASS M03 upper every approved candidate: plan and real reimport preserve UUID/source/denied
+PASS M04 lower every approved candidate: plan and real reimport preserve UUID/source/denied
+PASS M05 feet every approved candidate: plan and real reimport preserve UUID/source/denied
+PASS M06 legwear every approved candidate: plan and real reimport preserve UUID/source/denied
+PASS M07 bodyFeatures every approved candidate: plan and real reimport preserve UUID/source/denied
+PASS M08 accessory every approved candidate: plan and real reimport preserve UUID/source/denied
+PASS M09 selected group ON and all other groups OFF preserve their prior fields
+PASS M10 colors OFF preserve existing color, ON copies only selected field
+PASS M11 hidden, edited, duplicate, unknown, owner-specific and free-text candidates rejected with reasons
+PASS M13 ordinary person overwrite, edited target, stale source, no-choice and colors-only rejected
+PASS M14 round-2 fulltext equals saved round-2 product and independent manual profile, OFF/unset

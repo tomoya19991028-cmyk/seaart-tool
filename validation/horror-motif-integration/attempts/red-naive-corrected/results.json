@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "id": "Z01",
+      "label": "creation and reimport refuse pending JSON without mutation",
+      "passed": false,
+      "error": "page.evaluate: Error: 選択されていない外見の強調度が含まれています\n    at afAssert (http://127.0.0.1:8765/seaart-integrated/index.html:1292:63)\n    at applyCapturedActorAppearance (http://127.0.0.1:8765/seaart-integrated/index.html:5413:335)\n    at anthroAppearanceRecord (http://127.0.0.1:8765/seaart-integrated/index.html:5518:27)\n    at updateCreatureAnthro (http://127.0.0.1:8765/seaart-integrated/index.html:5527:221)\n    at window.zChangeSource (eval at evaluate (:311:30), <anonymous>:11:171)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:25)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-integrated/tests/integration/horror-motif.cjs:20:106\n    at test (/workspace/seaart-integrated/tests/integration/horror-motif.cjs:19:524)\n    at async /workspace/seaart-integrated/tests/integration/horror-motif.cjs:20:2",
+      "pageErrors": []
+    },
+    {
+      "id": "Z02",
+      "label": "reimport invalidates confirmed original-appearance dependency and stale commit plan",
+      "passed": false,
+      "error": "page.evaluate: Error: 選択されていない外見の強調度が含まれています\n    at afAssert (http://127.0.0.1:8765/seaart-integrated/index.html:1292:63)\n    at applyCapturedActorAppearance (http://127.0.0.1:8765/seaart-integrated/index.html:5413:335)\n    at anthroAppearanceRecord (http://127.0.0.1:8765/seaart-integrated/index.html:5518:27)\n    at updateCreatureAnthro (http://127.0.0.1:8765/seaart-integrated/index.html:5527:221)\n    at window.zChangeSource (eval at evaluate (:311:30), <anonymous>:11:171)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:98)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-integrated/tests/integration/horror-motif.cjs:21:131\n    at test (/workspace/seaart-integrated/tests/integration/horror-motif.cjs:19:524)\n    at async /workspace/seaart-integrated/tests/integration/horror-motif.cjs:21:2",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "alternativeOriginalTests": false,
+  "passed": false,
+  "failed": [
+    "Z01",
+    "Z02"
+  ]
+}

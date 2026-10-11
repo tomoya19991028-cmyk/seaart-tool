@@ -1,0 +1,83 @@
+{
+  "productCommit": "f1de74cb99d2d4e89c5be36aaa65e2a2cea40405",
+  "remoteProductFiles": [
+    {
+      "file": "index.html",
+      "bytes": 3901393,
+      "sha256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "sw.js",
+      "bytes": 2332,
+      "sha256": "f44b827d9f406a483033cbd7d119dbbe85f6a9e200569f89e0d1a2edc738213c",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "src/horror-foundation.js",
+      "bytes": 10038,
+      "sha256": "a4dc1d2f2d30744a7458724ce393d81c33d4a0df012382458d9ac11ffe678318",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "src/horror-runtime.js",
+      "bytes": 89330,
+      "sha256": "84ee537c0ba61635fede84b3aee47851326ba447e59962438001aabab0351a8a",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "src/horror-catalog.json",
+      "bytes": 6141,
+      "sha256": "f698fa80f2beacfa4fde632b1bbbe011d27c9136a8b1c4902977af54e1a5efdf",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "src/creature-motif-person.js",
+      "bytes": 27274,
+      "sha256": "663cf75f9f75874d1bdc023785b8c35ea6bcf06725b6bd9367d21588f6afee35",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "scripts/embed-motif-person.py",
+      "bytes": 667,
+      "sha256": "760fbc6fc3937be3ad0e44b755174553148b28f615f52463729d0ff8140cf92f",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "scripts/build-integrated.py",
+      "bytes": 941,
+      "sha256": "1f88fd392e7d5bfc55248f0d7cae33c8a383da57d0d08f6b1d832d88f0cd97a9",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "scripts/integrate-horror.py",
+      "bytes": 8061,
+      "sha256": "89203eecc996be0d2a0408469de3ad3d9d5fa856db33f77dbf945be38971089c",
+      "HTTP": 200,
+      "exactMatch": true
+    },
+    {
+      "file": "scripts/embed-horror.py",
+      "bytes": 2298,
+      "sha256": "c839f90290fbb0f6d4528a9d36d4c8b66bf0567ee7dbc99b620035cc843f1f28",
+      "HTTP": 200,
+      "exactMatch": true
+    }
+  ],
+  "allExact": true
+}

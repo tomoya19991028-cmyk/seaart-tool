@@ -1,0 +1,33 @@
+{
+  "tests": [
+    {
+      "id": "Z01",
+      "label": "creation and reimport refuse pending JSON without mutation",
+      "passed": true,
+      "detail": {
+        "createRejected": true,
+        "reimportRejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "Z02",
+      "label": "reimport invalidates confirmed original-appearance dependency and stale commit plan",
+      "passed": true,
+      "detail": {
+        "status": "recheck",
+        "rejected": true,
+        "failedPlanUnchanged": true,
+        "uuid": true,
+        "metadata": true,
+        "source": true,
+        "applied": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "alternativeOriginalTests": false,
+  "passed": true,
+  "failed": []
+}

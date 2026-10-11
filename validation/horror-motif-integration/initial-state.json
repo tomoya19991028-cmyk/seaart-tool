@@ -1,0 +1,20 @@
+{
+  "heads": {
+    "main": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "feat/horror-tab-manga-draft-integration": "f58be6a37c2b407b86afbaa226a79a0a10a9c562",
+    "feat/creature-motif-person-integration2": "7b3f9afd6cf1db20b74359fcf3f14fa4d8101841"
+  },
+  "mergeBase": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "worktrees": {
+    "/workspace/seaart-horror": "",
+    "/workspace/seaart-tool": ""
+  },
+  "seaart-horrorHTML": {
+    "bytes": 3888088,
+    "sha256": "9fe8950c1d4ecdd936edf635975aebdad4b01633fb6e498da37644cb1827d33d"
+  },
+  "seaart-toolHTML": {
+    "bytes": 3789047,
+    "sha256": "a4ba6a92c90bcceab8117fc9406447f7fdd5802469ae9a7afa7f172f35a1e431"
+  }
+}

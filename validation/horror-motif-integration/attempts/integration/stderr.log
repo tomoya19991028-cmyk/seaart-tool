@@ -1,0 +1,17 @@
+FAIL Z05 page.evaluate: TypeError: Assignment to constant variable.
+    at eval (eval at evaluate (:311:30), <anonymous>:1:146)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+FAIL Z15 Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
+    a: true,
++   b: false,
+-   b: true,
+    denied: true,
+    normal: true,
+    source: true,
+    sourceHorror: true
+  }
+

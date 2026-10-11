@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "id": "Z01",
+      "label": "creation and reimport refuse pending JSON without mutation",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   createRejected: false,\n-   createRejected: true,\n    reimportRejected: true,\n+   unchanged: false\n-   unchanged: true\n  }\n\n    at /workspace/seaart-integrated/tests/integration/horror-motif.cjs:20:548\n    at async test (/workspace/seaart-integrated/tests/integration/horror-motif.cjs:19:518)\n    at async /workspace/seaart-integrated/tests/integration/horror-motif.cjs:20:2",
+      "pageErrors": []
+    },
+    {
+      "id": "Z02",
+      "label": "reimport invalidates confirmed original-appearance dependency and stale commit plan",
+      "passed": false,
+      "error": "page.evaluate: Error: 怪異データの形式が不正です\n    at hAssert (http://127.0.0.1:8765/seaart-integrated/index.html:1260:65)\n    at hTransaction.draftOnly (http://127.0.0.1:8765/seaart-integrated/index.html:9567:92)\n    at hTransaction (http://127.0.0.1:8765/seaart-integrated/index.html:9546:85)\n    at hConfirmItem (http://127.0.0.1:8765/seaart-integrated/index.html:9567:39)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:378)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-integrated/tests/integration/horror-motif.cjs:21:131\n    at test (/workspace/seaart-integrated/tests/integration/horror-motif.cjs:19:524)\n    at async /workspace/seaart-integrated/tests/integration/horror-motif.cjs:21:2",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "alternativeOriginalTests": false,
+  "passed": false,
+  "failed": [
+    "Z01",
+    "Z02"
+  ]
+}

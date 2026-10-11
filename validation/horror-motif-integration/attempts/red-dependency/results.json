@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "id": "Z02",
+      "label": "reimport invalidates confirmed original-appearance dependency and stale commit plan",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    applied: true,\n+   failedPlanUnchanged: false,\n-   failedPlanUnchanged: true,\n    metadata: true,\n+   rejected: false,\n-   rejected: true,\n    source: true,\n+   status: 'confirmed',\n-   status: 'recheck',\n    uuid: true\n  }\n\n    at /workspace/seaart-integrated/tests/integration/horror-motif.cjs:21:818\n    at async test (/workspace/seaart-integrated/tests/integration/horror-motif.cjs:19:518)\n    at async /workspace/seaart-integrated/tests/integration/horror-motif.cjs:21:2",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "alternativeOriginalTests": false,
+  "passed": false,
+  "failed": [
+    "Z02"
+  ]
+}

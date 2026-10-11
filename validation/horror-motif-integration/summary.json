@@ -1,0 +1,164 @@
+{
+  "verdict": "条件付き合格",
+  "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e",
+  "runners": [
+    {
+      "name": "contracts",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "faults",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "r1",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "legacy",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "boundaries",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "motif",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "motif-boundaries",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "ui",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "ui-extra",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "pwa",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "pwa-regression",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "edges",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "prompts",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "fixed",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "combined-ui",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "combined-pwa-final",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "motif-prompts",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "round2-final",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    },
+    {
+      "name": "integration-final",
+      "exitCode": 0,
+      "productSHA256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+    }
+  ],
+  "runnerCount": 19,
+  "caseCounting": "Contract/operation/viewports/adult configurations/PWA checkpoints counted as listed; fulltext rows, assertions and 198 candidate inputs are separate. T01-T30 is a requirements summary, not added again.",
+  "caseCounts": {
+    "horrorContracts": 25,
+    "storageFaults": 14,
+    "R1Contracts": 49,
+    "legacyAdultConfigurations": 21,
+    "horrorBoundaries": 20,
+    "motifR1ContractsAndFaultsAndMigration": 52,
+    "motifR1Boundaries": 20,
+    "horrorSimpleSnapshotAndViewports": 7,
+    "extraHorrorViewports": 6,
+    "historicalWritersAndOfflineSteps": 8,
+    "realSWRegression": 9,
+    "independentEdges": 36,
+    "horrorPromptScenarios": 8,
+    "motifHorrorPromptScenarios": 8,
+    "combinedViewports": 6,
+    "combinedPWASteps": 7,
+    "round2AlternativeGroups": 14,
+    "combinedStateTransitions": 18,
+    "fixedBaseline": 1
+  },
+  "automatedCaseTotal": 329,
+  "automatedPassed": 329,
+  "automatedFailed": 0,
+  "automatedNotRun": 0,
+  "requiredT01T30Passed": 30,
+  "round2CandidatesActuallyReimported": 198,
+  "candidateCounts": {
+    "outfit": 65,
+    "upper": 34,
+    "lower": 25,
+    "feet": 17,
+    "legwear": 9,
+    "bodyFeatures": 20,
+    "accessory": 28
+  },
+  "fixedFulltextConfigurations": {
+    "normal": 504,
+    "manga": 504,
+    "panels": 504
+  },
+  "R1Assertions": 865,
+  "observedHorrorPromptRows": 168,
+  "observedMotifHorrorPromptRows": 168,
+  "explicitNormalAttributionRowsPerSuite": 112,
+  "originalTestFilesUnchanged": 50,
+  "originalHorrorTestsUnchanged": true,
+  "newIntegrationFindings": 2,
+  "fixedIntegrationFindings": 2,
+  "originalRound2TestsRecovered": false,
+  "notPerformedCategories": [
+    "Android physical device",
+    "actual Japanese IME/OS image picker",
+    "SeaArt generated-image quality",
+    "public-origin update/acceptance (prohibited)"
+  ],
+  "mainChanged": false,
+  "publicPWAChanged": false,
+  "validatedProductCommit": "f1de74cb99d2d4e89c5be36aaa65e2a2cea40405",
+  "changedFileCount": 212,
+  "evidenceFileCount": 136
+}

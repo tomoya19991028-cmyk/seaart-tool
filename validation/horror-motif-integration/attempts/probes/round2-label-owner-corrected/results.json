@@ -1,0 +1,36 @@
+{
+  "alternativeTests": true,
+  "originalTestsRecovered": false,
+  "tests": [
+    {
+      "id": "M11",
+      "label": "hidden, edited, duplicate, unknown, owner-specific and free-text candidates rejected with reasons",
+      "passed": true,
+      "detail": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "M12",
+      "label": "preview before/after, changing ON/OFF resets confirmation, cancel leaves data",
+      "passed": true,
+      "detail": {
+        "arrow": true,
+        "old": true,
+        "next": true,
+        "reset": true,
+        "off": true,
+        "cancel": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true,
+  "failed": []
+}

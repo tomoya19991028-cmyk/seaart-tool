@@ -1,0 +1,52 @@
+{
+  "checkedUTC": "2026-10-11T23:56:32.680054+00:00",
+  "refs": {
+    "refs/heads/feat/creature-motif-person-integration2": "7b3f9afd6cf1db20b74359fcf3f14fa4d8101841",
+    "refs/heads/feat/horror-motif-person-integration": "f1de74cb99d2d4e89c5be36aaa65e2a2cea40405",
+    "refs/heads/feat/horror-tab-manga-draft-integration": "f58be6a37c2b407b86afbaa226a79a0a10a9c562",
+    "refs/heads/main": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52"
+  },
+  "files": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+      "unchanged": true
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+      "unchanged": true
+    },
+    {
+      "path": "/sw.js",
+      "status": 200,
+      "bytes": 2320,
+      "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a",
+      "unchanged": true
+    },
+    {
+      "path": "/manifest.json",
+      "status": 200,
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "unchanged": true
+    }
+  ],
+  "source": {
+    "branch": "main",
+    "path": "/"
+  },
+  "build": {
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "status": "built",
+    "created_at": "2026-10-11T06:08:35Z",
+    "updated_at": "2026-10-11T06:09:16Z"
+  },
+  "mainAndSourceBranchesUnchanged": true,
+  "publicFilesAndBuildUnchanged": true,
+  "publicBrowserUpdateTest": false
+}

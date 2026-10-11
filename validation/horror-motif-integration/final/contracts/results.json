@@ -1,0 +1,550 @@
+{
+  "tests": [
+    {
+      "id": "T02",
+      "passed": true,
+      "assertions": 2,
+      "detail": "normal full text equal"
+    },
+    {
+      "id": "T03",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T04",
+      "passed": true,
+      "assertions": 5
+    },
+    {
+      "id": "T05",
+      "passed": true,
+      "assertions": 5
+    },
+    {
+      "id": "T06",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T07",
+      "passed": true,
+      "assertions": 2
+    },
+    {
+      "id": "T08",
+      "passed": true,
+      "assertions": 25,
+      "detail": [
+        {
+          "patch": {
+            "state": "normal"
+          },
+          "items": 6,
+          "equal": true
+        },
+        {
+          "patch": {
+            "structure": {
+              "wings": "absent",
+              "horns": "unset",
+              "tail": "unset"
+            }
+          },
+          "items": 6,
+          "equal": true
+        },
+        {
+          "patch": {
+            "originalFeaturePolicies": {
+              "detail:skinColor:pale skin": {
+                "mode": "exclude"
+              }
+            }
+          },
+          "items": 6,
+          "equal": true
+        },
+        {
+          "patch": {
+            "features": {
+              "horror-feature-glowing-eyes": {
+                "enabled": true,
+                "weight": 1.3,
+                "parameters": {
+                  "intensity": "inherit"
+                }
+              },
+              "horror-feature-long-fingers": {
+                "enabled": true,
+                "weight": 1.2,
+                "parameters": {}
+              }
+            }
+          },
+          "items": 18,
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "passed": true,
+      "assertions": 4
+    },
+    {
+      "id": "T10",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T11",
+      "passed": true,
+      "assertions": 0,
+      "detail": "real pagehide/reload"
+    },
+    {
+      "id": "T12",
+      "passed": true,
+      "assertions": 5
+    },
+    {
+      "id": "T13",
+      "passed": true,
+      "assertions": 4
+    },
+    {
+      "id": "T14",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T15",
+      "passed": true,
+      "assertions": 6
+    },
+    {
+      "id": "T16",
+      "passed": true,
+      "assertions": 4
+    },
+    {
+      "id": "T17",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T18",
+      "passed": true,
+      "assertions": 1
+    },
+    {
+      "id": "T19",
+      "passed": true,
+      "assertions": 2
+    },
+    {
+      "id": "T20",
+      "passed": true,
+      "assertions": 2
+    },
+    {
+      "id": "T21",
+      "passed": true,
+      "assertions": 7
+    },
+    {
+      "id": "T22",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T23",
+      "passed": true,
+      "assertions": 42,
+      "detail": [
+        {
+          "shape": "single",
+          "model": "standard",
+          "sep": "none",
+          "normal": "masterpiece, best quality, detailed face, detailed eyes, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "standard",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, detailed face, detailed eyes, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "standard",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, detailed face, detailed eyes, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "illustrious",
+          "sep": "none",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "illustrious",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "illustrious",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "anima",
+          "sep": "none",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "anima",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "anima",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "sdxl",
+          "sep": "none",
+          "normal": "adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "sdxl",
+          "sep": "standard",
+          "normal": "adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "sdxl",
+          "sep": "strong",
+          "normal": "adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "noobai",
+          "sep": "none",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "noobai",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "noobai",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "pony",
+          "sep": "none",
+          "normal": "source_anime, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "source_anime, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "pony",
+          "sep": "standard",
+          "normal": "source_anime, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "source_anime, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "pony",
+          "sep": "strong",
+          "normal": "source_anime, adult woman, Person A, bat wings, pale skin, mask-like face, black mist, anime style",
+          "manga": "source_anime, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "krea",
+          "sep": "none",
+          "normal": "Illustration of adult woman, Person A, bat wings, pale skin, mask-like face, black mist. Visual style: anime style.",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "krea",
+          "sep": "standard",
+          "normal": "Illustration of adult woman, Person A, bat wings, pale skin, mask-like face, black mist. Visual style: anime style.",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "single",
+          "model": "krea",
+          "sep": "strong",
+          "normal": "Illustration of adult woman, Person A, bat wings, pale skin, mask-like face, black mist. Visual style: anime style.",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Panel 1: panel 1, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Panel 2: panel 2, 1 person, Character A: mask-like face, black mist, Character A, mask-like face, black mist",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble"
+        },
+        {
+          "shape": "multiple",
+          "model": "standard",
+          "sep": "none",
+          "normal": "masterpiece, best quality, detailed face, detailed eyes, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nanime style, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "standard",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, detailed face, detailed eyes, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nBREAK\n\nanime style, single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures, split screen, vertical divider, panel border"
+        },
+        {
+          "shape": "multiple",
+          "model": "standard",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, detailed face, detailed eyes, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character 1 and one Character 2 and one Creature 1 and one Creature 2, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nBREAK\n\nCharacter 1:\nleft person: adult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nBREAK\n\nCharacter 2:\nright person: adult man, Person B, pale skin\n\nBREAK\n\nCreature 1:\nghost, wings\n\nBREAK\n\nCreature 2:\nghost\n\nBREAK\n\nanime style",
+          "manga": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "illustrious",
+          "sep": "none",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nanime style, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "illustrious",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nBREAK\n\nanime style, single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures, split screen, vertical divider, panel border"
+        },
+        {
+          "shape": "multiple",
+          "model": "illustrious",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character 1 and one Character 2 and one Creature 1 and one Creature 2, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nBREAK\n\nCharacter 1:\nleft person: adult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nBREAK\n\nCharacter 2:\nright person: adult man, Person B, pale skin\n\nBREAK\n\nCreature 1:\nghost, wings\n\nBREAK\n\nCreature 2:\nghost\n\nBREAK\n\nanime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "anima",
+          "sep": "none",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nanime style, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "anima",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nBREAK\n\nanime style, single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures, split screen, vertical divider, panel border"
+        },
+        {
+          "shape": "multiple",
+          "model": "anima",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character 1 and one Character 2 and one Creature 1 and one Creature 2, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nBREAK\n\nCharacter 1:\nleft person: adult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nBREAK\n\nCharacter 2:\nright person: adult man, Person B, pale skin\n\nBREAK\n\nCreature 1:\nghost, wings\n\nBREAK\n\nCreature 2:\nghost\n\nBREAK\n\nanime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "sdxl",
+          "sep": "none",
+          "normal": "2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nanime style, Character A on the left, Character B on the right",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "sdxl",
+          "sep": "standard",
+          "normal": "2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nBREAK\n\nanime style, single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures, split screen, vertical divider, panel border"
+        },
+        {
+          "shape": "multiple",
+          "model": "sdxl",
+          "sep": "strong",
+          "normal": "2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character 1 and one Character 2 and one Creature 1 and one Creature 2, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nBREAK\n\nCharacter 1:\nleft person: adult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nBREAK\n\nCharacter 2:\nright person: adult man, Person B, pale skin\n\nBREAK\n\nCreature 1:\nghost, wings\n\nBREAK\n\nCreature 2:\nghost\n\nBREAK\n\nanime style",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "noobai",
+          "sep": "none",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nanime style, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "noobai",
+          "sep": "standard",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nBREAK\n\nanime style, single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures, split screen, vertical divider, panel border"
+        },
+        {
+          "shape": "multiple",
+          "model": "noobai",
+          "sep": "strong",
+          "normal": "masterpiece, best quality, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character 1 and one Character 2 and one Creature 1 and one Creature 2, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nBREAK\n\nCharacter 1:\nleft person: adult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nBREAK\n\nCharacter 2:\nright person: adult man, Person B, pale skin\n\nBREAK\n\nCreature 1:\nghost, wings\n\nBREAK\n\nCreature 2:\nghost\n\nBREAK\n\nanime style",
+          "manga": "masterpiece, best quality, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "pony",
+          "sep": "none",
+          "normal": "source_anime, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nanime style, Character A on the left, Character B on the right",
+          "manga": "source_anime, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "pony",
+          "sep": "standard",
+          "normal": "source_anime, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nCharacter A:\nadult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nCharacter B:\nadult man, Person B, pale skin\n\nCreature A:\nghost, wings\n\nCreature B:\nghost\n\nBREAK\n\nanime style, single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right",
+          "manga": "source_anime, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures, split screen, vertical divider, panel border"
+        },
+        {
+          "shape": "multiple",
+          "model": "pony",
+          "sep": "strong",
+          "normal": "source_anime, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character 1 and one Character 2 and one Creature 1 and one Creature 2, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible\n\nBREAK\n\nCharacter 1:\nleft person: adult woman, Person A, bat wings, pale skin, mask-like face, black mist\n\nBREAK\n\nCharacter 2:\nright person: adult man, Person B, pale skin\n\nBREAK\n\nCreature 1:\nghost, wings\n\nBREAK\n\nCreature 2:\nghost\n\nBREAK\n\nanime style",
+          "manga": "source_anime, full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "krea",
+          "sep": "none",
+          "normal": "Illustration with 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible.\n\nCharacter A:\nIllustration of adult woman, Person A, bat wings, pale skin, mask-like face, black mist.\n\nCharacter B:\nIllustration of adult man, Person B, pale skin.\n\nCreature A:\nIllustration of ghost, wings.\n\nCreature B:\nIllustration of ghost.\n\nVisual style: anime style. Additional details: Character A on the left, Character B on the right.",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        },
+        {
+          "shape": "multiple",
+          "model": "krea",
+          "sep": "standard",
+          "normal": "Illustration with 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character A and one Character B and one Creature A and one Creature B, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible.\n\nCharacter A:\nIllustration of adult woman, Person A, bat wings, pale skin, mask-like face, black mist.\n\nCharacter B:\nIllustration of adult man, Person B, pale skin.\n\nCreature A:\nIllustration of ghost, wings.\n\nCreature B:\nIllustration of ghost.\n\nBREAK\n\nVisual style: anime style. Additional details: single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right.",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures, split screen, vertical divider, panel border"
+        },
+        {
+          "shape": "multiple",
+          "model": "krea",
+          "sep": "strong",
+          "normal": "Illustration with 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 4 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 2 creatures, only 2 people and 2 creatures, one Character 1 and one Character 2 and one Creature 1 and one Creature 2, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible.\n\nBREAK\n\nCharacter 1:\nIllustration of left person: adult woman, Person A, bat wings, pale skin, mask-like face, black mist.\n\nBREAK\n\nCharacter 2:\nIllustration of right person: adult man, Person B, pale skin.\n\nBREAK\n\nCreature 1:\nIllustration of ghost, wings.\n\nBREAK\n\nCreature 2:\nIllustration of ghost.\n\nBREAK\n\nVisual style: anime style.",
+          "manga": "full-color anime manga page, portrait page, exactly 2 clearly separated panels, two side-by-side panels panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, Person A, bat wings, pale skin, mask-like face, Character B: adult man, Person B, pale skin, Creature A: ghost, wings, Creature B: ghost, Panel 1: panel 1, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 2 creatures, Character A: mask-like face, black mist, Character A, mask-like face, black mist, Character B, Creature A, Creature B, distinct characters, separate bodies, distinct faces, distinct creatures, separate bodies, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces, 2 distinct creatures, separate bodies",
+          "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, merged creatures, fused creatures"
+        }
+      ]
+    },
+    {
+      "id": "T24",
+      "passed": true,
+      "assertions": 5,
+      "detail": [
+        {
+          "includeDrafts": false,
+          "includeTrash": false,
+          "drafts": 0,
+          "trash": 0
+        },
+        {
+          "includeDrafts": false,
+          "includeTrash": true,
+          "drafts": 0,
+          "trash": 1
+        },
+        {
+          "includeDrafts": true,
+          "includeTrash": false,
+          "drafts": 1,
+          "trash": 0
+        },
+        {
+          "includeDrafts": true,
+          "includeTrash": true,
+          "drafts": 1,
+          "trash": 1
+        }
+      ]
+    },
+    {
+      "id": "T25",
+      "passed": true,
+      "assertions": 7
+    },
+    {
+      "id": "T26",
+      "passed": true,
+      "assertions": 3
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

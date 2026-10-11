@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "label": "initial horror cache installed",
+      "passed": true
+    },
+    {
+      "label": "old tab never forced reload and update notice displayed",
+      "passed": true
+    },
+    {
+      "label": "update retains UUID, workspace and stable panel IDs",
+      "passed": true
+    },
+    {
+      "label": "integrated offline launch",
+      "passed": true
+    }
+  ],
+  "publicOrigin": false,
+  "physicalDevice": false,
+  "passed": false,
+  "error": "page.evaluate: Error: Reimport did not invalidate\n    at eval (eval at evaluate (:311:30), <anonymous>:1:240)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-integrated/tests/integration/pwa.cjs:4:3247"
+}

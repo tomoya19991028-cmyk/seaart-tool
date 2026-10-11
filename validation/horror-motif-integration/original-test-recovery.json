@@ -1,0 +1,14 @@
+{
+  "searched": [
+    "latest motif remote tree",
+    "all fetched Git histories/objects",
+    "available attachment filenames",
+    "workspace test/report paths"
+  ],
+  "originalThreeTestFilesRecovered": false,
+  "originalREADMERecovered": false,
+  "replacement": "tests/integration/motif-round2-alternative.cjs and integration-specific tests",
+  "originalPASSClaimed": false,
+  "approvedCandidateReport": "REPORT_Creatureモチーフ独立人物_第2回_候補対応表.md",
+  "candidateRows": 198
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "workspacePath": "/workspace/seaart-integrated-audit-20261011T232933Z/final/r1/r1-v4-export.json",
+    "bytes": 761286,
+    "sha256": "e427b4965c7b990749ebd4d255fd4a7f15e629b51c4e976b9ee68888d58d9eed"
+  },
+  {
+    "workspacePath": "/workspace/seaart-integrated-audit-20261011T232933Z/final/r1/r1-v3-import.json",
+    "bytes": 465498,
+    "sha256": "4b3b19703826e5bab3d72bcbcecb0b2237f54133235f0504627e96894268e326"
+  },
+  {
+    "workspacePath": "/workspace/seaart-integrated-audit-20261011T232933Z/final/boundaries/cancel-import.json",
+    "bytes": 444557,
+    "sha256": "2288b050b9d5cdde018b150810c709ae418b3783a90279b4595050ea85769a43"
+  },
+  {
+    "workspacePath": "/workspace/seaart-integrated-audit-20261011T232933Z/final/motif/motif-v4-export.json",
+    "bytes": 624688,
+    "sha256": "260ff9410d0ca085f1c9ded72df55c52dabfc299c2ab4db73c62ee2d77f76d35"
+  }
+]

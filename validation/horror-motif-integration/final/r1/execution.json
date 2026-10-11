@@ -1,0 +1,21 @@
+{
+  "command": [
+    "node",
+    "tests/creature-motif-person-r1.cjs"
+  ],
+  "cwd": "/workspace/seaart-integrated",
+  "startUTC": "2026-10-11T23:33:35.390056+00:00",
+  "gitHEAD": "f58be6a37c2b407b86afbaa226a79a0a10a9c562",
+  "productSHA256Before": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e",
+  "testSHA256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-integrated/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-integrated-audit-20261011T232933Z/final/r1"
+  },
+  "publicOriginTest": false,
+  "physicalDevice": false,
+  "endUTC": "2026-10-11T23:36:30.324206+00:00",
+  "exitCode": 0,
+  "productSHA256After": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+}

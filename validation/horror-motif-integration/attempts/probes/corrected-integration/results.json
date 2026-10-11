@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "id": "Z05",
+      "label": "receipt, reimport, ordinary Undo, and draft Undo remain independent",
+      "passed": true,
+      "detail": {
+        "restored": true,
+        "workspaceUnchanged": true,
+        "onePop": true,
+        "profileStable": true,
+        "receiptKept": true,
+        "receiptCleared": true,
+        "uuid": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "Z15",
+      "label": "motif-person horror does not change source or another person, normal panel suppresses tags",
+      "passed": true,
+      "detail": {
+        "a": true,
+        "b": true,
+        "normal": true,
+        "source": true,
+        "sourceHorror": true,
+        "denied": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "alternativeOriginalTests": false,
+  "passed": true,
+  "failed": []
+}
