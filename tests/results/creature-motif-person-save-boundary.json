@@ -1,0 +1,59 @@
+{
+  "verdict": "BLOCKED_SAVE_COMPATIBILITY",
+  "diagnosticReproduced": true,
+  "note": "Adult eligibility/UI readiness only; no adult candidate selected or generated.",
+  "browser": "154.0.8037.57",
+  "url": "http://127.0.0.1:8765/seaart-creature-motif-person/index.html",
+  "setup": {
+    "originalId": "original-motif-2b4f9feb-802e-4fbc-b28a-bdac4fc35c8d",
+    "sourceId": "bab83a71-4bb2-4644-9dfd-8a5389e33919",
+    "accepted": true,
+    "owner": {
+      "kind": "person",
+      "originalId": "original-motif-2b4f9feb-802e-4fbc-b28a-bdac4fc35c8d"
+    },
+    "metadataPreserved": true,
+    "includedByAllPeople": true,
+    "sourceUnchanged": true,
+    "registryCount": 0
+  },
+  "checkbox": {
+    "enabled": true,
+    "confirmed": true,
+    "adultReady": true,
+    "adultReadyFor": true,
+    "metadataStillDenied": true,
+    "saved": true
+  },
+  "reload": {
+    "originalMarker": {
+      "version": 1,
+      "originKind": "creature-motif",
+      "adultAccess": "not-permitted"
+    },
+    "extensionMarker": {
+      "version": 1,
+      "originKind": "creature-motif",
+      "adultAccess": "not-permitted"
+    },
+    "ready": true,
+    "confirmed": true,
+    "grants": {
+      "creature": 0,
+      "result": 0
+    },
+    "namespace": "creature-adult-v1/result-access-v1"
+  },
+  "validation": {
+    "unknownMarkerAccepted": true,
+    "missingMarkerAccepted": true,
+    "strippedV4ImportAccepted": true,
+    "missingMarkerHistoryAccepted": true,
+    "missingMarkerFavoriteAccepted": true,
+    "missingMarkerReady": true,
+    "newerVersionRejected": true,
+    "newerCommitRejected": true,
+    "failedCommitUnchanged": true
+  },
+  "errors": []
+}

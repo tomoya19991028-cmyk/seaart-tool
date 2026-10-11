@@ -1,0 +1,33 @@
+{
+  "mainHead": "326b4e482f17d4bd94605696ed2e3fdda30b43d0",
+  "branch": "feat/creature-motif-person-integration1",
+  "workingTreeBefore": "",
+  "files": {
+    "index.html": {
+      "blob": "edacabf24ea9648a06fa900bd3668921d47b6a62",
+      "sha256": "fafddf9ea6040430529e74453de5df2091acb665c1d76c612c4189f21b1c8353",
+      "bytes": 3754243,
+      "CRLF": 9274,
+      "LF": 9274
+    },
+    "sw.js": {
+      "blob": "f002716e9f3a632e3a7107a37a59e5837f265ff6",
+      "sha256": "91cd2a62257239b189c7f634d03019942f9968c2c47598695144b9f23092485a",
+      "bytes": 2329,
+      "CRLF": 0,
+      "LF": 69
+    },
+    "manifest.json": {
+      "blob": "0b9eee56bb9dbb59a1dd36f3ce997200f3e4a451",
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "bytes": 762,
+      "CRLF": 0,
+      "LF": 35
+    }
+  },
+  "references": {
+    "R1": "tests/creature-stage5-remaining-r1.cjs",
+    "R4": "not found in Git history, workspace or attachments",
+    "Creature adult anthro feasibility": "not found in Git history, workspace or attachments"
+  }
+}
