@@ -33,4 +33,7 @@ if normal_ui.exists():
 card_tags=root/'src/horror-card-tags.js'
 if card_tags.exists():
     block('CARD_TAGS',card_tags.read_text())
+unified_ui=root/'src/person-creature-unified-ui.js'
+if unified_ui.exists():
+    block('PERSON_CREATURE_UI',unified_ui.read_text())
 p.write_bytes(b)
