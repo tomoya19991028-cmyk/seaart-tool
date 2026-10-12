@@ -1,0 +1,27 @@
+{
+  "exact": [],
+  "lexicalNear": [
+    [
+      "扇状に広がる手",
+      "detailOptions:effectMotion",
+      "波状に広がる",
+      "energy radiating outward in waves",
+      0.77
+    ],
+    [
+      "左右非対称の角",
+      "composition",
+      "左右対称",
+      "symmetrical composition",
+      0.73
+    ],
+    [
+      "左右非対称の角",
+      "composition",
+      "左右対称の二人",
+      "symmetrical two-person composition",
+      0.71
+    ]
+  ],
+  "method": "all before candidate labels/tags exact comparison plus Japanese lexical similarity; semantic review is manual, not image effectiveness"
+}

@@ -1,0 +1,67 @@
+{
+  "tests": [
+    {
+      "name": "Every old horror definition/enum is unchanged",
+      "passed": true
+    },
+    {
+      "name": "Exactly 72 appended definitions",
+      "passed": true
+    },
+    {
+      "name": "id unique",
+      "passed": true
+    },
+    {
+      "name": "label unique",
+      "passed": true
+    },
+    {
+      "name": "tag unique",
+      "passed": true
+    },
+    {
+      "name": "Body 36 / horror 36",
+      "passed": true
+    },
+    {
+      "name": "Only existing six feature groups",
+      "passed": true
+    },
+    {
+      "name": "Unchanged foundation/schema/normal/card-tag/runtime sources",
+      "passed": true
+    },
+    {
+      "name": "SW cache-name-only change",
+      "passed": true
+    },
+    {
+      "name": "All 141 existing tests/fixtures byte unchanged",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "counts": {
+    "頭・顔": 12,
+    "目・口": 12,
+    "皮膚・体表": 12,
+    "四肢・体型": 12,
+    "翼・角・尻尾": 12,
+    "演出・動作": 12
+  },
+  "files": {
+    "index.html": {
+      "bytes": 3997918,
+      "sha256": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7"
+    },
+    "sw.js": {
+      "bytes": 2336,
+      "sha256": "8054d6420339a732ae7a9d17cc78caed74c87feec595b383bc0de8cd5e48e7c2"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  }
+}

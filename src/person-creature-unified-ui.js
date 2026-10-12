@@ -11,7 +11,7 @@ const uFeatureTab=uButton('身体・ダメージ',()=>setPersonGroup('features')
 const uProfilesBefore=renderProfiles;
 renderProfiles=function(...args){const result=uProfilesBefore.apply(this,args);for(const profile of $('profiles').querySelectorAll('.profile')){
  const content=profile.querySelector('.personContent'),parts=[...profile.querySelectorAll('[data-person-feature]')];if(!content||!parts.length)continue;
- const group=node('div',undefined,'personGroup uFeatureGroup'),grid=node('div',undefined,'profileGrid uFeatureGrid');group.dataset.group='features';grid.append(...parts);group.append(grid,node('p','身体・傷は通常の外見設定です。怪異の状態・特徴やコマ別の変化は「ホラー・怪異」で設定します。','small'));
+ const group=node('div',undefined,'personGroup uFeatureGroup'),grid=node('div',undefined,'profileGrid uFeatureGrid');group.dataset.group='features';grid.append(...parts);for(const part of parts)off(part,false);group.append(grid,node('p','身体・傷は通常の外見設定です。怪異の状態・特徴やコマ別の変化は「ホラー・怪異」で設定します。','small'));
  group.append(uButton('この人物の怪異設定',()=>{hActorRef='person:'+profile.dataset.personId;hSelectDisplayMode('normal');showMobileTab('horror');hRender()}));content.append(group);
  const d=profile.querySelector('.positionDialog'),pad=d?.querySelector('.positionDpad');if(pad){const id=profile.dataset.personId,none=uButton('位置：指定なし',()=>{const wasOpen=d.open;hTransaction('画像内の位置を解除',()=>{hAssert(profiles[id],'人物が変更されました');profiles[id].position2d='';profiles[id].position='auto'});if(wasOpen)document.querySelector('.profile[data-person-id="'+id+'"] .positionDialog')?.showModal()});none.dataset.uPositionNone='true';pad.before(none)}
  }layoutPeople();return result};

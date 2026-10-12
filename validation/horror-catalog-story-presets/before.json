@@ -1,0 +1,34 @@
+{
+  "HEAD": "ede9fa02a0088816509b20f216b652c3237d87fd",
+  "files": {
+    "index.html": {
+      "bytes": 3958894,
+      "sha256": "ed8da8f0978a0249a61778b1433c139c22cad9c95721c7874d11e6493cf610bb"
+    },
+    "sw.js": {
+      "bytes": 2334,
+      "sha256": "13f3f88e81d13cfefcec19a49d091561b24d78a2a158e42aad10a22d066b15c3"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    },
+    "src/horror-catalog.json": {
+      "bytes": 6141,
+      "sha256": "f698fa80f2beacfa4fde632b1bbbe011d27c9136a8b1c4902977af54e1a5efdf"
+    },
+    "src/horror-foundation.js": {
+      "bytes": 10038,
+      "sha256": "a4dc1d2f2d30744a7458724ce393d81c33d4a0df012382458d9ac11ffe678318"
+    },
+    "src/horror-runtime.js": {
+      "bytes": 89365,
+      "sha256": "e710fe534c8bef3270b1ed9b1308f9a2d643670d275b98ebe2371f8d99784a32"
+    },
+    "src/person-creature-unified-ui.js": {
+      "bytes": 30965,
+      "sha256": "a2d42fa99d51cec15795d31654bfcee4f189803dd7690fcde9cb69794baaa978"
+    }
+  },
+  "worktrees": "worktree /workspace/seaart-tool\nHEAD 7b3f9afd6cf1db20b74359fcf3f14fa4d8101841\nbranch refs/heads/feat/creature-motif-person-integration2\n\nworktree /workspace/seaart-card-tags\nHEAD 023bb6d2b24395551c06d756faac16440f88b7b5\nbranch refs/heads/feat/horror-card-selected-tags\n\nworktree /workspace/seaart-horror\nHEAD f58be6a37c2b407b86afbaa226a79a0a10a9c562\nbranch refs/heads/feat/horror-tab-manga-draft-integration\n\nworktree /workspace/seaart-integrated\nHEAD 0dff414fda13f92c2a0099b4570d0c68da797a18\nbranch refs/heads/feat/horror-motif-person-integration\n\nworktree /workspace/seaart-normal-first\nHEAD 6044f4a2289ff642e26b355a071688568e57f45d\nbranch refs/heads/feat/horror-normal-first-ui\n\nworktree /workspace/seaart-unified-ui\nHEAD ede9fa02a0088816509b20f216b652c3237d87fd\nbranch refs/heads/feat/person-creature-ui-unified-update\n\n"
+}

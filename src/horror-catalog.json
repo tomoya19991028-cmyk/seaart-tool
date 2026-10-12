@@ -223,6 +223,1112 @@
         "complete"
       ],
       "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-segmented-face",
+      "label": "分節した顔",
+      "group": "頭・顔",
+      "tag": "segmented facial plates",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-offset-jaw",
+      "label": "ずれた顎",
+      "group": "頭・顔",
+      "tag": "offset jaw",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-cranial-ridges",
+      "label": "頭骨の隆起",
+      "group": "頭・顔",
+      "tag": "pronounced cranial ridges",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-folded-face",
+      "label": "折り畳まれた顔",
+      "group": "頭・顔",
+      "tag": "folded facial contours",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-split-chin",
+      "label": "二股の顎先",
+      "group": "頭・顔",
+      "tag": "bifurcated chin",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-recessed-face",
+      "label": "陥没した顔面",
+      "group": "頭・顔",
+      "tag": "recessed facial center",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-curse-forehead",
+      "label": "額の呪文刻印",
+      "group": "頭・顔",
+      "tag": "cursed script on forehead",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-possessed-mask",
+      "label": "顔に浮かぶ憑依仮面",
+      "group": "頭・顔",
+      "tag": "spectral possession mask over face",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-faceless-apparition",
+      "label": "顔のない霊影",
+      "group": "頭・顔",
+      "tag": "faceless spectral visage",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-veil-face",
+      "label": "顔を覆う霊布",
+      "group": "頭・顔",
+      "tag": "spectral veil over face",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-parasitic-crown",
+      "label": "寄生体の冠",
+      "group": "頭・顔",
+      "tag": "parasitic crown on head",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-soul-seam",
+      "label": "顔を走る魂の縫い目",
+      "group": "頭・顔",
+      "tag": "luminous soul seams across face",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-radial-iris",
+      "label": "放射状の異形瞳",
+      "group": "目・口",
+      "tag": "radial segmented irises",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-stacked-pupils",
+      "label": "縦に並ぶ瞳孔",
+      "group": "目・口",
+      "tag": "vertically stacked pupils",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-eye-ring",
+      "label": "眼球を囲む小眼",
+      "group": "目・口",
+      "tag": "tiny eyes surrounding eyeballs",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-interlocking-teeth",
+      "label": "噛み合う針状歯",
+      "group": "目・口",
+      "tag": "interlocking needle teeth",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-lateral-mouth",
+      "label": "横にずれた口",
+      "group": "目・口",
+      "tag": "laterally displaced mouth",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-hinged-jaw",
+      "label": "多重の顎関節",
+      "group": "目・口",
+      "tag": "multiple jaw hinges",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-curse-tears",
+      "label": "呪文の涙",
+      "group": "目・口",
+      "tag": "tears forming cursed script",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-soul-mouth",
+      "label": "口から漏れる魂",
+      "group": "目・口",
+      "tag": "spectral wisps escaping mouth",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-sealed-lips",
+      "label": "呪印で封じられた唇",
+      "group": "目・口",
+      "tag": "lips sealed by curse symbols",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-ghost-reflection",
+      "label": "瞳に映る亡霊",
+      "group": "目・口",
+      "tag": "ghostly silhouettes reflected in eyes",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-possessed-gaze",
+      "label": "憑依した虚ろな視線",
+      "group": "目・口",
+      "tag": "vacant possessed gaze",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-smoke-teeth",
+      "label": "歯の間の黒煙",
+      "group": "目・口",
+      "tag": "black smoke between teeth",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-ceramic-skin",
+      "label": "陶器状の肌",
+      "group": "皮膚・体表",
+      "tag": "ceramic-like skin plates",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-translucent-veins",
+      "label": "透ける分岐血管",
+      "group": "皮膚・体表",
+      "tag": "visible branching veins beneath translucent skin",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-lichen-skin",
+      "label": "地衣状の体表",
+      "group": "皮膚・体表",
+      "tag": "lichen-like skin patches",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-chitin-seams",
+      "label": "甲殻の継ぎ目",
+      "group": "皮膚・体表",
+      "tag": "interlocking chitin seams",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-glass-scales",
+      "label": "ガラス状の鱗",
+      "group": "皮膚・体表",
+      "tag": "glass-like scales",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spiral-ridges",
+      "label": "螺旋状の皮膚隆起",
+      "group": "皮膚・体表",
+      "tag": "spiraling skin ridges",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spreading-runes",
+      "label": "広がる侵食呪印",
+      "group": "皮膚・体表",
+      "tag": "spreading invasive curse runes",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-parasitic-filaments",
+      "label": "皮下の寄生繊維",
+      "group": "皮膚・体表",
+      "tag": "parasitic filaments beneath skin",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spectral-patches",
+      "label": "霊体化する肌",
+      "group": "皮膚・体表",
+      "tag": "patches of skin turning spectral",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-cursed-frost",
+      "label": "呪いの霜",
+      "group": "皮膚・体表",
+      "tag": "cursed frost coating skin",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-ash-contamination",
+      "label": "灰状の侵食",
+      "group": "皮膚・体表",
+      "tag": "ash-like contamination over skin",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spore-seal",
+      "label": "胞子の呪印",
+      "group": "皮膚・体表",
+      "tag": "spore clusters forming occult seals",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-segmented-arms",
+      "label": "多節の腕",
+      "group": "四肢・体型",
+      "tag": "multi-segmented arms",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-forked-fingers",
+      "label": "枝分かれした指",
+      "group": "四肢・体型",
+      "tag": "forked fingertips",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spiral-joints",
+      "label": "螺旋状の関節",
+      "group": "四肢・体型",
+      "tag": "spiral limb joints",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-unequal-forearms",
+      "label": "左右差のある前腕",
+      "group": "四肢・体型",
+      "tag": "unequal forearm lengths",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-fan-hands",
+      "label": "扇状に広がる手",
+      "group": "四肢・体型",
+      "tag": "fan-shaped hands",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-ribbed-limbs",
+      "label": "肋状の四肢",
+      "group": "四肢・体型",
+      "tag": "ribbed limb contours",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-puppet-threads",
+      "label": "憑依の操り糸",
+      "group": "四肢・体型",
+      "tag": "spectral puppet threads attached to limbs",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-ghost-hands",
+      "label": "重なる亡霊の手",
+      "group": "四肢・体型",
+      "tag": "overlapping ghost hands",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-curse-bindings",
+      "label": "四肢の呪縛帯",
+      "group": "四肢・体型",
+      "tag": "curse bindings around limbs",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-parasite-coils",
+      "label": "腕に巻き付く寄生体",
+      "group": "四肢・体型",
+      "tag": "parasitic coils around arms",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spectral-limbs",
+      "label": "霊体化する四肢",
+      "group": "四肢・体型",
+      "tag": "limbs fading into spectral outlines",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-shadow-body",
+      "label": "身体からずれる影体",
+      "group": "四肢・体型",
+      "tag": "shadow body displaced from torso",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-rib-wings",
+      "label": "肋骨状の翼",
+      "group": "翼・角・尻尾",
+      "tag": "rib-like wing spars",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "wings": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-fan-wings",
+      "label": "扇骨状の翼",
+      "group": "翼・角・尻尾",
+      "tag": "fan-shaped skeletal wings",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "wings": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-asymmetric-horns",
+      "label": "左右非対称の角",
+      "group": "翼・角・尻尾",
+      "tag": "asymmetrical horn pair",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "horns": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-segmented-horns",
+      "label": "分節した角",
+      "group": "翼・角・尻尾",
+      "tag": "segmented horns",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "horns": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-jointed-tail",
+      "label": "多関節の尾",
+      "group": "翼・角・尻尾",
+      "tag": "multi-jointed tail",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "tail": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-forked-tail",
+      "label": "二股の異形尾",
+      "group": "翼・角・尻尾",
+      "tag": "bifurcated aberrant tail",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "tail": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spectral-wings",
+      "label": "亡霊の翼",
+      "group": "翼・角・尻尾",
+      "tag": "spectral wings of ghostly silhouettes",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "wings": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-rune-wings",
+      "label": "呪文を連ねた翼",
+      "group": "翼・角・尻尾",
+      "tag": "wings woven from cursed script",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "wings": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-curse-horns",
+      "label": "呪印が浮かぶ角",
+      "group": "翼・角・尻尾",
+      "tag": "floating curse seals around horns",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "horns": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-possessed-horns",
+      "label": "角に絡む憑依霊",
+      "group": "翼・角・尻尾",
+      "tag": "possessing spirits coiled around horns",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "horns": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-smoke-tail",
+      "label": "煙へ崩れる尾",
+      "group": "翼・角・尻尾",
+      "tag": "tail dissolving into dark vapor",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "tail": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-parasite-tail",
+      "label": "寄生節の尾",
+      "group": "翼・角・尻尾",
+      "tag": "tail of linked parasite segments",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "tail": "present"
+      },
+      "continuity": "persistent",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-joint-unfolding",
+      "label": "関節の展開",
+      "group": "演出・動作",
+      "tag": "unfolding limb joints",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-face-shifting",
+      "label": "顔の輪郭の移動",
+      "group": "演出・動作",
+      "tag": "shifting facial contours",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-scales-emerging",
+      "label": "鱗の浮き出し",
+      "group": "演出・動作",
+      "tag": "scales emerging beneath skin",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-one-sided-growth",
+      "label": "片側だけの肥大",
+      "group": "演出・動作",
+      "tag": "one-sided bodily expansion",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-tail-uncoiling",
+      "label": "異形尾の展開",
+      "group": "演出・動作",
+      "tag": "aberrant tail uncoiling",
+      "source": null,
+      "conflict": null,
+      "structure": {
+        "tail": "present"
+      },
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-form-retraction",
+      "label": "異形部位の収縮",
+      "group": "演出・動作",
+      "tag": "retracting aberrant body parts",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-curse-receding",
+      "label": "呪印の消退",
+      "group": "演出・動作",
+      "tag": "curse runes receding",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-possession-release",
+      "label": "憑依霊の離脱",
+      "group": "演出・動作",
+      "tag": "possessing spirit leaving the body",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-fog-silhouettes",
+      "label": "霧に浮かぶ亡霊群",
+      "group": "演出・動作",
+      "tag": "ghost silhouettes within fog",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-shadow-delay",
+      "label": "遅れて動く影",
+      "group": "演出・動作",
+      "tag": "shadow moving out of sync",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-spirit-orbit",
+      "label": "周囲を巡る魂",
+      "group": "演出・動作",
+      "tag": "spectral wisps orbiting the body",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
+    },
+    {
+      "id": "horror-feature-unearthly-stillness",
+      "label": "異常な静止",
+      "group": "演出・動作",
+      "tag": "unnatural rigid stillness",
+      "source": null,
+      "conflict": null,
+      "structure": {},
+      "continuity": "transient",
+      "applicableStates": [
+        "partial",
+        "complete"
+      ],
+      "defaultWeight": 1
     }
   ],
   "independent_species": [

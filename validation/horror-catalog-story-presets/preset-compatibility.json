@@ -1,0 +1,15 @@
+{
+  "tests": [
+    {
+      "id": "SP01",
+      "passed": true
+    },
+    {
+      "id": "SP02",
+      "passed": true
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

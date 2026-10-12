@@ -1,0 +1,25 @@
+{
+  "remote": "ede9fa02a0088816509b20f216b652c3237d87fd\trefs/heads/feat/person-creature-ui-unified-update\n5b5bb03589dcc9a661402395d6c3db20cfd4cf52\trefs/heads/main\n",
+  "public": {
+    "/": {
+      "HTTP": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+    },
+    "/index.html": {
+      "HTTP": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+    },
+    "/sw.js": {
+      "HTTP": 200,
+      "bytes": 2320,
+      "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a"
+    },
+    "/manifest.json": {
+      "HTTP": 200,
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  }
+}

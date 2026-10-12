@@ -36,4 +36,8 @@ if card_tags.exists():
 unified_ui=root/'src/person-creature-unified-ui.js'
 if unified_ui.exists():
     block('PERSON_CREATURE_UI',unified_ui.read_text())
+story=root/'src/horror-story-presets.js'
+if story.exists():
+    definitions=json.loads((root/'src/horror-story-presets.json').read_text())
+    block('STORY_PRESETS','const hsStoryDefinitions='+json.dumps(definitions,ensure_ascii=False,separators=(',',':'))+';\n'+story.read_text())
 p.write_bytes(b)

@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/workspace/seaart-tool",
+    "HEAD": "7b3f9afd6cf1db20b74359fcf3f14fa4d8101841",
+    "status": ""
+  },
+  {
+    "path": "/workspace/seaart-card-tags",
+    "HEAD": "023bb6d2b24395551c06d756faac16440f88b7b5",
+    "status": ""
+  },
+  {
+    "path": "/workspace/seaart-horror",
+    "HEAD": "f58be6a37c2b407b86afbaa226a79a0a10a9c562",
+    "status": ""
+  },
+  {
+    "path": "/workspace/seaart-horror-stories",
+    "HEAD": "ede9fa02a0088816509b20f216b652c3237d87fd",
+    "status": " M index.html\n M scripts/embed-horror.py\n M src/horror-catalog.json\n M src/person-creature-unified-ui.js\n M sw.js\n?? \"CHECKLIST_\\343\\203\\233\\343\\203\\251\\343\\203\\274\\345\\200\\231\\350\\243\\234\\346\\274\\253\\347\\224\\273\\343\\203\\227\\343\\203\\252\\343\\202\\273\\343\\203\\203\\343\\203\\210Android\\347\\242\\272\\350\\252\\215.md\"\n?? src/horror-story-presets.js\n?? src/horror-story-presets.json\n?? tests/horror-stories/\n"
+  },
+  {
+    "path": "/workspace/seaart-integrated",
+    "HEAD": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "status": ""
+  },
+  {
+    "path": "/workspace/seaart-normal-first",
+    "HEAD": "6044f4a2289ff642e26b355a071688568e57f45d",
+    "status": ""
+  },
+  {
+    "path": "/workspace/seaart-unified-ui",
+    "HEAD": "ede9fa02a0088816509b20f216b652c3237d87fd",
+    "status": ""
+  }
+]

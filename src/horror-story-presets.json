@@ -1,0 +1,557 @@
+[
+  {
+    "id": "gradual",
+    "name": "徐々に異形化",
+    "steps": [
+      {
+        "label": "通常の姿",
+        "role": "introduction",
+        "action": "",
+        "beat": "",
+        "pose": "standing calmly",
+        "expression": "neutral expression",
+        "state": "normal",
+        "intensity": "low",
+        "features": []
+      },
+      {
+        "label": "小さな違和感",
+        "role": "preparation",
+        "action": "",
+        "beat": "",
+        "pose": "looking at own hands",
+        "expression": "worried expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-possessed-gaze"
+        ]
+      },
+      {
+        "label": "目と肌の初期変化",
+        "role": "change",
+        "action": "",
+        "beat": "",
+        "pose": "examining own face",
+        "expression": "surprised expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-radial-iris",
+          "horror-feature-ceramic-skin"
+        ]
+      },
+      {
+        "label": "身体の変化が進行",
+        "role": "action",
+        "action": "",
+        "beat": "",
+        "pose": "stretching altered arms",
+        "expression": "frightened expression",
+        "state": "partial",
+        "intensity": "medium",
+        "features": [
+          "horror-feature-radial-iris",
+          "horror-feature-ceramic-skin",
+          "horror-feature-segmented-arms"
+        ]
+      },
+      {
+        "label": "大きな変貌",
+        "role": "peak",
+        "action": "",
+        "beat": "",
+        "pose": "crouching with altered limbs",
+        "expression": "frightened expression",
+        "state": "partial",
+        "intensity": "high",
+        "features": [
+          "horror-feature-radial-iris",
+          "horror-feature-ceramic-skin",
+          "horror-feature-segmented-arms",
+          "horror-feature-asymmetric-horns"
+        ]
+      },
+      {
+        "label": "完全異形化",
+        "role": "result",
+        "action": "",
+        "beat": "",
+        "pose": "standing with transformed body",
+        "expression": "intense expression",
+        "state": "complete",
+        "intensity": "high",
+        "features": [
+          "horror-feature-radial-iris",
+          "horror-feature-ceramic-skin",
+          "horror-feature-segmented-arms",
+          "horror-feature-asymmetric-horns",
+          "horror-feature-rib-wings"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "battle-damage",
+    "name": "戦闘・負傷の進行",
+    "personOnly": true,
+    "steps": [
+      {
+        "label": "戦闘開始",
+        "role": "introduction",
+        "action": "",
+        "beat": "",
+        "pose": "combat stance",
+        "expression": "determined expression",
+        "state": null,
+        "intensity": "medium",
+        "features": [],
+        "damage": []
+      },
+      {
+        "label": "攻撃を受ける",
+        "role": "preparation",
+        "action": "",
+        "beat": "",
+        "pose": "recoiling from an impact",
+        "expression": "pained expression",
+        "state": null,
+        "intensity": "medium",
+        "features": [],
+        "damage": [
+          "abrasions"
+        ]
+      },
+      {
+        "label": "傷と汚れが増える",
+        "role": "change",
+        "action": "",
+        "beat": "",
+        "pose": "defending while injured",
+        "expression": "pained expression",
+        "state": null,
+        "intensity": "medium",
+        "features": [],
+        "damage": [
+          "abrasions",
+          "bruise",
+          "mud on skin"
+        ]
+      },
+      {
+        "label": "衣装と姿勢が乱れる",
+        "role": "action",
+        "action": "",
+        "beat": "",
+        "pose": "kneeling while defending",
+        "expression": "exhausted expression",
+        "state": null,
+        "intensity": "medium",
+        "features": [],
+        "damage": [
+          "abrasions",
+          "bruise",
+          "mud on skin",
+          "dirty torn clothes"
+        ]
+      },
+      {
+        "label": "重度の負傷",
+        "role": "peak",
+        "action": "",
+        "beat": "",
+        "pose": "struggling to stand",
+        "expression": "pained expression",
+        "state": null,
+        "intensity": "medium",
+        "features": [],
+        "damage": [
+          "abrasions",
+          "bruise",
+          "mud on skin",
+          "dirty torn clothes",
+          "blood on skin"
+        ]
+      },
+      {
+        "label": "戦闘の決着",
+        "role": "result",
+        "action": "",
+        "beat": "",
+        "pose": "resting after battle",
+        "expression": "exhausted expression",
+        "state": null,
+        "intensity": "medium",
+        "features": [],
+        "damage": [
+          "abrasions",
+          "bruise",
+          "mud on skin",
+          "dirty torn clothes",
+          "blood on skin",
+          "bandages"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "encounter-horror",
+    "name": "怪異との遭遇",
+    "steps": [
+      {
+        "label": "日常と探索",
+        "role": "introduction",
+        "action": "",
+        "beat": "",
+        "pose": "walking cautiously",
+        "expression": "neutral expression",
+        "state": "normal",
+        "intensity": "low",
+        "features": []
+      },
+      {
+        "label": "不穏な気配",
+        "role": "preparation",
+        "action": "",
+        "beat": "",
+        "pose": "stopping and listening",
+        "expression": "worried expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-unearthly-stillness"
+        ]
+      },
+      {
+        "label": "怪異の発見",
+        "role": "change",
+        "action": "",
+        "beat": "",
+        "pose": "looking toward ghost silhouettes",
+        "expression": "surprised expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-fog-silhouettes"
+        ]
+      },
+      {
+        "label": "接近と対峙",
+        "role": "action",
+        "action": "",
+        "beat": "",
+        "pose": "backing away from an apparition",
+        "expression": "frightened expression",
+        "state": "partial",
+        "intensity": "medium",
+        "features": [
+          "horror-feature-fog-silhouettes",
+          "horror-feature-shadow-delay"
+        ]
+      },
+      {
+        "label": "恐怖の頂点",
+        "role": "peak",
+        "action": "",
+        "beat": "",
+        "pose": "recoiling in fear",
+        "expression": "terrified expression",
+        "state": "partial",
+        "intensity": "high",
+        "features": [
+          "horror-feature-fog-silhouettes",
+          "horror-feature-shadow-delay",
+          "horror-feature-spirit-orbit"
+        ]
+      },
+      {
+        "label": "逃走後の余韻",
+        "role": "result",
+        "action": "",
+        "beat": "",
+        "pose": "looking back after escaping",
+        "expression": "exhausted expression",
+        "state": "normal",
+        "intensity": "low",
+        "features": []
+      }
+    ]
+  },
+  {
+    "id": "curse-invasion",
+    "name": "呪い・侵食",
+    "steps": [
+      {
+        "label": "呪いの発動",
+        "role": "introduction",
+        "action": "",
+        "beat": "",
+        "pose": "touching forehead",
+        "expression": "worried expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-curse-forehead"
+        ]
+      },
+      {
+        "label": "呪印の出現",
+        "role": "preparation",
+        "action": "",
+        "beat": "",
+        "pose": "looking at spreading marks",
+        "expression": "surprised expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-curse-forehead",
+          "horror-feature-spreading-runes"
+        ]
+      },
+      {
+        "label": "身体への侵食",
+        "role": "change",
+        "action": "",
+        "beat": "",
+        "pose": "gripping own arm",
+        "expression": "pained expression",
+        "state": "partial",
+        "intensity": "medium",
+        "features": [
+          "horror-feature-spreading-runes",
+          "horror-feature-parasitic-filaments"
+        ]
+      },
+      {
+        "label": "精神と外見の変化",
+        "role": "action",
+        "action": "",
+        "beat": "",
+        "pose": "standing rigidly",
+        "expression": "vacant expression",
+        "state": "partial",
+        "intensity": "medium",
+        "features": [
+          "horror-feature-spreading-runes",
+          "horror-feature-parasitic-filaments",
+          "horror-feature-possessed-gaze"
+        ]
+      },
+      {
+        "label": "強い侵食",
+        "role": "peak",
+        "action": "",
+        "beat": "",
+        "pose": "struggling against curse bindings",
+        "expression": "frightened expression",
+        "state": "partial",
+        "intensity": "high",
+        "features": [
+          "horror-feature-spreading-runes",
+          "horror-feature-parasitic-filaments",
+          "horror-feature-possessed-gaze",
+          "horror-feature-curse-bindings"
+        ]
+      },
+      {
+        "label": "完全侵食",
+        "role": "result",
+        "action": "",
+        "beat": "",
+        "pose": "standing under the curse",
+        "expression": "vacant expression",
+        "state": "complete",
+        "intensity": "high",
+        "features": [
+          "horror-feature-spreading-runes",
+          "horror-feature-parasitic-filaments",
+          "horror-feature-possessed-gaze",
+          "horror-feature-curse-bindings",
+          "horror-feature-shadow-body"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mutation-experiment",
+    "name": "実験・突然変異",
+    "steps": [
+      {
+        "label": "実験開始",
+        "role": "introduction",
+        "action": "",
+        "beat": "",
+        "pose": "standing in a laboratory",
+        "expression": "neutral expression",
+        "state": "normal",
+        "intensity": "low",
+        "features": []
+      },
+      {
+        "label": "異常反応",
+        "role": "preparation",
+        "action": "",
+        "beat": "",
+        "pose": "looking at own arms",
+        "expression": "worried expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-translucent-veins"
+        ]
+      },
+      {
+        "label": "初期変異",
+        "role": "change",
+        "action": "",
+        "beat": "",
+        "pose": "spreading altered fingers",
+        "expression": "surprised expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-translucent-veins",
+          "horror-feature-forked-fingers"
+        ]
+      },
+      {
+        "label": "身体構造の変化",
+        "role": "action",
+        "action": "",
+        "beat": "",
+        "pose": "bending altered joints",
+        "expression": "pained expression",
+        "state": "partial",
+        "intensity": "medium",
+        "features": [
+          "horror-feature-translucent-veins",
+          "horror-feature-forked-fingers",
+          "horror-feature-spiral-joints"
+        ]
+      },
+      {
+        "label": "変異の暴走",
+        "role": "peak",
+        "action": "",
+        "beat": "",
+        "pose": "struggling with uncontrolled growth",
+        "expression": "frightened expression",
+        "state": "partial",
+        "intensity": "high",
+        "features": [
+          "horror-feature-translucent-veins",
+          "horror-feature-forked-fingers",
+          "horror-feature-spiral-joints",
+          "horror-feature-one-sided-growth"
+        ]
+      },
+      {
+        "label": "変異後の姿",
+        "role": "result",
+        "action": "",
+        "beat": "",
+        "pose": "standing with mutated limbs",
+        "expression": "intense expression",
+        "state": "complete",
+        "intensity": "high",
+        "features": [
+          "horror-feature-translucent-veins",
+          "horror-feature-forked-fingers",
+          "horror-feature-spiral-joints",
+          "horror-feature-unequal-forearms"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "recovery",
+    "name": "異形化からの回復",
+    "steps": [
+      {
+        "label": "異形化した姿",
+        "role": "introduction",
+        "action": "",
+        "beat": "",
+        "pose": "standing with transformed body",
+        "expression": "pained expression",
+        "state": "complete",
+        "intensity": "high",
+        "features": [
+          "horror-feature-ceramic-skin",
+          "horror-feature-segmented-arms",
+          "horror-feature-asymmetric-horns",
+          "horror-feature-rib-wings"
+        ]
+      },
+      {
+        "label": "回復の兆候",
+        "role": "preparation",
+        "action": "",
+        "beat": "",
+        "pose": "retracting transformed limbs",
+        "expression": "worried expression",
+        "state": "partial",
+        "intensity": "high",
+        "features": [
+          "horror-feature-ceramic-skin",
+          "horror-feature-segmented-arms",
+          "horror-feature-asymmetric-horns",
+          "horror-feature-form-retraction"
+        ]
+      },
+      {
+        "label": "異形部分の減少",
+        "role": "change",
+        "action": "",
+        "beat": "",
+        "pose": "watching limbs return to normal",
+        "expression": "relieved expression",
+        "state": "partial",
+        "intensity": "medium",
+        "features": [
+          "horror-feature-ceramic-skin",
+          "horror-feature-segmented-arms",
+          "horror-feature-form-retraction"
+        ]
+      },
+      {
+        "label": "元の特徴の復元",
+        "role": "action",
+        "action": "",
+        "beat": "",
+        "pose": "touching restored face",
+        "expression": "relieved expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-ceramic-skin",
+          "horror-feature-form-retraction"
+        ]
+      },
+      {
+        "label": "ほぼ元の姿",
+        "role": "peak",
+        "action": "",
+        "beat": "",
+        "pose": "stretching recovering arms",
+        "expression": "hopeful expression",
+        "state": "partial",
+        "intensity": "low",
+        "features": [
+          "horror-feature-form-retraction"
+        ]
+      },
+      {
+        "label": "回復完了",
+        "role": "result",
+        "action": "",
+        "beat": "",
+        "pose": "standing calmly after recovery",
+        "expression": "relieved expression",
+        "state": "normal",
+        "intensity": "low",
+        "features": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "tests/horror-stories/compatibility.cjs"
+  ],
+  "TARGET_URL": "http://127.0.0.1:8765/seaart-horror-stories/index.html",
+  "testSHA256": "daf8c165dac506d6d4e6bead47e2e0b58f3cffc29ee91b607523ca71f1733759",
+  "productSHA256Before": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7",
+  "startUTC": "2026-10-12T12:35:02.320502+00:00",
+  "exitCode": 0,
+  "productSHA256After": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7"
+}
