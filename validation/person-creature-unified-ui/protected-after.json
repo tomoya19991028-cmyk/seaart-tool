@@ -1,0 +1,62 @@
+{
+  "productCommit": "0fa5c73f57437c090018f18e266542bdc518a35e",
+  "protectedRefsUnchanged": true,
+  "publicEndpointsIdenticalBeforeAfter": true,
+  "pagesSource": {
+    "branch": "main",
+    "path": "/"
+  },
+  "pagesBuild": {
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "status": "built"
+  },
+  "endpoints": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+    },
+    {
+      "path": "/sw.js",
+      "status": 200,
+      "bytes": 2320,
+      "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a"
+    },
+    {
+      "path": "/manifest.json",
+      "status": 200,
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  ],
+  "oldWorktrees": {
+    "seaart-tool": {
+      "head": "7b3f9afd6cf1db20b74359fcf3f14fa4d8101841",
+      "clean": true
+    },
+    "seaart-card-tags": {
+      "head": "023bb6d2b24395551c06d756faac16440f88b7b5",
+      "clean": true
+    },
+    "seaart-horror": {
+      "head": "f58be6a37c2b407b86afbaa226a79a0a10a9c562",
+      "clean": true
+    },
+    "seaart-integrated": {
+      "head": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+      "clean": true
+    },
+    "seaart-normal-first": {
+      "head": "6044f4a2289ff642e26b355a071688568e57f45d",
+      "clean": true
+    }
+  },
+  "sitesUpdateOrPublishOperation": false
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scripts": 17,
+  "buildReproducible": true,
+  "baselineHTMLExactlyEqualAfterNewModuleRemoval": true,
+  "existingFilesUnchanged": 140,
+  "namespaceUnchanged": true,
+  "cacheNameOnlyChange": true,
+  "productSHA256": "ed8da8f0978a0249a61778b1433c139c22cad9c95721c7874d11e6493cf610bb",
+  "productBytes": 3958894,
+  "swSHA256": "13f3f88e81d13cfefcec19a49d091561b24d78a2a158e42aad10a22d066b15c3"
+}

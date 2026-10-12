@@ -1,0 +1,50 @@
+{
+  "productCommit": "0fa5c73f57437c090018f18e266542bdc518a35e",
+  "remoteHEAD": "0fa5c73f57437c090018f18e266542bdc518a35e",
+  "gitFetchMatches": true,
+  "restBlobMatches": true,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 3958894,
+      "sha256": "ed8da8f0978a0249a61778b1433c139c22cad9c95721c7874d11e6493cf610bb",
+      "gitBlob": "f7a3c286989ace6816aa8ad2c2cbc1b761222f41",
+      "passed": true
+    },
+    {
+      "path": "sw.js",
+      "bytes": 2334,
+      "sha256": "13f3f88e81d13cfefcec19a49d091561b24d78a2a158e42aad10a22d066b15c3",
+      "gitBlob": "85a697053566c38c5ebb8df4a09942680f2c3cf6",
+      "passed": true
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "gitBlob": "0b9eee56bb9dbb59a1dd36f3ce997200f3e4a451",
+      "passed": true
+    },
+    {
+      "path": "src/person-creature-unified-ui.js",
+      "bytes": 30965,
+      "sha256": "a2d42fa99d51cec15795d31654bfcee4f189803dd7690fcde9cb69794baaa978",
+      "gitBlob": "68119ee76803e63a284730509c0489e5b4d81c3b",
+      "passed": true
+    },
+    {
+      "path": "scripts/embed-horror.py",
+      "bytes": 2647,
+      "sha256": "1ac797ae79eb1816ec1539efee23c3aa006bb1d6a9a1481b846f128a2307d564",
+      "gitBlob": "9952bb10a985b578a80d7c3e43d85976c2608a86",
+      "passed": true
+    },
+    {
+      "path": "tests/unified-ui/contracts.cjs",
+      "bytes": 17481,
+      "sha256": "bdcf1863d1d7c61654a6095ed47ee6d750299fddff571d977541bfa41b386c15",
+      "gitBlob": "6c1913c4774f702d041843ef0423df2f0aba629e",
+      "passed": true
+    }
+  ]
+}
