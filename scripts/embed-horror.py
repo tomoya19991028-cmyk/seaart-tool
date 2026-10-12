@@ -30,4 +30,7 @@ if runtime.exists():
 normal_ui=root/'src/horror-normal-ui.js'
 if normal_ui.exists():
     block('NORMAL_UI',normal_ui.read_text())
+card_tags=root/'src/horror-card-tags.js'
+if card_tags.exists():
+    block('CARD_TAGS',card_tags.read_text())
 p.write_bytes(b)

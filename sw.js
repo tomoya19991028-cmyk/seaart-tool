@@ -1,4 +1,4 @@
-const CACHE_NAME = 'seaart-tool-pwa-v5-horror-normal-first-ui-v1-http-cache-v1';
+const CACHE_NAME = 'seaart-tool-pwa-v5-horror-card-selected-tags-v1-http-cache-v1';
 const APP_SHELL = [
   './',
   './index.html',
