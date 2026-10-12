@@ -1,0 +1,277 @@
+{
+  "runnerCount": 26,
+  "passed": 401,
+  "failed": 0,
+  "notRunCreatedAutomated": 0,
+  "originalRound2TestFilesUnrecovered": 3,
+  "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+  "runners": {
+    "prompts": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v4/prompts",
+      "exitCode": 0,
+      "cases": 8,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "78159b64fd251662ef473a7a4894027960e7828893a2275fb3e74a4d64995224",
+      "wrapperSHA256": null
+    },
+    "ui-extra": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v4/ui-extra",
+      "exitCode": 0,
+      "cases": 6,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "27a504e12bd196f5a2a2cf9eace66299931cb3e347d6214481e630a61df6580b",
+      "wrapperSHA256": null
+    },
+    "combined-ui": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v4/combined-ui",
+      "exitCode": 0,
+      "cases": 6,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "bdee6eb8d59bdf73ecef789afb7b3c630aa2eb46751da67bfe5e585d137be5d6",
+      "wrapperSHA256": null
+    },
+    "motif-prompts": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v4/motif-prompts",
+      "exitCode": 0,
+      "cases": 8,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "b6074cc0a9fdc5897519738e80ab3a21b41ce2f2dfeb59a265871e7a9f844066",
+      "wrapperSHA256": null
+    },
+    "card-pwa": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/card-pwa",
+      "exitCode": 0,
+      "cases": 6,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "688fb2881c37014731a3c27f5a8d226f9d360b8405d633e4176a5925788504d4",
+      "wrapperSHA256": null
+    },
+    "card-persistence": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v6/card-persistence",
+      "exitCode": 0,
+      "cases": 4,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "df69eb831ce8d3b0c041f3af56b67a81da1ab6f67e614400409d6cb5ae4f16e5",
+      "wrapperSHA256": null
+    },
+    "card-ui": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/card-ui",
+      "exitCode": 0,
+      "cases": 12,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "c553da1cb8079d84d5413c2b815096b9f1b09e3ca9abed5f8eeb9301885969bf",
+      "wrapperSHA256": null
+    },
+    "card-contracts": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/card-contracts",
+      "exitCode": 0,
+      "cases": 19,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "79728d175f04d35b858984985327e9f31fc6aea15ad6330f4a76b8e48e908140",
+      "wrapperSHA256": null
+    },
+    "normal-ui": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/normal-ui",
+      "exitCode": 0,
+      "cases": 6,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "d382faf8a8522211313e746598481ba978b59893478fe532ead45d892f70225a",
+      "wrapperSHA256": null
+    },
+    "normal-pwa": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/normal-pwa",
+      "exitCode": 0,
+      "cases": 5,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "9a0b736149dfbac14fc955c1bdab06dfd69fb1859e418e056f35037f4a4cda77",
+      "wrapperSHA256": "6b186f2d3417372a073119eafdbacad03e50bbe93321ec226f6f394290c45f5f"
+    },
+    "normal-contracts": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/normal-contracts",
+      "exitCode": 0,
+      "cases": 20,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "bf45a55cbe9f68c97852188e8d7d4cad2f2e581f090a9c19f4af210dcd739390",
+      "wrapperSHA256": null
+    },
+    "faults": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/faults",
+      "exitCode": 0,
+      "cases": 14,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "6058c4234f6eaed80ea90076b0084b9717c80d36ef416a47871a80418c97d7a0",
+      "wrapperSHA256": null
+    },
+    "legacy": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/legacy",
+      "exitCode": 0,
+      "cases": 21,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "3ddb4aaaf70aaadee1ff4e8d7cd45d1688de0bd1054da19faa80987792ed14ad",
+      "wrapperSHA256": null
+    },
+    "boundaries": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/boundaries",
+      "exitCode": 0,
+      "cases": 20,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "e87261835c013f8230b93e10f73705e15a3b7e3a0e53eb69eec77b91fa96c173",
+      "wrapperSHA256": null
+    },
+    "r1": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/r1",
+      "exitCode": 0,
+      "cases": 49,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+      "wrapperSHA256": null
+    },
+    "motif-boundaries": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/motif-boundaries",
+      "exitCode": 0,
+      "cases": 20,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "9e27d6bb3e2873a0f16e7667409165f15b501ede6a0891427a29ba413cf5c835",
+      "wrapperSHA256": null
+    },
+    "contracts": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/contracts",
+      "exitCode": 0,
+      "cases": 25,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "cf629d7ab357fea28292020ff7aa1f521dd617e2ac978119a3467e72630931e1",
+      "wrapperSHA256": null
+    },
+    "motif": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/motif",
+      "exitCode": 0,
+      "cases": 52,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "b5e2aabb5e4844893d6dea4611b0d6ef249602ff28ade7813e7dfd00d9087f7a",
+      "wrapperSHA256": null
+    },
+    "ui": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/ui",
+      "exitCode": 0,
+      "cases": 7,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "ed7698bad67d852f434d51866408d89b6e2e8af1db2619b84cc1b46d35337973",
+      "wrapperSHA256": "6b186f2d3417372a073119eafdbacad03e50bbe93321ec226f6f394290c45f5f"
+    },
+    "pwa-regression": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/pwa-regression",
+      "exitCode": 0,
+      "cases": 9,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "365214f571d554eb0cc0e4084bc0dbb1e0174937d068df4b42209b383a8011c1",
+      "wrapperSHA256": "6b186f2d3417372a073119eafdbacad03e50bbe93321ec226f6f394290c45f5f"
+    },
+    "round2-retest": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/round2-retest",
+      "exitCode": 0,
+      "cases": 14,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "717c0a6f48022b0b058f5b0308e3485bc664cf50aca755042d32c826610127bc",
+      "wrapperSHA256": null
+    },
+    "combined-pwa": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/combined-pwa",
+      "exitCode": 0,
+      "cases": 7,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "a5313fb8b0bd329b1dd22ea9040866e66f0598e9f946335d560e0d295f5e281c",
+      "wrapperSHA256": "6b186f2d3417372a073119eafdbacad03e50bbe93321ec226f6f394290c45f5f"
+    },
+    "pwa": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/pwa",
+      "exitCode": 0,
+      "cases": 8,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "fb9abbf9ad2fee1d72f82f1272e1c16abbf9ceb7e2f8a194bf67b530c8119e23",
+      "wrapperSHA256": "6b186f2d3417372a073119eafdbacad03e50bbe93321ec226f6f394290c45f5f"
+    },
+    "fixed": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/fixed",
+      "exitCode": 0,
+      "cases": 1,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "d5f524587e4efb869119410c962f4db99948c74dc057d46b83380c788bc475ac",
+      "wrapperSHA256": null
+    },
+    "integration": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/integration",
+      "exitCode": 0,
+      "cases": 18,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "9f18cfe8a954c2587b103134bb5fa10d313834b9d1281c0c37253dc51f065e9a",
+      "wrapperSHA256": null
+    },
+    "edges": {
+      "resultPath": "/workspace/seaart-card-tags-audit-20261012T045720Z/final-v5/edges",
+      "exitCode": 0,
+      "cases": 36,
+      "productSHA256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6",
+      "testSHA256": "699c3d8edfccce99fcfc071199cb55b4d9ee0cf473d3b7fe2745d77dc927363f",
+      "wrapperSHA256": null
+    }
+  },
+  "productCommit": "b0363c04cff073df21a3bc7635f6d3db1d3d4479",
+  "baselineCommit": "6044f4a2289ff642e26b355a071688568e57f45d",
+  "branch": "feat/horror-card-selected-tags",
+  "caseTotal": 401,
+  "product": {
+    "index.html": {
+      "bytes": 3927714,
+      "sha256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6"
+    },
+    "sw.js": {
+      "bytes": 2333,
+      "sha256": "dc4c432469f5324189b3b57dd373246bda8f7e303685424ec10437ec194ed5b5"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  },
+  "originalTestFixtureRecordFilesUnchanged": 128,
+  "originalSourceFilesUnchanged": [
+    "horror-normal-ui.js",
+    "horror-foundation.js",
+    "horror-catalog.json",
+    "creature-motif-person.js",
+    "horror-runtime.js"
+  ],
+  "JSInlineSyntaxPassed": 16,
+  "fixedFingerprint": "7d283415876bc135f201d347063f641fa33ef7f0cc341843d050908195693b5d",
+  "fixedFulltextConfigurations": {
+    "normal": 504,
+    "manga": 504,
+    "panels": 504
+  },
+  "R1Assertions": 865,
+  "round2Candidates": 198,
+  "schemaChanged": false,
+  "namespaceChanged": false,
+  "mainModified": false,
+  "publicPWAModified": false,
+  "existingSitesModified": false,
+  "sitesToolsInvoked": false,
+  "physicalDevice": false,
+  "actualIME": false,
+  "OSFontSettingTested": false,
+  "publicOriginUpdateTest": false,
+  "SeaArtImageQualityTest": false,
+  "unresolvedReproducedProductBugs": 0,
+  "fixedPreexistingBugs": 1,
+  "fixedDevelopmentIssues": 4,
+  "recordArchives": {
+    "final-records.tar.gz": {
+      "bytes": 4511435,
+      "sha256": "8f7e9d271de9325374cb4cda12ecc635df6df3974c9b1c4f9d8133a5f9f14845"
+    },
+    "development-records.tar.gz": {
+      "bytes": 9587114,
+      "sha256": "01c1a33e606751ed53397f5cfaf7e10bb1728162d21577b0bbf0454888ea5361"
+    }
+  }
+}
