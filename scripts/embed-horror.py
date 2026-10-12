@@ -27,4 +27,7 @@ if runtime.exists():
     producer=producer.replace('...presentCreatures.map(mangaCreatureIdentity)','...presentCreatures.map(c=>hPanelCreatureIdentity(c,panel))',1)
     producer=producer.replace('const hasLettering=', 'hMangaPanelContext(null);\n const hasLettering=',1)
     block('RUNTIME','const horrorInitialCatalog='+json.dumps(catalog,ensure_ascii=False,separators=(',',':'))+';\n'+producer+'\n'+runtime.read_text())
+normal_ui=root/'src/horror-normal-ui.js'
+if normal_ui.exists():
+    block('NORMAL_UI',normal_ui.read_text())
 p.write_bytes(b)
