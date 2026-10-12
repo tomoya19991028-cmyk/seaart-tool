@@ -1,0 +1,13 @@
+{
+  "reason": "Copied runner retained TARGET_URL pointing to old integrated product; records are not validation of the UI candidate.",
+  "incorrectURL": "http://127.0.0.1:8765/seaart-integrated/index.html",
+  "correctURL": "http://127.0.0.1:8765/seaart-normal-first/index.html",
+  "runningWrappersInterrupted": [
+    76017,
+    76022,
+    77671,
+    77675,
+    77678
+  ],
+  "originalOutputPreserved": true
+}

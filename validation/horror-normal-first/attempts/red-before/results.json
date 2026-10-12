@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "id": "N01",
+      "label": "horror tab defaults to normal and reload does not persist display mode",
+      "passed": false,
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/seaart-normal-first/index.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-normal-first/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:381)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:5:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N02",
+      "label": "normal candidate selection is immediate and never opens panel preview",
+      "passed": false,
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/seaart-normal-first/index.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-normal-first/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:381)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:6:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N03",
+      "label": "normal candidate deselection and selected-tag removal are immediate",
+      "passed": false,
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/seaart-normal-first/index.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-normal-first/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:381)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:7:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N04",
+      "label": "display-only switches preserve whole data, disk, Undo, drafts and panel IDs",
+      "passed": false,
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/seaart-normal-first/index.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-normal-first/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:381)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:8:1",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false
+}

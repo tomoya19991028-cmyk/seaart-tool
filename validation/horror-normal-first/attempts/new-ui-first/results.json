@@ -1,0 +1,1207 @@
+{
+  "tests": [
+    {
+      "id": "NUI-360-640",
+      "passed": true,
+      "cards": [
+        [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "0"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "1"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "2"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "3"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "4"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "5"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "6"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "7"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "8"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "9"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "10"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "11"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "12"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "13"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "14"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "15"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "16"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "17"
+          }
+        ]
+      ],
+      "geometry": {
+        "dialog": {
+          "left": 10,
+          "right": 350,
+          "top": 115.203125,
+          "bottom": 640,
+          "height": 524.796875
+        },
+        "body": {
+          "left": 11,
+          "right": 349,
+          "top": 185.203125,
+          "bottom": 570,
+          "height": 384.796875
+        },
+        "footer": {
+          "left": 11,
+          "right": 349,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "overflow": false,
+        "outer": "hidden",
+        "inner": "auto",
+        "modeButtons": [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 162,
+            "bottom": 206,
+            "height": 44
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 162,
+            "bottom": 206,
+            "height": 44
+          }
+        ]
+      },
+      "reducedViewport": true,
+      "keyboardAutomatic": false
+    },
+    {
+      "id": "NUI-360-800",
+      "passed": true,
+      "cards": [
+        [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "0"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "1"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "2"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "3"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "4"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "5"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "6"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "7"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "8"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "9"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "10"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "11"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "12"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "13"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "14"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "15"
+          },
+          {
+            "left": 12,
+            "right": 176,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "16"
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "17"
+          }
+        ]
+      ],
+      "geometry": {
+        "dialog": {
+          "left": 10,
+          "right": 350,
+          "top": 144,
+          "bottom": 800,
+          "height": 656
+        },
+        "body": {
+          "left": 11,
+          "right": 349,
+          "top": 214,
+          "bottom": 730,
+          "height": 516
+        },
+        "footer": {
+          "left": 11,
+          "right": 349,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "overflow": false,
+        "outer": "hidden",
+        "inner": "auto",
+        "modeButtons": [
+          {
+            "left": 12,
+            "right": 176,
+            "top": 195,
+            "bottom": 239,
+            "height": 44
+          },
+          {
+            "left": 184,
+            "right": 348,
+            "top": 195,
+            "bottom": 239,
+            "height": 44
+          }
+        ]
+      },
+      "reducedViewport": true,
+      "keyboardAutomatic": false
+    },
+    {
+      "id": "NUI-393-640",
+      "passed": true,
+      "cards": [
+        [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "0"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "1"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "2"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "3"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "4"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "5"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "6"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "7"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "8"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "9"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "10"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "11"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "12"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 263.625,
+            "bottom": 342.75,
+            "height": 79.125,
+            "id": "13"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "14"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 350.75,
+            "bottom": 429.875,
+            "height": 79.125,
+            "id": "15"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "16"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 437.875,
+            "bottom": 517,
+            "height": 79.125,
+            "id": "17"
+          }
+        ]
+      ],
+      "geometry": {
+        "dialog": {
+          "left": 10,
+          "right": 383,
+          "top": 115.203125,
+          "bottom": 640,
+          "height": 524.796875
+        },
+        "body": {
+          "left": 11,
+          "right": 382,
+          "top": 185.203125,
+          "bottom": 570,
+          "height": 384.796875
+        },
+        "footer": {
+          "left": 11,
+          "right": 382,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "overflow": false,
+        "outer": "hidden",
+        "inner": "auto",
+        "modeButtons": [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 162,
+            "bottom": 206,
+            "height": 44
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 162,
+            "bottom": 206,
+            "height": 44
+          }
+        ]
+      },
+      "reducedViewport": true,
+      "keyboardAutomatic": false
+    },
+    {
+      "id": "NUI-393-800",
+      "passed": true,
+      "cards": [
+        [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "0"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "1"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "2"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "3"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "4"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "5"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "6"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "7"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "8"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "9"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "10"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "11"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "12"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 302.625,
+            "bottom": 416.40625,
+            "height": 113.78125,
+            "id": "13"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "14"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 424.40625,
+            "bottom": 538.203125,
+            "height": 113.796875,
+            "id": "15"
+          },
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "16"
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 546.203125,
+            "bottom": 659.984375,
+            "height": 113.78125,
+            "id": "17"
+          }
+        ]
+      ],
+      "geometry": {
+        "dialog": {
+          "left": 10,
+          "right": 383,
+          "top": 144,
+          "bottom": 800,
+          "height": 656
+        },
+        "body": {
+          "left": 11,
+          "right": 382,
+          "top": 214,
+          "bottom": 730,
+          "height": 516
+        },
+        "footer": {
+          "left": 11,
+          "right": 382,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "overflow": false,
+        "outer": "hidden",
+        "inner": "auto",
+        "modeButtons": [
+          {
+            "left": 12,
+            "right": 192.5,
+            "top": 195,
+            "bottom": 239,
+            "height": 44
+          },
+          {
+            "left": 200.5,
+            "right": 381,
+            "top": 195,
+            "bottom": 239,
+            "height": 44
+          }
+        ]
+      },
+      "reducedViewport": true,
+      "keyboardAutomatic": false
+    },
+    {
+      "id": "NUI-430-640",
+      "passed": true,
+      "cards": [
+        [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 245.8125,
+            "bottom": 330.875,
+            "height": 85.0625,
+            "id": "0"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 245.8125,
+            "bottom": 330.875,
+            "height": 85.0625,
+            "id": "1"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 338.875,
+            "bottom": 423.9375,
+            "height": 85.0625,
+            "id": "2"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 338.875,
+            "bottom": 423.9375,
+            "height": 85.0625,
+            "id": "3"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 431.9375,
+            "bottom": 517,
+            "height": 85.0625,
+            "id": "4"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 431.9375,
+            "bottom": 517,
+            "height": 85.0625,
+            "id": "5"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 245.8125,
+            "bottom": 330.875,
+            "height": 85.0625,
+            "id": "6"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 245.8125,
+            "bottom": 330.875,
+            "height": 85.0625,
+            "id": "7"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 338.875,
+            "bottom": 423.9375,
+            "height": 85.0625,
+            "id": "8"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 338.875,
+            "bottom": 423.9375,
+            "height": 85.0625,
+            "id": "9"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 431.9375,
+            "bottom": 517,
+            "height": 85.0625,
+            "id": "10"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 431.9375,
+            "bottom": 517,
+            "height": 85.0625,
+            "id": "11"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 245.8125,
+            "bottom": 330.875,
+            "height": 85.0625,
+            "id": "12"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 245.8125,
+            "bottom": 330.875,
+            "height": 85.0625,
+            "id": "13"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 338.875,
+            "bottom": 423.9375,
+            "height": 85.0625,
+            "id": "14"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 338.875,
+            "bottom": 423.9375,
+            "height": 85.0625,
+            "id": "15"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 431.9375,
+            "bottom": 517,
+            "height": 85.0625,
+            "id": "16"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 431.9375,
+            "bottom": 517,
+            "height": 85.0625,
+            "id": "17"
+          }
+        ]
+      ],
+      "geometry": {
+        "dialog": {
+          "left": 10,
+          "right": 420,
+          "top": 115.203125,
+          "bottom": 640,
+          "height": 524.796875
+        },
+        "body": {
+          "left": 11,
+          "right": 419,
+          "top": 185.203125,
+          "bottom": 570,
+          "height": 384.796875
+        },
+        "footer": {
+          "left": 11,
+          "right": 419,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "overflow": false,
+        "outer": "hidden",
+        "inner": "auto",
+        "modeButtons": [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 162,
+            "bottom": 206,
+            "height": 44
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 162,
+            "bottom": 206,
+            "height": 44
+          }
+        ]
+      },
+      "reducedViewport": true,
+      "keyboardAutomatic": false
+    },
+    {
+      "id": "NUI-430-800",
+      "passed": true,
+      "cards": [
+        [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 284.8125,
+            "bottom": 404.53125,
+            "height": 119.71875,
+            "id": "0"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 284.8125,
+            "bottom": 404.53125,
+            "height": 119.71875,
+            "id": "1"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 412.53125,
+            "bottom": 532.265625,
+            "height": 119.734375,
+            "id": "2"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 412.53125,
+            "bottom": 532.265625,
+            "height": 119.734375,
+            "id": "3"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 540.265625,
+            "bottom": 659.984375,
+            "height": 119.71875,
+            "id": "4"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 540.265625,
+            "bottom": 659.984375,
+            "height": 119.71875,
+            "id": "5"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 284.8125,
+            "bottom": 404.53125,
+            "height": 119.71875,
+            "id": "6"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 284.8125,
+            "bottom": 404.53125,
+            "height": 119.71875,
+            "id": "7"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 412.53125,
+            "bottom": 532.265625,
+            "height": 119.734375,
+            "id": "8"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 412.53125,
+            "bottom": 532.265625,
+            "height": 119.734375,
+            "id": "9"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 540.265625,
+            "bottom": 659.984375,
+            "height": 119.71875,
+            "id": "10"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 540.265625,
+            "bottom": 659.984375,
+            "height": 119.71875,
+            "id": "11"
+          }
+        ],
+        [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 284.8125,
+            "bottom": 404.53125,
+            "height": 119.71875,
+            "id": "12"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 284.8125,
+            "bottom": 404.53125,
+            "height": 119.71875,
+            "id": "13"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 412.53125,
+            "bottom": 532.265625,
+            "height": 119.734375,
+            "id": "14"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 412.53125,
+            "bottom": 532.265625,
+            "height": 119.734375,
+            "id": "15"
+          },
+          {
+            "left": 12,
+            "right": 211,
+            "top": 540.265625,
+            "bottom": 659.984375,
+            "height": 119.71875,
+            "id": "16"
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 540.265625,
+            "bottom": 659.984375,
+            "height": 119.71875,
+            "id": "17"
+          }
+        ]
+      ],
+      "geometry": {
+        "dialog": {
+          "left": 10,
+          "right": 420,
+          "top": 144,
+          "bottom": 800,
+          "height": 656
+        },
+        "body": {
+          "left": 11,
+          "right": 419,
+          "top": 214,
+          "bottom": 730,
+          "height": 516
+        },
+        "footer": {
+          "left": 11,
+          "right": 419,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "overflow": false,
+        "outer": "hidden",
+        "inner": "auto",
+        "modeButtons": [
+          {
+            "left": 12,
+            "right": 211,
+            "top": 195,
+            "bottom": 239,
+            "height": 44
+          },
+          {
+            "left": 219,
+            "right": 418,
+            "top": 195,
+            "bottom": 239,
+            "height": 44
+          }
+        ]
+      },
+      "reducedViewport": true,
+      "keyboardAutomatic": false
+    }
+  ],
+  "physicalDevice": false,
+  "actualIME": false,
+  "passed": true
+}

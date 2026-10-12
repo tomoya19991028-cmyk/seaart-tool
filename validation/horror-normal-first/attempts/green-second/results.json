@@ -1,0 +1,71 @@
+{
+  "tests": [
+    {
+      "id": "N01",
+      "label": "horror tab defaults to normal and reload does not persist display mode",
+      "passed": true,
+      "detail": {
+        "mode": "normal",
+        "normal": "true",
+        "manga": "false"
+      }
+    },
+    {
+      "id": "N02",
+      "label": "normal candidate selection is immediate and never opens panel preview",
+      "passed": true,
+      "detail": {
+        "selected": true,
+        "title": "頭・顔 / 通常画像",
+        "panelSelect": false,
+        "keyboard": false,
+        "undo": 1
+      }
+    },
+    {
+      "id": "N03",
+      "label": "normal candidate deselection and selected-tag removal are immediate",
+      "passed": true,
+      "detail": {
+        "selectedTagRemoval": true
+      }
+    },
+    {
+      "id": "N04",
+      "label": "display-only switches preserve whole data, disk, Undo, drafts and panel IDs",
+      "passed": true,
+      "detail": {
+        "dataAndIDsUnchanged": true,
+        "cards": [
+          {
+            "id": "12",
+            "disabled": true
+          },
+          {
+            "id": "13",
+            "disabled": true
+          },
+          {
+            "id": "14",
+            "disabled": true
+          },
+          {
+            "id": "15",
+            "disabled": true
+          },
+          {
+            "id": "16",
+            "disabled": true
+          },
+          {
+            "id": "17",
+            "disabled": false
+          }
+        ]
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

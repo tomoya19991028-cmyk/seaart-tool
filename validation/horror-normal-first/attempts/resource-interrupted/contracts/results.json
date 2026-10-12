@@ -1,0 +1,49 @@
+{
+  "tests": [
+    {
+      "id": "T02",
+      "passed": true,
+      "assertions": 2,
+      "detail": "normal full text equal"
+    },
+    {
+      "id": "T03",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T04",
+      "passed": true,
+      "assertions": 5
+    },
+    {
+      "id": "T05",
+      "passed": true,
+      "assertions": 5
+    },
+    {
+      "id": "T06",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T07",
+      "passed": true,
+      "assertions": 2
+    },
+    {
+      "id": "T08",
+      "passed": false,
+      "error": "page.evaluate: Target crashed \n    at /workspace/seaart-normal-first/tests/horror/contracts.cjs:12:23\n    at test (/workspace/seaart-normal-first/tests/horror/contracts.cjs:5:522)\n    at async /workspace/seaart-normal-first/tests/horror/contracts.cjs:12:1",
+      "pageErrors": []
+    },
+    {
+      "id": "T09",
+      "passed": true,
+      "assertions": 4
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

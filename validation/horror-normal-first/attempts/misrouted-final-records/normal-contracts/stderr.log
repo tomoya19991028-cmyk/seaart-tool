@@ -1,0 +1,104 @@
+FAIL N01 Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   manga: undefined,
++   mode: null,
++   normal: undefined
+-   manga: 'false',
+-   mode: 'normal',
+-   normal: 'true'
+  }
+
+FAIL N02 Expected values to be strictly equal:
+
+false !== true
+
+FAIL N03 Expected values to be strictly equal:
+
+true !== false
+
+FAIL N04 locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#horrorMangaMode')[22m
+
+FAIL N05 Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   a: [],
++   b: [],
++   c: []
+-   a: [
+-     'horror-feature-mask-face'
+-   ],
+-   b: [
+-     'horror-feature-long-fingers'
+-   ],
+-   c: [
+-     'horror-feature-gray-skin'
+-   ]
+  }
+
+FAIL N06 locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#horrorDialogBody').getByRole('button', { name: '輝く目の詳細', exact: true })[22m
+
+FAIL N07 Expected values to be strictly equal:
+
+true !== false
+
+FAIL N08 Expected values to be strictly equal:
++ actual - expected
+
++ '頭・顔 / 基本'
+- '共有する基本設定の変更'
+
+FAIL N09 page.evaluate: TypeError: Cannot read properties of null (reading 'checked')
+    at eval (eval at evaluate (:311:30), <anonymous>:1:147)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+FAIL N10 page.evaluate: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-DA80tx --remote-debugging-pipe --no-startup-window
+<launched> pid=76072
+[pid=76072][err] [76072:76120:1012/023507.261894:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=76072][err] [76072:76120:1012/023507.261998:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76120:1012/023507.262018:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=76072][err] [76072:76120:1012/023507.262027:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=76072][err] [76072:76120:1012/023507.262032:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76120:1012/023507.444324:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76072:1012/023507.539498:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76072:1012/023507.539573:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76120:1012/023507.543490:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76120:1012/023507.543530:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76072:1012/023507.555963:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76120:1012/023507.558369:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76120:1012/023507.564047:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=76072][err] [76072:76120:1012/023507.564102:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=76072][err] [76072:76072:1012/023507.564160:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76072:1012/023507.564181:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76120:1012/023507.564227:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76072:1012/023507.565111:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76072:1012/023507.571160:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[pid=76072][err] [76072:76072:1012/023507.571185:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76120:1012/023507.571299:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76072:1012/023507.581964:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76120:1012/023507.617046:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=76072][err] [76072:76072:1012/023507.639364:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=76072][err] [76072:76121:1012/023549.127926:ERROR:google_apis/gcm/engine/connection_handler_impl.cc:404] Received message of invalid type 84
+[pid=76072][err] [76072:76121:1012/023549.127949:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -4
+[pid=76072][err] [76072:76121:1012/023549.234974:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=76072][err] [76072:76121:1012/023612.064037:ERROR:google_apis/gcm/engine/connection_handler_impl.cc:404] Received message of invalid type 84
+[pid=76072][err] [76072:76121:1012/023612.064055:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -4
+[pid=76072][err] [76072:76121:1012/023618.223281:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=76072][err] [76072:76121:1012/023705.339351:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=76072][err] [76072:76121:1012/023707.465129:ERROR:google_apis/gcm/engine/connection_handler_impl.cc:404] Received message of invalid type 84
+[pid=76072][err] [76072:76121:1012/023707.465153:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -4
+[pid=76072][err] [76072:76072:1012/023718.469435:ERROR:chrome/browser/ui/views/user_education/impl/browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[pid=76072] <gracefully close start>
+[pid=76072][err] [76072:76072:1012/023755.732689:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote
+browser.newContext: Target page, context or browser has been closed
+    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:221)
+    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:15:1

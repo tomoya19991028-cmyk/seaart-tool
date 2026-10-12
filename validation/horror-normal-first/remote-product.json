@@ -1,0 +1,90 @@
+{
+  "productCommit": "1a8394d19c04ef9f0282fbeb90432e2ad074fed0",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 3915679,
+      "sha256": "3bf2d5c753fb69ad402aa08f32f720a03834679f7b1921dd56973b5ad8d0a33c",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "sw.js",
+      "bytes": 2330,
+      "sha256": "9f58f73967846f9720856d09799754bfcd3ca830155bb3c095fe4d243a0ce7cf",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "src/horror-normal-ui.js",
+      "bytes": 14135,
+      "sha256": "ae9e27ba1cb64f803762d60eec9d5e91e70ec811de5ed24c9bc5ea946fc066a7",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "src/horror-runtime.js",
+      "bytes": 89365,
+      "sha256": "e710fe534c8bef3270b1ed9b1308f9a2d643670d275b98ebe2371f8d99784a32",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "src/horror-foundation.js",
+      "bytes": 10038,
+      "sha256": "a4dc1d2f2d30744a7458724ce393d81c33d4a0df012382458d9ac11ffe678318",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "src/horror-catalog.json",
+      "bytes": 6141,
+      "sha256": "f698fa80f2beacfa4fde632b1bbbe011d27c9136a8b1c4902977af54e1a5efdf",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "src/creature-motif-person.js",
+      "bytes": 27274,
+      "sha256": "663cf75f9f75874d1bdc023785b8c35ea6bcf06725b6bd9367d21588f6afee35",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "scripts/embed-horror.py",
+      "bytes": 2407,
+      "sha256": "f40ba0aa5d64fec76bc4b4cef5402491e22cdb7b331d20f19f397825f1d8b75a",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "scripts/build-integrated.py",
+      "bytes": 941,
+      "sha256": "1f88fd392e7d5bfc55248f0d7cae33c8a383da57d0d08f6b1d832d88f0cd97a9",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "scripts/embed-motif-person.py",
+      "bytes": 667,
+      "sha256": "760fbc6fc3937be3ad0e44b755174553148b28f615f52463729d0ff8140cf92f",
+      "HTTP": 200,
+      "exact": true
+    },
+    {
+      "file": "scripts/integrate-horror.py",
+      "bytes": 8061,
+      "sha256": "89203eecc996be0d2a0408469de3ad3d9d5fa856db33f77dbf945be38971089c",
+      "HTTP": 200,
+      "exact": true
+    }
+  ],
+  "allExact": true
+}

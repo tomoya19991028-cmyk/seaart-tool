@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "id": "N01",
+      "label": "horror tab defaults to normal and reload does not persist display mode",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   manga: undefined,\n+   mode: null,\n+   normal: undefined\n-   manga: 'false',\n-   mode: 'normal',\n-   normal: 'true'\n  }\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:5:364\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:5:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N02",
+      "label": "normal candidate selection is immediate and never opens panel preview",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:6:580\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:6:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N03",
+      "label": "normal candidate deselection and selected-tag removal are immediate",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:7:342\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:7:1",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false
+}

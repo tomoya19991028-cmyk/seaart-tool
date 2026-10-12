@@ -1,0 +1,21 @@
+{
+  "command": [
+    "node",
+    "tests/horror/replay-legacy.cjs"
+  ],
+  "cwd": "/workspace/seaart-normal-first",
+  "startUTC": "2026-10-12T02:37:01.886325+00:00",
+  "gitHEAD": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+  "productSHA256Before": "3bf2d5c753fb69ad402aa08f32f720a03834679f7b1921dd56973b5ad8d0a33c",
+  "testSHA256": "3ddb4aaaf70aaadee1ff4e8d7cd45d1688de0bd1054da19faa80987792ed14ad",
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-integrated/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-normal-first-audit-20261012T021937Z/final/legacy"
+  },
+  "publicOriginTest": false,
+  "physicalDevice": false,
+  "endUTC": "2026-10-12T02:37:55.940526+00:00",
+  "exitCode": 1,
+  "productSHA256After": "3bf2d5c753fb69ad402aa08f32f720a03834679f7b1921dd56973b5ad8d0a33c"
+}

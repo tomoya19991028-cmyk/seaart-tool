@@ -1,0 +1,34 @@
+{
+  "checks": [
+    "unrelated intensity/structure preserve mask review",
+    "unrelated feature preserves review",
+    "pagehide during commit is not a second writer",
+    "double commit rejected",
+    "one receipt Undo",
+    "page preset retains stable IDs",
+    "page preset Undo retains IDs",
+    "incomplete dependency group excluded",
+    "freeze new features OFF and no unrelated candidates",
+    "impact preview pure",
+    "mask never edits original profile",
+    "mask source-specific",
+    "normal disables original masks",
+    "rescue never applies",
+    "real oversized import rejects without writes",
+    "real import cancellation preserves data/catalog/disk",
+    "import pending rejects edits without RAM/disk/Undo change",
+    "import staging rejects edits without RAM/disk/Undo change",
+    "import legacy-import rejects edits without RAM/disk/Undo change",
+    "1000-item save/review/reload retains every item, no count limit"
+  ],
+  "performance": {
+    "saveMs": 1389.5,
+    "review1000Ms": 81.10000000149012,
+    "count": 1010,
+    "workspaceBytes": 625225,
+    "journalBytes": 0,
+    "bundleBytes": 1069594,
+    "journalEstimateBytes": 2371527
+  },
+  "passed": true
+}

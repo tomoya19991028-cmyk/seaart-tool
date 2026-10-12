@@ -1,0 +1,70 @@
+{
+  "tests": [
+    {
+      "id": "N01",
+      "label": "horror tab defaults to normal and reload does not persist display mode",
+      "passed": true,
+      "detail": {
+        "mode": "normal",
+        "normal": "true",
+        "manga": "false"
+      }
+    },
+    {
+      "id": "N02",
+      "label": "normal candidate selection is immediate and never opens panel preview",
+      "passed": true,
+      "detail": {
+        "selected": true,
+        "title": "頭・顔 / 通常画像",
+        "panelSelect": false,
+        "keyboard": false,
+        "undo": 1
+      }
+    },
+    {
+      "id": "N03",
+      "label": "normal candidate deselection and selected-tag removal are immediate",
+      "passed": false,
+      "error": "locator.uncheck: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#horrorDialogBody').getByLabel('仮面のような顔', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" data-horror-feature=\"horror-feature-mask-face\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:7:325\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:7:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N04",
+      "label": "display-only switches preserve whole data, disk, Undo, drafts and panel IDs",
+      "passed": true,
+      "detail": {
+        "dataAndIDsUnchanged": true,
+        "cards": [
+          {
+            "id": "12",
+            "disabled": true
+          },
+          {
+            "id": "13",
+            "disabled": true
+          },
+          {
+            "id": "14",
+            "disabled": true
+          },
+          {
+            "id": "15",
+            "disabled": true
+          },
+          {
+            "id": "16",
+            "disabled": true
+          },
+          {
+            "id": "17",
+            "disabled": false
+          }
+        ]
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false
+}

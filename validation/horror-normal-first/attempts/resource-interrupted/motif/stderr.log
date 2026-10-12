@@ -1,0 +1,6 @@
+page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "http://127.0.0.1:8765/seaart-normal-first/index.html", waiting until "load"[22m
+
+    at launchPage (/workspace/seaart-normal-first/tests/creature-motif-person.cjs:4:173)
+    at async /workspace/seaart-normal-first/tests/creature-motif-person.cjs:30:105

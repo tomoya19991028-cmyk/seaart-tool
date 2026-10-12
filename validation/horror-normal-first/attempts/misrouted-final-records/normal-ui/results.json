@@ -1,0 +1,43 @@
+{
+  "tests": [
+    {
+      "id": "NUI-360-640",
+      "passed": false,
+      "error": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'enabled')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:73)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-normal-first/tests/normal-first/ui.cjs:2:1601",
+      "pageErrors": []
+    },
+    {
+      "id": "NUI-360-800",
+      "passed": false,
+      "error": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'enabled')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:73)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-normal-first/tests/normal-first/ui.cjs:2:1601",
+      "pageErrors": []
+    },
+    {
+      "id": "NUI-393-640",
+      "passed": false,
+      "error": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'enabled')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:73)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-normal-first/tests/normal-first/ui.cjs:2:1601",
+      "pageErrors": []
+    },
+    {
+      "id": "NUI-393-800",
+      "passed": false,
+      "error": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'enabled')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:73)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-normal-first/tests/normal-first/ui.cjs:2:1601",
+      "pageErrors": []
+    },
+    {
+      "id": "NUI-430-640",
+      "passed": false,
+      "error": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'enabled')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:73)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-normal-first/tests/normal-first/ui.cjs:2:1601",
+      "pageErrors": []
+    },
+    {
+      "id": "NUI-430-800",
+      "passed": false,
+      "error": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'enabled')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:73)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-normal-first/tests/normal-first/ui.cjs:2:1601",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "actualIME": false,
+  "passed": false
+}

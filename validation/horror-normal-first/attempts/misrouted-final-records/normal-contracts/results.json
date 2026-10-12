@@ -1,0 +1,76 @@
+{
+  "tests": [
+    {
+      "id": "N01",
+      "label": "horror tab defaults to normal and reload does not persist display mode",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   manga: undefined,\n+   mode: null,\n+   normal: undefined\n-   manga: 'false',\n-   mode: 'normal',\n-   normal: 'true'\n  }\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:5:364\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:5:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N02",
+      "label": "normal candidate selection is immediate and never opens panel preview",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:6:580\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:6:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N03",
+      "label": "normal candidate deselection and selected-tag removal are immediate",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:7:342\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:7:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N04",
+      "label": "display-only switches preserve whole data, disk, Undo, drafts and panel IDs",
+      "passed": false,
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#horrorMangaMode')\u001b[22m\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:8:479\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:8:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N05",
+      "label": "person1/person2/Creature quick selections stay separate and source profile unchanged",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   a: [],\n+   b: [],\n+   c: []\n-   a: [\n-     'horror-feature-mask-face'\n-   ],\n-   b: [\n-     'horror-feature-long-fingers'\n-   ],\n-   c: [\n-     'horror-feature-gray-skin'\n-   ]\n  }\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:9:1034\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:9:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N06",
+      "label": "normal state suppresses selected tags, optional detail sets intensity/weight, normal generation works",
+      "passed": false,
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#horrorDialogBody').getByRole('button', { name: '輝く目の詳細', exact: true })\u001b[22m\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:10:336\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:10:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N07",
+      "label": "normal state/type/strength/structure use one explicit save without manga preview",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:11:444\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:11:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N08",
+      "label": "meaningful shared manga removal preserves necessary confirmation without panel settings",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '頭・顔 / 基本'\n- '共有する基本設定の変更'\n\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:12:424\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:12:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N09",
+      "label": "normal quick save failure rolls back disk/RAM/Undo and checkbox",
+      "passed": false,
+      "error": "page.evaluate: TypeError: Cannot read properties of null (reading 'checked')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:147)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:13:518\n    at async test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:13:1",
+      "pageErrors": []
+    },
+    {
+      "id": "N10",
+      "label": "stale normal detail and quick selector reject concurrent actor changes",
+      "passed": false,
+      "error": "page.evaluate: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-DA80tx --remote-debugging-pipe --no-startup-window\n<launched> pid=76072\n[pid=76072][err] [76072:76120:1012/023507.261894:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[pid=76072][err] [76072:76120:1012/023507.261998:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76120:1012/023507.262018:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[pid=76072][err] [76072:76120:1012/023507.262027:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[pid=76072][err] [76072:76120:1012/023507.262032:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76120:1012/023507.444324:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76072:1012/023507.539498:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76072:1012/023507.539573:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76120:1012/023507.543490:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76120:1012/023507.543530:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76072:1012/023507.555963:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76120:1012/023507.558369:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76120:1012/023507.564047:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[pid=76072][err] [76072:76120:1012/023507.564102:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[pid=76072][err] [76072:76072:1012/023507.564160:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76072:1012/023507.564181:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76120:1012/023507.564227:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76072:1012/023507.565111:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76072:1012/023507.571160:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: \n[pid=76072][err] [76072:76072:1012/023507.571185:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76120:1012/023507.571299:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76072:1012/023507.581964:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76120:1012/023507.617046:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[pid=76072][err] [76072:76072:1012/023507.639364:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[pid=76072][err] [76072:76121:1012/023549.127926:ERROR:google_apis/gcm/engine/connection_handler_impl.cc:404] Received message of invalid type 84\n[pid=76072][err] [76072:76121:1012/023549.127949:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -4\n[pid=76072][err] [76072:76121:1012/023549.234974:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n[pid=76072][err] [76072:76121:1012/023612.064037:ERROR:google_apis/gcm/engine/connection_handler_impl.cc:404] Received message of invalid type 84\n[pid=76072][err] [76072:76121:1012/023612.064055:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -4\n[pid=76072][err] [76072:76121:1012/023618.223281:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n[pid=76072][err] [76072:76121:1012/023705.339351:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n[pid=76072][err] [76072:76121:1012/023707.465129:ERROR:google_apis/gcm/engine/connection_handler_impl.cc:404] Received message of invalid type 84\n[pid=76072][err] [76072:76121:1012/023707.465153:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -4\n[pid=76072][err] [76072:76072:1012/023718.469435:ERROR:chrome/browser/ui/views/user_education/impl/browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.\n[pid=76072] <gracefully close start>\n[pid=76072][err] [76072:76072:1012/023755.732689:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote\n    at test (/workspace/seaart-normal-first/tests/normal-first/contracts.cjs:4:460)\n    at async /workspace/seaart-normal-first/tests/normal-first/contracts.cjs:14:1",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

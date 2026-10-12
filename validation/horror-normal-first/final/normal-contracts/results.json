@@ -1,0 +1,240 @@
+{
+  "tests": [
+    {
+      "id": "N01",
+      "label": "horror tab defaults to normal and reload does not persist display mode",
+      "passed": true,
+      "detail": {
+        "mode": "normal",
+        "normal": "true",
+        "manga": "false"
+      }
+    },
+    {
+      "id": "N02",
+      "label": "normal candidate selection is immediate and never opens panel preview",
+      "passed": true,
+      "detail": {
+        "selected": true,
+        "title": "頭・顔 / 通常画像",
+        "panelSelect": false,
+        "keyboard": false,
+        "undo": 1
+      }
+    },
+    {
+      "id": "N03",
+      "label": "normal candidate deselection and selected-tag removal are immediate",
+      "passed": true,
+      "detail": {
+        "selectedTagRemoval": true
+      }
+    },
+    {
+      "id": "N04",
+      "label": "display-only switches preserve whole data, disk, Undo, drafts and panel IDs",
+      "passed": true,
+      "detail": {
+        "dataAndIDsUnchanged": true,
+        "cards": [
+          {
+            "id": "12",
+            "disabled": true
+          },
+          {
+            "id": "13",
+            "disabled": true
+          },
+          {
+            "id": "14",
+            "disabled": true
+          },
+          {
+            "id": "15",
+            "disabled": true
+          },
+          {
+            "id": "16",
+            "disabled": true
+          },
+          {
+            "id": "17",
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05",
+      "label": "person1/person2/Creature quick selections stay separate and source profile unchanged",
+      "passed": true,
+      "detail": {
+        "a": [
+          "horror-feature-mask-face"
+        ],
+        "b": [
+          "horror-feature-long-fingers"
+        ],
+        "c": [
+          "horror-feature-gray-skin"
+        ]
+      }
+    },
+    {
+      "id": "N06",
+      "label": "normal state suppresses selected tags, optional detail sets intensity/weight, normal generation works",
+      "passed": true,
+      "detail": {
+        "on": true,
+        "off": true,
+        "selected": true
+      }
+    },
+    {
+      "id": "N07",
+      "label": "normal state/type/strength/structure use one explicit save without manga preview",
+      "passed": true,
+      "detail": {
+        "state": "complete",
+        "intensity": "high",
+        "wings": "present",
+        "mode": "normal"
+      }
+    },
+    {
+      "id": "N08",
+      "label": "meaningful shared manga removal preserves necessary confirmation without panel settings",
+      "passed": true,
+      "detail": {
+        "necessaryConfirmation": true,
+        "noPanelDialog": true
+      }
+    },
+    {
+      "id": "N09",
+      "label": "normal quick save failure rolls back disk/RAM/Undo and checkbox",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "unchecked": true,
+        "error": true
+      }
+    },
+    {
+      "id": "N10",
+      "label": "stale normal detail and quick selector reject concurrent actor changes",
+      "passed": true,
+      "detail": {
+        "staleQuickRejected": true,
+        "staleDetailRejected": true
+      }
+    },
+    {
+      "id": "N11",
+      "label": "manga mode retains buffered feature preview, cancel, panel overrides and data on return",
+      "passed": true,
+      "detail": {
+        "mangaCancel": true,
+        "localOverrideKept": true
+      }
+    },
+    {
+      "id": "N12",
+      "label": "explicit manga-editor entry opens the same selected stable panel in manga mode",
+      "passed": true,
+      "detail": {
+        "mode": "manga",
+        "title": "コマの怪異設定",
+        "selected": "panel-8620b7d0-962e-4e97-a895-83d13ce3ab31",
+        "id": "panel-8620b7d0-962e-4e97-a895-83d13ce3ab31",
+        "ids": [
+          "panel-da0a441c-092e-4294-acc2-5b7304d86167",
+          "panel-8620b7d0-962e-4e97-a895-83d13ce3ab31",
+          "panel-78518d06-d8cf-458d-9824-9bfae7f40100",
+          "panel-bee8fa43-b879-4a83-a5bf-d393d78ddc79",
+          "panel-2ff45871-980e-4beb-b020-d615b43d8303",
+          "panel-61a465a9-c0e4-4651-a378-0722b7eb638b"
+        ]
+      }
+    },
+    {
+      "id": "N13",
+      "label": "normal close retains immediate selection and normal Undo restores one transaction",
+      "passed": true,
+      "detail": {
+        "closeRetainsSelection": true,
+        "oneUndo": true
+      }
+    },
+    {
+      "id": "N14",
+      "label": "normal quick data reloads, mode remains transient and JSON has no display-mode field",
+      "passed": true,
+      "detail": {
+        "reload": true,
+        "schemaUnchanged": true
+      }
+    },
+    {
+      "id": "N15",
+      "label": "opening normal feature selector before first setting does not create actor or manga IDs",
+      "passed": true,
+      "detail": {
+        "unchanged": true,
+        "actor": false,
+        "manga": false
+      }
+    },
+    {
+      "id": "N16",
+      "label": "actual prior integrated v5 data loads with actor, workspace and stable IDs unchanged",
+      "passed": true,
+      "detail": {
+        "state": true,
+        "workspace": true,
+        "manga": true,
+        "keys": true,
+        "mode": "normal"
+      }
+    },
+    {
+      "id": "N17",
+      "label": "actual second-tab save blocks stale normal quick edit and keeps winner draft",
+      "passed": true,
+      "detail": {
+        "staleEditRejected": true,
+        "winnerKept": true
+      }
+    },
+    {
+      "id": "N18",
+      "label": "deleted target while selector open is rejected without uncaught error or save",
+      "passed": true,
+      "detail": {
+        "missingOwnerSafe": true
+      }
+    },
+    {
+      "id": "N19",
+      "label": "new source-feature conflict keeps a normal confirmation and cancel is non-destructive",
+      "passed": true,
+      "detail": {
+        "conflictConfirmationKept": true,
+        "noMangaSettings": true
+      }
+    },
+    {
+      "id": "N20",
+      "label": "reopening tab resets display to normal without changing stored manga data",
+      "passed": true,
+      "detail": {
+        "normalOnEntry": true,
+        "mangaRetained": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

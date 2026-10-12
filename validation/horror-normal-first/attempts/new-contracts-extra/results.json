@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "id": "N15",
+      "label": "opening normal feature selector before first setting does not create actor or manga IDs",
+      "passed": true,
+      "detail": {
+        "unchanged": true,
+        "actor": false,
+        "manga": false
+      }
+    },
+    {
+      "id": "N16",
+      "label": "actual prior integrated v5 data loads with actor, workspace and stable IDs unchanged",
+      "passed": true,
+      "detail": {
+        "state": true,
+        "workspace": true,
+        "manga": true,
+        "keys": true,
+        "mode": "normal"
+      }
+    },
+    {
+      "id": "N17",
+      "label": "actual second-tab save blocks stale normal quick edit and keeps winner draft",
+      "passed": true,
+      "detail": {
+        "staleEditRejected": true,
+        "winnerKept": true
+      }
+    },
+    {
+      "id": "N18",
+      "label": "deleted target while selector open is rejected without uncaught error or save",
+      "passed": true,
+      "detail": {
+        "missingOwnerSafe": true
+      }
+    },
+    {
+      "id": "N19",
+      "label": "new source-feature conflict keeps a normal confirmation and cancel is non-destructive",
+      "passed": true,
+      "detail": {
+        "conflictConfirmationKept": true,
+        "noMangaSettings": true
+      }
+    },
+    {
+      "id": "N20",
+      "label": "reopening tab resets display to normal without changing stored manga data",
+      "passed": true,
+      "detail": {
+        "normalOnEntry": true,
+        "mangaRetained": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

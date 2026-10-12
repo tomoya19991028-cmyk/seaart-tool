@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "label": "initial horror cache installed",
+      "passed": true
+    },
+    {
+      "label": "old tab never forced reload and update notice displayed",
+      "passed": true
+    }
+  ],
+  "publicOrigin": false,
+  "physicalDevice": false,
+  "passed": false,
+  "error": "page.goto: net::ERR_ABORTED at http://127.0.0.1:8786/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8786/\", waiting until \"load\"\u001b[22m\n\n    at /workspace/seaart-normal-first/tests/integration/pwa.cjs:4:2668"
+}

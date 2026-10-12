@@ -1,0 +1,321 @@
+{
+  "alternativeTests": true,
+  "originalTestsRecovered": false,
+  "tests": [
+    {
+      "id": "M01",
+      "label": "approved mapping counts, IDs, Japanese names and English values match immutable report",
+      "passed": true,
+      "detail": {
+        "outfit": 65,
+        "upper": 34,
+        "lower": 25,
+        "feet": 17,
+        "legwear": 9,
+        "bodyFeatures": 20,
+        "accessory": 28
+      }
+    },
+    {
+      "id": "M02",
+      "label": "outfit every approved candidate: plan and real reimport preserve UUID/source/denied",
+      "passed": false,
+      "error": "page.evaluate: Target crashed \n    at /workspace/seaart-normal-first/tests/integration/motif-round2-alternative.cjs:8:255\n    at test (/workspace/seaart-normal-first/tests/integration/motif-round2-alternative.cjs:6:494)\n    at async /workspace/seaart-normal-first/tests/integration/motif-round2-alternative.cjs:8:100",
+      "pageErrors": []
+    },
+    {
+      "id": "M03",
+      "label": "upper every approved candidate: plan and real reimport preserve UUID/source/denied",
+      "passed": true,
+      "detail": {
+        "field": "upper",
+        "count": 34,
+        "values": [
+          "white blouse",
+          "shirt",
+          "jacket",
+          "hoodie",
+          "sweater",
+          "robe",
+          "polo shirt",
+          "denim shirt",
+          "striped shirt",
+          "oversized sweater",
+          "cardigan",
+          "turtleneck sweater",
+          "vest",
+          "waistcoat",
+          "long-sleeved blouse",
+          "kimono top",
+          "tailored blazer",
+          "silk blouse",
+          "dress shirt",
+          "formal waistcoat",
+          "embroidered jacket",
+          "chainmail shirt",
+          "ceremonial robes",
+          "mage cloak",
+          "armored jacket",
+          "military coat",
+          "high-collared tunic",
+          "fur-lined cloak",
+          "t-shirt",
+          "blouse",
+          "denim jacket",
+          "trench coat",
+          "puffer jacket",
+          "leather jacket"
+        ],
+        "sourceUnchanged": true,
+        "metadataUnchanged": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "M04",
+      "label": "lower every approved candidate: plan and real reimport preserve UUID/source/denied",
+      "passed": true,
+      "detail": {
+        "field": "lower",
+        "count": 25,
+        "values": [
+          "long skirt",
+          "trousers",
+          "shorts",
+          "leggings",
+          "hakama pants",
+          "pleated skirt",
+          "flared skirt",
+          "pencil skirt",
+          "layered skirt",
+          "asymmetrical skirt",
+          "long dress skirt",
+          "wide-leg pants",
+          "skinny jeans",
+          "cargo pants",
+          "leather pants",
+          "denim shorts",
+          "culottes",
+          "track pants",
+          "slacks",
+          "armored skirt",
+          "leather trousers",
+          "tabard",
+          "split skirt",
+          "battle kilt",
+          "jeans"
+        ],
+        "sourceUnchanged": true,
+        "metadataUnchanged": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "M05",
+      "label": "feet every approved candidate: plan and real reimport preserve UUID/source/denied",
+      "passed": true,
+      "detail": {
+        "field": "feet",
+        "count": 17,
+        "values": [
+          "boots",
+          "high heels",
+          "sneakers",
+          "sandals",
+          "ankle boots",
+          "knee-high boots",
+          "combat boots",
+          "platform boots",
+          "loafers",
+          "ballet flats",
+          "dress shoes",
+          "Mary Jane shoes",
+          "geta sandals",
+          "wooden clogs",
+          "armored boots",
+          "greaves",
+          "winged sandals"
+        ],
+        "sourceUnchanged": true,
+        "metadataUnchanged": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "M06",
+      "label": "legwear every approved candidate: plan and real reimport preserve UUID/source/denied",
+      "passed": true,
+      "detail": {
+        "field": "legwear",
+        "count": 9,
+        "values": [
+          "thighhigh socks",
+          "knee socks",
+          "tights",
+          "stockings",
+          "leggings",
+          "leg armor",
+          "ankle socks",
+          "patterned tights",
+          "leg warmers"
+        ],
+        "sourceUnchanged": true,
+        "metadataUnchanged": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "M07",
+      "label": "bodyFeatures every approved candidate: plan and real reimport preserve UUID/source/denied",
+      "passed": true,
+      "detail": {
+        "field": "bodyFeatures",
+        "count": 20,
+        "values": [
+          "cat ears",
+          "fox ears",
+          "wolf ears",
+          "dog ears",
+          "rabbit ears",
+          "bear ears",
+          "mouse ears",
+          "deer ears",
+          "cow ears",
+          "horse ears",
+          "pointy ears",
+          "long pointy ears",
+          "demon horns",
+          "dragon horns",
+          "goat horns",
+          "bull horns",
+          "antlers",
+          "single horn",
+          "two horns",
+          "multiple horns"
+        ],
+        "sourceUnchanged": true,
+        "metadataUnchanged": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "M08",
+      "label": "accessory every approved candidate: plan and real reimport preserve UUID/source/denied",
+      "passed": true,
+      "detail": {
+        "field": "accessory",
+        "count": 28,
+        "values": [
+          "earrings",
+          "necklace",
+          "choker",
+          "cape",
+          "belt",
+          "brooch",
+          "eyepatch",
+          "scarf",
+          "pendant",
+          "locket",
+          "pearl necklace",
+          "gold earrings",
+          "silver earrings",
+          "gemstone brooch",
+          "armlet",
+          "anklet",
+          "amulet",
+          "magic talisman",
+          "feathered cape",
+          "ornate epaulettes",
+          "decorative chains",
+          "apron",
+          "bracelets",
+          "rings",
+          "jeweled ring",
+          "wristwatch",
+          "bangles",
+          "hand jewelry"
+        ],
+        "sourceUnchanged": true,
+        "metadataUnchanged": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "M09",
+      "label": "selected group ON and all other groups OFF preserve their prior fields",
+      "passed": true,
+      "detail": {
+        "onlyUpperChanged": true
+      }
+    },
+    {
+      "id": "M10",
+      "label": "colors OFF preserve existing color, ON copies only selected field",
+      "passed": true,
+      "detail": {
+        "off": true,
+        "color": {
+          "primary": "blue",
+          "secondary": "red"
+        },
+        "upper": null
+      }
+    },
+    {
+      "id": "M11",
+      "label": "hidden, edited, duplicate, unknown, owner-specific and free-text candidates rejected with reasons",
+      "passed": true,
+      "detail": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "M12",
+      "label": "preview before/after, changing ON/OFF resets confirmation, cancel leaves data",
+      "passed": true,
+      "detail": {
+        "arrow": true,
+        "old": true,
+        "next": true,
+        "reset": true,
+        "off": true,
+        "cancel": true
+      }
+    },
+    {
+      "id": "M13",
+      "label": "ordinary person overwrite, edited target, stale source, no-choice and colors-only rejected",
+      "passed": true,
+      "detail": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "M14",
+      "label": "round-2 fulltext equals saved round-2 product and independent manual profile, OFF/unset",
+      "passed": true,
+      "detail": {
+        "normal": 21,
+        "manga": 21,
+        "panels": 42,
+        "referenceEqual": true,
+        "manualEqual": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "failed": [
+    "M02"
+  ]
+}

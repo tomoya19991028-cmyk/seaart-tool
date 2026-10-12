@@ -1,0 +1,255 @@
+{
+  "tests": [
+    {
+      "id": "Z01",
+      "label": "creation and reimport refuse pending JSON without mutation",
+      "passed": true,
+      "detail": {
+        "createRejected": true,
+        "reimportRejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "Z02",
+      "label": "reimport invalidates confirmed original-appearance dependency and stale commit plan",
+      "passed": true,
+      "detail": {
+        "status": "recheck",
+        "rejected": true,
+        "failedPlanUnchanged": true,
+        "uuid": true,
+        "metadata": true,
+        "source": true,
+        "applied": true
+      }
+    },
+    {
+      "id": "Z03",
+      "label": "reimport rollback at five keys, render, and stale preview preserves complete state",
+      "passed": true,
+      "detail": [
+        {
+          "key": "settings",
+          "rejected": true,
+          "unchanged": true
+        },
+        {
+          "key": "working",
+          "rejected": true,
+          "unchanged": true
+        },
+        {
+          "key": "history",
+          "rejected": true,
+          "unchanged": true
+        },
+        {
+          "key": "marker",
+          "rejected": true,
+          "unchanged": true
+        },
+        {
+          "key": "journal",
+          "rejected": true,
+          "unchanged": true
+        },
+        {
+          "key": "render",
+          "rejected": true,
+          "unchanged": true
+        },
+        {
+          "key": "stale",
+          "rejected": true,
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "Z04",
+      "label": "creation save failure retains horror drafts, trash, deletion log, and Creature",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true,
+        "injected": true
+      }
+    },
+    {
+      "id": "Z05",
+      "label": "receipt, reimport, ordinary Undo, and draft Undo remain independent",
+      "passed": true,
+      "detail": {
+        "restored": true,
+        "workspaceUnchanged": true,
+        "onePop": true,
+        "profileStable": true,
+        "receiptKept": true,
+        "receiptCleared": true,
+        "uuid": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "Z06",
+      "label": "twelve reimports cap normal Undo at ten and remove exactly one",
+      "passed": true,
+      "detail": {
+        "before": 10,
+        "after": 9,
+        "prefixSame": true,
+        "uuid": true
+      }
+    },
+    {
+      "id": "Z07",
+      "label": "partial commit then reimport preserves applied settings and rechecks remaining items",
+      "passed": true,
+      "detail": {
+        "settings": true,
+        "receipt": true,
+        "remaining": "recheck"
+      }
+    },
+    {
+      "id": "Z08",
+      "label": "reimport during native PNG decode and panel move maintains stable ID",
+      "passed": true,
+      "detail": {
+        "target": 2,
+        "image": 2,
+        "pixel": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "uuid": true,
+        "draft": true
+      }
+    },
+    {
+      "id": "Z09",
+      "label": "named save, history restoration, reload retain both features and independent workspace",
+      "passed": true,
+      "detail": {
+        "profile": true,
+        "workspace": true,
+        "uuid": true,
+        "denied": true,
+        "undo": 0
+      }
+    },
+    {
+      "id": "Z10",
+      "label": "real round-2 v4 writer migrates working, named save, history to v5 without touching old keys",
+      "passed": true,
+      "detail": {
+        "uuid": true,
+        "profile": true,
+        "version": 5,
+        "denied": true,
+        "named": true,
+        "history": true,
+        "oldBytes": true
+      }
+    },
+    {
+      "id": "Z11",
+      "label": "real JSON read pending rejects reimport and creation before confirmation",
+      "passed": true,
+      "detail": {
+        "reimport": true,
+        "create": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "Z12",
+      "label": "combined v5 JSON imports actor settings and merges selected draft and trash",
+      "passed": true,
+      "detail": {
+        "profile": true,
+        "horror": true,
+        "draft": true,
+        "trash": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "Z13",
+      "label": "stale second tab cannot reimport or overwrite winning draft",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "diskUnchanged": true
+      }
+    },
+    {
+      "id": "Z14",
+      "label": "reimport save failure followed by normal Undo keeps profile UUID and workspace",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "profile": true,
+        "workspace": true,
+        "count": true,
+        "uuid": true
+      }
+    },
+    {
+      "id": "Z15",
+      "label": "motif-person horror does not change source or another person, normal panel suppresses tags",
+      "passed": true,
+      "detail": {
+        "a": true,
+        "b": true,
+        "normal": true,
+        "source": true,
+        "sourceHorror": true,
+        "denied": true
+      }
+    },
+    {
+      "id": "Z16",
+      "label": "reimport after original-feature exclude keeps policies and masks updated source tags",
+      "passed": true,
+      "detail": {
+        "policies": true,
+        "removal": true,
+        "source": true,
+        "stored": true
+      }
+    },
+    {
+      "id": "Z17",
+      "label": "reimport rollback failure retains journal and original RAM, recovery restores complete v5",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "ramRestored": true,
+        "journalRetained": true,
+        "recoveryWholeBundle": true
+      }
+    },
+    {
+      "id": "Z18",
+      "label": "reimport retains orphan, rescue pending, trash and deletion records after reload",
+      "passed": true,
+      "detail": {
+        "workspace": true,
+        "uuid": true,
+        "metadata": true,
+        "orphan": true,
+        "pending": true,
+        "trash": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "alternativeOriginalTests": false,
+  "passed": true,
+  "failed": []
+}

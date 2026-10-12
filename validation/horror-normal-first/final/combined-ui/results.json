@@ -1,0 +1,662 @@
+{
+  "tests": [
+    {
+      "id": "UI-360-640",
+      "passed": true,
+      "detail": {
+        "dialog": {
+          "left": 7.203125,
+          "right": 352.796875,
+          "top": 24,
+          "bottom": 640,
+          "height": 616
+        },
+        "body": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 108,
+          "bottom": 570,
+          "height": 462
+        },
+        "buttons": [
+          {
+            "left": 278.71875,
+            "right": 339.796875,
+            "top": 37,
+            "bottom": 81,
+            "height": 44
+          },
+          {
+            "left": 184,
+            "right": 339.796875,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 20.203125,
+            "right": 176,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 184,
+            "right": 339.796875,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "choices": [
+          {
+            "key": "hairColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "eyeColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "hairStyle",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "outfit",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "upper",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "lower",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "feet",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "legwear",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "bodyFeatures",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "accessory",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "clothingColors",
+            "enabled": true,
+            "checked": true
+          }
+        ],
+        "bodyScroll": true,
+        "documentOverflow": false
+      }
+    },
+    {
+      "id": "UI-360-800",
+      "passed": true,
+      "detail": {
+        "dialog": {
+          "left": 7.203125,
+          "right": 352.796875,
+          "top": 60,
+          "bottom": 800,
+          "height": 740
+        },
+        "body": {
+          "left": 8.203125,
+          "right": 351.796875,
+          "top": 144,
+          "bottom": 730,
+          "height": 586
+        },
+        "buttons": [
+          {
+            "left": 278.71875,
+            "right": 339.796875,
+            "top": 73,
+            "bottom": 117,
+            "height": 44
+          },
+          {
+            "left": 184,
+            "right": 339.796875,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 20.203125,
+            "right": 176,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 184,
+            "right": 339.796875,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "choices": [
+          {
+            "key": "hairColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "eyeColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "hairStyle",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "outfit",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "upper",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "lower",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "feet",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "legwear",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "bodyFeatures",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "accessory",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "clothingColors",
+            "enabled": true,
+            "checked": true
+          }
+        ],
+        "bodyScroll": true,
+        "documentOverflow": false
+      }
+    },
+    {
+      "id": "UI-393-640",
+      "passed": true,
+      "detail": {
+        "dialog": {
+          "left": 7.859375,
+          "right": 385.125,
+          "top": 24,
+          "bottom": 640,
+          "height": 616
+        },
+        "body": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 108,
+          "bottom": 570,
+          "height": 462
+        },
+        "buttons": [
+          {
+            "left": 311.046875,
+            "right": 372.125,
+            "top": 37,
+            "bottom": 81,
+            "height": 44
+          },
+          {
+            "left": 200.484375,
+            "right": 372.125,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 20.859375,
+            "right": 192.484375,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 200.484375,
+            "right": 372.125,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "choices": [
+          {
+            "key": "hairColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "eyeColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "hairStyle",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "outfit",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "upper",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "lower",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "feet",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "legwear",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "bodyFeatures",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "accessory",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "clothingColors",
+            "enabled": true,
+            "checked": true
+          }
+        ],
+        "bodyScroll": true,
+        "documentOverflow": false
+      }
+    },
+    {
+      "id": "UI-393-800",
+      "passed": true,
+      "detail": {
+        "dialog": {
+          "left": 7.859375,
+          "right": 385.125,
+          "top": 60,
+          "bottom": 800,
+          "height": 740
+        },
+        "body": {
+          "left": 8.859375,
+          "right": 384.125,
+          "top": 144,
+          "bottom": 730,
+          "height": 586
+        },
+        "buttons": [
+          {
+            "left": 311.046875,
+            "right": 372.125,
+            "top": 73,
+            "bottom": 117,
+            "height": 44
+          },
+          {
+            "left": 200.484375,
+            "right": 372.125,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 20.859375,
+            "right": 192.484375,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 200.484375,
+            "right": 372.125,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "choices": [
+          {
+            "key": "hairColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "eyeColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "hairStyle",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "outfit",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "upper",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "lower",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "feet",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "legwear",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "bodyFeatures",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "accessory",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "clothingColors",
+            "enabled": true,
+            "checked": true
+          }
+        ],
+        "bodyScroll": true,
+        "documentOverflow": false
+      }
+    },
+    {
+      "id": "UI-430-640",
+      "passed": true,
+      "detail": {
+        "dialog": {
+          "left": 8.59375,
+          "right": 421.390625,
+          "top": 24,
+          "bottom": 640,
+          "height": 616
+        },
+        "body": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 108,
+          "bottom": 570,
+          "height": 462
+        },
+        "buttons": [
+          {
+            "left": 347.3125,
+            "right": 408.390625,
+            "top": 37,
+            "bottom": 81,
+            "height": 44
+          },
+          {
+            "left": 218.984375,
+            "right": 408.390625,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 21.59375,
+            "right": 210.984375,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 218.984375,
+            "right": 408.390625,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "choices": [
+          {
+            "key": "hairColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "eyeColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "hairStyle",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "outfit",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "upper",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "lower",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "feet",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "legwear",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "bodyFeatures",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "accessory",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "clothingColors",
+            "enabled": true,
+            "checked": true
+          }
+        ],
+        "bodyScroll": true,
+        "documentOverflow": false
+      }
+    },
+    {
+      "id": "UI-430-800",
+      "passed": true,
+      "detail": {
+        "dialog": {
+          "left": 8.59375,
+          "right": 421.390625,
+          "top": 60,
+          "bottom": 800,
+          "height": 740
+        },
+        "body": {
+          "left": 9.59375,
+          "right": 420.390625,
+          "top": 144,
+          "bottom": 730,
+          "height": 586
+        },
+        "buttons": [
+          {
+            "left": 347.3125,
+            "right": 408.390625,
+            "top": 73,
+            "bottom": 117,
+            "height": 44
+          },
+          {
+            "left": 218.984375,
+            "right": 408.390625,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 21.59375,
+            "right": 210.984375,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 218.984375,
+            "right": 408.390625,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "choices": [
+          {
+            "key": "hairColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "eyeColor",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "hairStyle",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "outfit",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "upper",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "lower",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "feet",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "legwear",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "bodyFeatures",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "accessory",
+            "enabled": true,
+            "checked": true
+          },
+          {
+            "key": "clothingColors",
+            "enabled": true,
+            "checked": true
+          }
+        ],
+        "bodyScroll": true,
+        "documentOverflow": false
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "actualIME": false,
+  "publicOrigin": false,
+  "passed": true
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "node",
+    "tests/creature-motif-person-boundaries.cjs"
+  ],
+  "cwd": "/workspace/seaart-normal-first",
+  "startUTC": "2026-10-12T02:50:48.280787+00:00",
+  "gitHEAD": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+  "productSHA256Before": "3bf2d5c753fb69ad402aa08f32f720a03834679f7b1921dd56973b5ad8d0a33c",
+  "testSHA256": "9e27d6bb3e2873a0f16e7667409165f15b501ede6a0891427a29ba413cf5c835",
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-normal-first/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-normal-first-audit-20261012T021937Z/final/motif-boundaries"
+  },
+  "publicOriginTest": false,
+  "physicalDevice": false,
+  "endUTC": "2026-10-12T02:51:31.564001+00:00",
+  "exitCode": 0,
+  "productSHA256After": "3bf2d5c753fb69ad402aa08f32f720a03834679f7b1921dd56973b5ad8d0a33c"
+}

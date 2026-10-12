@@ -1,0 +1,6 @@
+page.reload: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for navigation until "load"[22m
+[2m    - navigated to "http://127.0.0.1:8765/seaart-normal-first/index.html"[22m
+
+    at /workspace/seaart-normal-first/tests/creature-motif-person-boundaries.cjs:12:10

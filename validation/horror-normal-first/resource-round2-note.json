@@ -1,0 +1,7 @@
+{
+  "case": "M02",
+  "observedFailure": "Target crashed under the earlier high-parallel memory incident",
+  "productCodeChanged": false,
+  "action": "Full M01-M14 rerun under bounded concurrency",
+  "oldRecordPreserved": true
+}

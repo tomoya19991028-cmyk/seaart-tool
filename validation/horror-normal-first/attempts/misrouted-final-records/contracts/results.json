@@ -1,0 +1,115 @@
+{
+  "tests": [
+    {
+      "id": "T02",
+      "passed": true,
+      "assertions": 2,
+      "detail": "normal full text equal"
+    },
+    {
+      "id": "T03",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T04",
+      "passed": true,
+      "assertions": 5
+    },
+    {
+      "id": "T05",
+      "passed": true,
+      "assertions": 5
+    },
+    {
+      "id": "T06",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T07",
+      "passed": true,
+      "assertions": 2
+    },
+    {
+      "id": "T08",
+      "passed": true,
+      "assertions": 25,
+      "detail": [
+        {
+          "patch": {
+            "state": "normal"
+          },
+          "items": 6,
+          "equal": true
+        },
+        {
+          "patch": {
+            "structure": {
+              "wings": "absent",
+              "horns": "unset",
+              "tail": "unset"
+            }
+          },
+          "items": 6,
+          "equal": true
+        },
+        {
+          "patch": {
+            "originalFeaturePolicies": {
+              "detail:skinColor:pale skin": {
+                "mode": "exclude"
+              }
+            }
+          },
+          "items": 6,
+          "equal": true
+        },
+        {
+          "patch": {
+            "features": {
+              "horror-feature-glowing-eyes": {
+                "enabled": true,
+                "weight": 1.3,
+                "parameters": {
+                  "intensity": "inherit"
+                }
+              },
+              "horror-feature-long-fingers": {
+                "enabled": true,
+                "weight": 1.2,
+                "parameters": {}
+              }
+            }
+          },
+          "items": 18,
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "passed": true,
+      "assertions": 4
+    },
+    {
+      "id": "T10",
+      "passed": true,
+      "assertions": 3
+    },
+    {
+      "id": "T11",
+      "passed": true,
+      "assertions": 0,
+      "detail": "real pagehide/reload"
+    },
+    {
+      "id": "T12",
+      "passed": true,
+      "assertions": 5
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

@@ -1,0 +1,15 @@
+{
+  "memoryLimitBytes": 8589934592,
+  "memoryEvents": "low 0\nhigh 0\nmax 2233\noom 39\noom_kill 2\noom_group_kill 0\n",
+  "failedCase": "T08 Target crashed",
+  "interruptedRunners": [
+    "contracts",
+    "motif",
+    "ui",
+    "integration",
+    "prompts",
+    "combined-pwa"
+  ],
+  "reason": "8 GiB cgroup limit with observed oom_kill; rerun full affected runners with fewer browsers",
+  "sourceChanged": false
+}

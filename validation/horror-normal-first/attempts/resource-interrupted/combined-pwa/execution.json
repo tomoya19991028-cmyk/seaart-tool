@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "tests/normal-first/replay.cjs",
+    "tests/integration/pwa.cjs"
+  ],
+  "cwd": "/workspace/seaart-normal-first",
+  "startUTC": "2026-10-12T02:41:43.921262+00:00",
+  "gitHEAD": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+  "productSHA256Before": "3bf2d5c753fb69ad402aa08f32f720a03834679f7b1921dd56973b5ad8d0a33c",
+  "testSHA256": "a5313fb8b0bd329b1dd22ea9040866e66f0598e9f946335d560e0d295f5e281c",
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-normal-first/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-normal-first-audit-20261012T021937Z/final/combined-pwa"
+  },
+  "publicOriginTest": false,
+  "physicalDevice": false,
+  "endUTC": "2026-10-12T02:43:19.326985+00:00",
+  "exitCode": 1,
+  "productSHA256After": "3bf2d5c753fb69ad402aa08f32f720a03834679f7b1921dd56973b5ad8d0a33c"
+}

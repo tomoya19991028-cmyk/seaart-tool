@@ -1,0 +1,52 @@
+{
+  "checkedUTC": "2026-10-12T03:04:00.976550+00:00",
+  "refs": {
+    "refs/heads/feat/horror-motif-person-integration": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "refs/heads/feat/horror-normal-first-ui": "1a8394d19c04ef9f0282fbeb90432e2ad074fed0",
+    "refs/heads/main": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52"
+  },
+  "files": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+      "unchanged": true
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+      "unchanged": true
+    },
+    {
+      "path": "/sw.js",
+      "status": 200,
+      "bytes": 2320,
+      "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a",
+      "unchanged": true
+    },
+    {
+      "path": "/manifest.json",
+      "status": 200,
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "unchanged": true
+    }
+  ],
+  "source": {
+    "branch": "main",
+    "path": "/"
+  },
+  "build": {
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "status": "built",
+    "created_at": "2026-10-11T06:08:35Z",
+    "updated_at": "2026-10-11T06:09:16Z"
+  },
+  "mainAndIntegratedBranchUnchanged": true,
+  "publicFourFilesUnchanged": true,
+  "pagesUnchanged": true,
+  "sitesToolsInvoked": false
+}
