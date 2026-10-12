@@ -1,0 +1,230 @@
+{
+  "HEAD": "bf961907fc5c35247cddeb2514809863a6b2e507",
+  "branch": "feat/horror-catalog-manga-story-presets",
+  "refs": {
+    "refs/heads/feat/horror-catalog-manga-story-presets": "bf961907fc5c35247cddeb2514809863a6b2e507",
+    "refs/heads/feat/person-creature-ui-unified-update": "ede9fa02a0088816509b20f216b652c3237d87fd",
+    "refs/heads/main": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52"
+  },
+  "filesCompared": {
+    "index.html": {
+      "bytes": 3997918,
+      "sha256": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7"
+    },
+    "scripts/embed-horror.py": {
+      "bytes": 2929,
+      "sha256": "913cc91088e4f3114b76746c440c74b4be9b2ed11205eaad20bc90a46caa1eca"
+    },
+    "src/horror-catalog.json": {
+      "bytes": 33449,
+      "sha256": "9c403bf434f95bbaa5ebd0d28aee385de24207d08c7fb045955417cb5de890a8"
+    },
+    "src/horror-story-presets.js": {
+      "bytes": 10361,
+      "sha256": "745b66fb819dcd5dc14b2c2658df6c12a55d25f9603d1296492641a329e76eb7"
+    },
+    "src/horror-story-presets.json": {
+      "bytes": 14825,
+      "sha256": "f65134ea794e9f1b7e82d33ad9159cb766e854e8145349e3276192dc16752e3c"
+    },
+    "src/person-creature-unified-ui.js": {
+      "bytes": 31005,
+      "sha256": "07ce000f86f636183e0e9f139bb92ff76bcc93d471cc5bcf94ed7c53303e1b57"
+    },
+    "sw.js": {
+      "bytes": 2336,
+      "sha256": "8054d6420339a732ae7a9d17cc78caed74c87feec595b383bc0de8cd5e48e7c2"
+    },
+    "tests/horror-stories/README.md": {
+      "bytes": 3010,
+      "sha256": "37402157c43da1a71feb8c216912e86eed3ed5fe8ef7b08b05a907d7de6b08f2"
+    },
+    "tests/horror-stories/candidate-additions.json": {
+      "bytes": 30595,
+      "sha256": "181fbb972379c9bd8aa0f9c7063cea0824bdf0edf8df94d742c6d65d093045d1"
+    },
+    "tests/horror-stories/compatibility.cjs": {
+      "bytes": 1960,
+      "sha256": "daf8c165dac506d6d4e6bead47e2e0b58f3cffc29ee91b607523ca71f1733759"
+    },
+    "tests/horror-stories/contracts.cjs": {
+      "bytes": 22208,
+      "sha256": "392bf1f04d9de9be153e483a41ed86b65ac7cae443598a8fe293896c1f8cb2ae"
+    },
+    "tests/horror-stories/pwa.cjs": {
+      "bytes": 4709,
+      "sha256": "3fb1422920836336324187f98e529f611345e18c379eb42bbfebfc8653ea889d"
+    },
+    "tests/horror-stories/quality.py": {
+      "bytes": 2451,
+      "sha256": "ca6c30eed5e7b3f4b85cb463a00db1957aee119213224fa1ba85d70e125aadca"
+    },
+    "tests/horror-stories/replay.cjs": {
+      "bytes": 2501,
+      "sha256": "f597fa578d57b1c96c02db5eec2ad6917de8f891de7db0d7ada423a41153685d"
+    },
+    "tests/horror-stories/run-regressions.py": {
+      "bytes": 5111,
+      "sha256": "cd2ed44acbaf89cc5cc432774a7570e212d32df31110c92ddca5f61a609ff685"
+    },
+    "tests/horror-stories/ui.cjs": {
+      "bytes": 4674,
+      "sha256": "10b6493531cfb4bac6eb56a24c4225fda8af55579fda404e2424ad615a8fb6b3"
+    },
+    "tests/horror-stories/verify-results.py": {
+      "bytes": 2183,
+      "sha256": "8a73f67961b7c0c1b06a3b90660ea3aba91d298a1974909ae0a7fa7552773c60"
+    },
+    "validation/horror-catalog-story-presets/README.md": {
+      "bytes": 2064,
+      "sha256": "555f3f7d1412ebf0f4234ff84c534ddd5c3cf5e15b43c38f97f4d0a0072ea5f0"
+    },
+    "validation/horror-catalog-story-presets/before.json": {
+      "bytes": 1921,
+      "sha256": "121fb42aa45a7932bf37f05485b953e86441b7daffce095fb051ffebc26c8d45"
+    },
+    "validation/horror-catalog-story-presets/development-records.tar.gz": {
+      "bytes": 1008751,
+      "sha256": "ea666fd0c86325e2dea52d64ec00359140ca0884d3d429b5066e66f091e56fb6"
+    },
+    "validation/horror-catalog-story-presets/duplicate-review.json": {
+      "bytes": 634,
+      "sha256": "c62eeb50a8d438ea8bdfeae071cb4dba07649af82f51d50db31ec6a747967f61"
+    },
+    "validation/horror-catalog-story-presets/final-records.tar.gz": {
+      "bytes": 1744381,
+      "sha256": "769586952cf928472280d43734e693b86e8a55b8077a6756bf82a723888c9448"
+    },
+    "validation/horror-catalog-story-presets/horror-tags-360x640.png": {
+      "bytes": 50678,
+      "sha256": "88f7f0c54416eee8fd8bec189b59cab86f8a749f902af881624d2af4622c6758"
+    },
+    "validation/horror-catalog-story-presets/horror-tags-font150.png": {
+      "bytes": 64496,
+      "sha256": "6c3fdc0f36ed8c647835658a8192350ee946aefc4cc91912ebae01e9d2c6c448"
+    },
+    "validation/horror-catalog-story-presets/invariants-5.json": {
+      "bytes": 1579,
+      "sha256": "da88198abdd6730ea9a6545c123977badf2c1e4c3cc6b3e7a1ea45fe124d3352"
+    },
+    "validation/horror-catalog-story-presets/manga-story-393x800.png": {
+      "bytes": 68851,
+      "sha256": "9b154a51a522384a52c2e21341be77e13d07e1090ddaebc75b150abdbdbe1519"
+    },
+    "validation/horror-catalog-story-presets/manga-story-landscape.png": {
+      "bytes": 33596,
+      "sha256": "ce8a81f73fb5e1d148b9ecc80fa906274c68d788736bd40f3d9bcadbd37af5de"
+    },
+    "validation/horror-catalog-story-presets/preset-compatibility-execution.json": {
+      "bytes": 489,
+      "sha256": "560c79eda4471554ff757c91b705116c1b66d147f997bbe390aa58cc1958a224"
+    },
+    "validation/horror-catalog-story-presets/preset-compatibility.json": {
+      "bytes": 197,
+      "sha256": "6d0913ee6e0c7aed5a5d367d5247781828844b5730d1efdc46847e46597d4268"
+    },
+    "validation/horror-catalog-story-presets/protected-before-push.json": {
+      "bytes": 785,
+      "sha256": "13b9704ce98c014043d00446e40a3e03d3a821a595f6fc9ab0772423da695f61"
+    },
+    "validation/horror-catalog-story-presets/quality-5.json": {
+      "bytes": 1427,
+      "sha256": "00370767845ea414f15ea5b1cf857e1978ced7b4cc41aff4cece860972ee86f4"
+    },
+    "validation/horror-catalog-story-presets/quality-final.json": {
+      "bytes": 1427,
+      "sha256": "00370767845ea414f15ea5b1cf857e1978ced7b4cc41aff4cece860972ee86f4"
+    },
+    "validation/horror-catalog-story-presets/summary.json": {
+      "bytes": 1027,
+      "sha256": "e35e09f6a2c56f68903d05e47741788c9d6e2a24e8bd19e7c9452847375ca54e"
+    },
+    "validation/horror-catalog-story-presets/verified-results.json": {
+      "bytes": 10523,
+      "sha256": "38f2bf281ee0951adbf3471f805f7626753f0054a683adb942bb57394452fb25"
+    },
+    "validation/horror-catalog-story-presets/worktrees-protected.json": {
+      "bytes": 1329,
+      "sha256": "651313e05c2e8c9a4f8003b11869b6e751a2da45d0362204ebbd236cba65dd0c"
+    }
+  },
+  "restBlobs": {
+    "index.html": {
+      "bytes": 3997918,
+      "sha256": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7",
+      "blob": "b7c060b120d976237452f00a4c7eec4b4faa6ce3"
+    },
+    "sw.js": {
+      "bytes": 2336,
+      "sha256": "8054d6420339a732ae7a9d17cc78caed74c87feec595b383bc0de8cd5e48e7c2",
+      "blob": "0861b505236885cd7471d376c17c35f8d1fa1e7e"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "blob": "0b9eee56bb9dbb59a1dd36f3ce997200f3e4a451"
+    },
+    "src/horror-catalog.json": {
+      "bytes": 33449,
+      "sha256": "9c403bf434f95bbaa5ebd0d28aee385de24207d08c7fb045955417cb5de890a8",
+      "blob": "500ab4f7fb882c18c4700a398c734a4717577d87"
+    },
+    "src/horror-story-presets.js": {
+      "bytes": 10361,
+      "sha256": "745b66fb819dcd5dc14b2c2658df6c12a55d25f9603d1296492641a329e76eb7",
+      "blob": "3521a9dba8cdd68c01c8b20cd39ef1d726380fd7"
+    },
+    "src/horror-story-presets.json": {
+      "bytes": 14825,
+      "sha256": "f65134ea794e9f1b7e82d33ad9159cb766e854e8145349e3276192dc16752e3c",
+      "blob": "4a069f7ff1985c24df2768f2d0fe4fc1b4d02b95"
+    },
+    "src/person-creature-unified-ui.js": {
+      "bytes": 31005,
+      "sha256": "07ce000f86f636183e0e9f139bb92ff76bcc93d471cc5bcf94ed7c53303e1b57",
+      "blob": "a6f6b019ea48bf44db2fd5091decbca8d9a95ef2"
+    },
+    "scripts/embed-horror.py": {
+      "bytes": 2929,
+      "sha256": "913cc91088e4f3114b76746c440c74b4be9b2ed11205eaad20bc90a46caa1eca",
+      "blob": "07d2969e75424ded33092bfbce728a3119268b16"
+    },
+    "tests/horror-stories/contracts.cjs": {
+      "bytes": 22208,
+      "sha256": "392bf1f04d9de9be153e483a41ed86b65ac7cae443598a8fe293896c1f8cb2ae",
+      "blob": "3d63b28774dbbce0311a3f8d1e2c09715220705c"
+    }
+  },
+  "publicUnchanged": {
+    "/": {
+      "HTTP": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+    },
+    "/index.html": {
+      "HTTP": 200,
+      "bytes": 3775550,
+      "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+    },
+    "/sw.js": {
+      "HTTP": 200,
+      "bytes": 2320,
+      "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a"
+    },
+    "/manifest.json": {
+      "HTTP": 200,
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  },
+  "pages": {
+    "build_type": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "commit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "status": "built"
+  },
+  "protectedWorktreesUnchanged": true
+}
