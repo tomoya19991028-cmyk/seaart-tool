@@ -1,0 +1,555 @@
+{
+  "baseHEAD": "cf0336d03e3edf104fdaa911b9bc568a3609bf50",
+  "branch": "feat/horror-auto-features-mobile-ui",
+  "productCommit": "c583cb529ae54b3a6db5d1a08476de8be74dee69",
+  "functionalAndRegression": {
+    "runnerCount": 41,
+    "passed": 556,
+    "failed": 0,
+    "counts": {
+      "auto-shared-prompt": 1,
+      "auto-inherited": 2,
+      "auto-shared-ui": 1,
+      "auto-fixed": 3,
+      "auto-pwa": 7,
+      "auto-ui": 12,
+      "auto-contracts": 31,
+      "auto-compatibility": 1,
+      "story-pwa": 6,
+      "unified-compatibility": 8,
+      "unified-pwa": 6,
+      "story-contracts": 29,
+      "story-ui": 12,
+      "unified-ui": 12,
+      "unified-contracts": 24,
+      "card-pwa": 6,
+      "card-contracts": 19,
+      "card-persistence": 4,
+      "card-ui": 12,
+      "normal-ui": 6,
+      "normal-pwa": 5,
+      "faults": 14,
+      "normal-contracts": 20,
+      "legacy": 21,
+      "boundaries": 20,
+      "r1": 49,
+      "motif-boundaries": 20,
+      "contracts": 25,
+      "motif": 52,
+      "ui": 7,
+      "pwa-regression": 9,
+      "round2-retest": 14,
+      "prompts": 8,
+      "combined-pwa": 7,
+      "pwa": 8,
+      "integration": 18,
+      "ui-extra": 6,
+      "motif-prompts": 8,
+      "fixed": 1,
+      "edges": 36,
+      "combined-ui": 6
+    },
+    "runners": {
+      "auto-shared-prompt": {
+        "cases": 1,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "d2faa19d339be63f61777c22caa57d2c34b82052e8179adfed2a7441bb7608ed",
+        "wrapperSHA256": null
+      },
+      "auto-inherited": {
+        "cases": 2,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "d47aeea3409cd515df3a102963503715587b93a4df014a34651cf42cda11941c",
+        "wrapperSHA256": null
+      },
+      "auto-shared-ui": {
+        "cases": 1,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "76f793bd085b9f2de80ebe026ababb211e43e94130e37ebf718ab638a61a4e4e",
+        "wrapperSHA256": null
+      },
+      "auto-fixed": {
+        "cases": 3,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "e861dc4168499be115cd5711607091cff2f46f8ac7bd31560e6f477f7ae04101",
+        "wrapperSHA256": null
+      },
+      "auto-pwa": {
+        "cases": 7,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "c6969a5ecd756f0201219a6cae1226445ff213f9c65a7016fecd886fa5b08acf",
+        "wrapperSHA256": null
+      },
+      "auto-ui": {
+        "cases": 12,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "wrapperSHA256": null
+      },
+      "auto-contracts": {
+        "cases": 31,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "wrapperSHA256": null
+      },
+      "auto-compatibility": {
+        "cases": 1,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "4c4746306a179b01461c330c0c72bcb4061c6e956cca16ec6be2bc6ee81cf7e1",
+        "wrapperSHA256": null
+      },
+      "story-pwa": {
+        "cases": 6,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "3fb1422920836336324187f98e529f611345e18c379eb42bbfebfc8653ea889d",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "unified-compatibility": {
+        "cases": 8,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "f83d5ef1f2069c9f81b4b3c1426991715b0469d950af3da223f0d51292ab0b1d",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "unified-pwa": {
+        "cases": 6,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "c24b1185a1c0c77f04f094f9e1c5f04251822b1c6b343fe2fcafd27e7a7da7d6",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "story-contracts": {
+        "cases": 29,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "392bf1f04d9de9be153e483a41ed86b65ac7cae443598a8fe293896c1f8cb2ae",
+        "wrapperSHA256": null
+      },
+      "story-ui": {
+        "cases": 12,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "10b6493531cfb4bac6eb56a24c4225fda8af55579fda404e2424ad615a8fb6b3",
+        "wrapperSHA256": null
+      },
+      "unified-ui": {
+        "cases": 12,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "c6c84ca0b2b5710ce0f53b616ab3097665875eb912afdf9e8778e96c660edb4c",
+        "wrapperSHA256": null
+      },
+      "unified-contracts": {
+        "cases": 24,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "bdcf1863d1d7c61654a6095ed47ee6d750299fddff571d977541bfa41b386c15",
+        "wrapperSHA256": null
+      },
+      "card-pwa": {
+        "cases": 6,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "688fb2881c37014731a3c27f5a8d226f9d360b8405d633e4176a5925788504d4",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "card-contracts": {
+        "cases": 19,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "79728d175f04d35b858984985327e9f31fc6aea15ad6330f4a76b8e48e908140",
+        "wrapperSHA256": null
+      },
+      "card-persistence": {
+        "cases": 4,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "df69eb831ce8d3b0c041f3af56b67a81da1ab6f67e614400409d6cb5ae4f16e5",
+        "wrapperSHA256": null
+      },
+      "card-ui": {
+        "cases": 12,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "c553da1cb8079d84d5413c2b815096b9f1b09e3ca9abed5f8eeb9301885969bf",
+        "wrapperSHA256": null
+      },
+      "normal-ui": {
+        "cases": 6,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "d382faf8a8522211313e746598481ba978b59893478fe532ead45d892f70225a",
+        "wrapperSHA256": null
+      },
+      "normal-pwa": {
+        "cases": 5,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "9a0b736149dfbac14fc955c1bdab06dfd69fb1859e418e056f35037f4a4cda77",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "faults": {
+        "cases": 14,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "6058c4234f6eaed80ea90076b0084b9717c80d36ef416a47871a80418c97d7a0",
+        "wrapperSHA256": null
+      },
+      "normal-contracts": {
+        "cases": 20,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "bf45a55cbe9f68c97852188e8d7d4cad2f2e581f090a9c19f4af210dcd739390",
+        "wrapperSHA256": null
+      },
+      "legacy": {
+        "cases": 21,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "3ddb4aaaf70aaadee1ff4e8d7cd45d1688de0bd1054da19faa80987792ed14ad",
+        "wrapperSHA256": null
+      },
+      "boundaries": {
+        "cases": 20,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "e87261835c013f8230b93e10f73705e15a3b7e3a0e53eb69eec77b91fa96c173",
+        "wrapperSHA256": null
+      },
+      "r1": {
+        "cases": 49,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+        "wrapperSHA256": null
+      },
+      "motif-boundaries": {
+        "cases": 20,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "9e27d6bb3e2873a0f16e7667409165f15b501ede6a0891427a29ba413cf5c835",
+        "wrapperSHA256": null
+      },
+      "contracts": {
+        "cases": 25,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "cf629d7ab357fea28292020ff7aa1f521dd617e2ac978119a3467e72630931e1",
+        "wrapperSHA256": null
+      },
+      "motif": {
+        "cases": 52,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "b5e2aabb5e4844893d6dea4611b0d6ef249602ff28ade7813e7dfd00d9087f7a",
+        "wrapperSHA256": null
+      },
+      "ui": {
+        "cases": 7,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "ed7698bad67d852f434d51866408d89b6e2e8af1db2619b84cc1b46d35337973",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "pwa-regression": {
+        "cases": 9,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "365214f571d554eb0cc0e4084bc0dbb1e0174937d068df4b42209b383a8011c1",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "round2-retest": {
+        "cases": 14,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "717c0a6f48022b0b058f5b0308e3485bc664cf50aca755042d32c826610127bc",
+        "wrapperSHA256": null
+      },
+      "prompts": {
+        "cases": 8,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "78159b64fd251662ef473a7a4894027960e7828893a2275fb3e74a4d64995224",
+        "wrapperSHA256": null
+      },
+      "combined-pwa": {
+        "cases": 7,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "a5313fb8b0bd329b1dd22ea9040866e66f0598e9f946335d560e0d295f5e281c",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "pwa": {
+        "cases": 8,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "fb9abbf9ad2fee1d72f82f1272e1c16abbf9ceb7e2f8a194bf67b530c8119e23",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "integration": {
+        "cases": 18,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "9f18cfe8a954c2587b103134bb5fa10d313834b9d1281c0c37253dc51f065e9a",
+        "wrapperSHA256": null
+      },
+      "ui-extra": {
+        "cases": 6,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "27a504e12bd196f5a2a2cf9eace66299931cb3e347d6214481e630a61df6580b",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      },
+      "motif-prompts": {
+        "cases": 8,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "b6074cc0a9fdc5897519738e80ab3a21b41ce2f2dfeb59a265871e7a9f844066",
+        "wrapperSHA256": null
+      },
+      "fixed": {
+        "cases": 1,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "d5f524587e4efb869119410c962f4db99948c74dc057d46b83380c788bc475ac",
+        "wrapperSHA256": null
+      },
+      "edges": {
+        "cases": 36,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "699c3d8edfccce99fcfc071199cb55b4d9ee0cf473d3b7fe2745d77dc927363f",
+        "wrapperSHA256": null
+      },
+      "combined-ui": {
+        "cases": 6,
+        "exitCode": 0,
+        "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+        "testSHA256": "bdee6eb8d59bdf73ecef789afb7b3c630aa2eb46751da67bfe5e585d137be5d6",
+        "wrapperSHA256": "9488d0e526e47eb22bcd85245565373856d1855e03e911027019310bc266f19f"
+      }
+    },
+    "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e",
+    "physicalDevice": false,
+    "publicOrigin": false
+  },
+  "quality": {
+    "tests": [
+      {
+        "name": "Existing 84 definitions/labels/tags/enums exact",
+        "passed": true
+      },
+      {
+        "name": "Six groups each14",
+        "passed": true
+      },
+      {
+        "name": "Six types exact and structure/state matrices complete",
+        "passed": true
+      },
+      {
+        "name": "All mapped existing candidates exist",
+        "passed": true
+      },
+      {
+        "name": "Virtual English tags unique",
+        "passed": true
+      },
+      {
+        "name": "Manual resolver/producers/motif/card-tag/person/normal UI untouched",
+        "passed": true
+      },
+      {
+        "name": "Six story preset definitions/application untouched",
+        "passed": true
+      },
+      {
+        "name": "SW only unique cache name changed",
+        "passed": true
+      },
+      {
+        "name": "Manifest and icons unchanged",
+        "passed": true
+      },
+      {
+        "name": "All 151 original test/fixture files exact",
+        "passed": true
+      },
+      {
+        "name": "v5/horror1 namespace unchanged; optional policy validation only",
+        "passed": true
+      },
+      {
+        "name": "New JavaScript syntax",
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "base": "cf0336d03e3edf104fdaa911b9bc568a3609bf50",
+    "immutableTests": 151,
+    "files": {
+      "index.html": {
+        "bytes": 4031478,
+        "sha256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e"
+      },
+      "sw.js": {
+        "bytes": 2329,
+        "sha256": "137e3e2a58c90a0f449310288b60573b3adfd02f1c8a9cb22b363755130f12f2"
+      },
+      "manifest.json": {
+        "bytes": 762,
+        "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+      }
+    }
+  },
+  "build": {
+    "reproductionEqual": true,
+    "inlineSyntax": [
+      {
+        "script": 0,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 1,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 2,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 3,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 4,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 5,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 6,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 7,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 8,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 9,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 10,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 11,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 12,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 13,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 14,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 15,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 16,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 17,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 18,
+        "passed": true,
+        "error": ""
+      },
+      {
+        "script": 19,
+        "passed": true,
+        "error": ""
+      }
+    ],
+    "productSHA256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e"
+  },
+  "aggregate": {
+    "passed": 569,
+    "failed": 0,
+    "countDefinition": "556 functional/UI/regression evaluations + 12 static checks + 1 aggregate reproduction/20-script syntax check"
+  },
+  "unexecuted": [
+    "Android physical device/actual IME",
+    "SeaArt actual images/model quality",
+    "new Sites/public origin publication/acceptance"
+  ],
+  "unrecovered": [
+    "original three motif Round2 test files and original execution instructions"
+  ],
+  "legacyReplayChanges": [
+    "current product URL/cache",
+    "explicit manga entry",
+    "removed motif creation UI uses retained backend",
+    "UC01 exact old12 projection; all84 verified separately",
+    "legacy scalar dialog via retained backend; new actual controls tested with touch",
+    "card geometry uses containers for new noninteractive headings; all actual buttons >=44 verified"
+  ],
+  "files": {
+    "index.html": {
+      "bytes": 4031478,
+      "sha256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e"
+    },
+    "sw.js": {
+      "bytes": 2329,
+      "sha256": "137e3e2a58c90a0f449310288b60573b3adfd02f1c8a9cb22b363755130f12f2"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  }
+}

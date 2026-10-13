@@ -1,0 +1,147 @@
+{
+  "utc": "2026-10-13T13:31:45.764477+00:00",
+  "oldWorktrees": [
+    {
+      "path": "/workspace/seaart-tool",
+      "HEAD": "7b3f9afd6cf1db20b74359fcf3f14fa4d8101841",
+      "status": "",
+      "unchanged": true
+    },
+    {
+      "path": "/workspace/seaart-card-tags",
+      "HEAD": "023bb6d2b24395551c06d756faac16440f88b7b5",
+      "status": "",
+      "unchanged": true
+    },
+    {
+      "path": "/workspace/seaart-horror",
+      "HEAD": "f58be6a37c2b407b86afbaa226a79a0a10a9c562",
+      "status": "",
+      "unchanged": true
+    },
+    {
+      "path": "/workspace/seaart-horror-stories",
+      "HEAD": "cf0336d03e3edf104fdaa911b9bc568a3609bf50",
+      "status": "",
+      "unchanged": true
+    },
+    {
+      "path": "/workspace/seaart-integrated",
+      "HEAD": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+      "status": "",
+      "unchanged": true
+    },
+    {
+      "path": "/workspace/seaart-normal-first",
+      "HEAD": "6044f4a2289ff642e26b355a071688568e57f45d",
+      "status": "",
+      "unchanged": true
+    },
+    {
+      "path": "/workspace/seaart-unified-ui",
+      "HEAD": "ede9fa02a0088816509b20f216b652c3237d87fd",
+      "status": "",
+      "unchanged": true
+    }
+  ],
+  "allOldWorktreesUnchanged": true,
+  "existing151FilesUnchanged": true,
+  "Sites": {
+    "id": "appgprj_6acc3907503c8191a1c3e435fb4c55c6",
+    "latest_version_number": 4,
+    "status": "active",
+    "updated_at": "2026-10-12T22:45:00.117741+00:00",
+    "access_revision": 1,
+    "unchanged": {
+      "version": true,
+      "updated": true,
+      "access": true
+    }
+  },
+  "Version4Match": {
+    "sitesVersion": 4,
+    "sitesSourceCommit": "4fd7c6192ffa84e5746a5b360bf411bc2dcf3d99",
+    "githubHEAD": "cf0336d03e3edf104fdaa911b9bc568a3609bf50",
+    "files": [
+      {
+        "path": "index.html",
+        "sitesBytes": 3997918,
+        "githubBytes": 3997918,
+        "sitesSHA256": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7",
+        "githubSHA256": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7",
+        "equal": true
+      },
+      {
+        "path": "sw.js",
+        "sitesBytes": 2336,
+        "githubBytes": 2336,
+        "sitesSHA256": "8054d6420339a732ae7a9d17cc78caed74c87feec595b383bc0de8cd5e48e7c2",
+        "githubSHA256": "8054d6420339a732ae7a9d17cc78caed74c87feec595b383bc0de8cd5e48e7c2",
+        "equal": true
+      },
+      {
+        "path": "manifest.json",
+        "sitesBytes": 816,
+        "githubBytes": 762,
+        "sitesSHA256": "20b2f67af535b6b2363a884e5928f407ae31aa9a45258c6fdc339c426a370c0d",
+        "githubSHA256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+        "equal": false
+      },
+      {
+        "path": "icon-192.png",
+        "sitesBytes": 1369,
+        "githubBytes": 1369,
+        "sitesSHA256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+        "githubSHA256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+        "equal": true
+      },
+      {
+        "path": "icon-512.png",
+        "sitesBytes": 3717,
+        "githubBytes": 3717,
+        "sitesSHA256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+        "githubSHA256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+        "equal": true
+      },
+      {
+        "path": "icon-maskable-512.png",
+        "sitesBytes": 14905,
+        "githubBytes": 14905,
+        "sitesSHA256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78",
+        "githubSHA256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78",
+        "equal": true
+      }
+    ]
+  },
+  "publicRead": {
+    "utc": "2026-10-13T11:47:20.906077+00:00",
+    "requestsOnly": true,
+    "noBrowserSW": true,
+    "files": [
+      {
+        "path": "/",
+        "status": 200,
+        "bytes": 3775550,
+        "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+      },
+      {
+        "path": "/index.html",
+        "status": 200,
+        "bytes": 3775550,
+        "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+      },
+      {
+        "path": "/sw.js",
+        "status": 200,
+        "bytes": 2320,
+        "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a"
+      },
+      {
+        "path": "/manifest.json",
+        "status": 200,
+        "bytes": 762,
+        "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+      }
+    ]
+  }
+}
