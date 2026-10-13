@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "types": [
+    {
+      "id": "horror-type-ghost",
+      "label": "霊体",
+      "material": "spectral",
+      "body": {
+        "partial": "partially translucent spectral body",
+        "complete": "fully manifested ghostly body"
+      },
+      "primary": {
+        "partial": [
+          "horror-feature-spectral-patches",
+          "horror-feature-ghost-reflection"
+        ],
+        "complete": [
+          "horror-feature-spectral-limbs",
+          "horror-feature-spirit-orbit",
+          "horror-feature-ghost-reflection"
+        ]
+      },
+      "secondary": [
+        "horror-feature-ghost-reflection"
+      ],
+      "structures": {
+        "wings": {
+          "partial": "partially manifested translucent spectral wings",
+          "complete": "fully manifested translucent spectral wings"
+        },
+        "horns": {
+          "partial": "partially formed spectral horns",
+          "complete": "fully formed spectral horns"
+        },
+        "tail": {
+          "partial": "partially manifested ghostly tail",
+          "complete": "fully manifested ghostly tail"
+        }
+      }
+    },
+    {
+      "id": "horror-type-aberrant",
+      "label": "異形",
+      "material": "organic",
+      "body": {
+        "partial": "localized body mutations",
+        "complete": "fully mutated aberrant body"
+      },
+      "primary": {
+        "partial": [
+          "horror-feature-forked-fingers",
+          "horror-feature-segmented-arms"
+        ],
+        "complete": [
+          "horror-feature-segmented-arms",
+          "horror-feature-spiral-joints",
+          "horror-feature-unequal-forearms"
+        ]
+      },
+      "secondary": [
+        "horror-feature-forked-fingers"
+      ],
+      "structures": {
+        "wings": {
+          "partial": "partially mutated misshapen wings",
+          "complete": "fully mutated misshapen wings"
+        },
+        "horns": {
+          "partial": "partially mutated horns",
+          "complete": "fully mutated horns"
+        },
+        "tail": {
+          "partial": "partially mutated aberrant tail",
+          "complete": "fully mutated aberrant tail"
+        }
+      }
+    },
+    {
+      "id": "horror-type-doll",
+      "label": "人形",
+      "material": "artificial",
+      "body": {
+        "partial": "partially doll-like body",
+        "complete": "full-body articulated doll form"
+      },
+      "primary": {
+        "partial": [
+          "horror-feature-mask-face",
+          "horror-feature-ceramic-skin"
+        ],
+        "complete": [
+          "horror-feature-segmented-face",
+          "horror-feature-ceramic-skin",
+          "horror-feature-spiral-joints"
+        ]
+      },
+      "secondary": [
+        "horror-feature-mask-face"
+      ],
+      "structures": {
+        "wings": {
+          "partial": "partially unfolded artificial wings",
+          "complete": "fully unfolded artificial wings"
+        },
+        "horns": {
+          "partial": "partially formed artificial horns",
+          "complete": "fully formed artificial horns"
+        },
+        "tail": {
+          "partial": "partially extended articulated artificial tail",
+          "complete": "fully extended articulated artificial tail"
+        }
+      }
+    },
+    {
+      "id": "horror-type-beast",
+      "label": "獣性",
+      "material": "organic",
+      "body": {
+        "partial": "partial beast transformation",
+        "complete": "fully transformed beast-like body"
+      },
+      "primary": {
+        "partial": [
+          "horror-feature-sharp-claws"
+        ],
+        "complete": [
+          "horror-feature-sharp-claws",
+          "horror-feature-long-fingers"
+        ]
+      },
+      "secondary": [
+        "horror-feature-sharp-claws"
+      ],
+      "structures": {
+        "wings": {
+          "partial": "partially grown beast wings",
+          "complete": "fully grown beast wings"
+        },
+        "horns": {
+          "partial": "partially formed beast-like horns",
+          "complete": "fully formed beast-like horns"
+        },
+        "tail": {
+          "partial": "partially formed beast-like tail",
+          "complete": "fully formed beast-like tail"
+        }
+      }
+    },
+    {
+      "id": "horror-type-shadow",
+      "label": "影",
+      "material": "shadow",
+      "body": {
+        "partial": "partially transformed body of living shadows",
+        "complete": "fully manifested body of living shadows"
+      },
+      "primary": {
+        "partial": [
+          "horror-feature-shadow-tendrils",
+          "horror-feature-black-mist"
+        ],
+        "complete": [
+          "horror-feature-shadow-body",
+          "horror-feature-black-mist",
+          "horror-feature-shadow-delay"
+        ]
+      },
+      "secondary": [
+        "horror-feature-black-mist"
+      ],
+      "structures": {
+        "wings": {
+          "partial": "partially manifested shadow wings",
+          "complete": "fully manifested wings made of living shadows"
+        },
+        "horns": {
+          "partial": "partially manifested horns of living shadows",
+          "complete": "fully manifested horns made of living shadows"
+        },
+        "tail": {
+          "partial": "partially manifested tail of living shadows",
+          "complete": "fully manifested tail made of living shadows"
+        }
+      }
+    },
+    {
+      "id": "horror-type-cursed",
+      "label": "呪い",
+      "material": "cursed",
+      "body": {
+        "partial": "partially cursed body",
+        "complete": "body fully overtaken by a curse"
+      },
+      "primary": {
+        "partial": [
+          "horror-feature-curse-forehead",
+          "horror-feature-spreading-runes"
+        ],
+        "complete": [
+          "horror-feature-spreading-runes",
+          "horror-feature-parasitic-filaments",
+          "horror-feature-curse-bindings"
+        ]
+      },
+      "secondary": [
+        "horror-feature-curse-forehead"
+      ],
+      "structures": {
+        "wings": {
+          "partial": "partially formed cursed wings",
+          "complete": "fully formed cursed wings"
+        },
+        "horns": {
+          "partial": "partially formed curse-marked horns",
+          "complete": "fully formed curse-marked horns"
+        },
+        "tail": {
+          "partial": "partially formed cursed tail",
+          "complete": "fully formed cursed tail"
+        }
+      }
+    }
+  ],
+  "traits": [
+    {
+      "id": "horror-auto-beast-eyes",
+      "label": "獣の瞳",
+      "typeId": "horror-type-beast",
+      "tag": "beast-like eyes",
+      "group": "目・口",
+      "states": [
+        "partial",
+        "complete"
+      ]
+    },
+    {
+      "id": "horror-auto-beast-fangs",
+      "label": "獣の牙",
+      "typeId": "horror-type-beast",
+      "tag": "animal fangs",
+      "group": "目・口",
+      "states": [
+        "complete"
+      ],
+      "source": "detailOptions.bodyFeatures / animal fangs"
+    }
+  ]
+}

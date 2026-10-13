@@ -40,4 +40,10 @@ story=root/'src/horror-story-presets.js'
 if story.exists():
     definitions=json.loads((root/'src/horror-story-presets.json').read_text())
     block('STORY_PRESETS','const hsStoryDefinitions='+json.dumps(definitions,ensure_ascii=False,separators=(',',':'))+';\n'+story.read_text())
+auto=root/'src/horror-auto-runtime.js'
+if auto.exists():
+    definitions=json.loads((root/'src/horror-auto-definitions.json').read_text())
+    block('AUTO_RUNTIME','const horrorAutoDefinitions='+json.dumps(definitions,ensure_ascii=False,separators=(',',':'))+';\n'+auto.read_text())
+auto_ui=root/'src/horror-auto-ui.js'
+if auto_ui.exists():block('AUTO_UI',auto_ui.read_text())
 p.write_bytes(b)
