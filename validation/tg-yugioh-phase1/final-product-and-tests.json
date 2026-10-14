@@ -32,5 +32,13 @@
   },
   "gitDiffCheckWithCRLF": true,
   "physicalAndroid": false,
-  "actualSeaArt": false
+  "actualSeaArt": false,
+  "gitDiffCheckScope": [
+    "index.html",
+    "sw.js",
+    "src",
+    "scripts",
+    "tests/tg-yugioh-phase1"
+  ],
+  "rawExecutionLogsPreservedIncludingWhitespace": true
 }
