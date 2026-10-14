@@ -11,11 +11,16 @@ def block(name,source):
     payload=start+source.replace('\r\n','\n').replace('\n','\r\n').encode()+b'\r\n'+end
     if start in b:
         left=b.index(start);right=b.index(end,left)+len(end);b=b[:left]+payload+b[right:]
+    elif name=='BUILTIN_ADDITIONS':
+        offset=b.index(b'const mbStandardSeed=');b=b[:offset]+payload+b[offset:]
     elif name=='FOUNDATION':
         anchor=b"const actorFormMotifNamespace=" if b"const actorFormMotifNamespace=" in b else b"const actorFormStorageNamespace=";offset=b.index(anchor);b=b[:offset]+payload+b[offset:]
     else:
         anchor=b'</body>';offset=b.rindex(anchor);b=b[:offset]+b'<script>\r\n'+payload+b'</script>\r\n'+b[offset:]
-block('FOUNDATION',(root/'src/horror-foundation.js').read_text())
+palette_line=re.search(rb'const itemColorPalette=.*?;\r\n',b).group(0)
+b=b.replace(palette_line,b'',1)
+block('BUILTIN_ADDITIONS',palette_line.decode()+'const environmentAdditions='+json.dumps(json.loads((root/'src/environment-additions.json').read_text()),ensure_ascii=False,separators=(',',':'))+';\nconst personSpecificDefinitions='+json.dumps(json.loads((root/'src/person-specific-forms.json').read_text()),ensure_ascii=False,separators=(',',':'))+';\n'+(root/'src/builtin-additions.js').read_text())
+block('FOUNDATION',(root/'src/horror-foundation.js').read_text()+'\n'+(root/'src/person-specific-foundation.js').read_text())
 runtime=root/'src/horror-runtime.js'
 if runtime.exists():
     catalog=json.loads((root/'src/horror-catalog.json').read_text())
@@ -46,4 +51,8 @@ if auto.exists():
     block('AUTO_RUNTIME','const horrorAutoDefinitions='+json.dumps(definitions,ensure_ascii=False,separators=(',',':'))+';\n'+auto.read_text())
 auto_ui=root/'src/horror-auto-ui.js'
 if auto_ui.exists():block('AUTO_UI',auto_ui.read_text())
+
+block('ENVIRONMENT_UI',(root/'src/environment-ui.js').read_text())
+block('SPECIFIC_FORMS',(root/'src/person-specific-forms.js').read_text())
+block('MOBILE_RESULT_UI',(root/'src/mobile-result-ui.js').read_text())
 p.write_bytes(b)

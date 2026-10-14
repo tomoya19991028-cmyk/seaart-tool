@@ -1,0 +1,744 @@
+{
+  "version": 1,
+  "places": [
+    {
+      "id": "env-place-001",
+      "name": "戦場",
+      "value": "battlefield",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-002",
+      "name": "闘技場",
+      "value": "arena",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-003",
+      "name": "訓練場",
+      "value": "training ground",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-004",
+      "name": "決闘場",
+      "value": "dueling grounds",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-005",
+      "name": "要塞",
+      "value": "fortress",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-006",
+      "name": "城壁",
+      "value": "castle walls",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-007",
+      "name": "墓地",
+      "value": "cemetery",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-008",
+      "name": "廃病院",
+      "value": "abandoned hospital",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-009",
+      "name": "廃校",
+      "value": "abandoned school",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-010",
+      "name": "廃村",
+      "value": "abandoned village",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-011",
+      "name": "廃教会",
+      "value": "abandoned church",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-012",
+      "name": "廃屋",
+      "value": "abandoned house",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-013",
+      "name": "祭壇",
+      "value": "altar",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-014",
+      "name": "地下墓地",
+      "value": "catacombs",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-015",
+      "name": "地下牢",
+      "value": "dungeon cell",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-016",
+      "name": "古城",
+      "value": "old castle",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-017",
+      "name": "神殿",
+      "value": "ancient temple",
+      "group": "文化・歴史",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-018",
+      "name": "魔王城",
+      "value": "demon lord's castle",
+      "group": "幻想・SF",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-019",
+      "name": "地下迷宮",
+      "value": "underground labyrinth",
+      "group": "幻想・SF",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-020",
+      "name": "荒野",
+      "value": "wasteland",
+      "group": "自然",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-021",
+      "name": "崖",
+      "value": "cliff",
+      "group": "自然",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-022",
+      "name": "火山",
+      "value": "volcano",
+      "group": "自然",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-023",
+      "name": "沼地",
+      "value": "swamp",
+      "group": "自然",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-024",
+      "name": "倉庫",
+      "value": "warehouse",
+      "group": "街・建物",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-025",
+      "name": "駐車場",
+      "value": "parking lot",
+      "group": "街・建物",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-026",
+      "name": "地下鉄駅",
+      "value": "subway station",
+      "group": "街・建物",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-027",
+      "name": "非常階段",
+      "value": "fire escape stairs",
+      "group": "街・建物",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-028",
+      "name": "地下室",
+      "value": "basement",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-029",
+      "name": "地下通路",
+      "value": "underground passage",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-030",
+      "name": "トイレ",
+      "value": "restroom",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-031",
+      "name": "公衆トイレ",
+      "value": "public restroom",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-032",
+      "name": "学校のトイレ",
+      "value": "school restroom",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-033",
+      "name": "保健室",
+      "value": "school infirmary",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-034",
+      "name": "理科室",
+      "value": "science classroom",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-035",
+      "name": "更衣室",
+      "value": "changing room",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-036",
+      "name": "浴室",
+      "value": "bathroom",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-037",
+      "name": "階段",
+      "value": "staircase",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-038",
+      "name": "エレベーター",
+      "value": "elevator",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-039",
+      "name": "温泉",
+      "value": "hot spring",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-040",
+      "name": "露天風呂",
+      "value": "outdoor hot spring bath",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-041",
+      "name": "大浴場",
+      "value": "large communal bath",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-042",
+      "name": "銭湯",
+      "value": "public bathhouse",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-043",
+      "name": "サウナ",
+      "value": "sauna",
+      "group": "屋内",
+      "environmentKind": "place"
+    },
+    {
+      "id": "env-place-044",
+      "name": "脱衣所",
+      "value": "bath changing area",
+      "group": "屋内",
+      "environmentKind": "place"
+    }
+  ],
+  "states": [
+    {
+      "id": "env-state-001",
+      "name": "清潔",
+      "value": "clean surroundings",
+      "group": "清潔・汚れ",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-002",
+      "name": "汚れ",
+      "value": "dirty surroundings",
+      "group": "清潔・汚れ",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-003",
+      "name": "埃",
+      "value": "dust-covered surfaces",
+      "group": "清潔・汚れ",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-004",
+      "name": "泥",
+      "value": "muddy ground",
+      "group": "清潔・汚れ",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-005",
+      "name": "染み",
+      "value": "stained surfaces",
+      "group": "清潔・汚れ",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-006",
+      "name": "落書き",
+      "value": "graffiti on walls",
+      "group": "清潔・汚れ",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-007",
+      "name": "荒廃",
+      "value": "desolate surroundings",
+      "group": "破壊・劣化",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-008",
+      "name": "老朽化",
+      "value": "deteriorating buildings",
+      "group": "破壊・劣化",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-009",
+      "name": "破損",
+      "value": "damaged surroundings",
+      "group": "破壊・劣化",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-010",
+      "name": "ひび割れ",
+      "value": "cracked surfaces",
+      "group": "破壊・劣化",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-011",
+      "name": "崩壊",
+      "value": "collapsed structures",
+      "group": "破壊・劣化",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-012",
+      "name": "瓦礫",
+      "value": "rubble",
+      "group": "破壊・劣化",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-013",
+      "name": "濡れ",
+      "value": "wet surfaces",
+      "group": "水・湿気",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-014",
+      "name": "水たまり",
+      "value": "puddles",
+      "group": "水・湿気",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-015",
+      "name": "浸水",
+      "value": "flooded surroundings",
+      "group": "水・湿気",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-016",
+      "name": "水滴",
+      "value": "water droplets on surfaces",
+      "group": "水・湿気",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-017",
+      "name": "結露",
+      "value": "condensation on surfaces",
+      "group": "水・湿気",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-018",
+      "name": "苔",
+      "value": "moss-covered surfaces",
+      "group": "水・湿気",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-019",
+      "name": "炎上",
+      "value": "burning surroundings",
+      "group": "火・煙",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-020",
+      "name": "焦げ跡",
+      "value": "scorch marks",
+      "group": "火・煙",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-021",
+      "name": "焼け跡",
+      "value": "charred surroundings",
+      "group": "火・煙",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-022",
+      "name": "煙",
+      "value": "smoke-filled surroundings",
+      "group": "火・煙",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-023",
+      "name": "灰",
+      "value": "ashes on the ground",
+      "group": "火・煙",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-024",
+      "name": "草木に覆われた",
+      "value": "overgrown surroundings",
+      "group": "自然・植物",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-025",
+      "name": "蔦",
+      "value": "vines covering surfaces",
+      "group": "自然・植物",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-026",
+      "name": "落ち葉",
+      "value": "fallen leaves on the ground",
+      "group": "自然・植物",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-027",
+      "name": "花びら",
+      "value": "flower petals on the ground",
+      "group": "自然・植物",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-028",
+      "name": "雪に覆われた",
+      "value": "snow-covered ground",
+      "group": "自然・植物",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-029",
+      "name": "散乱",
+      "value": "scattered objects",
+      "group": "物・散乱",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-030",
+      "name": "整頓された",
+      "value": "tidy surroundings",
+      "group": "物・散乱",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-031",
+      "name": "ゴミ",
+      "value": "litter on the ground",
+      "group": "物・散乱",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-032",
+      "name": "残骸",
+      "value": "wreckage",
+      "group": "物・散乱",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-033",
+      "name": "戦闘跡",
+      "value": "battle-scarred surroundings",
+      "group": "戦闘・事件",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-034",
+      "name": "爆発跡",
+      "value": "blast craters",
+      "group": "戦闘・事件",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-035",
+      "name": "弾痕",
+      "value": "bullet holes in walls",
+      "group": "戦闘・事件",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-036",
+      "name": "切り傷",
+      "value": "slash marks on surfaces",
+      "group": "戦闘・事件",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-037",
+      "name": "血まみれ",
+      "value": "blood-covered surroundings",
+      "group": "ホラー・怪異",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-038",
+      "name": "血痕",
+      "value": "bloodstains on surfaces",
+      "group": "ホラー・怪異",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-039",
+      "name": "血だまり",
+      "value": "pools of blood on the ground",
+      "group": "ホラー・怪異",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-040",
+      "name": "血しぶき",
+      "value": "blood spatter on walls",
+      "group": "ホラー・怪異",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-041",
+      "name": "血の手形",
+      "value": "bloody handprints on walls",
+      "group": "ホラー・怪異",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-042",
+      "name": "血の足跡",
+      "value": "bloody footprints on the ground",
+      "group": "ホラー・怪異",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-043",
+      "name": "蜘蛛の巣",
+      "value": "cobwebs",
+      "group": "ホラー・怪異",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-044",
+      "name": "浮遊物",
+      "value": "floating objects in the surroundings",
+      "group": "特殊・幻想",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-045",
+      "name": "結晶化",
+      "value": "crystallized surroundings",
+      "group": "特殊・幻想",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-046",
+      "name": "凍結",
+      "value": "frozen surfaces",
+      "group": "特殊・幻想",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-047",
+      "name": "腐食",
+      "value": "corroded surfaces",
+      "group": "特殊・幻想",
+      "environmentKind": "state"
+    },
+    {
+      "id": "env-state-048",
+      "name": "魔法陣",
+      "value": "magic circle on the ground",
+      "group": "特殊・幻想",
+      "environmentKind": "state"
+    }
+  ],
+  "omitted": [
+    {
+      "requested": "洞窟",
+      "existing": {
+        "id": "background-35",
+        "name": "洞窟",
+        "value": "cave",
+        "group": "自然"
+      }
+    },
+    {
+      "requested": "峡谷",
+      "existing": {
+        "id": "background-80",
+        "name": "渓谷",
+        "value": "canyon",
+        "group": "自然"
+      }
+    },
+    {
+      "requested": "竹林",
+      "existing": {
+        "id": "background-24",
+        "name": "竹林",
+        "value": "bamboo forest",
+        "group": "自然"
+      }
+    },
+    {
+      "requested": "路地裏",
+      "existing": {
+        "id": "background-5",
+        "name": "路地裏",
+        "value": "alleyway",
+        "group": "街・建物"
+      }
+    },
+    {
+      "requested": "屋上",
+      "existing": {
+        "id": "background-9",
+        "name": "屋上",
+        "value": "rooftop",
+        "group": "街・建物"
+      }
+    },
+    {
+      "requested": "工場",
+      "existing": {
+        "id": "background-45",
+        "name": "工場",
+        "value": "factory",
+        "group": "街・建物"
+      }
+    },
+    {
+      "requested": "廊下",
+      "existing": {
+        "id": "background-15",
+        "name": "廊下",
+        "value": "hallway",
+        "group": "屋内"
+      }
+    },
+    {
+      "requested": "玉座の間",
+      "existing": {
+        "id": "background-40",
+        "name": "玉座の間",
+        "value": "throne room",
+        "group": "屋内"
+      }
+    },
+    {
+      "requested": "遺跡",
+      "existing": {
+        "id": "background-34",
+        "name": "遺跡",
+        "value": "ancient ruins",
+        "group": "文化・歴史"
+      }
+    }
+  ],
+  "stateAliasesOmitted": [
+    {
+      "name": "散らかった",
+      "sameAs": "散乱"
+    },
+    {
+      "name": "破壊跡",
+      "sameAs": "破損／戦闘跡"
+    }
+  ]
+}

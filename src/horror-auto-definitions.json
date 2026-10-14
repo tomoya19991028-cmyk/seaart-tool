@@ -35,6 +35,18 @@
         "tail": {
           "partial": "partially manifested ghostly tail",
           "complete": "fully manifested ghostly tail"
+        },
+        "tentacles": {
+          "partial": "partially manifested spectral tentacles",
+          "complete": "fully manifested spectral tentacles"
+        },
+        "extraArms": {
+          "partial": "partially manifested spectral extra arms",
+          "complete": "fully manifested spectral extra arms"
+        },
+        "extraLegs": {
+          "partial": "partially manifested spectral extra legs",
+          "complete": "fully manifested spectral extra legs"
         }
       }
     },
@@ -72,6 +84,18 @@
         "tail": {
           "partial": "partially mutated aberrant tail",
           "complete": "fully mutated aberrant tail"
+        },
+        "tentacles": {
+          "partial": "partially manifested mutated tentacles",
+          "complete": "fully manifested mutated tentacles"
+        },
+        "extraArms": {
+          "partial": "partially manifested mutated extra arms",
+          "complete": "fully manifested mutated extra arms"
+        },
+        "extraLegs": {
+          "partial": "partially manifested mutated extra legs",
+          "complete": "fully manifested mutated extra legs"
         }
       }
     },
@@ -109,6 +133,18 @@
         "tail": {
           "partial": "partially extended articulated artificial tail",
           "complete": "fully extended articulated artificial tail"
+        },
+        "tentacles": {
+          "partial": "partially manifested artificial tentacles",
+          "complete": "fully manifested artificial tentacles"
+        },
+        "extraArms": {
+          "partial": "partially manifested artificial extra arms",
+          "complete": "fully manifested artificial extra arms"
+        },
+        "extraLegs": {
+          "partial": "partially manifested artificial extra legs",
+          "complete": "fully manifested artificial extra legs"
         }
       }
     },
@@ -144,6 +180,18 @@
         "tail": {
           "partial": "partially formed beast-like tail",
           "complete": "fully formed beast-like tail"
+        },
+        "tentacles": {
+          "partial": "partially manifested beast tentacles",
+          "complete": "fully manifested beast tentacles"
+        },
+        "extraArms": {
+          "partial": "partially manifested beast extra arms",
+          "complete": "fully manifested beast extra arms"
+        },
+        "extraLegs": {
+          "partial": "partially manifested beast extra legs",
+          "complete": "fully manifested beast extra legs"
         }
       }
     },
@@ -181,6 +229,18 @@
         "tail": {
           "partial": "partially manifested tail of living shadows",
           "complete": "fully manifested tail made of living shadows"
+        },
+        "tentacles": {
+          "partial": "partially manifested tentacles made of living shadows",
+          "complete": "fully manifested tentacles made of living shadows"
+        },
+        "extraArms": {
+          "partial": "partially manifested extra arms made of living shadows",
+          "complete": "fully manifested extra arms made of living shadows"
+        },
+        "extraLegs": {
+          "partial": "partially manifested extra legs made of living shadows",
+          "complete": "fully manifested extra legs made of living shadows"
         }
       }
     },
@@ -218,6 +278,18 @@
         "tail": {
           "partial": "partially formed cursed tail",
           "complete": "fully formed cursed tail"
+        },
+        "tentacles": {
+          "partial": "partially manifested cursed tentacles",
+          "complete": "fully manifested cursed tentacles"
+        },
+        "extraArms": {
+          "partial": "partially manifested cursed extra arms",
+          "complete": "fully manifested cursed extra arms"
+        },
+        "extraLegs": {
+          "partial": "partially manifested cursed extra legs",
+          "complete": "fully manifested cursed extra legs"
         }
       }
     }

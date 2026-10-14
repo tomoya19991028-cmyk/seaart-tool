@@ -1,0 +1,395 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "id": "ssj",
+      "owner": "Son Goku (Dragon Ball)",
+      "name": "超サイヤ人",
+      "hair": "blonde hair",
+      "eyes": "green eyes",
+      "hairStyle": [
+        "spiky short hair"
+      ],
+      "detail": {
+        "effect": [
+          "golden aura"
+        ]
+      },
+      "identity": "Super Saiyan"
+    },
+    {
+      "id": "ssj2",
+      "owner": "Son Goku (Dragon Ball)",
+      "name": "超サイヤ人2",
+      "hair": "blonde hair",
+      "eyes": "green eyes",
+      "hairStyle": [
+        "spiky short hair"
+      ],
+      "detail": {
+        "effect": [
+          "golden aura",
+          "electric aura"
+        ]
+      },
+      "identity": "Super Saiyan 2"
+    },
+    {
+      "id": "ssj3",
+      "owner": "Son Goku (Dragon Ball)",
+      "name": "超サイヤ人3",
+      "hair": "blonde hair",
+      "eyes": "green eyes",
+      "hairStyle": [
+        "long hair",
+        "long spiky hair"
+      ],
+      "detail": {
+        "bodyFeatures": [
+          "no eyebrows"
+        ],
+        "effect": [
+          "golden aura",
+          "electric aura"
+        ]
+      },
+      "identity": "Super Saiyan 3"
+    },
+    {
+      "id": "ssgod",
+      "owner": "Son Goku (Dragon Ball)",
+      "name": "超サイヤ人ゴッド",
+      "hair": "red hair",
+      "eyes": "red eyes",
+      "hairStyle": [
+        "spiky short hair"
+      ],
+      "detail": {
+        "effect": [
+          "red aura"
+        ]
+      },
+      "identity": "Super Saiyan God"
+    },
+    {
+      "id": "ui",
+      "owner": "Son Goku (Dragon Ball)",
+      "name": "身勝手の極意（銀髪）",
+      "hair": "silver hair",
+      "eyes": "silver eyes",
+      "hairStyle": [
+        "spiky short hair"
+      ],
+      "detail": {
+        "effect": [
+          "silver-white aura"
+        ]
+      },
+      "identity": "mastered Ultra Instinct"
+    },
+    {
+      "id": "white",
+      "owner": "Ken Kaneki (Tokyo Ghoul)",
+      "name": "白髪形態",
+      "hair": "white hair",
+      "eyes": "gray eyes",
+      "hairStyle": [
+        "short hair"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "kagune",
+      "owner": "Ken Kaneki (Tokyo Ghoul)",
+      "name": "赫子（カグネ）展開",
+      "hair": "white hair",
+      "eyes": "red eyes",
+      "hairStyle": [
+        "short hair"
+      ],
+      "detail": {
+        "bodyFeatures": [
+          "red rinkaku kagune extending from the lower back"
+        ],
+        "eyeDetail": [
+          "red kakugan in the left eye with a black sclera"
+        ]
+      },
+      "horror": {
+        "state": "partial",
+        "primaryTypeId": "horror-type-aberrant",
+        "secondaryTypeIds": [],
+        "autoFeatures": {
+          "version": 1,
+          "enabled": false,
+          "excludedIds": []
+        },
+        "structure": {
+          "tentacles": "present"
+        }
+      },
+      "eyesRight": "gray eyes",
+      "eyeMode": "odd"
+    },
+    {
+      "id": "half-kakuja",
+      "owner": "Ken Kaneki (Tokyo Ghoul)",
+      "name": "半赫者（百足）",
+      "hair": "white hair",
+      "eyes": "red eyes",
+      "hairStyle": [
+        "short hair"
+      ],
+      "detail": {
+        "bodyFeatures": [
+          "centipede-shaped kakuja armor growing from the back"
+        ],
+        "eyeDetail": [
+          "red kakugan in the left eye with a black sclera"
+        ]
+      },
+      "horror": {
+        "state": "partial",
+        "primaryTypeId": "horror-type-aberrant",
+        "secondaryTypeIds": [],
+        "autoFeatures": {
+          "version": 1,
+          "enabled": false,
+          "excludedIds": []
+        },
+        "structure": {
+          "tentacles": "present"
+        }
+      },
+      "eyesRight": "gray eyes",
+      "eyeMode": "odd"
+    },
+    {
+      "id": "bankai",
+      "owner": "Ichigo Kurosaki (Bleach)",
+      "name": "卍解（天鎖斬月・初期）",
+      "hair": "orange hair",
+      "eyes": "brown eyes",
+      "hairStyle": [
+        "short hair",
+        "spiky short hair"
+      ],
+      "detail": {
+        "carry": [
+          "black Tensa Zangetsu katana"
+        ]
+      },
+      "outfit": "black fitted Bankai coat with a red lining"
+    },
+    {
+      "id": "hollow",
+      "owner": "Ichigo Kurosaki (Bleach)",
+      "name": "虚化（仮面）",
+      "hair": "orange hair",
+      "eyes": "brown eyes",
+      "hairStyle": [
+        "short hair",
+        "spiky short hair"
+      ],
+      "detail": {
+        "bodyFeatures": [
+          "white Hollow mask with red markings"
+        ],
+        "carry": [
+          "black Tensa Zangetsu katana"
+        ]
+      },
+      "outfit": "black fitted Bankai coat with a red lining",
+      "horror": {
+        "state": "partial",
+        "primaryTypeId": "horror-type-aberrant",
+        "secondaryTypeIds": [],
+        "autoFeatures": {
+          "version": 1,
+          "enabled": false,
+          "excludedIds": []
+        }
+      }
+    },
+    {
+      "id": "full-hollow",
+      "owner": "Ichigo Kurosaki (Bleach)",
+      "name": "完全虚化（ウルキオラ戦）",
+      "hair": "orange hair",
+      "eyes": "golden eyes",
+      "hairStyle": [
+        "long hair"
+      ],
+      "detail": {
+        "bodyFeatures": [
+          "white horned Hollow mask",
+          "Hollow hole in the chest",
+          "white Hollow body"
+        ],
+        "carry": [
+          "black Tensa Zangetsu katana"
+        ]
+      },
+      "horror": {
+        "state": "complete",
+        "primaryTypeId": "horror-type-aberrant",
+        "secondaryTypeIds": [],
+        "autoFeatures": {
+          "version": 1,
+          "enabled": false,
+          "excludedIds": []
+        },
+        "structure": {
+          "horns": "present"
+        }
+      },
+      "outfit": "black hakama pants"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "detail:bodyFeatures",
+      "value": "no eyebrows",
+      "name": "眉なし",
+      "group": "顔・頭部"
+    },
+    {
+      "source": "detail:effect",
+      "value": "silver-white aura",
+      "name": "銀白色のオーラ",
+      "group": "オーラ・演出"
+    },
+    {
+      "source": "detail:bodyFeatures",
+      "value": "red rinkaku kagune extending from the lower back",
+      "name": "赤い鱗赫（腰から展開）",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ken Kaneki (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:bodyFeatures",
+      "value": "centipede-shaped kakuja armor growing from the back",
+      "name": "百足状の半赫者器官",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ken Kaneki (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:eyeDetail",
+      "value": "red kakugan in the left eye with a black sclera",
+      "name": "左眼の赫眼",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ken Kaneki (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "black fitted Bankai coat with a red lining",
+      "name": "天鎖斬月の黒い卍解衣装",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    },
+    {
+      "source": "detail:carry",
+      "value": "black Tensa Zangetsu katana",
+      "name": "天鎖斬月（黒い刀）",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    },
+    {
+      "source": "detail:bodyFeatures",
+      "value": "white Hollow mask with red markings",
+      "name": "虚化の白い仮面",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    },
+    {
+      "source": "detail:bodyFeatures",
+      "value": "white horned Hollow mask",
+      "name": "完全虚化の角付き仮面",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    },
+    {
+      "source": "detail:bodyFeatures",
+      "value": "Hollow hole in the chest",
+      "name": "胸の虚の孔",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    },
+    {
+      "source": "catalog:hairStyle",
+      "value": "long spiky hair",
+      "name": "長い逆立つ髪",
+      "group": "長さ・形"
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "black hakama pants",
+      "name": "完全虚化の黒い袴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "black fitted Bankai coat with a red lining",
+      "name": "天鎖斬月の黒い卍解コート",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    },
+    {
+      "source": "detail:bodyFeatures",
+      "value": "white Hollow body",
+      "name": "完全虚化の白い身体",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ichigo Kurosaki (Bleach)"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Goku",
+      "scope": "形態名・変身の区別"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_Tokyo_Ghoul_characters",
+      "scope": "白髪・赫子・半赫者（百足）"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ichigo_Kurosaki",
+      "scope": "卍解・虚化・完全虚化"
+    },
+    {
+      "url": "https://bleach-anime.com/character/",
+      "scope": "原作キャラクター表記"
+    }
+  ],
+  "outfitSets": {
+    "black fitted Bankai coat with a red lining": {
+      "upper": "black fitted Bankai coat with a red lining",
+      "lower": "black hakama"
+    },
+    "black hakama pants": {
+      "lower": "black hakama"
+    }
+  }
+}

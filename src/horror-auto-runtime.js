@@ -1,11 +1,11 @@
 // Resolve derived features without writing selections or rewriting the 84 manual definitions.
 const haTypes=new Map(horrorAutoDefinitions.types.map(type=>[type.id,type]));
 const haVirtual=new Map();
-const haPartNames={wings:'翼',horns:'角',tail:'尻尾'};
+const haPartNames={wings:'翼',horns:'角',tail:'尻尾',tentacles:'触手',extraArms:'追加腕',extraLegs:'追加脚'};
 for(const type of haTypes.values())for(const state of ['partial','complete']){
  const scope=state==='partial'?'部分':'全身';
  const body={id:'horror-auto-'+type.id.slice(12)+'-body-'+state,label:scope+type.label+'化',tag:type.body[state],group:'四肢・体型',structure:{},conflict:'horror-auto-body',material:type.material,applicableStates:[state],revision:1,continuity:'persistent'};haVirtual.set(body.id,body);
- for(const [part,tags]of Object.entries(type.structures)){const def={id:'horror-auto-'+type.id.slice(12)+'-'+part+'-'+state,label:type.label+'の'+haPartNames[part]+'（'+scope+'）',tag:tags[state],group:'翼・角・尻尾',structure:{[part]:'present'},material:type.material,applicableStates:[state],revision:1,continuity:'persistent'};haVirtual.set(def.id,def)}
+ for(const [part,tags]of Object.entries(type.structures)){const def={id:'horror-auto-'+type.id.slice(12)+'-'+part+'-'+state,label:type.label+'の'+haPartNames[part]+'（'+scope+'）',tag:tags[state],group:['tentacles','extraArms','extraLegs'].includes(part)?'四肢・体型':'翼・角・尻尾',structure:{[part]:'present'},material:type.material,applicableStates:[state],revision:1,continuity:'persistent'};haVirtual.set(def.id,def)}
 }
 for(const trait of horrorAutoDefinitions.traits)haVirtual.set(trait.id,{...trait,structure:{},applicableStates:trait.states,revision:1,continuity:'persistent'});
 const haFeatureBefore=hFeature;
@@ -20,7 +20,7 @@ function haNormalized(tag){const match=String(tag).match(/^\((.*):[\d.]+\)$/s);r
 function haMaterial(id,tag=''){
  if(haVirtual.has(id))return haVirtual.get(id).material||null;
  if(/spectral|ghostly|ghost/.test(tag))return 'spectral';if(/shadow|dark vapor/.test(tag))return 'shadow';if(/curs|posses/.test(tag))return 'cursed';if(/artificial|mechanical/.test(tag))return 'artificial';
- if(/wings?|horns?|tail|scales|ceramic|chitin/.test(tag))return 'organic';return null;
+ if(/wings?|horns?|tail|tentacles?|extra arms|four arms|extra legs|kagune|kakuja|scales|ceramic|chitin/.test(tag))return 'organic';return null;
 }
 function haIncompatible(a,b){if(!a||!b||a===b||a==='cursed'||b==='cursed')return false;return (['spectral','shadow'].includes(a)&&['organic','artificial'].includes(b))||(['organic','artificial'].includes(a)&&['spectral','shadow'].includes(b))}
 function haProposals(context,manual){

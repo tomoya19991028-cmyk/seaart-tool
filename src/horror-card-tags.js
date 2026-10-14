@@ -31,7 +31,7 @@ function hCardSummary(index,c){
  if(index===1)return stateNames[state]+(c.panel?(local?.state&&local.state!=='inherit'?'（コマ指定）':'（基本を継承）'):'');
  if(index===2)return [a?.primaryTypeId?'主：'+(hTypes.find(t=>t.id===a.primaryTypeId)?.label||'対応先不明'):'主：未選択',...(a?.secondaryTypeIds||[]).map(id=>'補助：'+(hTypes.find(t=>t.id===id)?.label||'対応先不明')),c.panel?'種類は共有':''].filter(Boolean).join('・');
  if(index===3)return ({low:'低',medium:'中',high:'高'}[a?.intensity||'medium'])+(c.panel?'（共有）':'');
- if(index===4)return [['wings','翼'],['horns','角'],['tail','尻尾']].map(([key,name])=>name+'：'+structureNames[structure[key]||'unset']).join('・');
+ if(index===4)return [['wings','翼'],['horns','角'],['tail','尻尾'],['tentacles','触手'],['extraArms','追加腕'],['extraLegs','追加脚']].map(([key,name])=>name+'：'+structureNames[structure[key]||'unset']).join('・');
  if(index===5){const sources=c.ref?hSources(c.ref):[],changed=Object.entries(c.policies).filter(([,p])=>p.mode!=='keep');return changed.length?changed.map(([key,p])=>{const source=sources.find(s=>s.sourceRef===key);return (source?hCardSourceName(source):'対応先不明')+'：'+(p.mode==='replace'?'変更 → '+(hFeature(p.featureRef)?.label||'対応先不明'):'除外')}).join('・'):'維持（全て）'}
  if(index>=6&&index<=11)return !a?'未選択':state==='normal'?'通常（選択保持・出力OFF）':scope;
  if(index===12)return c.panel?scope+'・'+stateNames[state]:'表示'+mangaState.count+'コマ・全'+mangaState.panels.length+'コマ';
