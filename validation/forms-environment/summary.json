@@ -1,0 +1,169 @@
+{
+  "passed": 649,
+  "failed": 0,
+  "unperformed": [
+    "Android実機",
+    "実IME",
+    "実SeaArt画像",
+    "公開origin更新",
+    "Sites配信"
+  ],
+  "rows": [
+    {
+      "suite": "既存41runner",
+      "pass": 556,
+      "fail": 0
+    },
+    {
+      "suite": "contracts",
+      "pass": 32,
+      "fail": 0
+    },
+    {
+      "suite": "ui",
+      "pass": 12,
+      "fail": 0
+    },
+    {
+      "suite": "persistence",
+      "pass": 9,
+      "fail": 0
+    },
+    {
+      "suite": "candidate-ui",
+      "pass": 6,
+      "fail": 0
+    },
+    {
+      "suite": "environment-faults",
+      "pass": 2,
+      "fail": 0
+    },
+    {
+      "suite": "result-area",
+      "pass": 3,
+      "fail": 0
+    },
+    {
+      "suite": "pwa",
+      "pass": 4,
+      "fail": 0
+    },
+    {
+      "suite": "structure-visibility",
+      "pass": 3,
+      "fail": 0
+    },
+    {
+      "suite": "forms-repro",
+      "pass": 2,
+      "fail": 0
+    },
+    {
+      "suite": "quality",
+      "pass": 19,
+      "fail": 0
+    },
+    {
+      "suite": "build",
+      "pass": 1,
+      "fail": 0
+    }
+  ],
+  "product": {
+    "productSHA256": "841b871b885875ccd1ab0f2edd8005afe9cb8e1bcf8369289adfb3113014925d",
+    "htmlBytes": 4088549,
+    "swSHA256": "76810e80a2fb4bd969705da3bd05353b07462c63426a983c515629742c94d5dd",
+    "swBytes": 2339,
+    "branch": "feat/person-forms-horror-background-lighting-ui",
+    "source": "7b16f4914372131f4f93677bf645b41e40f07258",
+    "main": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "physicalDevice": false,
+    "seaArtImages": false
+  },
+  "oldRunnerCount": 41,
+  "physicalDevice": false,
+  "publicOriginTest": false,
+  "candidateCounts": {
+    "forms": 11,
+    "specificCandidates": 11,
+    "genericCandidates": 3,
+    "places": 44,
+    "states": 48,
+    "omittedPlaces": 9,
+    "omittedStates": [
+      {
+        "name": "散らかった",
+        "sameAs": "散乱"
+      },
+      {
+        "name": "破壊跡",
+        "sameAs": "破損／戦闘跡"
+      }
+    ]
+  },
+  "sourceBranch": "feat/horror-auto-features-mobile-ui",
+  "sourceCommit": "7b16f4914372131f4f93677bf645b41e40f07258",
+  "mainCommit": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "productCommit": "a669edc3367083cdab3b67177ab988b12420de9f",
+  "files": {
+    "index.html": {
+      "bytes": 4088549,
+      "sha256": "841b871b885875ccd1ab0f2edd8005afe9cb8e1bcf8369289adfb3113014925d"
+    },
+    "sw.js": {
+      "bytes": 2339,
+      "sha256": "76810e80a2fb4bd969705da3bd05353b07462c63426a983c515629742c94d5dd"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    }
+  },
+  "changedProductFiles": [
+    "index.html",
+    "scripts/embed-horror.py",
+    "scripts/integrate-horror.py",
+    "src/builtin-additions.js",
+    "src/environment-additions.json",
+    "src/environment-ui.js",
+    "src/horror-auto-definitions.json",
+    "src/horror-auto-runtime.js",
+    "src/horror-auto-ui.js",
+    "src/horror-card-tags.js",
+    "src/horror-foundation.js",
+    "src/horror-normal-ui.js",
+    "src/horror-runtime.js",
+    "src/mobile-result-ui.js",
+    "src/person-specific-forms.js",
+    "src/person-specific-forms.json",
+    "src/person-specific-foundation.js",
+    "sw.js",
+    "tests/forms-environment/README.md",
+    "tests/forms-environment/candidate-ui.cjs",
+    "tests/forms-environment/contracts.cjs",
+    "tests/forms-environment/environment-faults.cjs",
+    "tests/forms-environment/forms-repro.cjs",
+    "tests/forms-environment/persistence.cjs",
+    "tests/forms-environment/pwa.cjs",
+    "tests/forms-environment/quality.py",
+    "tests/forms-environment/replay.cjs",
+    "tests/forms-environment/result-area.cjs",
+    "tests/forms-environment/run-regressions.py",
+    "tests/forms-environment/structure-visibility.cjs",
+    "tests/forms-environment/ui.cjs",
+    "tests/forms-environment/verify-results.py"
+  ],
+  "reportFiles": [
+    "REPORT_固有形態怪異背景ライティング一括更新.md",
+    "REPORT_固有形態怪異背景ライティング総合検証.md",
+    "HANDOFF_Work_固有形態怪異背景ライティングSites.md",
+    "CHECKLIST_固有形態怪異背景ライティングAndroid確認.md"
+  ],
+  "artifactFiles": [
+    "validation/forms-environment/summary.json",
+    "validation/forms-environment/protection.json",
+    "validation/forms-environment/original-test-ledger.json",
+    "validation/forms-environment/evidence.zip"
+  ]
+}
