@@ -1,0 +1,102 @@
+{
+  "tests": [
+    {
+      "id": "CTUI-360-640-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-360-800-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-393-640-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-393-800-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-430-640-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-430-800-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-800-360-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-800-393-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-800-430-100",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-360-800-150",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-393-800-150",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    },
+    {
+      "id": "CTUI-430-800-150",
+      "passed": true,
+      "modes": 2,
+      "tags": 14,
+      "tap44": true,
+      "actualIME": false
+    }
+  ],
+  "physicalDevice": false,
+  "actualIME": false
+}

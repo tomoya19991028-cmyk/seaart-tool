@@ -1,0 +1,81 @@
+{
+  "tests": [
+    {
+      "id": "UC01",
+      "passed": true,
+      "keys": [
+        "tables"
+      ],
+      "beforeSHA256": "d4eb3bc0a39ef1e1a78895c81a4686226e7c4ab3248a3e69843294a9e89a4b0d",
+      "afterSHA256": "d4eb3bc0a39ef1e1a78895c81a4686226e7c4ab3248a3e69843294a9e89a4b0d"
+    },
+    {
+      "id": "UC02",
+      "passed": true,
+      "keys": [
+        "producers"
+      ],
+      "beforeSHA256": "1b02a238ec6727cefef24dd80b1ef710943d48b82a1c2a8817c025ccc61f8115",
+      "afterSHA256": "1b02a238ec6727cefef24dd80b1ef710943d48b82a1c2a8817c025ccc61f8115"
+    },
+    {
+      "id": "UC03",
+      "passed": true,
+      "keys": [
+        "normal"
+      ],
+      "beforeSHA256": "f7f3f67efba512b43a6252520e52bf3ff25b94d101ff178fc4da1b25f94d78dc",
+      "afterSHA256": "f7f3f67efba512b43a6252520e52bf3ff25b94d101ff178fc4da1b25f94d78dc"
+    },
+    {
+      "id": "UC04",
+      "passed": true,
+      "keys": [
+        "native"
+      ],
+      "beforeSHA256": "a84c854a386209e5fd44cf7e724cf88d591b1c9bc3c8240733135de6c990ff8a",
+      "afterSHA256": "a84c854a386209e5fd44cf7e724cf88d591b1c9bc3c8240733135de6c990ff8a"
+    },
+    {
+      "id": "UC05",
+      "passed": true,
+      "keys": [
+        "semi",
+        "full"
+      ],
+      "beforeSHA256": "5f3fbc7960f8ecad35f4a24b084e0795e8a589b04732905318992e8b305a2810",
+      "afterSHA256": "5f3fbc7960f8ecad35f4a24b084e0795e8a589b04732905318992e8b305a2810"
+    },
+    {
+      "id": "UC06",
+      "passed": true,
+      "keys": [
+        "horror"
+      ],
+      "beforeSHA256": "cc15cd902d2fa06f93228bdebb4f1da8193b837cebc9dfd9c1c75d5416eedbde",
+      "afterSHA256": "cc15cd902d2fa06f93228bdebb4f1da8193b837cebc9dfd9c1c75d5416eedbde"
+    },
+    {
+      "id": "UC07",
+      "passed": true,
+      "keys": [
+        "manga",
+        "off"
+      ],
+      "beforeSHA256": "290401e381311977455377635e343a4402bdee6686a002bf7082dc3858534360",
+      "afterSHA256": "290401e381311977455377635e343a4402bdee6686a002bf7082dc3858534360"
+    },
+    {
+      "id": "UC08",
+      "passed": true,
+      "keys": [
+        "storage"
+      ],
+      "beforeSHA256": "fe839f53765c7774671a445878c7c08dc7bd022e47dd8e201b28d0450e3bcc1e",
+      "afterSHA256": "fe839f53765c7774671a445878c7c08dc7bd022e47dd8e201b28d0450e3bcc1e"
+    }
+  ],
+  "publicOrigin": false,
+  "physicalDevice": false,
+  "passed": true
+}

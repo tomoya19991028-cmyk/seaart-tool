@@ -1,0 +1,147 @@
+{
+  "at": "2026-10-14T15:11:19.061671+00:00",
+  "productSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "runnerCount": 55,
+  "caseCount": 714,
+  "passed": 714,
+  "failed": 0,
+  "scopeSkipped": [
+    {
+      "id": "R08-Amon",
+      "reason": "New one-eye form deferred; canonical side/era review pending."
+    },
+    {
+      "id": "R08-Takizawa",
+      "reason": "New one-eye form deferred; canonical side/era review pending."
+    },
+    {
+      "id": "R09-Hinami-kagune",
+      "reason": "New composite kagune not implemented in this batch."
+    },
+    {
+      "id": "R24-new-nonhuman",
+      "reason": "New full-body nonhuman forms not implemented in this batch."
+    }
+  ],
+  "suites": [
+    {
+      "name": "inherited-41",
+      "cases": 556,
+      "passed": 556,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/inherited-final-run/verified-results.json"
+    },
+    {
+      "name": "phase1-contracts",
+      "cases": 32,
+      "passed": 32,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/contracts-outfit-fix/results.json"
+    },
+    {
+      "name": "yugioh-selection",
+      "cases": 15,
+      "passed": 15,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/new-extras-outfit-fix/yugioh-selection/results.json"
+    },
+    {
+      "name": "preset-details",
+      "cases": 10,
+      "passed": 10,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/new-extras-outfit-fix/preset-details/results.json"
+    },
+    {
+      "name": "phase1-ui-pwa",
+      "cases": 7,
+      "passed": 7,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/ui-pwa-outfit-fix/results.json"
+    },
+    {
+      "name": "quality",
+      "cases": 21,
+      "passed": 21,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/quality-outfit-fix/results.json"
+    },
+    {
+      "name": "inherited-forms-contracts",
+      "cases": 32,
+      "passed": 32,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/contracts/results.json"
+    },
+    {
+      "name": "inherited-forms-persistence",
+      "cases": 9,
+      "passed": 9,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/persistence/results.json"
+    },
+    {
+      "name": "inherited-forms-candidate-ui",
+      "cases": 6,
+      "passed": 6,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/candidate-ui/results.json"
+    },
+    {
+      "name": "inherited-forms-ui",
+      "cases": 12,
+      "passed": 12,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/ui/results.json"
+    },
+    {
+      "name": "inherited-forms-structure-visibility",
+      "cases": 3,
+      "passed": 3,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/structure-visibility/results.json"
+    },
+    {
+      "name": "inherited-forms-environment-faults",
+      "cases": 2,
+      "passed": 2,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/environment-faults/results.json"
+    },
+    {
+      "name": "inherited-forms-result-area",
+      "cases": 3,
+      "passed": 3,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/result-area/results.json"
+    },
+    {
+      "name": "inherited-forms-pwa",
+      "cases": 4,
+      "passed": 4,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/pwa/results.json"
+    },
+    {
+      "name": "inherited-forms-forms-repro",
+      "cases": 2,
+      "passed": 2,
+      "failed": 0,
+      "source": "validation/tg-yugioh-phase1/attempts/forms-outfit-fix/forms-repro/results.json"
+    }
+  ],
+  "separateMatrices": {
+    "R1": 865,
+    "formsTypeStateStructure": 72,
+    "unsetAbsent": 144,
+    "legacyNormalFulltexts": 252,
+    "legacyMangaFulltexts": 252
+  },
+  "physicalAndroid": false,
+  "actualSeaArt": false,
+  "v3Fixture": "derived from actual v4 export by version change and removing actor form extensions",
+  "outdatedAttemptsIncludedAsFinal": false,
+  "alternativeCases": 14,
+  "regularCases": 700,
+  "unrecoveredOriginalTestFiles": 3
+}

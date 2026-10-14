@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "tests/card-tags/contracts.cjs"
+  ],
+  "cwd": "/workspace/seaart-phase1",
+  "startUTC": "2026-10-14T14:10:18.418539+00:00",
+  "gitHEAD": "3fd1bb9fc34be09d85e3eef71cc1f6122f9054b8",
+  "productSHA256Before": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "testSHA256": "79728d175f04d35b858984985327e9f31fc6aea15ad6330f4a76b8e48e908140",
+  "wrapperSHA256": null,
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-phase1/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-phase1/validation/tg-yugioh-phase1/attempts/inherited-complete/card-contracts"
+  },
+  "physicalDevice": false,
+  "publicOriginTest": false,
+  "exitCode": 0,
+  "endUTC": "2026-10-14T14:14:47.419910+00:00",
+  "productSHA256After": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98"
+}

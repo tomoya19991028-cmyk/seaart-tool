@@ -1,0 +1,9 @@
+{
+  "command": [
+    "node",
+    "tests/tg-yugioh-phase1/replay.cjs",
+    "tests/forms-environment/result-area.cjs"
+  ],
+  "exitCode": 0,
+  "productSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98"
+}

@@ -1,0 +1,407 @@
+{
+  "tests": [
+    {
+      "id": "A01",
+      "passed": true,
+      "detail": {
+        "partial": [
+          {
+            "featureId": "horror-auto-shadow-body-partial",
+            "semanticKey": "horror-auto-shadow-body-partial",
+            "tag": "partially transformed body of living shadows",
+            "weight": 1.2,
+            "continuity": "persistent",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-shadow-tendrils",
+            "semanticKey": "horror-feature-shadow-tendrils",
+            "tag": "shadow tendrils",
+            "weight": 1.2,
+            "continuity": "transient",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-black-mist",
+            "semanticKey": "horror-feature-black-mist",
+            "tag": "black mist",
+            "weight": 1.2,
+            "continuity": "transient",
+            "origin": "auto"
+          }
+        ],
+        "full": [
+          {
+            "featureId": "horror-auto-shadow-body-complete",
+            "semanticKey": "horror-auto-shadow-body-complete",
+            "tag": "fully manifested body of living shadows",
+            "weight": 1.2,
+            "continuity": "persistent",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-shadow-body",
+            "semanticKey": "horror-feature-shadow-body",
+            "tag": "shadow body displaced from torso",
+            "weight": 1.2,
+            "continuity": "persistent",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-black-mist",
+            "semanticKey": "horror-feature-black-mist",
+            "tag": "black mist",
+            "weight": 1.2,
+            "continuity": "transient",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-shadow-delay",
+            "semanticKey": "horror-feature-shadow-delay",
+            "tag": "shadow moving out of sync",
+            "weight": 1.2,
+            "continuity": "transient",
+            "origin": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "A02",
+      "passed": true,
+      "detail": {
+        "state": "complete",
+        "tokens": [
+          {
+            "featureId": "horror-auto-shadow-body-complete",
+            "semanticKey": "horror-auto-shadow-body-complete",
+            "tag": "fully manifested body of living shadows",
+            "weight": 1.2,
+            "continuity": "persistent",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-shadow-body",
+            "semanticKey": "horror-feature-shadow-body",
+            "tag": "shadow body displaced from torso",
+            "weight": 1.2,
+            "continuity": "persistent",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-black-mist",
+            "semanticKey": "horror-feature-black-mist",
+            "tag": "black mist",
+            "weight": 1.2,
+            "continuity": "transient",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-feature-shadow-delay",
+            "semanticKey": "horror-feature-shadow-delay",
+            "tag": "shadow moving out of sync",
+            "weight": 1.2,
+            "continuity": "transient",
+            "origin": "auto"
+          },
+          {
+            "featureId": "horror-auto-shadow-wings-complete",
+            "semanticKey": "horror-auto-shadow-wings-complete",
+            "tag": "fully manifested wings made of living shadows",
+            "weight": 1.2,
+            "continuity": "persistent",
+            "origin": "auto"
+          }
+        ],
+        "removals": [],
+        "conflicts": [],
+        "reasons": [],
+        "effective": {},
+        "structure": {
+          "wings": "present",
+          "horns": "absent",
+          "tail": "unset"
+        },
+        "auto": {
+          "policy": {
+            "enabled": true,
+            "excludedIds": [],
+            "mode": "inherit"
+          },
+          "entries": [
+            {
+              "id": "horror-auto-shadow-body-complete",
+              "label": "全身影化",
+              "group": "四肢・体型",
+              "part": null,
+              "tag": "fully manifested body of living shadows",
+              "weight": 1.2,
+              "definition": {
+                "id": "horror-auto-shadow-body-complete",
+                "label": "全身影化",
+                "tag": "fully manifested body of living shadows",
+                "group": "四肢・体型",
+                "structure": {},
+                "conflict": "horror-auto-body",
+                "material": "shadow",
+                "applicableStates": [
+                  "complete"
+                ],
+                "revision": 1,
+                "continuity": "persistent"
+              },
+              "status": "active"
+            },
+            {
+              "id": "horror-feature-shadow-body",
+              "label": "身体からずれる影体",
+              "group": "四肢・体型",
+              "part": null,
+              "tag": "shadow body displaced from torso",
+              "weight": 1.2,
+              "definition": {
+                "id": "horror-feature-shadow-body",
+                "label": "身体からずれる影体",
+                "group": "四肢・体型",
+                "tag": "shadow body displaced from torso",
+                "source": null,
+                "conflict": null,
+                "structure": {},
+                "continuity": "persistent",
+                "applicableStates": [
+                  "partial",
+                  "complete"
+                ],
+                "defaultWeight": 1,
+                "revision": 1,
+                "semanticKey": "horror-feature-shadow-body"
+              },
+              "status": "active"
+            },
+            {
+              "id": "horror-feature-black-mist",
+              "label": "黒い霧",
+              "group": "演出・動作",
+              "part": null,
+              "tag": "black mist",
+              "weight": 1.2,
+              "definition": {
+                "id": "horror-feature-black-mist",
+                "label": "黒い霧",
+                "group": "演出・動作",
+                "tag": "black mist",
+                "source": null,
+                "conflict": null,
+                "structure": {},
+                "continuity": "transient",
+                "intensityTags": {
+                  "low": "thin black mist",
+                  "medium": "black mist",
+                  "high": "dense black mist"
+                },
+                "applicableStates": [
+                  "partial",
+                  "complete"
+                ],
+                "defaultWeight": 1,
+                "revision": 1,
+                "semanticKey": "horror-feature-black-mist"
+              },
+              "status": "active"
+            },
+            {
+              "id": "horror-feature-shadow-delay",
+              "label": "遅れて動く影",
+              "group": "演出・動作",
+              "part": null,
+              "tag": "shadow moving out of sync",
+              "weight": 1.2,
+              "definition": {
+                "id": "horror-feature-shadow-delay",
+                "label": "遅れて動く影",
+                "group": "演出・動作",
+                "tag": "shadow moving out of sync",
+                "source": null,
+                "conflict": null,
+                "structure": {},
+                "continuity": "transient",
+                "applicableStates": [
+                  "partial",
+                  "complete"
+                ],
+                "defaultWeight": 1,
+                "revision": 1,
+                "semanticKey": "horror-feature-shadow-delay"
+              },
+              "status": "active"
+            },
+            {
+              "id": "horror-auto-shadow-wings-complete",
+              "label": "影の翼（全身）",
+              "group": "翼・角・尻尾",
+              "part": "wings",
+              "tag": "fully manifested wings made of living shadows",
+              "weight": 1.2,
+              "definition": {
+                "id": "horror-auto-shadow-wings-complete",
+                "label": "影の翼（全身）",
+                "tag": "fully manifested wings made of living shadows",
+                "group": "翼・角・尻尾",
+                "structure": {
+                  "wings": "present"
+                },
+                "material": "shadow",
+                "applicableStates": [
+                  "complete"
+                ],
+                "revision": 1,
+                "continuity": "persistent"
+              },
+              "status": "active"
+            }
+          ],
+          "conflicts": [],
+          "reasons": []
+        }
+      }
+    },
+    {
+      "id": "A03",
+      "passed": true,
+      "detail": {
+        "manualPreserved": true
+      }
+    },
+    {
+      "id": "A04",
+      "passed": true,
+      "detail": {
+        "directControls": true
+      }
+    },
+    {
+      "id": "A05",
+      "passed": true,
+      "detail": {
+        "compactDialog": true
+      }
+    },
+    {
+      "id": "A06",
+      "passed": true,
+      "detail": {
+        "validation": true
+      }
+    },
+    {
+      "id": "A07",
+      "passed": true,
+      "detail": {
+        "sharedIntensity": true
+      }
+    },
+    {
+      "id": "A08",
+      "passed": true,
+      "detail": {
+        "otherDialogFooterKept": true
+      }
+    },
+    {
+      "id": "A09",
+      "passed": true,
+      "detail": {
+        "combinations": 12,
+        "rows": [
+          {
+            "type": "霊体",
+            "partial": [
+              "(partially translucent spectral body:1.2)",
+              "(patches of skin turning spectral:1.2)",
+              "(ghostly silhouettes reflected in eyes:1.2)"
+            ],
+            "complete": [
+              "(fully manifested ghostly body:1.2)",
+              "(limbs fading into spectral outlines:1.2)",
+              "(spectral wisps orbiting the body:1.2)",
+              "(ghostly silhouettes reflected in eyes:1.2)"
+            ]
+          },
+          {
+            "type": "異形",
+            "partial": [
+              "(localized body mutations:1.2)",
+              "(forked fingertips:1.2)",
+              "(multi-segmented arms:1.2)"
+            ],
+            "complete": [
+              "(fully mutated aberrant body:1.2)",
+              "(multi-segmented arms:1.2)",
+              "(spiral limb joints:1.2)",
+              "(unequal forearm lengths:1.2)"
+            ]
+          },
+          {
+            "type": "人形",
+            "partial": [
+              "(partially doll-like body:1.2)",
+              "(mask-like face:1.2)",
+              "(ceramic-like skin plates:1.2)"
+            ],
+            "complete": [
+              "(full-body articulated doll form:1.2)",
+              "(segmented facial plates:1.2)",
+              "(ceramic-like skin plates:1.2)",
+              "(spiral limb joints:1.2)"
+            ]
+          },
+          {
+            "type": "獣性",
+            "partial": [
+              "(partial beast transformation:1.2)",
+              "(sharp claws:1.2)",
+              "(beast-like eyes:1.2)"
+            ],
+            "complete": [
+              "(fully transformed beast-like body:1.2)",
+              "(sharp claws:1.2)",
+              "(long fingers:1.2)",
+              "(beast-like eyes:1.2)",
+              "(animal fangs:1.2)"
+            ]
+          },
+          {
+            "type": "影",
+            "partial": [
+              "(partially transformed body of living shadows:1.2)",
+              "(shadow tendrils:1.2)",
+              "(black mist:1.2)"
+            ],
+            "complete": [
+              "(fully manifested body of living shadows:1.2)",
+              "(shadow body displaced from torso:1.2)",
+              "(black mist:1.2)",
+              "(shadow moving out of sync:1.2)"
+            ]
+          },
+          {
+            "type": "呪い",
+            "partial": [
+              "(partially cursed body:1.2)",
+              "(cursed script on forehead:1.2)",
+              "(spreading invasive curse runes:1.2)"
+            ],
+            "complete": [
+              "(body fully overtaken by a curse:1.2)",
+              "(spreading invasive curse runes:1.2)",
+              "(parasitic filaments beneath skin:1.2)",
+              "(curse bindings around limbs:1.2)"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

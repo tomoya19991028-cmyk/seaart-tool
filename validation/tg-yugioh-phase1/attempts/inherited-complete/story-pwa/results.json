@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "SW update keeps old tab and unsaved RAM",
+    "explicit reload receives 84 candidates without losing draft",
+    "offline preset/save/reload exact",
+    "offline new candidate removal Undo",
+    "online recovery keeps actor and panels",
+    "new tags generated after offline recovery"
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

@@ -1,0 +1,14 @@
+{
+  "runner": "story-contracts",
+  "case": "S03",
+  "failure": "page.goto exceeded 30000ms before functional assertions; pageErrors=[]",
+  "testUnmodified": true,
+  "expectedValuesUnchanged": true,
+  "productSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "retry": "Re-run the entire original story-contracts runner alone after current queue; preserve the failed execution. Reuse only other successful exact-product/source executions.",
+  "additionalRunners": {
+    "normal-contracts": "N16 missing prior integrated v5 route; protected HEAD 0dff414 prepared",
+    "boundaries": "hardcoded current route seaart-horror was missing; points to exact current product now",
+    "motif": "legacy stage3 v4 route was missing; protected HEAD 8bd1367 prepared"
+  }
+}

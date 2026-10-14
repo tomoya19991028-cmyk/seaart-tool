@@ -1,0 +1,7 @@
+FAIL N15 page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "http://127.0.0.1:8765/seaart-phase1/index.html", waiting until "load"[22m
+
+browser.newContext: Target page, context or browser has been closed
+    at async test (/workspace/seaart-phase1/tests/normal-first/contracts.cjs:4:221)
+    at async /workspace/seaart-phase1/tests/normal-first/contracts.cjs:20:1

@@ -1,0 +1,20 @@
+PASS N01 horror tab defaults to normal and reload does not persist display mode
+PASS N02 normal candidate selection is immediate and never opens panel preview
+PASS N03 normal candidate deselection and selected-tag removal are immediate
+PASS N04 display-only switches preserve whole data, disk, Undo, drafts and panel IDs
+PASS N05 person1/person2/Creature quick selections stay separate and source profile unchanged
+PASS N06 normal state suppresses selected tags, optional detail sets intensity/weight, normal generation works
+PASS N07 normal state/type/strength/structure use one explicit save without manga preview
+PASS N08 meaningful shared manga removal preserves necessary confirmation without panel settings
+PASS N09 normal quick save failure rolls back disk/RAM/Undo and checkbox
+PASS N10 stale normal detail and quick selector reject concurrent actor changes
+PASS N11 manga mode retains buffered feature preview, cancel, panel overrides and data on return
+PASS N12 explicit manga-editor entry opens the same selected stable panel in manga mode
+PASS N13 normal close retains immediate selection and normal Undo restores one transaction
+PASS N14 normal quick data reloads, mode remains transient and JSON has no display-mode field
+PASS N15 opening normal feature selector before first setting does not create actor or manga IDs
+PASS N16 actual prior integrated v5 data loads with actor, workspace and stable IDs unchanged
+PASS N17 actual second-tab save blocks stale normal quick edit and keeps winner draft
+PASS N18 deleted target while selector open is rejected without uncaught error or save
+PASS N19 new source-feature conflict keeps a normal confirmation and cancel is non-destructive
+PASS N20 reopening tab resets display to normal without changing stored manga data

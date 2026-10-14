@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-14T15:11:19.061671+00:00",
+  "productSHA256": {
+    "index.html": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+    "sw.js": "cd8d2fa1b8ab21749303a6d32d2c9734ed9cd9ffac22c5b934b9d5a6f69aa78c",
+    "src/tokyo-ghoul-phase1.json": "2a52810560c2d00d26a14c537c936274b743f54e3f1537dbf2949ee7a096d92f",
+    "src/person-specific-forms.json": "4e23f4fc1c897f70576c1b293ab2be5ec6e7bdc96ad2a54d18680e54923e9d61",
+    "src/builtin-additions.js": "9e1806d21f351ca33ef11694a72f9bba954dc1f5551fc4c05d65ab2af308e3ca",
+    "src/tg-yugioh-core-edits.json": "54695c9875069b3c46cbc4e0e90d498275cd8444539bd4fe70d6b054f5601439",
+    "scripts/embed-horror.py": "681a73d85d88e87e5443b3d026ef6d54167a952739a89078d957b8d561ec367e",
+    "scripts/build-tg-yugioh-phase1.py": "6dc0dc973feac6ce730599ed9d15fab2e4b931692d4d1935dee8dca38eb4f30a",
+    "scripts/embed-tg-yugioh-phase1.py": "11e20d352d28ab970bccb18d376ce30c0888e66897551a4c575e001ee7506905"
+  },
+  "testSHA256": {
+    "tests/tg-yugioh-phase1/collect-results.py": "37fc0ef10e54405ac261e278ecce64ff1b0f746af93e18a087f3c98ca6aae5fb",
+    "tests/tg-yugioh-phase1/replay-before-gender.cjs": "1e7d490678c4b01f3891394a9c42ab1b0773fdb55ffc5850f27756d498538549",
+    "tests/tg-yugioh-phase1/README.md": "c8a06be443c92a78ca9b985e37a9187a152ed6947439d4d7e2080a807bb0d788",
+    "tests/tg-yugioh-phase1/yugioh-selection.cjs": "fc94ee4e65789882e6bef10bfdd1a845c460b0ca8df2fabd0b71a7e53169143e",
+    "tests/tg-yugioh-phase1/contracts.cjs": "1a0bafd49eddf6b8cc843157d5425252fae93abc238f57a0737185b48dabae88",
+    "tests/tg-yugioh-phase1/run-forms.py": "40bb700a8d72c0ab12784419e505af4df8dbf0d247a18c38de496b6a751d08f4",
+    "tests/tg-yugioh-phase1/baseline-contract.json": "f4c13e54a39679de1d8a5c4fabf1e3f78f194db29e496e285880634a08e7cfcd",
+    "tests/tg-yugioh-phase1/run-inherited.py": "f70f63757c928d06e8e8f358f214020120a24163b9ee976c6b0ed0fe1e67fbc5",
+    "tests/tg-yugioh-phase1/run-new-extras.py": "9b15b95d3ec57917ffd9c319f30c83dba77518a9d6d89d4897365f4c980f6c66",
+    "tests/tg-yugioh-phase1/preset-details.cjs": "60513eddb05320323e532ffbcdd3ec4a24229716576346aa9780fbc15896ce42",
+    "tests/tg-yugioh-phase1/baseline-existing-values.json": "faeda6b90dc2a0fd72e1f9a4d0fcecff70c821e70aaa9ea3602038956e93820d",
+    "tests/tg-yugioh-phase1/replay.cjs": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+    "tests/tg-yugioh-phase1/route.cjs": "cf70bfa47fe22ea05bc512f3e076eaaba90581d781d5ebc5f77bef8bcfa31930",
+    "tests/tg-yugioh-phase1/quality.py": "3729a2710871d7eb32ab8004595bc3557dc35a6ec27c86bb55ea548b2d235ff5",
+    "tests/tg-yugioh-phase1/verify-inherited.py": "ed4b39d892b802783f37e30673f387a77bc47fdbad3864426418bd326e1aeebc",
+    "tests/tg-yugioh-phase1/prepare-baselines.py": "d373aaeacbdaeee041c7b55f15054d833100ba899b0c8fe0b3f0918cfa9a326d",
+    "tests/tg-yugioh-phase1/ui-pwa.cjs": "17bec00b067264f9e7746bf7291aba419b25a369328cb8145a2ba1140b9ae5ac"
+  },
+  "gitDiffCheckWithCRLF": true,
+  "physicalAndroid": false,
+  "actualSeaArt": false
+}

@@ -1,0 +1,14 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "versions": {
+    "node": "v24.19.0",
+    "python": "Python 3.12.14",
+    "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+    "playwright": "1.62.1"
+  },
+  "cpuQuota": "200000 100000",
+  "browserRunnerLimit": 2,
+  "target": "localhost isolated browser contexts",
+  "physicalAndroid": false,
+  "actualSeaArt": false
+}

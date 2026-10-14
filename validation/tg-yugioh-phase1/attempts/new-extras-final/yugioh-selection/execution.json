@@ -1,0 +1,9 @@
+{
+  "command": [
+    "node",
+    "tests/tg-yugioh-phase1/yugioh-selection.cjs"
+  ],
+  "exitCode": 0,
+  "productSHA256": "d8ad90ae1a46c5724a54c3d7593614ba778c10a3df804edb965e06a4e84ed4b6",
+  "testSHA256": "fc94ee4e65789882e6bef10bfdd1a845c460b0ca8df2fabd0b71a7e53169143e"
+}

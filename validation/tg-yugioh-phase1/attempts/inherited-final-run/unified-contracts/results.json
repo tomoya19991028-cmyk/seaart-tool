@@ -1,0 +1,201 @@
+{
+  "tests": [
+    {
+      "id": "U01",
+      "passed": true,
+      "detail": {
+        "basic": 6,
+        "pagerHidden": true,
+        "pageInfo": "1 / 1",
+        "mf": false,
+        "featureGroup": true
+      }
+    },
+    {
+      "id": "U02",
+      "passed": true,
+      "detail": {
+        "allListed": true
+      }
+    },
+    {
+      "id": "U03",
+      "passed": true,
+      "detail": {
+        "count": 94,
+        "unique": 94,
+        "all": true,
+        "wolf": {
+          "kind": "original",
+          "group": "動物"
+        },
+        "dragon": {
+          "kind": "original",
+          "group": "ドラゴン"
+        },
+        "copyright": 60
+      }
+    },
+    {
+      "id": "U04",
+      "passed": true,
+      "detail": {
+        "clothing6": true,
+        "equipment4": true
+      }
+    },
+    {
+      "id": "U05",
+      "passed": true,
+      "detail": {
+        "bothModes": true
+      }
+    },
+    {
+      "id": "U06",
+      "passed": true,
+      "detail": {
+        "favoriteUndo": true
+      }
+    },
+    {
+      "id": "U07",
+      "passed": true,
+      "detail": {
+        "noneBeforePad": true
+      }
+    },
+    {
+      "id": "U08",
+      "passed": true,
+      "detail": {
+        "groupEditSaveReload": true
+      }
+    },
+    {
+      "id": "U09",
+      "passed": true,
+      "detail": {
+        "draftOnlyOpen": true,
+        "explicitModeSaveUndo": true
+      }
+    },
+    {
+      "id": "U10",
+      "passed": true,
+      "detail": {
+        "shieldSubsetNoWeaponLoss": true
+      }
+    },
+    {
+      "id": "U11",
+      "passed": true,
+      "detail": {
+        "favoriteDoesNotSelect": true
+      }
+    },
+    {
+      "id": "U12",
+      "passed": true,
+      "detail": {
+        "failed": true,
+        "ok": false,
+        "unchanged": true,
+        "star": false
+      }
+    },
+    {
+      "id": "U13",
+      "passed": true,
+      "detail": {
+        "bufferSaveUndo": true
+      }
+    },
+    {
+      "id": "U14",
+      "passed": true,
+      "detail": {
+        "count": 61,
+        "kept": true,
+        "other": true,
+        "selected": "wolf"
+      }
+    },
+    {
+      "id": "U15",
+      "passed": true,
+      "detail": {
+        "ordinaryFeatureIndependent": true
+      }
+    },
+    {
+      "id": "U16",
+      "passed": true,
+      "detail": {
+        "failed": true,
+        "unchanged": true,
+        "star": false
+      }
+    },
+    {
+      "id": "U17",
+      "passed": true,
+      "detail": {
+        "tenUndoCap": true
+      }
+    },
+    {
+      "id": "U18",
+      "passed": true,
+      "detail": {
+        "rejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "id": "U19",
+      "passed": true,
+      "detail": {
+        "personManagementSaveUndo": true
+      }
+    },
+    {
+      "id": "U20",
+      "passed": true,
+      "detail": {
+        "overviewRoutesToFeatures": true
+      }
+    },
+    {
+      "id": "U21",
+      "passed": true,
+      "detail": {
+        "clearPositionUndo": true,
+        "independentDepth": true
+      }
+    },
+    {
+      "id": "U22",
+      "passed": true,
+      "detail": {
+        "unregisteredBasicDisabled": true
+      }
+    },
+    {
+      "id": "U23",
+      "passed": true,
+      "detail": {
+        "legacyMissingTypeEdit": true
+      }
+    },
+    {
+      "id": "U24",
+      "passed": true,
+      "detail": {
+        "legacyFalseFavoriteToggleUndo": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "passed": true
+}

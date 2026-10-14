@@ -1,0 +1,189 @@
+{
+  "tests": [
+    {
+      "id": "N01",
+      "label": "horror tab defaults to normal and reload does not persist display mode",
+      "passed": true,
+      "detail": {
+        "mode": "normal",
+        "normal": "true",
+        "manga": "false"
+      }
+    },
+    {
+      "id": "N02",
+      "label": "normal candidate selection is immediate and never opens panel preview",
+      "passed": true,
+      "detail": {
+        "selected": true,
+        "title": "頭・顔 / 通常画像",
+        "panelSelect": false,
+        "keyboard": false,
+        "undo": 1
+      }
+    },
+    {
+      "id": "N03",
+      "label": "normal candidate deselection and selected-tag removal are immediate",
+      "passed": true,
+      "detail": {
+        "selectedTagRemoval": true
+      }
+    },
+    {
+      "id": "N04",
+      "label": "display-only switches preserve whole data, disk, Undo, drafts and panel IDs",
+      "passed": true,
+      "detail": {
+        "dataAndIDsUnchanged": true,
+        "cards": [
+          {
+            "id": "12",
+            "disabled": true
+          },
+          {
+            "id": "13",
+            "disabled": true
+          },
+          {
+            "id": "14",
+            "disabled": true
+          },
+          {
+            "id": "15",
+            "disabled": true
+          },
+          {
+            "id": "16",
+            "disabled": true
+          },
+          {
+            "id": "17",
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05",
+      "label": "person1/person2/Creature quick selections stay separate and source profile unchanged",
+      "passed": true,
+      "detail": {
+        "a": [
+          "horror-feature-mask-face"
+        ],
+        "b": [
+          "horror-feature-long-fingers"
+        ],
+        "c": [
+          "horror-feature-gray-skin"
+        ]
+      }
+    },
+    {
+      "id": "N06",
+      "label": "normal state suppresses selected tags, optional detail sets intensity/weight, normal generation works",
+      "passed": true,
+      "detail": {
+        "on": true,
+        "off": true,
+        "selected": true
+      }
+    },
+    {
+      "id": "N07",
+      "label": "normal state/type/strength/structure use one explicit save without manga preview",
+      "passed": true,
+      "detail": {
+        "state": "complete",
+        "intensity": "high",
+        "wings": "present",
+        "mode": "normal"
+      }
+    },
+    {
+      "id": "N08",
+      "label": "meaningful shared manga removal preserves necessary confirmation without panel settings",
+      "passed": true,
+      "detail": {
+        "necessaryConfirmation": true,
+        "noPanelDialog": true
+      }
+    },
+    {
+      "id": "N09",
+      "label": "normal quick save failure rolls back disk/RAM/Undo and checkbox",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "unchecked": true,
+        "error": true
+      }
+    },
+    {
+      "id": "N10",
+      "label": "stale normal detail and quick selector reject concurrent actor changes",
+      "passed": true,
+      "detail": {
+        "staleQuickRejected": true,
+        "staleDetailRejected": true
+      }
+    },
+    {
+      "id": "N11",
+      "label": "manga mode retains buffered feature preview, cancel, panel overrides and data on return",
+      "passed": true,
+      "detail": {
+        "mangaCancel": true,
+        "localOverrideKept": true
+      }
+    },
+    {
+      "id": "N12",
+      "label": "explicit manga-editor entry opens the same selected stable panel in manga mode",
+      "passed": true,
+      "detail": {
+        "mode": "manga",
+        "title": "コマの怪異設定",
+        "selected": "panel-d31c2f0f-d025-42af-b79e-1e8e44395992",
+        "id": "panel-d31c2f0f-d025-42af-b79e-1e8e44395992",
+        "ids": [
+          "panel-1e5a639c-9af1-495b-a22a-7eaee07b3fe2",
+          "panel-d31c2f0f-d025-42af-b79e-1e8e44395992",
+          "panel-0621286f-689b-4acd-ba55-f6b206326de3",
+          "panel-a54f1658-ea10-41ad-bd16-8c6936b138d1",
+          "panel-a2ace3ee-5e8f-4104-8b73-2ca768904a0e",
+          "panel-0a02195c-0ee0-4a5c-a4c9-3d926aba76bc"
+        ]
+      }
+    },
+    {
+      "id": "N13",
+      "label": "normal close retains immediate selection and normal Undo restores one transaction",
+      "passed": true,
+      "detail": {
+        "closeRetainsSelection": true,
+        "oneUndo": true
+      }
+    },
+    {
+      "id": "N14",
+      "label": "normal quick data reloads, mode remains transient and JSON has no display-mode field",
+      "passed": true,
+      "detail": {
+        "reload": true,
+        "schemaUnchanged": true
+      }
+    },
+    {
+      "id": "N15",
+      "label": "opening normal feature selector before first setting does not create actor or manga IDs",
+      "passed": false,
+      "error": "page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-phase1/index.html\", waiting until \"load\"\u001b[22m\n\n    at /workspace/seaart-phase1/tests/normal-first/contracts.cjs:19:209\n    at async test (/workspace/seaart-phase1/tests/normal-first/contracts.cjs:4:488)\n    at async /workspace/seaart-phase1/tests/normal-first/contracts.cjs:19:1",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

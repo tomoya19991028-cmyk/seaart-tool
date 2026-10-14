@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-14T13:34:18.111927+00:00",
+  "issue": "New Uta outfit ownership would restrict the existing Genos outfit value. New outfitSets entry also duplicated an existing outfit set.",
+  "fix": "Reuse the existing catalog outfit and part definition; remove the redundant new candidate and set. Keep original Genos ownership, add Uta through the existing preset owner index.",
+  "productSHA256Before": "d8ad90ae1a46c5724a54c3d7593614ba778c10a3df804edb965e06a4e84ed4b6",
+  "productSHA256After": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "newCandidates": 46,
+  "newOutfitSets": 14,
+  "reusedExistingOutfits": [
+    "black sleeveless shirt and dark trousers"
+  ],
+  "regressionGuards": [
+    "TG18 all old preset outfit owners + Genos/Uta shared",
+    "Q21 no new candidate overrides an existing option"
+  ],
+  "oldProductExecutionsCountAsFinal": false
+}

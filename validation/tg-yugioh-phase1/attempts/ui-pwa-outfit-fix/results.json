@@ -1,0 +1,53 @@
+{
+  "tests": [
+    {
+      "id": "SHARED-360",
+      "passed": true,
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "yugioh": 14,
+      "tokyoGhoul": 21
+    },
+    {
+      "id": "SHARED-393",
+      "passed": true,
+      "viewport": {
+        "width": 393,
+        "height": 800
+      },
+      "yugioh": 14,
+      "tokyoGhoul": 21
+    },
+    {
+      "id": "SHARED-430",
+      "passed": true,
+      "viewport": {
+        "width": 430,
+        "height": 800
+      },
+      "yugioh": 14,
+      "tokyoGhoul": 21
+    },
+    {
+      "id": "PWA-TG01",
+      "passed": true
+    },
+    {
+      "id": "PWA-TG02",
+      "passed": true
+    },
+    {
+      "id": "PWA-TG03",
+      "passed": true
+    },
+    {
+      "id": "PWA-TG04",
+      "passed": true
+    }
+  ],
+  "physicalDevice": false,
+  "seaArtGeneration": false,
+  "publicOrigin": false
+}

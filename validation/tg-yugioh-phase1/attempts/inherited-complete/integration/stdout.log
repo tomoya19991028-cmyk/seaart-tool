@@ -1,0 +1,17 @@
+PASS Z01 creation and reimport refuse pending JSON without mutation
+PASS Z02 reimport invalidates confirmed original-appearance dependency and stale commit plan
+PASS Z03 reimport rollback at five keys, render, and stale preview preserves complete state
+PASS Z04 creation save failure retains horror drafts, trash, deletion log, and Creature
+PASS Z05 receipt, reimport, ordinary Undo, and draft Undo remain independent
+PASS Z06 twelve reimports cap normal Undo at ten and remove exactly one
+PASS Z07 partial commit then reimport preserves applied settings and rechecks remaining items
+PASS Z08 reimport during native PNG decode and panel move maintains stable ID
+PASS Z09 named save, history restoration, reload retain both features and independent workspace
+PASS Z11 real JSON read pending rejects reimport and creation before confirmation
+PASS Z12 combined v5 JSON imports actor settings and merges selected draft and trash
+PASS Z13 stale second tab cannot reimport or overwrite winning draft
+PASS Z14 reimport save failure followed by normal Undo keeps profile UUID and workspace
+PASS Z15 motif-person horror does not change source or another person, normal panel suppresses tags
+PASS Z16 reimport after original-feature exclude keeps policies and masks updated source tags
+PASS Z17 reimport rollback failure retains journal and original RAM, recovery restores complete v5
+PASS Z18 reimport retains orphan, rescue pending, trash and deletion records after reload

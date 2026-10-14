@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "isolated online new cache",
+    "offline real card tap saves without dialog",
+    "offline one Undo restores tag",
+    "offline boot reload restores tag and normal mode",
+    "offline removal survives reload",
+    "online return preserves data without error"
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

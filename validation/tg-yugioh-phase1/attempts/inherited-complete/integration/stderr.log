@@ -1,0 +1,7 @@
+FAIL Z10 page.evaluate: Error: 取込み項目が不正です
+    at afAssert (http://127.0.0.1:8765/seaart-tool/index.html:1259:63)
+    at mfBuildCreatePlan (http://127.0.0.1:8765/seaart-tool/index.html:9334:77)
+    at mfCreatePerson (http://127.0.0.1:8765/seaart-tool/index.html:9342:13)
+    at eval (eval at evaluate (:311:30), <anonymous>:1:399)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)

@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "id": "AP01",
+      "passed": true,
+      "detail": {
+        "before": {
+          "shared": [
+            "(partial beast transformation:1.2)",
+            "(sharp claws:1.2)",
+            "(beast-like eyes:1.2)"
+          ],
+          "positive": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 4 clearly separated panels, one full-width top panel, two side-by-side middle panels, and one full-width bottom panel panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 1: panel 1, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 2: panel 2, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 3: panel 3, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 4: panel 4, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2)",
+          "negative": "monochrome, grayscale, wrong panel count, missing panel, extra panel, merged panels, broken panel borders, fused bodies, merged characters, blended faces, inconsistent character appearance, duplicate limbs, text, speech bubbles, lettering, watermark, worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, logo",
+          "panels": [
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 1, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs",
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 2, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs",
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 3, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs",
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 4, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs"
+          ]
+        },
+        "after": {
+          "shared": [
+            "(partial beast transformation:1.2)",
+            "(sharp claws:1.2)",
+            "(beast-like eyes:1.2)"
+          ],
+          "positive": "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 4 clearly separated panels, one full-width top panel, two side-by-side middle panels, and one full-width bottom panel panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 1: panel 1, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 2: panel 2, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 3: panel 3, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Panel 4: panel 4, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2)",
+          "negative": "monochrome, grayscale, wrong panel count, missing panel, extra panel, merged panels, broken panel borders, fused bodies, merged characters, blended faces, inconsistent character appearance, duplicate limbs, text, speech bubbles, lettering, watermark, worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, logo",
+          "panels": [
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 1, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs",
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 2, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs",
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 3, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs",
+            "masterpiece, best quality, detailed face, detailed eyes, full-color anime manga illustration, Character A: adult woman, 共通の確認, white shirt, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), panel 4, 1 person, Character A: (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), Character A, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2), consistent character designs"
+          ]
+        },
+        "manual": "manual"
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

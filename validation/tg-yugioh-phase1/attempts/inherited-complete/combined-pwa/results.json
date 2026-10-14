@@ -1,0 +1,7 @@
+{
+  "tests": [],
+  "publicOrigin": false,
+  "physicalDevice": false,
+  "passed": false,
+  "error": "AssertionError [ERR_ASSERTION]: initial horror cache installed\n    at check (/workspace/seaart-phase1/tests/integration/pwa.cjs:4:247)\n    at /workspace/seaart-phase1/tests/integration/pwa.cjs:4:1961"
+}

@@ -1,0 +1,24 @@
+R1 contracts completed: 49
+R1 full-text phase: before
+R1 matrix: people
+R1 matrix: native
+R1 matrix: semi
+R1 matrix: full
+R1 matrix: person1
+R1 matrix: person2
+R1 matrix: different
+R1 matrix: same
+R1 matrix: native-semi
+R1 matrix: native-full
+R1 full-text phase: after
+R1 matrix: people
+R1 matrix: native
+R1 matrix: semi
+R1 matrix: full
+R1 matrix: person1
+R1 matrix: person2
+R1 matrix: different
+R1 matrix: same
+R1 matrix: native-semi
+R1 matrix: native-full
+PASS R1 49 contracts; { normal: 210, manga: 210, panels: 420 } full-text pairs and marker non-output

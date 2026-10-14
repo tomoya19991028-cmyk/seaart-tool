@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "tests/horror-auto/shared-ui.cjs"
+  ],
+  "cwd": "/workspace/seaart-phase1",
+  "startUTC": "2026-10-14T13:33:55.810701+00:00",
+  "gitHEAD": "3fd1bb9fc34be09d85e3eef71cc1f6122f9054b8",
+  "productSHA256Before": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "testSHA256": "76f793bd085b9f2de80ebe026ababb211e43e94130e37ebf718ab638a61a4e4e",
+  "wrapperSHA256": null,
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-phase1/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-phase1/validation/tg-yugioh-phase1/attempts/inherited-outfit-fix/auto-shared-ui"
+  },
+  "physicalDevice": false,
+  "publicOriginTest": false,
+  "exitCode": 0,
+  "endUTC": "2026-10-14T13:34:08.520482+00:00",
+  "productSHA256After": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98"
+}

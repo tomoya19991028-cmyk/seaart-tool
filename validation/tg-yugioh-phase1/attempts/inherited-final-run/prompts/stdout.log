@@ -1,0 +1,8 @@
+PASS A-only
+PASS B-only
+PASS different-A-B
+PASS person-creature
+PASS panel-normal
+PASS local-overrides-global
+PASS weighted-intensity
+PASS replace-exclude

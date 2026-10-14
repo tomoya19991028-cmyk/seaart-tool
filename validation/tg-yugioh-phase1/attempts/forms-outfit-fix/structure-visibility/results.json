@@ -1,0 +1,365 @@
+{
+  "tests": [
+    {
+      "id": "VISIBLE-360-640-1-normal",
+      "passed": true,
+      "boxes": [
+        {
+          "part": "wings",
+          "b": {
+            "top": 471,
+            "bottom": 515,
+            "height": 44,
+            "left": 19,
+            "right": 67
+          },
+          "card": {
+            "top": 432,
+            "bottom": 569
+          },
+          "grid": {
+            "top": 251,
+            "bottom": 515
+          },
+          "centerHit": true
+        },
+        {
+          "part": "horns",
+          "b": {
+            "top": 471,
+            "bottom": 515,
+            "height": 44,
+            "left": 70,
+            "right": 118
+          },
+          "card": {
+            "top": 432,
+            "bottom": 569
+          },
+          "grid": {
+            "top": 251,
+            "bottom": 515
+          },
+          "centerHit": true
+        },
+        {
+          "part": "tail",
+          "b": {
+            "top": 471,
+            "bottom": 515,
+            "height": 44,
+            "left": 121,
+            "right": 169
+          },
+          "card": {
+            "top": 432,
+            "bottom": 569
+          },
+          "grid": {
+            "top": 251,
+            "bottom": 515
+          },
+          "centerHit": true
+        },
+        {
+          "part": "tentacles",
+          "b": {
+            "top": 464,
+            "bottom": 508,
+            "height": 44,
+            "left": 19,
+            "right": 67
+          },
+          "card": {
+            "top": 378,
+            "bottom": 515
+          },
+          "grid": {
+            "top": 251,
+            "bottom": 515
+          },
+          "centerHit": true
+        },
+        {
+          "part": "extraArms",
+          "b": {
+            "top": 464,
+            "bottom": 508,
+            "height": 44,
+            "left": 70,
+            "right": 118
+          },
+          "card": {
+            "top": 378,
+            "bottom": 515
+          },
+          "grid": {
+            "top": 251,
+            "bottom": 515
+          },
+          "centerHit": true
+        },
+        {
+          "part": "extraLegs",
+          "b": {
+            "top": 464,
+            "bottom": 508,
+            "height": 44,
+            "left": 121,
+            "right": 169
+          },
+          "card": {
+            "top": 378,
+            "bottom": 515
+          },
+          "grid": {
+            "top": 251,
+            "bottom": 515
+          },
+          "centerHit": true
+        }
+      ]
+    },
+    {
+      "id": "VISIBLE-360-640-1.5-normal",
+      "passed": true,
+      "boxes": [
+        {
+          "part": "wings",
+          "b": {
+            "top": 359,
+            "bottom": 426.84375,
+            "height": 67.84375,
+            "left": 19,
+            "right": 67
+          },
+          "card": {
+            "top": 309,
+            "bottom": 524
+          },
+          "grid": {
+            "top": 314,
+            "bottom": 472
+          },
+          "centerHit": true
+        },
+        {
+          "part": "horns",
+          "b": {
+            "top": 359,
+            "bottom": 426.84375,
+            "height": 67.84375,
+            "left": 70,
+            "right": 118
+          },
+          "card": {
+            "top": 309,
+            "bottom": 524
+          },
+          "grid": {
+            "top": 314,
+            "bottom": 472
+          },
+          "centerHit": true
+        },
+        {
+          "part": "tail",
+          "b": {
+            "top": 359,
+            "bottom": 426.84375,
+            "height": 67.84375,
+            "left": 121,
+            "right": 169
+          },
+          "card": {
+            "top": 309,
+            "bottom": 524
+          },
+          "grid": {
+            "top": 314,
+            "bottom": 472
+          },
+          "centerHit": true
+        },
+        {
+          "part": "tentacles",
+          "b": {
+            "top": 384.84375,
+            "bottom": 471.96875,
+            "height": 87.125,
+            "left": 19,
+            "right": 67
+          },
+          "card": {
+            "top": 264,
+            "bottom": 479
+          },
+          "grid": {
+            "top": 314,
+            "bottom": 472
+          },
+          "centerHit": true
+        },
+        {
+          "part": "extraArms",
+          "b": {
+            "top": 384.84375,
+            "bottom": 471.96875,
+            "height": 87.125,
+            "left": 70,
+            "right": 118
+          },
+          "card": {
+            "top": 264,
+            "bottom": 479
+          },
+          "grid": {
+            "top": 314,
+            "bottom": 472
+          },
+          "centerHit": true
+        },
+        {
+          "part": "extraLegs",
+          "b": {
+            "top": 384.84375,
+            "bottom": 471.96875,
+            "height": 87.125,
+            "left": 121,
+            "right": 169
+          },
+          "card": {
+            "top": 264,
+            "bottom": 479
+          },
+          "grid": {
+            "top": 314,
+            "bottom": 472
+          },
+          "centerHit": true
+        }
+      ]
+    },
+    {
+      "id": "VISIBLE-393-800-1.5-manga",
+      "passed": true,
+      "boxes": [
+        {
+          "part": "wings",
+          "b": {
+            "top": 445,
+            "bottom": 518.0625,
+            "height": 73.0625,
+            "left": 19,
+            "right": 72.5
+          },
+          "card": {
+            "top": 395,
+            "bottom": 620
+          },
+          "grid": {
+            "top": 342,
+            "bottom": 620
+          },
+          "centerHit": true
+        },
+        {
+          "part": "horns",
+          "b": {
+            "top": 445,
+            "bottom": 518.0625,
+            "height": 73.0625,
+            "left": 75.5,
+            "right": 129
+          },
+          "card": {
+            "top": 395,
+            "bottom": 620
+          },
+          "grid": {
+            "top": 342,
+            "bottom": 620
+          },
+          "centerHit": true
+        },
+        {
+          "part": "tail",
+          "b": {
+            "top": 445,
+            "bottom": 518.0625,
+            "height": 73.0625,
+            "left": 132,
+            "right": 185.5
+          },
+          "card": {
+            "top": 395,
+            "bottom": 620
+          },
+          "grid": {
+            "top": 342,
+            "bottom": 620
+          },
+          "centerHit": true
+        },
+        {
+          "part": "tentacles",
+          "b": {
+            "top": 521.0625,
+            "bottom": 613.40625,
+            "height": 92.34375,
+            "left": 19,
+            "right": 72.5
+          },
+          "card": {
+            "top": 395,
+            "bottom": 620
+          },
+          "grid": {
+            "top": 342,
+            "bottom": 620
+          },
+          "centerHit": true
+        },
+        {
+          "part": "extraArms",
+          "b": {
+            "top": 521.0625,
+            "bottom": 613.40625,
+            "height": 92.34375,
+            "left": 75.5,
+            "right": 129
+          },
+          "card": {
+            "top": 395,
+            "bottom": 620
+          },
+          "grid": {
+            "top": 342,
+            "bottom": 620
+          },
+          "centerHit": true
+        },
+        {
+          "part": "extraLegs",
+          "b": {
+            "top": 521.0625,
+            "bottom": 613.40625,
+            "height": 92.34375,
+            "left": 132,
+            "right": 185.5
+          },
+          "card": {
+            "top": 395,
+            "bottom": 620
+          },
+          "grid": {
+            "top": 342,
+            "bottom": 620
+          },
+          "centerHit": true
+        }
+      ]
+    }
+  ],
+  "physicalDevice": false
+}

@@ -1,0 +1,35 @@
+PASS I01 10-entry limit: receipt Undo preserves all other nine entries
+PASS I02 multiple partial commits and repeated real Undo
+PASS I03 editing another setting before Undo does not unconfirm the receipt
+PASS I04 editing the applied draft candidate then generation Undo preserves the edit
+PASS I05 candidate definition change invalidates a prepared multi-item commit
+PASS I06 conflicting same-field candidates leave a separately valid item atomic
+PASS I07 multi-item commit write failure restores RAM/disk/both Undo histories
+PASS I08 real uploaded images/pixels/payload survive move, delete, and two Undo operations
+PASS I09 panel forward-operation write failure preserves actual images and placement
+PASS I10 panel Undo write failure must preserve state/images/history and avoid success
+PASS I11 pending image decode follows panel ID after reorder
+PASS I12 pending image decode is canceled when its target panel was explicitly deleted
+PASS I13 hidden-slot insert rejection protects image/data/settings of the sixth slot
+PASS I14 merge preview invalidates after a new local draft edit
+PASS I15 source actor deletion and manual mapping never use matching names automatically
+PASS I16 reload preserves receipt/workspace but does not fabricate session Undo
+PASS I17 draft Undo of trash restore preserves a coherent deletion/restoration sequence
+PASS I18 named save JSON carries horror settings and explicitly selected draft/trash
+PASS I19 horror-setting Undo write failure preserves RAM/disk/history
+PASS I20 actual storage snapshots at six commit cut points recover one complete bundle
+PASS I21 two actual tabs reject stale writer without discarding either draft
+PASS I22 actual JSON import preserves local unresolved/deletion/recovery data and merges selected draft/trash
+PASS I23 count 1 through 6 and reset preserve old draft references without guessing new IDs
+PASS I25 receipt Undo save failure retains confirmed settings and all history entries
+PASS I26 same-field edits block direct receipt rollback, and two real Undo steps remain coherent
+PASS I27 draft and generation Undo alternate without crossing histories at ten entries
+PASS I28 reload persists panel IDs/settings but keeps images and placement session-only
+PASS I29 real browser localStorage exhaustion rejects save without touching the saved bundle
+PASS I30 real pending File.text import blocks editing until import completes
+PASS I31 ordinary art-style Undo after partial commit is atomic on save failure
+PASS I32 plain working-state Undo save failure is atomic without any horror data
+PASS I33 ordinary edit Undo then receipt Undo preserves draft workspace and correct style
+PASS I34 already-focused ordinary text field cannot edit or save while JSON reading is pending
+PASS I35 invalid JSON and canceled import always restore the previous UI lock states
+PASS I36 real JSON import save failure restores RAM/disk/histories and unlocks input

@@ -1,0 +1,66 @@
+{
+  "tests": [
+    {
+      "id": "P01",
+      "scenario": "A-only",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    },
+    {
+      "id": "P02",
+      "scenario": "B-only",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    },
+    {
+      "id": "P03",
+      "scenario": "different-A-B",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    },
+    {
+      "id": "P04",
+      "scenario": "person-creature",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    },
+    {
+      "id": "P05",
+      "scenario": "panel-normal",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    },
+    {
+      "id": "P06",
+      "scenario": "local-overrides-global",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    },
+    {
+      "id": "P07",
+      "scenario": "weighted-intensity",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    },
+    {
+      "id": "P08",
+      "scenario": "replace-exclude",
+      "passed": true,
+      "rows": 21,
+      "error": null
+    }
+  ],
+  "physicalDevice": false,
+  "seaArtImagesGenerated": false,
+  "passed": true,
+  "fullTextRows": 168,
+  "normalExplicitAttributionRows": 112,
+  "separationNoneLimitation": "Existing none mode emits a shared list; actor resolver isolation is tested but explicit normal actor blocks are intentionally absent."
+}

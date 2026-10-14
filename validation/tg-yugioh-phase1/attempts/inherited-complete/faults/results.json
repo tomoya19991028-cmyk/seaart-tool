@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "fault": "settings",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "working",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "history",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "marker",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "journal",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "journal-refresh",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "quota",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "encoding",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "validation",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "render",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "stale",
+      "rejected": true,
+      "unchanged": true,
+      "blocked": false,
+      "journal": false,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "interleaved",
+      "rejected": true,
+      "unchanged": false,
+      "blocked": false,
+      "journal": true,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "rollback",
+      "rejected": true,
+      "unchanged": false,
+      "blocked": true,
+      "journal": true,
+      "applied": false,
+      "undo": 3,
+      "passed": true
+    },
+    {
+      "fault": "journal-remove",
+      "rejected": false,
+      "unchanged": false,
+      "blocked": false,
+      "journal": true,
+      "applied": true,
+      "undo": 4,
+      "passed": true
+    }
+  ]
+}

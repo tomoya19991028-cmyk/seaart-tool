@@ -1,0 +1,319 @@
+{
+  "tests": [
+    {
+      "id": "TG01",
+      "passed": true,
+      "detail": {
+        "oldRows": 1390,
+        "newRows": 15,
+        "oldForms": 11,
+        "newForms": 8
+      }
+    },
+    {
+      "id": "TG02",
+      "passed": true,
+      "detail": [
+        {
+          "id": "character-extension-tg-amon",
+          "standard": "form-person-character-extension-tg-amon-standard"
+        },
+        {
+          "id": "character-extension-tg-arima",
+          "standard": "form-person-character-extension-tg-arima-standard"
+        },
+        {
+          "id": "character-extension-tg-hide",
+          "standard": "form-person-character-extension-tg-hide-standard"
+        },
+        {
+          "id": "character-extension-tg-nishiki",
+          "standard": "form-person-character-extension-tg-nishiki-standard"
+        },
+        {
+          "id": "character-extension-tg-yoshimura",
+          "standard": "form-person-character-extension-tg-yoshimura-standard"
+        },
+        {
+          "id": "character-extension-tg-eto",
+          "standard": "form-person-character-extension-tg-eto-standard"
+        },
+        {
+          "id": "character-extension-tg-tatara",
+          "standard": "form-person-character-extension-tg-tatara-standard"
+        },
+        {
+          "id": "character-extension-tg-uta",
+          "standard": "form-person-character-extension-tg-uta-standard"
+        },
+        {
+          "id": "character-extension-tg-hinami",
+          "standard": "form-person-character-extension-tg-hinami-standard"
+        },
+        {
+          "id": "character-extension-tg-takizawa",
+          "standard": "form-person-character-extension-tg-takizawa-standard"
+        },
+        {
+          "id": "character-extension-tg-saiko",
+          "standard": "form-person-character-extension-tg-saiko-standard"
+        },
+        {
+          "id": "character-extension-tg-urie",
+          "standard": "form-person-character-extension-tg-urie-standard"
+        },
+        {
+          "id": "character-extension-tg-shirazu",
+          "standard": "form-person-character-extension-tg-shirazu-standard"
+        },
+        {
+          "id": "character-extension-tg-akira",
+          "standard": "form-person-character-extension-tg-akira-standard"
+        },
+        {
+          "id": "character-extension-tg-yomo",
+          "standard": "form-person-character-extension-tg-yomo-standard"
+        }
+      ]
+    },
+    {
+      "id": "TG03",
+      "passed": true,
+      "detail": {
+        "allReferencesValid": true
+      }
+    },
+    {
+      "id": "TG04",
+      "passed": true,
+      "detail": [
+        "Ken Kaneki (Tokyo Ghoul)",
+        "Touka Kirishima (Tokyo Ghoul)",
+        "Rize Kamishiro (Tokyo Ghoul)",
+        "Ayato Kirishima (Tokyo Ghoul)",
+        "Shuu Tsukiyama (Tokyo Ghoul)",
+        "Nishiki Nishio (Tokyo Ghoul)",
+        "Hinami Fueguchi (Tokyo Ghoul)",
+        "Renji Yomo (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "id": "TG05",
+      "passed": true,
+      "detail": {
+        "previousKaguneReleased": true
+      }
+    },
+    {
+      "id": "TG06",
+      "passed": true,
+      "detail": {
+        "idempotentAppearance": true
+      }
+    },
+    {
+      "id": "TG07",
+      "passed": true,
+      "detail": {
+        "manualBeforeApply": true
+      }
+    },
+    {
+      "id": "TG08",
+      "passed": true,
+      "detail": {
+        "priorityDocumented": true
+      }
+    },
+    {
+      "id": "TG09",
+      "passed": true,
+      "detail": {
+        "horrorIndependent": true
+      }
+    },
+    {
+      "id": "TG10",
+      "passed": true,
+      "detail": {
+        "twoPeopleAndCreature": true
+      }
+    },
+    {
+      "id": "TG11",
+      "passed": true,
+      "detail": {
+        "mangaFixedPreserved": true
+      }
+    },
+    {
+      "id": "TG12",
+      "passed": true,
+      "detail": {
+        "oneApplyUndo": true
+      }
+    },
+    {
+      "id": "FAILSAFE-settings",
+      "passed": true,
+      "detail": {
+        "key": "settings",
+        "rolledBack": true
+      }
+    },
+    {
+      "id": "FAILSAFE-working",
+      "passed": true,
+      "detail": {
+        "key": "working",
+        "rolledBack": true
+      }
+    },
+    {
+      "id": "FAILSAFE-history",
+      "passed": true,
+      "detail": {
+        "key": "history",
+        "rolledBack": true
+      }
+    },
+    {
+      "id": "FAILSAFE-marker",
+      "passed": true,
+      "detail": {
+        "key": "marker",
+        "rolledBack": true
+      }
+    },
+    {
+      "id": "FAILSAFE-journal",
+      "passed": true,
+      "detail": {
+        "key": "journal",
+        "rolledBack": true
+      }
+    },
+    {
+      "id": "TG13",
+      "passed": true,
+      "detail": {
+        "reload": true
+      }
+    },
+    {
+      "id": "TG14",
+      "passed": true,
+      "detail": {
+        "named": true,
+        "history": true
+      }
+    },
+    {
+      "id": "TG15",
+      "passed": true,
+      "detail": {
+        "actualJSONRoundTrip": true
+      }
+    },
+    {
+      "id": "OLDJSON-3",
+      "passed": true,
+      "detail": {
+        "version": 3,
+        "actualOldExportImport": true
+      }
+    },
+    {
+      "id": "OLDJSON-4",
+      "passed": true,
+      "detail": {
+        "version": 4,
+        "actualOldExportImport": true
+      }
+    },
+    {
+      "id": "OLDJSON-5",
+      "passed": true,
+      "detail": {
+        "version": 5,
+        "actualOldExportImport": true
+      }
+    },
+    {
+      "id": "TG16",
+      "passed": true,
+      "detail": {
+        "copy": true,
+        "free": true,
+        "managementUndo": true
+      }
+    },
+    {
+      "id": "TG17",
+      "passed": true,
+      "detail": {
+        "offOnContract": true
+      }
+    },
+    {
+      "id": "YG01",
+      "passed": true,
+      "detail": {
+        "sevenToOne": true,
+        "count": 14
+      }
+    },
+    {
+      "id": "YG02",
+      "passed": true,
+      "detail": {
+        "GX": 2,
+        "5D's": 2,
+        "VRAINS": 1,
+        "SEVENS": 1,
+        "ZEXAL": 1,
+        "ARC-V": 1
+      }
+    },
+    {
+      "id": "YG03",
+      "passed": true,
+      "detail": {
+        "yugioh": 14,
+        "persona": 10
+      }
+    },
+    {
+      "id": "ALIAS01",
+      "passed": true,
+      "detail": {
+        "aliasesResolveWithoutExtraCharacters": true
+      }
+    },
+    {
+      "id": "MODEL01",
+      "passed": true,
+      "detail": {
+        "models": 7,
+        "normalAndMangaExact": true
+      }
+    },
+    {
+      "id": "MODEL02",
+      "passed": true,
+      "detail": {
+        "standard": "masterpiece, best quality, detailed face, detailed eyes, Nishiki Nishio (Tokyo Ghoul), red eyes, brown hair, short hair, casual shirt and jacket, dark trousers, casual shoes, glasses, red kakugan in both eyes with black sclera, anime style",
+        "illustrious": "masterpiece, best quality, Nishiki Nishio (Tokyo Ghoul), red eyes, brown hair, short hair, casual shirt and jacket, dark trousers, casual shoes, glasses, red kakugan in both eyes with black sclera, anime style",
+        "anima": "masterpiece, best quality, Nishiki Nishio (Tokyo Ghoul), red eyes, brown hair, short hair, casual shirt and jacket, dark trousers, casual shoes, glasses, red kakugan in both eyes with black sclera, anime style",
+        "sdxl": "Nishiki Nishio (Tokyo Ghoul), red kakugan in both eyes with black sclera, casual shirt and jacket, dark trousers, casual shoes, glasses, short hair, brown hair, red eyes, anime style",
+        "noobai": "masterpiece, best quality, Nishiki Nishio (Tokyo Ghoul), red eyes, brown hair, short hair, casual shirt and jacket, dark trousers, casual shoes, glasses, red kakugan in both eyes with black sclera, anime style",
+        "pony": "source_anime, Nishiki Nishio (Tokyo Ghoul), red kakugan in both eyes with black sclera, casual shirt and jacket, dark trousers, casual shoes, glasses, short hair, brown hair, red eyes, anime style",
+        "krea": "Illustration of Nishiki Nishio (Tokyo Ghoul), red kakugan in both eyes with black sclera, casual shirt and jacket, dark trousers, casual shoes, glasses, short hair, brown hair, red eyes. Visual style: anime style."
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "seaArtGeneration": false,
+  "publicOrigin": false,
+  "passed": true
+}

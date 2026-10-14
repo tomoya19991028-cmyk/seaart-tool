@@ -1,0 +1,3 @@
+AssertionError [ERR_ASSERTION]: initial horror cache installed
+    at check (/workspace/seaart-phase1/tests/integration/pwa.cjs:4:247)
+    at /workspace/seaart-phase1/tests/integration/pwa.cjs:4:1961

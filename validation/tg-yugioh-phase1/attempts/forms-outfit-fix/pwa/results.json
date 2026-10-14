@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "id": "PWA01",
+      "passed": true,
+      "detail": "isolated install/control"
+    },
+    {
+      "id": "PWA02",
+      "passed": true,
+      "detail": "offline forms/structure/draft/environment/named save"
+    },
+    {
+      "id": "PWA03",
+      "passed": true,
+      "detail": "offline reload exact including drafts"
+    },
+    {
+      "id": "PWA04",
+      "passed": true,
+      "detail": "online recovery preserves same data"
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "online update keeps old tab and unsaved RAM",
+    "existing update notification observed",
+    "explicit reload keeps old save and leaves auto unset",
+    "offline launch/save/draft/reload exact",
+    "offline auto removal Undo restores tags",
+    "online return preserves all data and grants zero",
+    "HTML failure preserves old cache and offline startup"
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

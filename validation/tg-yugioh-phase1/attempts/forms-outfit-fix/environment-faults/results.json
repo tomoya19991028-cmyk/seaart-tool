@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "id": "FAULT-background",
+      "passed": true,
+      "detail": {
+        "fired": true,
+        "exact": true
+      }
+    },
+    {
+      "id": "FAULT-lighting",
+      "passed": true,
+      "detail": {
+        "fired": true,
+        "exact": true
+      }
+    }
+  ]
+}

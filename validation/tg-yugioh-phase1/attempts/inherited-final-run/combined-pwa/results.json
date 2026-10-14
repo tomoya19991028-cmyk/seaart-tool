@@ -1,0 +1,109 @@
+{
+  "tests": [
+    {
+      "label": "initial horror cache installed",
+      "passed": true
+    },
+    {
+      "label": "old tab never forced reload and update notice displayed",
+      "passed": true
+    },
+    {
+      "label": "update retains UUID, workspace and stable panel IDs",
+      "passed": true
+    },
+    {
+      "label": "integrated offline launch",
+      "passed": true
+    },
+    {
+      "label": "offline reimport leaves Creature unchanged",
+      "passed": true
+    },
+    {
+      "label": "offline save/reload preserves both features and grants no adult permission",
+      "passed": true
+    },
+    {
+      "label": "online return preserves combined state",
+      "passed": true
+    }
+  ],
+  "publicOrigin": false,
+  "physicalDevice": false,
+  "passed": true,
+  "requests": [
+    {
+      "name": "index.html",
+      "integrated": false
+    },
+    {
+      "name": "sw.js",
+      "integrated": false
+    },
+    {
+      "name": "index.html",
+      "integrated": false
+    },
+    {
+      "name": "index.html",
+      "integrated": false
+    },
+    {
+      "name": "manifest.json",
+      "integrated": false
+    },
+    {
+      "name": "icon-512.png",
+      "integrated": false
+    },
+    {
+      "name": "icon-192.png",
+      "integrated": false
+    },
+    {
+      "name": "icon-maskable-512.png",
+      "integrated": false
+    },
+    {
+      "name": "index.html",
+      "integrated": false
+    },
+    {
+      "name": "sw.js",
+      "integrated": true
+    },
+    {
+      "name": "index.html",
+      "integrated": true
+    },
+    {
+      "name": "index.html",
+      "integrated": true
+    },
+    {
+      "name": "manifest.json",
+      "integrated": true
+    },
+    {
+      "name": "icon-192.png",
+      "integrated": true
+    },
+    {
+      "name": "icon-512.png",
+      "integrated": true
+    },
+    {
+      "name": "icon-maskable-512.png",
+      "integrated": true
+    },
+    {
+      "name": "index.html",
+      "integrated": true
+    },
+    {
+      "name": "index.html",
+      "integrated": true
+    }
+  ]
+}

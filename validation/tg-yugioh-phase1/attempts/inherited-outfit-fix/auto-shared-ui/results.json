@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "id": "AS01",
+      "passed": true,
+      "sharedConfirmationKept": true,
+      "compactControlsKept": true
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

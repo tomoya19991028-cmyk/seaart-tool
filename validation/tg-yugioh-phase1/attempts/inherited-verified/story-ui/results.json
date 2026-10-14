@@ -1,0 +1,114 @@
+{
+  "tests": [
+    {
+      "id": "UI-360x640-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-360x800-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-393x640-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-393x800-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-430x640-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-430x800-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-640x360-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-800x393-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-800x430-1",
+      "passed": true,
+      "scale": 1,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-360x800-1.5",
+      "passed": true,
+      "scale": 1.5,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-393x800-1.5",
+      "passed": true,
+      "scale": 1.5,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    },
+    {
+      "id": "UI-430x800-1.5",
+      "passed": true,
+      "scale": 1.5,
+      "touchRemove": true,
+      "all14Tags": true,
+      "storyApply": true,
+      "bothDamageCards": true
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

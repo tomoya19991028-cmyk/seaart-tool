@@ -1,0 +1,114 @@
+{
+  "tests": [
+    {
+      "id": "AU-360x640-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-360x800-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-393x640-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-393x800-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-430x640-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-430x800-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-640x360-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-800x393-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-800x430-1",
+      "passed": true,
+      "scale": 1,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-360x800-1.5",
+      "passed": true,
+      "scale": 1.5,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-393x800-1.5",
+      "passed": true,
+      "scale": 1.5,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    },
+    {
+      "id": "AU-430x800-1.5",
+      "passed": true,
+      "scale": 1.5,
+      "directTouch": true,
+      "autoRemovalUndo": true,
+      "compactAndScroll": true,
+      "stagedPanelSave": true
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

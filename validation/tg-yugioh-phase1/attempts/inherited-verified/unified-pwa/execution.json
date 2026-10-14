@@ -1,0 +1,23 @@
+{
+  "command": [
+    "node",
+    "tests/tg-yugioh-phase1/replay.cjs",
+    "tests/unified-ui/pwa.cjs"
+  ],
+  "cwd": "/workspace/seaart-phase1",
+  "startUTC": "2026-10-14T14:06:55.500708+00:00",
+  "gitHEAD": "3fd1bb9fc34be09d85e3eef71cc1f6122f9054b8",
+  "productSHA256Before": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "testSHA256": "c24b1185a1c0c77f04f094f9e1c5f04251822b1c6b343fe2fcafd27e7a7da7d6",
+  "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+  "env": {
+    "TARGET_URL": "http://127.0.0.1:8765/seaart-phase1/index.html",
+    "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+    "RESULT_DIR": "/workspace/seaart-phase1/validation/tg-yugioh-phase1/attempts/inherited-complete/unified-pwa"
+  },
+  "physicalDevice": false,
+  "publicOriginTest": false,
+  "exitCode": 0,
+  "endUTC": "2026-10-14T14:07:31.768437+00:00",
+  "productSHA256After": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98"
+}

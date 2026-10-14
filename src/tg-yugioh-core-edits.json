@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "base": "3fd1bb9fc34be09d85e3eef71cc1f6122f9054b8",
+  "edits": [
+    [
+      "function renderChoices(k){const list=$('list-'+k);list.replaceChildren();const query=$('search-'+k).value.normalize('NFKC').toLowerCase().trim();const groupRank=new Map();for(const x of catalog[k])if(!groupRank.has(x.group||''))groupRank.set(x.group||'',groupRank.size);const filtered=catalog[k].filter(x=>(!maIsHidden('catalog:'+k,x.id)||selected[k].includes(x.id))&&environmentMatch(k,x)&&!globalHiddenValues[k].has(x.value)&&(k!=='pose'||!['B','C','D'].includes(poseAuditClass(x)))&&(x.name+' '+x.value+' '+(x.group||'')).normalize('NFKC').toLowerCase().includes(query)).sort((a,b)=>groupRank.get(a.group||'')-groupRank.get(b.group||''));let lastGroup=null;",
+      "function renderChoices(k){const list=$('list-'+k);list.replaceChildren();const query=$('search-'+k).value.normalize('NFKC').toLowerCase().trim();const groupRank=new Map();for(const x of catalog[k])if(!groupRank.has(x.group||''))groupRank.set(x.group||'',groupRank.size);const filtered=catalog[k].filter(x=>(!maIsHidden('catalog:'+k,x.id)||selected[k].includes(x.id))&&environmentMatch(k,x)&&!globalHiddenValues[k].has(x.value)&&(k!=='pose'||!['B','C','D'].includes(poseAuditClass(x)))&&(k==='character'?characterSearchText(item('character',x.id)||x):(x.name+' '+x.value+' '+(x.group||''))).normalize('NFKC').toLowerCase().includes(query)).sort((a,b)=>groupRank.get(a.group||'')-groupRank.get(b.group||''));let lastGroup=null;"
+    ],
+    [
+      " return {group,legacy};",
+      " return {group:source==='catalog:character'?characterFilterGroup(group):group,legacy};"
+    ],
+    [
+      "function displayGroupNames(source,rows){return [...new Set([...(candidateDisplayGroups[source]||[]),...rows.map(r=>r[2]||'未分類')])].filter(group=>group&&(source!=='catalog:character'||!excludedCharacterWork(group)))}",
+      "function displayGroupNames(source,rows){return [...new Set([...(candidateDisplayGroups[source]||[]),...rows.map(r=>source==='catalog:character'?characterFilterGroup(r[2]||'未分類'):r[2]||'未分類')])].filter(group=>group&&(source!=='catalog:character'||!excludedCharacterWork(group)))}"
+    ],
+    [
+      "function renderChoiceDialog(){const k=activeChoiceKey,root=$('choiceDialogChoices'),query=$('choiceDialogSearch').value.normalize('NFKC').toLowerCase().trim();root.replaceChildren();if(!k)return;const picked=selected[k].map(id=>item(k,id)).filter(x=>x&&environmentMatch(k,x)&&(k!=='pose'||displayCandidateVisible('catalog:pose',x.id,x.name,x.group,globalLegacyVisible,true,query,usageFavorite('global:pose',x.value))));if(picked.length&&choiceQuickMode!=='favorite'){root.append(candidatePickedHeading(picked.length,k!=='character'));for(const x of picked){const row=candidatePickedRow(x.name,k!=='character'?attributeCaption(globalItemContext(k,x.value),x.value):'',k==='character'?null:()=>{},()=>{}),name=row.querySelector('.pickedName'),remove=row.querySelector('.pickedRemove');remove.type='button';remove.setAttribute('aria-label',x.name+'の選択を解除');remove.onclick=()=>{selected[k]=selected[k].filter(id=>id!==x.id);globalItemContext(k,x.value).remove();renderChips(k);renderChoiceDialog();if(k==='character')renderProfiles();dirty()};if(k!=='character'){name.type='button';name.classList.add('quiet');name.onclick=()=>{const context=globalItemContext(k,x.value);openPersonItemDetails(context,x.id,x.name,()=>{renderChips(k);renderChoiceDialog()},()=>{selected[k]=selected[k].filter(id=>id!==x.id);globalItemContext(k,x.value).remove();renderChips(k);renderChoiceDialog();dirty()})}}row.append(name);row.append(remove);root.append(row)}}if(choiceQuickMode==='selected'){quickTabUpdate('choiceQuickTabs',choiceQuickMode);updateQuickTendencies('choiceQuickTabs',k==='character'?'gender':'audience');if(!picked.length)root.append(node('p','選択中の項目はありません。','small'));quickTabUpdate('choiceQuickTabs',choiceQuickMode);return}let matches=catalog[k].map(x=>({...x,group:candidateDisplayRule('catalog:'+k,x.id,x.name,x.group).group})).filter(x=>(k!=='character'||!excludedCharacterWork(x.group))&&displayCandidateVisible('catalog:'+k,x.id,x.name,x.group,globalLegacyVisible,false,query,k==='character'?characterFavoriteValues.has(x.value):usageFavorite('global:'+k,x.value))&&environmentMatch(k,x)&&(k==='background'||!globalHiddenValues[k].has(x.value))&&(k!=='pose'||poseAuditClass(x)!=='C')&&x.value&&!selected[k].includes(x.id)&&(x.name+' '+x.value+' '+(x.group||'')).normalize('NFKC').toLowerCase().includes(query));if(choiceFilterKeys.has(k)){",
+      "function renderChoiceDialog(){const k=activeChoiceKey,root=$('choiceDialogChoices'),query=$('choiceDialogSearch').value.normalize('NFKC').toLowerCase().trim();root.replaceChildren();if(!k)return;const picked=selected[k].map(id=>item(k,id)).filter(x=>x&&environmentMatch(k,x)&&(k!=='pose'||displayCandidateVisible('catalog:pose',x.id,x.name,x.group,globalLegacyVisible,true,query,usageFavorite('global:pose',x.value))));if(picked.length&&choiceQuickMode!=='favorite'){root.append(candidatePickedHeading(picked.length,k!=='character'));for(const x of picked){const row=candidatePickedRow(x.name,k!=='character'?attributeCaption(globalItemContext(k,x.value),x.value):'',k==='character'?null:()=>{},()=>{}),name=row.querySelector('.pickedName'),remove=row.querySelector('.pickedRemove');remove.type='button';remove.setAttribute('aria-label',x.name+'の選択を解除');remove.onclick=()=>{selected[k]=selected[k].filter(id=>id!==x.id);globalItemContext(k,x.value).remove();renderChips(k);renderChoiceDialog();if(k==='character')renderProfiles();dirty()};if(k!=='character'){name.type='button';name.classList.add('quiet');name.onclick=()=>{const context=globalItemContext(k,x.value);openPersonItemDetails(context,x.id,x.name,()=>{renderChips(k);renderChoiceDialog()},()=>{selected[k]=selected[k].filter(id=>id!==x.id);globalItemContext(k,x.value).remove();renderChips(k);renderChoiceDialog();dirty()})}}row.append(name);row.append(remove);root.append(row)}}if(choiceQuickMode==='selected'){quickTabUpdate('choiceQuickTabs',choiceQuickMode);updateQuickTendencies('choiceQuickTabs',k==='character'?'gender':'audience');if(!picked.length)root.append(node('p','選択中の項目はありません。','small'));quickTabUpdate('choiceQuickTabs',choiceQuickMode);return}let matches=catalog[k].map(x=>({...x,group:candidateDisplayRule('catalog:'+k,x.id,x.name,x.group).group})).filter(x=>(k!=='character'||!excludedCharacterWork(x.group))&&displayCandidateVisible('catalog:'+k,x.id,x.name,x.group,globalLegacyVisible,false,query,k==='character'?characterFavoriteValues.has(x.value):usageFavorite('global:'+k,x.value))&&environmentMatch(k,x)&&(k==='background'||!globalHiddenValues[k].has(x.value))&&(k!=='pose'||poseAuditClass(x)!=='C')&&x.value&&!selected[k].includes(x.id)&&(k==='character'?characterSearchText(item('character',x.id)||x):(x.name+' '+x.value+' '+(x.group||''))).normalize('NFKC').toLowerCase().includes(query));if(choiceFilterKeys.has(k)){"
+    ],
+    [
+      " const groupSelect=$('characterGroup'),isCharacter=k==='character',previous=choiceFilterState[k]?.group||'';",
+      " const groupSelect=$('characterGroup'),isCharacter=k==='character',previous=k==='character'?characterFilterGroup(choiceFilterState[k]?.group||''):choiceFilterState[k]?.group||'';"
+    ],
+    [
+      "   if(!['eyeDetail','skin',...detailClothingFields].includes(field)||!Array.isArray(values))throw Error('未対応の特徴項目です');",
+      "   if(!['eyeDetail','skin','bodyFeatures',...detailClothingFields].includes(field)||!Array.isArray(values))throw Error('未対応の特徴項目です');"
+    ],
+    [
+      "  if(detail){expandOutfitSelection(next);next.detail??={};for(const [field,values]of Object.entries(detail)){if(detailClothingFields.has(field)&&(asList(next.detail[field]).length||next.detailCustom?.[field]?.trim()))continue;next.detail[field]=values.slice()}}",
+      "  if(detail){expandOutfitSelection(next);next.detail??={};for(const [field,values]of Object.entries(detail)){if(detailClothingFields.has(field)&&(asList(next.detail[field]).length||next.detailCustom?.[field]?.trim()))continue;next.detail[field]=field==='bodyFeatures'?[...new Set([...asList(next.detail[field]),...values])]:values.slice()}}"
+    ],
+    [
+      " characters(){const signature=JSON.stringify(catalog.character.map(x=>[x.id,x.name,x.value,x.group,characterGenderByValue[x.value.toLowerCase()],x.aliases]));if(signature===sharedCharacterSignature)return sharedCharacterView;sharedCharacterSignature=signature;return sharedCharacterView=smReadonly(dedupeCharacterRows(catalog.character).map(x=>({id:x.id,label:x.name,tag:x.value,work:x.group||'一般キャラクター',gender:characterGenderByValue[x.value.toLowerCase()]||'不明',aliases:x.aliases||[],adultContext:true})))},",
+      " characters(){const signature=JSON.stringify(catalog.character.map(x=>[x.id,x.name,x.value,x.group,characterGenderByValue[x.value.toLowerCase()],x.aliases]));if(signature===sharedCharacterSignature)return sharedCharacterView;sharedCharacterSignature=signature;return sharedCharacterView=smReadonly(dedupeCharacterRows(catalog.character).map(x=>({id:x.id,label:x.name,tag:x.value,work:x.group||'一般キャラクター',filterGroup:characterFilterGroup(x.group||'一般キャラクター'),gender:characterGenderByValue[x.value.toLowerCase()]||'不明',aliases:characterSearchAliases(x.value,x.aliases||[]),adultContext:true})))},"
+    ],
+    [
+      " if(source.legacy)return source.target==='outfit'?masters.wardrobe('outfit'):smReadonly(masters.characters().map(c=>[c.label,c.tag,c.work]));",
+      " if(source.legacy)return source.target==='outfit'?masters.wardrobe('outfit'):smReadonly(masters.characters().map(c=>[c.label,c.tag,c.filterGroup]));"
+    ],
+    [
+      "function catalogMeta(o){return B.optionMetadata[catalogKey(o)]||{tags:[],aliases:[]}}",
+      "function catalogMeta(o){const meta=B.optionMetadata[catalogKey(o)]||{tags:[],aliases:[]},character=B.characters.find(c=>c.tag===o[1]);return character?{...meta,tags:[...new Set([character.filterGroup,...meta.tags.map(characterFilterGroup)])],aliases:[...new Set([...meta.aliases,...character.aliases,character.work])]}:meta}"
+    ],
+    [
+      " const ps=pickerState;if(!ps)return;const d=ps.direct,all=d?d.all:ps.options,body=$('#pickerBody');body.innerHTML='';ps.limit??=80;",
+      " const ps=pickerState;if(!ps)return;if(ps.direct?.character||ps.characterFilter)ps.tagFilter=characterFilterGroup(ps.tagFilter||'');const d=ps.direct,all=d?d.all:ps.options,body=$('#pickerBody');body.innerHTML='';ps.limit??=80;"
+    ],
+    [
+      " const works=character?[...new Set(c.options.map(o=>characterInfo(o)?.work||o[2]).filter(Boolean))]:[];",
+      " const works=character?[...new Set(c.options.map(o=>characterInfo(o)?.filterGroup||characterFilterGroup(o[2])).filter(Boolean))]:[];"
+    ],
+    [
+      " const filterSelect=cmSelect([['','すべて'],...works.map(x=>['work:'+x,x]),...classes.map(x=>['category:'+x,'分類：'+x])],'',v=>{work=v.startsWith('work:')?v.slice(5):'';category=v.startsWith('category:')?v.slice(9):'';limit=80;draw()});",
+      " const filterSelect=cmSelect([['','すべて'],...works.map(x=>['work:'+x,x]),...classes.filter(x=>!character||!works.includes(characterFilterGroup(x))).map(x=>['category:'+x,'分類：'+x])],'',v=>{work=v.startsWith('work:')?v.slice(5):'';category=v.startsWith('category:')?v.slice(9):'';limit=80;draw()});"
+    ],
+    [
+      "  const list=c.options.filter(o=>cmCandidateAllowed(c,o)&&[...o.slice(0,3),...(characterInfo(o)?.aliases||[])].join(' ').toLowerCase().includes(search.value.toLowerCase())&&(!category||o[2]===category)&&(!work||(characterInfo(o)?.work||o[2])===work)&&(mode!=='favorite'||favorites.includes(cmOptionKey(o)))&&(!character||gender==='すべて'||(characterInfo(o)?.gender||'性別なし')===gender));",
+      "  const list=c.options.filter(o=>cmCandidateAllowed(c,o)&&[...o.slice(0,3),...(characterInfo(o)?.aliases||[])].join(' ').toLowerCase().includes(search.value.toLowerCase())&&(!category||o[2]===category)&&(!work||(characterInfo(o)?.filterGroup||characterFilterGroup(o[2]))===work)&&(mode!=='favorite'||favorites.includes(cmOptionKey(o)))&&(!character||gender==='すべて'||(characterInfo(o)?.gender||'性別なし')===gender));"
+    ],
+    [
+      "function characterPresetList(personId){",
+      "Object.assign(characterBasicPresets,expandCharacterBasicPresets(Object.fromEntries(tokyoGhoulPhase1.characters.map(row=>[row.value,[row.preset]]))));\nfunction characterPresetList(personId){"
+    ]
+  ]
+}

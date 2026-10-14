@@ -1,0 +1,5 @@
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(oldCache)
+
+    at /workspace/seaart-phase1/tests/creature-motif-person-pwa.cjs:6:438

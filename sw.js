@@ -1,4 +1,4 @@
-const CACHE_NAME = 'seaart-tool-pwa-v5-forms-structures-environment-ui-v1-http-cache-v1';
+const CACHE_NAME = 'seaart-tool-pwa-v5-tg-yugioh-phase1-v1-http-cache-v1';
 const APP_SHELL = [
   './',
   './index.html',

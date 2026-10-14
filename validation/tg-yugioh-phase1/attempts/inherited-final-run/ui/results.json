@@ -1,0 +1,413 @@
+{
+  "passed": true,
+  "T28": [
+    {
+      "width": 360,
+      "height": 640,
+      "passed": true,
+      "geometry": {
+        "rootOverflow": false,
+        "dialog": {
+          "left": 10,
+          "right": 350,
+          "top": 115.203125,
+          "bottom": 640,
+          "height": 524.796875
+        },
+        "body": {
+          "left": 11,
+          "right": 349,
+          "top": 185.203125,
+          "bottom": 570,
+          "height": 384.796875
+        },
+        "header": {
+          "left": 11,
+          "right": 349,
+          "top": 116.203125,
+          "bottom": 185.203125,
+          "height": 69
+        },
+        "footer": {
+          "left": 11,
+          "right": 349,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "majorButtons": [
+          {
+            "left": 263.984375,
+            "right": 337,
+            "top": 128.203125,
+            "bottom": 172.203125,
+            "height": 44
+          },
+          {
+            "left": 23,
+            "right": 111.015625,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 233.984375,
+            "right": 337,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "cards": 6,
+        "navScrollable": true
+      },
+      "create": true,
+      "cancel": true,
+      "focusReturn": true,
+      "draftReview": true,
+      "partialCommit": true,
+      "receiptUndo": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "geometry": {
+        "rootOverflow": false,
+        "dialog": {
+          "left": 10,
+          "right": 350,
+          "top": 144,
+          "bottom": 800,
+          "height": 656
+        },
+        "body": {
+          "left": 11,
+          "right": 349,
+          "top": 214,
+          "bottom": 730,
+          "height": 516
+        },
+        "header": {
+          "left": 11,
+          "right": 349,
+          "top": 145,
+          "bottom": 214,
+          "height": 69
+        },
+        "footer": {
+          "left": 11,
+          "right": 349,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "majorButtons": [
+          {
+            "left": 263.984375,
+            "right": 337,
+            "top": 157,
+            "bottom": 201,
+            "height": 44
+          },
+          {
+            "left": 23,
+            "right": 111.015625,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 233.984375,
+            "right": 337,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "cards": 6,
+        "navScrollable": true
+      },
+      "create": true,
+      "cancel": true,
+      "focusReturn": true,
+      "draftReview": true,
+      "partialCommit": true,
+      "receiptUndo": true
+    },
+    {
+      "width": 393,
+      "height": 640,
+      "passed": true,
+      "geometry": {
+        "rootOverflow": false,
+        "dialog": {
+          "left": 10,
+          "right": 383,
+          "top": 115.203125,
+          "bottom": 640,
+          "height": 524.796875
+        },
+        "body": {
+          "left": 11,
+          "right": 382,
+          "top": 185.203125,
+          "bottom": 570,
+          "height": 384.796875
+        },
+        "header": {
+          "left": 11,
+          "right": 382,
+          "top": 116.203125,
+          "bottom": 185.203125,
+          "height": 69
+        },
+        "footer": {
+          "left": 11,
+          "right": 382,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "majorButtons": [
+          {
+            "left": 296.984375,
+            "right": 370,
+            "top": 128.203125,
+            "bottom": 172.203125,
+            "height": 44
+          },
+          {
+            "left": 23,
+            "right": 111.015625,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 266.984375,
+            "right": 370,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "cards": 6,
+        "navScrollable": true
+      },
+      "create": true,
+      "cancel": true,
+      "focusReturn": true,
+      "draftReview": true,
+      "partialCommit": true,
+      "receiptUndo": true
+    },
+    {
+      "width": 393,
+      "height": 800,
+      "passed": true,
+      "geometry": {
+        "rootOverflow": false,
+        "dialog": {
+          "left": 10,
+          "right": 383,
+          "top": 144,
+          "bottom": 800,
+          "height": 656
+        },
+        "body": {
+          "left": 11,
+          "right": 382,
+          "top": 214,
+          "bottom": 730,
+          "height": 516
+        },
+        "header": {
+          "left": 11,
+          "right": 382,
+          "top": 145,
+          "bottom": 214,
+          "height": 69
+        },
+        "footer": {
+          "left": 11,
+          "right": 382,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "majorButtons": [
+          {
+            "left": 296.984375,
+            "right": 370,
+            "top": 157,
+            "bottom": 201,
+            "height": 44
+          },
+          {
+            "left": 23,
+            "right": 111.015625,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 266.984375,
+            "right": 370,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "cards": 6,
+        "navScrollable": true
+      },
+      "create": true,
+      "cancel": true,
+      "focusReturn": true,
+      "draftReview": true,
+      "partialCommit": true,
+      "receiptUndo": true
+    },
+    {
+      "width": 430,
+      "height": 640,
+      "passed": true,
+      "geometry": {
+        "rootOverflow": false,
+        "dialog": {
+          "left": 10,
+          "right": 420,
+          "top": 115.203125,
+          "bottom": 640,
+          "height": 524.796875
+        },
+        "body": {
+          "left": 11,
+          "right": 419,
+          "top": 185.203125,
+          "bottom": 570,
+          "height": 384.796875
+        },
+        "header": {
+          "left": 11,
+          "right": 419,
+          "top": 116.203125,
+          "bottom": 185.203125,
+          "height": 69
+        },
+        "footer": {
+          "left": 11,
+          "right": 419,
+          "top": 570,
+          "bottom": 639,
+          "height": 69
+        },
+        "majorButtons": [
+          {
+            "left": 333.984375,
+            "right": 407,
+            "top": 128.203125,
+            "bottom": 172.203125,
+            "height": 44
+          },
+          {
+            "left": 23,
+            "right": 111.015625,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          },
+          {
+            "left": 303.984375,
+            "right": 407,
+            "top": 583,
+            "bottom": 627,
+            "height": 44
+          }
+        ],
+        "cards": 6,
+        "navScrollable": true
+      },
+      "create": true,
+      "cancel": true,
+      "focusReturn": true,
+      "draftReview": true,
+      "partialCommit": true,
+      "receiptUndo": true
+    },
+    {
+      "width": 430,
+      "height": 800,
+      "passed": true,
+      "geometry": {
+        "rootOverflow": false,
+        "dialog": {
+          "left": 10,
+          "right": 420,
+          "top": 144,
+          "bottom": 800,
+          "height": 656
+        },
+        "body": {
+          "left": 11,
+          "right": 419,
+          "top": 214,
+          "bottom": 730,
+          "height": 516
+        },
+        "header": {
+          "left": 11,
+          "right": 419,
+          "top": 145,
+          "bottom": 214,
+          "height": 69
+        },
+        "footer": {
+          "left": 11,
+          "right": 419,
+          "top": 730,
+          "bottom": 799,
+          "height": 69
+        },
+        "majorButtons": [
+          {
+            "left": 333.984375,
+            "right": 407,
+            "top": 157,
+            "bottom": 201,
+            "height": 44
+          },
+          {
+            "left": 23,
+            "right": 111.015625,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          },
+          {
+            "left": 303.984375,
+            "right": 407,
+            "top": 743,
+            "bottom": 787,
+            "height": 44
+          }
+        ],
+        "cards": 6,
+        "navScrollable": true
+      },
+      "create": true,
+      "cancel": true,
+      "focusReturn": true,
+      "draftReview": true,
+      "partialCommit": true,
+      "receiptUndo": true
+    }
+  ],
+  "T27": {
+    "passed": true,
+    "simpleMangaEqual": true
+  },
+  "physicalDevice": false,
+  "publicOrigin": false
+}

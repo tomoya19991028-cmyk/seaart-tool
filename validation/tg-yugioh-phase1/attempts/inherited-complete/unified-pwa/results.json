@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "previous private shell is active",
+    "SW update keeps old tab and unsaved RAM without forced reload",
+    "explicit reload receives final UI and preserves v5 working and draft",
+    "offline anthro grouped edit save reload preserves creature and draft",
+    "offline favorite one Undo",
+    "online return preserves actor UUID modes and horror workspace"
+  ],
+  "publicOrigin": false,
+  "physicalDevice": false,
+  "passed": true
+}

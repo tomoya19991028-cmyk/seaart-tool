@@ -1,0 +1,484 @@
+{
+  "version": 1,
+  "characters": [
+    {
+      "id": "character-extension-tg-amon",
+      "name": "亜門鋼太朗（東京喰種）",
+      "value": "Koutarou Amon (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "black hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "blue eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "white investigator coat over a dark suit",
+        "detail": {}
+      }
+    },
+    {
+      "id": "character-extension-tg-arima",
+      "name": "有馬貴将（東京喰種）",
+      "value": "Kishou Arima (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "white hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "gray eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "white investigator coat over a black high-collared shirt",
+        "detail": {
+          "accessory": [
+            "glasses"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-hide",
+      "name": "永近英良（東京喰種）",
+      "value": "Hideyoshi Nagachika (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [
+        "ヒデ",
+        "スケアクロウ",
+        "Hide",
+        "Scarecrow"
+      ],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "orange hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "brown eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "casual jacket over a light shirt and dark trousers",
+        "detail": {
+          "accessory": [
+            "orange headphones around the neck"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-nishiki",
+      "name": "西尾錦（東京喰種）",
+      "value": "Nishiki Nishio (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [
+        "ニシキ",
+        "オロチ",
+        "Orochi"
+      ],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "brown hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "brown eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "casual shirt and jacket with dark trousers",
+        "detail": {
+          "accessory": [
+            "glasses"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-yoshimura",
+      "name": "芳村功善（東京喰種）",
+      "value": "Kuzen Yoshimura (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "white hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "gray eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair",
+          "slicked-back hair"
+        ],
+        "outfit": "white shirt and dark cafe vest with a brown bow tie",
+        "detail": {
+          "skin": [
+            "wrinkled skin"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-eto",
+      "name": "エト／高槻泉（東京喰種）",
+      "value": "Eto Yoshimura (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "女性",
+      "aliases": [
+        "エト",
+        "高槻泉",
+        "高槻",
+        "Sen Takatsuki"
+      ],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "green hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "green eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "long hair"
+        ],
+        "outfit": "green dress with a light outer layer",
+        "detail": {}
+      }
+    },
+    {
+      "id": "character-extension-tg-tatara",
+      "name": "タタラ（東京喰種）",
+      "value": "Tatara (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "white hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "gray eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "long white coat and dark trousers",
+        "detail": {
+          "accessory": [
+            "red metal mouth mask"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-uta",
+      "name": "ウタ（東京喰種）",
+      "value": "Uta (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "black hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "red eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "undercut"
+        ],
+        "outfit": "black sleeveless shirt and dark trousers",
+        "detail": {
+          "eyeDetail": [
+            "black sclera in both eyes"
+          ],
+          "skin": [
+            "black neck and arm tattoos"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-hinami",
+      "name": "笛口雛実（東京喰種）",
+      "value": "Hinami Fueguchi (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "女性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "brown hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "brown eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "bob cut"
+        ],
+        "outfit": "modest dress and light cardigan",
+        "detail": {
+          "head": [
+            "white flower headband"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-takizawa",
+      "name": "滝澤政道（東京喰種）",
+      "value": "Seidou Takizawa (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [
+        "オウル",
+        "Owl"
+      ],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "brown hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "brown eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "blue investigator suit with a white shirt and blue tie",
+        "detail": {}
+      }
+    },
+    {
+      "id": "character-extension-tg-saiko",
+      "name": "米林才子（東京喰種）",
+      "value": "Saiko Yonebayashi (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "女性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "blue hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "blue eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "long hair",
+          "twintails"
+        ],
+        "outfit": "white Quinx uniform jacket over a dark shirt and skirt",
+        "detail": {}
+      }
+    },
+    {
+      "id": "character-extension-tg-urie",
+      "name": "瓜江久生（東京喰種）",
+      "value": "Kuki Urie (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "black hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "gray eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "white Quinx uniform jacket over a dark shirt and trousers",
+        "detail": {
+          "skin": [
+            "two moles below the left eye"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-shirazu",
+      "name": "不知吟士（東京喰種）",
+      "value": "Ginshi Shirazu (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "orange hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "brown eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair",
+          "spiky short hair"
+        ],
+        "outfit": "light brown Quinx coat over a dark shirt and trousers",
+        "detail": {
+          "bodyFeatures": [
+            "sharp teeth"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-akira",
+      "name": "真戸暁（東京喰種）",
+      "value": "Akira Mado (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "女性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "blonde hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "blue eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "bob cut"
+        ],
+        "outfit": "white investigator coat over a dark suit and blouse",
+        "detail": {}
+      }
+    },
+    {
+      "id": "character-extension-tg-yomo",
+      "name": "四方蓮示（東京喰種）",
+      "value": "Renji Yomo (Tokyo Ghoul)",
+      "group": "東京喰種",
+      "gender": "男性",
+      "aliases": [],
+      "preset": {
+        "id": "standard",
+        "name": "標準",
+        "hair": {
+          "primary": "gray hair",
+          "mode": "single"
+        },
+        "eyes": {
+          "left": "gray eyes",
+          "mode": "same"
+        },
+        "hairStyle": [
+          "short hair"
+        ],
+        "outfit": "dark high-collared long coat and dark trousers",
+        "detail": {}
+      }
+    }
+  ],
+  "aliasesByValue": {
+    "Ken Kaneki (Tokyo Ghoul)": [
+      "金木",
+      "カネキ",
+      "佐々木琲世",
+      "佐々木",
+      "Haise Sasaki"
+    ],
+    "Hideyoshi Nagachika (Tokyo Ghoul)": [
+      "ヒデ",
+      "スケアクロウ",
+      "Hide",
+      "Scarecrow"
+    ],
+    "Nishiki Nishio (Tokyo Ghoul)": [
+      "ニシキ",
+      "オロチ",
+      "Orochi"
+    ],
+    "Eto Yoshimura (Tokyo Ghoul)": [
+      "エト",
+      "高槻泉",
+      "高槻",
+      "Sen Takatsuki"
+    ],
+    "Seidou Takizawa (Tokyo Ghoul)": [
+      "オウル",
+      "Owl"
+    ]
+  },
+  "yugiohGroups": [
+    "遊戯王",
+    "遊戯王GX",
+    "遊戯王5D's",
+    "遊戯王ZEXAL",
+    "遊戯王ARC-V",
+    "遊戯王VRAINS",
+    "遊戯王SEVENS"
+  ]
+}

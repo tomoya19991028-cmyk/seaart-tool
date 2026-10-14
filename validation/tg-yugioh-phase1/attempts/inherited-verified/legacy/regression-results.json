@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "counts": {
+    "character": 1390,
+    "personPresets": 1384,
+    "species": 94,
+    "creaturePresets": 60,
+    "features": 275,
+    "creatureCandidates": 500,
+    "adapters": 1444
+  },
+  "fingerprints": {
+    "catalog": "5e3983aee701217043996aedf330fecd61ae6bceec5b2e4bd4ce64cd649566be",
+    "characterBasicPresets": "07c5dd5cca30d21c7469f379d4679f5f3151a370887d365a6d2a2f265e09b505",
+    "detailOptions": "db188463d3b382cba5db15c685753729c21db7f80467c1acf3837d5d019a38e3",
+    "outfitSets": "1c462ff2912df52a795eafb38a5f444b9efc916cdba0a7814b3a253dbb9d00b2",
+    "genders": "46246caf0096977eba2b1d513ae42b45baf813454baf30642a24e8599f122e6b",
+    "creatureBasicPresets": "691064b84afb1fa838db0901aaddfdd8a49f0dde5df7a4f509222c80eea26b46",
+    "creatureCandidateBase": "09abf3abd2b9edbe9bf49651dabd03795916b1d730936a184812fdde031892df",
+    "owners": "df033ad7cc44ce8a2572f44a6981058c4fe930dc7727b16b35acd33cc97ea8c9"
+  },
+  "normal": 252,
+  "manga": 252,
+  "adult": 21
+}

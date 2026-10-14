@@ -1,0 +1,84 @@
+[
+  {
+    "folder": "seaart-integrated",
+    "head": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "file": "index.html",
+    "sha256": "3525ec8b2e856928031198b80505310393c6d796533e9b9e8a07b9516d04d24e"
+  },
+  {
+    "folder": "seaart-integrated",
+    "head": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "file": "sw.js",
+    "sha256": "f44b827d9f406a483033cbd7d119dbbe85f6a9e200569f89e0d1a2edc738213c"
+  },
+  {
+    "folder": "seaart-integrated",
+    "head": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  },
+  {
+    "folder": "seaart-integrated",
+    "head": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "file": "icon-192.png",
+    "sha256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a"
+  },
+  {
+    "folder": "seaart-integrated",
+    "head": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "file": "icon-512.png",
+    "sha256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149"
+  },
+  {
+    "folder": "seaart-integrated",
+    "head": "0dff414fda13f92c2a0099b4570d0c68da797a18",
+    "file": "icon-maskable-512.png",
+    "sha256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78"
+  },
+  {
+    "folder": "seaart-r1-save-worktree",
+    "head": "8bd13679d7901ccec9532fff388adb2a31861b04",
+    "file": "index.html",
+    "sha256": "19f46f56b0b0e95a473f023b82e204560f974c347e8546c4f04130d3f7c0188d"
+  },
+  {
+    "folder": "seaart-r1-save-worktree",
+    "head": "8bd13679d7901ccec9532fff388adb2a31861b04",
+    "file": "sw.js",
+    "sha256": "e0daeb424c6900acf4cbddc998a207c76d8fc30959999c93367ee92ece449c05"
+  },
+  {
+    "folder": "seaart-r1-save-worktree",
+    "head": "8bd13679d7901ccec9532fff388adb2a31861b04",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  },
+  {
+    "folder": "seaart-r1-save-worktree",
+    "head": "8bd13679d7901ccec9532fff388adb2a31861b04",
+    "file": "icon-192.png",
+    "sha256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a"
+  },
+  {
+    "folder": "seaart-r1-save-worktree",
+    "head": "8bd13679d7901ccec9532fff388adb2a31861b04",
+    "file": "icon-512.png",
+    "sha256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149"
+  },
+  {
+    "folder": "seaart-r1-save-worktree",
+    "head": "8bd13679d7901ccec9532fff388adb2a31861b04",
+    "file": "icon-maskable-512.png",
+    "sha256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78"
+  },
+  {
+    "folder": "seaart-horror",
+    "target": "/workspace/seaart-phase1",
+    "purpose": "current target alias"
+  },
+  {
+    "folder": "seaart-tool",
+    "target": "/workspace/seaart-old-main",
+    "purpose": "protected old v4 writer"
+  }
+]

@@ -1,0 +1,187 @@
+{
+  "tests": [
+    {
+      "id": "C01",
+      "label": "empty features show 未選択 and three pages retain six cards",
+      "passed": true,
+      "detail": {
+        "pages": 3,
+        "cards": 6
+      }
+    },
+    {
+      "id": "C02",
+      "label": "Japanese labels come from registry and multiple selections have separate tags",
+      "passed": true,
+      "detail": [
+        "仮面のような顔",
+        "ひび割れた顔"
+      ]
+    },
+    {
+      "id": "C03",
+      "label": "one real tap removes only its candidate without parent, confirmation or double Undo",
+      "passed": true,
+      "detail": {
+        "mask": false,
+        "other": true,
+        "dialog": false,
+        "mode": "normal",
+        "undo": 1,
+        "workspace": true
+      }
+    },
+    {
+      "id": "C04",
+      "label": "normal Undo restores exact prompt, tag and weight in one operation",
+      "passed": true,
+      "detail": {
+        "promptExact": true
+      }
+    },
+    {
+      "id": "C05",
+      "label": "target change displays and removes only selected person or Creature",
+      "passed": true,
+      "detail": {
+        "independent": true
+      }
+    },
+    {
+      "id": "C06",
+      "label": "mandatory page1 current values and disabled page3 conditions stay accurate",
+      "passed": true,
+      "detail": {
+        "mandatoryNoRemoval": true
+      }
+    },
+    {
+      "id": "C07",
+      "label": "removal failure rolls back RAM disk tags Undo workspace and reports failure",
+      "passed": true,
+      "detail": {
+        "injected": true,
+        "unchanged": true,
+        "error": true
+      }
+    },
+    {
+      "id": "C08",
+      "label": "reload and JSON backup retain selection without UI/schema fields",
+      "passed": true,
+      "detail": {
+        "reload": true
+      }
+    },
+    {
+      "id": "C09",
+      "label": "panel scope removes inherited feature with local OFF, leaving other panels and base",
+      "passed": true,
+      "detail": {
+        "base": "{\"features\":{\"horror-feature-mask-face\":{\"enabled\":true,\"parameters\":{},\"weight\":1.4}},\"intensity\":\"medium\",\"origin\":\"linked\",\"originalFeaturePolicies\":{},\"ownerSnapshot\":{\"kind\":\"person\",\"originalId\":\"original-tags-a\"},\"primaryTypeId\":null,\"secondaryTypeIds\":[],\"state\":\"partial\",\"structure\":{\"extraArms\":\"unset\",\"extraLegs\":\"unset\",\"horns\":\"unset\",\"tail\":\"unset\",\"tentacles\":\"unset\",\"wings\":\"unset\"}}",
+        "localKeys": [
+          "mode",
+          "parameters",
+          "weight"
+        ],
+        "local": "off",
+        "other": true,
+        "chosen": false,
+        "ids": [
+          "panel-983454a7-985f-49e1-9966-0fc598f03471",
+          "panel-2ba24466-5676-4a3f-8755-3c541ebadbae",
+          "panel-54825789-d75c-4ec7-a02d-118530893da8",
+          "panel-05b4ecdf-7ca6-401d-b476-758f248429e9",
+          "panel-e7c1c051-8537-4024-9e90-9bc95951a364",
+          "panel-4ced6ccb-1644-419d-8101-dd3c7661853a"
+        ],
+        "workspace": "{\"drafts\":[],\"itemTombstones\":[],\"mergeLog\":[],\"recoveryPending\":[],\"trash\":[],\"version\":1}",
+        "undo": 1,
+        "dialog": false
+      }
+    },
+    {
+      "id": "C10",
+      "label": "range selection local removal keeps continuity endpoints and other panels",
+      "passed": true,
+      "detail": {
+        "rangeUntouched": true
+      }
+    },
+    {
+      "id": "C11",
+      "label": "normal suppression retains tags and panel switching changes visible selection",
+      "passed": true,
+      "detail": {
+        "retainedWhileOff": true
+      }
+    },
+    {
+      "id": "C12",
+      "label": "scope and display changes leave complete saved data and both Undo histories unchanged",
+      "passed": true,
+      "detail": {
+        "allScopesReadOnly": true
+      }
+    },
+    {
+      "id": "C13",
+      "label": "source replacement tags have no unsafe remove and page1 shows Japanese source/policy",
+      "passed": true,
+      "detail": {
+        "sourceReplacementProtected": true
+      }
+    },
+    {
+      "id": "C14",
+      "label": "stale handler after target or scope change rejects without saving",
+      "passed": true,
+      "detail": {
+        "staleTargetRejected": true
+      }
+    },
+    {
+      "id": "C15",
+      "label": "pending import and real second-tab conflict reject card removal",
+      "passed": true,
+      "detail": {
+        "pendingAndConcurrentSafe": true
+      }
+    },
+    {
+      "id": "C16",
+      "label": "shared manga removal preserves local ON and independent draft Undo",
+      "passed": true,
+      "detail": {
+        "localOverrideAndDraftUndoKept": true
+      }
+    },
+    {
+      "id": "C17",
+      "label": "real JSON import restores card tags and removed selection stays removed",
+      "passed": true,
+      "detail": {
+        "actualImport": true
+      }
+    },
+    {
+      "id": "C18",
+      "label": "explicit manga-editor panel entry keeps card scope on the same stable ID",
+      "passed": true,
+      "detail": {
+        "entryAndPanelSelectionSynced": true
+      }
+    },
+    {
+      "id": "C19",
+      "label": "card padding still opens picker while remove button never invokes parent",
+      "passed": true,
+      "detail": {
+        "paddingOpens": true,
+        "removeDoesNot": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "online update keeps old tab and unsaved RAM",
+    "existing update notification observed",
+    "explicit reload keeps old save and leaves auto unset"
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": false,
+  "error": "page.reload: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\u001b[2m    - navigated to \"http://127.0.0.1:8817/\"\u001b[22m\n\n    at /workspace/seaart-phase1/tests/horror-auto/pwa.cjs:2:2732"
+}

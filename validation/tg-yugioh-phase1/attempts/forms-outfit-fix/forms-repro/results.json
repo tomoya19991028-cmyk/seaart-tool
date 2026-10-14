@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "超サイヤ人3",
+      "passed": true
+    },
+    {
+      "name": "完全虚化（ウルキオラ戦）",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "tests": [
+    {
+      "id": "CS01",
+      "passed": true,
+      "detail": {
+        "namedAndHistoryRestore": true,
+        "exactPrompt": true
+      }
+    },
+    {
+      "id": "CS02",
+      "passed": true,
+      "detail": {
+        "tenUndoCap": true
+      }
+    },
+    {
+      "id": "CS03",
+      "passed": true,
+      "detail": {
+        "groups": 6,
+        "tags": 6,
+        "allReachable": true
+      }
+    },
+    {
+      "id": "CS04",
+      "passed": true,
+      "detail": {
+        "namedFavoriteActualJSONRoundtrip": true
+      }
+    }
+  ],
+  "physicalDevice": false
+}

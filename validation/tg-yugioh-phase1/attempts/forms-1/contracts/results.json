@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "id": "UF01",
+      "passed": true,
+      "detail": {
+        "matrix": 72,
+        "negativeMatrix": 144
+      }
+    },
+    {
+      "id": "UF02",
+      "passed": true,
+      "detail": [
+        {
+          "featureId": "horror-auto-shadow-body-partial",
+          "semanticKey": "horror-auto-shadow-body-partial",
+          "tag": "partially transformed body of living shadows",
+          "weight": 1.2,
+          "continuity": "persistent",
+          "origin": "auto"
+        },
+        {
+          "featureId": "horror-feature-shadow-tendrils",
+          "semanticKey": "horror-feature-shadow-tendrils",
+          "tag": "shadow tendrils",
+          "weight": 1.2,
+          "continuity": "transient",
+          "origin": "auto"
+        },
+        {
+          "featureId": "horror-feature-black-mist",
+          "semanticKey": "horror-feature-black-mist",
+          "tag": "black mist",
+          "weight": 1.2,
+          "continuity": "transient",
+          "origin": "auto"
+        },
+        {
+          "featureId": "horror-auto-shadow-tentacles-partial",
+          "semanticKey": "horror-auto-shadow-tentacles-partial",
+          "tag": "partially manifested tentacles made of living shadows",
+          "weight": 1.2,
+          "continuity": "persistent",
+          "origin": "auto"
+        },
+        {
+          "featureId": "horror-auto-shadow-extraArms-partial",
+          "semanticKey": "horror-auto-shadow-extraArms-partial",
+          "tag": "partially manifested extra arms made of living shadows",
+          "weight": 1.2,
+          "continuity": "persistent",
+          "origin": "auto"
+        },
+        {
+          "featureId": "horror-auto-shadow-extraLegs-partial",
+          "semanticKey": "horror-auto-shadow-extraLegs-partial",
+          "tag": "partially manifested extra legs made of living shadows",
+          "weight": 1.2,
+          "continuity": "persistent",
+          "origin": "auto"
+        }
+      ]
+    },
+    {
+      "id": "UF03",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "id": "UF04",
+      "passed": true,
+      "detail": {
+        "panelIds": [
+          "panel-9be480f6-7a80-40a6-a6c2-43e24b356e17",
+          "panel-34e859e0-b348-4b42-99b9-45bb10349a61",
+          "panel-625b3c91-5e63-4756-9d04-3218a8490b31",
+          "panel-6ebb4cac-cf50-4f52-8f18-aa393e595760",
+          "panel-5dc54401-d438-4ce8-8e9f-fed97924680f",
+          "panel-db58547d-d331-4879-9993-362a6c51b442"
+        ]
+      }
+    },
+    {
+      "id": "UF05",
+      "passed": true,
+      "detail": {
+        "noMigration": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "seaArtGeneration": false
+}

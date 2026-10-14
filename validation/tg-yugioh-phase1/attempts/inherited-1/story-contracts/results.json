@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "id": "S01",
+      "passed": true,
+      "detail": {
+        "features": 84
+      }
+    },
+    {
+      "id": "S02",
+      "passed": false,
+      "error": "page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-phase1/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-phase1/tests/horror-stories/contracts.cjs:3:375)\n    at async /workspace/seaart-phase1/tests/horror-stories/contracts.cjs:5:1",
+      "pageErrors": []
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

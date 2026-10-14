@@ -1,0 +1,75 @@
+{
+  "tests": [
+    {
+      "id": "SAVE01",
+      "passed": true,
+      "detail": {
+        "reloadExact": true
+      }
+    },
+    {
+      "id": "SAVE02",
+      "passed": true,
+      "detail": {
+        "namedSave": true
+      }
+    },
+    {
+      "id": "SAVE03",
+      "passed": true,
+      "detail": {
+        "history": true
+      }
+    },
+    {
+      "id": "SAVE04",
+      "passed": true,
+      "detail": {
+        "actualJSONImport": true
+      }
+    },
+    {
+      "id": "OLD3",
+      "passed": true,
+      "detail": {
+        "version": 3,
+        "source": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "actualImport": true
+      }
+    },
+    {
+      "id": "OLD4",
+      "passed": true,
+      "detail": {
+        "version": 4,
+        "source": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "actualImport": true
+      }
+    },
+    {
+      "id": "OLD5",
+      "passed": true,
+      "detail": {
+        "version": 5,
+        "source": "http://127.0.0.1:8765/seaart-horror-auto/index.html",
+        "actualImport": true
+      }
+    },
+    {
+      "id": "COPY01",
+      "passed": true,
+      "detail": {
+        "id": "form-user-07c23fbc-bdb4-4401-8f69-d184a6ee5d67",
+        "customRetained": true
+      }
+    },
+    {
+      "id": "COPY02",
+      "passed": true,
+      "detail": {
+        "customSwitch": true
+      }
+    }
+  ],
+  "physicalDevice": false
+}

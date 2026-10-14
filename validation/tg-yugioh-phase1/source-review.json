@@ -1,0 +1,134 @@
+{
+  "sources": [
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/kaneki_ken/",
+      "retrieved_sha256": "c9f8bbcbc22b4bb4bd57afce3e78f4d68d286dc391cd57db83faeca502c889a6",
+      "rc_type_on_page": [
+        "鱗赫"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/kirishima_toka/",
+      "retrieved_sha256": "e3e206224c54c545ad3e75865205a43807c41e7b8e83d93385bc8aeed888280b",
+      "rc_type_on_page": [
+        "羽赫"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/kamishiro_rize/",
+      "retrieved_sha256": "c0c93776ede59499e2d964d6b1010dac19c393a2dcb55eff9d726c374ac57e8e",
+      "rc_type_on_page": [
+        "鱗赫"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/kirishima_ayato/",
+      "retrieved_sha256": "dfa53964ac55968b63a5e64909816080e999ef6f53a06aaa16328d68334c10cd",
+      "rc_type_on_page": [
+        "羽赫"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/tsukiyama_shu/",
+      "retrieved_sha256": "fff235db33d690da2174ed84ad7a1ab3a2bb70af3f390d6911ab3fe7a2252926",
+      "rc_type_on_page": [
+        "甲赫"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/nishio_nishiki/",
+      "retrieved_sha256": "d3f9855fe5fa1e9a59bb3b036283a08c485bb576e1c83da66cf6cd7093b45b2d",
+      "rc_type_on_page": [
+        "尾赫"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/fueguchi_hinami/",
+      "retrieved_sha256": "f042b48974420c7426805cac23e171ab53fcb9ab35723bf01484de27c92665ed",
+      "rc_type_on_page": [
+        "甲赫・鱗赫"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/chara/yomo_renji/",
+      "retrieved_sha256": "212e9fdfe61c9fd64858053e40ae3e61f0cbbd778204e2d694b82edb7d9eb197",
+      "rc_type_on_page": [
+        "？"
+      ],
+      "scope": "原作出版社の人物・喰種分類。赫眼の色は共通生理と公式カラー設定で照合。赫子形状をこのページだけでは確定しない。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/data/",
+      "retrieved_sha256": "53cb0c6f14babaea18656251037615529f4e600cd905c901b9cd9f4376e3b4da",
+      "scope": "用語・別名同一性・通常眼と赫眼の公式図版。詳細器官は未採用。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/data/index02.html",
+      "retrieved_sha256": "5a88cb86843d2bbf0b5d736a761cd6a9bf612ce946dd095c134fb749159080db",
+      "scope": "用語・別名同一性・通常眼と赫眼の公式図版。詳細器官は未採用。"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/re/chara/index2.html",
+      "retrieved_sha256": "de184297c6a7bf82f4ac26e5717bfa78cefb02123416f0317aef3580f863b886",
+      "scope": "用語・別名同一性・通常眼と赫眼の公式図版。詳細器官は未採用。"
+    },
+    {
+      "url": "https://www.marv.jp/special/tokyoghoul/first/chara_02.html",
+      "retrieved_sha256": "c2b8bc70446bcfb80682d8654195f4a4a8847761dd640281826f6c3f65a4941e",
+      "scope": "用語・別名同一性・通常眼と赫眼の公式図版。詳細器官は未採用。"
+    },
+    {
+      "url": "https://www.marv.jp/special/tokyoghoul/first/chara_03.html",
+      "retrieved_sha256": "f3a7795542314bb96504b283977b871bbe8537c12f80a1004d3190585ac0a620",
+      "scope": "用語・別名同一性・通常眼と赫眼の公式図版。詳細器官は未採用。"
+    },
+    {
+      "artwork_urls_reviewed": {
+        "first-02": "https://www.marv.jp/special/tokyoghoul/first/images/chara/kirishima_02.png",
+        "first-03": "https://www.marv.jp/special/tokyoghoul/first/images/chara/rise_02.png",
+        "first-04": "https://www.marv.jp/special/tokyoghoul/first/images/chara/nagachika_02.png",
+        "first-05": "https://www.marv.jp/special/tokyoghoul/first/images/chara/nishio_02.png",
+        "first-06": "https://www.marv.jp/special/tokyoghoul/first/images/chara/yoshimura_02.png",
+        "first-07": "https://www.marv.jp/special/tokyoghoul/first/images/chara/amon_02.png",
+        "first-08": "https://www.marv.jp/special/tokyoghoul/first/images/chara/mado_02.png",
+        "first-09": "https://www.marv.jp/special/tokyoghoul/first/images/chara/tsukiyama_02.png",
+        "first-10": "https://www.marv.jp/special/tokyoghoul/first/images/chara/hinami_02.png",
+        "first-11": "https://www.marv.jp/special/tokyoghoul/first/images/chara/yomo_02.png",
+        "first-12": "https://www.marv.jp/special/tokyoghoul/first/images/chara/uta_02.png",
+        "first-13": "https://www.marv.jp/special/tokyoghoul/first/images/chara/itori_02.png",
+        "first-14": "https://www.marv.jp/special/tokyoghoul/first/images/chara/yamori_02.png",
+        "first-15": "https://www.marv.jp/special/tokyoghoul/first/images/chara/kirishima2_02.png",
+        "first-16": "https://www.marv.jp/special/tokyoghoul/first/images/chara/suzuya_02.png",
+        "first-17": "https://www.marv.jp/special/tokyoghoul/first/images/chara/017_02.png",
+        "first-18": "https://www.marv.jp/special/tokyoghoul/first/images/chara/018_02.png",
+        "first-19": "https://www.marv.jp/special/tokyoghoul/first/images/chara/019_02.png",
+        "first-20": "https://www.marv.jp/special/tokyoghoul/first/images/chara/020_02.png",
+        "first-21": "https://www.marv.jp/special/tokyoghoul/first/images/chara/houji_02.png",
+        "first-22": "https://www.marv.jp/special/tokyoghoul/first/images/chara/takizawa_02.png",
+        "first-23": "https://www.marv.jp/special/tokyoghoul/first/images/chara/naki_02.png",
+        "first-24": "https://www.marv.jp/special/tokyoghoul/first/images/chara/akira_02.png",
+        "re-p_001": "https://www.marv.jp/special/tokyoghoul/images/chara/p_001.png",
+        "re-p_101": "https://www.marv.jp/special/tokyoghoul/images/chara/p_101.png",
+        "re-p_002": "https://www.marv.jp/special/tokyoghoul/images/chara/p_002.png",
+        "re-p_102": "https://www.marv.jp/special/tokyoghoul/images/chara/p_102.png",
+        "re-p_003": "https://www.marv.jp/special/tokyoghoul/images/chara/p_003.png",
+        "re-p_103": "https://www.marv.jp/special/tokyoghoul/images/chara/p_103.png",
+        "re-p_004": "https://www.marv.jp/special/tokyoghoul/images/chara/p_004.png",
+        "re-p_104": "https://www.marv.jp/special/tokyoghoul/images/chara/p_104.png",
+        "re-p_005": "https://www.marv.jp/special/tokyoghoul/images/chara/p_005.png",
+        "re-p_105": "https://www.marv.jp/special/tokyoghoul/images/chara/p_105.png"
+      },
+      "scope": "公式カラー画稿をローカルで目視。権利者の原画像はリポジトリへ再配布しない。"
+    }
+  ],
+  "reference_scope": "原作出版社資料＋公式アニメカラー画稿。未確認の巻話番号を記載しない。眼の左右が未確認のQs・亜門・エトは保留。",
+  "accepted_forms": "自然喰種7名の両眼・既存金木の左眼。赫子の新規追加は0。",
+  "original_manga_all_volumes_reviewed": false
+}

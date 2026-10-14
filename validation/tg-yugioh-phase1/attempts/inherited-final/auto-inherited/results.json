@@ -1,0 +1,50 @@
+{
+  "tests": [
+    {
+      "id": "AH01",
+      "passed": true,
+      "detail": {
+        "before": [
+          "horror-feature-sharp-claws",
+          "horror-auto-beast-eyes"
+        ],
+        "after": [
+          "horror-auto-beast-eyes"
+        ],
+        "baseUnchanged": true,
+        "policy": {
+          "version": 1,
+          "mode": "on",
+          "excludedIds": [
+            "horror-auto-beast-body-partial",
+            "horror-feature-sharp-claws"
+          ]
+        }
+      }
+    },
+    {
+      "id": "AH02",
+      "passed": true,
+      "detail": {
+        "before": [
+          "horror-feature-sharp-claws",
+          "horror-auto-beast-eyes"
+        ],
+        "after": [
+          "horror-feature-sharp-claws",
+          "horror-auto-beast-eyes"
+        ],
+        "baseUnchanged": true,
+        "policy": {
+          "version": 1,
+          "mode": "on",
+          "excludedIds": [
+            "horror-auto-beast-body-partial"
+          ]
+        }
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

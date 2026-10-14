@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "id": "AC01",
+      "passed": true,
+      "rows": 36,
+      "normal": 36,
+      "manga": 36,
+      "panels": 144,
+      "fulltextSHA256": "1ce0eea7f8666cbcaff97229bad2c19b754f857c3ee2c09f137af77824f586b2"
+    }
+  ],
+  "passed": true,
+  "physicalDevice": false,
+  "publicOrigin": false
+}

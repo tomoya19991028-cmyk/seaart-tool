@@ -1,0 +1,854 @@
+{
+  "counts": {
+    "characters": 1405,
+    "tg": 21,
+    "forms": 1478
+  },
+  "records": [
+    {
+      "id": "character-extension-tg-amon",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "white long coat over a dark suit jacket and white shirt": 1
+          },
+          "lower": {
+            "dark suit trousers": 1
+          },
+          "feet": {
+            "black dress shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "white long coat over a dark suit jacket and white shirt"
+          ],
+          "lower": [
+            "dark suit trousers"
+          ],
+          "feet": [
+            "black dress shoes"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-0",
+        "hairColor": "hairColor-0",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-2",
+        "eyeColor": "eyeColor-2",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-14"
+        ],
+        "characterPresetHistory": {
+          "character": "Koutarou Amon (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:11.447Z"
+        },
+        "outfitExpandedFrom": "white investigator coat over a dark suit"
+      }
+    },
+    {
+      "id": "character-extension-tg-arima",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "white long investigator coat over a black high-collared shirt": 1
+          },
+          "lower": {
+            "black trousers": 1
+          },
+          "feet": {
+            "black shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "white long investigator coat over a black high-collared shirt"
+          ],
+          "lower": [
+            "black trousers"
+          ],
+          "feet": [
+            "black shoes"
+          ],
+          "accessory": [
+            "glasses"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-1",
+        "hairColor": "hairColor-1",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-10",
+        "eyeColor": "eyeColor-10",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-17"
+        ],
+        "outfitExpandedFrom": "white investigator coat over a black high-collared shirt",
+        "characterPresetHistory": {
+          "character": "Kishou Arima (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:11.915Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-hide",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "casual jacket over a light shirt": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "sneakers": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "casual jacket over a light shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "sneakers"
+          ],
+          "accessory": [
+            "orange headphones around the neck"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-20",
+        "hairColor": "hairColor-20",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-1",
+        "eyeColor": "eyeColor-1",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-19"
+        ],
+        "outfitExpandedFrom": "casual jacket over a light shirt and dark trousers",
+        "characterPresetHistory": {
+          "character": "Hideyoshi Nagachika (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:12.355Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-nishiki",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "casual shirt and jacket": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "casual shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "casual shirt and jacket"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "casual shoes"
+          ],
+          "accessory": [
+            "glasses"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-4",
+        "hairColor": "hairColor-4",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-1",
+        "eyeColor": "eyeColor-1",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-22"
+        ],
+        "outfitExpandedFrom": "casual shirt and jacket with dark trousers",
+        "characterPresetHistory": {
+          "character": "Nishiki Nishio (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:12.797Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-yoshimura",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "white shirt and dark cafe vest": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "black dress shoes": 1
+          },
+          "accessory": {
+            "brown bow tie": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "white shirt and dark cafe vest"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "black dress shoes"
+          ],
+          "accessory": [
+            "brown bow tie"
+          ],
+          "skin": [
+            "wrinkled skin"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": "",
+          "accessory": ""
+        },
+        "hairPrimary": "hairColor-1",
+        "hairColor": "hairColor-1",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0",
+          "hairStyle-12"
+        ],
+        "eyeLeft": "eyeColor-10",
+        "eyeColor": "eyeColor-10",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-25"
+        ],
+        "outfitExpandedFrom": "white shirt and dark cafe vest with a brown bow tie",
+        "characterPresetHistory": {
+          "character": "Kuzen Yoshimura (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:13.227Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-eto",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "green dress bodice with a light outer layer": 1
+          },
+          "lower": {
+            "green dress skirt": 1
+          },
+          "feet": {
+            "simple shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "green dress bodice with a light outer layer"
+          ],
+          "lower": [
+            "green dress skirt"
+          ],
+          "feet": [
+            "simple shoes"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-7",
+        "hairColor": "hairColor-7",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-2"
+        ],
+        "eyeLeft": "eyeColor-3",
+        "eyeColor": "eyeColor-3",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-29"
+        ],
+        "characterPresetHistory": {
+          "character": "Eto Yoshimura (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:13.636Z"
+        },
+        "outfitExpandedFrom": "green dress with a light outer layer"
+      }
+    },
+    {
+      "id": "character-extension-tg-tatara",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "long white coat": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "dark shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "long white coat"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "accessory": [
+            "red metal mouth mask"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-1",
+        "hairColor": "hairColor-1",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-10",
+        "eyeColor": "eyeColor-10",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-33"
+        ],
+        "outfitExpandedFrom": "long white coat and dark trousers",
+        "characterPresetHistory": {
+          "character": "Tatara (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:14.000Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-uta",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "black sleeveless shirt": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "dark shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "black sleeveless shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "eyeDetail": [
+            "black sclera in both eyes"
+          ],
+          "skin": [
+            "black neck and arm tattoos"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-0",
+        "hairColor": "hairColor-0",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-41"
+        ],
+        "eyeLeft": "eyeColor-4",
+        "eyeColor": "eyeColor-4",
+        "eyeMode": "same",
+        "outfit": [
+          "set-character-1e2d039bc8241fff"
+        ],
+        "outfitExpandedFrom": "black sleeveless shirt and dark trousers",
+        "characterPresetHistory": {
+          "character": "Uta (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:14.515Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-hinami",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "modest dress bodice and light cardigan": 1
+          },
+          "lower": {
+            "modest dress skirt": 1
+          },
+          "feet": {
+            "simple shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "modest dress bodice and light cardigan"
+          ],
+          "lower": [
+            "modest dress skirt"
+          ],
+          "feet": [
+            "simple shoes"
+          ],
+          "head": [
+            "white flower headband"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-4",
+        "hairColor": "hairColor-4",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-1"
+        ],
+        "eyeLeft": "eyeColor-1",
+        "eyeColor": "eyeColor-1",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-41"
+        ],
+        "outfitExpandedFrom": "modest dress and light cardigan",
+        "characterPresetHistory": {
+          "character": "Hinami Fueguchi (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:14.889Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-takizawa",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "blue suit jacket over a white shirt and blue tie": 1
+          },
+          "lower": {
+            "blue suit trousers": 1
+          },
+          "feet": {
+            "black dress shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "blue suit jacket over a white shirt and blue tie"
+          ],
+          "lower": [
+            "blue suit trousers"
+          ],
+          "feet": [
+            "black dress shoes"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-4",
+        "hairColor": "hairColor-4",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-1",
+        "eyeColor": "eyeColor-1",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-45"
+        ],
+        "characterPresetHistory": {
+          "character": "Seidou Takizawa (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:15.443Z"
+        },
+        "outfitExpandedFrom": "blue investigator suit with a white shirt and blue tie"
+      }
+    },
+    {
+      "id": "character-extension-tg-saiko",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "white double-breasted Quinx jacket with black lapels over a dark shirt": 1
+          },
+          "lower": {
+            "dark skirt": 1
+          },
+          "feet": {
+            "dark shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "white double-breasted Quinx jacket with black lapels over a dark shirt"
+          ],
+          "lower": [
+            "dark skirt"
+          ],
+          "feet": [
+            "dark shoes"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-6",
+        "hairColor": "hairColor-6",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-2",
+          "hairStyle-5"
+        ],
+        "eyeLeft": "eyeColor-2",
+        "eyeColor": "eyeColor-2",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-48"
+        ],
+        "characterPresetHistory": {
+          "character": "Saiko Yonebayashi (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:15.938Z"
+        },
+        "outfitExpandedFrom": "white Quinx uniform jacket over a dark shirt and skirt"
+      }
+    },
+    {
+      "id": "character-extension-tg-urie",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "white double-breasted Quinx jacket with black lapels over a dark shirt": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "dark shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "white double-breasted Quinx jacket with black lapels over a dark shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "skin": [
+            "two moles below the left eye"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-0",
+        "hairColor": "hairColor-0",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-10",
+        "eyeColor": "eyeColor-10",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-50"
+        ],
+        "outfitExpandedFrom": "white Quinx uniform jacket over a dark shirt and trousers",
+        "characterPresetHistory": {
+          "character": "Kuki Urie (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:16.327Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-shirazu",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "light brown Quinx coat over a dark shirt": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "dark shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "light brown Quinx coat over a dark shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "bodyFeatures": [
+            "sharp teeth"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-20",
+        "hairColor": "hairColor-20",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0",
+          "hairStyle-61"
+        ],
+        "eyeLeft": "eyeColor-1",
+        "eyeColor": "eyeColor-1",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-52"
+        ],
+        "outfitExpandedFrom": "light brown Quinx coat over a dark shirt and trousers",
+        "characterPresetHistory": {
+          "character": "Ginshi Shirazu (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:16.709Z"
+        }
+      }
+    },
+    {
+      "id": "character-extension-tg-akira",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "white investigator coat over a dark suit jacket and blouse": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "black dress shoes": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "white investigator coat over a dark suit jacket and blouse"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "black dress shoes"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-3",
+        "hairColor": "hairColor-3",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-1"
+        ],
+        "eyeLeft": "eyeColor-2",
+        "eyeColor": "eyeColor-2",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-55"
+        ],
+        "characterPresetHistory": {
+          "character": "Akira Mado (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:17.149Z"
+        },
+        "outfitExpandedFrom": "white investigator coat over a dark suit and blouse"
+      }
+    },
+    {
+      "id": "character-extension-tg-yomo",
+      "ok": true,
+      "profile": {
+        "itemWeights": {
+          "upper": {
+            "dark high-collared long coat": 1
+          },
+          "lower": {
+            "dark trousers": 1
+          },
+          "feet": {
+            "dark boots": 1
+          }
+        },
+        "itemColors": {},
+        "detail": {
+          "upper": [
+            "dark high-collared long coat"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark boots"
+          ]
+        },
+        "detailCustom": {
+          "upper": "",
+          "lower": "",
+          "feet": ""
+        },
+        "hairPrimary": "hairColor-18",
+        "hairColor": "hairColor-18",
+        "hairMode": "single",
+        "hairStyle": [
+          "hairStyle-0"
+        ],
+        "eyeLeft": "eyeColor-10",
+        "eyeColor": "eyeColor-10",
+        "eyeMode": "same",
+        "outfit": [
+          "person-specific-57"
+        ],
+        "characterPresetHistory": {
+          "character": "Renji Yomo (Tokyo Ghoul)",
+          "presetId": "standard",
+          "label": "標準",
+          "appliedAt": "2026-10-14T12:47:17.610Z"
+        },
+        "outfitExpandedFrom": "dark high-collared long coat and dark trousers"
+      }
+    }
+  ],
+  "groups": [
+    "遊戯王"
+  ],
+  "errors": []
+}

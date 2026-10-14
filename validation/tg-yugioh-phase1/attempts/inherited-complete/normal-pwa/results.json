@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "online new cache and transient normal mode",
+    "offline real quick selection without manga dialog",
+    "offline reload preserves selection with normal default",
+    "offline removal/save/reload",
+    "online return preserves data"
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false,
+  "passed": true
+}

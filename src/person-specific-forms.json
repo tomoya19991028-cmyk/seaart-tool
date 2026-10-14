@@ -244,6 +244,96 @@
         }
       },
       "outfit": "black hakama pants"
+    },
+    {
+      "id": "kakugan",
+      "owner": "Ken Kaneki (Tokyo Ghoul)",
+      "name": "赫眼（左眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in the left eye with a black sclera"
+        ]
+      },
+      "eyesRight": "gray eyes",
+      "eyeMode": "odd"
+    },
+    {
+      "id": "kakugan",
+      "owner": "Touka Kirishima (Tokyo Ghoul)",
+      "name": "赫眼（両眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in both eyes with black sclera"
+        ]
+      }
+    },
+    {
+      "id": "kakugan",
+      "owner": "Rize Kamishiro (Tokyo Ghoul)",
+      "name": "赫眼（両眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in both eyes with black sclera"
+        ]
+      }
+    },
+    {
+      "id": "kakugan",
+      "owner": "Ayato Kirishima (Tokyo Ghoul)",
+      "name": "赫眼（両眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in both eyes with black sclera"
+        ]
+      }
+    },
+    {
+      "id": "kakugan",
+      "owner": "Shuu Tsukiyama (Tokyo Ghoul)",
+      "name": "赫眼（両眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in both eyes with black sclera"
+        ]
+      }
+    },
+    {
+      "id": "kakugan",
+      "owner": "Nishiki Nishio (Tokyo Ghoul)",
+      "name": "赫眼（両眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in both eyes with black sclera"
+        ]
+      }
+    },
+    {
+      "id": "kakugan",
+      "owner": "Hinami Fueguchi (Tokyo Ghoul)",
+      "name": "赫眼（両眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in both eyes with black sclera"
+        ]
+      }
+    },
+    {
+      "id": "kakugan",
+      "owner": "Renji Yomo (Tokyo Ghoul)",
+      "name": "赫眼（両眼）",
+      "eyes": "red eyes",
+      "detail": {
+        "eyeDetail": [
+          "red kakugan in both eyes with black sclera"
+        ]
+      }
     }
   ],
   "candidates": [
@@ -363,6 +453,433 @@
       "owners": [
         "Ichigo Kurosaki (Bleach)"
       ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "white investigator coat over a dark suit",
+      "name": "白コートの捜査官服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Koutarou Amon (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "white long coat over a dark suit jacket and white shirt",
+      "name": "白コートの捜査官服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Koutarou Amon (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:lower",
+      "value": "dark suit trousers",
+      "name": "白コートの捜査官服：下半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Koutarou Amon (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "white investigator coat over a black high-collared shirt",
+      "name": "有馬の白い捜査官コート",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kishou Arima (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "white long investigator coat over a black high-collared shirt",
+      "name": "有馬の白い捜査官コート：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kishou Arima (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "casual jacket over a light shirt and dark trousers",
+      "name": "英良のカジュアル服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Hideyoshi Nagachika (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "casual jacket over a light shirt",
+      "name": "英良のカジュアル服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Hideyoshi Nagachika (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:accessory",
+      "value": "orange headphones around the neck",
+      "name": "永近英良：装飾",
+      "group": "キャラクター固有",
+      "owners": [
+        "Hideyoshi Nagachika (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "casual shirt and jacket with dark trousers",
+      "name": "西尾のカジュアル服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Nishiki Nishio (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "casual shirt and jacket",
+      "name": "西尾のカジュアル服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Nishiki Nishio (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:feet",
+      "value": "casual shoes",
+      "name": "西尾のカジュアル服：靴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Nishiki Nishio (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "white shirt and dark cafe vest with a brown bow tie",
+      "name": "芳村の喫茶店制服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kuzen Yoshimura (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "white shirt and dark cafe vest",
+      "name": "芳村の喫茶店制服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kuzen Yoshimura (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:accessory",
+      "value": "brown bow tie",
+      "name": "芳村の喫茶店制服：装飾",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kuzen Yoshimura (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:skin",
+      "value": "wrinkled skin",
+      "name": "芳村功善：恒常身体特徴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kuzen Yoshimura (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "green dress with a light outer layer",
+      "name": "高槻泉の私服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Eto Yoshimura (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "green dress bodice with a light outer layer",
+      "name": "高槻泉の私服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Eto Yoshimura (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:lower",
+      "value": "green dress skirt",
+      "name": "高槻泉の私服：下半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Eto Yoshimura (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:feet",
+      "value": "simple shoes",
+      "name": "高槻泉の私服：靴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Eto Yoshimura (Tokyo Ghoul)",
+        "Hinami Fueguchi (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "long white coat and dark trousers",
+      "name": "タタラの白いコート",
+      "group": "キャラクター固有",
+      "owners": [
+        "Tatara (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "long white coat",
+      "name": "タタラの白いコート：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Tatara (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:feet",
+      "value": "dark shoes",
+      "name": "タタラの白いコート：靴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Tatara (Tokyo Ghoul)",
+        "Uta (Tokyo Ghoul)",
+        "Saiko Yonebayashi (Tokyo Ghoul)",
+        "Kuki Urie (Tokyo Ghoul)",
+        "Ginshi Shirazu (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:accessory",
+      "value": "red metal mouth mask",
+      "name": "タタラ：装飾",
+      "group": "キャラクター固有",
+      "owners": [
+        "Tatara (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:eyeDetail",
+      "value": "black sclera in both eyes",
+      "name": "ウタ：眼の恒常特徴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Uta (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:skin",
+      "value": "black neck and arm tattoos",
+      "name": "ウタ：恒常身体特徴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Uta (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:accessory",
+      "value": "ear piercings",
+      "name": "ウタ：装飾",
+      "group": "キャラクター固有",
+      "owners": [
+        "Uta (Tokyo Ghoul)",
+        "Ginshi Shirazu (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "modest dress and light cardigan",
+      "name": "雛実の私服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Hinami Fueguchi (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "modest dress bodice and light cardigan",
+      "name": "雛実の私服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Hinami Fueguchi (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:lower",
+      "value": "modest dress skirt",
+      "name": "雛実の私服：下半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Hinami Fueguchi (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:head",
+      "value": "white flower headband",
+      "name": "笛口雛実：髪飾り",
+      "group": "キャラクター固有",
+      "owners": [
+        "Hinami Fueguchi (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "blue investigator suit with a white shirt and blue tie",
+      "name": "滝澤の捜査官スーツ",
+      "group": "キャラクター固有",
+      "owners": [
+        "Seidou Takizawa (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "blue suit jacket over a white shirt and blue tie",
+      "name": "滝澤の捜査官スーツ：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Seidou Takizawa (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:lower",
+      "value": "blue suit trousers",
+      "name": "滝澤の捜査官スーツ：下半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Seidou Takizawa (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "white Quinx uniform jacket over a dark shirt and skirt",
+      "name": "才子のクインクス制服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Saiko Yonebayashi (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "white double-breasted Quinx jacket with black lapels over a dark shirt",
+      "name": "才子のクインクス制服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Saiko Yonebayashi (Tokyo Ghoul)",
+        "Kuki Urie (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "white Quinx uniform jacket over a dark shirt and trousers",
+      "name": "瓜江のクインクス制服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kuki Urie (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:skin",
+      "value": "two moles below the left eye",
+      "name": "瓜江久生：恒常身体特徴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Kuki Urie (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "light brown Quinx coat over a dark shirt and trousers",
+      "name": "不知のクインクス制服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ginshi Shirazu (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "light brown Quinx coat over a dark shirt",
+      "name": "不知のクインクス制服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ginshi Shirazu (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:bodyFeatures",
+      "value": "sharp teeth",
+      "name": "不知吟士：身体特徴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Ginshi Shirazu (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "white investigator coat over a dark suit and blouse",
+      "name": "暁の捜査官服",
+      "group": "キャラクター固有",
+      "owners": [
+        "Akira Mado (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "white investigator coat over a dark suit jacket and blouse",
+      "name": "暁の捜査官服：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Akira Mado (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "catalog:outfit",
+      "value": "dark high-collared long coat and dark trousers",
+      "name": "四方のハイカラーコート",
+      "group": "キャラクター固有",
+      "owners": [
+        "Renji Yomo (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:upper",
+      "value": "dark high-collared long coat",
+      "name": "四方のハイカラーコート：上半身",
+      "group": "キャラクター固有",
+      "owners": [
+        "Renji Yomo (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:feet",
+      "value": "dark boots",
+      "name": "四方のハイカラーコート：靴",
+      "group": "キャラクター固有",
+      "owners": [
+        "Renji Yomo (Tokyo Ghoul)"
+      ]
+    },
+    {
+      "source": "detail:eyeDetail",
+      "value": "red kakugan in both eyes with black sclera",
+      "name": "両眼の赫眼（赤い虹彩・黒い強膜）",
+      "group": "キャラクター固有",
+      "owners": [
+        "Touka Kirishima (Tokyo Ghoul)",
+        "Rize Kamishiro (Tokyo Ghoul)",
+        "Ayato Kirishima (Tokyo Ghoul)",
+        "Shuu Tsukiyama (Tokyo Ghoul)",
+        "Nishiki Nishio (Tokyo Ghoul)",
+        "Hinami Fueguchi (Tokyo Ghoul)",
+        "Renji Yomo (Tokyo Ghoul)"
+      ]
     }
   ],
   "references": [
@@ -381,6 +898,18 @@
     {
       "url": "https://bleach-anime.com/character/",
       "scope": "原作キャラクター表記"
+    },
+    {
+      "url": "https://youngjump.jp/tokyoghoul/tg/data/",
+      "scope": "原作出版社資料・赫眼の描写と喰種の区別"
+    },
+    {
+      "url": "https://www.marv.jp/special/tokyoghoul/first/chara_02.html",
+      "scope": "董香・通常眼と赤虹彩／黒強膜の公式カラー設定"
+    },
+    {
+      "url": "https://www.marv.jp/special/tokyoghoul/first/chara_03.html",
+      "scope": "利世・両眼の赫眼の公式カラー設定"
     }
   ],
   "outfitSets": {
@@ -390,6 +919,77 @@
     },
     "black hakama pants": {
       "lower": "black hakama"
+    },
+    "white investigator coat over a dark suit": {
+      "upper": "white long coat over a dark suit jacket and white shirt",
+      "lower": "dark suit trousers",
+      "feet": "black dress shoes"
+    },
+    "white investigator coat over a black high-collared shirt": {
+      "upper": "white long investigator coat over a black high-collared shirt",
+      "lower": "black trousers",
+      "feet": "black shoes"
+    },
+    "casual jacket over a light shirt and dark trousers": {
+      "upper": "casual jacket over a light shirt",
+      "lower": "dark trousers",
+      "feet": "sneakers"
+    },
+    "casual shirt and jacket with dark trousers": {
+      "upper": "casual shirt and jacket",
+      "lower": "dark trousers",
+      "feet": "casual shoes"
+    },
+    "white shirt and dark cafe vest with a brown bow tie": {
+      "upper": "white shirt and dark cafe vest",
+      "lower": "dark trousers",
+      "feet": "black dress shoes",
+      "accessory": "brown bow tie"
+    },
+    "green dress with a light outer layer": {
+      "upper": "green dress bodice with a light outer layer",
+      "lower": "green dress skirt",
+      "feet": "simple shoes"
+    },
+    "long white coat and dark trousers": {
+      "upper": "long white coat",
+      "lower": "dark trousers",
+      "feet": "dark shoes"
+    },
+    "modest dress and light cardigan": {
+      "upper": "modest dress bodice and light cardigan",
+      "lower": "modest dress skirt",
+      "feet": "simple shoes"
+    },
+    "blue investigator suit with a white shirt and blue tie": {
+      "upper": "blue suit jacket over a white shirt and blue tie",
+      "lower": "blue suit trousers",
+      "feet": "black dress shoes"
+    },
+    "white Quinx uniform jacket over a dark shirt and skirt": {
+      "upper": "white double-breasted Quinx jacket with black lapels over a dark shirt",
+      "lower": "dark skirt",
+      "feet": "dark shoes"
+    },
+    "white Quinx uniform jacket over a dark shirt and trousers": {
+      "upper": "white double-breasted Quinx jacket with black lapels over a dark shirt",
+      "lower": "dark trousers",
+      "feet": "dark shoes"
+    },
+    "light brown Quinx coat over a dark shirt and trousers": {
+      "upper": "light brown Quinx coat over a dark shirt",
+      "lower": "dark trousers",
+      "feet": "dark shoes"
+    },
+    "white investigator coat over a dark suit and blouse": {
+      "upper": "white investigator coat over a dark suit jacket and blouse",
+      "lower": "dark trousers",
+      "feet": "black dress shoes"
+    },
+    "dark high-collared long coat and dark trousers": {
+      "upper": "dark high-collared long coat",
+      "lower": "dark trousers",
+      "feet": "dark boots"
     }
   }
 }

@@ -1,0 +1,79 @@
+{
+  "tests": [
+    {
+      "id": "YG-SELECT-character-extension-e65b4804dabe1c34",
+      "passed": true,
+      "name": "武藤遊戯（遊戯王）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-53e3a6553978f137",
+      "passed": true,
+      "name": "闇遊戯（アテム）（遊戯王）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-54faa4f8c892ca03",
+      "passed": true,
+      "name": "海馬瀬人（遊戯王）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-06d505a24a0e440a",
+      "passed": true,
+      "name": "城之内克也（遊戯王）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-d1944d954fa30a2e",
+      "passed": true,
+      "name": "真崎杏子（遊戯王）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-e1489fbb5c131d55",
+      "passed": true,
+      "name": "孔雀舞（遊戯王）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-41da4c0de1f87b42",
+      "passed": true,
+      "name": "遊城十代（遊戯王GX）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-d51d828ab77bb032",
+      "passed": true,
+      "name": "天上院明日香（遊戯王GX）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-7c66b8a2a14808dc",
+      "passed": true,
+      "name": "不動遊星（遊戯王5D's）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-33e751559c09dfcf",
+      "passed": true,
+      "name": "十六夜アキ（遊戯王5D's）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-25a15d1eaf6efb87",
+      "passed": true,
+      "name": "九十九遊馬（遊戯王ZEXAL）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-c55696c721e1b753",
+      "passed": true,
+      "name": "榊遊矢（遊戯王ARC-V）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-9cdd13d9b4ab1b04",
+      "passed": true,
+      "name": "藤木遊作（遊戯王VRAINS）"
+    },
+    {
+      "id": "YG-SELECT-character-extension-f22e086f70e87630",
+      "passed": true,
+      "name": "王道遊我（遊戯王SEVENS）"
+    },
+    {
+      "id": "YG-SAVE-14",
+      "passed": true
+    }
+  ],
+  "physicalDevice": false
+}

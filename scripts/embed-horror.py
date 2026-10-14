@@ -19,7 +19,9 @@ def block(name,source):
         anchor=b'</body>';offset=b.rindex(anchor);b=b[:offset]+b'<script>\r\n'+payload+b'</script>\r\n'+b[offset:]
 palette_line=re.search(rb'const itemColorPalette=.*?;\r\n',b).group(0)
 b=b.replace(palette_line,b'',1)
-block('BUILTIN_ADDITIONS',palette_line.decode()+'const environmentAdditions='+json.dumps(json.loads((root/'src/environment-additions.json').read_text()),ensure_ascii=False,separators=(',',':'))+';\nconst personSpecificDefinitions='+json.dumps(json.loads((root/'src/person-specific-forms.json').read_text()),ensure_ascii=False,separators=(',',':'))+';\n'+(root/'src/builtin-additions.js').read_text())
+phase1=root/'src/tokyo-ghoul-phase1.json'
+phase1_source='const tokyoGhoulPhase1='+json.dumps(json.loads(phase1.read_text()),ensure_ascii=False,separators=(',',':'))+';\n' if phase1.exists() else ''
+block('BUILTIN_ADDITIONS',palette_line.decode()+'const environmentAdditions='+json.dumps(json.loads((root/'src/environment-additions.json').read_text()),ensure_ascii=False,separators=(',',':'))+';\nconst personSpecificDefinitions='+json.dumps(json.loads((root/'src/person-specific-forms.json').read_text()),ensure_ascii=False,separators=(',',':'))+';\n'+phase1_source+(root/'src/builtin-additions.js').read_text())
 block('FOUNDATION',(root/'src/horror-foundation.js').read_text()+'\n'+(root/'src/person-specific-foundation.js').read_text())
 runtime=root/'src/horror-runtime.js'
 if runtime.exists():

@@ -1,0 +1,110 @@
+[
+  {
+    "folder": "seaart-phase1-baseline",
+    "head": "3fd1bb9fc34be09d85e3eef71cc1f6122f9054b8",
+    "file": "index.html",
+    "sha256": "841b871b885875ccd1ab0f2edd8005afe9cb8e1bcf8369289adfb3113014925d"
+  },
+  {
+    "folder": "seaart-phase1-baseline",
+    "head": "3fd1bb9fc34be09d85e3eef71cc1f6122f9054b8",
+    "file": "sw.js",
+    "sha256": "76810e80a2fb4bd969705da3bd05353b07462c63426a983c515629742c94d5dd"
+  },
+  {
+    "folder": "seaart-phase1-baseline",
+    "head": "3fd1bb9fc34be09d85e3eef71cc1f6122f9054b8",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  },
+  {
+    "folder": "seaart-old-main",
+    "head": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "file": "index.html",
+    "sha256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72"
+  },
+  {
+    "folder": "seaart-old-main",
+    "head": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "file": "sw.js",
+    "sha256": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a"
+  },
+  {
+    "folder": "seaart-old-main",
+    "head": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  },
+  {
+    "folder": "seaart-horror-auto",
+    "head": "7b16f4914372131f4f93677bf645b41e40f07258",
+    "file": "index.html",
+    "sha256": "cb2f9a724086db710eb4af50092f2062e7581e1483ad74556c0a6106d232654e"
+  },
+  {
+    "folder": "seaart-horror-auto",
+    "head": "7b16f4914372131f4f93677bf645b41e40f07258",
+    "file": "sw.js",
+    "sha256": "137e3e2a58c90a0f449310288b60573b3adfd02f1c8a9cb22b363755130f12f2"
+  },
+  {
+    "folder": "seaart-horror-auto",
+    "head": "7b16f4914372131f4f93677bf645b41e40f07258",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  },
+  {
+    "folder": "seaart-card-tags",
+    "head": "023bb6d2b24395551c06d756faac16440f88b7b5",
+    "file": "index.html",
+    "sha256": "62c801d21fc33476e46e44b611e1c273c28e22e51fa71602a0c5ea4c1c26afc6"
+  },
+  {
+    "folder": "seaart-card-tags",
+    "head": "023bb6d2b24395551c06d756faac16440f88b7b5",
+    "file": "sw.js",
+    "sha256": "dc4c432469f5324189b3b57dd373246bda8f7e303685424ec10437ec194ed5b5"
+  },
+  {
+    "folder": "seaart-card-tags",
+    "head": "023bb6d2b24395551c06d756faac16440f88b7b5",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  },
+  {
+    "folder": "seaart-horror-stories",
+    "head": "cf0336d03e3edf104fdaa911b9bc568a3609bf50",
+    "file": "index.html",
+    "sha256": "67b979ec6739872a74ae914975e29582c86ecc357493edb8ebcad201867090f7"
+  },
+  {
+    "folder": "seaart-horror-stories",
+    "head": "cf0336d03e3edf104fdaa911b9bc568a3609bf50",
+    "file": "sw.js",
+    "sha256": "8054d6420339a732ae7a9d17cc78caed74c87feec595b383bc0de8cd5e48e7c2"
+  },
+  {
+    "folder": "seaart-horror-stories",
+    "head": "cf0336d03e3edf104fdaa911b9bc568a3609bf50",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  },
+  {
+    "folder": "seaart-unified-ui",
+    "head": "ede9fa02a0088816509b20f216b652c3237d87fd",
+    "file": "index.html",
+    "sha256": "ed8da8f0978a0249a61778b1433c139c22cad9c95721c7874d11e6493cf610bb"
+  },
+  {
+    "folder": "seaart-unified-ui",
+    "head": "ede9fa02a0088816509b20f216b652c3237d87fd",
+    "file": "sw.js",
+    "sha256": "13f3f88e81d13cfefcec19a49d091561b24d78a2a158e42aad10a22d066b15c3"
+  },
+  {
+    "folder": "seaart-unified-ui",
+    "head": "ede9fa02a0088816509b20f216b652c3237d87fd",
+    "file": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+  }
+]

@@ -1,0 +1,255 @@
+{
+  "tests": [
+    {
+      "id": "DETAIL-yoshimura",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "skin": [
+            "wrinkled skin"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "white shirt and dark cafe vest"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "black dress shoes"
+          ],
+          "accessory": [
+            "brown bow tie"
+          ],
+          "skin": [
+            "wrinkled skin"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-uta",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "eyeDetail": [
+            "black sclera in both eyes"
+          ],
+          "skin": [
+            "black neck and arm tattoos"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "black sleeveless shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "eyeDetail": [
+            "black sclera in both eyes"
+          ],
+          "skin": [
+            "black neck and arm tattoos"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-hide",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "accessory": [
+            "orange headphones around the neck"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "casual jacket over a light shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "sneakers"
+          ],
+          "accessory": [
+            "orange headphones around the neck"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-arima",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "accessory": [
+            "glasses"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "white long investigator coat over a black high-collared shirt"
+          ],
+          "lower": [
+            "black trousers"
+          ],
+          "feet": [
+            "black shoes"
+          ],
+          "accessory": [
+            "glasses"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-nishiki",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "accessory": [
+            "glasses"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "casual shirt and jacket"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "casual shoes"
+          ],
+          "accessory": [
+            "glasses"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-tatara",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "accessory": [
+            "red metal mouth mask"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "long white coat"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "accessory": [
+            "red metal mouth mask"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-hinami",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "head": [
+            "white flower headband"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "modest dress bodice and light cardigan"
+          ],
+          "lower": [
+            "modest dress skirt"
+          ],
+          "feet": [
+            "simple shoes"
+          ],
+          "head": [
+            "white flower headband"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-urie",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "skin": [
+            "two moles below the left eye"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "white double-breasted Quinx jacket with black lapels over a dark shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "skin": [
+            "two moles below the left eye"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-shirazu",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "bodyFeatures": [
+            "sharp teeth"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        },
+        "actual": {
+          "upper": [
+            "light brown Quinx coat over a dark shirt"
+          ],
+          "lower": [
+            "dark trousers"
+          ],
+          "feet": [
+            "dark shoes"
+          ],
+          "bodyFeatures": [
+            "sharp teeth"
+          ],
+          "accessory": [
+            "ear piercings"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DETAIL-COPY",
+      "passed": true
+    }
+  ],
+  "physicalDevice": false
+}

@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "id": "AF01",
+      "passed": true,
+      "detail": {
+        "fixedPanels": 6,
+        "fixedItems": 36,
+        "oldBodyPreserved": true
+      }
+    },
+    {
+      "id": "AF02",
+      "passed": true,
+      "detail": {
+        "conflictExplicit": true,
+        "manualFixedBodyKept": true
+      }
+    },
+    {
+      "id": "AF03",
+      "passed": true,
+      "detail": {
+        "manualVirtualBodyConflict": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}
