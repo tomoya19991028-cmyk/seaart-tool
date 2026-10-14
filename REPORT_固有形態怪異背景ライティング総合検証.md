@@ -12,7 +12,7 @@
 - 基準: `feat/horror-auto-features-mobile-ui` / `7b16f4914372131f4f93677bf645b41e40f07258`
 - 検証ブランチ: `feat/person-forms-horror-background-lighting-ui`
 - 製品commit: `a669edc3367083cdab3b67177ab988b12420de9f`
-- 保存先の最終HEADは最終応答とGitHubブランチを参照。
+- GitHub照合時HEAD: `0acfe83a44f97384487eef478840e92535d39888`。変更全40blobと独立取得8ファイルをローカルと照合して一致。照合記録追加後の最終HEADは最終応答を参照。
 - 最終HTML: `4088549 bytes / SHA-256 841b871b885875ccd1ab0f2edd8005afe9cb8e1bcf8369289adfb3113014925d`
 - 最終SW: `2339 bytes / SHA-256 76810e80a2fb4bd969705da3bd05353b07462c63426a983c515629742c94d5dd`
 - cache: `seaart-tool-pwa-v5-forms-structures-environment-ui-v1-http-cache-v1`
@@ -131,4 +131,4 @@ settings v5、working v2、actorExtensions v4、horror v1、既存namespaceを�
 - `tests/forms-environment/ui.cjs`
 - `tests/forms-environment/verify-results.py`
 
-加えて実装報告・本検証報告・Androidチェックリスト・Work引継ぎ、validation/forms-environmentのsummary・protection・原本ledger・evidence.zipを保存する。`
+加えて実装報告・本検証報告・Androidチェックリスト・Work引継ぎ、validation/forms-environmentのsummary・protection・原本ledger・evidence.zip・github-verification.jsonを保存した。`

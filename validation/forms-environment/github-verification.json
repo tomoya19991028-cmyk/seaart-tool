@@ -1,0 +1,291 @@
+{
+  "branch": "feat/person-forms-horror-background-lighting-ui",
+  "head": "0acfe83a44f97384487eef478840e92535d39888",
+  "productCommit": "a669edc3367083cdab3b67177ab988b12420de9f",
+  "changedFiles": 40,
+  "treeVerified": [
+    {
+      "path": "CHECKLIST_固有形態怪異背景ライティングAndroid確認.md",
+      "bytes": 4721,
+      "sha256": "5b291fd0eca0a1965b109c5a3db5daf18493d5a83407fe213b4f1e25522ff217",
+      "gitBlob": "055e5cab1f3d1c7cd28ec6dd26d5a7979a8e5835"
+    },
+    {
+      "path": "HANDOFF_Work_固有形態怪異背景ライティングSites.md",
+      "bytes": 1929,
+      "sha256": "42718356679ea068b8d9d86c18affc39fda1ed6e47cc9688cd28bad53118c9e5",
+      "gitBlob": "4f741ef061780ffd372aa8262251f5568bd3c3be"
+    },
+    {
+      "path": "REPORT_固有形態怪異背景ライティング一括更新.md",
+      "bytes": 9076,
+      "sha256": "21c6a6c80f356f9bd095c1f7a5c6d68cbdda4b9218219bf37a24973a0d95bf61",
+      "gitBlob": "e8b6c99d342e4332e90589b0a0749428d5181cdd"
+    },
+    {
+      "path": "REPORT_固有形態怪異背景ライティング総合検証.md",
+      "bytes": 8350,
+      "sha256": "6e32098817066463d4f46cb0900c5b42ae2c65a78e0376d49157a54131e3e18e",
+      "gitBlob": "f13d7835737741d15bf722e418877ed360cc24d1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4088549,
+      "sha256": "841b871b885875ccd1ab0f2edd8005afe9cb8e1bcf8369289adfb3113014925d",
+      "gitBlob": "34e0097027b3e348783e0e8353681164b3330ba6"
+    },
+    {
+      "path": "scripts/embed-horror.py",
+      "bytes": 4200,
+      "sha256": "c1e96819fd5cbf1e3900615255a0f9da5338faff61a51a5a2c7f0ec3cb8538fe",
+      "gitBlob": "54f028a28a7f3a7099a0f1e1c8dc47474dbed8a3"
+    },
+    {
+      "path": "scripts/integrate-horror.py",
+      "bytes": 10220,
+      "sha256": "e440eeddedb88314127a302ed101ba6badfba356d1835c903d9f99bb4f37a8ce",
+      "gitBlob": "bbb27011432cc6b2969b8981cd9ec8f46335b015"
+    },
+    {
+      "path": "src/builtin-additions.js",
+      "bytes": 1213,
+      "sha256": "8d74ac67e9073edc4ceee8fdbf4292022c217c5351d02147a78f710e7a3eb8dc",
+      "gitBlob": "7db85f831478b6fdf35c85a8894bff40dd7718af"
+    },
+    {
+      "path": "src/environment-additions.json",
+      "bytes": 17401,
+      "sha256": "e58ac378e59868e5c8a60da60b7e3e29011cb00e5267410deef53734d782d90d",
+      "gitBlob": "d8b12c6b3ff0401cbefbd526d2dba26c5c78ebf6"
+    },
+    {
+      "path": "src/environment-ui.js",
+      "bytes": 8966,
+      "sha256": "98f2c83797fc4a0918666753878d06e0ccb1881445a9985e7cfd1dd3b9fccbbf",
+      "gitBlob": "1c2405dca697d8b6d980fd1f022af7f095ee48b1"
+    },
+    {
+      "path": "src/horror-auto-definitions.json",
+      "bytes": 9827,
+      "sha256": "4be003d88461762fdd913cc1eaa75f11e5772adb3fdc8c7a28c2e9757df6e134",
+      "gitBlob": "2fc3ebb71f3e2802681f5d6698ee54a6168d802b"
+    },
+    {
+      "path": "src/horror-auto-runtime.js",
+      "bytes": 9850,
+      "sha256": "799df351af55e10ba54e98f269937916417b7e6bb7e87dac71ceff1b83e38b2f",
+      "gitBlob": "5a9ecd661bacda9bda58d437d90e94bf19150d8c"
+    },
+    {
+      "path": "src/horror-auto-ui.js",
+      "bytes": 18364,
+      "sha256": "c5d02c2385377e0e8f7a1563325547d31110ca8f746abb81cc73d8f517af9d3e",
+      "gitBlob": "ab67e0e52f51be6e746c0f7f7da2d818211c8261"
+    },
+    {
+      "path": "src/horror-card-tags.js",
+      "bytes": 11808,
+      "sha256": "140066c8b66aa7d1e96b1a7315146751bb644d41af939bdfed92d36cf0ff7bd5",
+      "gitBlob": "a2ba56bc1f750676e2d0d638d832f5d4d30d5006"
+    },
+    {
+      "path": "src/horror-foundation.js",
+      "bytes": 10917,
+      "sha256": "8b51585a04f4981c6e1793fe66b8781c4a2188815c566a1bb1a78f812a30aa97",
+      "gitBlob": "0e292025a972ec0ae96506ce1e3bac5a82416a80"
+    },
+    {
+      "path": "src/horror-normal-ui.js",
+      "bytes": 14135,
+      "sha256": "2af00d54d989bf2012f2171438b952a7011e1e913b0661ffdd7e7d20fda79300",
+      "gitBlob": "0bc6cdfb586597ecec9f691b407ce4f2f5112233"
+    },
+    {
+      "path": "src/horror-runtime.js",
+      "bytes": 89926,
+      "sha256": "d190d95bdd8a69f3a2407fd262b7d2502777608ef09d1ac4b8494c887c16caeb",
+      "gitBlob": "d62feac79c498ee59299b343c61be4e9648a43ca"
+    },
+    {
+      "path": "src/mobile-result-ui.js",
+      "bytes": 4520,
+      "sha256": "8e120a6f54a84fdd8f79896470396579962c057e7cd4d7d621ef306f5c1dc5bb",
+      "gitBlob": "613d78d97f70522535f739b22f1e282c4bc40b15"
+    },
+    {
+      "path": "src/person-specific-forms.js",
+      "bytes": 16375,
+      "sha256": "88c3132e375d2c28fab0e98adec05333e1ad22e9b1a93e03aba5e57c57a77888",
+      "gitBlob": "0c6731c7cd26f0aba206ce51b3d4f8ecb9665474"
+    },
+    {
+      "path": "src/person-specific-forms.json",
+      "bytes": 9743,
+      "sha256": "9d72ca41d2b8d88545fceed68c4f4dd7ac7632a9ca6ce482517e47560c235628",
+      "gitBlob": "5283c069c4fad5c647abfe32bcade04c413cbd5c"
+    },
+    {
+      "path": "src/person-specific-foundation.js",
+      "bytes": 3030,
+      "sha256": "c5950ad91d0acde7582c603b2f3361db8764f2d0e78ee5202726149041663e23",
+      "gitBlob": "5d2256275a9ee599876986e34030b1bc99151530"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 2339,
+      "sha256": "76810e80a2fb4bd969705da3bd05353b07462c63426a983c515629742c94d5dd",
+      "gitBlob": "94b22858f8eee0f517b4faf19688542933981714"
+    },
+    {
+      "path": "tests/forms-environment/README.md",
+      "bytes": 3102,
+      "sha256": "1d8adc6954bbfd25324981c2676e583779e7c621ce73c5aaaec17c758d950b26",
+      "gitBlob": "dc1723fbbaaeb6cae4ab5971a33873e10a385aca"
+    },
+    {
+      "path": "tests/forms-environment/candidate-ui.cjs",
+      "bytes": 5080,
+      "sha256": "4b402dbfd8713e84b884da3d188d6001ed028c3a3cd6565ff2ee538b7a45a878",
+      "gitBlob": "7df19c7638d956efa0b5ef3980f53069404998b5"
+    },
+    {
+      "path": "tests/forms-environment/contracts.cjs",
+      "bytes": 18142,
+      "sha256": "d3f0f4c0fe365a95eea6408a8f2b92f52dfca9367d3fca2af1406106c11fd1de",
+      "gitBlob": "9038b6ff779e07dba875de8247ba1e83909356c1"
+    },
+    {
+      "path": "tests/forms-environment/environment-faults.cjs",
+      "bytes": 1567,
+      "sha256": "02d452cb79d49fdd9be4ec17867df76ea7444955c21af3ca9eda1c11b656e606",
+      "gitBlob": "5015f635fb6cae26c2984fd175e71af7c4705dda"
+    },
+    {
+      "path": "tests/forms-environment/forms-repro.cjs",
+      "bytes": 1183,
+      "sha256": "83d67dfbbc2f5cc963cdb9fb2600429ca6c22afa60733ec4eb4735b6ee3c8bc8",
+      "gitBlob": "a0889d846b1e79079bebd88d7d60287476afc59d"
+    },
+    {
+      "path": "tests/forms-environment/persistence.cjs",
+      "bytes": 8416,
+      "sha256": "d99c27d5795ad73b9c975b1951d8eb52ae9e25b86c143bd90799c09264825810",
+      "gitBlob": "9957e8cc9a787a22b6345ef231bff0d82041b6a7"
+    },
+    {
+      "path": "tests/forms-environment/pwa.cjs",
+      "bytes": 3665,
+      "sha256": "e0129b6b799ce015ba3d70af82ae6b8b42253f45e748340114fe353078f52222",
+      "gitBlob": "44263130aeb051ff4b15207bef66c6e3ab977948"
+    },
+    {
+      "path": "tests/forms-environment/quality.py",
+      "bytes": 4221,
+      "sha256": "6cca92a39c5c188d845d9e692394c1fc5ffbb195ac8aba8e992dc2e3281d6e01",
+      "gitBlob": "bfdd3201ad4f4c9bdabbedc459e663c13232492d"
+    },
+    {
+      "path": "tests/forms-environment/replay.cjs",
+      "bytes": 7080,
+      "sha256": "ab54e518aecb0dd1efd7df423f530057a72de46c09efdb3d30509f078e0e48ae",
+      "gitBlob": "8ff0f625677d27af25c3834d1a18fb0a5fc1d25d"
+    },
+    {
+      "path": "tests/forms-environment/result-area.cjs",
+      "bytes": 1642,
+      "sha256": "e0c83cbca22235fb78516aea71346f5f6143451fc055e0e5856221cc3c80b6b6",
+      "gitBlob": "169963b941bd35d0f92793232fc567b29be38e53"
+    },
+    {
+      "path": "tests/forms-environment/run-regressions.py",
+      "bytes": 6575,
+      "sha256": "13de4961d40223242dd99ec3e3719ce4171ae457bcaf71ed015013dbd80ad231",
+      "gitBlob": "73b68fa2154e4a328e3714c48350424415c2d928"
+    },
+    {
+      "path": "tests/forms-environment/structure-visibility.cjs",
+      "bytes": 2826,
+      "sha256": "e2454a49ecac06f1185e1ca94c4600700b55f3ee2a232d96d25642bc7ccd1b11",
+      "gitBlob": "407b5ce851d152522ac003eba2c2c544ad001b47"
+    },
+    {
+      "path": "tests/forms-environment/ui.cjs",
+      "bytes": 5317,
+      "sha256": "d7a3c453339bb3104bb1ee323c1efa4bda21ffef050198df13dd1f0728b9154a",
+      "gitBlob": "8f0fbe955191403970cd34ac73d3f6f3e26f6081"
+    },
+    {
+      "path": "tests/forms-environment/verify-results.py",
+      "bytes": 2186,
+      "sha256": "47d49684fa540dd2ca8bd0e4466996c0f9f4baf2e321d1e7361a3deb56d80d8d",
+      "gitBlob": "01e53d7ae28739a46ae7eb4c0b863098191f3620"
+    },
+    {
+      "path": "validation/forms-environment/evidence.zip",
+      "bytes": 9880480,
+      "sha256": "6901aed8c768379111bd5a4efb456f80b353b97aaa4f6576907b1dce49b2ff57",
+      "gitBlob": "5e5705c14ccf4a7bfdc99cfa7cb2724a60cc22c2"
+    },
+    {
+      "path": "validation/forms-environment/original-test-ledger.json",
+      "bytes": 28741,
+      "sha256": "04356ed624f27e874733a99d48fc8b8c6444292d11ad6e3ac5bc171f1398e4e4",
+      "gitBlob": "b03a74bf3f347ffdf55926947af15015a14a7e6a"
+    },
+    {
+      "path": "validation/forms-environment/protection.json",
+      "bytes": 2667,
+      "sha256": "28be51cc72c66130205a613fdd94955662deff2496202e3e0fd2983ff1a7d221",
+      "gitBlob": "e53189e3d1d9b665365fabbc2cfa01e09ead2dd7"
+    },
+    {
+      "path": "validation/forms-environment/summary.json",
+      "bytes": 4441,
+      "sha256": "08caa3aeb3a6a013e912a32800bfaa7471abeb9c16e6caca4006474e8b7061f0",
+      "gitBlob": "0b79481bd52e955bcf23fe827a651406246cbf95"
+    }
+  ],
+  "independentDownloads": [
+    {
+      "path": "index.html",
+      "sha256": "841b871b885875ccd1ab0f2edd8005afe9cb8e1bcf8369289adfb3113014925d",
+      "bytes": 4088549
+    },
+    {
+      "path": "sw.js",
+      "sha256": "76810e80a2fb4bd969705da3bd05353b07462c63426a983c515629742c94d5dd",
+      "bytes": 2339
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+      "bytes": 762
+    },
+    {
+      "path": "src/horror-auto-definitions.json",
+      "sha256": "4be003d88461762fdd913cc1eaa75f11e5772adb3fdc8c7a28c2e9757df6e134",
+      "bytes": 9827
+    },
+    {
+      "path": "src/environment-ui.js",
+      "sha256": "98f2c83797fc4a0918666753878d06e0ccb1881445a9985e7cfd1dd3b9fccbbf",
+      "bytes": 8966
+    },
+    {
+      "path": "src/person-specific-forms.js",
+      "sha256": "88c3132e375d2c28fab0e98adec05333e1ad22e9b1a93e03aba5e57c57a77888",
+      "bytes": 16375
+    },
+    {
+      "path": "src/person-specific-forms.json",
+      "sha256": "9d72ca41d2b8d88545fceed68c4f4dd7ac7632a9ca6ce482517e47560c235628",
+      "bytes": 9743
+    },
+    {
+      "path": "scripts/embed-horror.py",
+      "sha256": "c1e96819fd5cbf1e3900615255a0f9da5338faff61a51a5a2c7f0ec3cb8538fe",
+      "bytes": 4200
+    }
+  ],
+  "verified": true
+}

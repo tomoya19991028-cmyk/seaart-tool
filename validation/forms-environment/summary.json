@@ -164,6 +164,9 @@
     "validation/forms-environment/summary.json",
     "validation/forms-environment/protection.json",
     "validation/forms-environment/original-test-ledger.json",
-    "validation/forms-environment/evidence.zip"
-  ]
+    "validation/forms-environment/evidence.zip",
+    "validation/forms-environment/github-verification.json"
+  ],
+  "verifiedRemoteSnapshot": "0acfe83a44f97384487eef478840e92535d39888",
+  "independentRemoteFiles": 8
 }

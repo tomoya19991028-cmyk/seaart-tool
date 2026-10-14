@@ -7,7 +7,7 @@
 - 実装元: `feat/horror-auto-features-mobile-ui` / `7b16f4914372131f4f93677bf645b41e40f07258`
 - 作業ブランチ: `feat/person-forms-horror-background-lighting-ui`
 - 製品commit: `a669edc3367083cdab3b67177ab988b12420de9f`
-- 最終remote照合: `製品・報告書の保存後、最終応答のremote HEADとGitHubブランチ参照で確認`
+- 最終remote照合: ``0acfe83a44f97384487eef478840e92535d39888` を再取得し、変更40blob・独立取得8ファイルの一致を確認済み。照合記録追加後の最終HEADは最終応答を参照`
 
 最新remoteを再取得して比較した。mainだけでは怪異・統合・通常画像優先・選択済みタグ・人物生物UI・漫画6プリセット・自動特徴が欠落するため、これらを保持する最新検証ブランチから専用worktreeを作成した。既存8worktreeは開始時すべてclean。HEAD・status・製品hashを `/workspace/person-forms-audit/before.json` に記録した。reset、clean、既存ブランチへの上書きを行っていない。
 

@@ -3,7 +3,7 @@
 - GitHub: `tomoya19991028-cmyk/seaart-tool`
 - 検証ブランチ: `feat/person-forms-horror-background-lighting-ui`
 - 製品commit: `a669edc3367083cdab3b67177ab988b12420de9f`
-- 最終remote HEAD: `製品・報告書の保存後、最終応答のremote HEADとGitHubブランチ参照で確認`
+- 最終remote HEAD: ``0acfe83a44f97384487eef478840e92535d39888` を再取得し、変更40blob・独立取得8ファイルの一致を確認済み。照合記録追加後の最終HEADは最終応答を参照`
 - 配信ファイル: `index.html`、`sw.js`、`manifest.json`、`icon-192.png`、`icon-512.png`、`icon-maskable-512.png`。
 - HTML／SWのbytes・SHAは検証報告と `validation/forms-environment/summary.json` を使用する。
 - SW cache: `seaart-tool-pwa-v5-forms-structures-environment-ui-v1-http-cache-v1`。
