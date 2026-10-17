@@ -1,0 +1,4 @@
+# Validation evidence contains local fixture links and is not a PWA runtime asset.
+# Keep it in Git while excluding it from the existing GitHub Pages Jekyll build.
+exclude:
+  - validation
