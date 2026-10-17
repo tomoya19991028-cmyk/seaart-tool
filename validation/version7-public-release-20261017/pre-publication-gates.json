@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-17T05:12:25.321532+00:00",
+  "targetMain": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+  "oldMain": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "checks": {
+    "recoveryRefVerified": true,
+    "oldPublicSixAssetsProtectedAndRechecked": true,
+    "pagesSourceVerified": true,
+    "productHashesMatchSubmission": true,
+    "version6AndVersion7RegressionPassed": true,
+    "saveCompatibilityPassed": true,
+    "subpathWorkerManifestVerified": true,
+    "userPublicPwaBackupConfirmationReceived": true,
+    "noUnresolvedMajorFailure": true,
+    "committedTreePagesBuildPassed": true,
+    "repositoryAndPagesRemainPublic": true,
+    "noSitesChange": true
+  },
+  "freshTestCases": 735,
+  "alternativeCases": 14,
+  "originalMissingTestFiles": 3,
+  "scopeSkipped": 4,
+  "userDeviceBackupDirectlyInspectedByCodex": false
+}

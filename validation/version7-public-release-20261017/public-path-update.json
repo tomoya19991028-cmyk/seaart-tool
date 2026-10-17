@@ -1,0 +1,191 @@
+{
+  "tests": [
+    {
+      "id": "PUBPATH01-old-install",
+      "passed": true,
+      "detail": {
+        "oldHTMLSHA256": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+        "scope": "/seaart-tool/"
+      }
+    },
+    {
+      "id": "PUBPATH02-old-data-fixture",
+      "passed": true,
+      "detail": {
+        "people": 2,
+        "creatureUUID": "release-wolf",
+        "favorite": 1,
+        "historyModes": [
+          "normal",
+          "manga"
+        ],
+        "customForm": true,
+        "isolatedIndexedDB": true
+      }
+    },
+    {
+      "id": "PUBPATH03-worker-update",
+      "passed": true,
+      "detail": {
+        "installedCache": "seaart-tool-pwa-v5-tg-yugioh-phase1-v1-http-cache-v1",
+        "oldCacheRetired": true
+      }
+    },
+    {
+      "id": "PUBPATH04-old-data-migration",
+      "passed": true,
+      "detail": {
+        "oldNamespace": "creature-adult-v1/result-access-v1/motif-person-v1",
+        "newNamespace": "creature-adult-v1/result-access-v1/motif-person-v1/horror-v1",
+        "allLegacyFieldValuesPreserved": true,
+        "additiveMigrationKeys": [],
+        "oldStorageRetained": true,
+        "indexedDBRetained": true
+      }
+    },
+    {
+      "id": "PUBPATH05-manifest-assets",
+      "passed": true,
+      "detail": {
+        "implicitLegacyBrowserFavicon": [
+          {
+            "version": "old",
+            "path": "/favicon.ico",
+            "status": 404
+          }
+        ],
+        "startURL": "/seaart-tool/index.html",
+        "scope": "/seaart-tool/",
+        "appShell": [
+          "/seaart-tool/",
+          "/seaart-tool/index.html",
+          "/seaart-tool/manifest.json",
+          "/seaart-tool/icon-192.png",
+          "/seaart-tool/icon-512.png",
+          "/seaart-tool/icon-maskable-512.png"
+        ]
+      }
+    },
+    {
+      "id": "PUBPATH06-new-features-offline",
+      "passed": true,
+      "detail": {
+        "offlineReload": true,
+        "newCharacterAndKakugan": true,
+        "namedSave": true,
+        "oldDataStillPresent": true
+      }
+    },
+    {
+      "id": "PUBPATH07-online-return",
+      "passed": true,
+      "detail": {
+        "onlineRecoveryExact": true,
+        "pageErrors": 0
+      }
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "version": "old",
+      "path": "/seaart-tool/index.html",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/sw.js",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/index.html",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/icon-192.png",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/manifest.json",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/icon-512.png",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/icon-maskable-512.png",
+      "status": 200
+    },
+    {
+      "version": "old",
+      "path": "/seaart-tool/index.html",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/sw.js",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/index.html",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/manifest.json",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/icon-192.png",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/icon-512.png",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/icon-maskable-512.png",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/index.html",
+      "status": 200
+    },
+    {
+      "version": "v7",
+      "path": "/seaart-tool/index.html",
+      "status": 200
+    }
+  ],
+  "physicalAndroid": false,
+  "publicOrigin": false,
+  "actualSeaArt": false,
+  "isolatedOrigin": "http://127.0.0.1:8857/seaart-tool/",
+  "productSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98"
+}

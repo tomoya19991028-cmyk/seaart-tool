@@ -1,0 +1,44 @@
+[
+  {
+    "path": "index.html",
+    "sha256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+    "expectedSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+    "status": 200,
+    "url": "https://tomoya19991028-cmyk.github.io/seaart-tool/index.html"
+  },
+  {
+    "path": "sw.js",
+    "sha256": "cd8d2fa1b8ab21749303a6d32d2c9734ed9cd9ffac22c5b934b9d5a6f69aa78c",
+    "expectedSHA256": "cd8d2fa1b8ab21749303a6d32d2c9734ed9cd9ffac22c5b934b9d5a6f69aa78c",
+    "status": 200,
+    "url": "https://tomoya19991028-cmyk.github.io/seaart-tool/sw.js"
+  },
+  {
+    "path": "manifest.json",
+    "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+    "expectedSHA256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+    "status": 200,
+    "url": "https://tomoya19991028-cmyk.github.io/seaart-tool/manifest.json"
+  },
+  {
+    "path": "icon-192.png",
+    "sha256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+    "expectedSHA256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+    "status": 200,
+    "url": "https://tomoya19991028-cmyk.github.io/seaart-tool/icon-192.png"
+  },
+  {
+    "path": "icon-512.png",
+    "sha256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+    "expectedSHA256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+    "status": 200,
+    "url": "https://tomoya19991028-cmyk.github.io/seaart-tool/icon-512.png"
+  },
+  {
+    "path": "icon-maskable-512.png",
+    "sha256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78",
+    "expectedSHA256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78",
+    "status": 200,
+    "url": "https://tomoya19991028-cmyk.github.io/seaart-tool/icon-maskable-512.png"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "confirmed": true,
+  "confirmedAtUTC": "2026-10-17T04:22:13.456634+00:00",
+  "origin": "https://tomoya19991028-cmyk.github.io",
+  "path": "/seaart-tool/",
+  "userStatement": "公開PWA側で必要な保護とバックアップの読取確認を完了した",
+  "scope": "JSON export, named saves/history, images/drafts/unsaved edits protected, off-device JSON storage and readability confirmed by user",
+  "directlyInspectedByCodex": false,
+  "sitesBackupUsedAsSubstitute": false
+}

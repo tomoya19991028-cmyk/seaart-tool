@@ -1,0 +1,6 @@
+page.reload: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for navigation until "load"[22m
+[2m    - navigated to "http://127.0.0.1:8796/"[22m
+
+    at /workspace/seaart-v7-main-integration/tests/card-tags/pwa.cjs:3:501

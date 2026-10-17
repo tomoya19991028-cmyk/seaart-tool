@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-17T03:59:24.864150+00:00",
+  "tests": [
+    {
+      "id": "PAGES-BUILD01",
+      "passed": true,
+      "detail": {
+        "source": "Version 7 + _config.yml excluding validation",
+        "container": "ghcr.io/actions/jekyll-build-pages:v1.0.13@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041",
+        "exitCode": 0,
+        "productSHA256": {
+          "index.html": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+          "sw.js": "cd8d2fa1b8ab21749303a6d32d2c9734ed9cd9ffac22c5b934b9d5a6f69aa78c",
+          "manifest.json": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+          "icon-192.png": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+          "icon-512.png": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+          "icon-maskable-512.png": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78"
+        },
+        "validationExcluded": true,
+        "originalSubmissionWithoutConfig": "FAIL: dangling validation fixture symlinks"
+      }
+    }
+  ]
+}

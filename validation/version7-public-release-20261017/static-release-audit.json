@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-17T04:11:47.467869+00:00",
+  "tests": [
+    {
+      "id": "REL01-submitted-product-exact",
+      "passed": true,
+      "detail": {
+        "index.html": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+        "sw.js": "cd8d2fa1b8ab21749303a6d32d2c9734ed9cd9ffac22c5b934b9d5a6f69aa78c",
+        "manifest.json": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+        "icon-192.png": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+        "icon-512.png": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+        "icon-maskable-512.png": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78"
+      }
+    },
+    {
+      "id": "REL02-old-main-files-preserved",
+      "passed": true,
+      "detail": {
+        "oldFilesPreserved": 59,
+        "deleted": 0,
+        "oldMainAncestor": true
+      }
+    },
+    {
+      "id": "REL03-sw-diff",
+      "passed": true,
+      "detail": {
+        "cacheOnlyChange": true,
+        "appShellAndHandlersUnchanged": true,
+        "storageAPIsNotUsed": true
+      }
+    },
+    {
+      "id": "REL04-manifest-subpath-icons",
+      "passed": true,
+      "detail": {
+        "start_url": "./index.html",
+        "scope": "./",
+        "icons": [
+          {
+            "src": "./icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+          },
+          {
+            "src": "./icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+          },
+          {
+            "src": "./icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REL05-runtime-assets-json",
+      "passed": true,
+      "detail": {
+        "externalRuntimeDependencies": 0,
+        "sourceJSONValid": true,
+        "noSitesOrigin": true,
+        "relativeWorker": true
+      }
+    },
+    {
+      "id": "REL06-html-syntax",
+      "passed": true,
+      "detail": {
+        "validator": "html-validate 10.5.0",
+        "parserErrors": 0,
+        "doctypeErrors": 0,
+        "accessibilityAndStyleLint": "not part of this syntax check"
+      }
+    },
+    {
+      "id": "REL07-publication-path",
+      "passed": true,
+      "detail": {
+        "pagesSource": {
+          "branch": "main",
+          "path": "/"
+        },
+        "buildType": "legacy",
+        "generatedWorkflow": "dynamic/pages/pages-build-deployment",
+        "customWorkflows": 0,
+        "destructiveCustomSteps": 0,
+        "managedJobSteps": "backup/workflow-latest-jobs.json"
+      }
+    },
+    {
+      "id": "REL08-recovery",
+      "passed": true,
+      "detail": {
+        "remoteRecoveryBranch": "backup/old-public-pwa-20261017T035341Z",
+        "completeGitBundle": true,
+        "oldPublicAssets": 6,
+        "userDeviceDataBackup": "requires separate user confirmation"
+      }
+    }
+  ],
+  "productSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "publicOriginMutation": false
+}

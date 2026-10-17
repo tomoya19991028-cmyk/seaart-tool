@@ -1,0 +1,16 @@
+{
+  "url": "https://api.github.com/repos/tomoya19991028-cmyk/seaart-tool/pages",
+  "status": "built",
+  "cname": null,
+  "custom_404": false,
+  "html_url": "https://tomoya19991028-cmyk.github.io/seaart-tool/",
+  "build_type": "legacy",
+  "source": {
+    "branch": "main",
+    "path": "/"
+  },
+  "public": true,
+  "protected_domain_state": null,
+  "pending_domain_unverified_at": null,
+  "https_enforced": true
+}

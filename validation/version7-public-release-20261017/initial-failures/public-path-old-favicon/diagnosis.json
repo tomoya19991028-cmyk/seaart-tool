@@ -1,0 +1,12 @@
+{
+  "category": "Overbroad new test network assertion",
+  "observedRequest": {
+    "version": "old",
+    "path": "/favicon.ico"
+  },
+  "applicationReferences": "Relative manifest and icon-192.png; no /favicon.ico reference in either product HTML",
+  "allowedException": "Only the old-browser implicit /favicon.ico 404; every application asset and every Version 7 request must remain under /seaart-tool/",
+  "productChanged": false,
+  "originalTestHelperSHA256": "eafee10491edfbc2e1c794348365f6c164136e4b1165bce2a2602b5d2d8df56b",
+  "correctedTestHelperSHA256": "ece0e04fd987a81e1d4255e3668eb5c60f96634e39e7e5977c46124d2cd71950"
+}

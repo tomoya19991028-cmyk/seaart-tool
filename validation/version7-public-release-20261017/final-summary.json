@@ -1,0 +1,207 @@
+{
+  "at": "2026-10-17T05:16:28.982878+00:00",
+  "executionDate": "2026-10-17",
+  "freshExecutionsOnly": true,
+  "priorTaskResultsReused": false,
+  "passed": 741,
+  "failed": 0,
+  "regularRegressionCases": 700,
+  "alternativeRegressionCases": 14,
+  "releasePreparationCases": 21,
+  "scopeSkipped": [
+    {
+      "id": "R08-Amon",
+      "reason": "未実装の片眼形態・原典照合待ち"
+    },
+    {
+      "id": "R08-Takizawa",
+      "reason": "未実装の片眼形態・原典照合待ち"
+    },
+    {
+      "id": "R09-Hinami-kagune",
+      "reason": "複合赫子未実装"
+    },
+    {
+      "id": "R24-new-nonhuman",
+      "reason": "新規全身非人型未実装"
+    }
+  ],
+  "unrecoveredOriginalTestFiles": 3,
+  "unrecoveredOriginal48ContractsAnd7FaultTestsClaimed": false,
+  "suites": [
+    {
+      "name": "inherited-41",
+      "passed": 556,
+      "source": "inherited/verified-results.json"
+    },
+    {
+      "name": "forms-contracts",
+      "passed": 32,
+      "source": "forms/contracts/results.json"
+    },
+    {
+      "name": "forms-persistence",
+      "passed": 9,
+      "source": "forms/persistence/results.json"
+    },
+    {
+      "name": "forms-candidate-ui",
+      "passed": 6,
+      "source": "forms/candidate-ui/results.json"
+    },
+    {
+      "name": "forms-ui",
+      "passed": 12,
+      "source": "forms/ui/results.json"
+    },
+    {
+      "name": "forms-structure-visibility",
+      "passed": 3,
+      "source": "forms/structure-visibility/results.json"
+    },
+    {
+      "name": "forms-environment-faults",
+      "passed": 2,
+      "source": "forms/environment-faults/results.json"
+    },
+    {
+      "name": "forms-result-area",
+      "passed": 3,
+      "source": "forms/result-area/results.json"
+    },
+    {
+      "name": "forms-pwa",
+      "passed": 4,
+      "source": "forms/pwa/results.json"
+    },
+    {
+      "name": "forms-forms-repro",
+      "passed": 2,
+      "source": "forms/forms-repro/results.json"
+    },
+    {
+      "name": "contracts",
+      "passed": 32,
+      "source": "contracts/results.json"
+    },
+    {
+      "name": "ui-pwa",
+      "passed": 7,
+      "source": "ui-pwa/results.json"
+    },
+    {
+      "name": "quality",
+      "passed": 21,
+      "source": "quality/results.json"
+    },
+    {
+      "name": "yugioh-selection",
+      "passed": 15,
+      "source": "new-extras/yugioh-selection/results.json"
+    },
+    {
+      "name": "preset-details",
+      "passed": 10,
+      "source": "new-extras/preset-details/results.json"
+    },
+    {
+      "name": "release-static",
+      "passed": 8,
+      "source": "static-release-audit.json"
+    },
+    {
+      "name": "pages-build",
+      "passed": 1,
+      "source": "pages-build.json"
+    },
+    {
+      "name": "public-subpath-update",
+      "passed": 7,
+      "source": "public-path-update/results.json"
+    },
+    {
+      "name": "public-https-before",
+      "passed": 5,
+      "source": "public-browser-before/results.json"
+    }
+  ],
+  "regressionRunnerCount": 55,
+  "matricesNotDoubleCounted": {
+    "R1": 865,
+    "structures": 72,
+    "unsetAbsent": 144,
+    "legacyNormal": 252,
+    "legacyManga": 252
+  },
+  "sourceSHA256": {
+    "tests/tg-yugioh-phase1/collect-results.py": "37fc0ef10e54405ac261e278ecce64ff1b0f746af93e18a087f3c98ca6aae5fb",
+    "tests/tg-yugioh-phase1/replay-before-gender.cjs": "1e7d490678c4b01f3891394a9c42ab1b0773fdb55ffc5850f27756d498538549",
+    "tests/tg-yugioh-phase1/README.md": "c8a06be443c92a78ca9b985e37a9187a152ed6947439d4d7e2080a807bb0d788",
+    "tests/tg-yugioh-phase1/yugioh-selection.cjs": "fc94ee4e65789882e6bef10bfdd1a845c460b0ca8df2fabd0b71a7e53169143e",
+    "tests/tg-yugioh-phase1/contracts.cjs": "1a0bafd49eddf6b8cc843157d5425252fae93abc238f57a0737185b48dabae88",
+    "tests/tg-yugioh-phase1/run-forms.py": "40bb700a8d72c0ab12784419e505af4df8dbf0d247a18c38de496b6a751d08f4",
+    "tests/tg-yugioh-phase1/baseline-contract.json": "f4c13e54a39679de1d8a5c4fabf1e3f78f194db29e496e285880634a08e7cfcd",
+    "tests/tg-yugioh-phase1/run-inherited.py": "f70f63757c928d06e8e8f358f214020120a24163b9ee976c6b0ed0fe1e67fbc5",
+    "tests/tg-yugioh-phase1/run-new-extras.py": "9b15b95d3ec57917ffd9c319f30c83dba77518a9d6d89d4897365f4c980f6c66",
+    "tests/tg-yugioh-phase1/preset-details.cjs": "60513eddb05320323e532ffbcdd3ec4a24229716576346aa9780fbc15896ce42",
+    "tests/tg-yugioh-phase1/baseline-existing-values.json": "faeda6b90dc2a0fd72e1f9a4d0fcecff70c821e70aaa9ea3602038956e93820d",
+    "tests/tg-yugioh-phase1/replay.cjs": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+    "tests/tg-yugioh-phase1/route.cjs": "cf70bfa47fe22ea05bc512f3e076eaaba90581d781d5ebc5f77bef8bcfa31930",
+    "tests/tg-yugioh-phase1/quality.py": "3729a2710871d7eb32ab8004595bc3557dc35a6ec27c86bb55ea548b2d235ff5",
+    "tests/tg-yugioh-phase1/verify-inherited.py": "ed4b39d892b802783f37e30673f387a77bc47fdbad3864426418bd326e1aeebc",
+    "tests/tg-yugioh-phase1/prepare-baselines.py": "d373aaeacbdaeee041c7b55f15054d833100ba899b0c8fe0b3f0918cfa9a326d",
+    "tests/tg-yugioh-phase1/ui-pwa.cjs": "17bec00b067264f9e7746bf7291aba419b25a369328cb8145a2ba1140b9ae5ac"
+  },
+  "productSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "serviceWorkerSHA256": "cd8d2fa1b8ab21749303a6d32d2c9734ed9cd9ffac22c5b934b9d5a6f69aa78c",
+  "pagesConfigSHA256": "34f8e7cad5e689651bdf7ef8a027b32f3fe3129201a82b8386631f06adf148ab",
+  "physicalAndroid": false,
+  "actualSeaArt": false,
+  "publicOriginOffline": "not performed before publishing",
+  "failedPriorAttemptsRetained": [
+    "Unmodified submitted tree Jekyll build: dangling validation symlink; fixed by _config.yml",
+    "Initial HTML validator rule configuration invalid; corrected to syntax/doctype check"
+  ],
+  "initialFailedRuns": [
+    {
+      "runner": "public-path-old-favicon-runner",
+      "execution": "failed-initial-attempts/public-path-old-favicon-runner/execution.json",
+      "finalReplay": "public-path-update-runner/execution.json"
+    },
+    {
+      "runner": "public-path-setup-runner",
+      "execution": "failed-initial-attempts/public-path-setup-runner/execution.json",
+      "finalReplay": "public-path-update-runner/execution.json"
+    },
+    {
+      "runner": "forms-repro",
+      "execution": "failed-initial-attempts/forms-repro/execution.json",
+      "finalReplay": "forms/forms-repro/execution.json"
+    },
+    {
+      "runner": "normal-contracts",
+      "execution": "inherited-parallel-attempt/normal-contracts/execution.json",
+      "finalReplay": "inherited/normal-contracts/execution.json"
+    },
+    {
+      "runner": "card-pwa",
+      "execution": "inherited-parallel-attempt/card-pwa/execution.json",
+      "finalReplay": "inherited/card-pwa/execution.json"
+    },
+    {
+      "runner": "normal-ui",
+      "execution": "inherited-parallel-attempt/normal-ui/execution.json",
+      "finalReplay": "inherited/normal-ui/execution.json"
+    }
+  ],
+  "withinTaskReuse": "Only PASS executions begun on 2026-10-17 with identical product/test/adapter hashes; parallel failures repeated unchanged with one browser.",
+  "prePublicationPassed": 735,
+  "postDeploymentPassed": 6,
+  "mainHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+  "publicURL": "https://tomoya19991028-cmyk.github.io/seaart-tool/",
+  "actualPublicBrowserVerified": true,
+  "saveCompatibility": "PASS in isolated copied fixtures; user device data not directly inspected",
+  "offline": "PASS in isolated Chromium including real HTTPS public URL",
+  "recoveryBranch": "backup/old-public-pwa-20261017T035341Z",
+  "postDeploymentSource": "public-browser-after/results.json"
+}

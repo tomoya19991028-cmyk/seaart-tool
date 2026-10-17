@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "tests/tg-yugioh-phase1/run-forms.py",
+    "/workspace/seaart-v7-release-20261017/tests/forms"
+  ],
+  "startUTC": "2026-10-17T04:50:46.431746+00:00",
+  "endUTC": "2026-10-17T04:59:32.054861+00:00",
+  "exitCode": 1,
+  "productSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98"
+}

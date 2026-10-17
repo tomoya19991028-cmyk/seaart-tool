@@ -1,0 +1,15 @@
+{
+  "command": [
+    "node",
+    "/workspace/seaart-v7-release-20261017/public-path-update.cjs"
+  ],
+  "startUTC": "2026-10-17T05:07:34.267729+00:00",
+  "endUTC": "2026-10-17T05:08:00.996955+00:00",
+  "exitCode": 0,
+  "testSHA256": "ece0e04fd987a81e1d4255e3668eb5c60f96634e39e7e5977c46124d2cd71950",
+  "browserConcurrency": 1,
+  "baselineClarifications": [
+    "4 active panels and 6 persisted slots",
+    "Only the legacy browser implicit /favicon.ico 404 is outside application dependency checks"
+  ]
+}

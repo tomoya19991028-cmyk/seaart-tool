@@ -1,0 +1,7 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+6 !== 4
+
+    at /workspace/seaart-v7-release-20261017/public-path-update.cjs:11:1340
+    at async check (/workspace/seaart-v7-release-20261017/public-path-update.cjs:6:50)
+    at async /workspace/seaart-v7-release-20261017/public-path-update.cjs:11:1

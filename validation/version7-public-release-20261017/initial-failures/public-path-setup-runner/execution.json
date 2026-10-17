@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "/workspace/seaart-v7-release-20261017/public-path-update.cjs"
+  ],
+  "startUTC": "2026-10-17T05:04:33.573218+00:00",
+  "endUTC": "2026-10-17T05:04:42.768645+00:00",
+  "exitCode": 1,
+  "testSHA256": "a894a7b497cfc57a42145d1cf491a8b344ed4605a078c5c3ccc1b4772a7f4730",
+  "browserConcurrency": 1
+}

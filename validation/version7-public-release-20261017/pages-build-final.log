@@ -1,0 +1,8 @@
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+Configuration file: /github/workspace/source/_config.yml
+            Source: /github/workspace/source
+       Destination: /github/workspace/output
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 7.923 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

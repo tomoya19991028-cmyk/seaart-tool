@@ -1,0 +1,10 @@
+{
+  "category": "New test fixture expectation error before Version 7 update",
+  "oldMain": "5b5bb03589dcc9a661402395d6c3db20cfd4cf52",
+  "legacyImplementation": "panels:Array.from({length:6},...)",
+  "expectedActiveCount": 4,
+  "expectedStoredSlots": 6,
+  "productChanged": false,
+  "originalTestHelperSHA256": "a894a7b497cfc57a42145d1cf491a8b344ed4605a078c5c3ccc1b4772a7f4730",
+  "correctedTestHelperSHA256": "eafee10491edfbc2e1c794348365f6c164136e4b1165bce2a2602b5d2d8df56b"
+}

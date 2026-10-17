@@ -1,0 +1,58 @@
+{
+  "mode": "before",
+  "tests": [
+    {
+      "id": "HTTPS-before-boot",
+      "passed": true,
+      "detail": {
+        "https": true,
+        "tokyoGhoul": 6,
+        "isolatedNewBrowserContext": true,
+        "TLSVerificationEnabled": true
+      }
+    },
+    {
+      "id": "HTTPS-before-worker",
+      "passed": true,
+      "detail": {
+        "scope": "https://tomoya19991028-cmyk.github.io/seaart-tool/",
+        "cache": "seaart-tool-pwa-v4-motif-person-v1-http-cache-v1"
+      }
+    },
+    {
+      "id": "HTTPS-before-asset-hashes",
+      "passed": true,
+      "detail": {
+        "index.html": "de80b1f98d342f257f926338f602874fc2d46773882d22a788dbbfb6f5350e72",
+        "sw.js": "05768c20f3fb5378d865741cc03fa47f66320136f1cfe5583edbb184d426f36a",
+        "manifest.json": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f",
+        "icon-192.png": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a",
+        "icon-512.png": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149",
+        "icon-maskable-512.png": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78"
+      }
+    },
+    {
+      "id": "HTTPS-before-offline-reload",
+      "passed": true,
+      "detail": {
+        "offlineBoot": true,
+        "savedDataRetained": false,
+        "physicalAndroid": false
+      }
+    },
+    {
+      "id": "HTTPS-before-online-return",
+      "passed": true,
+      "detail": {
+        "onlineReturn": true,
+        "pageErrors": 0
+      }
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false,
+  "actualSeaArt": false,
+  "publicOrigin": true,
+  "isolatedBrowserContext": true,
+  "userDeviceDataTouched": false
+}
