@@ -15,6 +15,10 @@ for(const name of ['quality','features','matrix','regressions','access','compati
  const counts={PASS:0,FAIL:0,SKIP:0};for(const t of result?.tests||[])counts[t.status]++;
  executions.push({script,testSHA256:hash(fs.readFileSync(path.join(root,script))),command:[process.execPath,script],startUTC,endUTC:new Date().toISOString(),exitCode:run.status,error:run.error?.message,counts});
  console.log(name,run.status,counts);
+ if(run.status!==0){
+  for(const test of result?.tests||[])if(test.status==='FAIL')console.error(test.id,test.error);
+  if(!result)console.error(fs.readFileSync(path.join(out,name+'.log'),'utf8').slice(-16000));
+ }
  if(run.status!==0||!result)failed=true;
 }
 const after=hash(fs.readFileSync(path.join(root,'index.html')));

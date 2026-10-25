@@ -32,4 +32,5 @@ jobs:
         with:
           name: v44-audit-evidence
           path: .audit-tmp/
+          include-hidden-files: true
           retention-days: 14
