@@ -1,0 +1,30 @@
+{
+  "suite": "compatibility",
+  "productSHA256": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+  "tests": [
+    {
+      "id": "SAVE-complex-fixture-valid",
+      "status": "PASS",
+      "detail": {
+        "people": [
+          "original-audit-a",
+          "original-audit-b"
+        ],
+        "creatures": [
+          "creature-audit-a",
+          "creature-audit-b"
+        ],
+        "actions": 3
+      }
+    },
+    {
+      "id": "SAVE-reload-UUID-pose-gaze-skin-draft",
+      "status": "PASS",
+      "detail": {
+        "snapshotSHA256": "490733b2bbb0c6e82e18a72f0a00c0ec9cc7285ccde429de2c8b549bffe9506e"
+      }
+    }
+  ],
+  "syntheticDataOnly": true,
+  "realUserStorage": false
+}

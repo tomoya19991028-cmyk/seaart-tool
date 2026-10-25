@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "id": "A07",
+      "passed": true,
+      "detail": {
+        "sharedIntensity": true
+      }
+    },
+    {
+      "id": "A08",
+      "passed": true,
+      "detail": {
+        "otherDialogFooterKept": true
+      }
+    }
+  ],
+  "physicalDevice": false,
+  "publicOrigin": false
+}

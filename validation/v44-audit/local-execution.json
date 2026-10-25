@@ -1,6 +1,7 @@
 {
-  "productBefore": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
-  "productAfter": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+  "productBefore": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+  "productAfter": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+  "gitHEAD": "4d3d9fe19065178e5a4c923b0d800bd00877b136",
   "node": "v24.19.0",
   "executions": [
     {
@@ -10,8 +11,8 @@
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/quality.cjs"
       ],
-      "startUTC": "2026-10-25T16:58:38.548Z",
-      "endUTC": "2026-10-25T16:59:01.956Z",
+      "startUTC": "2026-10-25T18:25:57.793Z",
+      "endUTC": "2026-10-25T18:26:02.661Z",
       "exitCode": 0,
       "counts": {
         "PASS": 6,
@@ -26,8 +27,8 @@
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/features.cjs"
       ],
-      "startUTC": "2026-10-25T16:59:01.956Z",
-      "endUTC": "2026-10-25T17:00:10.075Z",
+      "startUTC": "2026-10-25T18:26:02.661Z",
+      "endUTC": "2026-10-25T18:26:14.860Z",
       "exitCode": 0,
       "counts": {
         "PASS": 4,
@@ -42,8 +43,8 @@
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/matrix.cjs"
       ],
-      "startUTC": "2026-10-25T17:00:10.081Z",
-      "endUTC": "2026-10-25T17:02:19.487Z",
+      "startUTC": "2026-10-25T18:26:14.860Z",
+      "endUTC": "2026-10-25T18:26:42.367Z",
       "exitCode": 0,
       "counts": {
         "PASS": 505,
@@ -53,13 +54,13 @@
     },
     {
       "script": "tests/v44-audit/regressions.cjs",
-      "testSHA256": "1bfc36c9c9ab3e6f747c6185f234cf5ecad637407dce2794ca0d040bbd2e1f43",
+      "testSHA256": "cadc5e10675514920245f607096d2c9697efb1ef46042f397cabd67337b1374b",
       "command": [
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/regressions.cjs"
       ],
-      "startUTC": "2026-10-25T17:02:19.490Z",
-      "endUTC": "2026-10-25T17:02:38.678Z",
+      "startUTC": "2026-10-25T18:26:42.367Z",
+      "endUTC": "2026-10-25T18:26:52.650Z",
       "exitCode": 0,
       "counts": {
         "PASS": 7,
@@ -74,8 +75,8 @@
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/access.cjs"
       ],
-      "startUTC": "2026-10-25T17:02:38.678Z",
-      "endUTC": "2026-10-25T17:04:11.813Z",
+      "startUTC": "2026-10-25T18:26:52.651Z",
+      "endUTC": "2026-10-25T18:27:32.397Z",
       "exitCode": 0,
       "counts": {
         "PASS": 3,
@@ -85,13 +86,13 @@
     },
     {
       "script": "tests/v44-audit/compatibility.cjs",
-      "testSHA256": "ee677805d96497eeffba3f9311de357077ddd214b584c79d53c395810026061a",
+      "testSHA256": "6621f733177b1869268a579304031cfe21b7a5c5308b8a4fdddc0a1ad7a37af1",
       "command": [
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/compatibility.cjs"
       ],
-      "startUTC": "2026-10-25T17:04:11.815Z",
-      "endUTC": "2026-10-25T17:05:17.200Z",
+      "startUTC": "2026-10-25T18:27:32.399Z",
+      "endUTC": "2026-10-25T18:28:06.345Z",
       "exitCode": 0,
       "counts": {
         "PASS": 10,
@@ -101,16 +102,16 @@
     },
     {
       "script": "tests/v44-audit/ui.cjs",
-      "testSHA256": "79895fef2878b12f29815551681aadc7544e8da486982e60b18905cef6216566",
+      "testSHA256": "d76209ac039173958594398b5bb69f2c43101747e24504010780fa7240966fbe",
       "command": [
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/ui.cjs"
       ],
-      "startUTC": "2026-10-25T17:05:17.202Z",
-      "endUTC": "2026-10-25T17:06:53.964Z",
+      "startUTC": "2026-10-25T18:28:06.345Z",
+      "endUTC": "2026-10-25T18:28:45.786Z",
       "exitCode": 0,
       "counts": {
-        "PASS": 13,
+        "PASS": 14,
         "FAIL": 0,
         "SKIP": 0
       }
@@ -122,8 +123,8 @@
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
         "tests/v44-audit/pwa.cjs"
       ],
-      "startUTC": "2026-10-25T17:06:53.964Z",
-      "endUTC": "2026-10-25T17:08:24.089Z",
+      "startUTC": "2026-10-25T18:28:45.787Z",
+      "endUTC": "2026-10-25T18:29:23.311Z",
       "exitCode": 0,
       "counts": {
         "PASS": 6,

@@ -1,0 +1,145 @@
+{
+  "runs": [
+    {
+      "runId": 40215568009,
+      "url": "https://github.com/tomoya19991028-cmyk/seaart-tool/actions/runs/40215568009",
+      "headSHA": "672d2d66e24e470372c80c1eacaea8498b68a462",
+      "conclusion": "failure",
+      "suites": [
+        {
+          "suite": "quality",
+          "exitCode": 0,
+          "PASS": 6,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "features",
+          "exitCode": 0,
+          "PASS": 4,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "matrix",
+          "exitCode": 0,
+          "PASS": 505,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "regressions",
+          "exitCode": 0,
+          "PASS": 7,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "access",
+          "exitCode": 0,
+          "PASS": 3,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "compatibility",
+          "exitCode": 0,
+          "PASS": 10,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "ui",
+          "exitCode": 1,
+          "PASS": 12,
+          "FAIL": 1,
+          "SKIP": 0
+        },
+        {
+          "suite": "pwa",
+          "exitCode": 0,
+          "PASS": 7,
+          "FAIL": 0,
+          "SKIP": 0
+        }
+      ],
+      "totals": {
+        "PASS": 554,
+        "FAIL": 1,
+        "SKIP": 0
+      }
+    },
+    {
+      "runId": 40216377346,
+      "url": "https://github.com/tomoya19991028-cmyk/seaart-tool/actions/runs/40216377346",
+      "headSHA": "4d3d9fe19065178e5a4c923b0d800bd00877b136",
+      "conclusion": "success",
+      "suites": [
+        {
+          "suite": "quality",
+          "exitCode": 0,
+          "PASS": 6,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "features",
+          "exitCode": 0,
+          "PASS": 4,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "matrix",
+          "exitCode": 0,
+          "PASS": 505,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "regressions",
+          "exitCode": 0,
+          "PASS": 7,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "access",
+          "exitCode": 0,
+          "PASS": 3,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "compatibility",
+          "exitCode": 0,
+          "PASS": 10,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "ui",
+          "exitCode": 0,
+          "PASS": 13,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        {
+          "suite": "pwa",
+          "exitCode": 0,
+          "PASS": 7,
+          "FAIL": 0,
+          "SKIP": 0
+        }
+      ],
+      "totals": {
+        "PASS": 555,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    }
+  ],
+  "initialUIFailure": "One UI test failed; the first workflow did not retain the hidden artifact directory, so the individual failure was not recovered. No product code or assertions were changed for the successful rerun. Root cause is unresolved.",
+  "observabilityFix": "Emit failed-case details in CI logs; include hidden files in upload-artifact.",
+  "artifactRetrieval": "Second-run artifact was created, but its blob download returned HTTP 403 in this environment. Aggregate CI results were checked through GitHub logs."
+}

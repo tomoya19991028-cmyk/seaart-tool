@@ -147,12 +147,12 @@ function paPhrase(a,p,context={}){
 function paTags(p,context={}){
  const entries=paRows(p),groups=new Map(),result=[];
  for(const stored of entries){const a=paEffective(stored,p,context),phrase=paPhrase(a,p,context);if(!phrase)continue;
-  const color=paColor(p,a),text=(color?color+' ':'')+phrase;
-  const g=paGroup(p,a),key=g&&a.weight===undefined&&a.color===undefined?'group:'+g.id:'action:'+a.id;
-  if(!groups.has(key))groups.set(key,{parts:[],weight:paWeight(p,a)});groups.get(key).parts.push(text);
+  const color=paColor(p,a),g=paGroup(p,a),grouped=g&&a.weight===undefined&&a.color===undefined;
+  const key=grouped?'group:'+g.id:'action:'+a.id,text=(!grouped&&color?color+' ':'')+phrase;
+  if(!groups.has(key))groups.set(key,{parts:[],weight:paWeight(p,a),color:grouped?color:''});groups.get(key).parts.push(text);
  }
  const owner=context.owner||subjectActor(p);
- for(const group of groups.values()){const text=group.parts.join(', ');result.push(explicitWeight((owner&&(context.scopedActions||context.scopeOwner)?owner.label+' ':'')+text,group.weight))}
+ for(const group of groups.values()){const text=(group.color?group.color+' ':'')+group.parts.join(', ');result.push(explicitWeight((owner&&(context.scopedActions||context.scopeOwner)?owner.label+' ':'')+text,group.weight))}
  return [...new Set(result)];
 }
 function paSummary(a,p){

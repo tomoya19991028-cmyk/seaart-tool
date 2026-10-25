@@ -30,6 +30,19 @@ const {launch,pageFor,startServer,suite,assert}=require('./helpers.cjs');
    await p.evaluate(()=>$('personChoiceDialog').close());
    return {otherOwnerSelectable:true,donorUnchanged:true,oneSharedToggle:true,selectionRetainedAcrossViews:true};
   });
+  await s.test('UI-queued-close-keeps-shared-control-in-current-dialog',async()=>{
+   await fixture();
+   const settle=()=>p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   const current=()=>p.evaluate(()=>({dialog:personCharacterButton.closest('dialog')?.id,visible:personCharacterButton.checkVisibility(),count:document.querySelectorAll('#personCharacterCandidates').length}));
+   await p.evaluate(()=>{openSimpleTarget('carry',uiOwner);simpleDialog.close();openChoiceDialog('outfit')});await settle();
+   const global=await current();assert.deepEqual(global,{dialog:'choiceDialog',visible:true,count:1});await p.locator('#personCharacterCandidates').click();assert(await p.evaluate(()=>personCharacterCandidatesVisible));
+   await p.evaluate(()=>{$('choiceDialog').close();openSimpleTarget('carry',uiOwner)});await settle();
+   const equipment=await current();assert.deepEqual(equipment,{dialog:'simpleSelectionDialog',visible:true,count:1});await p.locator('#personCharacterCandidates').click();assert(await p.evaluate(()=>personCharacterCandidatesVisible));
+   await p.evaluate(()=>{simpleDialog.close();openSimpleTarget('carry',uiDonor)});await settle();
+   const reopened=await current();assert.deepEqual(reopened,{dialog:'simpleSelectionDialog',visible:true,count:1});assert(await p.evaluate(()=>simpleActive.personId===uiDonor));
+   await p.locator('#personCharacterCandidates').click();assert(await p.evaluate(()=>personCharacterCandidatesVisible));await p.evaluate(()=>simpleDialog.close());
+   return {global,equipment,reopened,lateCloseIgnored:true};
+  });
   await s.test('UI-hair-nine-modes-colors-and-eye-isolation',async()=>{
    await fixture();await p.locator('#personTabs button[data-group="colors"]').first().click();await p.locator('#profiles [data-color-kind="hair"] .colorCardLaunch').first().click();
    assert.deepEqual(await p.locator('#colorPaletteModes .paletteModeRow').evaluateAll(n=>n.map(x=>x.children.length)),[5,4]);
