@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "baselineCommit": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+  "baselineHTMLSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "upstreamV44SHA256": "0c8b08ee906737152aa7b0971edafbc611868c8c524b3fb7f850586f0b5ede5e",
+  "template": "src/current/page.html.in",
+  "scripts": [
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 0
+    },
+    {
+      "id": "recoveryUIAdapter",
+      "type": "",
+      "baselineScript": 1
+    },
+    {
+      "id": "sectionUIExtension",
+      "type": "",
+      "baselineScript": 2
+    },
+    {
+      "id": "personPlacementUI",
+      "type": "",
+      "baselineScript": 3
+    },
+    {
+      "id": "subjectSettingsExtension",
+      "type": "",
+      "baselineScript": 4
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 5
+    },
+    {
+      "id": "simpleMangaIntegration",
+      "type": "",
+      "baselineScript": 6
+    },
+    {
+      "id": "actorFormStorageFoundation",
+      "type": "",
+      "baselineScript": 7
+    },
+    {
+      "id": "creatureAdultQualificationFoundation",
+      "type": "",
+      "baselineScript": 8
+    },
+    {
+      "id": "creatureAdultPersistenceFoundation",
+      "type": "",
+      "baselineScript": 9
+    },
+    {
+      "id": "creatureAdultEditorFoundation",
+      "type": "",
+      "baselineScript": 10
+    },
+    {
+      "id": "commonResultAccessFoundation",
+      "type": "",
+      "baselineScript": 11
+    },
+    {
+      "id": "creatureMotifIndependentPerson",
+      "type": "",
+      "baselineScript": 12
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 13
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 14
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 15
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 16
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 17
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 18
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 19
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 20
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/person-specific-forms.js",
+      "prefix": "\n// BEGIN HORROR SPECIFIC_FORMS\n",
+      "suffix": "\n\n// END HORROR SPECIFIC_FORMS\n",
+      "trimFinalNewline": true
+    },
+    {
+      "id": null,
+      "type": "",
+      "baselineScript": 22
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/adult-enhanced-migration.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/adult-story-migration.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/bust-size-migration.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/bust-focus-migration.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/adult-card-layout.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/bust-label.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/adult-scene-compatibility.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/adult-expression-additions.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/adult-fluid-cards.js"
+    },
+    {
+      "id": null,
+      "type": "",
+      "source": "src/current/japanese-lettering.js"
+    },
+    {
+      "id": "poseAtomicV39Script",
+      "type": "",
+      "source": "src/current/pose-actions.js"
+    },
+    {
+      "id": "uiRefinementV40Script",
+      "type": "",
+      "source": "src/current/person-ui-refinements.js"
+    },
+    {
+      "id": "compactPickerRowsV42Script",
+      "type": "",
+      "source": "src/current/compact-picker-rows.js"
+    },
+    {
+      "id": "characterCandidateFilterV43Script",
+      "type": "",
+      "source": "src/current/character-candidate-view.js"
+    }
+  ],
+  "managedJS": [
+    "src/builtin-additions.js",
+    "src/creature-motif-person.js",
+    "src/environment-ui.js",
+    "src/horror-auto-runtime.js",
+    "src/horror-auto-ui.js",
+    "src/horror-card-tags.js",
+    "src/horror-foundation.js",
+    "src/horror-normal-ui.js",
+    "src/horror-runtime.js",
+    "src/horror-story-presets.js",
+    "src/mobile-result-ui.js",
+    "src/person-creature-unified-ui.js",
+    "src/person-specific-foundation.js"
+  ],
+  "managedJSON": [
+    "src/environment-additions.json",
+    "src/person-specific-forms.json",
+    "src/tokyo-ghoul-phase1.json",
+    "src/horror-catalog.json",
+    "src/horror-story-presets.json",
+    "src/horror-auto-definitions.json"
+  ]
+}

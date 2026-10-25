@@ -1,0 +1,482 @@
+[
+  {
+    "attempt": "baseline-tg",
+    "tests": [
+      {
+        "id": "TG01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG02",
+        "status": "FAIL",
+        "error": "page.evaluate: Error: unrelated settings retained\n    at window.ck (eval at evaluate (:311:30), <anonymous>:2:33)\n    at eval (eval at evaluate (:311:30), <anonymous>:5:81)\n    at "
+      },
+      {
+        "id": "TG03",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG04",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG05",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG06",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG07",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG08",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG09",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG10",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG11",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG12",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-settings",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-working",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-history",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-marker",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-journal",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG13",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG14",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG15",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "OLDJSON-3",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "OLDJSON-4",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "OLDJSON-5",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG16",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG17",
+        "status": "FAIL",
+        "error": "page.evaluate: Error: other owner hidden\n    at window.ck (eval at evaluate (:311:30), <anonymous>:2:33)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:156)\n    at UtilityS"
+      },
+      {
+        "id": "TG18",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "YG01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "YG02",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "YG03",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "ALIAS01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "MODEL01",
+        "status": "FAIL",
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    anima: {\n      manga: 'masterpiece, best quality, full-col"
+      },
+      {
+        "id": "MODEL02",
+        "status": "PASS",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "attempt": "baseline-normal",
+    "tests": [
+      {
+        "id": "N01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N02",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N03",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N04",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N05",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N06",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N07",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N08",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N09",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N10",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N11",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N12",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N13",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N14",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N15",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N16",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N17",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N18",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N19",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "N20",
+        "status": "PASS",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "attempt": "tg-final",
+    "tests": [
+      {
+        "id": "TG01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG02",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG03",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG04",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG05",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG06",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG07",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG08",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG09",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG10",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG11",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG12",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-settings",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-working",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-history",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-marker",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "FAILSAFE-journal",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG13",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG14",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG15",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "OLDJSON-3",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "OLDJSON-4",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "OLDJSON-5",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG16",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG17",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "TG18",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "YG01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "YG02",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "YG03",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "ALIAS01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "MODEL01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "MODEL02",
+        "status": "PASS",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "attempt": "candidate-final",
+    "tests": [
+      {
+        "id": "CUI01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "CUI02",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "CUI03",
+        "status": "FAIL",
+        "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-"
+      },
+      {
+        "id": "CUI04",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "EDIT01",
+        "status": "PASS",
+        "error": ""
+      },
+      {
+        "id": "EDIT02",
+        "status": "PASS",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "attempt": "candidate-retry",
+    "tests": [
+      {
+        "id": "CUI03",
+        "status": "PASS",
+        "error": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "baseMain": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+  "branch": "codex/seaart-v44-full-audit",
+  "inputV44": {
+    "bytes": 4388835,
+    "SHA256": "0c8b08ee906737152aa7b0971edafbc611868c8c524b3fb7f850586f0b5ede5e"
+  },
+  "files": {
+    "index.html": {
+      "bytes": 4389612,
+      "SHA256": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+    },
+    "sw.js": {
+      "bytes": 2910,
+      "SHA256": "8fe1d284721b17791b82ad53af81abe9380bcc03b45c5837348d31bbbbe3c807"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "SHA256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    },
+    "icon-192.png": {
+      "bytes": 1369,
+      "SHA256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a"
+    },
+    "icon-512.png": {
+      "bytes": 3717,
+      "SHA256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149"
+    },
+    "icon-maskable-512.png": {
+      "bytes": 14905,
+      "SHA256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78"
+    },
+    "scripts/build-current.py": {
+      "bytes": 3940,
+      "SHA256": "22552cf260ff0b3f98f60fd8d9b0909b445f3c8213f4fb89f73b35580739611f"
+    },
+    "src/current/manifest.json": {
+      "bytes": 4704,
+      "SHA256": "fbe81c67788ca0c6ed1dadb1a3124a3acb04fa568b03d2f366252e87c3429c66"
+    }
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+    "python": "Python 3.12.14",
+    "playwright": "1.62.1",
+    "acorn": "8.15.0",
+    "parse5": "7.3.0"
+  }
+}

@@ -1,0 +1,1748 @@
+{
+  "includedInFinalPassCount": false,
+  "jobs": [
+    {
+      "job": "auto-compatibility",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/horror-auto/compatibility.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:35:47.082983+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "4c4746306a179b01461c330c0c72bcb4061c6e956cca16ec6be2bc6ee81cf7e1",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-compatibility"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T16:43:51.827123+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [],
+      "failureHeadlines": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:"
+      ],
+      "alternative": false
+    },
+    {
+      "job": "auto-contracts",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/horror-auto/contracts.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:27:09.571538+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-contracts"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T16:38:50.450219+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [
+        {
+          "id": "A01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A03",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A04",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A05",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A06",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A07",
+          "passed": false,
+          "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-v44-audit/tests/horror-auto/contracts.cjs:2:407)\n    at asyn"
+        },
+        {
+          "id": "A08",
+          "passed": false,
+          "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-v44-audit/tests/horror-auto/contracts.cjs:2:407)\n    at asyn"
+        },
+        {
+          "id": "A09",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A10",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A11",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A12",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A13",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A14",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A15",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A16",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A17",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A18",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A19",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A20",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A21",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A22",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A23",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A24",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A25",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A26",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A27",
+          "passed": false,
+          "error": "page.evaluate: Error: explicit actor blocks\n    at window.ck (eval at evaluate (:311:30), <anonymous>:1:566)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:521)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript"
+        },
+        {
+          "id": "A28",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A29",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A30",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "A31",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [
+        "FAIL A07 page.goto: Timeout 30000ms exceeded.",
+        "FAIL A08 page.goto: Timeout 30000ms exceeded.",
+        "FAIL A27 page.evaluate: Error: explicit actor blocks"
+      ],
+      "alternative": false
+    },
+    {
+      "job": "auto-fixed",
+      "execution": {
+        "command": [
+          "node",
+          "tests/horror-auto/fixed.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:25:30.088514+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "e861dc4168499be115cd5711607091cff2f46f8ac7bd31560e6f477f7ae04101",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-fixed"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:26:37.704838+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [
+        {
+          "id": "AF01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AF02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AF03",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "auto-inherited",
+      "execution": {
+        "command": [
+          "node",
+          "tests/horror-auto/inherited.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:24:27.984597+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "d47aeea3409cd515df3a102963503715587b93a4df014a34651cf42cda11941c",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-inherited"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:25:04.279457+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [
+        {
+          "id": "AH01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AH02",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "auto-pwa",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/horror-auto/pwa.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:34:23.704652+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "c6969a5ecd756f0201219a6cae1226445ff213f9c65a7016fecd886fa5b08acf",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-pwa"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:35:46.602219+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "auto-shared-prompt",
+      "execution": {
+        "command": [
+          "node",
+          "tests/horror-auto/shared-prompt.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:25:05.061744+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "d2faa19d339be63f61777c22caa57d2c34b82052e8179adfed2a7441bb7608ed",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-shared-prompt"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:25:29.631725+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [
+        {
+          "id": "AP01",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "auto-shared-ui",
+      "execution": {
+        "command": [
+          "node",
+          "tests/horror-auto/shared-ui.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:26:38.167567+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "76f793bd085b9f2de80ebe026ababb211e43e94130e37ebf718ab638a61a4e4e",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-shared-ui"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:27:32.702848+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [
+        {
+          "id": "AS01",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "auto-ui",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/horror-auto/ui.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:27:33.608145+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-ui"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T16:34:22.754613+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [
+        {
+          "id": "AU-360x640-1",
+          "passed": false,
+          "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\u001b[22m\n\n    at /workspace/seaart-v44-audit/tests/horror-auto/ui.cjs:3:439"
+        },
+        {
+          "id": "AU-360x800-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-393x640-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-393x800-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-430x640-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-430x800-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-640x360-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-800x393-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-800x430-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-360x800-1.5",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-393x800-1.5",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "AU-430x800-1.5",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [
+        "FAIL AU-360x640-1 page.goto: Timeout 30000ms exceeded."
+      ],
+      "alternative": false
+    },
+    {
+      "job": "card-contracts",
+      "execution": {
+        "command": [
+          "node",
+          "tests/card-tags/contracts.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:58:30.801994+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135",
+        "testSHA256": "79728d175f04d35b858984985327e9f31fc6aea15ad6330f4a76b8e48e908140",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/card-contracts"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T17:07:45.673578+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [
+        {
+          "id": "C01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C03",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C04",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C05",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C06",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C07",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C08",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C09",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C10",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C11",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C12",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C13",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C14",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C15",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C16",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C17",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C18",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "C19",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "card-persistence",
+      "execution": {
+        "command": [
+          "node",
+          "tests/card-tags/persistence.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T17:08:16.071208+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+        "testSHA256": "df69eb831ce8d3b0c041f3af56b67a81da1ab6f67e614400409d6cb5ae4f16e5",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/card-persistence"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T17:10:02.256552+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [
+        {
+          "id": "CS01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CS02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CS03",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CS04",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "card-pwa",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/card-tags/pwa.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T17:07:46.049656+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+        "testSHA256": "688fb2881c37014731a3c27f5a8d226f9d360b8405d633e4176a5925788504d4",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/card-pwa"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T17:08:16.017128+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [],
+      "failureHeadlines": [
+        "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:"
+      ],
+      "alternative": false
+    },
+    {
+      "job": "card-ui",
+      "execution": {
+        "command": [
+          "node",
+          "tests/card-tags/ui.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T17:03:16.879927+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+        "testSHA256": "c553da1cb8079d84d5413c2b815096b9f1b09e3ca9abed5f8eeb9301885969bf",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/card-ui"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T17:08:35.544668+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [
+        {
+          "id": "CTUI-360-640-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-360-800-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-393-640-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-393-800-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-430-640-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-430-800-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-800-360-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-800-393-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-800-430-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-360-800-150",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-393-800-150",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "CTUI-430-800-150",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "contracts",
+      "execution": {
+        "status": "RUNNING"
+      },
+      "tests": [
+        {
+          "id": "T02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "T03",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "T04",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "T05",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "T06",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "T07",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "legacy",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/horror/replay-legacy.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:24:05.961198+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "3ddb4aaaf70aaadee1ff4e8d7cd45d1688de0bd1054da19faa80987792ed14ad",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/legacy"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T16:27:08.758032+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "normal-contracts",
+      "execution": {
+        "command": [
+          "node",
+          "tests/normal-first/contracts.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T17:08:36.370705+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+        "testSHA256": "bf45a55cbe9f68c97852188e8d7d4cad2f2e581f090a9c19f4af210dcd739390",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/normal-contracts"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T17:14:17.058100+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [
+        {
+          "id": "N01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N03",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N04",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N05",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N06",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N07",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N08",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N09",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N10",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N11",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N12",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N13",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N14",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N15",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N16",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N17",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N18",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N19",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "N20",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "normal-pwa",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/normal-first/pwa.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T17:11:58.673929+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+        "testSHA256": "9a0b736149dfbac14fc955c1bdab06dfd69fb1859e418e056f35037f4a4cda77",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/normal-pwa"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T17:12:17.839277+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [],
+      "failureHeadlines": [
+        "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:"
+      ],
+      "alternative": false
+    },
+    {
+      "job": "normal-ui",
+      "execution": {
+        "command": [
+          "node",
+          "tests/normal-first/ui.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T17:10:02.580103+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+        "testSHA256": "d382faf8a8522211313e746598481ba978b59893478fe532ead45d892f70225a",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/normal-ui"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T17:11:58.553484+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [
+        {
+          "id": "NUI-360-640",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "NUI-360-800",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "NUI-393-640",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "NUI-393-800",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "NUI-430-640",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "NUI-430-800",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "r1",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/creature-motif-person-r1.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:23:41.683608+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/r1"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T16:24:05.800655+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [],
+      "failureHeadlines": [
+        "page.evaluate: Error: shared six-card candidate adapter unchanged"
+      ],
+      "alternative": false
+    },
+    {
+      "job": "story-contracts",
+      "execution": {
+        "command": [
+          "node",
+          "tests/horror-stories/contracts.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:38:50.902602+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "392bf1f04d9de9be153e483a41ed86b65ac7cae443598a8fe293896c1f8cb2ae",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/story-contracts"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:51:31.895987+00:00",
+        "productSHA256After": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135"
+      },
+      "tests": [
+        {
+          "id": "S01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S03",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S04",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S05",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S06",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S07",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S08",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S09",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S10",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S11",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S12",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S13",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S14",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S15",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S16",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S17",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S18",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S19",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S20",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S21",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S22",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S23",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S24",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S25",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S26",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S27",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S28",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "S29",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "story-pwa",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/horror-stories/pwa.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:51:32.205643+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135",
+        "testSHA256": "3fb1422920836336324187f98e529f611345e18c379eb42bbfebfc8653ea889d",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/story-pwa"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:52:57.544788+00:00",
+        "productSHA256After": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135"
+      },
+      "tests": [],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "story-ui",
+      "execution": {
+        "command": [
+          "node",
+          "tests/horror-stories/ui.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:43:51.886909+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "10b6493531cfb4bac6eb56a24c4225fda8af55579fda404e2424ad615a8fb6b3",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/story-ui"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:54:03.385328+00:00",
+        "productSHA256After": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135"
+      },
+      "tests": [
+        {
+          "id": "UI-360x640-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-360x800-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-393x640-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-393x800-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-430x640-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-430x800-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-640x360-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-800x393-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-800x430-1",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-360x800-1.5",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-393x800-1.5",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UI-430x800-1.5",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "unified-compatibility",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/unified-ui/compatibility.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:23:40.682431+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+        "testSHA256": "f83d5ef1f2069c9f81b4b3c1426991715b0469d950af3da223f0d51292ab0b1d",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-compatibility"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T16:24:27.149615+00:00",
+        "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+      },
+      "tests": [
+        {
+          "id": "UC01",
+          "passed": false,
+          "error": "AssertionError [ERR_ASSERTION]: tables\n+ actual - expected\n\n+ '{\"catalog\":{\"background\":[{\"group\":\"シンプル・抽象\",\"id\":\"background-0\",\"name\":\"シンプルな背景\",\"value\":\"simple background\"},{\"group\":\"シンプル・抽象\",\"id\":\"background-1\",\"name\":\"白背景\",\"value\":\"white"
+        },
+        {
+          "id": "UC02",
+          "passed": false,
+          "error": "AssertionError [ERR_ASSERTION]: producers\n+ actual - expected\n\n  [\n    \"function(){if(!hConfigured())return hGenerateOriginal();const conflicts=hGenerationConflicts('normal');if(conflicts.length){hShowReasons(conflicts);return false}const o"
+        },
+        {
+          "id": "UC03",
+          "passed": false,
+          "error": "AssertionError [ERR_ASSERTION]: normal\n+ actual - expected\n\n  [\n    {\n      negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, "
+        },
+        {
+          "id": "UC04",
+          "passed": false,
+          "error": "AssertionError [ERR_ASSERTION]: native\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, te"
+        },
+        {
+          "id": "UC05",
+          "passed": false,
+          "error": "AssertionError [ERR_ASSERTION]: semi\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text"
+        },
+        {
+          "id": "UC06",
+          "passed": false,
+          "error": "AssertionError [ERR_ASSERTION]: horror\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, te"
+        },
+        {
+          "id": "UC07",
+          "passed": false,
+          "error": "AssertionError [ERR_ASSERTION]: off\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text,"
+        },
+        {
+          "id": "UC08",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [
+        "FAIL UC01 tables",
+        "FAIL UC02 producers",
+        "FAIL UC03 normal",
+        "FAIL UC04 native",
+        "FAIL UC05 semi",
+        "FAIL UC06 horror",
+        "FAIL UC07 off"
+      ],
+      "alternative": false
+    },
+    {
+      "job": "unified-contracts",
+      "execution": {
+        "command": [
+          "node",
+          "tests/unified-ui/contracts.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:53:46.487562+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135",
+        "testSHA256": "bdcf1863d1d7c61654a6095ed47ee6d750299fddff571d977541bfa41b386c15",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-contracts"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T17:03:16.682424+00:00",
+        "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+      },
+      "tests": [
+        {
+          "id": "U01",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U02",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U03",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U04",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U05",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U06",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U07",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U08",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U09",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U10",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U11",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U12",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U13",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U14",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U15",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U16",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U17",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U18",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U19",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U20",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U21",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U22",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U23",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "U24",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    },
+    {
+      "job": "unified-pwa",
+      "execution": {
+        "command": [
+          "node",
+          "tests/tg-yugioh-phase1/replay.cjs",
+          "tests/unified-ui/pwa.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:52:58.461570+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135",
+        "testSHA256": "c24b1185a1c0c77f04f094f9e1c5f04251822b1c6b343fe2fcafd27e7a7da7d6",
+        "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-pwa"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 1,
+        "endUTC": "2026-10-25T16:53:46.148460+00:00",
+        "productSHA256After": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135"
+      },
+      "tests": [],
+      "failureHeadlines": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:"
+      ],
+      "alternative": false
+    },
+    {
+      "job": "unified-ui",
+      "execution": {
+        "command": [
+          "node",
+          "tests/unified-ui/ui.cjs"
+        ],
+        "cwd": "/workspace/seaart-v44-audit",
+        "startUTC": "2026-10-25T16:54:03.495341+00:00",
+        "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+        "productSHA256Before": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135",
+        "testSHA256": "c6c84ca0b2b5710ce0f53b616ab3097665875eb912afdf9e8778e96c660edb4c",
+        "wrapperSHA256": null,
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+          "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+          "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-ui"
+        },
+        "physicalDevice": false,
+        "publicOriginTest": false,
+        "exitCode": 0,
+        "endUTC": "2026-10-25T16:58:30.509074+00:00",
+        "productSHA256After": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135"
+      },
+      "tests": [
+        {
+          "id": "UUI-360-640-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-360-800-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-393-640-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-393-800-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-430-640-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-430-800-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-800-360-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-800-393-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-800-430-100",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-360-800-150",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-393-800-150",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "id": "UUI-430-800-150",
+          "passed": true,
+          "error": ""
+        }
+      ],
+      "failureHeadlines": [],
+      "alternative": false
+    }
+  ]
+}
