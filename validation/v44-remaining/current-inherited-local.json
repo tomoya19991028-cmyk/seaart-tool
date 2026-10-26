@@ -1,0 +1,2588 @@
+{
+  "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+  "jobCounts": {
+    "PASS": 14,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "jobs": [
+    {
+      "job": "round2-retest",
+      "execution": {
+        "name": "round2-retest",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/integration/motif-round2-alternative.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T01:38:25.454Z",
+        "endUTC": "2026-10-26T01:46:38.203Z",
+        "exitCode": 0,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "717c0a6f48022b0b058f5b0308e3485bc664cf50aca755042d32c826610127bc",
+        "adapterSHA256": "39d1a6bd33571503fb1217adb5d54a08bd18042372d7190722e2fc5adb7bc7e4"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "2b96d1648d6d68614e667426329f3881e1656a3334da2c2da20acf2dbb05bd8c",
+          "result": {
+            "alternativeTests": true,
+            "originalTestsRecovered": false,
+            "tests": [
+              {
+                "id": "M01",
+                "label": "approved mapping counts, IDs, Japanese names and English values match immutable report",
+                "passed": true,
+                "detail": {
+                  "outfit": 65,
+                  "upper": 34,
+                  "lower": 25,
+                  "feet": 17,
+                  "legwear": 9,
+                  "bodyFeatures": 20,
+                  "accessory": 28
+                }
+              },
+              {
+                "id": "M02",
+                "label": "outfit every approved candidate: plan and real reimport preserve UUID/source/denied",
+                "passed": true,
+                "detail": {
+                  "field": "outfit",
+                  "count": 65,
+                  "values": [
+                    "casual clothes",
+                    "formal suit",
+                    "tuxedo",
+                    "kimono",
+                    "yukata",
+                    "hakama",
+                    "hanfu",
+                    "gothic outfit",
+                    "lab coat",
+                    "chef uniform",
+                    "pilot uniform",
+                    "spacesuit",
+                    "wizard robe",
+                    "adventurer outfit",
+                    "cleric robes",
+                    "pirate outfit",
+                    "cowboy outfit",
+                    "tracksuit",
+                    "sportswear",
+                    "pajamas",
+                    "hoodie",
+                    "sweater",
+                    "long coat",
+                    "leather jacket",
+                    "cyberpunk outfit",
+                    "steampunk outfit",
+                    "t-shirt",
+                    "blouse",
+                    "cardigan",
+                    "denim jacket",
+                    "jeans",
+                    "overalls",
+                    "one-piece dress",
+                    "summer dress",
+                    "winter clothes",
+                    "spring outfit",
+                    "raincoat",
+                    "trench coat",
+                    "puffer jacket",
+                    "coat and scarf",
+                    "workwear",
+                    "light armor",
+                    "robe and cape",
+                    "royal attire",
+                    "elven outfit",
+                    "priest robes",
+                    "martial arts uniform",
+                    "hunter outfit",
+                    "casual kimono",
+                    "jinbei",
+                    "hanbok",
+                    "hiking outfit",
+                    "ski suit",
+                    "smart casual office outfit",
+                    "denim coordinated outfit",
+                    "men's shirt and slacks",
+                    "men's casual suit",
+                    "women's blouse and long skirt",
+                    "women's pantsuit",
+                    "t-shirt and jeans",
+                    "sweater and long skirt",
+                    "wizard outfit",
+                    "priest outfit",
+                    "formal gown",
+                    "combat suit"
+                  ],
+                  "sourceUnchanged": true,
+                  "metadataUnchanged": true,
+                  "denied": true
+                }
+              },
+              {
+                "id": "M03",
+                "label": "upper every approved candidate: plan and real reimport preserve UUID/source/denied",
+                "passed": true,
+                "detail": {
+                  "field": "upper",
+                  "count": 34,
+                  "values": [
+                    "white blouse",
+                    "shirt",
+                    "jacket",
+                    "hoodie",
+                    "sweater",
+                    "robe",
+                    "polo shirt",
+                    "denim shirt",
+                    "striped shirt",
+                    "oversized sweater",
+                    "cardigan",
+                    "turtleneck sweater",
+                    "vest",
+                    "waistcoat",
+                    "long-sleeved blouse",
+                    "kimono top",
+                    "tailored blazer",
+                    "silk blouse",
+                    "dress shirt",
+                    "formal waistcoat",
+                    "embroidered jacket",
+                    "chainmail shirt",
+                    "ceremonial robes",
+                    "mage cloak",
+                    "armored jacket",
+                    "military coat",
+                    "high-collared tunic",
+                    "fur-lined cloak",
+                    "t-shirt",
+                    "blouse",
+                    "denim jacket",
+                    "trench coat",
+                    "puffer jacket",
+                    "leather jacket"
+                  ],
+                  "sourceUnchanged": true,
+                  "metadataUnchanged": true,
+                  "denied": true
+                }
+              },
+              {
+                "id": "M04",
+                "label": "lower every approved candidate: plan and real reimport preserve UUID/source/denied",
+                "passed": true,
+                "detail": {
+                  "field": "lower",
+                  "count": 25,
+                  "values": [
+                    "long skirt",
+                    "trousers",
+                    "shorts",
+                    "leggings",
+                    "hakama pants",
+                    "pleated skirt",
+                    "flared skirt",
+                    "pencil skirt",
+                    "layered skirt",
+                    "asymmetrical skirt",
+                    "long dress skirt",
+                    "wide-leg pants",
+                    "skinny jeans",
+                    "cargo pants",
+                    "leather pants",
+                    "denim shorts",
+                    "culottes",
+                    "track pants",
+                    "slacks",
+                    "armored skirt",
+                    "leather trousers",
+                    "tabard",
+                    "split skirt",
+                    "battle kilt",
+                    "jeans"
+                  ],
+                  "sourceUnchanged": true,
+                  "metadataUnchanged": true,
+                  "denied": true
+                }
+              },
+              {
+                "id": "M05",
+                "label": "feet every approved candidate: plan and real reimport preserve UUID/source/denied",
+                "passed": true,
+                "detail": {
+                  "field": "feet",
+                  "count": 17,
+                  "values": [
+                    "boots",
+                    "high heels",
+                    "sneakers",
+                    "sandals",
+                    "ankle boots",
+                    "knee-high boots",
+                    "combat boots",
+                    "platform boots",
+                    "loafers",
+                    "ballet flats",
+                    "dress shoes",
+                    "Mary Jane shoes",
+                    "geta sandals",
+                    "wooden clogs",
+                    "armored boots",
+                    "greaves",
+                    "winged sandals"
+                  ],
+                  "sourceUnchanged": true,
+                  "metadataUnchanged": true,
+                  "denied": true
+                }
+              },
+              {
+                "id": "M06",
+                "label": "legwear every approved candidate: plan and real reimport preserve UUID/source/denied",
+                "passed": true,
+                "detail": {
+                  "field": "legwear",
+                  "count": 9,
+                  "values": [
+                    "thighhigh socks",
+                    "knee socks",
+                    "tights",
+                    "stockings",
+                    "leggings",
+                    "leg armor",
+                    "ankle socks",
+                    "patterned tights",
+                    "leg warmers"
+                  ],
+                  "sourceUnchanged": true,
+                  "metadataUnchanged": true,
+                  "denied": true
+                }
+              },
+              {
+                "id": "M07",
+                "label": "bodyFeatures every approved candidate: plan and real reimport preserve UUID/source/denied",
+                "passed": true,
+                "detail": {
+                  "field": "bodyFeatures",
+                  "count": 20,
+                  "values": [
+                    "cat ears",
+                    "fox ears",
+                    "wolf ears",
+                    "dog ears",
+                    "rabbit ears",
+                    "bear ears",
+                    "mouse ears",
+                    "deer ears",
+                    "cow ears",
+                    "horse ears",
+                    "pointy ears",
+                    "long pointy ears",
+                    "demon horns",
+                    "dragon horns",
+                    "goat horns",
+                    "bull horns",
+                    "antlers",
+                    "single horn",
+                    "two horns",
+                    "multiple horns"
+                  ],
+                  "sourceUnchanged": true,
+                  "metadataUnchanged": true,
+                  "denied": true
+                }
+              },
+              {
+                "id": "M08",
+                "label": "accessory every approved candidate: plan and real reimport preserve UUID/source/denied",
+                "passed": true,
+                "detail": {
+                  "field": "accessory",
+                  "count": 28,
+                  "values": [
+                    "earrings",
+                    "necklace",
+                    "choker",
+                    "cape",
+                    "belt",
+                    "brooch",
+                    "eyepatch",
+                    "scarf",
+                    "pendant",
+                    "locket",
+                    "pearl necklace",
+                    "gold earrings",
+                    "silver earrings",
+                    "gemstone brooch",
+                    "armlet",
+                    "anklet",
+                    "amulet",
+                    "magic talisman",
+                    "feathered cape",
+                    "ornate epaulettes",
+                    "decorative chains",
+                    "apron",
+                    "bracelets",
+                    "rings",
+                    "jeweled ring",
+                    "wristwatch",
+                    "bangles",
+                    "hand jewelry"
+                  ],
+                  "sourceUnchanged": true,
+                  "metadataUnchanged": true,
+                  "denied": true
+                }
+              },
+              {
+                "id": "M09",
+                "label": "selected group ON and all other groups OFF preserve their prior fields",
+                "passed": true,
+                "detail": {
+                  "onlyUpperChanged": true
+                }
+              },
+              {
+                "id": "M10",
+                "label": "colors OFF preserve existing color, ON copies only selected field",
+                "passed": true,
+                "detail": {
+                  "off": true,
+                  "color": {
+                    "primary": "blue",
+                    "secondary": "red"
+                  },
+                  "upper": null
+                }
+              },
+              {
+                "id": "M11",
+                "label": "hidden, edited, duplicate, unknown, owner-specific and free-text candidates rejected with reasons",
+                "passed": true,
+                "detail": [
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "id": "M12",
+                "label": "preview before/after, changing ON/OFF resets confirmation, cancel leaves data",
+                "passed": true,
+                "detail": {
+                  "arrow": true,
+                  "old": true,
+                  "next": true,
+                  "reset": true,
+                  "off": true,
+                  "cancel": true
+                }
+              },
+              {
+                "id": "M13",
+                "label": "ordinary person overwrite, edited target, stale source, no-choice and colors-only rejected",
+                "passed": true,
+                "detail": [
+                  true,
+                  true,
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "id": "M14",
+                "label": "round-2 fulltext equals saved round-2 product and independent manual profile, OFF/unset",
+                "passed": true,
+                "detail": {
+                  "normal": 21,
+                  "manga": 21,
+                  "panels": 42,
+                  "referenceEqual": true,
+                  "manualEqual": true
+                }
+              }
+            ],
+            "physicalDevice": false,
+            "publicOrigin": false,
+            "passed": true,
+            "failed": []
+          }
+        }
+      ]
+    },
+    {
+      "job": "r1",
+      "execution": {
+        "name": "r1",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/creature-motif-person-r1.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T01:46:38.269Z",
+        "endUTC": "2026-10-26T01:49:43.429Z",
+        "exitCode": 0,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+        "adapterSHA256": "39d1a6bd33571503fb1217adb5d54a08bd18042372d7190722e2fc5adb7bc7e4"
+      },
+      "results": [
+        {
+          "filename": "r1-results.json",
+          "sha256": "e09d124c5b9f1d04c525503da8265c10165e941a14d7b9a7af97f6eb5df97aa2",
+          "result": {
+            "passed": true,
+            "baselineURL": "http://127.0.0.1:8765/reference-v44/index.html",
+            "targetURL": "http://127.0.0.1:8765/candidate/index.html",
+            "physicalDevice": false,
+            "publicOrigin": false,
+            "contracts": {
+              "passed": true,
+              "checks": [
+                "production registry frozen and empty",
+                "startup grants and resources empty",
+                "Native denied",
+                "unregistered full denied r1-a",
+                "unregistered full denied r1-b",
+                "unregistered full denied r1-c",
+                "unregistered full denied r1-d",
+                "mode cycle retains native records",
+                "mode cycle retains both human profiles",
+                "mode cycle retains both storage markers",
+                "getters return detached copies",
+                "person stores remain independent",
+                "adult not transferred to general profile r1-a",
+                "adult not transferred to general profile r1-b",
+                "adult not transferred to general profile r1-c",
+                "adult not transferred to general profile r1-d",
+                "ineligible editor hides confirmation and cards",
+                "production editor four tabs",
+                "production editor has no fifth tab or adult cards",
+                "v44 eight-card candidate sections expected",
+                "unsaved general draft cannot confirm",
+                "maximum six cards basic/0",
+                "maximum six cards basic/1",
+                "maximum six cards hair/0",
+                "maximum six cards clothing/0",
+                "maximum six cards clothing/1",
+                "maximum six cards equipment/0",
+                "maximum six cards equipment/1",
+                "maximum six cards equipment/2",
+                "page changes preserve draft",
+                "ineligible adult draft commit rejected atomically",
+                "cancel discards both drafts",
+                "general save one Undo",
+                "general save target UUID and mode only",
+                "Undo restores general draft save",
+                "unchanged save no Undo",
+                "named save restore retains values without permission",
+                "ordinary history remains unprotected opt-in",
+                "history restore retains values without permission",
+                "management Undo restores stored values",
+                "owner change quarantines old extension",
+                "individual deletion removes extension",
+                "deletion Undo restores data without permission",
+                "unknown adult schema rejected atomically",
+                "saved confirmed record grants no authority",
+                "actual reload retains values and starts with no receipt grants",
+                "actual v4 download/import retains values without permission",
+                "actual v3 import preserves native actors, initializes extensions and grants none",
+                "actual browser pagehide persists pending ordinary state and retains markers"
+              ],
+              "keys": {
+                "settings": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+                "working": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+                "history": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+                "marker": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+                "journal": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1"
+              },
+              "productionDefinitions": 0
+            },
+            "matrix": {
+              "counts": {
+                "normal": 210,
+                "manga": 210,
+                "panels": 420
+              },
+              "dataCounts": {
+                "character": 1390,
+                "personPresets": 1384,
+                "species": 94,
+                "creaturePresets": 60,
+                "features": 275,
+                "creatureCandidates": 500,
+                "adapters": 1444
+              },
+              "markerComparisons": 210,
+              "baselineEqual": true,
+              "checks": 865,
+              "outputsSHA256": "e34ed249e6c9870503be05419092d3ec9c57eda0265088e7c177c63d2fc2f15d",
+              "fingerprints": {
+                "catalog": "f19c72f2272820dc8319269b44b359b20f74a72d4ba84d18aa45ad588501fba7",
+                "characterBasicPresets": "07c5dd5cca30d21c7469f379d4679f5f3151a370887d365a6d2a2f265e09b505",
+                "detailOptions": "c9fd7092c9a809042816a99ca0208662ca58df3d1142b0026ac1092e1f3fad06",
+                "outfitSets": "1c462ff2912df52a795eafb38a5f444b9efc916cdba0a7814b3a253dbb9d00b2",
+                "genders": "46246caf0096977eba2b1d513ae42b45baf813454baf30642a24e8599f122e6b",
+                "creatureBasicPresets": "691064b84afb1fa838db0901aaddfdd8a49f0dde5df7a4f509222c80eea26b46",
+                "creatureCandidateBase": "09abf3abd2b9edbe9bf49651dabd03795916b1d730936a184812fdde031892df",
+                "owners": "df033ad7cc44ce8a2572f44a6981058c4fe930dc7727b16b35acd33cc97ea8c9",
+                "adapters": "37b3f49337724978a73a23100db97f61ba75bd4670593315c61c0249b517e234",
+                "creatureFields": "26cdf7b4f3945ba620966ce3b7cda2bf47883e4b0faa0cdfb7e0074197071e80",
+                "creatureFeatureLabels": "d83df8fe3048f6e362f367611f3d37f517f62e8a50f23ff347fcb8612e3c716c",
+                "creatureSpeciesGroups": "348ec996716a5e4d6304652b0b9655e12f07246b948c7d1422676162a5ee5656"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "job": "legacy",
+      "execution": {
+        "name": "legacy",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror/replay-legacy.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T01:49:43.445Z",
+        "endUTC": "2026-10-26T01:51:27.771Z",
+        "exitCode": 0,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "3ddb4aaaf70aaadee1ff4e8d7cd45d1688de0bd1054da19faa80987792ed14ad",
+        "adapterSHA256": "39d1a6bd33571503fb1217adb5d54a08bd18042372d7190722e2fc5adb7bc7e4"
+      },
+      "results": [
+        {
+          "filename": "regression-results.json",
+          "sha256": "cf0d9af098892e8ec07713127f332358e61038f1d24d568aa92bdd306af96903",
+          "result": {
+            "passed": true,
+            "counts": {
+              "character": 1390,
+              "personPresets": 1384,
+              "species": 94,
+              "creaturePresets": 60,
+              "features": 275,
+              "creatureCandidates": 500,
+              "adapters": 1444
+            },
+            "fingerprints": {
+              "catalog": "f19c72f2272820dc8319269b44b359b20f74a72d4ba84d18aa45ad588501fba7",
+              "characterBasicPresets": "07c5dd5cca30d21c7469f379d4679f5f3151a370887d365a6d2a2f265e09b505",
+              "detailOptions": "c9fd7092c9a809042816a99ca0208662ca58df3d1142b0026ac1092e1f3fad06",
+              "outfitSets": "1c462ff2912df52a795eafb38a5f444b9efc916cdba0a7814b3a253dbb9d00b2",
+              "genders": "46246caf0096977eba2b1d513ae42b45baf813454baf30642a24e8599f122e6b",
+              "creatureBasicPresets": "691064b84afb1fa838db0901aaddfdd8a49f0dde5df7a4f509222c80eea26b46",
+              "creatureCandidateBase": "09abf3abd2b9edbe9bf49651dabd03795916b1d730936a184812fdde031892df",
+              "owners": "df033ad7cc44ce8a2572f44a6981058c4fe930dc7727b16b35acd33cc97ea8c9"
+            },
+            "normal": 252,
+            "manga": 252,
+            "adult": 21
+          }
+        }
+      ]
+    },
+    {
+      "job": "unified-compatibility",
+      "execution": {
+        "name": "unified-compatibility",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/unified-ui/compatibility.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T01:51:27.818Z",
+        "endUTC": "2026-10-26T01:52:02.080Z",
+        "exitCode": 0,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "f83d5ef1f2069c9f81b4b3c1426991715b0469d950af3da223f0d51292ab0b1d",
+        "adapterSHA256": "39d1a6bd33571503fb1217adb5d54a08bd18042372d7190722e2fc5adb7bc7e4"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "f6efe6effff7d73db71e032c4786bf3ed50d187bceae46ada64eb8ccd9eea491",
+          "result": {
+            "tests": [
+              {
+                "id": "UC01",
+                "passed": true,
+                "keys": [
+                  "tables"
+                ],
+                "beforeSHA256": "cbecb4e34abff738340705c411e1326250668cfac4dae44309c9febbe3ca77dc",
+                "afterSHA256": "cbecb4e34abff738340705c411e1326250668cfac4dae44309c9febbe3ca77dc"
+              },
+              {
+                "id": "UC02",
+                "passed": true,
+                "keys": [
+                  "producers"
+                ],
+                "beforeSHA256": "73bd716930e009d77a0920b16e12969a846c4c148cc61c72964d2d577ea6e0f4",
+                "afterSHA256": "73bd716930e009d77a0920b16e12969a846c4c148cc61c72964d2d577ea6e0f4"
+              },
+              {
+                "id": "UC03",
+                "passed": true,
+                "keys": [
+                  "normal"
+                ],
+                "beforeSHA256": "d7608d45636466f84668bfb2771a36c152658852869488e46dbb02131ef4b66e",
+                "afterSHA256": "d7608d45636466f84668bfb2771a36c152658852869488e46dbb02131ef4b66e"
+              },
+              {
+                "id": "UC04",
+                "passed": true,
+                "keys": [
+                  "native"
+                ],
+                "beforeSHA256": "bccb996f67b71039c3a37dff5a23f8914d0037bba578734b7a96178f716bb5f9",
+                "afterSHA256": "bccb996f67b71039c3a37dff5a23f8914d0037bba578734b7a96178f716bb5f9"
+              },
+              {
+                "id": "UC05",
+                "passed": true,
+                "keys": [
+                  "semi",
+                  "full"
+                ],
+                "beforeSHA256": "124c0c1de8a43abac00ed9e6a5467009da3aec4d7d04ff3c0d34cf8634ee9e0b",
+                "afterSHA256": "124c0c1de8a43abac00ed9e6a5467009da3aec4d7d04ff3c0d34cf8634ee9e0b"
+              },
+              {
+                "id": "UC06",
+                "passed": true,
+                "keys": [
+                  "horror"
+                ],
+                "beforeSHA256": "dcc04d8582f6ce5ef07d2e128d254123dc34a971d50654810d966253ccd8e15f",
+                "afterSHA256": "dcc04d8582f6ce5ef07d2e128d254123dc34a971d50654810d966253ccd8e15f"
+              },
+              {
+                "id": "UC07",
+                "passed": true,
+                "keys": [
+                  "manga",
+                  "off"
+                ],
+                "beforeSHA256": "92277748e9c86ba4fecbf179dafbb266fe648c1b18790169f0d6c0b9aa06b565",
+                "afterSHA256": "92277748e9c86ba4fecbf179dafbb266fe648c1b18790169f0d6c0b9aa06b565"
+              },
+              {
+                "id": "UC08",
+                "passed": true,
+                "keys": [
+                  "storage"
+                ],
+                "beforeSHA256": "fe839f53765c7774671a445878c7c08dc7bd022e47dd8e201b28d0450e3bcc1e",
+                "afterSHA256": "fe839f53765c7774671a445878c7c08dc7bd022e47dd8e201b28d0450e3bcc1e"
+              }
+            ],
+            "publicOrigin": false,
+            "physicalDevice": false,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "job": "auto-compatibility",
+      "execution": {
+        "name": "auto-compatibility",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/compatibility.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T01:52:02.098Z",
+        "endUTC": "2026-10-26T01:58:49.772Z",
+        "exitCode": 0,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "4c4746306a179b01461c330c0c72bcb4061c6e956cca16ec6be2bc6ee81cf7e1",
+        "adapterSHA256": "39d1a6bd33571503fb1217adb5d54a08bd18042372d7190722e2fc5adb7bc7e4"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "0cd56e51366f66319358ec4b652cd2430579ff270c92acf546e4d006ef0c2629",
+          "result": {
+            "tests": [
+              {
+                "id": "AC01",
+                "passed": true,
+                "rows": 36,
+                "normal": 36,
+                "manga": 36,
+                "panels": 144,
+                "fulltextSHA256": "4f257880343477d1e93d38df6f28d6579799ea2bc76ed03f54b4dee6770e9fb7"
+              }
+            ],
+            "passed": true,
+            "physicalDevice": false,
+            "publicOrigin": false
+          }
+        }
+      ]
+    },
+    {
+      "job": "auto-contracts",
+      "execution": {
+        "name": "auto-contracts",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/contracts.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T01:59:57.643Z",
+        "endUTC": "2026-10-26T02:05:54.505Z",
+        "exitCode": 0,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "adapterSHA256": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "fee6a45a6fd7f3860535db44584cc277f859d61bc29b0e8d638e6b2f9b231f26",
+          "result": {
+            "tests": [
+              {
+                "id": "A01",
+                "passed": true,
+                "detail": {
+                  "partial": [
+                    {
+                      "featureId": "horror-auto-shadow-body-partial",
+                      "semanticKey": "horror-auto-shadow-body-partial",
+                      "tag": "partially transformed body of living shadows",
+                      "weight": 1.2,
+                      "continuity": "persistent",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-shadow-tendrils",
+                      "semanticKey": "horror-feature-shadow-tendrils",
+                      "tag": "shadow tendrils",
+                      "weight": 1.2,
+                      "continuity": "transient",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-black-mist",
+                      "semanticKey": "horror-feature-black-mist",
+                      "tag": "black mist",
+                      "weight": 1.2,
+                      "continuity": "transient",
+                      "origin": "auto"
+                    }
+                  ],
+                  "full": [
+                    {
+                      "featureId": "horror-auto-shadow-body-complete",
+                      "semanticKey": "horror-auto-shadow-body-complete",
+                      "tag": "fully manifested body of living shadows",
+                      "weight": 1.2,
+                      "continuity": "persistent",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-shadow-body",
+                      "semanticKey": "horror-feature-shadow-body",
+                      "tag": "shadow body displaced from torso",
+                      "weight": 1.2,
+                      "continuity": "persistent",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-black-mist",
+                      "semanticKey": "horror-feature-black-mist",
+                      "tag": "black mist",
+                      "weight": 1.2,
+                      "continuity": "transient",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-shadow-delay",
+                      "semanticKey": "horror-feature-shadow-delay",
+                      "tag": "shadow moving out of sync",
+                      "weight": 1.2,
+                      "continuity": "transient",
+                      "origin": "auto"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "A02",
+                "passed": true,
+                "detail": {
+                  "state": "complete",
+                  "tokens": [
+                    {
+                      "featureId": "horror-auto-shadow-body-complete",
+                      "semanticKey": "horror-auto-shadow-body-complete",
+                      "tag": "fully manifested body of living shadows",
+                      "weight": 1.2,
+                      "continuity": "persistent",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-shadow-body",
+                      "semanticKey": "horror-feature-shadow-body",
+                      "tag": "shadow body displaced from torso",
+                      "weight": 1.2,
+                      "continuity": "persistent",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-black-mist",
+                      "semanticKey": "horror-feature-black-mist",
+                      "tag": "black mist",
+                      "weight": 1.2,
+                      "continuity": "transient",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-feature-shadow-delay",
+                      "semanticKey": "horror-feature-shadow-delay",
+                      "tag": "shadow moving out of sync",
+                      "weight": 1.2,
+                      "continuity": "transient",
+                      "origin": "auto"
+                    },
+                    {
+                      "featureId": "horror-auto-shadow-wings-complete",
+                      "semanticKey": "horror-auto-shadow-wings-complete",
+                      "tag": "fully manifested wings made of living shadows",
+                      "weight": 1.2,
+                      "continuity": "persistent",
+                      "origin": "auto"
+                    }
+                  ],
+                  "removals": [],
+                  "conflicts": [],
+                  "reasons": [],
+                  "effective": {},
+                  "structure": {
+                    "wings": "present",
+                    "horns": "absent",
+                    "tail": "unset"
+                  },
+                  "auto": {
+                    "policy": {
+                      "enabled": true,
+                      "excludedIds": [],
+                      "mode": "inherit"
+                    },
+                    "entries": [
+                      {
+                        "id": "horror-auto-shadow-body-complete",
+                        "label": "全身影化",
+                        "group": "四肢・体型",
+                        "part": null,
+                        "tag": "fully manifested body of living shadows",
+                        "weight": 1.2,
+                        "definition": {
+                          "id": "horror-auto-shadow-body-complete",
+                          "label": "全身影化",
+                          "tag": "fully manifested body of living shadows",
+                          "group": "四肢・体型",
+                          "structure": {},
+                          "conflict": "horror-auto-body",
+                          "material": "shadow",
+                          "applicableStates": [
+                            "complete"
+                          ],
+                          "revision": 1,
+                          "continuity": "persistent"
+                        },
+                        "status": "active"
+                      },
+                      {
+                        "id": "horror-feature-shadow-body",
+                        "label": "身体からずれる影体",
+                        "group": "四肢・体型",
+                        "part": null,
+                        "tag": "shadow body displaced from torso",
+                        "weight": 1.2,
+                        "definition": {
+                          "id": "horror-feature-shadow-body",
+                          "label": "身体からずれる影体",
+                          "group": "四肢・体型",
+                          "tag": "shadow body displaced from torso",
+                          "source": null,
+                          "conflict": null,
+                          "structure": {},
+                          "continuity": "persistent",
+                          "applicableStates": [
+                            "partial",
+                            "complete"
+                          ],
+                          "defaultWeight": 1,
+                          "revision": 1,
+                          "semanticKey": "horror-feature-shadow-body"
+                        },
+                        "status": "active"
+                      },
+                      {
+                        "id": "horror-feature-black-mist",
+                        "label": "黒い霧",
+                        "group": "演出・動作",
+                        "part": null,
+                        "tag": "black mist",
+                        "weight": 1.2,
+                        "definition": {
+                          "id": "horror-feature-black-mist",
+                          "label": "黒い霧",
+                          "group": "演出・動作",
+                          "tag": "black mist",
+                          "source": null,
+                          "conflict": null,
+                          "structure": {},
+                          "continuity": "transient",
+                          "intensityTags": {
+                            "low": "thin black mist",
+                            "medium": "black mist",
+                            "high": "dense black mist"
+                          },
+                          "applicableStates": [
+                            "partial",
+                            "complete"
+                          ],
+                          "defaultWeight": 1,
+                          "revision": 1,
+                          "semanticKey": "horror-feature-black-mist"
+                        },
+                        "status": "active"
+                      },
+                      {
+                        "id": "horror-feature-shadow-delay",
+                        "label": "遅れて動く影",
+                        "group": "演出・動作",
+                        "part": null,
+                        "tag": "shadow moving out of sync",
+                        "weight": 1.2,
+                        "definition": {
+                          "id": "horror-feature-shadow-delay",
+                          "label": "遅れて動く影",
+                          "group": "演出・動作",
+                          "tag": "shadow moving out of sync",
+                          "source": null,
+                          "conflict": null,
+                          "structure": {},
+                          "continuity": "transient",
+                          "applicableStates": [
+                            "partial",
+                            "complete"
+                          ],
+                          "defaultWeight": 1,
+                          "revision": 1,
+                          "semanticKey": "horror-feature-shadow-delay"
+                        },
+                        "status": "active"
+                      },
+                      {
+                        "id": "horror-auto-shadow-wings-complete",
+                        "label": "影の翼（全身）",
+                        "group": "翼・角・尻尾",
+                        "part": "wings",
+                        "tag": "fully manifested wings made of living shadows",
+                        "weight": 1.2,
+                        "definition": {
+                          "id": "horror-auto-shadow-wings-complete",
+                          "label": "影の翼（全身）",
+                          "tag": "fully manifested wings made of living shadows",
+                          "group": "翼・角・尻尾",
+                          "structure": {
+                            "wings": "present"
+                          },
+                          "material": "shadow",
+                          "applicableStates": [
+                            "complete"
+                          ],
+                          "revision": 1,
+                          "continuity": "persistent"
+                        },
+                        "status": "active"
+                      }
+                    ],
+                    "conflicts": [],
+                    "reasons": []
+                  }
+                }
+              },
+              {
+                "id": "A03",
+                "passed": true,
+                "detail": {
+                  "manualPreserved": true
+                }
+              },
+              {
+                "id": "A04",
+                "passed": true,
+                "detail": {
+                  "directControls": true
+                }
+              },
+              {
+                "id": "A05",
+                "passed": true,
+                "detail": {
+                  "compactDialog": true
+                }
+              },
+              {
+                "id": "A06",
+                "passed": true,
+                "detail": {
+                  "validation": true
+                }
+              },
+              {
+                "id": "A07",
+                "passed": true,
+                "detail": {
+                  "sharedIntensity": true
+                }
+              },
+              {
+                "id": "A08",
+                "passed": true,
+                "detail": {
+                  "otherDialogFooterKept": true
+                }
+              },
+              {
+                "id": "A09",
+                "passed": true,
+                "detail": {
+                  "combinations": 12,
+                  "rows": [
+                    {
+                      "type": "霊体",
+                      "partial": [
+                        "(partially translucent spectral body:1.2)",
+                        "(patches of skin turning spectral:1.2)",
+                        "(ghostly silhouettes reflected in eyes:1.2)"
+                      ],
+                      "complete": [
+                        "(fully manifested ghostly body:1.2)",
+                        "(limbs fading into spectral outlines:1.2)",
+                        "(spectral wisps orbiting the body:1.2)",
+                        "(ghostly silhouettes reflected in eyes:1.2)"
+                      ]
+                    },
+                    {
+                      "type": "異形",
+                      "partial": [
+                        "(localized body mutations:1.2)",
+                        "(forked fingertips:1.2)",
+                        "(multi-segmented arms:1.2)"
+                      ],
+                      "complete": [
+                        "(fully mutated aberrant body:1.2)",
+                        "(multi-segmented arms:1.2)",
+                        "(spiral limb joints:1.2)",
+                        "(unequal forearm lengths:1.2)"
+                      ]
+                    },
+                    {
+                      "type": "人形",
+                      "partial": [
+                        "(partially doll-like body:1.2)",
+                        "(mask-like face:1.2)",
+                        "(ceramic-like skin plates:1.2)"
+                      ],
+                      "complete": [
+                        "(full-body articulated doll form:1.2)",
+                        "(segmented facial plates:1.2)",
+                        "(ceramic-like skin plates:1.2)",
+                        "(spiral limb joints:1.2)"
+                      ]
+                    },
+                    {
+                      "type": "獣性",
+                      "partial": [
+                        "(partial beast transformation:1.2)",
+                        "(sharp claws:1.2)",
+                        "(beast-like eyes:1.2)"
+                      ],
+                      "complete": [
+                        "(fully transformed beast-like body:1.2)",
+                        "(sharp claws:1.2)",
+                        "(long fingers:1.2)",
+                        "(beast-like eyes:1.2)",
+                        "(animal fangs:1.2)"
+                      ]
+                    },
+                    {
+                      "type": "影",
+                      "partial": [
+                        "(partially transformed body of living shadows:1.2)",
+                        "(shadow tendrils:1.2)",
+                        "(black mist:1.2)"
+                      ],
+                      "complete": [
+                        "(fully manifested body of living shadows:1.2)",
+                        "(shadow body displaced from torso:1.2)",
+                        "(black mist:1.2)",
+                        "(shadow moving out of sync:1.2)"
+                      ]
+                    },
+                    {
+                      "type": "呪い",
+                      "partial": [
+                        "(partially cursed body:1.2)",
+                        "(cursed script on forehead:1.2)",
+                        "(spreading invasive curse runes:1.2)"
+                      ],
+                      "complete": [
+                        "(body fully overtaken by a curse:1.2)",
+                        "(spreading invasive curse runes:1.2)",
+                        "(parasitic filaments beneath skin:1.2)",
+                        "(curse bindings around limbs:1.2)"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "A10",
+                "passed": true,
+                "detail": {
+                  "positiveCombinations": 36,
+                  "negativeCombinations": 72,
+                  "rows": [
+                    {
+                      "type": "霊体",
+                      "state": "partial",
+                      "part": "wings",
+                      "tag": "partially manifested translucent spectral wings"
+                    },
+                    {
+                      "type": "霊体",
+                      "state": "partial",
+                      "part": "horns",
+                      "tag": "partially formed spectral horns"
+                    },
+                    {
+                      "type": "霊体",
+                      "state": "partial",
+                      "part": "tail",
+                      "tag": "partially manifested ghostly tail"
+                    },
+                    {
+                      "type": "霊体",
+                      "state": "complete",
+                      "part": "wings",
+                      "tag": "fully manifested translucent spectral wings"
+                    },
+                    {
+                      "type": "霊体",
+                      "state": "complete",
+                      "part": "horns",
+                      "tag": "fully formed spectral horns"
+                    },
+                    {
+                      "type": "霊体",
+                      "state": "complete",
+                      "part": "tail",
+                      "tag": "fully manifested ghostly tail"
+                    },
+                    {
+                      "type": "異形",
+                      "state": "partial",
+                      "part": "wings",
+                      "tag": "partially mutated misshapen wings"
+                    },
+                    {
+                      "type": "異形",
+                      "state": "partial",
+                      "part": "horns",
+                      "tag": "partially mutated horns"
+                    },
+                    {
+                      "type": "異形",
+                      "state": "partial",
+                      "part": "tail",
+                      "tag": "partially mutated aberrant tail"
+                    },
+                    {
+                      "type": "異形",
+                      "state": "complete",
+                      "part": "wings",
+                      "tag": "fully mutated misshapen wings"
+                    },
+                    {
+                      "type": "異形",
+                      "state": "complete",
+                      "part": "horns",
+                      "tag": "fully mutated horns"
+                    },
+                    {
+                      "type": "異形",
+                      "state": "complete",
+                      "part": "tail",
+                      "tag": "fully mutated aberrant tail"
+                    },
+                    {
+                      "type": "人形",
+                      "state": "partial",
+                      "part": "wings",
+                      "tag": "partially unfolded artificial wings"
+                    },
+                    {
+                      "type": "人形",
+                      "state": "partial",
+                      "part": "horns",
+                      "tag": "partially formed artificial horns"
+                    },
+                    {
+                      "type": "人形",
+                      "state": "partial",
+                      "part": "tail",
+                      "tag": "partially extended articulated artificial tail"
+                    },
+                    {
+                      "type": "人形",
+                      "state": "complete",
+                      "part": "wings",
+                      "tag": "fully unfolded artificial wings"
+                    },
+                    {
+                      "type": "人形",
+                      "state": "complete",
+                      "part": "horns",
+                      "tag": "fully formed artificial horns"
+                    },
+                    {
+                      "type": "人形",
+                      "state": "complete",
+                      "part": "tail",
+                      "tag": "fully extended articulated artificial tail"
+                    },
+                    {
+                      "type": "獣性",
+                      "state": "partial",
+                      "part": "wings",
+                      "tag": "partially grown beast wings"
+                    },
+                    {
+                      "type": "獣性",
+                      "state": "partial",
+                      "part": "horns",
+                      "tag": "partially formed beast-like horns"
+                    },
+                    {
+                      "type": "獣性",
+                      "state": "partial",
+                      "part": "tail",
+                      "tag": "partially formed beast-like tail"
+                    },
+                    {
+                      "type": "獣性",
+                      "state": "complete",
+                      "part": "wings",
+                      "tag": "fully grown beast wings"
+                    },
+                    {
+                      "type": "獣性",
+                      "state": "complete",
+                      "part": "horns",
+                      "tag": "fully formed beast-like horns"
+                    },
+                    {
+                      "type": "獣性",
+                      "state": "complete",
+                      "part": "tail",
+                      "tag": "fully formed beast-like tail"
+                    },
+                    {
+                      "type": "影",
+                      "state": "partial",
+                      "part": "wings",
+                      "tag": "partially manifested shadow wings"
+                    },
+                    {
+                      "type": "影",
+                      "state": "partial",
+                      "part": "horns",
+                      "tag": "partially manifested horns of living shadows"
+                    },
+                    {
+                      "type": "影",
+                      "state": "partial",
+                      "part": "tail",
+                      "tag": "partially manifested tail of living shadows"
+                    },
+                    {
+                      "type": "影",
+                      "state": "complete",
+                      "part": "wings",
+                      "tag": "fully manifested wings made of living shadows"
+                    },
+                    {
+                      "type": "影",
+                      "state": "complete",
+                      "part": "horns",
+                      "tag": "fully manifested horns made of living shadows"
+                    },
+                    {
+                      "type": "影",
+                      "state": "complete",
+                      "part": "tail",
+                      "tag": "fully manifested tail made of living shadows"
+                    },
+                    {
+                      "type": "呪い",
+                      "state": "partial",
+                      "part": "wings",
+                      "tag": "partially formed cursed wings"
+                    },
+                    {
+                      "type": "呪い",
+                      "state": "partial",
+                      "part": "horns",
+                      "tag": "partially formed curse-marked horns"
+                    },
+                    {
+                      "type": "呪い",
+                      "state": "partial",
+                      "part": "tail",
+                      "tag": "partially formed cursed tail"
+                    },
+                    {
+                      "type": "呪い",
+                      "state": "complete",
+                      "part": "wings",
+                      "tag": "fully formed cursed wings"
+                    },
+                    {
+                      "type": "呪い",
+                      "state": "complete",
+                      "part": "horns",
+                      "tag": "fully formed curse-marked horns"
+                    },
+                    {
+                      "type": "呪い",
+                      "state": "complete",
+                      "part": "tail",
+                      "tag": "fully formed cursed tail"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "A11",
+                "passed": true,
+                "detail": {
+                  "primaryDominance": true
+                }
+              },
+              {
+                "id": "A12",
+                "passed": true,
+                "detail": {
+                  "dedupWeightUndo": true
+                }
+              },
+              {
+                "id": "A13",
+                "passed": true,
+                "detail": {
+                  "conflictBlocksGeneration": true
+                }
+              },
+              {
+                "id": "A14",
+                "passed": true,
+                "detail": {
+                  "sourcePolicy": true
+                }
+              },
+              {
+                "id": "A15",
+                "passed": true,
+                "detail": {
+                  "fourOwnersSeparate": true,
+                  "prompt": "masterpiece, best quality, detailed face, detailed eyes, 4 distinct subjects, all subjects visible, 2 people, 2 creatures, 2 people and 2 creatures, two distinct creatures, both creatures visible, clearly separated subjects\n\nBREAK\n\n1girl, adult woman, 人物A, (fully manifested body of living shadows:1.2), (shadow body displaced from torso:1.2), (black mist:1.2), (shadow moving out of sync:1.2)\n\nBREAK\n\n1boy, adult man, 人物B, (partial beast transformation:1.2), (sharp claws:1.2), (beast-like eyes:1.2)\n\nBREAK\n\nwolf, (partially cursed body:1.2), (cursed script on forehead:1.2), (spreading invasive curse runes:1.2)\n\nBREAK\n\nghost, (fully manifested ghostly body:1.2), (limbs fading into spectral outlines:1.2), (spectral wisps orbiting the body:1.2), (ghostly silhouettes reflected in eyes:1.2)\n\nBREAK\n\nanime style"
+                }
+              },
+              {
+                "id": "A16",
+                "passed": true,
+                "detail": {
+                  "panelPrecedence": true
+                }
+              },
+              {
+                "id": "A17",
+                "passed": true,
+                "detail": {
+                  "virtualDraftAndUndo": true
+                }
+              },
+              {
+                "id": "A18",
+                "passed": true,
+                "detail": {
+                  "key": "settings",
+                  "fired": true,
+                  "rejected": true,
+                  "exactRollback": true
+                }
+              },
+              {
+                "id": "A19",
+                "passed": true,
+                "detail": {
+                  "key": "working",
+                  "fired": true,
+                  "rejected": true,
+                  "exactRollback": true
+                }
+              },
+              {
+                "id": "A20",
+                "passed": true,
+                "detail": {
+                  "key": "history",
+                  "fired": true,
+                  "rejected": true,
+                  "exactRollback": true
+                }
+              },
+              {
+                "id": "A21",
+                "passed": true,
+                "detail": {
+                  "key": "marker",
+                  "fired": true,
+                  "rejected": true,
+                  "exactRollback": true
+                }
+              },
+              {
+                "id": "A22",
+                "passed": true,
+                "detail": {
+                  "key": "journal",
+                  "fired": true,
+                  "rejected": true,
+                  "exactRollback": true
+                }
+              },
+              {
+                "id": "A23",
+                "passed": true,
+                "detail": {
+                  "importAndConflict": true
+                }
+              },
+              {
+                "id": "A24",
+                "passed": true,
+                "detail": {
+                  "presetCombinations": 24,
+                  "rows": [
+                    {
+                      "id": "gradual",
+                      "count": 1
+                    },
+                    {
+                      "id": "gradual",
+                      "count": 2
+                    },
+                    {
+                      "id": "gradual",
+                      "count": 4
+                    },
+                    {
+                      "id": "gradual",
+                      "count": 6
+                    },
+                    {
+                      "id": "battle-damage",
+                      "count": 1
+                    },
+                    {
+                      "id": "battle-damage",
+                      "count": 2
+                    },
+                    {
+                      "id": "battle-damage",
+                      "count": 4
+                    },
+                    {
+                      "id": "battle-damage",
+                      "count": 6
+                    },
+                    {
+                      "id": "encounter-horror",
+                      "count": 1
+                    },
+                    {
+                      "id": "encounter-horror",
+                      "count": 2
+                    },
+                    {
+                      "id": "encounter-horror",
+                      "count": 4
+                    },
+                    {
+                      "id": "encounter-horror",
+                      "count": 6
+                    },
+                    {
+                      "id": "curse-invasion",
+                      "count": 1
+                    },
+                    {
+                      "id": "curse-invasion",
+                      "count": 2
+                    },
+                    {
+                      "id": "curse-invasion",
+                      "count": 4
+                    },
+                    {
+                      "id": "curse-invasion",
+                      "count": 6
+                    },
+                    {
+                      "id": "mutation-experiment",
+                      "count": 1
+                    },
+                    {
+                      "id": "mutation-experiment",
+                      "count": 2
+                    },
+                    {
+                      "id": "mutation-experiment",
+                      "count": 4
+                    },
+                    {
+                      "id": "mutation-experiment",
+                      "count": 6
+                    },
+                    {
+                      "id": "recovery",
+                      "count": 1
+                    },
+                    {
+                      "id": "recovery",
+                      "count": 2
+                    },
+                    {
+                      "id": "recovery",
+                      "count": 4
+                    },
+                    {
+                      "id": "recovery",
+                      "count": 6
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "A25",
+                "passed": true,
+                "detail": {
+                  "reloadNamedHistory": true
+                }
+              },
+              {
+                "id": "A26",
+                "passed": true,
+                "detail": {
+                  "actualImportWithVirtualDraft": true
+                }
+              },
+              {
+                "id": "A27",
+                "passed": true,
+                "detail": {
+                  "normal": "masterpiece, best quality, detailed face, detailed eyes, 3 distinct subjects, all subjects visible, 2 people, 1 creature, 2 people and 1 creature\n\nBREAK\n\n1girl, adult woman, 人物A, (partially transformed body of living shadows:1.2), (shadow tendrils:1.2), (black mist:1.2)\n\nBREAK\n\n1boy, adult man, 人物B, (fully transformed beast-like body:1.2), (sharp claws:1.2), (long fingers:1.2), (beast-like eyes:1.2), (animal fangs:1.2)\n\nBREAK\n\nwolf\n\nBREAK\n\nanime style",
+                  "negative": "worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, split screen, vertical divider, panel border"
+                }
+              },
+              {
+                "id": "A28",
+                "passed": true,
+                "detail": {
+                  "typeSelectEnablesAutoAndUndo": true
+                }
+              },
+              {
+                "id": "A29",
+                "passed": true,
+                "detail": {
+                  "realOtherTab": true
+                }
+              },
+              {
+                "id": "A30",
+                "passed": true,
+                "detail": {
+                  "historyCapAndMedia": true
+                }
+              },
+              {
+                "id": "A31",
+                "passed": true,
+                "detail": {
+                  "existingCreationUI": true
+                }
+              }
+            ],
+            "physicalDevice": false,
+            "publicOrigin": false
+          }
+        }
+      ]
+    },
+    {
+      "job": "prompts",
+      "execution": {
+        "name": "prompts",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror/independent-prompts.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html"
+        },
+        "startUTC": "2026-10-26T02:05:17.795Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "78159b64fd251662ef473a7a4894027960e7828893a2275fb3e74a4d64995224",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:06:23.952Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "7bda4d1aec8059da93a631072c1bf6eb807facc9425789ddf9b5291b0a42d613",
+          "result": {
+            "tests": [
+              {
+                "id": "P01",
+                "scenario": "A-only",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P02",
+                "scenario": "B-only",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P03",
+                "scenario": "different-A-B",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P04",
+                "scenario": "person-creature",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P05",
+                "scenario": "panel-normal",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P06",
+                "scenario": "local-overrides-global",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P07",
+                "scenario": "weighted-intensity",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P08",
+                "scenario": "replace-exclude",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              }
+            ],
+            "physicalDevice": false,
+            "seaArtImagesGenerated": false,
+            "passed": true,
+            "fullTextRows": 168,
+            "normalExplicitAttributionRows": 112,
+            "separationNoneLimitation": "Existing none mode emits a shared list; actor resolver isolation is tested but explicit normal actor blocks are intentionally absent."
+          }
+        }
+      ]
+    },
+    {
+      "job": "motif-prompts",
+      "execution": {
+        "name": "motif-prompts",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/integration/motif-prompts.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html"
+        },
+        "startUTC": "2026-10-26T02:06:23.992Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "b6074cc0a9fdc5897519738e80ab3a21b41ce2f2dfeb59a265871e7a9f844066",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:07:04.661Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "7bda4d1aec8059da93a631072c1bf6eb807facc9425789ddf9b5291b0a42d613",
+          "result": {
+            "tests": [
+              {
+                "id": "P01",
+                "scenario": "A-only",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P02",
+                "scenario": "B-only",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P03",
+                "scenario": "different-A-B",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P04",
+                "scenario": "person-creature",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P05",
+                "scenario": "panel-normal",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P06",
+                "scenario": "local-overrides-global",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P07",
+                "scenario": "weighted-intensity",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              },
+              {
+                "id": "P08",
+                "scenario": "replace-exclude",
+                "passed": true,
+                "rows": 21,
+                "error": null
+              }
+            ],
+            "physicalDevice": false,
+            "seaArtImagesGenerated": false,
+            "passed": true,
+            "fullTextRows": 168,
+            "normalExplicitAttributionRows": 112,
+            "separationNoneLimitation": "Existing none mode emits a shared list; actor resolver isolation is tested but explicit normal actor blocks are intentionally absent."
+          }
+        }
+      ]
+    },
+    {
+      "job": "media-inherited",
+      "execution": {
+        "name": "media-inherited",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror/independent-edges.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "TEST_IDS": "I08,I09,I10,I11,I12,I28"
+        },
+        "startUTC": "2026-10-26T02:07:04.673Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "699c3d8edfccce99fcfc071199cb55b4d9ee0cf473d3b7fe2745d77dc927363f",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:08:18.024Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "665bc132c5769876ae64d1696c4a4e47c92f833d6800358cbea6d4a3e8e74af1",
+          "result": {
+            "tests": [
+              {
+                "id": "I08",
+                "title": "real uploaded images/pixels/payload survive move, delete, and two Undo operations",
+                "passed": true,
+                "detail": {
+                  "deletedUndo": true,
+                  "originalRestored": true,
+                  "rows": [
+                    {
+                      "id": "panel-135b7523-b943-4338-8e89-15a2fe7f3499",
+                      "image": "fixture-0.png",
+                      "pixel": [
+                        255,
+                        0,
+                        0,
+                        255
+                      ],
+                      "placement": "top",
+                      "description": "identity-0",
+                      "people": {
+                        "original-independent-a": {
+                          "enabled": true,
+                          "damage": [
+                            "damage-0"
+                          ]
+                        }
+                      },
+                      "horror": {
+                        "byActor": {
+                          "person:original-independent-a": {
+                            "state": "inherit",
+                            "features": {
+                              "horror-feature-long-fingers": {
+                                "mode": "on",
+                                "weight": 1,
+                                "parameters": {}
+                              }
+                            },
+                            "structure": {},
+                            "originalFeaturePolicies": {}
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "panel-789fb17b-13fe-4bed-a81b-93d1a8352081",
+                      "image": "fixture-1.png",
+                      "pixel": [
+                        0,
+                        255,
+                        0,
+                        255
+                      ],
+                      "placement": "bottom",
+                      "description": "identity-1",
+                      "people": {
+                        "original-independent-a": {
+                          "enabled": true,
+                          "damage": [
+                            "damage-1"
+                          ]
+                        }
+                      },
+                      "horror": {
+                        "byActor": {
+                          "person:original-independent-a": {
+                            "state": "inherit",
+                            "features": {
+                              "horror-feature-long-fingers": {
+                                "mode": "off",
+                                "weight": 1.1,
+                                "parameters": {}
+                              }
+                            },
+                            "structure": {},
+                            "originalFeaturePolicies": {}
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "panel-088c40e1-13d9-4f94-9c36-d1a52751476e",
+                      "image": "fixture-2.png",
+                      "pixel": [
+                        0,
+                        0,
+                        255,
+                        255
+                      ],
+                      "placement": "contain",
+                      "description": "identity-2",
+                      "people": {
+                        "original-independent-a": {
+                          "enabled": true,
+                          "damage": [
+                            "damage-2"
+                          ]
+                        }
+                      },
+                      "horror": {
+                        "byActor": {
+                          "person:original-independent-a": {
+                            "state": "inherit",
+                            "features": {
+                              "horror-feature-long-fingers": {
+                                "mode": "on",
+                                "weight": 1.2,
+                                "parameters": {}
+                              }
+                            },
+                            "structure": {},
+                            "originalFeaturePolicies": {}
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "panel-f316b87b-279b-43fd-878d-bf39db2c69e2",
+                      "image": "fixture-3.png",
+                      "pixel": [
+                        255,
+                        255,
+                        0,
+                        255
+                      ],
+                      "placement": "center",
+                      "description": "identity-3",
+                      "people": {
+                        "original-independent-a": {
+                          "enabled": true,
+                          "damage": [
+                            "damage-3"
+                          ]
+                        }
+                      },
+                      "horror": {
+                        "byActor": {
+                          "person:original-independent-a": {
+                            "state": "inherit",
+                            "features": {
+                              "horror-feature-long-fingers": {
+                                "mode": "off",
+                                "weight": 1.3,
+                                "parameters": {}
+                              }
+                            },
+                            "structure": {},
+                            "originalFeaturePolicies": {}
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "panel-36281d34-83ce-4830-811a-f6c126ab92a4",
+                      "image": null,
+                      "pixel": null,
+                      "placement": "center",
+                      "description": "identity-4",
+                      "people": {
+                        "original-independent-a": {
+                          "enabled": true,
+                          "damage": [
+                            "damage-4"
+                          ]
+                        }
+                      },
+                      "horror": {
+                        "byActor": {
+                          "person:original-independent-a": {
+                            "state": "inherit",
+                            "features": {
+                              "horror-feature-long-fingers": {
+                                "mode": "on",
+                                "weight": 1.4,
+                                "parameters": {}
+                              }
+                            },
+                            "structure": {},
+                            "originalFeaturePolicies": {}
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "panel-80c11029-3ebc-4b81-a357-b380c8d0e738",
+                      "image": null,
+                      "pixel": null,
+                      "placement": "center",
+                      "description": "identity-5",
+                      "people": {
+                        "original-independent-a": {
+                          "enabled": true,
+                          "damage": [
+                            "damage-5"
+                          ]
+                        }
+                      },
+                      "horror": {
+                        "byActor": {
+                          "person:original-independent-a": {
+                            "state": "inherit",
+                            "features": {
+                              "horror-feature-long-fingers": {
+                                "mode": "off",
+                                "weight": 1.5,
+                                "parameters": {}
+                              }
+                            },
+                            "structure": {},
+                            "originalFeaturePolicies": {}
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "I09",
+                "title": "panel forward-operation write failure preserves actual images and placement",
+                "passed": true,
+                "detail": {
+                  "injected": true,
+                  "rejected": true,
+                  "unchanged": true,
+                  "pixelsSame": true
+                }
+              },
+              {
+                "id": "I10",
+                "title": "panel Undo write failure must preserve state/images/history and avoid success",
+                "passed": true,
+                "detail": {
+                  "injected": true,
+                  "unchanged": true,
+                  "pixelsSame": true,
+                  "undo": 1
+                }
+              },
+              {
+                "id": "I11",
+                "title": "pending image decode follows panel ID after reorder",
+                "passed": true,
+                "detail": {
+                  "target": 2,
+                  "assigned": 2,
+                  "otherImage": "fixture-1.png"
+                }
+              },
+              {
+                "id": "I12",
+                "title": "pending image decode is canceled when its target panel was explicitly deleted",
+                "passed": true,
+                "detail": {
+                  "canceled": true,
+                  "panelImagesUnchanged": true
+                }
+              },
+              {
+                "id": "I28",
+                "title": "reload persists panel IDs/settings but keeps images and placement session-only",
+                "passed": true,
+                "detail": {
+                  "idsAndSettingsDurable": true,
+                  "imagesSessionOnly": true,
+                  "placementSessionOnly": true
+                }
+              }
+            ],
+            "physicalDevice": false,
+            "publicOrigin": false,
+            "passed": true,
+            "failed": []
+          }
+        }
+      ]
+    },
+    {
+      "job": "auto-ui",
+      "execution": {
+        "name": "auto-ui",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/ui.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T02:15:48.447Z",
+        "endUTC": "2026-10-26T02:18:40.982Z",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "adapterSHA256": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "ace294e2c5f80e4572f46812260533e411794c21115f62d1aa0515eaf9fcafac",
+          "result": {
+            "tests": [
+              {
+                "id": "AU-360x640-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-360x800-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-393x640-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-393x800-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-430x640-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-430x800-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-640x360-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-800x393-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-800x430-1",
+                "passed": true,
+                "scale": 1,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-360x800-1.5",
+                "passed": true,
+                "scale": 1.5,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-393x800-1.5",
+                "passed": true,
+                "scale": 1.5,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              },
+              {
+                "id": "AU-430x800-1.5",
+                "passed": true,
+                "scale": 1.5,
+                "directTouch": true,
+                "autoRemovalUndo": true,
+                "compactAndScroll": true,
+                "stagedPanelSave": true
+              }
+            ],
+            "physicalDevice": false,
+            "publicOrigin": false
+          }
+        }
+      ]
+    },
+    {
+      "job": "unified-pwa",
+      "execution": {
+        "name": "unified-pwa",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/unified-ui/pwa.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T02:18:41.020Z",
+        "endUTC": "2026-10-26T02:19:07.797Z",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "c24b1185a1c0c77f04f094f9e1c5f04251822b1c6b343fe2fcafd27e7a7da7d6",
+        "adapterSHA256": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "1eeaea357fcc72da89f8e50ccbec77d684c08c3d1461b678c921e3ce365f130b",
+          "result": {
+            "checks": [
+              "previous private shell is active",
+              "SW update keeps old tab and unsaved RAM without forced reload",
+              "explicit reload receives final UI and preserves v5 working and draft",
+              "offline anthro grouped edit save reload preserves creature and draft",
+              "offline favorite one Undo",
+              "online return preserves actor UUID modes and horror workspace"
+            ],
+            "publicOrigin": false,
+            "physicalDevice": false,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "job": "card-pwa",
+      "execution": {
+        "name": "card-pwa",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/card-tags/pwa.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T02:19:07.812Z",
+        "endUTC": "2026-10-26T02:19:44.105Z",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "688fb2881c37014731a3c27f5a8d226f9d360b8405d633e4176a5925788504d4",
+        "adapterSHA256": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "9cf16ebbd2d0cadaa1763fbf1156e23de4026f8aabe313a89e395411c8a01921",
+          "result": {
+            "checks": [
+              "isolated online new cache",
+              "offline real card tap saves without dialog",
+              "offline one Undo restores tag",
+              "offline boot reload restores tag and normal mode",
+              "offline removal survives reload",
+              "online return preserves data without error"
+            ],
+            "physicalDevice": false,
+            "publicOrigin": false,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "job": "normal-pwa",
+      "execution": {
+        "name": "normal-pwa",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/normal-first/pwa.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T02:19:44.142Z",
+        "endUTC": "2026-10-26T02:20:15.055Z",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "9a0b736149dfbac14fc955c1bdab06dfd69fb1859e418e056f35037f4a4cda77",
+        "adapterSHA256": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "41c7bd72b9d408bc39e0dbbbd4635f9ca80da0e84cc7d354e130bbb7cb5aa93d",
+          "result": {
+            "checks": [
+              "online new cache and transient normal mode",
+              "offline real quick selection without manga dialog",
+              "offline reload preserves selection with normal default",
+              "offline removal/save/reload",
+              "online return preserves data"
+            ],
+            "physicalDevice": false,
+            "publicOrigin": false,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "job": "pwa-regression",
+      "execution": {
+        "name": "pwa-regression",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror/replay-pwa.cjs"
+        ],
+        "extra": {},
+        "startUTC": "2026-10-26T02:20:15.094Z",
+        "endUTC": "2026-10-26T02:20:51.743Z",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "365214f571d554eb0cc0e4084bc0dbb1e0174937d068df4b42209b383a8011c1",
+        "adapterSHA256": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "results": [
+        {
+          "filename": "results.json",
+          "sha256": "e2ecd9d6a748b20affaf3e9a52c647b512a822d434b8526d94472fddfbff849d",
+          "result": {
+            "passed": true,
+            "checks": [
+              "old real SW and max-age=600 HTML cached",
+              "HTML install failure retains old SW/cache/draft",
+              "retry installs new HTML despite old HTTP cache",
+              "update does not reload or discard old draft",
+              "new page migrates without touching old keys",
+              "old live tab save cannot overwrite or merge new bundle",
+              "offline reload restores person and no permissions",
+              "offline save/reload retains independent profile and native source",
+              "online return never merges old tab edits"
+            ],
+            "publicOrigin": false,
+            "physicalDevice": false,
+            "cache": {
+              "oldCache": "seaart-tool-pwa-v4-stage5e-result-access-v1-http-cache-v1",
+              "oldHash": "fafddf9ea6040430529e74453de5df2091acb665c1d76c612c4189f21b1c8353",
+              "newCache": "seaart-tool-pwa-v44-audit-v1-http-cache-v1:/",
+              "newHash": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+            },
+            "updateNotice": {
+              "listenerSupported": true,
+              "observedText": true
+            },
+            "requests": [
+              {
+                "path": "/",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": ""
+              },
+              {
+                "path": "/favicon.ico",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": ""
+              },
+              {
+                "path": "/sw.js",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": "max-age=0"
+              },
+              {
+                "path": "/",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": "no-cache"
+              },
+              {
+                "path": "/index.html",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": "no-cache"
+              },
+              {
+                "path": "/manifest.json",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": ""
+              },
+              {
+                "path": "/icon-192.png",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": ""
+              },
+              {
+                "path": "/icon-512.png",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": ""
+              },
+              {
+                "path": "/icon-maskable-512.png",
+                "generation": "old",
+                "failure": "",
+                "cacheControl": ""
+              },
+              {
+                "path": "/sw.js",
+                "generation": "new",
+                "failure": "index.html",
+                "cacheControl": "max-age=0"
+              },
+              {
+                "path": "/",
+                "generation": "new",
+                "failure": "index.html",
+                "cacheControl": "no-cache"
+              },
+              {
+                "path": "/index.html",
+                "generation": "new",
+                "failure": "index.html",
+                "cacheControl": "no-cache"
+              },
+              {
+                "path": "/sw.js",
+                "generation": "new",
+                "failure": "",
+                "cacheControl": "max-age=0"
+              },
+              {
+                "path": "/",
+                "generation": "new",
+                "failure": "",
+                "cacheControl": "no-cache"
+              },
+              {
+                "path": "/index.html",
+                "generation": "new",
+                "failure": "",
+                "cacheControl": "no-cache"
+              },
+              {
+                "path": "/index.html",
+                "generation": "new",
+                "failure": "",
+                "cacheControl": "no-cache"
+              },
+              {
+                "path": "/index.html",
+                "generation": "new",
+                "failure": "",
+                "cacheControl": "no-cache"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "granularity": "13 previously failed jobs plus one six-case media job; independent FIXED is in supplemental 16",
+  "adapterVersionNote": "Per-job versions are retained. auto-contracts adapter was hashed at end by the earlier runner, during a test-only prompt discriminator edit; final CI reruns every job with the final adapter and records its SHA at start."
+}

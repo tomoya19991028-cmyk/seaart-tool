@@ -1,0 +1,47 @@
+{
+  "tests": [
+    {
+      "id": "CUI01",
+      "passed": true,
+      "detail": {
+        "globalCrossOwner": true
+      }
+    },
+    {
+      "id": "CUI02",
+      "passed": true,
+      "detail": {
+        "carryOwnToggleSelectedRetained": true
+      }
+    },
+    {
+      "id": "CUI03",
+      "passed": true,
+      "detail": {
+        "oneManagerApply": true
+      }
+    },
+    {
+      "id": "CUI04",
+      "passed": true,
+      "detail": {
+        "draftCrossOwner": true
+      }
+    },
+    {
+      "id": "EDIT01",
+      "passed": true,
+      "detail": {
+        "editedIdRetained": true
+      }
+    },
+    {
+      "id": "EDIT02",
+      "passed": true,
+      "detail": {
+        "stableIdConflict": true
+      }
+    }
+  ],
+  "physicalDevice": false
+}

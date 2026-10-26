@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://docs.pixai.art/docs/prompts/prompt-basics",
+    "resolved": "https://docs.pixai.art/docs/prompts/prompt-basics",
+    "status": 200,
+    "checkedUTC": "2026-10-25T16:40:51.164576+00:00",
+    "textBytes": 5716
+  },
+  {
+    "url": "https://wiki.pixai.art/en/w/Prompt-Weighting",
+    "resolved": "https://wiki.pixai.art/en/w/Prompt-Weighting",
+    "status": 200,
+    "checkedUTC": "2026-10-25T16:40:51.689926+00:00",
+    "textBytes": 1712
+  },
+  {
+    "url": "https://blog.pixai.art/en/pixai-sdxl-prompting-guide-essential-tips-tricks/",
+    "resolved": "https://blog.pixai.art/en/pixai-sdxl-prompting-guide-essential-tips-tricks/",
+    "status": 200,
+    "checkedUTC": "2026-10-25T16:40:52.407435+00:00",
+    "textBytes": 10480
+  },
+  {
+    "url": "https://docs.seaart.ai/guide-1/espanol/4-parametros/4-7-edicion-de-prompts-or-guia-de-fusion-de-palabras-clave",
+    "resolved": "https://docs.seaart.ai/guide-1/espanol/4-parametros/4-7-edicion-de-prompts-or-guia-de-fusion-de-palabras-clave",
+    "status": 200,
+    "checkedUTC": "2026-10-25T16:40:52.891727+00:00",
+    "textBytes": 5843
+  }
+]

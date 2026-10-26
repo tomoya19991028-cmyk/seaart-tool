@@ -1,0 +1,21 @@
+{
+  "currentHTMLSHA256": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+  "oldMainHTMLSHA256": "a8754a15f383ff603aa642b2e863eebbde646b4c15c5de33686f3014f2f5cb98",
+  "isolatedSyntheticData": true,
+  "accepted": false,
+  "error": "擬人化外見の形式が不正です",
+  "unchanged": true,
+  "fixture": {
+    "species": "wolf",
+    "representation": "full",
+    "poseActionsVersion": 1,
+    "poseActions": [
+      {
+        "id": "reverse-new-action",
+        "action": "extend",
+        "movingPart": "left-arm"
+      }
+    ]
+  },
+  "oldMainOperation": "restoreWorking(snapshot), without persist; compare captureWorking before/after"
+}

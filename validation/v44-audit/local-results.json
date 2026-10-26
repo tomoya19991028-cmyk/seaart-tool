@@ -1,0 +1,6503 @@
+{
+  "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+  "counts": {
+    "PASS": 555,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "tests": [
+    {
+      "suite": "quality",
+      "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
+      "status": "PASS",
+      "detail": {
+        "scripts": 37,
+        "parseDiagnostics": []
+      }
+    },
+    {
+      "suite": "quality",
+      "id": "JS-all37-inline-and-maintained-modules-parse",
+      "status": "PASS",
+      "detail": {
+        "inlineScripts": 37,
+        "reassignments": 1454
+      }
+    },
+    {
+      "suite": "quality",
+      "id": "JSON-all-maintained-data-parse",
+      "status": "PASS",
+      "detail": {
+        "jsonFiles": 10
+      }
+    },
+    {
+      "suite": "quality",
+      "id": "BUILD-clean-byte-identical-independent-output",
+      "status": "PASS",
+      "detail": {
+        "sha256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+        "inputIsNotIndexHTML": true
+      }
+    },
+    {
+      "suite": "quality",
+      "id": "PWA-manifest-relative-paths-shell-and-private-data-boundaries",
+      "status": "PASS",
+      "detail": {
+        "scope": "./",
+        "startURL": "./index.html",
+        "icons": 3
+      }
+    },
+    {
+      "suite": "quality",
+      "id": "SAVE-namespace-version-and-latest-candidate-contract-retained",
+      "status": "PASS",
+      "detail": {
+        "savedNamespacesUnchanged": true,
+        "currentCandidateViewAllOwners": true
+      }
+    },
+    {
+      "suite": "features",
+      "id": "DATA-main-catalog-presets-and-forms-retained",
+      "status": "PASS",
+      "detail": {
+        "oldCatalogRows": 3218,
+        "characters": 1405,
+        "basicPresetOwners": 1399,
+        "specificForms": 19,
+        "storageNamespacesUnchanged": true
+      }
+    },
+    {
+      "suite": "features",
+      "id": "DATA-reference-inventory-unique-and-discovered-compositions",
+      "status": "PASS",
+      "detail": {
+        "duplicateCatalogIds": [],
+        "badOwners": [],
+        "relations": [
+          {
+            "value": "facing each other",
+            "name": "向き合う",
+            "group": "向き・姿勢",
+            "symmetric": true
+          },
+          {
+            "value": "to the left of",
+            "name": "相手の左にいる（画面基準）",
+            "group": "相対位置",
+            "symmetric": false
+          },
+          {
+            "value": "to the right of",
+            "name": "相手の右にいる（画面基準）",
+            "group": "相対位置",
+            "symmetric": false
+          },
+          {
+            "value": "in front of",
+            "name": "相手の手前にいる",
+            "group": "相対位置",
+            "symmetric": false
+          },
+          {
+            "value": "behind",
+            "name": "相手の奥にいる",
+            "group": "相対位置",
+            "symmetric": false
+          },
+          {
+            "value": "above",
+            "name": "相手より上にいる",
+            "group": "相対位置",
+            "symmetric": false
+          },
+          {
+            "value": "below",
+            "name": "相手より下にいる",
+            "group": "相対位置",
+            "symmetric": false
+          },
+          {
+            "value": "next to",
+            "name": "相手の隣にいる",
+            "group": "距離",
+            "symmetric": true
+          },
+          {
+            "value": "close to",
+            "name": "相手の近くにいる",
+            "group": "距離",
+            "symmetric": true
+          },
+          {
+            "value": "far from",
+            "name": "相手から離れている",
+            "group": "距離",
+            "symmetric": true
+          },
+          {
+            "value": "side by side",
+            "name": "横に並ぶ",
+            "group": "向き・姿勢",
+            "symmetric": true
+          },
+          {
+            "value": "back to back",
+            "name": "背中合わせ",
+            "group": "向き・姿勢",
+            "symmetric": true
+          },
+          {
+            "value": "facing the same direction",
+            "name": "同じ方向を向く",
+            "group": "向き・姿勢",
+            "symmetric": true
+          },
+          {
+            "value": "facing away from",
+            "name": "相手に背を向ける",
+            "group": "向き・姿勢",
+            "symmetric": false
+          },
+          {
+            "value": "looking at",
+            "name": "相手を見る",
+            "group": "視線",
+            "symmetric": false
+          },
+          {
+            "value": "looking at each other",
+            "name": "互いに見つめ合う",
+            "group": "視線",
+            "symmetric": true
+          },
+          {
+            "value": "holding hands",
+            "name": "手をつなぐ",
+            "group": "接触",
+            "symmetric": true
+          },
+          {
+            "value": "hand on shoulder",
+            "name": "相手の肩に手を置く",
+            "group": "接触",
+            "symmetric": false
+          },
+          {
+            "value": "arm around shoulders",
+            "name": "相手の肩に腕を回す",
+            "group": "接触",
+            "symmetric": false
+          },
+          {
+            "value": "leaning against",
+            "name": "相手にもたれる",
+            "group": "接触",
+            "symmetric": false
+          },
+          {
+            "value": "embracing",
+            "name": "抱き合う",
+            "group": "接触",
+            "symmetric": true
+          },
+          {
+            "value": "walking together",
+            "name": "一緒に歩く",
+            "group": "同行・動作",
+            "symmetric": true
+          },
+          {
+            "value": "sitting side by side",
+            "name": "隣り合って座る",
+            "group": "同行・動作",
+            "symmetric": true
+          },
+          {
+            "value": "following",
+            "name": "相手の後についていく",
+            "group": "同行・動作",
+            "symmetric": false
+          },
+          {
+            "value": "chasing",
+            "name": "相手を追いかける",
+            "group": "同行・動作",
+            "symmetric": false
+          },
+          {
+            "value": "protecting",
+            "name": "相手を守る",
+            "group": "同行・動作",
+            "symmetric": false
+          },
+          {
+            "value": "attacking",
+            "name": "相手を攻撃する",
+            "group": "同行・動作",
+            "symmetric": false
+          },
+          {
+            "value": "approaching",
+            "name": "相手に近づく",
+            "group": "同行・動作",
+            "symmetric": false
+          }
+        ],
+        "compositions": [
+          [
+            "side by side composition",
+            "横並び"
+          ],
+          [
+            "face to face composition",
+            "向かい合う構図"
+          ],
+          [
+            "one person in front, another behind",
+            "前後に並ぶ"
+          ],
+          [
+            "balanced group composition",
+            "均等に配置"
+          ],
+          [
+            "full-body group shot",
+            "全身の集合写真"
+          ],
+          [
+            "close-up two-shot",
+            "上半身のツーショット"
+          ],
+          [
+            "diagonal two-shot",
+            "斜め・対角線の二人構図"
+          ],
+          [
+            "foreground and background composition",
+            "手前と奥で分ける構図"
+          ],
+          [
+            "over-the-shoulder two-shot",
+            "肩越しに相手を見る"
+          ],
+          [
+            "side-view two-shot",
+            "横から見た二人"
+          ],
+          [
+            "wide two-shot",
+            "背景も見せる二人の引き構図"
+          ],
+          [
+            "vertical arrangement of subjects",
+            "上下に配置"
+          ],
+          [
+            "triangular group composition",
+            "三角形に配置"
+          ],
+          [
+            "semicircular group composition",
+            "半円状に配置"
+          ],
+          [
+            "circular group composition",
+            "円状に配置"
+          ],
+          [
+            "symmetrical group composition",
+            "左右対称に配置"
+          ],
+          [
+            "asymmetrical group composition",
+            "非対称に配置"
+          ],
+          [
+            "layered group composition",
+            "奥行きをつけた集合構図"
+          ]
+        ],
+        "tg": 21,
+        "yugioh": 14,
+        "persona": 10,
+        "structures": [
+          "wings",
+          "horns",
+          "tail",
+          "tentacles",
+          "extraArms",
+          "extraLegs"
+        ],
+        "models": [
+          "standard",
+          "illustrious",
+          "anima",
+          "sdxl",
+          "noobai",
+          "pony",
+          "krea"
+        ],
+        "adultCards": [
+          {
+            "id": "exposure",
+            "title": "露出"
+          },
+          {
+            "id": "details",
+            "title": "胸の詳細"
+          },
+          {
+            "id": "clothingState",
+            "title": "衣装の状態"
+          },
+          {
+            "id": "selfAction",
+            "title": "本人の動作"
+          },
+          {
+            "id": "sexualInteraction",
+            "title": "性的接触・行為"
+          },
+          {
+            "id": "expression",
+            "title": "成人表情"
+          },
+          {
+            "id": "effects",
+            "title": "擬音・反応エフェクト"
+          },
+          {
+            "id": "fluids",
+            "title": "体液・付着"
+          }
+        ]
+      }
+    },
+    {
+      "suite": "features",
+      "id": "BOOT-all-primary-tabs-dialog-cleanup-and-no-external-runtime-dependencies",
+      "status": "PASS",
+      "detail": {
+        "tabs": [
+          {
+            "id": "choices",
+            "active": true,
+            "ariaCurrent": null
+          },
+          {
+            "id": "choices",
+            "active": true,
+            "ariaCurrent": "page"
+          },
+          {
+            "id": "people",
+            "active": true,
+            "ariaCurrent": "page"
+          },
+          {
+            "id": "finish",
+            "active": true,
+            "ariaCurrent": "page"
+          },
+          {
+            "id": "result",
+            "active": true,
+            "ariaCurrent": "page"
+          },
+          {
+            "id": "manga",
+            "active": true,
+            "ariaCurrent": "page"
+          },
+          {
+            "id": "horror",
+            "active": true,
+            "ariaCurrent": "page"
+          }
+        ],
+        "externalScripts": [],
+        "duplicateIds": []
+      }
+    },
+    {
+      "suite": "features",
+      "id": "AUX-live-simple-manga-isolated-namespace-and-return",
+      "status": "PASS",
+      "detail": {
+        "reachableFromMenu": true,
+        "shadowRoot": true,
+        "separateKey": "seaart-studio-mobile-v2",
+        "mainWorkingUnchanged": true
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2833e357e8ed4bfa216e224e56f21afe186045bbdff4183ace3a17b48048969b",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a9e95983b7eacf127f53c14ffeb68d892e8b89019de9fb0074fb80747283e4d1"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fdf7475d48460d29ba48b3ffa5d49aea4378ea6a17d477933fc8f4c2b0d8eec7",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7051b7f8b471108b1739b16f646bf224b7c9eb96e02d5aa1131feed32ea5ae52",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a9e95983b7eacf127f53c14ffeb68d892e8b89019de9fb0074fb80747283e4d1"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fdf7475d48460d29ba48b3ffa5d49aea4378ea6a17d477933fc8f4c2b0d8eec7",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7051b7f8b471108b1739b16f646bf224b7c9eb96e02d5aa1131feed32ea5ae52",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a9e95983b7eacf127f53c14ffeb68d892e8b89019de9fb0074fb80747283e4d1"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fdf7475d48460d29ba48b3ffa5d49aea4378ea6a17d477933fc8f4c2b0d8eec7",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e86f7a2df0c3c4baa2d341248a0ec902bc98a146b6a0d6cd753d5e32a7aacd0d",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2d82e06403a3a8e1520a9b56048851d9789217ee48f4fb5fde7429b8aed4b133",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2d82e06403a3a8e1520a9b56048851d9789217ee48f4fb5fde7429b8aed4b133",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e86f7a2df0c3c4baa2d341248a0ec902bc98a146b6a0d6cd753d5e32a7aacd0d",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2d82e06403a3a8e1520a9b56048851d9789217ee48f4fb5fde7429b8aed4b133",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2d82e06403a3a8e1520a9b56048851d9789217ee48f4fb5fde7429b8aed4b133",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0f5bff20eb579c99132cc2613b2cf184387734f0337934547560938914b70004",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b248193d5cc6ccb0bc6acbf324e6d90496ad55bfdd4b6d5d2f12f1f351b4bbef"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "10d81cb3c968fd17689ade058cb2c965ea45e070b718a7e51fafe6b9f1be297b",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "24d758ddb07d7673f50ee0b7bc2414f38561bdeaad80a130080d485c5262a0bb",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b248193d5cc6ccb0bc6acbf324e6d90496ad55bfdd4b6d5d2f12f1f351b4bbef"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "10d81cb3c968fd17689ade058cb2c965ea45e070b718a7e51fafe6b9f1be297b",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "24d758ddb07d7673f50ee0b7bc2414f38561bdeaad80a130080d485c5262a0bb",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b248193d5cc6ccb0bc6acbf324e6d90496ad55bfdd4b6d5d2f12f1f351b4bbef"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "10d81cb3c968fd17689ade058cb2c965ea45e070b718a7e51fafe6b9f1be297b",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e86f7a2df0c3c4baa2d341248a0ec902bc98a146b6a0d6cd753d5e32a7aacd0d",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2d82e06403a3a8e1520a9b56048851d9789217ee48f4fb5fde7429b8aed4b133",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2d82e06403a3a8e1520a9b56048851d9789217ee48f4fb5fde7429b8aed4b133",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1ca92a3ccf64901ebceb4aba08f13c2210270b02ab8a8c56e5bd543dad40991e"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4ec7892663c6bf2c3b8699d6efa8ea6fc786da7623ae459fcc87c6c1234812e6",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4654defc7629e20c023d7f8596bc146ebf2d5b2ad71aed831becb34d32a810ad",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ba9630991816929a46693e8d7ef61ed881af19a06e8886b755449141150c6677"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8ebc3c08144d8bb65749f7896528789b3abb86bb6be7fbef6eb1b3e234629a13",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "235748d19d30c6a4ab309d5289d5ae98b3305479fb4fb711115ce43c9e2a6830",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ba9630991816929a46693e8d7ef61ed881af19a06e8886b755449141150c6677"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8ebc3c08144d8bb65749f7896528789b3abb86bb6be7fbef6eb1b3e234629a13",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "235748d19d30c6a4ab309d5289d5ae98b3305479fb4fb711115ce43c9e2a6830",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ba9630991816929a46693e8d7ef61ed881af19a06e8886b755449141150c6677"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8ebc3c08144d8bb65749f7896528789b3abb86bb6be7fbef6eb1b3e234629a13",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "91bbfcb7161443c308575b303ad40466fcc2285261957344f039c8d74ee1c2e8",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b248193d5cc6ccb0bc6acbf324e6d90496ad55bfdd4b6d5d2f12f1f351b4bbef"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "10d81cb3c968fd17689ade058cb2c965ea45e070b718a7e51fafe6b9f1be297b",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "91bbfcb7161443c308575b303ad40466fcc2285261957344f039c8d74ee1c2e8",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b248193d5cc6ccb0bc6acbf324e6d90496ad55bfdd4b6d5d2f12f1f351b4bbef"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "10d81cb3c968fd17689ade058cb2c965ea45e070b718a7e51fafe6b9f1be297b",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "91bbfcb7161443c308575b303ad40466fcc2285261957344f039c8d74ee1c2e8",
+        "actors": 1,
+        "people": 1,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b248193d5cc6ccb0bc6acbf324e6d90496ad55bfdd4b6d5d2f12f1f351b4bbef"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M1-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "10d81cb3c968fd17689ade058cb2c965ea45e070b718a7e51fafe6b9f1be297b",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "73717aae14a7ba9c7ca5cd7e02587b2cbf4721686710dcaf2aace9ad1605ce8e",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8e9974a582310fb9b443dbd51022fdbc31c96d8f18b81c71566e1c4474b73166"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "44e94f69e8248919be4dad8cb07171ecd39eb4a4a894a33ed6018ea660a9bc57",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "df9d41f98307a5fd3ac6929cb9d67fcc90d8b48b7dd2ac37a885552b19ccf86c",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8e9974a582310fb9b443dbd51022fdbc31c96d8f18b81c71566e1c4474b73166"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "44e94f69e8248919be4dad8cb07171ecd39eb4a4a894a33ed6018ea660a9bc57",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "f46e2657fa5e1048695b79dfe7e962cff71868815861440ace4832f113605ef1",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8e9974a582310fb9b443dbd51022fdbc31c96d8f18b81c71566e1c4474b73166"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "44e94f69e8248919be4dad8cb07171ecd39eb4a4a894a33ed6018ea660a9bc57",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2e9b4159a2bde5562c4d42d4382549a79f115529f8287a2ea1c2280633fdde41",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "065e76f425ceb7e70ac2770c3ee8a3cc076241e4e8275aaae09e015b90a0a8bd",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1aa6e79b103d241ac35f07c8ae2f12dfdd150501b74c2e310bc3ff36bb83f340",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2e9b4159a2bde5562c4d42d4382549a79f115529f8287a2ea1c2280633fdde41",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "065e76f425ceb7e70ac2770c3ee8a3cc076241e4e8275aaae09e015b90a0a8bd",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1aa6e79b103d241ac35f07c8ae2f12dfdd150501b74c2e310bc3ff36bb83f340",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8a37879e16f8820f61bdb3a5495e5a64d019ca95b2dd189e82ce8b724a97d93e",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8c8bcc170e3ee033894acf9775309af09ebd31ae0c8d748249e357320649d4cf"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b4b051c303decfec9854cb6e7329786b9a9db8fcc22e1de465a2287ff6d88134",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "aab7d1d9be73870bd50994617d87da357071936e8d757e3f9cf77cc2e3705f82",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8c8bcc170e3ee033894acf9775309af09ebd31ae0c8d748249e357320649d4cf"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b4b051c303decfec9854cb6e7329786b9a9db8fcc22e1de465a2287ff6d88134",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "004e18e4b56f6b9c1116c66efca52225c980598957b945443cdc17fd7be28891",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8c8bcc170e3ee033894acf9775309af09ebd31ae0c8d748249e357320649d4cf"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b4b051c303decfec9854cb6e7329786b9a9db8fcc22e1de465a2287ff6d88134",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2e9b4159a2bde5562c4d42d4382549a79f115529f8287a2ea1c2280633fdde41",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "065e76f425ceb7e70ac2770c3ee8a3cc076241e4e8275aaae09e015b90a0a8bd",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1aa6e79b103d241ac35f07c8ae2f12dfdd150501b74c2e310bc3ff36bb83f340",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "598d9d4f78400dc45f168ed58bf554c67ee16ef51ef64f1d3269ee9374aa640b"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fedf9a064d4c7cfc60a253af95cb550d3c903b6396d0069678ef1d61ad8adcb3",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fdc8571b78ac8b2012c703a8655e6d6d96cea15f97acdca53af360782ab17d5a",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3c4bb54058f2bfbac77fb3d779be99d2112f37704853b58e7c17223944cb584d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "35fddfd268ed38d8af9733b9ce3c9718d2b78f244603c4e1432cfd88f43b8d6c",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "634af7be6392af0d8e9ffcb8a9023e2a051b8454cb58080442ec574e5c9e3403",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3c4bb54058f2bfbac77fb3d779be99d2112f37704853b58e7c17223944cb584d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "35fddfd268ed38d8af9733b9ce3c9718d2b78f244603c4e1432cfd88f43b8d6c",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "cf3c860507941af1eddf8bd9145f49ab96d77c343024f0957c89b0c8d48432df",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3c4bb54058f2bfbac77fb3d779be99d2112f37704853b58e7c17223944cb584d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "35fddfd268ed38d8af9733b9ce3c9718d2b78f244603c4e1432cfd88f43b8d6c",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "bf109a64c07d289807241295981215b60dc9012d7da0eee39c6f7bcf06e26fc9",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8c8bcc170e3ee033894acf9775309af09ebd31ae0c8d748249e357320649d4cf"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b4b051c303decfec9854cb6e7329786b9a9db8fcc22e1de465a2287ff6d88134",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "bf109a64c07d289807241295981215b60dc9012d7da0eee39c6f7bcf06e26fc9",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8c8bcc170e3ee033894acf9775309af09ebd31ae0c8d748249e357320649d4cf"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b4b051c303decfec9854cb6e7329786b9a9db8fcc22e1de465a2287ff6d88134",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c081269cf813364c82744be8aa3e8ede73b94dcd06407bb5c2adb7103b76263f",
+        "actors": 2,
+        "people": 2,
+        "creatures": 0
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8c8bcc170e3ee033894acf9775309af09ebd31ae0c8d748249e357320649d4cf"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M2-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b4b051c303decfec9854cb6e7329786b9a9db8fcc22e1de465a2287ff6d88134",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "91523b27ee89da4af5a4a7eee45229936dceab5866f22cae02b6e01a60412db2",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "03a2cf3c936b0f925c1f074d7b302b2048ab757ceae32aae91eaca84b3833162"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "ed0dfcf80b4c588333bb880dc0d61d230b4b050fcc268b36c83f7071034d9174",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "91523b27ee89da4af5a4a7eee45229936dceab5866f22cae02b6e01a60412db2",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "03a2cf3c936b0f925c1f074d7b302b2048ab757ceae32aae91eaca84b3833162"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "ed0dfcf80b4c588333bb880dc0d61d230b4b050fcc268b36c83f7071034d9174",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "91523b27ee89da4af5a4a7eee45229936dceab5866f22cae02b6e01a60412db2",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "03a2cf3c936b0f925c1f074d7b302b2048ab757ceae32aae91eaca84b3833162"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "ed0dfcf80b4c588333bb880dc0d61d230b4b050fcc268b36c83f7071034d9174",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "76c81efb8141b0410de551b32b070fa7a0ec156b54123ee9012c8c815ac51ad3",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3f2e07bbcd7e5616722b52a2e0f278538582308949e14c26796c76ab17188d8a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "873d2b2151559cd8c88da3d58a1bce3d5a225b8caa03be39890b44bbee575bf9",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "76c81efb8141b0410de551b32b070fa7a0ec156b54123ee9012c8c815ac51ad3",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3f2e07bbcd7e5616722b52a2e0f278538582308949e14c26796c76ab17188d8a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "873d2b2151559cd8c88da3d58a1bce3d5a225b8caa03be39890b44bbee575bf9",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "76c81efb8141b0410de551b32b070fa7a0ec156b54123ee9012c8c815ac51ad3",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3f2e07bbcd7e5616722b52a2e0f278538582308949e14c26796c76ab17188d8a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "873d2b2151559cd8c88da3d58a1bce3d5a225b8caa03be39890b44bbee575bf9",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4afeceffde4a3cb40ff87d54bfcf916e4627ec201c2dd4d82fa60c87c077a841",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d41933f53199ef79d0fc608f7db54dc6dd378df2e0451ed09e5bf9f7df2e1aa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8404e11e3f834b76e87f55c0356c118ebf887befd03b983ddd0accabbe291d89",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "902016f53ff94ea3b0ed47ea02ac3ba91003b984f1e6ae75a49a9732e78ae649",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7149b068288c0862769d7c6d406466203553fa5f479b037bb9d00db69baf12b7"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "1776480e0fb33a069f81d2fd94151c253464a52e505288f76bb2f3520f3c21d5",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "902016f53ff94ea3b0ed47ea02ac3ba91003b984f1e6ae75a49a9732e78ae649",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7149b068288c0862769d7c6d406466203553fa5f479b037bb9d00db69baf12b7"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "1776480e0fb33a069f81d2fd94151c253464a52e505288f76bb2f3520f3c21d5",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "902016f53ff94ea3b0ed47ea02ac3ba91003b984f1e6ae75a49a9732e78ae649",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7149b068288c0862769d7c6d406466203553fa5f479b037bb9d00db69baf12b7"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "1776480e0fb33a069f81d2fd94151c253464a52e505288f76bb2f3520f3c21d5",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9f6d2711423408e8c544a8ad52436c91662e1291a38695b0f67def8d9833c24e",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3f2e07bbcd7e5616722b52a2e0f278538582308949e14c26796c76ab17188d8a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "873d2b2151559cd8c88da3d58a1bce3d5a225b8caa03be39890b44bbee575bf9",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9f6d2711423408e8c544a8ad52436c91662e1291a38695b0f67def8d9833c24e",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3f2e07bbcd7e5616722b52a2e0f278538582308949e14c26796c76ab17188d8a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "873d2b2151559cd8c88da3d58a1bce3d5a225b8caa03be39890b44bbee575bf9",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9f6d2711423408e8c544a8ad52436c91662e1291a38695b0f67def8d9833c24e",
+        "actors": 1,
+        "people": 0,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3f2e07bbcd7e5616722b52a2e0f278538582308949e14c26796c76ab17188d8a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M3-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "873d2b2151559cd8c88da3d58a1bce3d5a225b8caa03be39890b44bbee575bf9",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ca99541d17a6be1cb01e9803ad8078ea48e63700a16c5e06fca7283104bbd724",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9542ecefcc4c131b8405a611ec30c0fb89dfdf3ae63dc443b526ff89d992b2b2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "2f840116adce60b1eb6f8962ac04354e21090654c90a65071e6452c7e0fefdb2",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "48a7ae8550695fae4dd452dc561f1cc603764189af4fb4e958a97609041b4324",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9542ecefcc4c131b8405a611ec30c0fb89dfdf3ae63dc443b526ff89d992b2b2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "2f840116adce60b1eb6f8962ac04354e21090654c90a65071e6452c7e0fefdb2",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "61e7ea5c67930a12a46099f10645a6190799c1e1eb172479c496547736747eb5",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9542ecefcc4c131b8405a611ec30c0fb89dfdf3ae63dc443b526ff89d992b2b2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "2f840116adce60b1eb6f8962ac04354e21090654c90a65071e6452c7e0fefdb2",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e5e60b2a3b4f048e008f6d2caece49f60cf652ce6f83d190aa84bd8548598b6d",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "084f418ee978fdc44c557fc0f91ba1125263c940a41d599c04bc9afadeb736f1",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d562f85e1c7ae1843affbe2dce675ac128cdfa50a7a27faf83e1885d4e368ad",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e5e60b2a3b4f048e008f6d2caece49f60cf652ce6f83d190aa84bd8548598b6d",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "084f418ee978fdc44c557fc0f91ba1125263c940a41d599c04bc9afadeb736f1",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d562f85e1c7ae1843affbe2dce675ac128cdfa50a7a27faf83e1885d4e368ad",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9b5f59988464e80de2f8cc65a818b4f01c40da151fd09250dd0a079be6a449e0",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8942efbb78b8697538afc26a633819670311d48c8b45e124a76b7dbee3f786b0"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d133f4e210216e1a752a4e0ea1302ef1b956b5b353816f02c3cc02ab3fc9abfa",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "174c66c801eab369f87b6148af9f93b887ee9bea092c4df152886837797b018a",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8942efbb78b8697538afc26a633819670311d48c8b45e124a76b7dbee3f786b0"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d133f4e210216e1a752a4e0ea1302ef1b956b5b353816f02c3cc02ab3fc9abfa",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fe0a5049665bc3250afe3773209413be990937bf99b53df1cfbc8d9214c638f4",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8942efbb78b8697538afc26a633819670311d48c8b45e124a76b7dbee3f786b0"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d133f4e210216e1a752a4e0ea1302ef1b956b5b353816f02c3cc02ab3fc9abfa",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e5e60b2a3b4f048e008f6d2caece49f60cf652ce6f83d190aa84bd8548598b6d",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "084f418ee978fdc44c557fc0f91ba1125263c940a41d599c04bc9afadeb736f1",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0d562f85e1c7ae1843affbe2dce675ac128cdfa50a7a27faf83e1885d4e368ad",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "77bec6cb8605950778a4a5290a8ded62d2b53f630236e7121d8a20e7fbbe3d7d"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "bd1bde2a1f2a6dd3bf000ac3a03e783167060fc11db07c554b2d94ca1df57966",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8b3524a701aef10f55ddd1c64f2b618debdb6d6f66ab7e2861d248d98f37d8c0",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fe633af4fc749e28f0bc7836d95f52bc69636427f3e97d9f0505957c7af0d02f"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "0c6bc1d4e1ba38e9b34febe433c9b1da7f1a89825e7a30760dfdf35771d44796",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d593d6381e9528014d478f91745e22f7885fa557f748ac0c5a2f617ca22d8584",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fe633af4fc749e28f0bc7836d95f52bc69636427f3e97d9f0505957c7af0d02f"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "0c6bc1d4e1ba38e9b34febe433c9b1da7f1a89825e7a30760dfdf35771d44796",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "55351c10e6c3147b2661e61317166c3bee439e6bb3eea88556dbb6ef0cb8cdac",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fe633af4fc749e28f0bc7836d95f52bc69636427f3e97d9f0505957c7af0d02f"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "0c6bc1d4e1ba38e9b34febe433c9b1da7f1a89825e7a30760dfdf35771d44796",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6943e9ec8191d7be62fb565b60470dce7f3bb1a89ea66fd03bbcb1309aee8859",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8942efbb78b8697538afc26a633819670311d48c8b45e124a76b7dbee3f786b0"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d133f4e210216e1a752a4e0ea1302ef1b956b5b353816f02c3cc02ab3fc9abfa",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6943e9ec8191d7be62fb565b60470dce7f3bb1a89ea66fd03bbcb1309aee8859",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8942efbb78b8697538afc26a633819670311d48c8b45e124a76b7dbee3f786b0"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d133f4e210216e1a752a4e0ea1302ef1b956b5b353816f02c3cc02ab3fc9abfa",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0c6fe05a4da9c811829c018977790b635698241428c5e300f546a5a4064ca54e",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8942efbb78b8697538afc26a633819670311d48c8b45e124a76b7dbee3f786b0"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M4-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d133f4e210216e1a752a4e0ea1302ef1b956b5b353816f02c3cc02ab3fc9abfa",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a431c852057092e0d0d4aa1b897dbd80a85e5b7f5acaee746d61f2154652aee9",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c834352e2c74b27bd6166f085c5445723cabceaf9062223266871bdf1e92879a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "712ff8a0bcd13f382e9a983038fbcf8bd5fa04b0a528a158fe4d6abe0b138ab1",
+          "6d64afcbb762c7f1ddc188e5f9d45f4247d513896e6901f34b5d4a01b9d38ba9"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "658c9a68ac8077a08682cef9304a1cd9848fe82f4b676933f522ff5031833986",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c834352e2c74b27bd6166f085c5445723cabceaf9062223266871bdf1e92879a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "712ff8a0bcd13f382e9a983038fbcf8bd5fa04b0a528a158fe4d6abe0b138ab1",
+          "6d64afcbb762c7f1ddc188e5f9d45f4247d513896e6901f34b5d4a01b9d38ba9"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "41f093c37c73dafb9b620b6ff82a220434713c410cf65e6cd3a8f59d507c1f56",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c834352e2c74b27bd6166f085c5445723cabceaf9062223266871bdf1e92879a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "712ff8a0bcd13f382e9a983038fbcf8bd5fa04b0a528a158fe4d6abe0b138ab1",
+          "6d64afcbb762c7f1ddc188e5f9d45f4247d513896e6901f34b5d4a01b9d38ba9"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "86561fe6bca87987fdd3442d1e21630dda67a4bed43bc4450eefff9efc2e02b0",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "68bf0c164474460ed8735ec99ccdd24acd83c7d09be2dcd4f558bc3ec192fb78",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d1c4af724d8358428cfbe8a0db39e6d281e1b4731d7151cf1c6a3e29cea77142",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "86561fe6bca87987fdd3442d1e21630dda67a4bed43bc4450eefff9efc2e02b0",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "68bf0c164474460ed8735ec99ccdd24acd83c7d09be2dcd4f558bc3ec192fb78",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d1c4af724d8358428cfbe8a0db39e6d281e1b4731d7151cf1c6a3e29cea77142",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b93696a0a816fe563f67ce02d8cac0ae738ef844d6e88f943147fe386a53edea",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "884faa28f9aab46761ff9829353b29351e94f23df2bfdf090a8678f15884ce54"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fc5d7ede4c322768e37abfb43fdb1b8c2292c0f23a4866b9f57d0e9e6ca7104c",
+          "7ffa2716ea12bd4b191feb03abd7bf63a0361e6e473a087137b4392ff8551d52"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b3c8659d020a6a1317e58ccd1f8a18c40a8b7878bddc07079625f4a7f3452ddb",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "884faa28f9aab46761ff9829353b29351e94f23df2bfdf090a8678f15884ce54"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fc5d7ede4c322768e37abfb43fdb1b8c2292c0f23a4866b9f57d0e9e6ca7104c",
+          "7ffa2716ea12bd4b191feb03abd7bf63a0361e6e473a087137b4392ff8551d52"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6de987bde4427c33c24ce8863fc4a966b79fd4f2b7ebeedaea1d33aa5367b7ac",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "884faa28f9aab46761ff9829353b29351e94f23df2bfdf090a8678f15884ce54"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fc5d7ede4c322768e37abfb43fdb1b8c2292c0f23a4866b9f57d0e9e6ca7104c",
+          "7ffa2716ea12bd4b191feb03abd7bf63a0361e6e473a087137b4392ff8551d52"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "86561fe6bca87987fdd3442d1e21630dda67a4bed43bc4450eefff9efc2e02b0",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "68bf0c164474460ed8735ec99ccdd24acd83c7d09be2dcd4f558bc3ec192fb78",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d1c4af724d8358428cfbe8a0db39e6d281e1b4731d7151cf1c6a3e29cea77142",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "17d37115cb867d2768c6025f5e66fc62d60a04f20f7a0656bbf1d3a4d4c3fab6"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "d5fdec99a7fd6a5016b6eba02ed2ebcec78a05b5111d9c600b05f08d3a1ffea8",
+          "badd4a23849e62c9bb75cc41e4363e27228eebf3cb3b23e62903a9b1957b20c7"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "3418c016ff38aae1b922de0696d39e79432488f5d4af193e9d8a0974d38436e9",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "53ba2bc55f380b3cfe19206dea926be4c514d447128d0c34d8588a227af2f688"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4c5627eb76085b39d92597f825d400a50a9b0fc9abacbb965cfeb9d10ee0036a",
+          "47f9d3cfb201396622a3638221808beea513deeb451fa0cf7a6084e23e0efdc3"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0df68d9a3729d217322888425e5895d260e0ca3606e0341708fec43bb3bf132c",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "53ba2bc55f380b3cfe19206dea926be4c514d447128d0c34d8588a227af2f688"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4c5627eb76085b39d92597f825d400a50a9b0fc9abacbb965cfeb9d10ee0036a",
+          "47f9d3cfb201396622a3638221808beea513deeb451fa0cf7a6084e23e0efdc3"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "dc94283f6907c9fb5032bc51df523eded019dc839049b87974a1d7e864a2869f",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "53ba2bc55f380b3cfe19206dea926be4c514d447128d0c34d8588a227af2f688"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "4c5627eb76085b39d92597f825d400a50a9b0fc9abacbb965cfeb9d10ee0036a",
+          "47f9d3cfb201396622a3638221808beea513deeb451fa0cf7a6084e23e0efdc3"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "67f31fb43cc39f7c556f0d89b098f01af9d4244ed99c5d4d18de30452c4b0c56",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "884faa28f9aab46761ff9829353b29351e94f23df2bfdf090a8678f15884ce54"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fc5d7ede4c322768e37abfb43fdb1b8c2292c0f23a4866b9f57d0e9e6ca7104c",
+          "7ffa2716ea12bd4b191feb03abd7bf63a0361e6e473a087137b4392ff8551d52"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "67f31fb43cc39f7c556f0d89b098f01af9d4244ed99c5d4d18de30452c4b0c56",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "884faa28f9aab46761ff9829353b29351e94f23df2bfdf090a8678f15884ce54"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fc5d7ede4c322768e37abfb43fdb1b8c2292c0f23a4866b9f57d0e9e6ca7104c",
+          "7ffa2716ea12bd4b191feb03abd7bf63a0361e6e473a087137b4392ff8551d52"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e0d39290d5056f331b15c8d87cd7a14cf482de5e4d29a3ab815ad8916c945dd0",
+        "actors": 3,
+        "people": 2,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "884faa28f9aab46761ff9829353b29351e94f23df2bfdf090a8678f15884ce54"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M5-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "fc5d7ede4c322768e37abfb43fdb1b8c2292c0f23a4866b9f57d0e9e6ca7104c",
+          "7ffa2716ea12bd4b191feb03abd7bf63a0361e6e473a087137b4392ff8551d52"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "dfeb335122d39af080d8f695747aa0a73cba104c9d0c0bc6fd27e743f55aa165",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7c362f1f0496e97cce0c7fcbc07eaf7c98312859f6f441723d17c6a8c23e5176"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "271669615c7680eac0bada5c2a1a89be2bec70fb223c617299c6325acfdb3f8f",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "4e7696dcb5f96138af0874bc19c684094ba300e02a84a1713c467b2c069935a0",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7c362f1f0496e97cce0c7fcbc07eaf7c98312859f6f441723d17c6a8c23e5176"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "271669615c7680eac0bada5c2a1a89be2bec70fb223c617299c6325acfdb3f8f",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "03f470d3ec1f7239c2dba8ffb2e86236c3ccf982a9fb30de5eae55dc47aa24f8",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7c362f1f0496e97cce0c7fcbc07eaf7c98312859f6f441723d17c6a8c23e5176"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "271669615c7680eac0bada5c2a1a89be2bec70fb223c617299c6325acfdb3f8f",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "93acff9d18ad34df138feb03cfc3dab3bd1a75e3934a38be2eeb228409640447",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6af7299c1549984f38e3c266fad480c79d9c27cde8242d67c43a18d3a6d129e5",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6f87917d86e42bbcb287aaa83570c1ca07e3925213253827d2975d56b1d6ad7b",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "93acff9d18ad34df138feb03cfc3dab3bd1a75e3934a38be2eeb228409640447",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6af7299c1549984f38e3c266fad480c79d9c27cde8242d67c43a18d3a6d129e5",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6f87917d86e42bbcb287aaa83570c1ca07e3925213253827d2975d56b1d6ad7b",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "356e39c69c44c13f4de0c7514d07834b6cee2528643dc1e442588d6c17d121a4",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "eda62e1f9c52a417027a783817f11dc6c483750c9affd48c7d7edfd9a7c1fefd"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "12879f2b2354de36d090f66da62f6d3da54f6c64fe36eeae993e188fc5300502",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "f1367cf03e391f805c134fbc48942ab6dc59cceb2f56bf5ca2ecbc70416461be",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "eda62e1f9c52a417027a783817f11dc6c483750c9affd48c7d7edfd9a7c1fefd"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "12879f2b2354de36d090f66da62f6d3da54f6c64fe36eeae993e188fc5300502",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2919ece1849890822e094f1ed056f214044b1aff3dbf43c7f735eb59d5eed4a2",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "eda62e1f9c52a417027a783817f11dc6c483750c9affd48c7d7edfd9a7c1fefd"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "12879f2b2354de36d090f66da62f6d3da54f6c64fe36eeae993e188fc5300502",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "93acff9d18ad34df138feb03cfc3dab3bd1a75e3934a38be2eeb228409640447",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6af7299c1549984f38e3c266fad480c79d9c27cde8242d67c43a18d3a6d129e5",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6f87917d86e42bbcb287aaa83570c1ca07e3925213253827d2975d56b1d6ad7b",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "ab88ae8d7e395f11e459a7b12f4db8c172ddf04dbb05a3424a87094f74905706"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "97e2ce615a8f8f14bf721b63809e2d38ca3dcf7b707bc2b9442f59939c02e1a8",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b3d42a80a77af9b3fd70b29e3c87c3c4497ff165caef62419182aba04dba32c9",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fda7c1a85581a7653330ae7fdf1f56427c65712498594e8aba6414a42ba2cf38"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "010d7459413be632cae491a290118fa1bbca85578409803df83f708c5aab2d33",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "789b024a2ddb5c0c5046b0b1e1a488c210b64773dcde93c949f8886e8dcdcc8f",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fda7c1a85581a7653330ae7fdf1f56427c65712498594e8aba6414a42ba2cf38"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "010d7459413be632cae491a290118fa1bbca85578409803df83f708c5aab2d33",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "db7cf4c9e312de4841e9320a3903422650f55d937526438bd162bdddf9aed458",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "fda7c1a85581a7653330ae7fdf1f56427c65712498594e8aba6414a42ba2cf38"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "010d7459413be632cae491a290118fa1bbca85578409803df83f708c5aab2d33",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7610db6bd59aaf529fad2c75d4af78c915e70c2aa7a4a2f3d4374d5dcd40722e",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "eda62e1f9c52a417027a783817f11dc6c483750c9affd48c7d7edfd9a7c1fefd"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "12879f2b2354de36d090f66da62f6d3da54f6c64fe36eeae993e188fc5300502",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7610db6bd59aaf529fad2c75d4af78c915e70c2aa7a4a2f3d4374d5dcd40722e",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "eda62e1f9c52a417027a783817f11dc6c483750c9affd48c7d7edfd9a7c1fefd"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "12879f2b2354de36d090f66da62f6d3da54f6c64fe36eeae993e188fc5300502",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "617839b39d79de30170e4dbe91219930f6626ca7e9aa87d2234f219ff6cbf3b8",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "eda62e1f9c52a417027a783817f11dc6c483750c9affd48c7d7edfd9a7c1fefd"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M6-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "12879f2b2354de36d090f66da62f6d3da54f6c64fe36eeae993e188fc5300502",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "364b31ecf09646e12484504e247f7b99def0d61d6355c06e27768b8c51e9cdfa",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d652d3b2d6becf3e873aaefc56bc9a751d706a93c13a53f5f8025c42ba86e2c5"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8801607f2ae94f217098b1b7403d249ab75866779b51742e46fae952ca44deeb",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "336308eada328fe451c884d65dc54247653b3d63eb494d19252dff9703ded0ba",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d652d3b2d6becf3e873aaefc56bc9a751d706a93c13a53f5f8025c42ba86e2c5"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8801607f2ae94f217098b1b7403d249ab75866779b51742e46fae952ca44deeb",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "0367b0f40bfa161a10c3425a63af1ca9e08d76324bb19123aaa553d469856b07",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d652d3b2d6becf3e873aaefc56bc9a751d706a93c13a53f5f8025c42ba86e2c5"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "8801607f2ae94f217098b1b7403d249ab75866779b51742e46fae952ca44deeb",
+          "8572bfac4aeeaa45f5c3ce12eb4f6381f936506d738fe089c7d698b24f62cd12"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7ee7e8ec42a554b601c374c56a02ed94e42f71250a55071ab9162b0be7ac8116",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b532b80aab5efd500c3dda43177bce306023c18b6a8dae7a1d66f7a5e0ee5178",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2e870dbbca5fd46473c4e2a246c3734337bc3a42539d974e13a2f6f5ea7dcb62",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7ee7e8ec42a554b601c374c56a02ed94e42f71250a55071ab9162b0be7ac8116",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b532b80aab5efd500c3dda43177bce306023c18b6a8dae7a1d66f7a5e0ee5178",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2e870dbbca5fd46473c4e2a246c3734337bc3a42539d974e13a2f6f5ea7dcb62",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "9d7de2a28802826941833149c40efae3dc1998d46b2e999be16d9838010f0ffb",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8439d95053fde8810a917cf516d0c2bd181ccf44befecfb95974fcda48b905d2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b6857a3a53ae9ce44dea28b165126bac8a31dd6cbd8bb44805e1f654ce320b4c",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "73b6450b1c69e4761ac6bc4ce9f7e99a464883c076f80e125ce53a211f3470a1",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8439d95053fde8810a917cf516d0c2bd181ccf44befecfb95974fcda48b905d2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b6857a3a53ae9ce44dea28b165126bac8a31dd6cbd8bb44805e1f654ce320b4c",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "030ca97310686aeb2b28fc9b72940175bb91d5db92f749f51b53178ec0fb7533",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8439d95053fde8810a917cf516d0c2bd181ccf44befecfb95974fcda48b905d2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b6857a3a53ae9ce44dea28b165126bac8a31dd6cbd8bb44805e1f654ce320b4c",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7ee7e8ec42a554b601c374c56a02ed94e42f71250a55071ab9162b0be7ac8116",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "b532b80aab5efd500c3dda43177bce306023c18b6a8dae7a1d66f7a5e0ee5178",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "2e870dbbca5fd46473c4e2a246c3734337bc3a42539d974e13a2f6f5ea7dcb62",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a396a192c3e94281b50c4bd6f2ded6ee45bc568312182f4584afe3da84e8fd3a"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "45a05c835503daea5a520a92a15bfb18f7cdd2b5dcf0a2687c1261ebfcdc531d",
+          "6215b55bb4f3a61be64269837c69751bdb234eb74a913bfdb32af1e6069917fc"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a8d49c2139f2b30b8cab9d1700ac6759735e412c8e7c744992b6940a99900003",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "838d8469a9d0a3a0ef82ce9025f66b056416448a70afa41c96211e6a10956baa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "008987ef58d62fdd9efb611de465acfe829e45b9763c5abcf55f6667f79c72a4",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a4590514226b31c79baffa236b2c49a4955017fbef8c3abc768b9aa33bd806a1",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "838d8469a9d0a3a0ef82ce9025f66b056416448a70afa41c96211e6a10956baa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "008987ef58d62fdd9efb611de465acfe829e45b9763c5abcf55f6667f79c72a4",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7d986f678b5ba9481eb48b9fd1f541c760b8e0b8771e35ae4853f7f58576df12",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "838d8469a9d0a3a0ef82ce9025f66b056416448a70afa41c96211e6a10956baa"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "008987ef58d62fdd9efb611de465acfe829e45b9763c5abcf55f6667f79c72a4",
+          "5c83bfdae09d1748e352273fa803c2886a3a32b38ffbb368bf871b246fd75ee1"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c58eb161626cafb9fcc429da8c1be0bd8283e81c8ebe67f35b1d1eb1f5b908f8",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8439d95053fde8810a917cf516d0c2bd181ccf44befecfb95974fcda48b905d2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b6857a3a53ae9ce44dea28b165126bac8a31dd6cbd8bb44805e1f654ce320b4c",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c58eb161626cafb9fcc429da8c1be0bd8283e81c8ebe67f35b1d1eb1f5b908f8",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8439d95053fde8810a917cf516d0c2bd181ccf44befecfb95974fcda48b905d2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b6857a3a53ae9ce44dea28b165126bac8a31dd6cbd8bb44805e1f654ce320b4c",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "5942e8340099063b1b98161cf5d805a54f20174a487aaed42cac7e9793e545a9",
+        "actors": 2,
+        "people": 0,
+        "creatures": 2
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8439d95053fde8810a917cf516d0c2bd181ccf44befecfb95974fcda48b905d2"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M7-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "b6857a3a53ae9ce44dea28b165126bac8a31dd6cbd8bb44805e1f654ce320b4c",
+          "8b83675b4c80ed5cdfd7ab0d6b50a78192214d0d7a3e03e94626fdf0f46d54c8"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c96395d46972e5e58f7a06f8049ae891562b6ac3c5a583fdaf51f7a92405480a",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "849a575781481b611e60b1e2f803e03c2c4a97a70ae172a8f72375c480b09b69"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "ab9d7f67e12cc048231b1ef72e5cb0f381f28cce653e46d5f0e6cf25866b4e1c",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "aa4f569fa240bc50f3074c15f9f459f26a3d9690033a8878b89e277b7a737fa6",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "849a575781481b611e60b1e2f803e03c2c4a97a70ae172a8f72375c480b09b69"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "ab9d7f67e12cc048231b1ef72e5cb0f381f28cce653e46d5f0e6cf25866b4e1c",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6660807a21eec742436a8ee51e294c52af9ad42de524985e85beef7f4b5f0e44",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "849a575781481b611e60b1e2f803e03c2c4a97a70ae172a8f72375c480b09b69"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-standard-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "ab9d7f67e12cc048231b1ef72e5cb0f381f28cce653e46d5f0e6cf25866b4e1c",
+          "d0dfbbb998e402008d568c25dffefde235b76cfee818c610b3b814c51adcd100"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "720edec1710a301b45fdcce3c963ddb64cf80e21b08ac39f5628968c6b67dcc7",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "950af1bdae5fa569eefb1c18a694be664eda38c32f1582f2235602c0cac2b1de",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a7f8b15e35a67abd1408b79a6f4a134893c2cd5b84e40d2f9cde799789a09dc7",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-illustrious-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "720edec1710a301b45fdcce3c963ddb64cf80e21b08ac39f5628968c6b67dcc7",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "950af1bdae5fa569eefb1c18a694be664eda38c32f1582f2235602c0cac2b1de",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a7f8b15e35a67abd1408b79a6f4a134893c2cd5b84e40d2f9cde799789a09dc7",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-anima-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "537e439c9b6d446b9cc477b61427f577bdbe992863d2b426d9c7d2951c750bc9",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e8c8c2ddea27b1da711a2d51809dd5af01aef3fbcad056857cc60cd739b70a5c"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "c2a3e47598e4a9856cfedea3c6eb1393c43cc1d5ac1d3eb58028a15c5940bf87",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "c5fa3872c0ab9450dd062b3873866bf35a66d760e8434cf25a4ae5a155427bd1",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e8c8c2ddea27b1da711a2d51809dd5af01aef3fbcad056857cc60cd739b70a5c"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "c2a3e47598e4a9856cfedea3c6eb1393c43cc1d5ac1d3eb58028a15c5940bf87",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "44fb6476fca89b4c9e306cf0be08342363dcc8f2234a6714e01a7df188814585",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e8c8c2ddea27b1da711a2d51809dd5af01aef3fbcad056857cc60cd739b70a5c"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-sdxl-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "c2a3e47598e4a9856cfedea3c6eb1393c43cc1d5ac1d3eb58028a15c5940bf87",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "720edec1710a301b45fdcce3c963ddb64cf80e21b08ac39f5628968c6b67dcc7",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "950af1bdae5fa569eefb1c18a694be664eda38c32f1582f2235602c0cac2b1de",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "a7f8b15e35a67abd1408b79a6f4a134893c2cd5b84e40d2f9cde799789a09dc7",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d003a8570e293e42598df61ed9cc78e5601942022e0c96547c1fa9f8b2317104"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-noobai-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "39b0e58a159c0a3411a21c5006deb372a55fc80c1a3111c6f6572d1fb6b6d7fc",
+          "89befcad2584825ba36489a509671d03a6ee6643884107a6aa69611690161e2f"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "eae573864dfb9e4acd2cc6d7d1e64b696f7bf4f608e04254ed1420458f253c0e",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d8248e881c20e787a2a8265a5011995677045fb8119622a5208b9c4c0b3b4379"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "dc807786b5e4c4b52a924511bd4c9bbb2e9d427d7957ab62eff0e7b496730281",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "7625db2dcd31af722367d7214c3ce031d952ea191a891047ec34ada572f7e706",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d8248e881c20e787a2a8265a5011995677045fb8119622a5208b9c4c0b3b4379"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "dc807786b5e4c4b52a924511bd4c9bbb2e9d427d7957ab62eff0e7b496730281",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d330ac93dfcf9b8f6ecdec0e91d37614d0ed95ae9ed5081306e0c2a4410293e2",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "d8248e881c20e787a2a8265a5011995677045fb8119622a5208b9c4c0b3b4379"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-pony-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "dc807786b5e4c4b52a924511bd4c9bbb2e9d427d7957ab62eff0e7b496730281",
+          "b08bd1f8394768336f6772804d2e05adefe74de9efa873a4735f5316844cdcab"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-none-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "5f7c2a3441ed6cb6570829849b16d0aa187fb1ecf14eface8d987efbc78450cc",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-none-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e8c8c2ddea27b1da711a2d51809dd5af01aef3fbcad056857cc60cd739b70a5c"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-none-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "c2a3e47598e4a9856cfedea3c6eb1393c43cc1d5ac1d3eb58028a15c5940bf87",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-standard-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "5f7c2a3441ed6cb6570829849b16d0aa187fb1ecf14eface8d987efbc78450cc",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-standard-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e8c8c2ddea27b1da711a2d51809dd5af01aef3fbcad056857cc60cd739b70a5c"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-standard-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "c2a3e47598e4a9856cfedea3c6eb1393c43cc1d5ac1d3eb58028a15c5940bf87",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-strong-normal",
+      "status": "PASS",
+      "detail": {
+        "sha256": "522e471bfec6f267207c308778ddf03472ca5afcd602e70f8da5593a164e74a3",
+        "actors": 2,
+        "people": 1,
+        "creatures": 1
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-strong-manga-page",
+      "status": "PASS",
+      "detail": {
+        "sha256": "e8c8c2ddea27b1da711a2d51809dd5af01aef3fbcad056857cc60cd739b70a5c"
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "M8-krea-strong-manga-panels",
+      "status": "PASS",
+      "detail": {
+        "hashes": [
+          "c2a3e47598e4a9856cfedea3c6eb1393c43cc1d5ac1d3eb58028a15c5940bf87",
+          "e884ac780843a2a255d6f04cbb9232a1af1c59aa37bf7b05d237039ce78181aa"
+        ]
+      }
+    },
+    {
+      "suite": "matrix",
+      "id": "REL-28x3-directed-symmetric-missing",
+      "status": "PASS",
+      "detail": {
+        "definitions": 28,
+        "checks": 336
+      }
+    },
+    {
+      "suite": "regressions",
+      "id": "FIX-pose-run-styles-retain-target",
+      "status": "PASS",
+      "detail": [
+        {
+          "style": "",
+          "withTarget": "running toward Character B",
+          "withoutTarget": "running"
+        },
+        {
+          "style": "sprint",
+          "withTarget": "sprinting toward Character B",
+          "withoutTarget": "sprinting"
+        },
+        {
+          "style": "start",
+          "withTarget": "starting to run toward Character B",
+          "withoutTarget": "starting to run"
+        }
+      ]
+    },
+    {
+      "suite": "regressions",
+      "id": "POSE-independent-instances-equipment-missing-target",
+      "status": "PASS",
+      "detail": {
+        "before": [
+          "holding their left hand over their forehead",
+          "holding their right hand over their forehead"
+        ],
+        "withWeapon": "swinging their sword toward Character B",
+        "missingWeapon": "",
+        "missingTarget": "",
+        "self": ""
+      }
+    },
+    {
+      "suite": "regressions",
+      "id": "POSE-migration-weight-color-idempotent-custom-preserved",
+      "status": "PASS",
+      "detail": {
+        "edited": [
+          "pose-36"
+        ],
+        "editedEnglish": "my custom edited stock pose",
+        "row": "pose-36",
+        "unchanged": true,
+        "groups": [
+          {
+            "id": "pag-d4fd4bd9-0977-496b-b5c0-da2db512da86",
+            "row": {
+              "id": "pose-36",
+              "name": "片足重心で立つ",
+              "value": "standing with weight on one leg"
+            },
+            "weight": 1.35,
+            "color": "blue",
+            "metadata": {
+              "itemWeights": 1.35,
+              "itemColors": "blue"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "stand",
+            "id": "pa-7b46e873-e138-40f1-a5c8-dc90783256dd",
+            "groupId": "pag-d4fd4bd9-0977-496b-b5c0-da2db512da86"
+          },
+          {
+            "action": "shift-weight",
+            "movingPart": "one-leg",
+            "id": "pa-cbe91ac0-2e9b-4ec8-b6b8-0f0568e2bb17",
+            "groupId": "pag-d4fd4bd9-0977-496b-b5c0-da2db512da86"
+          }
+        ],
+        "tags": [
+          "(blue standing, shifting their weight onto one leg:1.4)"
+        ],
+        "overrideTags": [
+          "(red standing:1.4)",
+          "(blue shifting their weight onto one leg:1.4)"
+        ],
+        "custom": [
+          "pose-custom-audit"
+        ]
+      }
+    },
+    {
+      "suite": "regressions",
+      "id": "GAZE-self-missing-same-name-and-panel-absence",
+      "status": "PASS",
+      "detail": {
+        "named": "相手を見る → 同名（人物B）",
+        "normal": [
+          "Character A looking at Character B"
+        ],
+        "absent": [],
+        "self": [],
+        "missing": [],
+        "creature": [
+          "Character A looking at Creature A"
+        ]
+      }
+    },
+    {
+      "suite": "regressions",
+      "id": "STORAGE-generation-success-history-failure-retains-output",
+      "status": "PASS",
+      "detail": [
+        {
+          "injected": true,
+          "historyKept": true,
+          "diskKept": true,
+          "status": "プロンプトを生成しました（履歴は未保存）。ブラウザの保存容量が不足しています。",
+          "storage": "履歴は未保存です：ブラウザの保存容量が不足しています。",
+          "positiveSHA256": "c58ea0c3e9648ba9ee860230c202ec24110611ea43418e19030b3420d03659e9",
+          "errorName": "QuotaExceededError",
+          "mode": "normal"
+        },
+        {
+          "injected": true,
+          "historyKept": true,
+          "diskKept": true,
+          "status": "漫画プロンプトを生成しました（履歴は未保存）",
+          "storage": "履歴は未保存です：ブラウザの保存容量が不足しています。",
+          "positiveSHA256": "a0151bfa2d48bb6884292316057544468c166388e5c243bdd8f9a282e6e57ff1",
+          "errorName": "QuotaExceededError",
+          "mode": "manga"
+        },
+        {
+          "injected": true,
+          "historyKept": true,
+          "diskKept": true,
+          "status": "プロンプトを生成しました（履歴は未保存）。ブラウザの保存機能を利用できません。",
+          "storage": "履歴は未保存です：ブラウザの保存機能を利用できません。",
+          "positiveSHA256": "a9b196ef9dd59d93e1765cb00473960f97a0939dff202fc94e50ddb74c43d8a5",
+          "errorName": "SecurityError",
+          "mode": "normal"
+        },
+        {
+          "injected": true,
+          "historyKept": true,
+          "diskKept": true,
+          "status": "漫画プロンプトを生成しました（履歴は未保存）",
+          "storage": "履歴は未保存です：ブラウザの保存機能を利用できません。",
+          "positiveSHA256": "a0151bfa2d48bb6884292316057544468c166388e5c243bdd8f9a282e6e57ff1",
+          "errorName": "SecurityError",
+          "mode": "manga"
+        }
+      ]
+    },
+    {
+      "suite": "regressions",
+      "id": "STORAGE-fingerprint-and-generator-failure-still-roll-back",
+      "status": "PASS",
+      "detail": {
+        "fingerprintRejected": true,
+        "generatorOutputRestored": true
+      }
+    },
+    {
+      "suite": "regressions",
+      "id": "SKIN-37-and-legacy11-human-record-shapes",
+      "status": "PASS",
+      "detail": {
+        "count": 37,
+        "unique": 37,
+        "legacyKept": true,
+        "normal": [
+          "blue skin"
+        ],
+        "human": [
+          "jet black skin"
+        ],
+        "valid": false
+      }
+    },
+    {
+      "suite": "access",
+      "id": "ACCESS-original-session",
+      "status": "PASS",
+      "detail": {
+        "originalScript": "tests/common-access-stage5-d1.cjs",
+        "originalAssertionsUnchanged": true,
+        "checks": 39,
+        "faults": 6,
+        "viewports": 6
+      }
+    },
+    {
+      "suite": "access",
+      "id": "ACCESS-original-quota",
+      "status": "PASS",
+      "detail": {
+        "originalScript": "tests/common-access-stage5-d1-quota.cjs",
+        "originalAssertionsUnchanged": true,
+        "realQuotaExceeded": true
+      }
+    },
+    {
+      "suite": "access",
+      "id": "ACCESS-original-schema",
+      "status": "PASS",
+      "detail": {
+        "originalScript": "tests/stage5-e-access.cjs",
+        "originalAssertionsUnchanged": true,
+        "checks": 12
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "SAVE-complex-fixture-valid",
+      "status": "PASS",
+      "detail": {
+        "people": [
+          "original-audit-a",
+          "original-audit-b"
+        ],
+        "creatures": [
+          "creature-audit-a",
+          "creature-audit-b"
+        ],
+        "actions": 3
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "SAVE-reload-UUID-pose-gaze-skin-draft",
+      "status": "PASS",
+      "detail": {
+        "snapshotSHA256": "d1bfee1ab81fb17b9887c1440212f90b001003a999a1412dd009f45e940bab30"
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "SAVE-named-save-and-load-button",
+      "status": "PASS",
+      "detail": {
+        "namedSaveAndLoad": true
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "SAVE-history-button-and-restore",
+      "status": "PASS",
+      "detail": {
+        "historyRestore": true
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "JSON-export-and-import-new-context",
+      "status": "PASS",
+      "detail": {
+        "version": 5,
+        "sameKnownAndOpaqueProfileValues": true
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "JSON-failed-invalid-import-restores-disk-and-RAM",
+      "status": "PASS",
+      "detail": {
+        "unsupportedPoseVersionRejected": true
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "JSON-corrupt-input-does-not-change-saved-data",
+      "status": "PASS",
+      "detail": {
+        "corruptJSONRejected": true
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "UI-custom-name-is-text-and-free-prompt-words-preserved",
+      "status": "PASS",
+      "detail": {
+        "xss": 0,
+        "extra": true,
+        "unsafeImage": false
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "JSON-catalog-ID-remap-updates-gaze-pose-and-relations",
+      "status": "PASS",
+      "detail": {
+        "a": "character-4",
+        "b": "character-2",
+        "selected": [
+          "character-4",
+          "character-2"
+        ],
+        "gaze": {
+          "kind": "character",
+          "id": "character-2"
+        },
+        "pose": {
+          "kind": "character",
+          "id": "character-2",
+          "part": "forehead"
+        },
+        "relation": {
+          "kind": "character",
+          "id": "character-4"
+        }
+      }
+    },
+    {
+      "suite": "compatibility",
+      "id": "JSON-duplicate-actor-UUID-rejected-before-mutation",
+      "status": "PASS",
+      "detail": {
+        "refused": true,
+        "unchanged": true
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
+      "status": "PASS",
+      "detail": {
+        "otherOwnerSelectable": true,
+        "donorUnchanged": true,
+        "oneSharedToggle": true,
+        "selectionRetainedAcrossViews": true
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
+      "status": "PASS",
+      "detail": {
+        "global": {
+          "dialog": "choiceDialog",
+          "visible": true,
+          "count": 1
+        },
+        "equipment": {
+          "dialog": "simpleSelectionDialog",
+          "visible": true,
+          "count": 1
+        },
+        "reopened": {
+          "dialog": "simpleSelectionDialog",
+          "visible": true,
+          "count": 1
+        },
+        "lateCloseIgnored": true
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-hair-nine-modes-colors-and-eye-isolation",
+      "status": "PASS",
+      "detail": {
+        "hairModes": 9,
+        "rows": [
+          5,
+          4
+        ],
+        "bothColorsRetained": true,
+        "eyeLayoutIndependent": true
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-lighting-three-tabs-and-five-effect-tabs",
+      "status": "PASS",
+      "detail": {
+        "light": [
+          {
+            "x": 17,
+            "y": 142,
+            "w": 116.328125,
+            "h": 34,
+            "text": "光の当たり方"
+          },
+          {
+            "x": 138.328125,
+            "y": 142,
+            "w": 116.328125,
+            "h": 34,
+            "text": "光源"
+          },
+          {
+            "x": 259.65625,
+            "y": 142,
+            "w": 116.34375,
+            "h": 34,
+            "text": "光の色"
+          }
+        ],
+        "effects": [
+          {
+            "x": 17,
+            "y": 142,
+            "w": 83.140625,
+            "h": 34,
+            "text": "エフェクト"
+          },
+          {
+            "x": 105.140625,
+            "y": 142,
+            "w": 63.96875,
+            "h": 34,
+            "text": "オーラ"
+          },
+          {
+            "x": 174.109375,
+            "y": 142,
+            "w": 63.953125,
+            "h": 34,
+            "text": "演出"
+          },
+          {
+            "x": 243.0625,
+            "y": 142,
+            "w": 63.96875,
+            "h": 34,
+            "text": "発生源"
+          },
+          {
+            "x": 312.03125,
+            "y": 142,
+            "w": 63.953125,
+            "h": 34,
+            "text": "表現"
+          }
+        ]
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
+      "status": "PASS",
+      "detail": {
+        "instances": 2,
+        "independentIds": true,
+        "optionalTargetKinds": [
+          {
+            "x": 17,
+            "y": 431.296875,
+            "w": 115.65625,
+            "h": 38,
+            "text": "物体・場所"
+          },
+          {
+            "x": 138.65625,
+            "y": 431.296875,
+            "w": 115.671875,
+            "h": 38,
+            "text": "装備・携帯品"
+          },
+          {
+            "x": 260.328125,
+            "y": 431.296875,
+            "w": 115.65625,
+            "h": 38,
+            "text": "人物・生物"
+          }
+        ]
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-skin-palette-select-card-remove-and-Undo",
+      "status": "PASS",
+      "detail": {
+        "palette": 37,
+        "selectionAndRemoval": true,
+        "Undo": true
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-320x640",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 17,
+            "y": 205,
+            "w": 67.75,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 89.75,
+            "y": 205,
+            "w": 67.75,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 162.5,
+            "y": 205,
+            "w": 67.75,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 235.25,
+            "y": 205,
+            "w": 67.75,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 0,
+          "right": 320,
+          "top": 64,
+          "bottom": 640,
+          "viewport": [
+            320,
+            640
+          ],
+          "listHeight": 259,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": false
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-360x740",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 17,
+            "y": 215,
+            "w": 77.75,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 99.75,
+            "y": 215,
+            "w": 77.75,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 182.5,
+            "y": 215,
+            "w": 77.75,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 265.25,
+            "y": 215,
+            "w": 77.75,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 0,
+          "right": 360,
+          "top": 74,
+          "bottom": 740,
+          "viewport": [
+            360,
+            740
+          ],
+          "listHeight": 349,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": false
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-393x800",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 17,
+            "y": 221,
+            "w": 86,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 108,
+            "y": 221,
+            "w": 86,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 199,
+            "y": 221,
+            "w": 86,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 290,
+            "y": 221,
+            "w": 86,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 0,
+          "right": 393,
+          "top": 80,
+          "bottom": 800,
+          "viewport": [
+            393,
+            800
+          ],
+          "listHeight": 422,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": false
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-412x915",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 17,
+            "y": 232.5,
+            "w": 90.75,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 112.75,
+            "y": 232.5,
+            "w": 90.75,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 208.5,
+            "y": 232.5,
+            "w": 90.75,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 304.25,
+            "y": 232.5,
+            "w": 90.75,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 0,
+          "right": 412,
+          "top": 91.5,
+          "bottom": 915,
+          "viewport": [
+            412,
+            915
+          ],
+          "listHeight": 525,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": false
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-844x390",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 119,
+            "y": 180,
+            "w": 147.75,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 271.75,
+            "y": 180,
+            "w": 147.75,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 424.5,
+            "y": 180,
+            "w": 147.75,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 577.25,
+            "y": 180,
+            "w": 147.75,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 102,
+          "right": 742,
+          "top": 39,
+          "bottom": 390,
+          "viewport": [
+            844,
+            390
+          ],
+          "listHeight": 174,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": false
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-1280x900",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 337,
+            "y": 231,
+            "w": 147.75,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 489.75,
+            "y": 231,
+            "w": 147.75,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 642.5,
+            "y": 231,
+            "w": 147.75,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 795.25,
+            "y": 231,
+            "w": 147.75,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 320,
+          "right": 960,
+          "top": 90,
+          "bottom": 900,
+          "viewport": [
+            1280,
+            900
+          ],
+          "listHeight": 512,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": false
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-393x800-font200",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 17,
+            "y": 278.1875,
+            "w": 86,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 108,
+            "y": 278.1875,
+            "w": 86,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 199,
+            "y": 278.1875,
+            "w": 86,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 290,
+            "y": 278.1875,
+            "w": 86,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 0,
+          "right": 393,
+          "top": 80,
+          "bottom": 800,
+          "viewport": [
+            393,
+            800
+          ],
+          "listHeight": 181,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": true
+      }
+    },
+    {
+      "suite": "ui",
+      "id": "UI-layout-393x400-font150-keyboard-mock",
+      "status": "PASS",
+      "detail": {
+        "quick": [
+          {
+            "x": 17,
+            "y": 206.390625,
+            "w": 86,
+            "h": 34,
+            "text": "すべて"
+          },
+          {
+            "x": 108,
+            "y": 206.390625,
+            "w": 86,
+            "h": 34,
+            "text": "選択中"
+          },
+          {
+            "x": 199,
+            "y": 206.390625,
+            "w": 86,
+            "h": 34,
+            "text": "お気に入り"
+          },
+          {
+            "x": 290,
+            "y": 206.390625,
+            "w": 86,
+            "h": 34,
+            "text": "キャラ固有"
+          }
+        ],
+        "metrics": {
+          "left": 0,
+          "right": 393,
+          "top": 40,
+          "bottom": 400,
+          "viewport": [
+            393,
+            400
+          ],
+          "listHeight": 178,
+          "overflow": false
+        },
+        "physicalDevice": false,
+        "keyboardMock": true
+      }
+    },
+    {
+      "suite": "pwa",
+      "id": "PWA-old-main-load-and-synthetic-user-data",
+      "status": "PASS",
+      "detail": {
+        "namespace": {
+          "settings": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "working": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "history": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+          "marker": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+          "journal": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1"
+        },
+        "people": [
+          "original-pwa-audit"
+        ],
+        "creatures": [
+          "creature-pwa-audit"
+        ],
+        "favorites": 1
+      }
+    },
+    {
+      "suite": "pwa",
+      "id": "PWA-failed-update-keeps-old-worker-cache-and-data",
+      "status": "PASS",
+      "detail": {
+        "state": "redundant",
+        "cacheNames": [
+          "seaart-tool-pwa-v5-tg-yugioh-phase1-v1-http-cache-v1",
+          "unrelated-project-sentinel"
+        ],
+        "controller": "http://127.0.0.1:38911/seaart-tool/sw.js"
+      }
+    },
+    {
+      "suite": "pwa",
+      "id": "PWA-successful-update-preserves-unrelated-cache",
+      "status": "PASS",
+      "detail": {
+        "state": "activated",
+        "names": [
+          "unrelated-project-sentinel",
+          "seaart-tool-pwa-v44-audit-v1-http-cache-v1:/seaart-tool/"
+        ],
+        "scope": "http://127.0.0.1:38911/seaart-tool/",
+        "other": "keep this unrelated app"
+      }
+    },
+    {
+      "suite": "pwa",
+      "id": "PWA-new-screen-old-data-and-six-assets",
+      "status": "PASS",
+      "detail": {
+        "people": [
+          "original-pwa-audit"
+        ],
+        "creatures": [
+          "creature-pwa-audit"
+        ],
+        "hair": "blue hair",
+        "damage": [
+          "bruise"
+        ],
+        "favorites": [
+          "更新前の保存"
+        ],
+        "checks": [
+          {
+            "file": "index.html",
+            "status": 200,
+            "bytes": 4389858
+          },
+          {
+            "file": "sw.js",
+            "status": 200,
+            "bytes": 2910
+          },
+          {
+            "file": "manifest.json",
+            "status": 200,
+            "bytes": 762
+          },
+          {
+            "file": "icon-192.png",
+            "status": 200,
+            "bytes": 1369
+          },
+          {
+            "file": "icon-512.png",
+            "status": 200,
+            "bytes": 3717
+          },
+          {
+            "file": "icon-maskable-512.png",
+            "status": 200,
+            "bytes": 14905
+          }
+        ],
+        "skinCount": 37
+      }
+    },
+    {
+      "suite": "pwa",
+      "id": "PWA-offline-reload-edit-save-and-online-return",
+      "status": "PASS",
+      "detail": {
+        "offlineBootEditSaveReload": true,
+        "onlineReturn": true,
+        "physicalAndroid": false
+      }
+    },
+    {
+      "suite": "pwa",
+      "id": "PWA-foreign-cache-cannot-supply-app-request",
+      "status": "PASS",
+      "detail": {
+        "ownResponse": true,
+        "foreignPreserved": true
+      }
+    },
+    {
+      "suite": "pwa",
+      "id": "FILE-direct-open",
+      "status": "SKIP",
+      "reason": "Managed Chromium policy blocks file:// navigation; no bypass attempted"
+    }
+  ],
+  "realUserData": false,
+  "publicOrigin": false
+}

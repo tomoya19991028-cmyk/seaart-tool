@@ -1,0 +1,301 @@
+{
+  "executions": [
+    {
+      "name": "csv",
+      "command": [
+        "node",
+        "tests/v44-remaining/csv.cjs"
+      ],
+      "startUTC": "2026-10-26T01:50:19.461367+00:00",
+      "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "testSHA256": "ea2054dde7a3db213782307fb51c21b74875f7927790caba385ede92dccca650",
+      "exitCode": 0,
+      "endUTC": "2026-10-26T01:50:42.235647+00:00",
+      "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+    },
+    {
+      "name": "compatibility",
+      "command": [
+        "node",
+        "tests/v44-remaining/compatibility.cjs"
+      ],
+      "startUTC": "2026-10-26T01:50:42.258098+00:00",
+      "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "testSHA256": "23f6492b3cc7b1087919d57199f36963e5ce183b18e961ce29be0b4020e66d31",
+      "exitCode": 0,
+      "endUTC": "2026-10-26T01:51:08.629350+00:00",
+      "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+    },
+    {
+      "name": "simple-ui",
+      "command": [
+        "node",
+        "tests/v44-remaining/simple-ui.cjs"
+      ],
+      "startUTC": "2026-10-26T01:51:08.780568+00:00",
+      "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "testSHA256": "165a417bb7f1170f14894e5f14968bca57b6fcd4e4a469728849cd3260f28a7b",
+      "exitCode": 0,
+      "endUTC": "2026-10-26T01:52:15.971464+00:00",
+      "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+    },
+    {
+      "name": "media",
+      "command": [
+        "node",
+        "tests/v44-remaining/media.cjs"
+      ],
+      "startUTC": "2026-10-26T01:52:15.989439+00:00",
+      "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "testSHA256": "988a49bef841ade3499d2ea984e245c5ce47828ab4fb3f4ac5159e3257829219",
+      "exitCode": 0,
+      "endUTC": "2026-10-26T01:52:40.718686+00:00",
+      "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+    },
+    {
+      "name": "diagnostics",
+      "command": [
+        "node",
+        "tests/v44-remaining/diagnostics.cjs"
+      ],
+      "startUTC": "2026-10-26T01:52:40.731918+00:00",
+      "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "testSHA256": "92a8288bb718785aeafc3d2e77267c244a21dee9ecc7a410ceb7a00d00d75e8c",
+      "exitCode": 0,
+      "endUTC": "2026-10-26T01:52:48.538250+00:00",
+      "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+    }
+  ],
+  "counts": {
+    "PASS": 16,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "suites": [
+    {
+      "suite": "remaining-csv",
+      "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "tests": [
+        {
+          "id": "CSV-main-quoted-BOM-Japanese-roundtrip-duplicates-and-edits",
+          "status": "PASS",
+          "detail": {
+            "oldRows": 207,
+            "added": 2,
+            "stableIds": [
+              "import-38f25d92-f5e5-43a9-9585-3e34f77e916c",
+              "import-f901be77-108f-48da-8704-6158a1f35989"
+            ],
+            "duplicateNoMutation": true,
+            "quotedCommaNewlineQuoteBOM": true,
+            "editedDetailExport": true
+          }
+        },
+        {
+          "id": "CSV-main-invalid-unclosed-quote-rejected-atomically",
+          "status": "PASS",
+          "detail": {
+            "status": "一覧の取り込み失敗: 引用符が閉じていません",
+            "unchanged": true
+          }
+        },
+        {
+          "id": "CSV-main-empty-invalid-and-cancel-keep-state",
+          "status": "PASS",
+          "detail": {
+            "emptyValueSkipped": true,
+            "overlengthRejected": true,
+            "cancelledFileUnchanged": true
+          }
+        },
+        {
+          "id": "CSV-main-storage-failure-keeps-original-RAM-and-disk",
+          "status": "PASS",
+          "detail": {
+            "saveFailureRollback": true
+          }
+        },
+        {
+          "id": "CSV-main-detail-and-negative-schema-roundtrip",
+          "status": "PASS",
+          "detail": {
+            "detailAndNegative": true
+          }
+        }
+      ],
+      "syntheticOnly": true
+    },
+    {
+      "suite": "remaining-compatibility",
+      "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "tests": [
+        {
+          "id": "FIXED-independent-original-R1-twelve-datasets-retained",
+          "status": "PASS",
+          "detail": {
+            "fixedFixtureSHA256": "e66ce65757f985a23c03d05f1d69d60d214e5169fc093abf72182cfda483d832",
+            "datasets": 12,
+            "oldCatalogRows": 3081,
+            "standardAdapters": 1444,
+            "baselineNeverRewritten": true,
+            "oldFormattedFulltextReplacedByOriginalV44ReplayAndIndependentAttribution": true
+          }
+        },
+        {
+          "id": "SAVE-known-empty-defaults-and-nonempty-sound-reaction-reload",
+          "status": "PASS",
+          "detail": {
+            "fullSnapshotEqual": true,
+            "nonemptyGeneralAndBothCreatureModesRetained": true,
+            "noPermissionGranted": true
+          }
+        },
+        {
+          "id": "JSON-old-main-to-current-and-current-new-pose-safe-old-rejection",
+          "status": "PASS",
+          "detail": {
+            "forwardPass": true,
+            "reverseUnsupported": true,
+            "error": "擬人化外見の形式が不正です",
+            "unchanged": true,
+            "referenceCommit": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca"
+          }
+        }
+      ],
+      "testDataOnly": true
+    },
+    {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "PASS",
+          "detail": {
+            "person": {
+              "label": "フリーナ（原神）",
+              "tag": "Furina (Genshin Impact)",
+              "weight": 1
+            },
+            "mangaType": {
+              "label": "通常",
+              "tag": "(rating:safe),",
+              "weight": 1
+            },
+            "scene": {
+              "label": "シンプルな背景",
+              "tag": "simple background",
+              "weight": 1,
+              "optionId": "cm-option-35be2117-0c0f-47de-bf08-36e48a37477d"
+            },
+            "independentMain": true
+          }
+        },
+        {
+          "id": "SM-CSV-quoted-Japanese-BOM-duplicates-invalid-and-write-failure",
+          "status": "PASS",
+          "detail": {
+            "quotedCommaNewlineQuote": true,
+            "pastedBOM": true,
+            "duplicates": true,
+            "invalidAtomic": true,
+            "existingDiskAndRowsKeptOnQuota": true,
+            "unsavedRAMWarned": true
+          }
+        },
+        {
+          "id": "SM-own-JSON-named-save-reload-reset-cancel-and-restore",
+          "status": "PASS",
+          "detail": {
+            "ownJSON": true,
+            "namedSave": true,
+            "resetCancel": true,
+            "resetPreservesDefinitions": true,
+            "reload": true,
+            "JSONImport": true,
+            "mainJSONNotCompleteSimpleBackup": true
+          }
+        },
+        {
+          "id": "SM-invalid-own-JSON-and-return-do-not-change-main",
+          "status": "PASS",
+          "detail": {
+            "invalidImportSafe": true,
+            "mainUnchanged": true
+          }
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    },
+    {
+      "suite": "remaining-media",
+      "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "tests": [
+        {
+          "id": "MEDIA-real-PNG-file-cancel-and-leave-return-preserve-session",
+          "status": "PASS",
+          "detail": {
+            "fileCancel": true,
+            "navigateReturn": true,
+            "ids": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "images": [
+              "remaining-0.png",
+              "remaining-1.png"
+            ],
+            "placement": [
+              "contain",
+              "center"
+            ]
+          }
+        },
+        {
+          "id": "MEDIA-invalid-image-decode-keeps-previous-image-and-placement",
+          "status": "PASS",
+          "detail": {
+            "previousImageKept": true
+          }
+        },
+        {
+          "id": "MEDIA-composed-PNG-download-and-session-only-on-reload",
+          "status": "PASS",
+          "detail": {
+            "PNGBytes": 37248,
+            "sessionOnlyImagesAndPlacement": true,
+            "panelIDsRetained": true,
+            "notBackedUpByJSON": true
+          }
+        }
+      ],
+      "localSyntheticImagesOnly": true,
+      "SeaArtImages": false
+    },
+    {
+      "suite": "remaining-diagnostics",
+      "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "tests": [
+        {
+          "id": "DIAGNOSTICS-intentional-failure-retains-case-actual-console-screenshot-trace",
+          "status": "PASS",
+          "detail": {
+            "expectedChildFailure": true,
+            "files": [
+              "page-0.json",
+              "page-0.png",
+              "trace-1.zip"
+            ],
+            "notAProductFailure": true
+          }
+        }
+      ]
+    }
+  ]
+}

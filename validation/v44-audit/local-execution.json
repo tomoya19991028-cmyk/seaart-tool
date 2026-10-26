@@ -1,0 +1,139 @@
+{
+  "productBefore": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+  "productAfter": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+  "gitHEAD": "4d3d9fe19065178e5a4c923b0d800bd00877b136",
+  "node": "v24.19.0",
+  "executions": [
+    {
+      "script": "tests/v44-audit/quality.cjs",
+      "testSHA256": "e7bee6746359bd292da26c9a69ba2bd2bcf62c90505584617218b3abd0f9d343",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/quality.cjs"
+      ],
+      "startUTC": "2026-10-25T18:25:57.793Z",
+      "endUTC": "2026-10-25T18:26:02.661Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 6,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "script": "tests/v44-audit/features.cjs",
+      "testSHA256": "db5d463bf1ec9ce5bf4cf0638c4171546bad69c5425839cc1a26af346fe77bbd",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/features.cjs"
+      ],
+      "startUTC": "2026-10-25T18:26:02.661Z",
+      "endUTC": "2026-10-25T18:26:14.860Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 4,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "script": "tests/v44-audit/matrix.cjs",
+      "testSHA256": "b42d85579be3c7f0236cc63ef89a6111523b8337035a17f3c09fb831b5c8e982",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/matrix.cjs"
+      ],
+      "startUTC": "2026-10-25T18:26:14.860Z",
+      "endUTC": "2026-10-25T18:26:42.367Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 505,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "script": "tests/v44-audit/regressions.cjs",
+      "testSHA256": "cadc5e10675514920245f607096d2c9697efb1ef46042f397cabd67337b1374b",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/regressions.cjs"
+      ],
+      "startUTC": "2026-10-25T18:26:42.367Z",
+      "endUTC": "2026-10-25T18:26:52.650Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 7,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "script": "tests/v44-audit/access.cjs",
+      "testSHA256": "483af8ed8dceea216c943add8beeb3a0ee2d0e707484b22aacdc65f22a54518b",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/access.cjs"
+      ],
+      "startUTC": "2026-10-25T18:26:52.651Z",
+      "endUTC": "2026-10-25T18:27:32.397Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 3,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "script": "tests/v44-audit/compatibility.cjs",
+      "testSHA256": "6621f733177b1869268a579304031cfe21b7a5c5308b8a4fdddc0a1ad7a37af1",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/compatibility.cjs"
+      ],
+      "startUTC": "2026-10-25T18:27:32.399Z",
+      "endUTC": "2026-10-25T18:28:06.345Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 10,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "script": "tests/v44-audit/ui.cjs",
+      "testSHA256": "d76209ac039173958594398b5bb69f2c43101747e24504010780fa7240966fbe",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/ui.cjs"
+      ],
+      "startUTC": "2026-10-25T18:28:06.345Z",
+      "endUTC": "2026-10-25T18:28:45.786Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 14,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "script": "tests/v44-audit/pwa.cjs",
+      "testSHA256": "10e88c942385b95a7bf4686bb62f5302321154bfad198aae6ddea320e7661ce8",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/v44-audit/pwa.cjs"
+      ],
+      "startUTC": "2026-10-25T18:28:45.787Z",
+      "endUTC": "2026-10-25T18:29:23.311Z",
+      "exitCode": 0,
+      "counts": {
+        "PASS": 6,
+        "FAIL": 0,
+        "SKIP": 1
+      }
+    }
+  ],
+  "pass": true,
+  "realUserData": false,
+  "publicOrigin": false
+}

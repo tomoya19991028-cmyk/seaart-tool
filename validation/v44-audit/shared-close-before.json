@@ -1,0 +1,15 @@
+{
+  "choiceOpen": true,
+  "simpleOpen": false,
+  "buttonDialog": "personChoiceDialog",
+  "buttonVisible": false,
+  "buttonHidden": false,
+  "wrapperHidden": true,
+  "testedHTMLSHA256": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+  "steps": [
+    "openSimpleTarget(carry, Aether)",
+    "simpleDialog.close(); openChoiceDialog(outfit) in one JS turn",
+    "wait two animation frames",
+    "read button owner and visibility"
+  ]
+}

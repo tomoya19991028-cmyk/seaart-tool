@@ -31,9 +31,9 @@ await test('TG01',async p=>{
 });
 await test('TG02',p=>p.evaluate(()=>{
  const rows=[];for(const row of tokyoGhoulPhase1.characters){const ref=choose(row.id),id=row.id;
-  profiles[id]={expression:[catalog.expression[0].id],pose:[catalog.pose[0].id],detail:{damage:['bruise'],bodyFeatures:['cat ears']}};const keep=hCanonical({expression:profiles[id].expression,pose:profiles[id].pose,damage:profiles[id].detail.damage});
+  profiles[id]={expression:[catalog.expression[0].id],pose:[catalog.pose[0].id],detail:{damage:['bruise'],bodyFeatures:['cat ears']}};paMigrate(profiles[id]);const keep=hCanonical({expression:profiles[id].expression,pose:profiles[id].pose,poseActions:profiles[id].poseActions,damage:profiles[id].detail.damage});
   const f=standard(ref);ck(f,'standard registered');apply(ref,f);const x=profiles[id];ck(item('hairColor',x.hairPrimary).value===row.preset.hair.primary,'hair');ck(item('eyeColor',x.eyeLeft).value===row.preset.eyes.left,'eyes');
-  ck(asList(x.detail.bodyFeatures).includes('cat ears'),'manual body retained');ck(keep===hCanonical({expression:x.expression,pose:x.pose,damage:x.detail.damage}),'unrelated settings retained');
+  ck(asList(x.detail.bodyFeatures).includes('cat ears'),'manual body retained');ck(keep===hCanonical({expression:x.expression,pose:x.pose,poseActions:x.poseActions,damage:x.detail.damage}),'unrelated settings retained');
   ck(x.outfit.length===1&&outfitSetForValue(item('outfit',x.outfit[0]).value),'outfit registered');rows.push({id,standard:f.id});}
  return rows;
 }));
@@ -127,7 +127,7 @@ await test('TG16',p=>p.evaluate(()=>{
 }));
 await test('TG17',p=>p.evaluate(()=>{
  const ref=choose('character-extension-tg-nishiki'),f=special(ref),picker={source:'detail:eyeDetail',ownerId:ref.slice(7)},value=f.uSpecific.detail.eyeDetail[0];personCharacterCandidatesVisible=false;ck(!personCharacterCandidateAllowed(picker,value,false),'OFF hides');apply(ref,f);ck(personCharacterCandidateAllowed(picker,value,true),'selected stays visible');
- personCharacterCandidatesVisible=true;ck(personCharacterCandidateAllowed(picker,value,false),'own ON');const human=choose('character-extension-tg-arima');ck(!personCharacterCandidateAllowed({source:picker.source,ownerId:human.slice(7)},value,false),'other owner hidden');return {offOnContract:true};
+ personCharacterCandidatesVisible=true;ck(personCharacterCandidateAllowed(picker,value,false),'own ON');const human=choose('character-extension-tg-arima');ck(personCharacterCandidateAllowed({source:picker.source,ownerId:human.slice(7)},value,false),'v44 other owner visible');return {offOnContract:true,crossOwnerV44:true};
 }));
 await test('TG18',p=>p.evaluate(presets=>{
  let checked=0;for(const [owner,forms]of Object.entries(presets))for(const form of forms){if(!form.outfit)continue;const row=catalog.outfit.find(r=>r.value===form.outfit);ck(row,'old outfit retained');const owners=characterCandidateOwners('catalog:outfit',row.id);ck(!owners||owners.has(owner),'old outfit owner must stay visible: '+owner);checked++;}
@@ -152,7 +152,8 @@ await test('ALIAS01',async p=>{
 });
 await test('MODEL01',async p=>{
  async function collect(page){return page.evaluate(()=>{const values=['Ken Kaneki (Tokyo Ghoul)','Touka Kirishima (Tokyo Ghoul)'];selected.character=values.map(value=>catalog.character.find(r=>r.value===value).id);profiles=Object.fromEntries(selected.character.map((id,i)=>[id,{hairPrimary:catalog.hairColor[i].id,eyeLeft:catalog.eyeColor[i].id,expression:[catalog.expression[i].id],detail:{damage:['bruise']}}]));restoreCreatures([{id:'phase1-model-creature',species:'wolf',name:'Creature'}]);renderProfiles();subjectSeparationMode='strong';const out={};for(const family of ['standard','illustrious','anima','sdxl','noobai','pony','krea']){modelFamily=family;generate();generateManga();out[family]={positive:$('positive').value,negative:$('negative').value,manga:$('mangaPositive').value,mangaNegative:$('mangaNegative').value}}return out;});}
- const c=await browser.newContext({serviceWorkers:'block'}),q=await c.newPage();await q.goto(baseline);await q.waitForFunction(()=>appReady&&actorFormStorageReady);const old=await collect(q),actual=await collect(p);assert.deepEqual(actual,old);fs.writeFileSync(path.join(dir,'seven-model-fulltexts.json'),JSON.stringify({old,actual},null,2));await c.close();return {models:7,normalAndMangaExact:true};
+ // v44 intentionally changes escaping and subject phrasing; this immutable golden was collected from the supplied v44, not the fixed product.
+ const golden=require('../v44-audit/fixtures/v44-model-samples.json'),actual=await collect(p);assert.deepEqual(actual,golden.outputs);fs.writeFileSync(path.join(dir,'seven-model-fulltexts.json'),JSON.stringify({sourceHTMLSHA256:golden.sourceHTMLSHA256,actual},null,2));return {models:7,normalAndMangaExact:true,baseline:'attached v44'};
 });
 await test('MODEL02',p=>p.evaluate(()=>{
  const ref=choose('character-extension-tg-nishiki');apply(ref,standard(ref));apply(ref,special(ref));const out={};for(const family of ['standard','illustrious','anima','sdxl','noobai','pony','krea']){modelFamily=family;generate();const prompt=$('positive').value;ck(prompt.includes('red kakugan in both eyes with black sclera'),'eye detail in '+family);ck(!/kagune|tentacles|bird wings|cat tail/.test(prompt),'no unimplemented anatomy');out[family]=prompt;}return out;

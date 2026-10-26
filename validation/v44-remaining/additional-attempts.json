@@ -1,0 +1,831 @@
+[
+  {
+    "attempt": "remaining-first",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-first",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "jobs": [
+        {
+          "name": "r1",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/creature-motif-person-r1.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:06:26.612Z",
+          "endUTC": "2026-10-26T01:06:42.354Z",
+          "exitCode": 1,
+          "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+          "productAfter": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+          "testSHA256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+          "adapterSHA256": "8cb930e51e5a010258e6322847b404da045e2173291ec0a334dafd983da2ecc7"
+        },
+        {
+          "name": "legacy",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/horror/replay-legacy.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:06:42.367Z",
+          "endUTC": "2026-10-26T01:07:57.799Z",
+          "exitCode": 0,
+          "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+          "productAfter": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+          "testSHA256": "3ddb4aaaf70aaadee1ff4e8d7cd45d1688de0bd1054da19faa80987792ed14ad",
+          "adapterSHA256": "8cb930e51e5a010258e6322847b404da045e2173291ec0a334dafd983da2ecc7"
+        },
+        {
+          "name": "unified-compatibility",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/unified-ui/compatibility.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:07:57.815Z",
+          "endUTC": "2026-10-26T01:08:14.574Z",
+          "exitCode": 0,
+          "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+          "productAfter": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+          "testSHA256": "f83d5ef1f2069c9f81b4b3c1426991715b0469d950af3da223f0d51292ab0b1d",
+          "adapterSHA256": "8cb930e51e5a010258e6322847b404da045e2173291ec0a334dafd983da2ecc7"
+        },
+        {
+          "name": "auto-compatibility",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/horror-auto/compatibility.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:08:14.593Z",
+          "endUTC": "2026-10-26T01:13:31.906Z",
+          "exitCode": 0,
+          "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+          "productAfter": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "testSHA256": "4c4746306a179b01461c330c0c72bcb4061c6e956cca16ec6be2bc6ee81cf7e1",
+          "adapterSHA256": "a3958951533fdc873628859ef5fa2bf57e93cc91ffb96fe8dd8bf3a44d772ddc"
+        },
+        {
+          "name": "prompts",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/horror/independent-prompts.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:13:31.952Z",
+          "endUTC": "2026-10-26T01:14:25.918Z",
+          "exitCode": 1,
+          "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "productAfter": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "testSHA256": "78159b64fd251662ef473a7a4894027960e7828893a2275fb3e74a4d64995224",
+          "adapterSHA256": "a3958951533fdc873628859ef5fa2bf57e93cc91ffb96fe8dd8bf3a44d772ddc"
+        },
+        {
+          "name": "motif-prompts",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/integration/motif-prompts.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:14:25.959Z",
+          "endUTC": "2026-10-26T01:15:07.831Z",
+          "exitCode": 1,
+          "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "productAfter": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "testSHA256": "b6074cc0a9fdc5897519738e80ab3a21b41ce2f2dfeb59a265871e7a9f844066",
+          "adapterSHA256": "a3958951533fdc873628859ef5fa2bf57e93cc91ffb96fe8dd8bf3a44d772ddc"
+        },
+        {
+          "name": "auto-contracts",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/horror-auto/contracts.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:15:07.844Z",
+          "endUTC": "2026-10-26T01:22:06.649Z",
+          "exitCode": 0,
+          "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "productAfter": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+          "adapterSHA256": "c45202b3bb4b7ac5c810fb88c9ee1cb615e929f6e13fafe20ec9dc1be9688047"
+        },
+        {
+          "name": "auto-ui",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/horror-auto/ui.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:22:06.680Z",
+          "endUTC": "2026-10-26T01:25:24.821Z",
+          "exitCode": 0,
+          "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+          "productAfter": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+          "adapterSHA256": "c45202b3bb4b7ac5c810fb88c9ee1cb615e929f6e13fafe20ec9dc1be9688047"
+        },
+        {
+          "name": "unified-pwa",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/unified-ui/pwa.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:25:24.864Z",
+          "endUTC": "2026-10-26T01:25:55.691Z",
+          "exitCode": 0,
+          "productSHA256": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "productAfter": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "testSHA256": "c24b1185a1c0c77f04f094f9e1c5f04251822b1c6b343fe2fcafd27e7a7da7d6",
+          "adapterSHA256": "c45202b3bb4b7ac5c810fb88c9ee1cb615e929f6e13fafe20ec9dc1be9688047"
+        },
+        {
+          "name": "card-pwa",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/card-tags/pwa.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:25:55.724Z",
+          "endUTC": "2026-10-26T01:26:37.564Z",
+          "exitCode": 0,
+          "productSHA256": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "productAfter": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "testSHA256": "688fb2881c37014731a3c27f5a8d226f9d360b8405d633e4176a5925788504d4",
+          "adapterSHA256": "c45202b3bb4b7ac5c810fb88c9ee1cb615e929f6e13fafe20ec9dc1be9688047"
+        },
+        {
+          "name": "normal-pwa",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/normal-first/pwa.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:26:37.581Z",
+          "endUTC": "2026-10-26T01:27:49.034Z",
+          "exitCode": 0,
+          "productSHA256": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "productAfter": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "testSHA256": "9a0b736149dfbac14fc955c1bdab06dfd69fb1859e418e056f35037f4a4cda77",
+          "adapterSHA256": "c45202b3bb4b7ac5c810fb88c9ee1cb615e929f6e13fafe20ec9dc1be9688047"
+        },
+        {
+          "name": "pwa-regression",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-remaining/replay.cjs",
+            "tests/horror/replay-pwa.cjs"
+          ],
+          "extra": {},
+          "startUTC": "2026-10-26T01:27:49.060Z",
+          "endUTC": "2026-10-26T01:28:30.561Z",
+          "exitCode": 1,
+          "productSHA256": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "productAfter": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+          "testSHA256": "365214f571d554eb0cc0e4084bc0dbb1e0174937d068df4b42209b383a8011c1",
+          "adapterSHA256": "211f6f68dac17a234a51ff310a9c10fa0c314b1cbbbf0c03bcdae3be1c9c7712"
+        }
+      ],
+      "gitHEAD": "e584b955140d5d359be411c38b1191a4082c40a1",
+      "referenceSource": "original user v44 SHA 0c8b08ee906737152aa7b0971edafbc611868c8c524b3fb7f850586f0b5ede5e",
+      "originalFailuresPreserved": true
+    }
+  },
+  {
+    "attempt": "remaining-csv-before",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-csv-before",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-csv",
+      "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+      "tests": [
+        {
+          "id": "CSV-main-quoted-BOM-Japanese-roundtrip-duplicates-and-edits",
+          "status": "PASS",
+          "detail": {
+            "oldRows": 207,
+            "added": 2,
+            "stableIds": [
+              "import-b7ccf727-1650-4866-97aa-7355365df4e4",
+              "import-986d00eb-9f38-499d-8bd1-79d8fc0b612f"
+            ],
+            "duplicateNoMutation": true,
+            "quotedCommaNewlineQuoteBOM": true,
+            "editedDetailExport": true
+          }
+        },
+        {
+          "id": "CSV-main-invalid-unclosed-quote-rejected-atomically",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: 共通：背景に1件追加、0件スキップしました\n    at /workspace/seaart-v44-audit/tests/v44-remaining/csv.cjs:17:173\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/csv.cjs:17:1"
+        },
+        {
+          "id": "CSV-main-empty-invalid-and-cancel-keep-state",
+          "status": "PASS",
+          "detail": {
+            "emptyValueSkipped": true,
+            "overlengthRejected": true,
+            "cancelledFileUnchanged": true
+          }
+        },
+        {
+          "id": "CSV-main-storage-failure-keeps-original-RAM-and-disk",
+          "status": "PASS",
+          "detail": {
+            "saveFailureRollback": true
+          }
+        },
+        {
+          "id": "CSV-main-detail-and-negative-schema-roundtrip",
+          "status": "PASS",
+          "detail": {
+            "detailAndNegative": true
+          }
+        }
+      ],
+      "syntheticOnly": true
+    }
+  },
+  {
+    "attempt": "remaining-compat-first",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-compat-first",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-compatibility",
+      "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+      "tests": [
+        {
+          "id": "FIXED-independent-original-R1-twelve-datasets-retained",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '胸の大きさ'\n- '胸の大きさ（成人のみ）'\n        ^\n\n    at /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:12:78\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:502:9)\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:5:1"
+        },
+        {
+          "id": "SAVE-known-empty-defaults-and-nonempty-sound-reaction-reload",
+          "status": "FAIL",
+          "error": "page.evaluate: Error: 成人設定に未対応のfieldがあります\n    at afAssert (http://127.0.0.1:40023/seaart-tool/index.html:1453:63)\n    at caKeys (http://127.0.0.1:40023/seaart-tool/index.html:1477:29)\n    at caValidateAdult (http://127.0.0.1:40023/seaart-tool/index.html:1483:262)\n    at validateCreatureAdultStoredState (http://127.0.0.1:40023/seaart-tool/index.html:9666:286)\n    at saveCreatureAdultState (http://127.0.0.1:40023/seaart-tool/index.html:9667:255)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:401)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:17:25\n    at Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:476)\n    at /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:16:9"
+        },
+        {
+          "id": "JSON-old-main-to-current-and-current-new-pose-safe-old-rejection",
+          "status": "PASS",
+          "detail": {
+            "forwardPass": true,
+            "reverseUnsupported": true,
+            "error": "擬人化外見の形式が不正です",
+            "unchanged": true,
+            "referenceCommit": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca"
+          }
+        }
+      ],
+      "testDataOnly": true
+    }
+  },
+  {
+    "attempt": "remaining-compat-second",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-compat-second",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-compatibility",
+      "productSHA256": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+      "tests": [
+        {
+          "id": "FIXED-independent-original-R1-twelve-datasets-retained",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: detail subjectRelation/facing each other\n    at /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:12:196\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:5:1"
+        },
+        {
+          "id": "SAVE-known-empty-defaults-and-nonempty-sound-reaction-reload",
+          "status": "FAIL",
+          "error": "page.evaluate: Error: 成人候補が未登録・非表示または参照不明です\n    at afAssert (http://127.0.0.1:34373/seaart-tool/index.html:1453:63)\n    at caResolveAdultCandidates (http://127.0.0.1:34373/seaart-tool/index.html:1505:22)\n    at validateCreatureAdultStoredState (http://127.0.0.1:34373/seaart-tool/index.html:9667:467)\n    at saveCreatureAdultState (http://127.0.0.1:34373/seaart-tool/index.html:9668:255)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:340)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:17:25\n    at Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:476)\n    at /workspace/seaart-v44-audit/tests/v44-remaining/compatibility.cjs:16:9"
+        },
+        {
+          "id": "JSON-old-main-to-current-and-current-new-pose-safe-old-rejection",
+          "status": "PASS",
+          "detail": {
+            "forwardPass": true,
+            "reverseUnsupported": true,
+            "error": "擬人化外見の形式が不正です",
+            "unchanged": true,
+            "referenceCommit": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca"
+          }
+        }
+      ],
+      "testDataOnly": true
+    }
+  },
+  {
+    "attempt": "remaining-simple-first",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-simple-first",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: existing background import source\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:15:186\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:10:1"
+        },
+        {
+          "id": "SM-own-JSON-named-save-reload-reset-cancel-and-restore",
+          "status": "FAIL",
+          "error": "locator.click: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#simpleMangaTool').locator('#simpleData')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"simpleData\" class=\"secondary\">保存・読み込み</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" class=\"cm-dialog\" id=\"cardManagerDialog\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" class=\"cm-dialog\" id=\"cardManagerDialog\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    84 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <dialog open=\"\" class=\"cm-dialog\" id=\"cardManagerDialog\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:22:61\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:21:1"
+        },
+        {
+          "id": "SM-invalid-own-JSON-and-return-do-not-change-main",
+          "status": "FAIL",
+          "error": "locator.click: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#simpleMangaTool').locator('#simpleData')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"simpleData\" class=\"secondary\">保存・読み込み</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" class=\"cm-dialog\" id=\"cardManagerDialog\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" class=\"cm-dialog\" id=\"cardManagerDialog\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    80 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <dialog open=\"\" class=\"cm-dialog\" id=\"cardManagerDialog\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:32:133\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:32:1"
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    }
+  },
+  {
+    "attempt": "remaining-simple-second",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-simple-second",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "FAIL",
+          "error": "page.evaluate: ReferenceError: smImportSources is not defined\n    at eval (eval at evaluate (:311:30), <anonymous>:1:5)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:15:286\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:10:1"
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    }
+  },
+  {
+    "attempt": "remaining-simple-third",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-simple-third",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: existing background import source []\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:15:343\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:10:1"
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    }
+  },
+  {
+    "attempt": "remaining-simple-fourth",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-simple-fourth",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "PASS",
+          "detail": {
+            "person": {
+              "label": "フリーナ（原神）",
+              "tag": "Furina (Genshin Impact)",
+              "weight": 1
+            },
+            "mangaType": {
+              "label": "通常",
+              "tag": "(rating:safe),",
+              "weight": 1
+            },
+            "scene": {
+              "label": "シンプルな背景",
+              "tag": "simple background",
+              "weight": 1,
+              "optionId": "cm-option-8e73872d-95cd-4e76-95a9-649e826cc25e"
+            },
+            "independentMain": true
+          }
+        },
+        {
+          "id": "SM-own-JSON-named-save-reload-reset-cancel-and-restore",
+          "status": "FAIL",
+          "error": "locator.fill: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#simpleMangaTool').locator('#optionEditor').locator('input').first()\u001b[22m\n\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:22:168\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:21:1"
+        },
+        {
+          "id": "SM-invalid-own-JSON-and-return-do-not-change-main",
+          "status": "FAIL",
+          "error": "locator.setInputFiles: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#simpleMangaTool').locator('#optionEditor input[type=file]')\u001b[22m\n\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:32:162\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:32:1"
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    }
+  },
+  {
+    "attempt": "remaining-simple-fifth",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-simple-fifth",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "a6f4d3b35acfa79120627627419235043ae157ec8cef8336168ac8034c117be6",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "PASS",
+          "detail": {
+            "person": {
+              "label": "フリーナ（原神）",
+              "tag": "Furina (Genshin Impact)",
+              "weight": 1
+            },
+            "mangaType": {
+              "label": "通常",
+              "tag": "(rating:safe),",
+              "weight": 1
+            },
+            "scene": {
+              "label": "シンプルな背景",
+              "tag": "simple background",
+              "weight": 1,
+              "optionId": "cm-option-820be5ae-e479-44ab-8e3c-06f6ac12f402"
+            },
+            "independentMain": true
+          }
+        },
+        {
+          "id": "SM-CSV-quoted-Japanese-BOM-duplicates-invalid-and-write-failure",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: header is skipped even with pasted BOM\n\n210 !== 209\n\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:25:96\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:20:1"
+        },
+        {
+          "id": "SM-own-JSON-named-save-reload-reset-cancel-and-restore",
+          "status": "PASS",
+          "detail": {
+            "ownJSON": true,
+            "namedSave": true,
+            "resetCancel": true,
+            "resetPreservesDefinitions": true,
+            "reload": true,
+            "JSONImport": true,
+            "mainJSONNotCompleteSimpleBackup": true
+          }
+        },
+        {
+          "id": "SM-invalid-own-JSON-and-return-do-not-change-main",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '{\"keys\":{\"SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1\":\"{\\\\\"version\\\\\":1,\\\\\"storageNamespace\\\\\":\\\\\"creature-adult-v1/result-access-v1/motif-person-v1/horror-v1\\\\\",\\\\\"revision\\\\\":\\\\\"d08d1b5c-d3f5-47b9-902a-9b42e9f7c66d\\\\\",\\\\\"hashes\\\\\":{\\\\\"settings\\\\\":\\\\\"6a0b3dd7ed4c6ecb\\\\\",\\\\\"working\\\\\":\\\\\"9f431c0371280fef\\\\\",\\\\\"history\\\\\":\\\\\"e21d7ba38fe2b2e\\\\\"}}\",\"SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1\":null,\"SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1\":\"{\\\\\"version\\\\\":2,\\\\\"entries\\\\\":[],\\\\\"revision\\\\\":\\\\\"d08d1b5c-d3f5-47b9-902a-9b42e9f7c66d\\\\\"}\",\"SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1\":\"{\\\\\"version\\\\\":2,\\\\\"working\\\\\":{\\\\\"actorExtensions\\\\\":{\\\\\"version\\\\\":4,\\\\\"byActor\\\\\":{}},\\\\\"subjectSeparationMode\\\\\":\\\\\"standard\\\\\",\\\\\"renderingExpressions\\\\\":[],\\\\\"qualitySettings\\\\\":{\\\\\"quality\\\\\":\\\\\"standard\\\\\",\\\\\"detail\\\\\":\\\\\"standard\\\\\",\\\\\"focus\\\\\":[]},\\\\\"negativePreset\\\\\":\\\\\"standard\\\\\",\\\\\"selectedMood\\\\\":[],\\\\\"selected\\\\\":{\\\\\"character\\\\\":[],\\\\\"outfit\\\\\":[],\\\\\"expression\\\\\":[],\\\\\"pose\\\\\":[],\\\\\"composition\\\\\":[],\\\\\"background\\\\\":[],\\\\\"style\\\\\":[{\\\\\"id\\\\\":\\\\\"style-0\\\\\",\\\\\"name\\\\\":\\\\\"アニメ風\\\\\",\\\\\"value\\\\\":\\\\\"anime style\\\\\",\\\\\"group\\\\\":\\\\\"イラスト・漫画\\\\\"}],\\\\\"hairStyle\\\\\":[],\\\\\"hairColor\\\\\":[],\\\\\"eyeColor\\\\\":[],\\\\\"body\\\\\":[],\\\\\"lighting\\\\\":[],\\\\\"weather\\\\\":[],\\\\\"time\\\\\":[],\\\\\"mood\\\\\":[]},\\\\\"originalCharacters\\\\\":[],\\\\\"creatures\\\\\":[],\\\\\"profiles\\\\\":{},\\\\\"weights\\\\\":{\\\\\"character\\\\\":1,\\\\\"outfit\\\\\":1,\\\\\"expression\\\\\":1,\\\\\"pose\\\\\":1,\\\\\"composition\\\\\":1,\\\\\"background\\\\\":1,\\\\\"style\\\\\":1,\\\\\"hairStyle\\\\\":1,\\\\\"hairColor\\\\\":1,\\\\\"eyeColor\\\\\":1,\\\\\"body\\\\\":1,\\\\\"lighting\\\\\":1,\\\\\"weather\\\\\":1,\\\\\"time\\\\\":1,\\\\\"mood\\\\\":1,\\\\\"clothingDetail\\\\\":1,\\\\\"accessory\\\\\":1,\\\\\"weapon\\\\\":1,\\\\\"effect\\\\\":1,\\\\\"relationship\\\\\":1,\\\\\"extra\\\\\":1},\\\\\"scene\\\\\":{\\\\\"relation\\\\\":[],\\\\\"composition\\\\\":[],\\\\\"extra\\\\\":\\\\\"\\\\\"},\\\\\"adultScene\\\\\":{\\\\\"enabled\\\\\":false,\\\\\"confirmed\\\\\":{},\\\\\"people\\\\\":{},\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"phase\\\\\":\\\\\"\\\\\",\\\\\"focus\\\\\":\\\\\"\\\\\",\\\\\"soundEffect\\\\\":[],\\\\\"reactionEffect\\\\\":[],\\\\\"extra\\\\\":\\\\\"\\\\\",\\\\\"soundEffectText\\\\\":\\\\\"\\\\\",\\\\\"reactionEffectText\\\\\":\\\\\"\\\\\"},\\\\\"mangaState\\\\\":{\\\\\"count\\\\\":4,\\\\\"layout\\\\\":\\\\\"1::上1・中2・下1\\\\\",\\\\\"format\\\\\":\\\\\"portrait\\\\\",\\\\\"reading\\\\\":\\\\\"left to right\\\\\",\\\\\"frameStyle\\\\\":\\\\\"subtle\\\\\",\\\\\"storyAdult\\\\\":false,\\\\\"story\\\\\":{\\\\\"genre\\\\\":\\\\\"\\\\\",\\\\\"pattern\\\\\":\\\\\"\\\\\",\\\\\"applied\\\\\":null,\\\\\"undo\\\\\":null},\\\\\"panels\\\\\":[{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}}]},\\\\\"negativeSelected\\\\\":[\\\\\"quality\\\\\",\\\\\"anatomy\\\\\",\\\\\"hands\\\\\",\\\\\"text\\\\\"],\\\\\"order\\\\\":[\\\\\"composition\\\\\",\\\\\"character\\\\\",\\\\\"expression\\\\\",\\\\\"eyeColor\\\\\",\\\\\"hairColor\\\\\",\\\\\"hairStyle\\\\\",\\\\\"body\\\\\",\\\\\"outfit\\\\\",\\\\\"pose\\\\\",\\\\\"style\\\\\",\\\\\"background\\\\\",\\\\\"weather\\\\\",\\\\\"time\\\\\",\\\\\"lighting\\\\\"],\\\\\"tagWeights\\\\\":{},\\\\\"modelFamily\\\\\":\\\\\"standard\\\\\",\\\\\"promptOrderMode\\\\\":\\\\\"recommended\\\\\",\\\\\"selectionOrder\\\\\":[\\\\\"character\\\\\",\\\\\"composition\\\\\",\\\\\"background\\\\\",\\\\\"lighting\\\\\",\\\\\"weatherTime\\\\\",\\\\\"mood\\\\\"],\\\\\"hiddenCategories\\\\\":[],\\\\\"customCharacter\\\\\":\\\\\"\\\\\",\\\\\"weight\\\\\":\\\\\"1\\\\\",\\\\\"lineStyle\\\\\":\\\\\"\\\\\",\\\\\"lineStyleLabel\\\\\":\\\\\"指定なし\\\\\",\\\\\"colorStyle\\\\\":\\\\\"\\\\\",\\\\\"extra\\\\\":\\\\\"\\\\\",\\\\\"positive\\\\\":\\\\\"masterpiece, best quality, detailed face, detailed eyes, anime style\\\\\",\\\\\"negative\\\\\":\\\\\"worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble\\\\\",\\\\\"mangaPositive\\\\\":\\\\\"\\\\\",\\\\\"mangaNegative\\\\\":\\\\\"\\\\\",\\\\\"mainCardSelections\\\\\":{},\\\\\"cardPlacements\\\\\":{}},\\\\\"revision\\\\\":\\\\\"d08d1b5c-d3f5-47b9-902a-9b42e9f7c66d\\\\\"}\",\"seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1\":\"{\\\\\"version\\\\\":5,\\\\\"catalog\\\\\":{\\\\\"character\\\\\":[{\\\\\"id\\\\\":\\\\\"character-0\\\\\",\\\\\"name\\\\\":\\\\\"アルレッキーノ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Arlecchino (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-1\\\\\",\\\\\"name\\\\\":\\\\\"雷電将軍（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Raiden Shogun (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-2\\\\\",\\\\\"name\\\\\":\\\\\"フリーナ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Furina (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-3\\\\\",\\\\\"name\\\\\":\\\\\"蛍（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lumine (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-4\\\\\",\\\\\"name\\\\\":\\\\\"空（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Aether (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-5\\\\\",\\\\\"name\\\\\":\\\\\"ジン（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Jean (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-6\\\\\",\\\\\"name\\\\\":\\\\\"アンバー（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Amber (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-7\\\\\",\\\\\"name\\\\\":\\\\\"リサ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lisa (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-8\\\\\",\\\\\"name\\\\\":\\\\\"ガイア（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kaeya (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-9\\\\\",\\\\\"name\\\\\":\\\\\"ディルック（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Diluc (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-10\\\\\",\\\\\"name\\\\\":\\\\\"ウェンティ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Venti (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-11\\\\\",\\\\\"name\\\\\":\\\\\"モナ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Mona (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-12\\\\\",\\\\\"name\\\\\":\\\\\"フィッシュル（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Fischl (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-13\\\\\",\\\\\"name\\\\\":\\\\\"ノエル（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Noelle (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-14\\\\\",\\\\\"name\\\\\":\\\\\"スクロース（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Sucrose (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-15\\\\\",\\\\\"name\\\\\":\\\\\"バーバラ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Barbara (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-16\\\\\",\\\\\"name\\\\\":\\\\\"刻晴（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Keqing (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-17\\\\\",\\\\\"name\\\\\":\\\\\"凝光（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Ningguang (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-18\\\\\",\\\\\"name\\\\\":\\\\\"北斗（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Beidou (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-19\\\\\",\\\\\"name\\\\\":\\\\\"甘雨（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Ganyu (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-20\\\\\",\\\\\"name\\\\\":\\\\\"胡桃（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Hu Tao (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-21\\\\\",\\\\\"name\\\\\":\\\\\"鍾離（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Zhongli (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-22\\\\\",\\\\\"name\\\\\":\\\\\"魈（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Xiao (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-23\\\\\",\\\\\"name\\\\\":\\\\\"申鶴（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Shenhe (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-24\\\\\",\\\\\"name\\\\\":\\\\\"夜蘭（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Yelan (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-25\\\\\",\\\\\"name\\\\\":\\\\\"神里綾華（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kamisato Ayaka (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-26\\\\\",\\\\\"name\\\\\":\\\\\"神里綾人（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kamisato Ayato (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-27\\\\\",\\\\\"name\\\\\":\\\\\"宵宮（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Yoimiya (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-28\\\\\",\\\\\"name\\\\\":\\\\\"珊瑚宮心海（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Sangonomiya Kokomi (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-29\\\\\",\\\\\"name\\\\\":\\\\\"八重神子（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Yae Miko (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-30\\\\\",\\\\\"name\\\\\":\\\\\"楓原万葉（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kaedehara Kazuha (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-31\\\\\",\\\\\"name\\\\\":\\\\\"ナヒーダ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Nahida (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-32\\\\\",\\\\\"name\\\\\":\\\\\"ニィロウ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Nilou (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-33\\\\\",\\\\\"name\\\\\":\\\\\"ディシア（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Dehya (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-34\\\\\",\\\\\"name\\\\\":\\\\\"アルハイゼン（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Alhaitham (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-35\\\\\",\\\\\"name\\\\\":\\\\\"セノ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Cyno (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-36\\\\\",\\\\\"name\\\\\":\\\\\"ナヴィア（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Navia (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-37\\\\\",\\\\\"name\\\\\":\\\\\"クロリンデ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Clorinde (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-38\\\\\",\\\\\"name\\\\\":\\\\\"リネ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lyney (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-39\\\\\",\\\\\"name\\\\\":\\\\\"リネット（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lynette (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-40\\\\\",\\\\\"name\\\\\":\\\\\"ヌヴィレット（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Neuvillette (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-41\\\\\",\\\\\"name\\\\\":\\\\\"リオセスリ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Wriothesley (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-42\\\\\",\\\\\"name\\\\\":\\\\\"千織（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Chiori (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-43\\\\\",\\\\\"name\\\\\":\\\\\"三月なのか（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"March 7th (Honkai: Star Rail)\\\\\",\\\\\"group\\\\\":\\\\\"崩壊：スターレイル\\\\\"},{\\\\\"id\\\\\":\\\\\"character-44\\\\\",\\\\\"name\\\\\":\\\\\"丹恒（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"Dan Heng (Honkai: Star Rail)\\\\\",\\\\\"group\\\\\":\\\\\"崩壊：スターレイル\\\\\"},{\\\\\"id\\\\\":\\\\\"character-45\\\\\",\\\\\"name\\\\\":\\\\\"姫子（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"Himeko (Honkai: Star Rail)\\\\\",\\\\\"group\\\\\":\\\\\"崩壊：スターレイル\\\\\"},{\\\\\"id\\\\\":\\\\\"character-46\\\\\",\\\\\"name\\\\\":\\\\\"ヴェルト（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"Welt (Honk'... 408566 more characters\n- '{\"keys\":{\"SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1\":\"{\\\\\"version\\\\\":1,\\\\\"storageNamespace\\\\\":\\\\\"creature-adult-v1/result-access-v1/motif-person-v1/horror-v1\\\\\",\\\\\"revision\\\\\":\\\\\"086f3dbe-b46f-4da3-a3e2-fa1c3c786b22\\\\\",\\\\\"hashes\\\\\":{\\\\\"settings\\\\\":\\\\\"6f52856e6d94b11e\\\\\",\\\\\"working\\\\\":\\\\\"66d5e47ea34ec00e\\\\\",\\\\\"history\\\\\":\\\\\"8b04bc2791f6868f\\\\\"}}\",\"SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1\":null,\"SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1\":\"{\\\\\"version\\\\\":2,\\\\\"entries\\\\\":[],\\\\\"revision\\\\\":\\\\\"086f3dbe-b46f-4da3-a3e2-fa1c3c786b22\\\\\"}\",\"SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1\":\"{\\\\\"version\\\\\":2,\\\\\"working\\\\\":{\\\\\"actorExtensions\\\\\":{\\\\\"version\\\\\":4,\\\\\"byActor\\\\\":{}},\\\\\"subjectSeparationMode\\\\\":\\\\\"standard\\\\\",\\\\\"renderingExpressions\\\\\":[],\\\\\"qualitySettings\\\\\":{\\\\\"quality\\\\\":\\\\\"standard\\\\\",\\\\\"detail\\\\\":\\\\\"standard\\\\\",\\\\\"focus\\\\\":[]},\\\\\"negativePreset\\\\\":\\\\\"standard\\\\\",\\\\\"selectedMood\\\\\":[],\\\\\"selected\\\\\":{\\\\\"character\\\\\":[],\\\\\"outfit\\\\\":[],\\\\\"expression\\\\\":[],\\\\\"pose\\\\\":[],\\\\\"composition\\\\\":[],\\\\\"background\\\\\":[],\\\\\"style\\\\\":[{\\\\\"id\\\\\":\\\\\"style-0\\\\\",\\\\\"name\\\\\":\\\\\"アニメ風\\\\\",\\\\\"value\\\\\":\\\\\"anime style\\\\\",\\\\\"group\\\\\":\\\\\"イラスト・漫画\\\\\"}],\\\\\"hairStyle\\\\\":[],\\\\\"hairColor\\\\\":[],\\\\\"eyeColor\\\\\":[],\\\\\"body\\\\\":[],\\\\\"lighting\\\\\":[],\\\\\"weather\\\\\":[],\\\\\"time\\\\\":[],\\\\\"mood\\\\\":[]},\\\\\"originalCharacters\\\\\":[],\\\\\"creatures\\\\\":[],\\\\\"profiles\\\\\":{},\\\\\"weights\\\\\":{\\\\\"character\\\\\":1,\\\\\"outfit\\\\\":1,\\\\\"expression\\\\\":1,\\\\\"pose\\\\\":1,\\\\\"composition\\\\\":1,\\\\\"background\\\\\":1,\\\\\"style\\\\\":1,\\\\\"hairStyle\\\\\":1,\\\\\"hairColor\\\\\":1,\\\\\"eyeColor\\\\\":1,\\\\\"body\\\\\":1,\\\\\"lighting\\\\\":1,\\\\\"weather\\\\\":1,\\\\\"time\\\\\":1,\\\\\"mood\\\\\":1,\\\\\"clothingDetail\\\\\":1,\\\\\"accessory\\\\\":1,\\\\\"weapon\\\\\":1,\\\\\"effect\\\\\":1,\\\\\"relationship\\\\\":1,\\\\\"extra\\\\\":1},\\\\\"scene\\\\\":{\\\\\"relation\\\\\":[],\\\\\"composition\\\\\":[],\\\\\"extra\\\\\":\\\\\"\\\\\"},\\\\\"adultScene\\\\\":{\\\\\"enabled\\\\\":false,\\\\\"confirmed\\\\\":{},\\\\\"people\\\\\":{},\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"phase\\\\\":\\\\\"\\\\\",\\\\\"focus\\\\\":\\\\\"\\\\\",\\\\\"soundEffect\\\\\":[],\\\\\"reactionEffect\\\\\":[],\\\\\"extra\\\\\":\\\\\"\\\\\",\\\\\"soundEffectText\\\\\":\\\\\"\\\\\",\\\\\"reactionEffectText\\\\\":\\\\\"\\\\\"},\\\\\"mangaState\\\\\":{\\\\\"count\\\\\":4,\\\\\"layout\\\\\":\\\\\"1::上1・中2・下1\\\\\",\\\\\"format\\\\\":\\\\\"portrait\\\\\",\\\\\"reading\\\\\":\\\\\"left to right\\\\\",\\\\\"frameStyle\\\\\":\\\\\"subtle\\\\\",\\\\\"storyAdult\\\\\":false,\\\\\"story\\\\\":{\\\\\"genre\\\\\":\\\\\"\\\\\",\\\\\"pattern\\\\\":\\\\\"\\\\\",\\\\\"applied\\\\\":null,\\\\\"undo\\\\\":null},\\\\\"panels\\\\\":[{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}},{\\\\\"description\\\\\":\\\\\"\\\\\",\\\\\"place\\\\\":\\\\\"\\\\\",\\\\\"action\\\\\":\\\\\"\\\\\",\\\\\"beat\\\\\":\\\\\"\\\\\",\\\\\"mood\\\\\":\\\\\"\\\\\",\\\\\"camera\\\\\":\\\\\"\\\\\",\\\\\"background\\\\\":\\\\\"\\\\\",\\\\\"bubble\\\\\":\\\\\"\\\\\",\\\\\"sound\\\\\":\\\\\"\\\\\",\\\\\"storyRole\\\\\":\\\\\"\\\\\",\\\\\"storySubject\\\\\":\\\\\"\\\\\",\\\\\"storyPose\\\\\":\\\\\"\\\\\",\\\\\"storyExpression\\\\\":\\\\\"\\\\\",\\\\\"storyAction\\\\\":\\\\\"\\\\\",\\\\\"creatures\\\\\":{},\\\\\"people\\\\\":{}}]},\\\\\"negativeSelected\\\\\":[\\\\\"quality\\\\\",\\\\\"anatomy\\\\\",\\\\\"hands\\\\\",\\\\\"text\\\\\"],\\\\\"order\\\\\":[\\\\\"composition\\\\\",\\\\\"character\\\\\",\\\\\"expression\\\\\",\\\\\"eyeColor\\\\\",\\\\\"hairColor\\\\\",\\\\\"hairStyle\\\\\",\\\\\"body\\\\\",\\\\\"outfit\\\\\",\\\\\"pose\\\\\",\\\\\"style\\\\\",\\\\\"background\\\\\",\\\\\"weather\\\\\",\\\\\"time\\\\\",\\\\\"lighting\\\\\"],\\\\\"tagWeights\\\\\":{},\\\\\"modelFamily\\\\\":\\\\\"standard\\\\\",\\\\\"promptOrderMode\\\\\":\\\\\"recommended\\\\\",\\\\\"selectionOrder\\\\\":[\\\\\"character\\\\\",\\\\\"composition\\\\\",\\\\\"background\\\\\",\\\\\"lighting\\\\\",\\\\\"weatherTime\\\\\",\\\\\"mood\\\\\"],\\\\\"hiddenCategories\\\\\":[],\\\\\"customCharacter\\\\\":\\\\\"\\\\\",\\\\\"weight\\\\\":\\\\\"1\\\\\",\\\\\"lineStyle\\\\\":\\\\\"\\\\\",\\\\\"lineStyleLabel\\\\\":\\\\\"指定なし\\\\\",\\\\\"colorStyle\\\\\":\\\\\"\\\\\",\\\\\"extra\\\\\":\\\\\"\\\\\",\\\\\"positive\\\\\":\\\\\"masterpiece, best quality, detailed face, detailed eyes, anime style\\\\\",\\\\\"negative\\\\\":\\\\\"worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble\\\\\",\\\\\"mangaPositive\\\\\":\\\\\"\\\\\",\\\\\"mangaNegative\\\\\":\\\\\"\\\\\",\\\\\"mainCardSelections\\\\\":{},\\\\\"cardPlacements\\\\\":{}},\\\\\"revision\\\\\":\\\\\"086f3dbe-b46f-4da3-a3e2-fa1c3c786b22\\\\\"}\",\"seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1\":\"{\\\\\"version\\\\\":5,\\\\\"catalog\\\\\":{\\\\\"character\\\\\":[{\\\\\"id\\\\\":\\\\\"character-0\\\\\",\\\\\"name\\\\\":\\\\\"アルレッキーノ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Arlecchino (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-1\\\\\",\\\\\"name\\\\\":\\\\\"雷電将軍（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Raiden Shogun (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-2\\\\\",\\\\\"name\\\\\":\\\\\"フリーナ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Furina (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-3\\\\\",\\\\\"name\\\\\":\\\\\"蛍（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lumine (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-4\\\\\",\\\\\"name\\\\\":\\\\\"空（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Aether (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-5\\\\\",\\\\\"name\\\\\":\\\\\"ジン（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Jean (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-6\\\\\",\\\\\"name\\\\\":\\\\\"アンバー（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Amber (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-7\\\\\",\\\\\"name\\\\\":\\\\\"リサ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lisa (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-8\\\\\",\\\\\"name\\\\\":\\\\\"ガイア（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kaeya (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-9\\\\\",\\\\\"name\\\\\":\\\\\"ディルック（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Diluc (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-10\\\\\",\\\\\"name\\\\\":\\\\\"ウェンティ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Venti (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-11\\\\\",\\\\\"name\\\\\":\\\\\"モナ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Mona (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-12\\\\\",\\\\\"name\\\\\":\\\\\"フィッシュル（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Fischl (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-13\\\\\",\\\\\"name\\\\\":\\\\\"ノエル（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Noelle (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-14\\\\\",\\\\\"name\\\\\":\\\\\"スクロース（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Sucrose (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-15\\\\\",\\\\\"name\\\\\":\\\\\"バーバラ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Barbara (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-16\\\\\",\\\\\"name\\\\\":\\\\\"刻晴（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Keqing (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-17\\\\\",\\\\\"name\\\\\":\\\\\"凝光（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Ningguang (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-18\\\\\",\\\\\"name\\\\\":\\\\\"北斗（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Beidou (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-19\\\\\",\\\\\"name\\\\\":\\\\\"甘雨（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Ganyu (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-20\\\\\",\\\\\"name\\\\\":\\\\\"胡桃（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Hu Tao (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-21\\\\\",\\\\\"name\\\\\":\\\\\"鍾離（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Zhongli (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-22\\\\\",\\\\\"name\\\\\":\\\\\"魈（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Xiao (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-23\\\\\",\\\\\"name\\\\\":\\\\\"申鶴（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Shenhe (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-24\\\\\",\\\\\"name\\\\\":\\\\\"夜蘭（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Yelan (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-25\\\\\",\\\\\"name\\\\\":\\\\\"神里綾華（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kamisato Ayaka (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-26\\\\\",\\\\\"name\\\\\":\\\\\"神里綾人（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kamisato Ayato (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-27\\\\\",\\\\\"name\\\\\":\\\\\"宵宮（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Yoimiya (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-28\\\\\",\\\\\"name\\\\\":\\\\\"珊瑚宮心海（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Sangonomiya Kokomi (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-29\\\\\",\\\\\"name\\\\\":\\\\\"八重神子（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Yae Miko (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-30\\\\\",\\\\\"name\\\\\":\\\\\"楓原万葉（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Kaedehara Kazuha (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-31\\\\\",\\\\\"name\\\\\":\\\\\"ナヒーダ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Nahida (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-32\\\\\",\\\\\"name\\\\\":\\\\\"ニィロウ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Nilou (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-33\\\\\",\\\\\"name\\\\\":\\\\\"ディシア（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Dehya (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-34\\\\\",\\\\\"name\\\\\":\\\\\"アルハイゼン（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Alhaitham (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-35\\\\\",\\\\\"name\\\\\":\\\\\"セノ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Cyno (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-36\\\\\",\\\\\"name\\\\\":\\\\\"ナヴィア（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Navia (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-37\\\\\",\\\\\"name\\\\\":\\\\\"クロリンデ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Clorinde (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-38\\\\\",\\\\\"name\\\\\":\\\\\"リネ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lyney (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-39\\\\\",\\\\\"name\\\\\":\\\\\"リネット（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Lynette (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-40\\\\\",\\\\\"name\\\\\":\\\\\"ヌヴィレット（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Neuvillette (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-41\\\\\",\\\\\"name\\\\\":\\\\\"リオセスリ（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Wriothesley (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-42\\\\\",\\\\\"name\\\\\":\\\\\"千織（原神）\\\\\",\\\\\"value\\\\\":\\\\\"Chiori (Genshin Impact)\\\\\",\\\\\"group\\\\\":\\\\\"原神\\\\\"},{\\\\\"id\\\\\":\\\\\"character-43\\\\\",\\\\\"name\\\\\":\\\\\"三月なのか（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"March 7th (Honkai: Star Rail)\\\\\",\\\\\"group\\\\\":\\\\\"崩壊：スターレイル\\\\\"},{\\\\\"id\\\\\":\\\\\"character-44\\\\\",\\\\\"name\\\\\":\\\\\"丹恒（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"Dan Heng (Honkai: Star Rail)\\\\\",\\\\\"group\\\\\":\\\\\"崩壊：スターレイル\\\\\"},{\\\\\"id\\\\\":\\\\\"character-45\\\\\",\\\\\"name\\\\\":\\\\\"姫子（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"Himeko (Honkai: Star Rail)\\\\\",\\\\\"group\\\\\":\\\\\"崩壊：スターレイル\\\\\"},{\\\\\"id\\\\\":\\\\\"character-46\\\\\",\\\\\"name\\\\\":\\\\\"ヴェルト（崩壊：スターレイル）\\\\\",\\\\\"value\\\\\":\\\\\"Welt (Hon'... 408702 more characters\n\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:46:553\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:46:1"
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    }
+  },
+  {
+    "attempt": "remaining-simple-sixth",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-simple-sixth",
+    "finalPassCountIncluded": false,
+    "results.json": {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "052b52b2984a1c12f2c459efd67104381c312d176e1406ea186684ea3e9317fc",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "PASS",
+          "detail": {
+            "person": {
+              "label": "フリーナ（原神）",
+              "tag": "Furina (Genshin Impact)",
+              "weight": 1
+            },
+            "mangaType": {
+              "label": "通常",
+              "tag": "(rating:safe),",
+              "weight": 1
+            },
+            "scene": {
+              "label": "シンプルな背景",
+              "tag": "simple background",
+              "weight": 1,
+              "optionId": "cm-option-62440d6d-1d05-41e7-94dd-d869d3311e3e"
+            },
+            "independentMain": true
+          }
+        },
+        {
+          "id": "SM-CSV-quoted-Japanese-BOM-duplicates-invalid-and-write-failure",
+          "status": "FAIL",
+          "error": "locator.innerText: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#simpleMangaTool').locator('#saveStatus')\u001b[22m\n\n    at /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:30:462\n    at async Object.test (/workspace/seaart-v44-audit/tests/v44-audit/helpers.cjs:12:470)\n    at async /workspace/seaart-v44-audit/tests/v44-remaining/simple-ui.cjs:20:1"
+        },
+        {
+          "id": "SM-own-JSON-named-save-reload-reset-cancel-and-restore",
+          "status": "PASS",
+          "detail": {
+            "ownJSON": true,
+            "namedSave": true,
+            "resetCancel": true,
+            "resetPreservesDefinitions": true,
+            "reload": true,
+            "JSONImport": true,
+            "mainJSONNotCompleteSimpleBackup": true
+          }
+        },
+        {
+          "id": "SM-invalid-own-JSON-and-return-do-not-change-main",
+          "status": "PASS",
+          "detail": {
+            "invalidImportSafe": true,
+            "mainUnchanged": true
+          }
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    }
+  },
+  {
+    "attempt": "remaining-main-final",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-main-final",
+    "finalPassCountIncluded": false,
+    "execution.json": {
+      "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+      "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+      "gitHEAD": "e584b955140d5d359be411c38b1191a4082c40a1",
+      "node": "v24.19.0",
+      "executions": [
+        {
+          "script": "tests/v44-audit/quality.cjs",
+          "testSHA256": "e7bee6746359bd292da26c9a69ba2bd2bcf62c90505584617218b3abd0f9d343",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/quality.cjs"
+          ],
+          "startUTC": "2026-10-26T01:30:33.977Z",
+          "endUTC": "2026-10-26T01:30:46.871Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 6,
+            "FAIL": 0,
+            "SKIP": 0
+          }
+        },
+        {
+          "script": "tests/v44-audit/features.cjs",
+          "testSHA256": "db5d463bf1ec9ce5bf4cf0638c4171546bad69c5425839cc1a26af346fe77bbd",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/features.cjs"
+          ],
+          "startUTC": "2026-10-26T01:30:46.872Z",
+          "endUTC": "2026-10-26T01:31:13.752Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 4,
+            "FAIL": 0,
+            "SKIP": 0
+          }
+        },
+        {
+          "script": "tests/v44-audit/matrix.cjs",
+          "testSHA256": "b42d85579be3c7f0236cc63ef89a6111523b8337035a17f3c09fb831b5c8e982",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/matrix.cjs"
+          ],
+          "startUTC": "2026-10-26T01:31:13.753Z",
+          "endUTC": "2026-10-26T01:32:05.655Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 505,
+            "FAIL": 0,
+            "SKIP": 0
+          }
+        },
+        {
+          "script": "tests/v44-audit/regressions.cjs",
+          "testSHA256": "cadc5e10675514920245f607096d2c9697efb1ef46042f397cabd67337b1374b",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/regressions.cjs"
+          ],
+          "startUTC": "2026-10-26T01:32:05.656Z",
+          "endUTC": "2026-10-26T01:32:29.763Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 7,
+            "FAIL": 0,
+            "SKIP": 0
+          }
+        },
+        {
+          "script": "tests/v44-audit/access.cjs",
+          "testSHA256": "483af8ed8dceea216c943add8beeb3a0ee2d0e707484b22aacdc65f22a54518b",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/access.cjs"
+          ],
+          "startUTC": "2026-10-26T01:32:29.769Z",
+          "endUTC": "2026-10-26T01:33:34.658Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 3,
+            "FAIL": 0,
+            "SKIP": 0
+          }
+        },
+        {
+          "script": "tests/v44-audit/compatibility.cjs",
+          "testSHA256": "6621f733177b1869268a579304031cfe21b7a5c5308b8a4fdddc0a1ad7a37af1",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/compatibility.cjs"
+          ],
+          "startUTC": "2026-10-26T01:33:34.661Z",
+          "endUTC": "2026-10-26T01:34:21.794Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 10,
+            "FAIL": 0,
+            "SKIP": 0
+          }
+        },
+        {
+          "script": "tests/v44-audit/ui.cjs",
+          "testSHA256": "d76209ac039173958594398b5bb69f2c43101747e24504010780fa7240966fbe",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/ui.cjs"
+          ],
+          "startUTC": "2026-10-26T01:34:21.794Z",
+          "endUTC": "2026-10-26T01:40:19.534Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 14,
+            "FAIL": 0,
+            "SKIP": 0
+          }
+        },
+        {
+          "script": "tests/v44-audit/pwa.cjs",
+          "testSHA256": "10e88c942385b95a7bf4686bb62f5302321154bfad198aae6ddea320e7661ce8",
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/v44-audit/pwa.cjs"
+          ],
+          "startUTC": "2026-10-26T01:40:19.551Z",
+          "endUTC": "2026-10-26T01:41:30.183Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 6,
+            "FAIL": 0,
+            "SKIP": 1
+          }
+        }
+      ],
+      "pass": false,
+      "realUserData": false,
+      "publicOrigin": false
+    }
+  },
+  {
+    "attempt": "remaining-final",
+    "directory": "/workspace/seaart-v44-audit-artifacts/remaining-final",
+    "finalPassCountIncluded": false,
+    "executions.json": {
+      "mode": "contracts",
+      "gitHEAD": "e584b955140d5d359be411c38b1191a4082c40a1",
+      "executions": [
+        {
+          "name": "csv",
+          "script": "tests/v44-remaining/csv.cjs",
+          "testSHA256": "ea2054dde7a3db213782307fb51c21b74875f7927790caba385ede92dccca650",
+          "startUTC": "2026-10-26T01:30:34.720Z",
+          "endUTC": "2026-10-26T01:31:49.028Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 5,
+            "FAIL": 0,
+            "SKIP": 0
+          },
+          "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+          "productAfter": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48"
+        },
+        {
+          "name": "compatibility",
+          "script": "tests/v44-remaining/compatibility.cjs",
+          "testSHA256": "23f6492b3cc7b1087919d57199f36963e5ce183b18e961ce29be0b4020e66d31",
+          "startUTC": "2026-10-26T01:31:49.071Z",
+          "endUTC": "2026-10-26T01:32:32.903Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 3,
+            "FAIL": 0,
+            "SKIP": 0
+          },
+          "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+          "productAfter": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48"
+        },
+        {
+          "name": "simple-ui",
+          "script": "tests/v44-remaining/simple-ui.cjs",
+          "testSHA256": "8c1bd9e8bcaaf916f296e7c3a565fb81b22a436f0520dbc2ff42925e0ae10436",
+          "startUTC": "2026-10-26T01:32:32.989Z",
+          "endUTC": "2026-10-26T01:35:03.279Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 4,
+            "FAIL": 0,
+            "SKIP": 0
+          },
+          "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+          "productAfter": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48"
+        },
+        {
+          "name": "media",
+          "script": "tests/v44-remaining/media.cjs",
+          "testSHA256": "988a49bef841ade3499d2ea984e245c5ce47828ab4fb3f4ac5159e3257829219",
+          "startUTC": "2026-10-26T01:35:03.320Z",
+          "endUTC": "2026-10-26T01:35:42.948Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 3,
+            "FAIL": 0,
+            "SKIP": 0
+          },
+          "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+          "productAfter": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48"
+        },
+        {
+          "name": "diagnostics",
+          "script": "tests/v44-remaining/diagnostics.cjs",
+          "testSHA256": "92a8288bb718785aeafc3d2e77267c244a21dee9ecc7a410ceb7a00d00d75e8c",
+          "startUTC": "2026-10-26T01:35:42.975Z",
+          "endUTC": "2026-10-26T01:35:57.459Z",
+          "exitCode": 0,
+          "counts": {
+            "PASS": 1,
+            "FAIL": 0,
+            "SKIP": 0
+          },
+          "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+          "productAfter": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48"
+        },
+        {
+          "name": "inherited-current",
+          "script": "tests/v44-remaining/run-inherited.cjs",
+          "testSHA256": "e344048a2ff25b53caaafbb2fcb7532064e229f857d12bf482653d7d423450f0",
+          "startUTC": "2026-10-26T01:35:57.485Z",
+          "endUTC": "2026-10-26T02:05:57.978Z",
+          "exitCode": null,
+          "error": "spawnSync /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node ETIMEDOUT",
+          "counts": {
+            "PASS": 0,
+            "FAIL": 0,
+            "SKIP": 0
+          },
+          "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+          "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+        }
+      ]
+    }
+  },
+  {
+    "attempt": "aggregate-30-minute-watchdog",
+    "classification": "test harness defect",
+    "proof": {
+      "name": "inherited-current",
+      "script": "tests/v44-remaining/run-inherited.cjs",
+      "testSHA256": "e344048a2ff25b53caaafbb2fcb7532064e229f857d12bf482653d7d423450f0",
+      "startUTC": "2026-10-26T01:35:57.485Z",
+      "endUTC": "2026-10-26T02:05:57.978Z",
+      "exitCode": null,
+      "error": "spawnSync /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node ETIMEDOUT",
+      "counts": {
+        "PASS": 0,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "productBefore": "e4af7320c63199f0eb3a83da91ca3322ae5c10ba285e5f9b3ee3f44c972cae48",
+      "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+    },
+    "effect": "Parent server died at its aggregate deadline; auto-ui then got ERR_CONNECTION_REFUSED. File navigation 30s limit unchanged. Replaced aggregate timer by per-job watchdog/partial records, all affected UI/PWA rerun. This is separate from unrecoverable initial CI."
+  }
+]

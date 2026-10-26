@@ -1,0 +1,31 @@
+{
+  "suite": "adult-cards",
+  "productSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+  "tests": [
+    {
+      "id": "ADULT-eight-cards-consent-and-two-pages",
+      "status": "PASS",
+      "detail": {
+        "pages": [
+          [
+            "exposure",
+            "details",
+            "clothingState",
+            "selfAction"
+          ],
+          [
+            "sexualInteraction",
+            "expression",
+            "effects",
+            "fluids"
+          ]
+        ],
+        "ageConfirmationAloneInsufficient": true,
+        "consentViaUI": true,
+        "generatedImages": false,
+        "productionResources": 0
+      }
+    }
+  ],
+  "physicalDevice": false
+}

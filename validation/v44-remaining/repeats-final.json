@@ -1,0 +1,3201 @@
+{
+  "UI": {
+    "repetitions": [
+      {
+        "iteration": 1,
+        "startUTC": "2026-10-26T01:53:36.934Z",
+        "endUTC": "2026-10-26T01:54:32.033Z",
+        "exitCode": 0,
+        "counts": {
+          "PASS": 14,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        "tests": [
+          {
+            "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
+            "status": "PASS",
+            "detail": {
+              "otherOwnerSelectable": true,
+              "donorUnchanged": true,
+              "oneSharedToggle": true,
+              "selectionRetainedAcrossViews": true
+            }
+          },
+          {
+            "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
+            "status": "PASS",
+            "detail": {
+              "global": {
+                "dialog": "choiceDialog",
+                "visible": true,
+                "count": 1
+              },
+              "equipment": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "reopened": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "lateCloseIgnored": true
+            }
+          },
+          {
+            "id": "UI-hair-nine-modes-colors-and-eye-isolation",
+            "status": "PASS",
+            "detail": {
+              "hairModes": 9,
+              "rows": [
+                5,
+                4
+              ],
+              "bothColorsRetained": true,
+              "eyeLayoutIndependent": true
+            }
+          },
+          {
+            "id": "UI-lighting-three-tabs-and-five-effect-tabs",
+            "status": "PASS",
+            "detail": {
+              "light": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光の当たり方"
+                },
+                {
+                  "x": 138.328125,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光源"
+                },
+                {
+                  "x": 259.65625,
+                  "y": 142,
+                  "w": 116.34375,
+                  "h": 34,
+                  "text": "光の色"
+                }
+              ],
+              "effects": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 83.140625,
+                  "h": 34,
+                  "text": "エフェクト"
+                },
+                {
+                  "x": 105.140625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "オーラ"
+                },
+                {
+                  "x": 174.109375,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "演出"
+                },
+                {
+                  "x": 243.0625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "発生源"
+                },
+                {
+                  "x": 312.03125,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "表現"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
+            "status": "PASS",
+            "detail": {
+              "instances": 2,
+              "independentIds": true,
+              "optionalTargetKinds": [
+                {
+                  "x": 17,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "物体・場所"
+                },
+                {
+                  "x": 138.65625,
+                  "y": 431.296875,
+                  "w": 115.671875,
+                  "h": 38,
+                  "text": "装備・携帯品"
+                },
+                {
+                  "x": 260.328125,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "人物・生物"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-skin-palette-select-card-remove-and-Undo",
+            "status": "PASS",
+            "detail": {
+              "palette": 37,
+              "selectionAndRemoval": true,
+              "Undo": true
+            }
+          },
+          {
+            "id": "UI-layout-320x640",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 89.75,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 162.5,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 235.25,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 320,
+                "top": 64,
+                "bottom": 640,
+                "viewport": [
+                  320,
+                  640
+                ],
+                "listHeight": 259,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-360x740",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 99.75,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 182.5,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 265.25,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 360,
+                "top": 74,
+                "bottom": 740,
+                "viewport": [
+                  360,
+                  740
+                ],
+                "listHeight": 349,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 422,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-412x915",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 112.75,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 208.5,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 304.25,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 412,
+                "top": 91.5,
+                "bottom": 915,
+                "viewport": [
+                  412,
+                  915
+                ],
+                "listHeight": 525,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-844x390",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 119,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 271.75,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 424.5,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 577.25,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 102,
+                "right": 742,
+                "top": 39,
+                "bottom": 390,
+                "viewport": [
+                  844,
+                  390
+                ],
+                "listHeight": 174,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-1280x900",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 337,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 489.75,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 642.5,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 795.25,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 320,
+                "right": 960,
+                "top": 90,
+                "bottom": 900,
+                "viewport": [
+                  1280,
+                  900
+                ],
+                "listHeight": 512,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800-font200",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 181,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          },
+          {
+            "id": "UI-layout-393x400-font150-keyboard-mock",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 40,
+                "bottom": 400,
+                "viewport": [
+                  393,
+                  400
+                ],
+                "listHeight": 178,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          }
+        ],
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+      },
+      {
+        "iteration": 2,
+        "startUTC": "2026-10-26T01:54:32.051Z",
+        "endUTC": "2026-10-26T01:55:31.968Z",
+        "exitCode": 0,
+        "counts": {
+          "PASS": 14,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        "tests": [
+          {
+            "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
+            "status": "PASS",
+            "detail": {
+              "otherOwnerSelectable": true,
+              "donorUnchanged": true,
+              "oneSharedToggle": true,
+              "selectionRetainedAcrossViews": true
+            }
+          },
+          {
+            "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
+            "status": "PASS",
+            "detail": {
+              "global": {
+                "dialog": "choiceDialog",
+                "visible": true,
+                "count": 1
+              },
+              "equipment": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "reopened": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "lateCloseIgnored": true
+            }
+          },
+          {
+            "id": "UI-hair-nine-modes-colors-and-eye-isolation",
+            "status": "PASS",
+            "detail": {
+              "hairModes": 9,
+              "rows": [
+                5,
+                4
+              ],
+              "bothColorsRetained": true,
+              "eyeLayoutIndependent": true
+            }
+          },
+          {
+            "id": "UI-lighting-three-tabs-and-five-effect-tabs",
+            "status": "PASS",
+            "detail": {
+              "light": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光の当たり方"
+                },
+                {
+                  "x": 138.328125,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光源"
+                },
+                {
+                  "x": 259.65625,
+                  "y": 142,
+                  "w": 116.34375,
+                  "h": 34,
+                  "text": "光の色"
+                }
+              ],
+              "effects": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 83.140625,
+                  "h": 34,
+                  "text": "エフェクト"
+                },
+                {
+                  "x": 105.140625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "オーラ"
+                },
+                {
+                  "x": 174.109375,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "演出"
+                },
+                {
+                  "x": 243.0625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "発生源"
+                },
+                {
+                  "x": 312.03125,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "表現"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
+            "status": "PASS",
+            "detail": {
+              "instances": 2,
+              "independentIds": true,
+              "optionalTargetKinds": [
+                {
+                  "x": 17,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "物体・場所"
+                },
+                {
+                  "x": 138.65625,
+                  "y": 431.296875,
+                  "w": 115.671875,
+                  "h": 38,
+                  "text": "装備・携帯品"
+                },
+                {
+                  "x": 260.328125,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "人物・生物"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-skin-palette-select-card-remove-and-Undo",
+            "status": "PASS",
+            "detail": {
+              "palette": 37,
+              "selectionAndRemoval": true,
+              "Undo": true
+            }
+          },
+          {
+            "id": "UI-layout-320x640",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 89.75,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 162.5,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 235.25,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 320,
+                "top": 64,
+                "bottom": 640,
+                "viewport": [
+                  320,
+                  640
+                ],
+                "listHeight": 259,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-360x740",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 99.75,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 182.5,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 265.25,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 360,
+                "top": 74,
+                "bottom": 740,
+                "viewport": [
+                  360,
+                  740
+                ],
+                "listHeight": 349,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 422,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-412x915",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 112.75,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 208.5,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 304.25,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 412,
+                "top": 91.5,
+                "bottom": 915,
+                "viewport": [
+                  412,
+                  915
+                ],
+                "listHeight": 525,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-844x390",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 119,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 271.75,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 424.5,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 577.25,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 102,
+                "right": 742,
+                "top": 39,
+                "bottom": 390,
+                "viewport": [
+                  844,
+                  390
+                ],
+                "listHeight": 174,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-1280x900",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 337,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 489.75,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 642.5,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 795.25,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 320,
+                "right": 960,
+                "top": 90,
+                "bottom": 900,
+                "viewport": [
+                  1280,
+                  900
+                ],
+                "listHeight": 512,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800-font200",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 181,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          },
+          {
+            "id": "UI-layout-393x400-font150-keyboard-mock",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 40,
+                "bottom": 400,
+                "viewport": [
+                  393,
+                  400
+                ],
+                "listHeight": 178,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          }
+        ],
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+      },
+      {
+        "iteration": 3,
+        "startUTC": "2026-10-26T01:55:31.983Z",
+        "endUTC": "2026-10-26T01:56:22.414Z",
+        "exitCode": 0,
+        "counts": {
+          "PASS": 14,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        "tests": [
+          {
+            "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
+            "status": "PASS",
+            "detail": {
+              "otherOwnerSelectable": true,
+              "donorUnchanged": true,
+              "oneSharedToggle": true,
+              "selectionRetainedAcrossViews": true
+            }
+          },
+          {
+            "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
+            "status": "PASS",
+            "detail": {
+              "global": {
+                "dialog": "choiceDialog",
+                "visible": true,
+                "count": 1
+              },
+              "equipment": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "reopened": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "lateCloseIgnored": true
+            }
+          },
+          {
+            "id": "UI-hair-nine-modes-colors-and-eye-isolation",
+            "status": "PASS",
+            "detail": {
+              "hairModes": 9,
+              "rows": [
+                5,
+                4
+              ],
+              "bothColorsRetained": true,
+              "eyeLayoutIndependent": true
+            }
+          },
+          {
+            "id": "UI-lighting-three-tabs-and-five-effect-tabs",
+            "status": "PASS",
+            "detail": {
+              "light": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光の当たり方"
+                },
+                {
+                  "x": 138.328125,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光源"
+                },
+                {
+                  "x": 259.65625,
+                  "y": 142,
+                  "w": 116.34375,
+                  "h": 34,
+                  "text": "光の色"
+                }
+              ],
+              "effects": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 83.140625,
+                  "h": 34,
+                  "text": "エフェクト"
+                },
+                {
+                  "x": 105.140625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "オーラ"
+                },
+                {
+                  "x": 174.109375,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "演出"
+                },
+                {
+                  "x": 243.0625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "発生源"
+                },
+                {
+                  "x": 312.03125,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "表現"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
+            "status": "PASS",
+            "detail": {
+              "instances": 2,
+              "independentIds": true,
+              "optionalTargetKinds": [
+                {
+                  "x": 17,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "物体・場所"
+                },
+                {
+                  "x": 138.65625,
+                  "y": 431.296875,
+                  "w": 115.671875,
+                  "h": 38,
+                  "text": "装備・携帯品"
+                },
+                {
+                  "x": 260.328125,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "人物・生物"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-skin-palette-select-card-remove-and-Undo",
+            "status": "PASS",
+            "detail": {
+              "palette": 37,
+              "selectionAndRemoval": true,
+              "Undo": true
+            }
+          },
+          {
+            "id": "UI-layout-320x640",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 89.75,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 162.5,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 235.25,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 320,
+                "top": 64,
+                "bottom": 640,
+                "viewport": [
+                  320,
+                  640
+                ],
+                "listHeight": 259,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-360x740",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 99.75,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 182.5,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 265.25,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 360,
+                "top": 74,
+                "bottom": 740,
+                "viewport": [
+                  360,
+                  740
+                ],
+                "listHeight": 349,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 422,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-412x915",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 112.75,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 208.5,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 304.25,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 412,
+                "top": 91.5,
+                "bottom": 915,
+                "viewport": [
+                  412,
+                  915
+                ],
+                "listHeight": 525,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-844x390",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 119,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 271.75,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 424.5,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 577.25,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 102,
+                "right": 742,
+                "top": 39,
+                "bottom": 390,
+                "viewport": [
+                  844,
+                  390
+                ],
+                "listHeight": 174,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-1280x900",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 337,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 489.75,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 642.5,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 795.25,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 320,
+                "right": 960,
+                "top": 90,
+                "bottom": 900,
+                "viewport": [
+                  1280,
+                  900
+                ],
+                "listHeight": 512,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800-font200",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 181,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          },
+          {
+            "id": "UI-layout-393x400-font150-keyboard-mock",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 40,
+                "bottom": 400,
+                "viewport": [
+                  393,
+                  400
+                ],
+                "listHeight": 178,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          }
+        ],
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+      },
+      {
+        "iteration": 4,
+        "startUTC": "2026-10-26T01:56:22.423Z",
+        "endUTC": "2026-10-26T01:57:27.870Z",
+        "exitCode": 0,
+        "counts": {
+          "PASS": 14,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        "tests": [
+          {
+            "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
+            "status": "PASS",
+            "detail": {
+              "otherOwnerSelectable": true,
+              "donorUnchanged": true,
+              "oneSharedToggle": true,
+              "selectionRetainedAcrossViews": true
+            }
+          },
+          {
+            "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
+            "status": "PASS",
+            "detail": {
+              "global": {
+                "dialog": "choiceDialog",
+                "visible": true,
+                "count": 1
+              },
+              "equipment": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "reopened": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "lateCloseIgnored": true
+            }
+          },
+          {
+            "id": "UI-hair-nine-modes-colors-and-eye-isolation",
+            "status": "PASS",
+            "detail": {
+              "hairModes": 9,
+              "rows": [
+                5,
+                4
+              ],
+              "bothColorsRetained": true,
+              "eyeLayoutIndependent": true
+            }
+          },
+          {
+            "id": "UI-lighting-three-tabs-and-five-effect-tabs",
+            "status": "PASS",
+            "detail": {
+              "light": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光の当たり方"
+                },
+                {
+                  "x": 138.328125,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光源"
+                },
+                {
+                  "x": 259.65625,
+                  "y": 142,
+                  "w": 116.34375,
+                  "h": 34,
+                  "text": "光の色"
+                }
+              ],
+              "effects": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 83.140625,
+                  "h": 34,
+                  "text": "エフェクト"
+                },
+                {
+                  "x": 105.140625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "オーラ"
+                },
+                {
+                  "x": 174.109375,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "演出"
+                },
+                {
+                  "x": 243.0625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "発生源"
+                },
+                {
+                  "x": 312.03125,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "表現"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
+            "status": "PASS",
+            "detail": {
+              "instances": 2,
+              "independentIds": true,
+              "optionalTargetKinds": [
+                {
+                  "x": 17,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "物体・場所"
+                },
+                {
+                  "x": 138.65625,
+                  "y": 431.296875,
+                  "w": 115.671875,
+                  "h": 38,
+                  "text": "装備・携帯品"
+                },
+                {
+                  "x": 260.328125,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "人物・生物"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-skin-palette-select-card-remove-and-Undo",
+            "status": "PASS",
+            "detail": {
+              "palette": 37,
+              "selectionAndRemoval": true,
+              "Undo": true
+            }
+          },
+          {
+            "id": "UI-layout-320x640",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 89.75,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 162.5,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 235.25,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 320,
+                "top": 64,
+                "bottom": 640,
+                "viewport": [
+                  320,
+                  640
+                ],
+                "listHeight": 259,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-360x740",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 99.75,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 182.5,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 265.25,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 360,
+                "top": 74,
+                "bottom": 740,
+                "viewport": [
+                  360,
+                  740
+                ],
+                "listHeight": 349,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 422,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-412x915",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 112.75,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 208.5,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 304.25,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 412,
+                "top": 91.5,
+                "bottom": 915,
+                "viewport": [
+                  412,
+                  915
+                ],
+                "listHeight": 525,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-844x390",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 119,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 271.75,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 424.5,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 577.25,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 102,
+                "right": 742,
+                "top": 39,
+                "bottom": 390,
+                "viewport": [
+                  844,
+                  390
+                ],
+                "listHeight": 174,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-1280x900",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 337,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 489.75,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 642.5,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 795.25,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 320,
+                "right": 960,
+                "top": 90,
+                "bottom": 900,
+                "viewport": [
+                  1280,
+                  900
+                ],
+                "listHeight": 512,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800-font200",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 181,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          },
+          {
+            "id": "UI-layout-393x400-font150-keyboard-mock",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 40,
+                "bottom": 400,
+                "viewport": [
+                  393,
+                  400
+                ],
+                "listHeight": 178,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          }
+        ],
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+      },
+      {
+        "iteration": 5,
+        "startUTC": "2026-10-26T01:57:27.878Z",
+        "endUTC": "2026-10-26T01:58:21.721Z",
+        "exitCode": 0,
+        "counts": {
+          "PASS": 14,
+          "FAIL": 0,
+          "SKIP": 0
+        },
+        "tests": [
+          {
+            "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
+            "status": "PASS",
+            "detail": {
+              "otherOwnerSelectable": true,
+              "donorUnchanged": true,
+              "oneSharedToggle": true,
+              "selectionRetainedAcrossViews": true
+            }
+          },
+          {
+            "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
+            "status": "PASS",
+            "detail": {
+              "global": {
+                "dialog": "choiceDialog",
+                "visible": true,
+                "count": 1
+              },
+              "equipment": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "reopened": {
+                "dialog": "simpleSelectionDialog",
+                "visible": true,
+                "count": 1
+              },
+              "lateCloseIgnored": true
+            }
+          },
+          {
+            "id": "UI-hair-nine-modes-colors-and-eye-isolation",
+            "status": "PASS",
+            "detail": {
+              "hairModes": 9,
+              "rows": [
+                5,
+                4
+              ],
+              "bothColorsRetained": true,
+              "eyeLayoutIndependent": true
+            }
+          },
+          {
+            "id": "UI-lighting-three-tabs-and-five-effect-tabs",
+            "status": "PASS",
+            "detail": {
+              "light": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光の当たり方"
+                },
+                {
+                  "x": 138.328125,
+                  "y": 142,
+                  "w": 116.328125,
+                  "h": 34,
+                  "text": "光源"
+                },
+                {
+                  "x": 259.65625,
+                  "y": 142,
+                  "w": 116.34375,
+                  "h": 34,
+                  "text": "光の色"
+                }
+              ],
+              "effects": [
+                {
+                  "x": 17,
+                  "y": 142,
+                  "w": 83.140625,
+                  "h": 34,
+                  "text": "エフェクト"
+                },
+                {
+                  "x": 105.140625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "オーラ"
+                },
+                {
+                  "x": 174.109375,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "演出"
+                },
+                {
+                  "x": 243.0625,
+                  "y": 142,
+                  "w": 63.96875,
+                  "h": 34,
+                  "text": "発生源"
+                },
+                {
+                  "x": 312.03125,
+                  "y": 142,
+                  "w": 63.953125,
+                  "h": 34,
+                  "text": "表現"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
+            "status": "PASS",
+            "detail": {
+              "instances": 2,
+              "independentIds": true,
+              "optionalTargetKinds": [
+                {
+                  "x": 17,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "物体・場所"
+                },
+                {
+                  "x": 138.65625,
+                  "y": 431.296875,
+                  "w": 115.671875,
+                  "h": 38,
+                  "text": "装備・携帯品"
+                },
+                {
+                  "x": 260.328125,
+                  "y": 431.296875,
+                  "w": 115.65625,
+                  "h": 38,
+                  "text": "人物・生物"
+                }
+              ]
+            }
+          },
+          {
+            "id": "UI-skin-palette-select-card-remove-and-Undo",
+            "status": "PASS",
+            "detail": {
+              "palette": 37,
+              "selectionAndRemoval": true,
+              "Undo": true
+            }
+          },
+          {
+            "id": "UI-layout-320x640",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 89.75,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 162.5,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 235.25,
+                  "y": 205,
+                  "w": 67.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 320,
+                "top": 64,
+                "bottom": 640,
+                "viewport": [
+                  320,
+                  640
+                ],
+                "listHeight": 259,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-360x740",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 99.75,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 182.5,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 265.25,
+                  "y": 215,
+                  "w": 77.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 360,
+                "top": 74,
+                "bottom": 740,
+                "viewport": [
+                  360,
+                  740
+                ],
+                "listHeight": 349,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 221,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 422,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-412x915",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 112.75,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 208.5,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 304.25,
+                  "y": 232.5,
+                  "w": 90.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 412,
+                "top": 91.5,
+                "bottom": 915,
+                "viewport": [
+                  412,
+                  915
+                ],
+                "listHeight": 525,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-844x390",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 119,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 271.75,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 424.5,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 577.25,
+                  "y": 180,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 102,
+                "right": 742,
+                "top": 39,
+                "bottom": 390,
+                "viewport": [
+                  844,
+                  390
+                ],
+                "listHeight": 174,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-1280x900",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 337,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 489.75,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 642.5,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 795.25,
+                  "y": 231,
+                  "w": 147.75,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 320,
+                "right": 960,
+                "top": 90,
+                "bottom": 900,
+                "viewport": [
+                  1280,
+                  900
+                ],
+                "listHeight": 512,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": false
+            }
+          },
+          {
+            "id": "UI-layout-393x800-font200",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 278.1875,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 80,
+                "bottom": 800,
+                "viewport": [
+                  393,
+                  800
+                ],
+                "listHeight": 181,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          },
+          {
+            "id": "UI-layout-393x400-font150-keyboard-mock",
+            "status": "PASS",
+            "detail": {
+              "quick": [
+                {
+                  "x": 17,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "すべて"
+                },
+                {
+                  "x": 108,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "選択中"
+                },
+                {
+                  "x": 199,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "お気に入り"
+                },
+                {
+                  "x": 290,
+                  "y": 206.390625,
+                  "w": 86,
+                  "h": 34,
+                  "text": "キャラ固有"
+                }
+              ],
+              "metrics": {
+                "left": 0,
+                "right": 393,
+                "top": 40,
+                "bottom": 400,
+                "viewport": [
+                  393,
+                  400
+                ],
+                "listHeight": 178,
+                "overflow": false
+              },
+              "physicalDevice": false,
+              "keyboardMock": true
+            }
+          }
+        ],
+        "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+      }
+    ],
+    "initialCIRootCause": "unrecoverable: no per-case log/artifact was retained",
+    "realAndroid": false
+  },
+  "originalCases": [
+    {
+      "execution": {
+        "name": "auto-contracts-1",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/contracts.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "TEST_IDS": "A07,A08"
+        },
+        "startUTC": "2026-10-26T02:08:18.034Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:08:31.995Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "A07",
+          "passed": true,
+          "detail": {
+            "sharedIntensity": true
+          }
+        },
+        {
+          "id": "A08",
+          "passed": true,
+          "detail": {
+            "otherDialogFooterKept": true
+          }
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-ui-1",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/ui.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "UI_WIDTH": "360",
+          "UI_HEIGHT": "640",
+          "UI_SCALE": "1"
+        },
+        "startUTC": "2026-10-26T02:08:32.005Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:08:45.088Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "AU-360x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-contracts-2",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/contracts.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "TEST_IDS": "A07,A08"
+        },
+        "startUTC": "2026-10-26T02:08:45.096Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:08:59.148Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "A07",
+          "passed": true,
+          "detail": {
+            "sharedIntensity": true
+          }
+        },
+        {
+          "id": "A08",
+          "passed": true,
+          "detail": {
+            "otherDialogFooterKept": true
+          }
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-ui-2",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/ui.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "UI_WIDTH": "360",
+          "UI_HEIGHT": "640",
+          "UI_SCALE": "1"
+        },
+        "startUTC": "2026-10-26T02:08:59.157Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:09:12.933Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "AU-360x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-contracts-3",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/contracts.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "TEST_IDS": "A07,A08"
+        },
+        "startUTC": "2026-10-26T02:09:12.946Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:09:26.324Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "A07",
+          "passed": true,
+          "detail": {
+            "sharedIntensity": true
+          }
+        },
+        {
+          "id": "A08",
+          "passed": true,
+          "detail": {
+            "otherDialogFooterKept": true
+          }
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-ui-3",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/ui.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "UI_WIDTH": "360",
+          "UI_HEIGHT": "640",
+          "UI_SCALE": "1"
+        },
+        "startUTC": "2026-10-26T02:09:26.332Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:09:40.643Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "AU-360x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-contracts-4",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/contracts.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "TEST_IDS": "A07,A08"
+        },
+        "startUTC": "2026-10-26T02:09:40.650Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:09:54.035Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "A07",
+          "passed": true,
+          "detail": {
+            "sharedIntensity": true
+          }
+        },
+        {
+          "id": "A08",
+          "passed": true,
+          "detail": {
+            "otherDialogFooterKept": true
+          }
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-ui-4",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/ui.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "UI_WIDTH": "360",
+          "UI_HEIGHT": "640",
+          "UI_SCALE": "1"
+        },
+        "startUTC": "2026-10-26T02:09:54.042Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:10:07.476Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "AU-360x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-contracts-5",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/contracts.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "TEST_IDS": "A07,A08"
+        },
+        "startUTC": "2026-10-26T02:10:07.484Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:10:21.017Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "A07",
+          "passed": true,
+          "detail": {
+            "sharedIntensity": true
+          }
+        },
+        {
+          "id": "A08",
+          "passed": true,
+          "detail": {
+            "otherDialogFooterKept": true
+          }
+        }
+      ]
+    },
+    {
+      "execution": {
+        "name": "auto-ui-5",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/v44-remaining/replay.cjs",
+          "tests/horror-auto/ui.cjs"
+        ],
+        "env": {
+          "TARGET_URL": "http://127.0.0.1:45809/seaart-tool/index.html",
+          "UI_WIDTH": "360",
+          "UI_HEIGHT": "640",
+          "UI_SCALE": "1"
+        },
+        "startUTC": "2026-10-26T02:10:21.026Z",
+        "productBefore": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+        "adapterBefore": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d",
+        "exitCode": 0,
+        "endUTC": "2026-10-26T02:10:34.282Z",
+        "productAfter": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+        "adapterAfter": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+      },
+      "tests": [
+        {
+          "id": "AU-360x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        }
+      ]
+    }
+  ],
+  "initialCause": "unrecoverable; positive repeats do not prove initial cause resolved"
+}

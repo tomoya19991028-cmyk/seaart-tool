@@ -1,0 +1,314 @@
+{
+  "rows": [
+    {
+      "width": 320,
+      "height": 640,
+      "font": 15,
+      "texts": [
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "font": 15,
+      "texts": [
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 393,
+      "height": 800,
+      "font": 15,
+      "texts": [
+        {
+          "textHeight": 14,
+          "cardHeight": 83.65625,
+          "topGap": 44.328125,
+          "bottomGap": 25.328125
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 83.65625,
+          "topGap": 44.328125,
+          "bottomGap": 25.328125
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 83.671875,
+          "topGap": 44.34375,
+          "bottomGap": 25.328125
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 83.671875,
+          "topGap": 44.34375,
+          "bottomGap": 25.328125
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 83.65625,
+          "topGap": 44.328125,
+          "bottomGap": 25.328125
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 83.65625,
+          "topGap": 44.328125,
+          "bottomGap": 25.328125
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "font": 15,
+      "texts": [
+        {
+          "textHeight": 14,
+          "cardHeight": 122,
+          "topGap": 63.5,
+          "bottomGap": 44.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 122,
+          "topGap": 63.5,
+          "bottomGap": 44.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 122,
+          "topGap": 63.5,
+          "bottomGap": 44.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 122,
+          "topGap": 63.5,
+          "bottomGap": 44.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 122,
+          "topGap": 63.5,
+          "bottomGap": 44.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 122,
+          "topGap": 63.5,
+          "bottomGap": 44.5
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "font": 15,
+      "texts": [
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        },
+        {
+          "textHeight": 14,
+          "cardHeight": 64,
+          "topGap": 34.5,
+          "bottomGap": 15.5
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 393,
+      "height": 800,
+      "font": 32,
+      "texts": [
+        {
+          "textHeight": 31,
+          "cardHeight": 87.484375,
+          "topGap": 47.828125,
+          "bottomGap": 8.65625
+        },
+        {
+          "textHeight": 31,
+          "cardHeight": 87.484375,
+          "topGap": 47.828125,
+          "bottomGap": 8.65625
+        },
+        {
+          "textHeight": 31,
+          "cardHeight": 87.484375,
+          "topGap": 47.828125,
+          "bottomGap": 8.65625
+        },
+        {
+          "textHeight": 31,
+          "cardHeight": 87.484375,
+          "topGap": 47.828125,
+          "bottomGap": 8.65625
+        },
+        {
+          "textHeight": 31,
+          "cardHeight": 87.5,
+          "topGap": 47.828125,
+          "bottomGap": 8.671875
+        },
+        {
+          "textHeight": 31,
+          "cardHeight": 87.5,
+          "topGap": 47.828125,
+          "bottomGap": 8.671875
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 393,
+      "height": 400,
+      "font": 24,
+      "texts": [
+        {
+          "textHeight": 23,
+          "cardHeight": 70.390625,
+          "topGap": 39.015625,
+          "bottomGap": 8.375
+        },
+        {
+          "textHeight": 23,
+          "cardHeight": 70.390625,
+          "topGap": 39.015625,
+          "bottomGap": 8.375
+        },
+        {
+          "textHeight": 23,
+          "cardHeight": 70.390625,
+          "topGap": 39.015625,
+          "bottomGap": 8.375
+        },
+        {
+          "textHeight": 23,
+          "cardHeight": 70.390625,
+          "topGap": 39.015625,
+          "bottomGap": 8.375
+        },
+        {
+          "textHeight": 23,
+          "cardHeight": 70.390625,
+          "topGap": 39.015625,
+          "bottomGap": 8.375
+        },
+        {
+          "textHeight": 23,
+          "cardHeight": 70.390625,
+          "topGap": 39.015625,
+          "bottomGap": 8.375
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "physicalDevice": false
+}

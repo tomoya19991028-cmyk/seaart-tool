@@ -1,0 +1,37 @@
+{
+  "row": "pose-36",
+  "oldValue": "standing with weight on one leg",
+  "actions": [
+    {
+      "action": "stand",
+      "id": "pa-7324291a-4f0f-4870-abb4-5ea52e3b19ab",
+      "groupId": "pag-599d4d21-5afd-4248-963b-9ab73f819758"
+    },
+    {
+      "action": "shift-weight",
+      "movingPart": "one-leg",
+      "id": "pa-33aa882c-94e5-4960-a1d9-dde778a858f2",
+      "groupId": "pag-599d4d21-5afd-4248-963b-9ab73f819758"
+    }
+  ],
+  "groups": [
+    {
+      "id": "pag-599d4d21-5afd-4248-963b-9ab73f819758",
+      "row": {
+        "id": "pose-36",
+        "name": "片足重心で立つ",
+        "value": "standing with weight on one leg"
+      },
+      "weight": 1.35,
+      "color": "blue",
+      "metadata": {
+        "itemWeights": 1.35,
+        "itemColors": "blue"
+      }
+    }
+  ],
+  "tags": [
+    "(blue standing, blue shifting their weight onto one leg:1.4)"
+  ],
+  "testedHTMLSHA256": "368f8f6edd4afa93e5ca07fab8f5b9753dfd9f94bc9542eded367865a4a2c9a0"
+}

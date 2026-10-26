@@ -1,0 +1,248 @@
+[
+  {
+    "job": "auto-compatibility",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: auto-compatibility"
+  },
+  {
+    "job": "auto-contracts",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: auto-contracts"
+  },
+  {
+    "job": "auto-fixed",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "auto-inherited",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "auto-pwa",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "auto-shared-prompt",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "auto-shared-ui",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "auto-ui",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: auto-ui"
+  },
+  {
+    "job": "boundaries",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "card-contracts",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "card-persistence",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "card-pwa",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: card-pwa"
+  },
+  {
+    "job": "card-ui",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "combined-pwa",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "combined-ui",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "contracts",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "edges",
+    "original": "PASS",
+    "current": "I08/I09/I10/I11/I12/I28の6件を再実行PASS。元36件全部の再実行ではない",
+    "evidence": "current-inherited-local.json: media-inherited"
+  },
+  {
+    "job": "faults",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "integration",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "legacy",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: legacy"
+  },
+  {
+    "job": "motif",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "motif-boundaries",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "motif-prompts",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: motif-prompts"
+  },
+  {
+    "job": "normal-contracts",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "normal-pwa",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: normal-pwa"
+  },
+  {
+    "job": "normal-ui",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "prompts",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: prompts"
+  },
+  {
+    "job": "pwa",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "pwa-regression",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: pwa-regression"
+  },
+  {
+    "job": "r1",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: r1"
+  },
+  {
+    "job": "round2-retest",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: round2-retest"
+  },
+  {
+    "job": "story-contracts",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "story-pwa",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "story-ui",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "ui",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "ui-extra",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "unified-compatibility",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: unified-compatibility"
+  },
+  {
+    "job": "unified-contracts",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "unified-pwa",
+    "original": "FAIL",
+    "current": "現行向けジョブPASS（旧FAILは保持）",
+    "evidence": "current-inherited-local.json: unified-pwa"
+  },
+  {
+    "job": "unified-ui",
+    "original": "PASS",
+    "current": "前回PASSを保持。今回その元ジョブ全件は再実行していない",
+    "evidence": "旧inherited-attempts.json／今回の主スイートの関連経路を参照"
+  },
+  {
+    "job": "fixed",
+    "original": "SKIP",
+    "current": "独立FIXEDケースPASS（補助16の内数）",
+    "evidence": "supplemental-final.json: FIXED-independent-original-R1-twelve-datasets-retained"
+  }
+]
