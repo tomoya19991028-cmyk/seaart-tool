@@ -160,7 +160,13 @@
       "startLine": 1961,
       "endLine": 1962,
       "oldSHA256": "48e4de5f4f23497a3407a1bda4157ff8cabbbbf5c828fd9ae5278f34f2013c6c",
-      "replacement": " }else if(source==='detail:weapon'){group=typeof waGroup==='function'?waGroup(value):g;}\n"
+      "replacement": " }else if(source==='detail:weapon'){group=typeof waGroup==='function'?waGroup(value):g;legacy=typeof waIsWeaponVariant==='function'&&waIsWeaponVariant(value);}\n"
+    },
+    {
+      "startLine": 1969,
+      "endLine": 1970,
+      "oldSHA256": "1f8ed8ae70b0b51502a5ff72fe78bd7c088d796d2b58c5c4b9b985353f5570c4",
+      "replacement": "function displayCandidateVisible(source,value,name,group,expanded,picked,query,favorite){if(source==='detail:weapon'&&typeof waWeaponVisible==='function'&&!waWeaponVisible(value,picked,expanded))return false;if(source==='detail:damage'&&!personDamageEnabled)return false;if(source==='catalog:pose'){const cls=poseAuditClass(item('pose',value));if(cls==='C')return false;if(['B','D'].includes(cls)&&!expanded&&!showLegacyCandidates)return false;}if(maIsHidden(source,value)&&!picked)return false;return !candidateDisplayRule(source,value,name,group).legacy||expanded||showLegacyCandidates||picked||!!query||favorite}\n"
     },
     {
       "startLine": 2054,
@@ -382,7 +388,7 @@
       "startLine": 5338,
       "endLine": 5339,
       "oldSHA256": "dfd3bcb92d89457b2a9dcdb448519efc4ad665f89ae15c2b2707014c340b14d8",
-      "replacement": "  result.push({field,value,name,group,id:global?record.id:value,section,basic:key==='weapon'&&field==='weapon',legacy:key==='weapon'&&field==='weapon'?false:legacy});\n"
+      "replacement": "  result.push({field,value,name,group,id:global?record.id:value,section,basic:key==='weapon'&&field==='weapon'&&!(typeof waIsWeaponVariant==='function'&&waIsWeaponVariant(value)),legacy:key==='weapon'&&field==='weapon'?!!(typeof waIsWeaponVariant==='function'&&waIsWeaponVariant(value)):legacy});\n"
     },
     {
       "startLine": 5358,
@@ -392,15 +398,15 @@
     },
     {
       "startLine": 5360,
-      "endLine": 5360,
-      "oldSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "replacement": " if(weaponActions){waDraw(simpleList,profiles[a.personId],a,waSimpleContext());simpleCount.textContent='選択した武器の装備・動作';return}simpleList.classList.remove('waEditor');\n"
+      "endLine": 5361,
+      "oldSHA256": "07db52e1a99169aa664f950eedbc764aa63df9c24741ebf6fcfb16e04e794a6d",
+      "replacement": " if(weaponActions){waDraw(simpleList,profiles[a.personId],a,waSimpleContext());simpleCount.textContent='選択した武器の装備・動作';return}simpleList.classList.remove('waEditor');if(key==='weapon')waEffectsHint(simpleList,()=>openSimpleTarget('effect',a.personId));\n const query=simpleSearch.value.normalize('NFKC').toLowerCase().trim();let rows=simpleRows(key).filter(r=>r.section===a.section),matches=rows.filter(r=>{if(key==='weapon'&&r.field==='weapon'&&!waWeaponVisible(r.value,simplePicked(r),a.archive))return false;if(key==='weapon'&&a.section==='武器'&&a.category&&candidateDisplayRule('detail:weapon',r.value,r.name,r.group).group!==a.category)return false;if(maIsHidden((simpleIsGlobal(key)?'catalog:':'detail:')+r.field,simpleIsGlobal(key)?r.id:r.value)&&!simplePicked(r))return false;const picked=simplePicked(r),favorite=usageFavorite(simpleKind(r),r.value);if(a.mode==='selected'&&!picked||a.mode==='favorite'&&!favorite)return false;if(query&&!(r.name+' '+r.value+' '+(r.group||'')).normalize('NFKC').toLowerCase().includes(query))return false;return a.archive||showLegacyCandidates||query||r.basic||!r.legacy||picked||favorite||!!personOptionEdits['detail:'+r.field+'|'+r.value]});\n"
     },
     {
       "startLine": 5362,
       "endLine": 5363,
       "oldSHA256": "151d0089516984c9c7b590ae4c23f67c30171847acfac6a47eaf328f613ecd13",
-      "replacement": " for(const row of matches){const picked=simplePicked(row),group=picked?'選択中':key==='weapon'&&row.field==='weapon'?candidateDisplayRule('detail:weapon',row.value,row.name,row.group).group:row.basic?'基本候補':row.legacy?'以前の候補':'追加した候補';if(group!==last){simpleList.append(picked?candidatePickedHeading(matches.filter(simplePicked).length):node('div',group,'candidateHeading'));last=group}const label=node('label',undefined,'modalOption simpleOption'),check=node('input'),name=node('span',row.name),star=node('button',usageFavorite(simpleKind(row),row.value)?'★':'☆','quickStar'),edit=node('button','編集','tiny');check.type='checkbox';check.checked=picked;check.dataset.field=row.field;check.dataset.value=row.value;check.onchange=()=>simpleSelect(row,check.checked);star.type=edit.type='button';star.setAttribute('aria-label',row.name+'のお気に入り');star.onclick=e=>{e.preventDefault();toggleUsageFavorite(simpleKind(row),row.value);renderSimpleTarget()};edit.setAttribute('aria-label',row.name+'を編集');edit.onclick=e=>{e.preventDefault();if(simpleIsGlobal(key))openEditor(row.field,item(row.field,row.id));else openPersonOptionEditor({source:'detail:'+row.field},row.value,row.name,row.group)};label.append(check,name,star,edit);if(picked){const context=simpleContext(row);simpleList.append(candidatePickedRow(row.name,attributeCaption(context,row.value),row.field!=='effectColor'?()=>openPersonItemDetails(context,row.id,row.name,simpleRefresh,()=>simpleSelect(row,false)):null,()=>simpleSelect(row,false)))}else simpleList.append(label);\n"
+      "replacement": " for(const row of matches){const picked=simplePicked(row),group=picked?'選択中':key==='weapon'&&row.field==='weapon'?(row.legacy?'以前の効果付き武器':candidateDisplayRule('detail:weapon',row.value,row.name,row.group).group):row.basic?'基本候補':row.legacy?'以前の候補':'追加した候補';if(group!==last){simpleList.append(picked?candidatePickedHeading(matches.filter(simplePicked).length):node('div',group,'candidateHeading'));last=group}const label=node('label',undefined,'modalOption simpleOption'),check=node('input'),name=node('span',row.name),star=node('button',usageFavorite(simpleKind(row),row.value)?'★':'☆','quickStar'),edit=node('button','編集','tiny');check.type='checkbox';check.checked=picked;check.dataset.field=row.field;check.dataset.value=row.value;check.onchange=()=>simpleSelect(row,check.checked);star.type=edit.type='button';star.setAttribute('aria-label',row.name+'のお気に入り');star.onclick=e=>{e.preventDefault();toggleUsageFavorite(simpleKind(row),row.value);renderSimpleTarget()};edit.setAttribute('aria-label',row.name+'を編集');edit.onclick=e=>{e.preventDefault();if(simpleIsGlobal(key))openEditor(row.field,item(row.field,row.id));else openPersonOptionEditor({source:'detail:'+row.field},row.value,row.name,row.group)};label.append(check,name,star,edit);if(picked){const context=simpleContext(row);simpleList.append(candidatePickedRow(row.name,attributeCaption(context,row.value),row.field!=='effectColor'?()=>openPersonItemDetails(context,row.id,row.name,simpleRefresh,()=>simpleSelect(row,false)):null,()=>simpleSelect(row,false)))}else simpleList.append(label);\n"
     }
   ],
   "4": [

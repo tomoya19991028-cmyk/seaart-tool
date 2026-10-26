@@ -1,6 +1,6 @@
 {
   "suite": "weapon-actions",
-  "productSHA256": "a2556f8885130a797044ced236fbca0b6c4a000a90e8f2cc53e3351da5560408",
+  "productSHA256": "ad2be8fb320e42da203589f6976e74b72629d29c333fcf35ae1516b7f48eda11",
   "tests": [
     {
       "id": "WEAPONS-taxonomy-normal-custom-hidden-and-favorites",
@@ -19,13 +19,34 @@
         },
         "total": 37,
         "duplicate": false,
-        "legacy": [],
+        "legacy": [
+          "magic bow",
+          "crystal staff",
+          "sword blade wrapped in electric arcs",
+          "one-handed sword emitting violet light",
+          "greatsword wreathed in flames",
+          "spear with an elongated crystalline ice blade",
+          "staff projecting a luminous magic circle",
+          "bow with a luminous energy string",
+          "twin swords with glowing blades"
+        ],
         "name": "愛用の鎌",
         "edited": "独自分類",
         "hidden": false,
         "favorite": true,
         "sameDefinitions": true,
         "otherFamily": true
+      }
+    },
+    {
+      "id": "WEAPONS-basic-types-and-explicit-effects",
+      "status": "PASS",
+      "detail": {
+        "standardChoices": 28,
+        "legacyValuesRetained": 9,
+        "searchAndFavoritesKeepTypesOnly": true,
+        "savedAndCustomVariantsPreserved": true,
+        "explicitEffects": true
       }
     },
     {
@@ -111,7 +132,7 @@
       "id": "WEAPONS-shared-instance-edit-and-one-step-Undo",
       "status": "PASS",
       "detail": {
-        "sameID": "pa-b58638c5-1ed6-4f28-943f-d6cfd418233b",
+        "sameID": "pa-a2158568-ac5b-4784-ae82-7aab626444f5",
         "independentActions": 3,
         "oneUndo": true
       }
@@ -132,7 +153,7 @@
         "ordinary": "pulling the string of their bow to full draw and aiming their bow toward Creature B",
         "absent": "pulling the string of their bow to full draw and aiming their bow",
         "effective": {
-          "id": "pa-5d95aa82-a351-4d18-ab4f-b91e39ab0a1f",
+          "id": "pa-391fb5f9-3bbb-4f29-afb2-bfeae338a6be",
           "action": "pull",
           "weaponAction": "bow-aim",
           "use": {
@@ -189,7 +210,7 @@
       "id": "WEAPONS-Creature-transient-save-capture-and-remap",
       "status": "PASS",
       "detail": {
-        "sameID": "pa-43427399-f104-4430-b4a5-2ad8584c8fa7",
+        "sameID": "pa-c00b5cd3-41f9-4b0a-a542-899bb3d858e0",
         "creatureSaved": true,
         "familyCaptured": true,
         "remap": true

@@ -1,15 +1,15 @@
 {
   "baseMain": "69bcfe86408a991ce42c13876b274bda604a6d8d",
-  "productSHA256": "a2556f8885130a797044ced236fbca0b6c4a000a90e8f2cc53e3351da5560408",
-  "productBytes": 4424220,
+  "productSHA256": "ad2be8fb320e42da203589f6976e74b72629d29c333fcf35ae1516b7f48eda11",
+  "productBytes": 4426589,
   "files": {
-    "index.html": "a2556f8885130a797044ced236fbca0b6c4a000a90e8f2cc53e3351da5560408",
-    "src/current/weapon-actions.js": "19519237d2b1ec532c06d64f2e9eec9c2586a30e30ff9cd5f9c49dddd77ff142",
+    "index.html": "ad2be8fb320e42da203589f6976e74b72629d29c333fcf35ae1516b7f48eda11",
+    "src/current/weapon-actions.js": "05489f3df33e6de06d815dc7b9f08aa54a67c12a65eee020786bb687f7fa8a02",
     "src/current/pose-actions.js": "6c6e1ea7b3eb9938577df26762cfa01ed2463106a1bb967dc23653f9d4310eda",
-    "src/current/script-edits.json": "da8b0c5b0bd147840d91477f94cd1c6e802a13e6a929eeca3164b574f1b38271",
+    "src/current/script-edits.json": "3bda8a81802715d70544bc08a9920f0769c84a0334aec91539b1299ac5cab865",
     "src/current/page.html.in": "3974d48188b227fd7538de7c9e6de70362e6c34ec9a7795fbb646fed2d81bde7",
     "src/person-creature-unified-ui.js": "8893edbd07b56aff9042fdabfd6e18fecbe5e6fde6877018814c8f30c780d51f",
-    "tests/weapon-actions/run.cjs": "23a6461a65426f55ca2479062486497a0c26294ca098f06fab5afc354cce284d",
+    "tests/weapon-actions/run.cjs": "f554e8524c6c11ea45c1c131d4921305c14fa270b48b3810ead11de09d26c5c4",
     "tests/v44-remaining/compatibility.cjs": "23f6492b3cc7b1087919d57199f36963e5ce183b18e961ce29be0b4020e66d31",
     "scripts/build-current.py": "91b1ed090fc3bdb2724bbb14cefea2cde37ddeaf1e1938fbde6212df4db11441",
     "tests/v44-remaining/replay.cjs": "777177e48c7b603001c1711c710f764e578c545d630384a204ca01cd869e9691"
@@ -20,5 +20,11 @@
   "SeaArtPixAIImageGenerationTested": false,
   "published": false,
   "legacyMetadata": "The original remaining compatibility comparison is unchanged and passes, including all old weaponState option labels and groups.",
-  "additiveCatalogProjection": "The inherited adapter excludes exactly twelve newly added weapon verb IDs from old full-table comparisons. Existing rows and immutable fixtures are unchanged; weapon suite checks all twelve IDs independently."
+  "additiveCatalogProjection": "The inherited adapter excludes exactly twelve newly added weapon verb IDs from old full-table comparisons. Existing rows and immutable fixtures are unchanged; weapon suite checks all twelve IDs independently.",
+  "weaponCandidates": {
+    "defaultBaseTypes": 28,
+    "legacyAttributeVariantsRetained": 9,
+    "sourceCatalogValuesUnchanged": true,
+    "automaticEffectSelection": false
+  }
 }

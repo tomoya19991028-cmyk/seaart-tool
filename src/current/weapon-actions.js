@@ -5,6 +5,21 @@ const waBuiltinFamilies={
  sword:'sword',longsword:'sword',scimitar:'sword',greatsword:'greatsword',katana:'katana',rapier:'rapier',dagger:'dagger','dual swords':'dual',spear:'spear',trident:'spear',halberd:'halberd',scythe:'scythe',axe:'axe','battle axe':'axe',hammer:'blunt',mace:'blunt',bow:'bow',longbow:'bow','magic bow':'bow',crossbow:'crossbow',gun:'gun',rifle:'rifle',revolver:'revolver','throwing knives':'throwing','magic wand':'staff',staff:'staff','crystal staff':'staff',spellbook:'book','magic orb':'orb','other weapon':'other',
  'sword blade wrapped in electric arcs':'sword','one-handed sword emitting violet light':'sword','greatsword wreathed in flames':'greatsword','spear with an elongated crystalline ice blade':'spear','staff projecting a luminous magic circle':'staff','bow with a luminous energy string':'bow','twin swords with glowing blades':'dual'
 };
+// Keep old IDs/English for saved selections, but offer weapon types by default.
+// Attributes are selected in the existing effects editor, never added implicitly.
+const waWeaponVariants={
+ 'sword blade wrapped in electric arcs':'sword',
+ 'one-handed sword emitting violet light':'sword',
+ 'greatsword wreathed in flames':'greatsword',
+ 'spear with an elongated crystalline ice blade':'spear',
+ 'staff projecting a luminous magic circle':'staff',
+ 'bow with a luminous energy string':'bow',
+ 'twin swords with glowing blades':'dual swords',
+ 'magic bow':'bow','crystal staff':'staff'
+};
+function waIsWeaponVariant(value){return Object.hasOwn(waWeaponVariants,value)&&!candidateDisplayEdit('detail:weapon',value)&&!detailPresetCustom.weapon?.some(r=>r[0]===value)}
+function waWeaponVisible(value,picked=false,legacy=false){return !waIsWeaponVariant(value)||picked||legacy||showLegacyCandidates}
+function waEffectsHint(root,openEffects){const help=node('div',undefined,'waWeaponHelp');help.append(node('p','武器は種類を選びます。氷・炎・雷・発光などは「エフェクト」で指定できます。','paNotice'));if(openEffects)help.append(paButton('エフェクトを選ぶ',openEffects));root.append(help)}
 function waFamily(p,value){return p?.weaponFamilies?.[value]||waBuiltinFamilies[value]||'other'}
 function waGroup(value){return waFamilies[waBuiltinFamilies[value]||'other'][0]}
 function waIsBow(value,p){return waFamily(p,value)==='bow'}
@@ -207,10 +222,12 @@ function waOpenCreatureWeapon(s,mode,initial=null){
  uHumanGuard(s,mode);const p=s.byMode[mode].record,d=actorFormDialogShell('unifiedHumanGroupDialog','武器'),session={tab:initial?'装備・動作':'武器',...(initial?{weaponTarget:waRef(initial)?.id,[(waPresetMap.get(initial.weaponAction)?.role||'use')+'Id']:initial.id}:{})};$(d.id+'Title').textContent='武器';
  const ctx={transient:true,creatureState:s,guard:()=>uHumanGuard(s,mode),redraw:draw,changed:()=>{creatureHumanEditorMark();draw()},selectWeapons:()=>{session.tab='武器';draw()},openPose:id=>{d.close();s.tab='basic';s.page=0;renderCreatureHumanEditor();$('creatureHumanEditorGrid')?.querySelector('[data-atomic-pose]')?.pickerApi.open(id)}};
  function draw(){ctx.guard();for(const child of [...d.children].slice(1))child.remove();const tabs=node('div',undefined,'waTabs');for(const tab of ['武器','装備・動作']){const b=paButton(tab,()=>{session.tab=tab;draw()});b.setAttribute('role','tab');b.setAttribute('aria-selected',String(session.tab===tab));tabs.append(b)}d.append(tabs);const body=node('div',undefined,'dialogBody waEditor');d.append(body);if(session.tab==='装備・動作'){waDraw(body,p,session,ctx);return}
+  waEffectsHint(body,()=>{ctx.guard();d.close();requestAnimationFrame(()=>{if(s!==creatureHumanEditorState)return;s.tab='equipment';renderCreatureHumanEditor();$('creatureHumanEditorGrid')?.querySelector('[data-editor-card=effectCard]>.personLaunch')?.click()})});
   const query=node('input');query.type='search';query.placeholder='武器を検索';query.setAttribute('aria-label','武器を検索');query.value=session.query||'';query.oninput=()=>{session.query=query.value;renderList()};body.append(query);
   paField(body,'武器の分類',[['','すべての分類'],...waGroups.map(g=>[g,g])],session.category||'',v=>{session.category=v;renderList()},'weaponCategory');
   paField(body,'表示',[['all','すべて'],['selected','選択中'],['favorite','★お気に入り']],session.filter||'all',v=>{session.filter=v;renderList()},'weaponFilter');const list=node('div',undefined,'waWeaponList');body.append(list);body.append(paButton('候補管理',()=>{const target=candidateAddTarget('detail:weapon');openCandidateManage(target.section,'detail:weapon')}),paButton('独自武器を追加',()=>openEditor('detail:weapon')));
-  function renderList(){list.replaceChildren();for(const [value,rawName,rawGroup]of detailOptions.weapon.options){if(/shield|buckler/.test(value))continue;const selected=asList(p.detail.weapon).includes(value),edit=personOptionEdits['detail:weapon|'+value],name=edit?.name||rawName,group=candidateDisplayRule('detail:weapon',value,name,rawGroup).group;if(maIsHidden('detail:weapon',value)&&!selected||session.category&&group!==session.category||session.query&&!(name+' '+value).toLowerCase().includes(session.query.toLowerCase())||session.filter==='selected'&&!selected||session.filter==='favorite'&&!usageFavorite('person:武器',value))continue;
+  const previous=paButton(session.archive?'基本の武器のみ':'以前の効果付き武器も表示',()=>{session.archive=!session.archive;draw()});previous.dataset.weaponVariants='';previous.setAttribute('aria-pressed',String(!!session.archive));body.append(previous);
+  function renderList(){list.replaceChildren();for(const [value,rawName,rawGroup]of detailOptions.weapon.options){if(/shield|buckler/.test(value))continue;const selected=asList(p.detail.weapon).includes(value),edit=personOptionEdits['detail:weapon|'+value],name=edit?.name||rawName,group=candidateDisplayRule('detail:weapon',value,name,rawGroup).group;if(!waWeaponVisible(value,selected,session.archive)||maIsHidden('detail:weapon',value)&&!selected||session.category&&group!==session.category||session.query&&!(name+' '+value).toLowerCase().includes(session.query.toLowerCase())||session.filter==='selected'&&!selected||session.filter==='favorite'&&!usageFavorite('person:武器',value))continue;
     const row=node('div',undefined,'waWeaponRow'),label=node('label',name),check=node('input');check.type='checkbox';check.checked=selected;check.dataset.value=value;check.onchange=()=>waEdit(ctx,()=>{p.detail.weapon=check.checked?[...new Set([...asList(p.detail.weapon),value])]:asList(p.detail.weapon).filter(v=>v!==value);if(check.checked)usageRemember('person:武器',value)});label.prepend(check);row.append(label,paButton(usageFavorite('person:武器',value)?'★':'☆',()=>{toggleUsageFavorite('person:武器',value);renderList()}),paButton('編集',()=>openPersonOptionEditor({source:'detail:weapon'},value,name,group)));list.append(row);
   }}renderList();
  }
