@@ -12730,7 +12730,7 @@ function waSimpleContext(){const s=simpleActive,p=profiles[s.personId];return {p
 function waCardEntries(p,open,drop){return paRows(p).filter(a=>waRef(a)).map(a=>({label:waWeaponName(waRef(a).id)+'：'+paName(a)+(paProblem(a,p)?'（'+paProblem(a,p)+'）':''),name:waWeaponName(waRef(a).id)+'：'+paName(a),value:a.id,field:'poseActions',action:a,open:()=>open(a),remove:()=>drop(a)}))}
 function waOpenPersonWeapon(personId,a){openSimpleTarget('weapon',personId,'装備・動作');simpleActive.weaponTarget=waRef(a)?.id;simpleActive[(waPresetMap.get(a.weaponAction)?.role||'use')+'Id']=a.id;renderSimpleTarget()}
 function waOpenCreatureWeapon(s,mode,initial=null){
- uHumanGuard(s,mode);const p=s.byMode[mode].record,d=actorFormDialogShell('unifiedHumanGroupDialog','武器'),session={tab:initial?'装備・動作':'武器',...(initial?{weaponTarget:waRef(initial)?.id,[(waPresetMap.get(initial.weaponAction)?.role||'use')+'Id']:initial.id}:{})};
+ uHumanGuard(s,mode);const p=s.byMode[mode].record,d=actorFormDialogShell('unifiedHumanGroupDialog','武器'),session={tab:initial?'装備・動作':'武器',...(initial?{weaponTarget:waRef(initial)?.id,[(waPresetMap.get(initial.weaponAction)?.role||'use')+'Id']:initial.id}:{})};$(d.id+'Title').textContent='武器';
  const ctx={transient:true,creatureState:s,guard:()=>uHumanGuard(s,mode),redraw:draw,changed:()=>{creatureHumanEditorMark();draw()},selectWeapons:()=>{session.tab='武器';draw()},openPose:id=>{d.close();s.tab='basic';s.page=0;renderCreatureHumanEditor();$('creatureHumanEditorGrid')?.querySelector('[data-atomic-pose]')?.pickerApi.open(id)}};
  function draw(){ctx.guard();for(const child of [...d.children].slice(1))child.remove();const tabs=node('div',undefined,'waTabs');for(const tab of ['武器','装備・動作']){const b=paButton(tab,()=>{session.tab=tab;draw()});b.setAttribute('role','tab');b.setAttribute('aria-selected',String(session.tab===tab));tabs.append(b)}d.append(tabs);const body=node('div',undefined,'dialogBody waEditor');d.append(body);if(session.tab==='装備・動作'){waDraw(body,p,session,ctx);return}
   const query=node('input');query.type='search';query.placeholder='武器を検索';query.setAttribute('aria-label','武器を検索');query.value=session.query||'';query.oninput=()=>{session.query=query.value;renderList()};body.append(query);
@@ -12996,7 +12996,7 @@ const paTabs=node('div');paTabs.id='poseComposeTabs';paTabs.className='paTabs';p
 function paReady(){return !!(activePersonPicker?.atomicPose&&paSession&&(paSession.actorEditor?creatureHumanEditorState?.byMode[paSession.actorEditor.representationMode]?.record===paSession.p:paSession.p===profiles[paSession.ownerId]))}
 function paButton(label,fn,className='secondary'){const b=node('button',label,className);b.type='button';b.onclick=fn;return b}
 function paSaveUndo(label){if(!paSession?.actorEditor)saveUndo(label)}
-function paChanged(){paSession?.refresh();document.querySelectorAll('[data-detail-field=weaponCard]').forEach(card=>card.refresh?.());updatePersonBadges();if(paSession?.actorEditor)creatureHumanEditorMark();else dirty();paDraw()}
+function paChanged(){paSession?.refresh();document.querySelectorAll('[data-detail-field=weaponCard]').forEach(card=>card.refresh?.());updatePersonBadges();if(paSession?.actorEditor){creatureHumanEditorMark();renderCreatureHumanEditor()}else dirty();paDraw()}
 function paEdit(fn,label='ポーズを編集'){paSaveUndo(label);fn();paChanged()}
 function paAdd(action,template=null){
  if(!paReady())return;const p=paSession.p,d=paDefinitions.get(action);if(!d)return;

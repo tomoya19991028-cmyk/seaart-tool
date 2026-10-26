@@ -250,7 +250,7 @@ const paTabs=node('div');paTabs.id='poseComposeTabs';paTabs.className='paTabs';p
 function paReady(){return !!(activePersonPicker?.atomicPose&&paSession&&(paSession.actorEditor?creatureHumanEditorState?.byMode[paSession.actorEditor.representationMode]?.record===paSession.p:paSession.p===profiles[paSession.ownerId]))}
 function paButton(label,fn,className='secondary'){const b=node('button',label,className);b.type='button';b.onclick=fn;return b}
 function paSaveUndo(label){if(!paSession?.actorEditor)saveUndo(label)}
-function paChanged(){paSession?.refresh();document.querySelectorAll('[data-detail-field=weaponCard]').forEach(card=>card.refresh?.());updatePersonBadges();if(paSession?.actorEditor)creatureHumanEditorMark();else dirty();paDraw()}
+function paChanged(){paSession?.refresh();document.querySelectorAll('[data-detail-field=weaponCard]').forEach(card=>card.refresh?.());updatePersonBadges();if(paSession?.actorEditor){creatureHumanEditorMark();renderCreatureHumanEditor()}else dirty();paDraw()}
 function paEdit(fn,label='ポーズを編集'){paSaveUndo(label);fn();paChanged()}
 function paAdd(action,template=null){
  if(!paReady())return;const p=paSession.p,d=paDefinitions.get(action);if(!d)return;
