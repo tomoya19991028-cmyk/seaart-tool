@@ -1,0 +1,248 @@
+{
+  "suite": "weapon-actions",
+  "productSHA256": "5f86de1f0da5c6902d9759c79eaf557b1ccc583a899a59dedee2dacaefeb6eb8",
+  "tests": [
+    {
+      "id": "WEAPONS-taxonomy-normal-custom-hidden-and-favorites",
+      "status": "PASS",
+      "detail": {
+        "counts": {
+          "剣・刀": 12,
+          "槍・長柄": 5,
+          "斧・打撃": 4,
+          "弓": 4,
+          "銃": 3,
+          "魔法具": 6,
+          "その他": 1,
+          "クロスボウ": 1,
+          "投擲": 1
+        },
+        "total": 37,
+        "duplicate": false,
+        "legacy": [],
+        "name": "愛用の鎌",
+        "edited": "独自分類",
+        "hidden": false,
+        "favorite": true,
+        "sameDefinitions": true
+      }
+    },
+    {
+      "id": "WEAPONS-family-specific-actions-and-appearance",
+      "status": "PASS",
+      "detail": {
+        "families": {
+          "crossbow": [
+            "crossbow-ready",
+            "ranged-aim",
+            "crossbow-fire",
+            "crossbow-after"
+          ],
+          "bow": [
+            "bow-nock",
+            "bow-draw",
+            "bow-aim",
+            "bow-release",
+            "bow-after"
+          ],
+          "gun": [
+            "ranged-aim",
+            "gun-point",
+            "gun-fire",
+            "gun-after"
+          ],
+          "rifle": [
+            "ranged-aim",
+            "rifle-shoulder",
+            "gun-fire",
+            "gun-after"
+          ],
+          "book": [
+            "book-open",
+            "book-page",
+            "book-raise",
+            "book-cast"
+          ],
+          "orb": [
+            "orb-palm",
+            "orb-cup",
+            "orb-float",
+            "orb-present",
+            "orb-cast"
+          ],
+          "dual": [
+            "swing",
+            "dual-ready",
+            "dual-cross"
+          ],
+          "glowing": [
+            "swing",
+            "dual-ready",
+            "dual-cross"
+          ],
+          "staff": [
+            "staff-raise",
+            "staff-point",
+            "staff-cast",
+            "staff-circle"
+          ],
+          "gunCarry": [
+            "carry-hold",
+            "carry-ready",
+            "carry-lower",
+            "carry-back",
+            "carry-waist"
+          ],
+          "bookCarry": [
+            "carry-hold",
+            "carry-ready",
+            "carry-lower",
+            "carry-back",
+            "carry-waist"
+          ]
+        },
+        "generatedPhrases": 137,
+        "customFamily": true,
+        "appearancePreserved": true
+      }
+    },
+    {
+      "id": "WEAPONS-shared-instance-edit-and-one-step-Undo",
+      "status": "PASS",
+      "detail": {
+        "sameID": "pa-96d68c83-6b0f-425d-ba14-88e8be6402d4",
+        "independentActions": 3,
+        "oneUndo": true
+      }
+    },
+    {
+      "id": "WEAPONS-conflict-cancel-resolve-and-Undo",
+      "status": "PASS",
+      "detail": {
+        "cancelUnchanged": true,
+        "explicitResolution": true,
+        "singleUndo": true
+      }
+    },
+    {
+      "id": "WEAPONS-absent-targets-panels-and-dangling-weapon",
+      "status": "PASS",
+      "detail": {
+        "ordinary": "pulling the string of their bow to full draw and aiming their bow toward Creature B",
+        "absent": "pulling the string of their bow to full draw and aiming their bow",
+        "effective": {
+          "id": "pa-2c3b06b6-7bfa-404e-8a88-f41a78cd03de",
+          "action": "pull",
+          "weaponAction": "bow-aim",
+          "use": {
+            "kind": "equipment",
+            "field": "weapon",
+            "id": "bow"
+          },
+          "target": {
+            "kind": "equipment",
+            "field": "weapon",
+            "id": "bow",
+            "part": "bowstring"
+          },
+          "aim": {
+            "kind": "character",
+            "id": "original-wa-target"
+          }
+        },
+        "scoped": [
+          "Character A standing toward Character B",
+          "Character A pulling the string of their bow to full draw and aiming their bow toward Character B"
+        ],
+        "self": "pulling the string of their bow to full draw and aiming their bow",
+        "deleted": "pulling the string of their bow to full draw and aiming their bow",
+        "missing": "",
+        "ref": {
+          "kind": "equipment",
+          "field": "weapon",
+          "id": "bow"
+        },
+        "notice": "対象武器武器を選んでください剣弓：引き絞って狙う（対象武器不在）× 動作を解除剣携帯・持ち方持ち方を選ぶ指定なし手に持つ構える武器を下ろす背負う腰に装備抜刀状態鞘に収めた状態地面に突き立てる使用動作使い方を選ぶ指定なし振りかぶる振る突く刃で受ける"
+      }
+    },
+    {
+      "id": "WEAPONS-legacy-states-and-migration-metadata",
+      "status": "PASS",
+      "detail": {
+        "idempotent": true,
+        "movedWeight": 1.35,
+        "color": "blue",
+        "editedEnglishRetained": true
+      }
+    },
+    {
+      "id": "WEAPONS-save-reload-JSON-history-and-fingerprint",
+      "status": "PASS",
+      "detail": {
+        "roundTrip": true,
+        "singleOutput": true,
+        "fingerprintChanges": true
+      }
+    },
+    {
+      "id": "WEAPONS-Creature-transient-save-capture-and-remap",
+      "status": "PASS",
+      "detail": {
+        "sameID": "pa-b3daf387-b201-405f-8251-a5fe1235c3d0",
+        "creatureSaved": true,
+        "familyCaptured": true,
+        "remap": true
+      }
+    },
+    {
+      "id": "WEAPONS-invalid-optional-schema-and-no-retarget",
+      "status": "PASS",
+      "detail": {
+        "invalidFormsRejected": 5,
+        "fullRestoreRemap": true
+      }
+    },
+    {
+      "id": "WEAPONS-mobile-portrait-landscape-and-large-text",
+      "status": "PASS",
+      "detail": {
+        "metrics": [
+          {
+            "left": 0,
+            "right": 320,
+            "top": 64,
+            "bottom": 640,
+            "width": 320,
+            "height": 640,
+            "list": 410,
+            "overflow": false
+          },
+          {
+            "left": 102,
+            "right": 742,
+            "top": 50.90625,
+            "bottom": 390,
+            "width": 844,
+            "height": 390,
+            "list": 174,
+            "overflow": false
+          },
+          {
+            "left": 0,
+            "right": 393,
+            "top": 80,
+            "bottom": 800,
+            "width": 393,
+            "height": 800,
+            "list": 520,
+            "overflow": false
+          }
+        ],
+        "physicalAndroid": false
+      }
+    }
+  ],
+  "syntheticDataOnly": true,
+  "SeaArtImageGeneration": false,
+  "AndroidDevice": false
+}

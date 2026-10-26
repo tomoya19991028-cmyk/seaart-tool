@@ -19,7 +19,7 @@ The main runner and inherited runner must not run concurrently with another inhe
 
 `replay.cjs` delegates to the existing TG/forms adapters and changes only the documented obsolete assertions/fixtures. It validates patch anchors. It retains all original ownership, draft, consent, Undo, and persistence assertions. Supplied v44 is reconstructed into `.audit-tmp/remaining-assets/reference-v44` from a pinned commit and six reference-only edits, then checked against its original SHA. It is never copied into the product. Historical assets are prepared without overwriting differing files.
 
-The FIXED comparison reads the immutable original compressed fixture. It does not depend on R1 completing. Only two known presentation differences are explicit: bust's label and facing-each-other's group. Known undefined sound/reaction defaults are handled in the PWA adapter, and nonempty values are compared independently in the full working snapshot.
+The FIXED comparison reads the immutable original compressed fixture. It does not depend on R1 completing. Three intentional presentation differences are explicit: bust's label, facing-each-other's group, and weaponState's 装備・動作 tab label from the 2026-10-26 weapon specification. The immutable fixture and its values are unchanged. Known undefined sound/reaction defaults are handled in the PWA adapter, and nonempty values are compared independently in the full working snapshot.
 
 Every runner uses synthetic data, private contexts and loopback servers. No user storage, Android device, IME or real service image is accessed. The diagnostics self-test intentionally creates one failed child assertion to prove screenshot/console/trace collection; its expected failure is not a product failure or an extra PASS.
 

@@ -176,7 +176,10 @@
     {
       "id": "poseAtomicV39Script",
       "type": "",
-      "source": "src/current/pose-actions.js"
+      "sources": [
+        "src/current/weapon-actions.js",
+        "src/current/pose-actions.js"
+      ]
     },
     {
       "id": "uiRefinementV40Script",
