@@ -2,8 +2,13 @@
 const fs=require('fs'),path=require('path'),Module=require('module');
 const {assets}=require('./prepare.cjs');
 const originalCompile=Module.prototype._compile,reference='http://127.0.0.1:8765/reference-v44/index.html';
+// These twelve definitions are the authorized weapon-verb additions. Compare
+// every older catalog row exactly; the weapon suite separately checks this list
+// and exercises its phrases. Original test files/fixtures stay immutable.
+const weaponVerbIds=['weapon-carry','ready-weapon','aim-weapon','nock-arrow','release-arrow','fire-weapon','draw-weapon','sheathe-weapon','cast-equipment','turn-page','levitate-equipment','use-equipment'];
 function one(s,a,b){if(s.split(a).length!==2)throw Error('Current adapter anchor count: '+a);return s.replace(a,b)}
 Module.prototype._compile=function(s,file){
+ if(file.endsWith('/forms-environment/replay.cjs'))s=one(s,'^character-extension-tg-/.test(r.id)','^character-extension-tg-|^pose-v39-(?:'+weaponVerbIds.join('|')+')$/.test(r.id)');
  if(file.includes('/tests/')&&!file.includes('/v44-remaining/')){
   s=s.replaceAll("executablePath:'/usr/bin/chromium'","...(fs.existsSync('/usr/bin/chromium')?{executablePath:'/usr/bin/chromium'}:{})");
   s=s.replaceAll("executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium'","...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:fs.existsSync('/usr/bin/chromium')?{executablePath:'/usr/bin/chromium'}:{})");

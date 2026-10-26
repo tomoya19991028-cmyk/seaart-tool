@@ -1,6 +1,6 @@
 {
   "suite": "weapon-actions",
-  "productSHA256": "cede692c2c98c4be9db0a595cca1b7b9c1cf2fd5f092d6905544ae3116c40ec1",
+  "productSHA256": "a2556f8885130a797044ced236fbca0b6c4a000a90e8f2cc53e3351da5560408",
   "tests": [
     {
       "id": "WEAPONS-taxonomy-normal-custom-hidden-and-favorites",
@@ -24,7 +24,8 @@
         "edited": "独自分類",
         "hidden": false,
         "favorite": true,
-        "sameDefinitions": true
+        "sameDefinitions": true,
+        "otherFamily": true
       }
     },
     {
@@ -110,7 +111,7 @@
       "id": "WEAPONS-shared-instance-edit-and-one-step-Undo",
       "status": "PASS",
       "detail": {
-        "sameID": "pa-5a37bf66-c605-4f99-85e2-fe797c229b16",
+        "sameID": "pa-b58638c5-1ed6-4f28-943f-d6cfd418233b",
         "independentActions": 3,
         "oneUndo": true
       }
@@ -131,7 +132,7 @@
         "ordinary": "pulling the string of their bow to full draw and aiming their bow toward Creature B",
         "absent": "pulling the string of their bow to full draw and aiming their bow",
         "effective": {
-          "id": "pa-0063ecdf-5596-452e-a77d-7cd5fbabf36b",
+          "id": "pa-5d95aa82-a351-4d18-ab4f-b91e39ab0a1f",
           "action": "pull",
           "weaponAction": "bow-aim",
           "use": {
@@ -188,7 +189,7 @@
       "id": "WEAPONS-Creature-transient-save-capture-and-remap",
       "status": "PASS",
       "detail": {
-        "sameID": "pa-5eac6fb8-f016-4a0a-9a40-8225f6350c4c",
+        "sameID": "pa-43427399-f104-4430-b4a5-2ad8584c8fa7",
         "creatureSaved": true,
         "familyCaptured": true,
         "remap": true

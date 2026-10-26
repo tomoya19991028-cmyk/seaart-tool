@@ -172,7 +172,7 @@ function waDraw(root,p,session,ctx){
  if(!weapons.length){root.append(node('p','先に武器タブで使う武器を選んでください。','paNotice'),paButton('武器を選ぶ',ctx.selectWeapons));waDrawLegacy(root,p,session,ctx);return}
  const value=session.weaponTarget;if(!weapons.some(w=>w.id===value)){root.append(node('p','対象武器を選択してください。解除した武器は自動で付け替えません。','paNotice'));waDrawLegacy(root,p,session,ctx);return}
  root.append(node('h3',waWeaponName(value)));
- if(!Object.hasOwn(waBuiltinFamilies,value))paField(root,'独自武器の系統（任意）',[['','未分類（汎用）'],...Object.entries(waFamilies).map(([k,v])=>[k,v[1]])],p.weaponFamilies?.[value]||'',family=>waEdit(ctx,()=>{p.weaponFamilies??={};if(family)p.weaponFamilies[value]=family;else delete p.weaponFamilies[value]}),'weaponFamily');
+ if(!Object.hasOwn(waBuiltinFamilies,value)||waBuiltinFamilies[value]==='other')paField(root,'武器の系統（任意）',[['','未分類（汎用）'],...Object.entries(waFamilies).map(([k,v])=>[k,v[1]])],p.weaponFamilies?.[value]||'',family=>waEdit(ctx,()=>{p.weaponFamilies??={};if(family)p.weaponFamilies[value]=family;else delete p.weaponFamilies[value]}),'weaponFamily');
  for(const role of ['carry','use']){
   const area=node('section',undefined,'waSection');area.dataset.weaponRole=role;area.append(node('h3',role==='carry'?'携帯・持ち方':'使用動作'));const rows=waFor(p,value,role);
   if(!Object.hasOwn(session,role+'Id')&&rows.length)session[role+'Id']=rows[0].id;

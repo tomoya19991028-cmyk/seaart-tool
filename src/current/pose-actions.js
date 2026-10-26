@@ -238,8 +238,9 @@ subjectActionTags=function(actor,context={}){
  const record=actor.kind==='character'?actor.record:creatureRepresentationMode(actor.record)!=='normal'?anthroAppearanceRecord(creatureHumanAppearance(actor.record)):null;
  return record?[...new Set([...legacy,...paTags(record,{...context,owner:actor,scopeOwner:true,weaponOnly:!!override})])]:legacy;
 };
-const paPreviousLinks=subjectLinksActive;subjectLinksActive=function(){return paPreviousLinks()||Object.values(profiles).some(p=>paRows(p).length)};
-const paPreviousCreatureReferenced=subjectCreatureReferenced;subjectCreatureReferenced=function(c){return paPreviousCreatureReferenced(c)||Object.values(profiles).some(p=>paRows(p).some(a=>[a.target,a.use,a.aim].some(r=>r?.kind==='creature'&&r.id===c.id)))};
+function paOwnerRecords(){return [...Object.values(profiles),...Object.values(actorExtensions.byActor).flatMap(e=>e.humanProfile?.version===1?Object.values(e.humanProfile.byMode):[])]}
+const paPreviousLinks=subjectLinksActive;subjectLinksActive=function(){return paPreviousLinks()||paOwnerRecords().some(p=>paRows(p).length)};
+const paPreviousCreatureReferenced=subjectCreatureReferenced;subjectCreatureReferenced=function(c){return paPreviousCreatureReferenced(c)||paOwnerRecords().some(p=>paRows(p).some(a=>[a.target,a.use,a.aim].some(r=>r?.kind==='creature'&&r.id===c.id)))};
 const paPreviousMigration=migrateRelocatedPoseSelections;migrateRelocatedPoseSelections=function(){const result=paPreviousMigration();paMigrateAll();return result};
 const paPreviousProfiles=renderProfiles;renderProfiles=function(){paEnsureCatalog();paMigrateAll();return paPreviousProfiles.apply(this,arguments)};
 const paPreviousGenerate=generate;generate=function(){paEnsureCatalog();paMigrateAll();return paPreviousGenerate.apply(this,arguments)};

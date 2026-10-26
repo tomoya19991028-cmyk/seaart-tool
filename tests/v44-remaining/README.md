@@ -24,3 +24,5 @@ The FIXED comparison reads the immutable original compressed fixture. It does no
 Every runner uses synthetic data, private contexts and loopback servers. No user storage, Android device, IME or real service image is accessed. The diagnostics self-test intentionally creates one failed child assertion to prove screenshot/console/trace collection; its expected failure is not a product failure or an extra PASS.
 
 Use fresh RESULT_DIR values. Sources, product SHA before/after, exact failed IDs, and original attempts are recorded separately. Only exact final bytes count as final validation.
+
+The 2026-10-26 weapon extension adds twelve `pose-v39-*` verb definitions. The existing catalog projection excludes exactly those twelve new IDs when replaying old full-table comparisons; all older IDs and values remain exact. `tests/weapon-actions/run.cjs` independently checks the exact twelve IDs and family-specific output. Original test files and compressed fixtures remain unchanged.
