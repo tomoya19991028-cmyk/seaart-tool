@@ -1,5 +1,7 @@
 # v44 実行結果
 
+> これは2026-10-25の初回監査記録です。2026-10-26の製品修正・残試験の最終結果は [残試験追補](REMAINING_v44_残試験とAndroid確認版.md) を参照してください。以下の旧結果・SHAは履歴として保持しています。
+
 最終製品HTMLのSHA-256は `41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305`。
 SWは `8fe1d284721b17791b82ad53af81abe9380bcc03b45c5837348d31bbbbe3c807`。
 manifestと3アイコンはmainのままです。全資産のbytes・SHA、Node/Chromium/Pythonの版は [product-hashes.json](../../validation/v44-audit/product-hashes.json) を参照してください。

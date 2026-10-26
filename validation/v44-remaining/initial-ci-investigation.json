@@ -1,0 +1,20 @@
+{
+  "runId": 40215568009,
+  "head": "672d2d66e24e470372c80c1eacaea8498b68a462",
+  "originalUI": {
+    "PASS": 12,
+    "FAIL": 1,
+    "SKIP": 0
+  },
+  "artifactAPI": {
+    "total_count": 0,
+    "artifacts": []
+  },
+  "logWarning": "No files were found with the provided path: .audit-tmp/. No artifacts will be uploaded.",
+  "includeHiddenFiles": false,
+  "individualCaseRecovered": false,
+  "cause": "Not determinable from retained run/job logs; no case details were printed by that runner. Repetition results are separate evidence.",
+  "initialBrowserInstallLog": "Chrome for Testing / Headless Shell 151.0.7922.34, Playwright chromium revision 1234",
+  "localRepeatBrowser": "Chromium 154.0.8037.57, Playwright 1.62.1",
+  "comparison": "Final CI repeats use the same pinned Playwright 1.62.1 browser download as initial CI; local repeats are recorded separately."
+}

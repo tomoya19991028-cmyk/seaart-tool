@@ -4,7 +4,14 @@
   "scripts": {
     "build:check": "python3 scripts/build-current.py --check",
     "test:audit": "node tests/v44-audit/run.cjs",
-    "test:quality": "node tests/v44-audit/quality.cjs"
+    "test:quality": "node tests/v44-audit/quality.cjs",
+    "test:remaining": "node tests/v44-remaining/run.cjs",
+    "test:stability": "REMAINING_MODE=stability node tests/v44-remaining/run.cjs",
+    "package:android": "python3 scripts/package-android-check.py"
   },
-  "devDependencies": { "acorn": "8.15.0", "parse5": "7.3.0", "playwright": "1.62.1" }
+  "devDependencies": {
+    "acorn": "8.15.0",
+    "parse5": "7.3.0",
+    "playwright": "1.62.1"
+  }
 }

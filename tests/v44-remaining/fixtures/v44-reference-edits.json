@@ -1,0 +1,44 @@
+{
+  "description": "Reconstruct user-provided v44 as a read-only test reference. Never use this as product output.",
+  "baseCommit": "e584b955140d5d359be411c38b1191a4082c40a1",
+  "baseSHA256": "41983f10df019a1e2c129ec7bbf7bdf630d535de8243be7baea9dce201354305",
+  "referenceSHA256": "0c8b08ee906737152aa7b0971edafbc611868c8c524b3fb7f850586f0b5ede5e",
+  "changes": [
+    {
+      "startLine": 10823,
+      "removeLines": 1,
+      "removedSHA256": "917011a1a2ff38eb0dd925245290bf8fd04f56377b0881b377c40963d443eec9",
+      "referenceText": "const ufSimpleOpenBefore=openSimpleTarget;openSimpleTarget=function(...args){personCharacterCandidatesVisible=false;return ufSimpleOpenBefore.apply(this,args)};simpleDialog.addEventListener('close',()=>{$('personChoiceCount').before(personCharacterControls);personCharacterControls.hidden=true});\n"
+    },
+    {
+      "startLine": 10836,
+      "removeLines": 1,
+      "removedSHA256": "71499f726462ee94934030d169c5ce9401cf06a9a7f6e75fbd9ed52506e73fe1",
+      "referenceText": "$('choiceDialog').addEventListener('close',()=>{$('personChoiceCount').before(personCharacterControls);personCharacterControls.hidden=true});\n"
+    },
+    {
+      "startLine": 12652,
+      "removeLines": 2,
+      "removedSHA256": "75735c15ffa67a2caaf77bd6d14c6199e84a57fef1ffabb4373294c3bd14c0a0",
+      "referenceText": "  else if(a.action==='run'&&a.style==='sprint')s='sprinting';\n  else if(a.action==='run'&&a.style==='start')s='starting to run';\n"
+    },
+    {
+      "startLine": 12666,
+      "removeLines": 3,
+      "removedSHA256": "a2d06fa666bcebd02abac8f06aeb7e6af37024a5efc161ba03f8ab0d0b670703",
+      "referenceText": "  const color=paColor(p,a),text=(color?color+' ':'')+phrase;\n  const g=paGroup(p,a),key=g&&a.weight===undefined&&a.color===undefined?'group:'+g.id:'action:'+a.id;\n  if(!groups.has(key))groups.set(key,{parts:[],weight:paWeight(p,a)});groups.get(key).parts.push(text);\n"
+    },
+    {
+      "startLine": 12671,
+      "removeLines": 1,
+      "removedSHA256": "06d53ae23a8ab0b4305a3ac823c7db546614d2276e4018dc507005da1ed49a10",
+      "referenceText": " for(const group of groups.values()){const text=group.parts.join(', ');result.push(explicitWeight((owner&&(context.scopedActions||context.scopeOwner)?owner.label+' ':'')+text,group.weight))}\n"
+    },
+    {
+      "startLine": 12997,
+      "removeLines": 10,
+      "removedSHA256": "82487d4a95f1443fb9f81d9b573b1b23e1aa594c43fc355b0e791df122af340b",
+      "referenceText": ""
+    }
+  ]
+}

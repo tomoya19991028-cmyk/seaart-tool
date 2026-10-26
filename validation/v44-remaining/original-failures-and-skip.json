@@ -1,0 +1,769 @@
+[
+  {
+    "job": "auto-compatibility",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/horror-auto/compatibility.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T16:35:47.082983+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+      "testSHA256": "4c4746306a179b01461c330c0c72bcb4061c6e956cca16ec6be2bc6ee81cf7e1",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-compatibility"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T16:43:51.827123+00:00",
+      "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+    },
+    "oldFailedCases": [],
+    "oldClassification": "SPEC_OUTPUT: historical fulltexts differ from supplied v44",
+    "oldHeadlines": [
+      "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-compatibility/stdout.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-compatibility/stderr.log",
+        "SHA256": "a5c0c23b98827d1d6ea6e638e6402e21d8d0e0a82937ae2894d57db08b985c72",
+        "bytes": 108135,
+        "first4000": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  [\n    {\n      manga: 'masterpiece, best quality, detailed face, detailed eyes, full-color anime manga page, portrait page, exactly 4 clearly separated panels, one full-width top panel, two side-by-side middle panels, and one full-width bottom panel panel arrangement, left to right reading order, clean panel borders, consistent characters across all panels, consistent creature designs across all panels, Character A: adult woman, old A, white shirt, Character B: adult man, old B, (long fingers:1.5), Creature A: wolf, (sharp claws:1.1), Panel 1: panel 1, 2 people, 1 creature, Character B: (long fingers:1.5), Creature A: (sharp claws:1.1), Character A, Character B, (long fingers:1.5), Creature A, distinct characters, separate bodies, distinct faces, distinct people and creatures, separate bodies, Panel 2: panel 2, 2 people, 1 creature, Character B: (long fingers:1.5), Creature A: (sharp claws:1.1), Character A, Character B, (long fingers:1.5), Creature A, distinct characters, separate bodies, distinct faces, distinct people and creatures, separate bodies, Panel 3: panel 3, 2 people, 1 creature, Character B: (long fingers:1.5), Creature A: (sharp claws:1.1), Character A, Character B, (long fingers:1.5), Creature A, distinct characters, separate bodies, distinct faces, distinct people and creatures, separate bodies, Panel 4: panel 4, 2 people, 1 creature, Character B: (long fingers:1.5), Creature A: (sharp claws:1.1), Character A, Character B, (long fingers:1.5), Creature A, distinct characters, separate bodies, distinct faces, distinct people and creatures, separate bodies, 2 distinct characters, separate bodies, distinct faces',\n      mangaNegative: 'monochrome, grayscale, wrong panel count, missing panel, extra panel, merged panels, broken panel borders, fused bodies, merged characters, blended faces, inconsistent character appearance, duplicate limbs, text, speech bubbles, lettering, watermark, worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, logo',\n      negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature, split screen, vertical divider, panel border',\n+     normal: 'masterpiece, best quality, detailed face, detailed eyes, 3 distinct subjects, all subjects visible, 2 people, 1 creature, 2 people and 1 creature\\n' +\n-     normal: 'masterpiece, best quality, detailed face, detailed eyes, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 3 distinct subjects, all subjects visible, exactly 2 people and 1 creature, only 2 people and 1 creature, one Character A and one Character B and one Creature A, 1 creature, 2 people and 1 creature\\n' +\n        '\\n' +\n+       'BREAK\\n' +\n-       'Character A:\\n' +\n-       'adult woman, old A, white shirt\\n' +\n        '\\n' +\n+       '1girl, adult woman, old A, white shirt\\n' +\n-       'Character B:\\n' +\n-       'adult man, old B, (long fingers:1.5)\\n' +\n        '\\n' +\n+       'BREAK\\n' +\n+       '\\n' +\n+       '1boy, adult man, old B, (long fingers:1.5)\\n' +\n+       '\\n' +\n+       'BREAK\\n' +\n+       '\\n' +\n-       'Creature A:\\n' +\n        'wolf, (sharp claws:1.1)\\n' +\n        '\\n' +\n        'BREAK\\n' +\n        '\\n' +\n+       'anime style',\n-       'anime style, single continuous scene, shared environment, unified background perspective, Character A on the left, Character B on the right',\n      panels: [\n        'masterpiec",
+        "last2000": "e:1.3), Character B, (long fingers:1.5), Creature A, distinct characters, separate bodies, distinct faces, distinct people and creatures, separate bodies, consistent character designs, consistent creature designs'\n...\n      negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature',\n+     normal: 'masterpiece, best quality, detailed face, detailed eyes, 3 distinct subjects, all subjects visible, 2 people, 1 creature, 2 people and 1 creature, clearly separated subjects\\n' +\n-     normal: 'masterpiece, best quality, detailed face, detailed eyes, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 3 distinct subjects, clearly separated subjects, all subjects visible, exactly 2 people and 1 creature, only 2 people and 1 creature, one Character 1 and one Character 2 and one Creature 1, 1 creature, 2 people and 1 creature\\n' +\n        '\\n' +\n        'BREAK\\n' +\n        '\\n' +\n+       '1girl, adult woman, old A, white shirt, (mask-like face:1.3)\\n' +\n-       'Character 1:\\n' +\n-       'left person: adult woman, old A, white shirt, (mask-like face:1.3)\\n' +\n        '\\n' +\n        'BREAK\\n' +\n        '\\n' +\n+       '1boy, adult man, old B, (long fingers:1.5)\\n' +\n-       'Character 2:\\n' +\n-       'right person: adult man, old B, (long fingers:1.5)\\n' +\n        '\\n' +\n        'BREAK\\n' +\n        '\\n' +\n-       'Creature 1:\\n' +\n        'wolf, (sharp claws:1.1)\\n' +\n        '\\n' +\n        'BREAK\\n' +\n        '\\n' +\n        'anime style',\n\n    at /workspace/seaart-v44-audit/tests/horror-auto/compatibility.cjs:3:325\n"
+      }
+    ]
+  },
+  {
+    "job": "auto-contracts",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/horror-auto/contracts.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T16:27:09.571538+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+      "testSHA256": "c98d7f245a561d9fe1aa421b1fce2a25a550e5df167622533ac1383af784c034",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-contracts"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T16:38:50.450219+00:00",
+      "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+    },
+    "oldFailedCases": [
+      {
+        "id": "A07",
+        "passed": false,
+        "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-v44-audit/tests/horror-auto/contracts.cjs:2:407)\n    at asyn"
+      },
+      {
+        "id": "A08",
+        "passed": false,
+        "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\u001b[22m\n\n    at test (/workspace/seaart-v44-audit/tests/horror-auto/contracts.cjs:2:407)\n    at asyn"
+      },
+      {
+        "id": "A27",
+        "passed": false,
+        "error": "page.evaluate: Error: explicit actor blocks\n    at window.ck (eval at evaluate (:311:30), <anonymous>:1:566)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:521)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript"
+      }
+    ],
+    "oldClassification": "ENV_AND_SPEC: A07/A08 navigation timeouts pass on retry; A27 requires old explicit normal actor labels",
+    "oldHeadlines": [
+      "FAIL A07 page.goto: Timeout 30000ms exceeded.",
+      "FAIL A08 page.goto: Timeout 30000ms exceeded.",
+      "FAIL A27 page.evaluate: Error: explicit actor blocks"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-contracts/stdout.log",
+        "SHA256": "5b481c94883fedea65d433eb487e66b9455da560b73332cd83fc9a1769cddcb5",
+        "bytes": 252,
+        "first4000": "PASS A01\nPASS A02\nPASS A03\nPASS A04\nPASS A05\nPASS A06\nPASS A09\nPASS A10\nPASS A11\nPASS A12\nPASS A13\nPASS A14\nPASS A15\nPASS A16\nPASS A17\nPASS A18\nPASS A19\nPASS A20\nPASS A21\nPASS A22\nPASS A23\nPASS A24\nPASS A25\nPASS A26\nPASS A28\nPASS A29\nPASS A30\nPASS A31\n",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-contracts/stderr.log",
+        "SHA256": "f43df8533046e846dd1b79cb6b465279acb32d81185b29ddd8e529c466f48ac5",
+        "bytes": 597,
+        "first4000": "FAIL A07 page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\n\nFAIL A08 page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\n\nFAIL A27 page.evaluate: Error: explicit actor blocks\n    at window.ck (eval at evaluate (:311:30), <anonymous>:1:566)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:521)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "auto-ui",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/horror-auto/ui.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T16:27:33.608145+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+      "testSHA256": "2661f7e632dfabfa1b2c50fca35db4ae390a2d79cc7fcb2a80b4aa62326d64aa",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-ui"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T16:34:22.754613+00:00",
+      "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+    },
+    "oldFailedCases": [
+      {
+        "id": "AU-360x640-1",
+        "passed": false,
+        "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\u001b[22m\n\n    at /workspace/seaart-v44-audit/tests/horror-auto/ui.cjs:3:439"
+      }
+    ],
+    "oldClassification": "ENV_NAVIGATION: first 360x640 navigation timeout; 360x640 and 360x800 pass on retry",
+    "oldHeadlines": [
+      "FAIL AU-360x640-1 page.goto: Timeout 30000ms exceeded."
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-ui/stdout.log",
+        "SHA256": "de508ea7c7dc8fa7ccc8f79293a0333ea9572e161164fa423445592007394a76",
+        "bytes": 204,
+        "first4000": "PASS AU-360x800-1\nPASS AU-393x640-1\nPASS AU-393x800-1\nPASS AU-430x640-1\nPASS AU-430x800-1\nPASS AU-640x360-1\nPASS AU-800x393-1\nPASS AU-800x430-1\nPASS AU-360x800-1.5\nPASS AU-393x800-1.5\nPASS AU-430x800-1.5\n",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/auto-ui/stderr.log",
+        "SHA256": "9d86095fae02d298098a4ae16a38297e9f4c8d1cf4a00086a9b9267261348043",
+        "bytes": 167,
+        "first4000": "FAIL AU-360x640-1 page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://127.0.0.1:8765/seaart-v44-audit/index.html\", waiting until \"load\"\n\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "card-pwa",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/card-tags/pwa.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T17:07:46.049656+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+      "testSHA256": "688fb2881c37014731a3c27f5a8d226f9d360b8405d633e4176a5925788504d4",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/card-pwa"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T17:08:16.017128+00:00",
+      "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+    },
+    "oldFailedCases": [],
+    "oldClassification": "SPEC_SW_CACHE: checks previous literal cache name",
+    "oldHeadlines": [
+      "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/card-pwa/stdout.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/card-pwa/stderr.log",
+        "SHA256": "5ef025f651a02eb349d5ee1529ff34ebc9847f0d7b8ac664ba9cab960121136b",
+        "bytes": 258,
+        "first4000": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok((await p.evaluate(()=>caches.keys())).includes('seaart-tool-pwa-v5-tg-yugioh-phase1-v1-http-cache-v1'))\n\n    at /workspace/seaart-v44-audit/tests/card-tags/pwa.cjs:3:616\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "legacy",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/horror/replay-legacy.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T16:24:05.961198+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+      "testSHA256": "3ddb4aaaf70aaadee1ff4e8d7cd45d1688de0bd1054da19faa80987792ed14ad",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/legacy"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T16:27:08.758032+00:00",
+      "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+    },
+    "oldFailedCases": [],
+    "oldClassification": "SPEC_CATALOG: exact historical catalog comparison rejects additional v44 pose rows; old rows independently retained",
+    "oldHeadlines": [],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/legacy/stdout.log",
+        "SHA256": "f7475ec27ae67f49ff2b0962cb3e24975b26ecac68a68cbe93a594d16e8865ea",
+        "bytes": 31,
+        "first4000": "before captured\nafter captured\n",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/legacy/stderr.log",
+        "SHA256": "7db00dcd9c2a14905a95c1c0487ebc48f37430aeb7007e830eb787f634e6b98e",
+        "bytes": 2929,
+        "first4000": "catalog\n+ actual - expected\n... Skipped lines\n\n  {\n    background: [\n      {\n        group: 'シンプル・抽象',\n        id: 'background-0',\n...\n      },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-holding-a-hand-over',\n+       name: '手をかざす',\n+       value: 'holding a hand over'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-resting-a-hand-on',\n+       name: '手を置く',\n+       value: 'resting a hand on'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-placing-both-hands-on',\n+       name: '両手を置く',\n+       value: 'placing both hands on'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-touching',\n+       name: '触れる',\n+       value: 'touching'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-covering-with-one-hand',\n+       name: '片手で覆う',\n+       value: 'covering with one hand'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-covering-with-both-hands',\n+       name: '両手で覆う',\n+       value: 'covering with both hands'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-cupping-with-both-hands',\n+       name: '両手で包む',\n+       value: 'cupping with both hands'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-bringing-fingers-close-to',\n+       name: '指を近づける',\n+       value: 'bringing fingers close to'\n+     },\n+     {\n+       group: '対象と組み合わせる動作',\n+       id: 'pose-compose-holding-with-both-hands',\n+       name: '両手で持つ',\n+       value: 'holding with both hands'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-stand',\n+       name: '立つ',\n+       value: 'standing'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-sit',\n+       name: '座る',\n+       value: 'sitting'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-lie',\n+       name: '横になる',\n+       value: 'lying down'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-recline',\n+       name: '寝そべる',\n+       value: 'reclining'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-seiza',\n+       name: '正座',\n+       value: 'seiza'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-agura',\n+       name: 'あぐら',\n+       value: 'sitting cross-legged'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-kneel',\n+       name: '膝をつく',\n+       value: 'kneeling'\n+     },\n+     {\n+       group: '基本の姿勢',\n+       id: 'pose-v39-crouch',\n+       name: 'しゃがむ',\n+       value: 'crouc\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "motif-prompts",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/integration/motif-prompts.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T17:43:41.954819+00:00",
+      "gitHEAD": "4d3d9fe19065178e5a4c923b0d800bd00877b136",
+      "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+      "testSHA256": "b6074cc0a9fdc5897519738e80ab3a21b41ce2f2dfeb59a265871e7a9f844066",
+      "wrapperSHA256": null,
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/motif-prompts"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T17:44:36.685188+00:00",
+      "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+    },
+    "oldFailedCases": [
+      {
+        "id": "P01",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      },
+      {
+        "id": "P02",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      },
+      {
+        "id": "P03",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      },
+      {
+        "id": "P04",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      },
+      {
+        "id": "P05",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      },
+      {
+        "id": "P06",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      },
+      {
+        "id": "P07",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      },
+      {
+        "id": "P08",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:40:105"
+      }
+    ],
+    "oldClassification": "SPEC_OUTPUT_LABELS: same normal-label expectation through motif projection",
+    "oldHeadlines": [],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/motif-prompts/stdout.log",
+        "SHA256": "12b53f2278558d0ded8f8c9ae50e12b73c17ad266cfa0de10252e6e5ea3ad7f3",
+        "bytes": 155,
+        "first4000": "FAIL A-only\nFAIL B-only\nFAIL different-A-B\nFAIL person-creature\nFAIL panel-normal\nFAIL local-overrides-global\nFAIL weighted-intensity\nFAIL replace-exclude\n",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/motif-prompts/stderr.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "normal-pwa",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/normal-first/pwa.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T17:11:58.673929+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+      "testSHA256": "9a0b736149dfbac14fc955c1bdab06dfd69fb1859e418e056f35037f4a4cda77",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/normal-pwa"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T17:12:17.839277+00:00",
+      "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+    },
+    "oldFailedCases": [],
+    "oldClassification": "SPEC_SW_CACHE: checks previous literal cache name",
+    "oldHeadlines": [
+      "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/normal-pwa/stdout.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/normal-pwa/stderr.log",
+        "SHA256": "6afd0f4053799d13f715cf056054bde0c5814d01e6027a7d0e9c00b66dddf8ca",
+        "bytes": 261,
+        "first4000": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok((await p.evaluate(()=>caches.keys())).includes('seaart-tool-pwa-v5-tg-yugioh-phase1-v1-http-cache-v1'))\n\n    at /workspace/seaart-v44-audit/tests/normal-first/pwa.cjs:3:835\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "prompts",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/horror/independent-prompts.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T17:37:51.085491+00:00",
+      "gitHEAD": "4d3d9fe19065178e5a4c923b0d800bd00877b136",
+      "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+      "testSHA256": "78159b64fd251662ef473a7a4894027960e7828893a2275fb3e74a4d64995224",
+      "wrapperSHA256": null,
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/prompts"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T17:39:06.771635+00:00",
+      "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+    },
+    "oldFailedCases": [
+      {
+        "id": "P01",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      },
+      {
+        "id": "P02",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      },
+      {
+        "id": "P03",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      },
+      {
+        "id": "P04",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      },
+      {
+        "id": "P05",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      },
+      {
+        "id": "P06",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      },
+      {
+        "id": "P07",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      },
+      {
+        "id": "P08",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 4\n\n    at /workspace/seaart-v44-audit/tests/horror/independent-prompts.cjs:32:105"
+      }
+    ],
+    "oldClassification": "SPEC_OUTPUT_LABELS: normal output no longer contains Character/Creature A: blocks; old split count expects four pieces",
+    "oldHeadlines": [],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/prompts/stdout.log",
+        "SHA256": "12b53f2278558d0ded8f8c9ae50e12b73c17ad266cfa0de10252e6e5ea3ad7f3",
+        "bytes": 155,
+        "first4000": "FAIL A-only\nFAIL B-only\nFAIL different-A-B\nFAIL person-creature\nFAIL panel-normal\nFAIL local-overrides-global\nFAIL weighted-intensity\nFAIL replace-exclude\n",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/prompts/stderr.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "pwa-regression",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/horror/replay-pwa.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T17:32:10.911197+00:00",
+      "gitHEAD": "4d3d9fe19065178e5a4c923b0d800bd00877b136",
+      "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+      "testSHA256": "365214f571d554eb0cc0e4084bc0dbb1e0174937d068df4b42209b383a8011c1",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/pwa-regression"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T17:33:00.863637+00:00",
+      "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+    },
+    "oldFailedCases": [],
+    "oldClassification": "SPEC_SW_CACHE: update wait requires previous literal cache name",
+    "oldHeadlines": [
+      "Error: SW condition timed out"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/pwa-regression/stdout.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/pwa-regression/stderr.log",
+        "SHA256": "a0e35d3671dd25862dd28b4ccee6c9f1f87f90fedf2c16f814ee94573901ef8b",
+        "bytes": 199,
+        "first4000": "Error: SW condition timed out\n    at until (/workspace/seaart-v44-audit/tests/creature-motif-person-pwa.cjs:4:150)\n    at async /workspace/seaart-v44-audit/tests/creature-motif-person-pwa.cjs:10:164\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "r1",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/creature-motif-person-r1.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T16:23:41.683608+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+      "testSHA256": "422e6bb297be07f572ce3bf1d8f9929ab29c1ba321a33b930ebf12685e443255",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/r1"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T16:24:05.800655+00:00",
+      "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+    },
+    "oldFailedCases": [],
+    "oldClassification": "SPEC_SOURCE: old six-card adapter function-body identity check; v44 wraps pose pickers",
+    "oldHeadlines": [
+      "page.evaluate: Error: shared six-card candidate adapter unchanged"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/r1/stdout.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/r1/stderr.log",
+        "SHA256": "d60116886a3e1963b74a8c309094375481bfb485c23498adaf29690bbb3b8219",
+        "bytes": 461,
+        "first4000": "page.evaluate: Error: shared six-card candidate adapter unchanged\n    at check (eval at evaluate (:311:30), <anonymous>:2:47)\n    at eval (eval at evaluate (:311:30), <anonymous>:31:2)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at contracts (/workspace/seaart-v44-audit/tests/creature-stage5-remaining-r1.cjs:17:38)\n    at /workspace/seaart-v44-audit/tests/creature-stage5-remaining-r1.cjs:106:61\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "round2-retest",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/integration/motif-round2-alternative.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T17:22:51.945836+00:00",
+      "gitHEAD": "672d2d66e24e470372c80c1eacaea8498b68a462",
+      "productSHA256Before": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5",
+      "testSHA256": "717c0a6f48022b0b058f5b0308e3485bc664cf50aca755042d32c826610127bc",
+      "wrapperSHA256": null,
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/round2-retest"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T17:30:03.802312+00:00",
+      "productSHA256After": "29fb0ca2962785674a2063da70a94b6bf17e74e6f7ee9e4d2ccb7191d9f514e5"
+    },
+    "oldFailedCases": [
+      {
+        "id": "M14",
+        "passed": false,
+        "error": "page.evaluate: Error: 成人設定に未対応のfieldがあります\n    at afAssert (http://127.0.0.1:8765/seaart-tool/index.html:1259:63)\n    at caKeys (http://127.0.0.1:8765/seaart-tool/index.html:1282:29)\n    at caValidateAdult (http://127.0.0.1:8765/seaart-tool/"
+      }
+    ],
+    "oldClassification": "FORWARD_SCHEMA: loads newer state into historical reference product, which rejects unsupported adult fields; this is an alternative, not the missing original suite",
+    "oldHeadlines": [
+      "FAIL M14 page.evaluate: Error: 成人設定に未対応のfieldがあります"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/round2-retest/stdout.log",
+        "SHA256": "8e3b83197ec3e1ea0cb6eeddde3b474b2270389003f3f0081263ad0e44d5a859",
+        "bytes": 1202,
+        "first4000": "PASS M01 approved mapping counts, IDs, Japanese names and English values match immutable report\nPASS M02 outfit every approved candidate: plan and real reimport preserve UUID/source/denied\nPASS M03 upper every approved candidate: plan and real reimport preserve UUID/source/denied\nPASS M04 lower every approved candidate: plan and real reimport preserve UUID/source/denied\nPASS M05 feet every approved candidate: plan and real reimport preserve UUID/source/denied\nPASS M06 legwear every approved candidate: plan and real reimport preserve UUID/source/denied\nPASS M07 bodyFeatures every approved candidate: plan and real reimport preserve UUID/source/denied\nPASS M08 accessory every approved candidate: plan and real reimport preserve UUID/source/denied\nPASS M09 selected group ON and all other groups OFF preserve their prior fields\nPASS M10 colors OFF preserve existing color, ON copies only selected field\nPASS M11 hidden, edited, duplicate, unknown, owner-specific and free-text candidates rejected with reasons\nPASS M12 preview before/after, changing ON/OFF resets confirmation, cancel leaves data\nPASS M13 ordinary person overwrite, edited target, stale source, no-choice and colors-only rejected\n",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/round2-retest/stderr.log",
+        "SHA256": "2322981f2ec5853c429c35889f63827d3bf4c8b6c52b4136bfa7a9e42ff77952",
+        "bytes": 837,
+        "first4000": "FAIL M14 page.evaluate: Error: 成人設定に未対応のfieldがあります\n    at afAssert (http://127.0.0.1:8765/seaart-tool/index.html:1259:63)\n    at caKeys (http://127.0.0.1:8765/seaart-tool/index.html:1282:29)\n    at caValidateAdult (http://127.0.0.1:8765/seaart-tool/index.html:1288:262)\n    at caNormalizeExtensions (http://127.0.0.1:8765/seaart-tool/index.html:1301:79)\n    at afValidateExtensions (http://127.0.0.1:8765/seaart-tool/index.html:1352:213)\n    at afValidateWorking (http://127.0.0.1:8765/seaart-tool/index.html:1359:12)\n    at restoreWorking (http://127.0.0.1:8765/seaart-tool/index.html:9144:95)\n    at restoreWorking (http://127.0.0.1:8765/seaart-tool/index.html:9253:868)\n    at restoreWorking (http://127.0.0.1:8765/seaart-tool/index.html:9391:91)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:23)\n",
+        "last2000": ""
+      }
+    ]
+  },
+  {
+    "job": "unified-compatibility",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/unified-ui/compatibility.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T16:23:40.682431+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19",
+      "testSHA256": "f83d5ef1f2069c9f81b4b3c1426991715b0469d950af3da223f0d51292ab0b1d",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-compatibility"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T16:24:27.149615+00:00",
+      "productSHA256After": "b12b72a9df33a337f3a215c440a305ad9a369d7d2ccc7630b4cf8002d3d44a19"
+    },
+    "oldFailedCases": [
+      {
+        "id": "UC01",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: tables\n+ actual - expected\n\n+ '{\"catalog\":{\"background\":[{\"group\":\"シンプル・抽象\",\"id\":\"background-0\",\"name\":\"シンプルな背景\",\"value\":\"simple background\"},{\"group\":\"シンプル・抽象\",\"id\":\"background-1\",\"name\":\"白背景\",\"value\":\"white"
+      },
+      {
+        "id": "UC02",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: producers\n+ actual - expected\n\n  [\n    \"function(){if(!hConfigured())return hGenerateOriginal();const conflicts=hGenerationConflicts('normal');if(conflicts.length){hShowReasons(conflicts);return false}const o"
+      },
+      {
+        "id": "UC03",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: normal\n+ actual - expected\n\n  [\n    {\n      negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, "
+      },
+      {
+        "id": "UC04",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: native\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, te"
+      },
+      {
+        "id": "UC05",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: semi\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text"
+      },
+      {
+        "id": "UC06",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: horror\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, te"
+      },
+      {
+        "id": "UC07",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: off\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text,"
+      }
+    ],
+    "oldClassification": "SPEC_SOURCE_OUTPUT: old tables/function-body/full-output comparisons; detailed FAIL cases retained",
+    "oldHeadlines": [
+      "FAIL UC01 tables",
+      "FAIL UC02 producers",
+      "FAIL UC03 normal",
+      "FAIL UC04 native",
+      "FAIL UC05 semi",
+      "FAIL UC06 horror",
+      "FAIL UC07 off"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-compatibility/stdout.log",
+        "SHA256": "e2a8de5d128bae4bee4383cc55b8e2b0dddd4c746d17d7ffd20b2dcd27b6a50d",
+        "bytes": 10,
+        "first4000": "PASS UC08\n",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-compatibility/stderr.log",
+        "SHA256": "f3f1079cd1b6d257ca892278c4295ac6620a8b3f9053a2b15e8deae95358b5a2",
+        "bytes": 42459,
+        "first4000": "FAIL UC01 tables\n+ actual - expected\n\n+ '{\"catalog\":{\"background\":[{\"group\":\"シンプル・抽象\",\"id\":\"background-0\",\"name\":\"シンプルな背景\",\"value\":\"simple background\"},{\"group\":\"シンプル・抽象\",\"id\":\"background-1\",\"name\":\"白背景\",\"value\":\"white background\"},{\"group\":\"シンプル・抽象\",\"id\":\"background-2\",\"name\":\"黒背景\",\"value\":\"black background\"},{\"group\":\"シンプル・抽象\",\"id\":\"background-3\",\"name\":\"グラデーション\",\"value\":\"gradient background\"},{\"group\":\"街・建物\",\"id\":\"background-4\",\"name\":\"街並み\",\"value\":\"city street\"},{\"group\":\"街・建物\",\"id\":\"background-5\",\"name\":\"路地裏\",\"value\":\"alleyway\"},{\"group\":\"街・建物\",\"id\":\"background-6\",\"name\":\"繁華街\",\"value\":\"downtown\"},{\"group\":\"街・建物\",\"id\":\"background-7\",\"name\":\"夜景\",\"value\":\"night cityscape\"},{\"group\":\"街・建物\",\"id\":\"background-8\",\"name\":\"ネオン街\",\"value\":\"neon-lit street\"},{\"group\":\"街・建物\",\"id\":\"background-9\",\"name\":\"屋上\",\"value\":\"rooftop\"},{\"group\":\"街・建物\",\"id\":\"background-10\",\"name\":\"駅\",\"value\":\"train station\"},{\"group\":\"街・建物\",\"id\":\"background-11\",\"name\":\"電車内\",\"value\":\"inside a train\"},{\"group\":\"屋内\",\"id\":\"background-12\",\"name\":\"カフェ\",\"value\":\"cafe\"},{\"group\":\"屋内\",\"id\":\"background-13\",\"name\":\"図書館\",\"value\":\"library\"},{\"group\":\"屋内\",\"id\":\"background-14\",\"name\":\"教室\",\"value\":\"classroom\"},{\"group\":\"屋内\",\"id\":\"background-15\",\"name\":\"廊下\",\"value\":\"hallway\"},{\"group\":\"屋内\",\"id\":\"background-16\",\"name\":\"寝室\",\"value\":\"bedroom\"},{\"group\":\"屋内\",\"id\":\"background-17\",\"name\":\"リビング\",\"value\":\"living room\"},{\"group\":\"屋内\",\"id\":\"background-18\",\"name\":\"豪華な部屋\",\"value\":\"luxurious room\"},{\"group\":\"自然\",\"id\":\"background-19\",\"name\":\"庭園\",\"value\":\"garden\"},{\"group\":\"自然\",\"id\":\"background-20\",\"name\":\"公園\",\"value\":\"park\"},{\"group\":\"自然\",\"id\":\"background-21\",\"name\":\"桜並木\",\"value\":\"cherry blossom avenue\"},{\"group\":\"自然\",\"id\":\"background-22\",\"name\":\"花畑\",\"value\":\"flower field\"},{\"group\":\"自然\",\"id\":\"background-23\",\"name\":\"森\",\"value\":\"forest\"},{\"group\":\"自然\",\"id\":\"background-24\",\"name\":\"竹林\",\"value\":\"bamboo forest\"},{\"group\":\"自然\",\"id\":\"background-25\",\"name\":\"草原\",\"value\":\"grassland\"},{\"group\":\"自然\",\"id\":\"background-26\",\"name\":\"山\",\"value\":\"mountains\"},{\"group\":\"自然\",\"id\":\"background-27\",\"name\":\"雪山\",\"value\":\"snowy mountains\"},{\"group\":\"自然\",\"id\":\"background-28\",\"name\":\"海辺\",\"value\":\"seaside\"},{\"group\":\"自然\",\"id\":\"background-29\",\"name\":\"砂浜\",\"value\":\"beach\"},{\"group\":\"自然\",\"id\":\"background-30\",\"name\":\"海中\",\"value\":\"underwater\"},{\"group\":\"自然\",\"id\":\"background-31\",\"name\":\"湖\",\"value\":\"lake\"},{\"group\":\"自然\",\"id\":\"background-32\",\"name\":\"滝\",\"value\":\"waterfall\"},{\"group\":\"自然\",\"id\":\"background-33\",\"name\":\"砂漠\",\"value\":\"desert\"},{\"group\":\"文化・歴史\",\"id\":\"background-34\",\"name\":\"遺跡\",\"value\":\"ancient ruins\"},{\"group\":\"自然\",\"id\":\"background-35\",\"name\":\"洞窟\",\"value\":\"cave\"},{\"group\":\"文化・歴史\",\"id\":\"background-36\",\"name\":\"神社\",\"value\":\"Japanese shrine\"},{\"group\":\"文化・歴史\",\"id\":\"background-37\",\"name\":\"寺院\",\"value\":\"temple\"},{\"group\":\"文化・歴史\",\"id\":\"background-38\",\"name\":\"大聖堂\",\"value\":\"cathedral\"},{\"group\":\"文化・歴史\",\"id\":\"background-39\",\"name\":\"ファンタジーの城\",\"value\":\"fantasy castle\"},{\"group\":\"屋内\",\"id\":\"background-40\",\"name\":\"玉座の間\",\"value\":\"throne room\"},{\"group\":\"街・建物\",\"id\":\"background-41\",\"name\":\"中世の街\",\"value\":\"medieval town\"},{\"group\":\"幻想・SF\",\"id\":\"background-42\",\"name\":\"宇宙\",\"value\":\"outer space\"},{\"group\":\"幻想・SF\",\"id\":\"background-43\",\"name\":\"宇宙船内\",\"value\":\"spaceship interior\"},{\"group\":\"街・建物\",\"id\":\"background-44\",\"name\":\"未来都市\",\"value\":\"futuristic city\"},{\"group\":\"街・建物\",\"id\":\"background-45\",\"name\":\"工場\",\"value\":\"factory\"},{\"group\":\"街・建物\",\"id\":\"background-46\",\"name\":\"遊園地\",\"value\":\"amusement park\"},{\"group\":\"屋内\",\"id\":\"background-47\",\"name\":\"ステージ\",\"value\":\"stage\"},{\"group\":\"季節・空模様\",\"id\":\"background-48\",\"name\":\"夕焼け空\",\"value\":\"sunset sky\"},{\"group\":\"季節・空模様\",\"id\":\"background-49\",\"name\":\"星空\",\"value\":\"starry sky\"},{\"group\":\"季節・空模様\",\"id\":\"background-50\",\"name\":\"雨の街\",\"value\":\"rainy city street\"},{\"group\":\"季節・空模様\",\"id\":\"background-51\",\"name\":\"雪景色\",\"value\":\"snowy landscape\"},{\"group\":\"屋内\",\"id\":\"background-52\",\"name\":\"美術館\",\"value\":\"art museum\"},{\"group\":\"屋内\",\"id\":\"background-53\",\"name\":\"温室\",\"value\":\"greenhouse\"},{\"group\":\"屋内\",\"id\":\"background-54\",\"name\":\"温泉旅館\",\"v",
+        "last2000": "\n      'BREAK\\n' +\n      '\\n' +\n      'anime style'\n\nFAIL UC07 off\n+ actual - expected\n\n  {\n    negative: 'worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble, fused bodies, merged characters, blended faces, merged subjects, fused subjects, extra subject, extra head, floating head, detached head, extra body, partial extra body, duplicate character, duplicated character, cloned character, extra character, extra person, duplicate creature, extra creature',\n+   positive: 'masterpiece, best quality, detailed face, detailed eyes, 3 distinct subjects, exactly 3 subjects, only 3 subjects, one Character 1 and one Character 2 and one Creature 1, 1 humanoid subject, 2 human characters, clearly separated subjects, all subjects visible\\n' +\n-   positive: 'masterpiece, best quality, detailed face, detailed eyes, 2 people, 2 distinct characters, separate bodies, each person has distinct facial features, 3 distinct subjects, exactly 3 subjects, only 3 subjects, one Character 1 and one Character 2 and one Creature 1, 1 humanoid subject, 2 human characters, clearly separated subjects, all subjects visible\\n' +\n      '\\n' +\n      'BREAK\\n' +\n      '\\n' +\n+     '1girl, adult woman, comparison woman, gentle smile, black eyes, black hair, white blouse\\n' +\n-     'Character 1:\\n' +\n-     'left person: adult woman, comparison woman, gentle smile, black eyes, black hair, white blouse\\n' +\n      '\\n' +\n      'BREAK\\n' +\n      '\\n' +\n+     '1boy, adult man, comparison man, smiling, brown eyes, white hair, shirt\\n' +\n-     'Character 2:\\n' +\n-     'right person: adult man, comparison man, smiling, brown eyes, white hair, shirt\\n' +\n      '\\n' +\n      'BREAK\\n' +\n      '\\n' +\n-     'Creature 1:\\n' +\n      'wolf, humanized humanoid, one humanoid body, gijinka, blue eyes, red hair, white blouse, sword\\n' +\n      '\\n' +\n      'BREAK\\n' +\n      '\\n' +\n      'anime style'\n\n"
+      }
+    ]
+  },
+  {
+    "job": "unified-pwa",
+    "oldExecution": {
+      "command": [
+        "node",
+        "tests/tg-yugioh-phase1/replay.cjs",
+        "tests/unified-ui/pwa.cjs"
+      ],
+      "cwd": "/workspace/seaart-v44-audit",
+      "startUTC": "2026-10-25T16:52:58.461570+00:00",
+      "gitHEAD": "894d5fbfdfa65e68a50b77acdaa3e497ed31aeca",
+      "productSHA256Before": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135",
+      "testSHA256": "c24b1185a1c0c77f04f094f9e1c5f04251822b1c6b343fe2fcafd27e7a7da7d6",
+      "wrapperSHA256": "5c642558bd101c5bda4f90f920f5f0cd83485656037cb1e0a6068888d7e79806",
+      "env": {
+        "TARGET_URL": "http://127.0.0.1:8765/seaart-v44-audit/index.html",
+        "BASELINE_URL": "http://127.0.0.1:8765/seaart-creature-motif-integration1/baseline/index.html",
+        "RESULT_DIR": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-pwa"
+      },
+      "physicalDevice": false,
+      "publicOriginTest": false,
+      "exitCode": 1,
+      "endUTC": "2026-10-25T16:53:46.148460+00:00",
+      "productSHA256After": "495de76ddc232b51be06231cd5fdd3f0a3cfadbd01fb4707254237cc1e0ae135"
+    },
+    "oldFailedCases": [],
+    "oldClassification": "NORMALIZATION: reload materializes only empty sound/reaction arrays/text on adultScene and Creature adult scene defaults",
+    "oldHeadlines": [
+      "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:"
+    ],
+    "logs": [
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-pwa/stdout.log",
+        "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "first4000": "",
+        "last2000": ""
+      },
+      {
+        "file": "/workspace/seaart-v44-audit-artifacts/inherited-first/unified-pwa/stderr.log",
+        "SHA256": "4aa60066092ff93c45294c9edc258061c735cf6c624f186194743dc97a4f2fcd",
+        "bytes": 14937,
+        "first4000": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '{\"working\":{\"actorExtensions\":{\"byActor\":{\"creature:unified-offline\":{\"adult\":{\"byMode\":{\"full\":{\"body\":{\"bust\":\"\"},\"mainCardSelections\":{},\"mainCardWeights\":{},\"profile\":{\"action\":[],\"areola\":[],\"bustFocus\":[],\"bustShape\":[],\"clothing\":[],\"contact\":[],\"exposure\":[],\"expression\":[],\"nipple\":[],\"target\":null},\"scene\":{\"extra\":\"\",\"focus\":[],\"mood\":[],\"phase\":[],\"reactionEffect\":[],\"soundEffect\":[]},\"weights\":{\"itemWeights\":{}}},\"semi\":{\"body\":{\"bust\":\"\"},\"mainCardSelections\":{},\"mainCardWeights\":{},\"profile\":{\"action\":[],\"areola\":[],\"bustFocus\":[],\"bustShape\":[],\"clothing\":[],\"contact\":[],\"exposure\":[],\"expression\":[],\"nipple\":[],\"target\":null},\"scene\":{\"extra\":\"\",\"focus\":[],\"mood\":[],\"phase\":[],\"reactionEffect\":[],\"soundEffect\":[]},\"weights\":{\"itemWeights\":{}}}},\"confirmation\":null,\"confirmed\":false,\"eligibilitySignature\":null,\"version\":1},\"humanProfile\":{\"byMode\":{\"full\":{\"body\":[],\"captureVersion\":1,\"detail\":{\"accessory\":[],\"armor\":[],\"armorState\":[],\"bodyFeatures\":[],\"carry\":[],\"carryState\":[],\"effect\":[],\"effectAura\":[],\"effectColor\":[],\"effectDisplay\":[],\"effectExpression\":[],\"effectImpact\":[],\"effectLight\":[],\"effectMotion\":[],\"effectOrigin\":[],\"effectPreset\":[],\"effectSource\":[],\"eyeDetail\":[],\"feet\":[],\"hands\":[],\"head\":[],\"legwear\":[],\"lower\":[],\"skin\":[],\"skinColor\":[],\"upper\":[],\"weapon\":[],\"weaponState\":[]},\"detailCustom\":{},\"expression\":[],\"eyes\":{\"left\":\"\",\"mode\":\"same\",\"right\":\"\"},\"faceDirection\":\"\",\"gaze\":\"\",\"hair\":{\"mode\":\"single\",\"primary\":\"\",\"secondary\":\"\"},\"hairStyle\":[],\"outfit\":[],\"pose\":[],\"weights\":{\"colorWeights\":{},\"itemColors\":{},\"itemWeights\":{}}},\"semi\":{\"body\":[],\"captureVersion\":1,\"detail\":{\"accessory\":[],\"armor\":[],\"armorState\":[],\"bodyFeatures\":[],\"carry\":[],\"carryState\":[],\"effect\":[],\"effectAura\":[],\"effectColor\":[],\"effectDisplay\":[],\"effectExpression\":[],\"effectImpact\":[],\"effectLight\":[],\"effectMotion\":[],\"effectOrigin\":[],\"effectPreset\":[],\"effectSource\":[],\"eyeDetail\":[],\"feet\":[],\"hands\":[],\"head\":[],\"legwear\":[],\"lower\":[],\"skin\":[],\"skinColor\":[],\"upper\":[],\"weapon\":[],\"weaponState\":[]},\"detailCustom\":{},\"expression\":[],\"eyes\":{\"left\":\"\",\"mode\":\"same\",\"right\":\"\"},\"faceDirection\":\"\",\"gaze\":\"\",\"hair\":{\"mode\":\"single\",\"primary\":\"\",\"secondary\":\"\"},\"hairStyle\":[],\"outfit\":[],\"pose\":[],\"weights\":{\"colorWeights\":{},\"itemColors\":{},\"itemWeights\":{}}}},\"version\":1},\"ownerRef\":{\"kind\":\"creature\",\"masterId\":\"generic-species:wolf\",\"value\":\"wolf\"},\"representation\":{\"mode\":\"semi\",\"overrides\":{\"full\":{\"color\":\"suppress\",\"features\":{\"mode\":\"suppress\",\"values\":[]},\"surface\":\"suppress\"},\"semi\":{\"color\":\"inherit\",\"features\":{\"mode\":\"inherit\",\"values\":[]},\"surface\":\"inherit\"}}}}},\"version\":4},\"adultScene\":{\"confirmed\":{},\"enabled\":false,\"extra\":\"\",\"focus\":\"\",\"mood\":\"\",\"people\":{},\"phase\":\"\",\"reactionEffect\":[],\"reactionEffectText\":\"\",\"soundEffect\":[],\"soundEffectText\":\"\"},\"cardPlacements\":{},\"colorStyle\":\"\",\"creatures\":[{\"abilities\":[],\"actions\":[],\"color\":\"\",\"depth\":\"\",\"direction\":\"\",\"effects\":[],\"elements\":[],\"equipment\":[],\"features\":[],\"id\":\"unified-offline\",\"kind\":\"creature\",\"name\":\"更新前の生物\",\"position\":\"\",\"size\":\"\",\"species\":\"wolf\",\"states\":[],\"surface\":\"\",\"type\":\"\"}],\"customCharacter\":\"\",\"extra\":\"更新中の未保存入力\",\"hiddenCategories\":[],\"horror\":{\"byActor\":{\"creature:unified-offline\":{\"features\":{\"horror-feature-mask-face\":{\"enabled\":true,\"parameters\":{},\"weight\":1.2}},\"intensity\":\"medium\",\"origin\":\"linked\",\"originalFeaturePolicies\":{},\"ownerSnapshot\":{\"kind\":\"creature\",\"masterId\":\"generic-species:wolf\",\"value\":\"wolf\"},\"primaryTypeId\":null,\"secondaryTypeIds\":[],\"state\":\"partial\",\"structure\":{\"horns\":\"unset\",\"tail\":\"unset\",\"wings\":\"unset\"}}},\"byManga\":{},\"unresolved\":[],\"version\":1},\"lineStyle\":\"\",\"lineStyleLabel\":\"指定なし\",\"mainCardSelections\":{},\"mangaNegative\":\"\",\"mangaPositive\":\"\",\"mangaState\":{\"count\":4,\"format\":\"portrait\",\"frameStyle\":\"subtle\",\"layout\":\"1::上1・中2・下1\",\"mangaId\":\"manga-ba71e191-5bbd-4aff-ae72-0096270",
+        "last2000": "\"mood\":\"\",\"people\":{},\"place\":\"\",\"sound\":\"\",\"storyAction\":\"\",\"storyExpression\":\"\",\"storyPose\":\"\",\"storyRole\":\"\",\"storySubject\":\"\"}],\"reading\":\"left to right\",\"story\":{\"applied\":null,\"genre\":\"\",\"pattern\":\"\",\"undo\":null},\"storyAdult\":false},\"modelFamily\":\"standard\",\"negative\":\"worst quality, low quality, low resolution, blurry, bad anatomy, extra limbs, distorted face, deformed hands, extra fingers, missing fingers, watermark, logo, text, speech bubble\",\"negativePreset\":\"standard\",\"negativeSelected\":[\"quality\",\"anatomy\",\"hands\",\"text\"],\"order\":[\"composition\",\"character\",\"expression\",\"eyeColor\",\"hairColor\",\"hairStyle\",\"body\",\"outfit\",\"pose\",\"style\",\"background\",\"weather\",\"time\",\"lighting\"],\"originalCharacters\":[],\"positive\":\"masterpiece, best quality, detailed face, detailed eyes, anime style\",\"profiles\":{},\"promptOrderMode\":\"recommended\",\"qualitySettings\":{\"detail\":\"standard\",\"focus\":[],\"quality\":\"standard\"},\"renderingExpressions\":[],\"scene\":{\"composition\":[],\"extra\":\"\",\"relation\":[]},\"selected\":{\"background\":[],\"body\":[],\"character\":[],\"composition\":[],\"expression\":[],\"eyeColor\":[],\"hairColor\":[],\"hairStyle\":[],\"lighting\":[],\"mood\":[],\"outfit\":[],\"pose\":[],\"style\":[{\"group\":\"イラスト・漫画\",\"id\":\"style-0\",\"name\":\"アニメ風\",\"value\":\"anime style\"}],\"time\":[],\"weather\":[]},\"selectedMood\":[],\"selectionOrder\":[\"character\",\"composition\",\"background\",\"lighting\",\"weatherTime\",\"mood\"],\"subjectSeparationMode\":\"standard\",\"tagWeights\":{},\"weight\":\"1\",\"weights\":{\"accessory\":1,\"background\":1,\"body\":1,\"character\":1,\"clothingDetail\":1,\"composition\":1,\"effect\":1,\"expression\":1,\"extra\":1,\"eyeColor\":1,\"hairColor\":1,\"hairStyle\":1,\"lighting\":1,\"mood\":1,\"outfit\":1,\"pose\":1,\"relationship\":1,\"style\":1,\"time\":1,\"weapon\":1,\"weather\":1}},\"workspace\":{\"drafts\":[{\"draftId\":\"draft-c03227e7-c0b4-4edc-a5b3-5bb3538ceee4\",\"items\":[],\"name\":\"保存済み下書き\",\"revision\":1}],\"itemTombstones\":[],\"mergeLog\":[],\"recoveryPending\":[],\"trash\":[],\"version\":1}}'\n\n    at /workspace/seaart-v44-audit/tests/unified-ui/pwa.cjs:2:1867\n"
+      }
+    ]
+  },
+  {
+    "job": "fixed",
+    "oldExecution": {
+      "status": "SKIP",
+      "reason": "Prerequisite r1 source-identity check failed; fixed baseline comparison was not executed"
+    },
+    "oldFailedCases": [],
+    "oldClassification": null,
+    "oldHeadlines": [],
+    "logs": []
+  }
+]

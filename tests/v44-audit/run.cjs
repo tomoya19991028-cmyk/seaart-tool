@@ -9,7 +9,7 @@ for(const name of ['quality','features','matrix','regressions','access','compati
  const script='tests/v44-audit/'+name+'.cjs',startUTC=new Date().toISOString(),dir=path.join(out,name);
  const log=fs.openSync(path.join(out,name+'.log'),'w');
  console.log('Running',name);
- const run=cp.spawnSync(process.execPath,[script],{cwd:root,env:{...process.env,RESULT_DIR:dir},stdio:['ignore',log,log],timeout:10*60*1000});
+ const run=cp.spawnSync(process.execPath,[script],{cwd:root,env:{...process.env,RESULT_DIR:dir,AUDIT_DIAGNOSTICS:name==='ui'?'1':process.env.AUDIT_DIAGNOSTICS||''},stdio:['ignore',log,log],timeout:10*60*1000});
  fs.closeSync(log);
  const resultFile=path.join(dir,'results.json'),result=fs.existsSync(resultFile)?JSON.parse(fs.readFileSync(resultFile)):null;
  const counts={PASS:0,FAIL:0,SKIP:0};for(const t of result?.tests||[])counts[t.status]++;

@@ -1,5 +1,7 @@
 # SeaArt v44 全体監査・修正
 
+> これは2026-10-25の初回監査記録です。2026-10-26の製品修正・残試験の最終結果は [残試験追補](REMAINING_v44_残試験とAndroid確認版.md) を参照してください。以下の旧結果・SHAは履歴として保持しています。
+
 対象は添付v44と既存mainの統合・監査です。VTuber85名の追加、公開更新、mainへのmergeは含みません。
 ブランチは `codex/seaart-v44-full-audit`。起点mainは `894d5fbfdfa65e68a50b77acdaa3e497ed31aeca` です。
 

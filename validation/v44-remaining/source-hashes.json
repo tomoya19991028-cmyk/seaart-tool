@@ -1,0 +1,116 @@
+{
+  "baseCommit": "e584b955140d5d359be411c38b1191a4082c40a1",
+  "productSHA256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a",
+  "files": {
+    "index.html": {
+      "bytes": 4390465,
+      "sha256": "62d6c8f24402326f08e48255a4bab21d905862c47df5a88e76e18da5f501e52a"
+    },
+    "sw.js": {
+      "bytes": 2910,
+      "sha256": "8fe1d284721b17791b82ad53af81abe9380bcc03b45c5837348d31bbbbe3c807"
+    },
+    "manifest.json": {
+      "bytes": 762,
+      "sha256": "d16256a26fd8a80bbe3d9c5ad1b548b90243fa267530b54db4e429916d5c001f"
+    },
+    "icon-192.png": {
+      "bytes": 1369,
+      "sha256": "dfd2f354a90fe0dbd78c89f28d112307d6a138c91e9e303ae7540aa8ed8b6c5a"
+    },
+    "icon-512.png": {
+      "bytes": 3717,
+      "sha256": "4880287ca510eb8dbd9b0d11969602b651ac84c103cf3f51a5b2d9e1f3388149"
+    },
+    "icon-maskable-512.png": {
+      "bytes": 14905,
+      "sha256": "3ae1880344865f9c1512ce5cab2799c99c7ed5a0e94b389e5f7ab3b60bec9a78"
+    },
+    "src/current/script-edits.json": {
+      "bytes": 84922,
+      "sha256": "0b1b0256add46c387abe84227148b90f03e1b5fb67642d819022e9e27d694b3b"
+    },
+    "tests/v44-audit/helpers.cjs": {
+      "bytes": 5148,
+      "sha256": "79a8915d9b208bc568db07c41ec75500e0ff3c06fa59dc19f11b2a5490ab87b2"
+    },
+    "tests/v44-audit/run.cjs": {
+      "bytes": 2113,
+      "sha256": "83d710f99b046836cfd396bd12a3c36cafa249801d84036d03ec053395e6c0f7"
+    },
+    "tests/v44-remaining/README.md": {
+      "bytes": 2584,
+      "sha256": "37ea89f363e61f0a7002fb096e069554bf6bd32b4b24c480206be10238027f0d"
+    },
+    "tests/v44-remaining/compatibility.cjs": {
+      "bytes": 5853,
+      "sha256": "23f6492b3cc7b1087919d57199f36963e5ce183b18e961ce29be0b4020e66d31"
+    },
+    "tests/v44-remaining/csv.cjs": {
+      "bytes": 5011,
+      "sha256": "ea2054dde7a3db213782307fb51c21b74875f7927790caba385ede92dccca650"
+    },
+    "tests/v44-remaining/diagnostics.cjs": {
+      "bytes": 1649,
+      "sha256": "92a8288bb718785aeafc3d2e77267c244a21dee9ecc7a410ceb7a00d00d75e8c"
+    },
+    "tests/v44-remaining/fixtures/v44-reference-edits.json": {
+      "bytes": 2485,
+      "sha256": "dae12163cb8487a613ad0729a54aace3d985996a07d92256843d9e453bf8f6bb"
+    },
+    "tests/v44-remaining/media.cjs": {
+      "bytes": 3425,
+      "sha256": "988a49bef841ade3499d2ea984e245c5ce47828ab4fb3f4ac5159e3257829219"
+    },
+    "tests/v44-remaining/prepare.cjs": {
+      "bytes": 1382,
+      "sha256": "24da1fb69ec215fd4892c4a516fe62086c47f198a94d9071f9adecc0ce982f3a"
+    },
+    "tests/v44-remaining/replay.cjs": {
+      "bytes": 5111,
+      "sha256": "ccc1f5433098fdd3afe05c67c540c015a23d0660c77a8eb54d300345e9c3746d"
+    },
+    "tests/v44-remaining/run-inherited.cjs": {
+      "bytes": 4522,
+      "sha256": "c75c5b0dc8899e60eda4f60332ef99884e3f13d3549f4badbb931362fff07dc3"
+    },
+    "tests/v44-remaining/run.cjs": {
+      "bytes": 2123,
+      "sha256": "cf81b1ec0ccfac0ca939e37c701bd551d42748fbd0b5602ebc1912d68e53cd82"
+    },
+    "tests/v44-remaining/simple-ui.cjs": {
+      "bytes": 11712,
+      "sha256": "165a417bb7f1170f14894e5f14968bca57b6fcd4e4a469728849cd3260f28a7b"
+    },
+    "tests/v44-remaining/stability.cjs": {
+      "bytes": 1454,
+      "sha256": "2caba158e582522ce81b3a61c6e054bcdf5b9dc4ee5865413b2df38c2173aad3"
+    },
+    "scripts/package-android-check.py": {
+      "bytes": 2849,
+      "sha256": "c2ab14df6ff107dd9bd3057c753f8ffa576f02a9a97707d258d4cfdded87c30e"
+    },
+    ".github/workflows/v44-audit.yml": {
+      "bytes": 3085,
+      "sha256": "ad8a95ba5c38b64c58183f4592a6ea4342d9a97413d82064093959f2805d4f31"
+    },
+    "package.json": {
+      "bytes": 554,
+      "sha256": "60f26d6ce88baf7b06baa694b8efb65727013ef8b0f430247a279746c11a5ab4"
+    },
+    "package-lock.json": {
+      "bytes": 3059,
+      "sha256": "99c2c118655ecd8bee5b7d0d6d2ba01a764f8a1bd1f68ee354a323ae0d19a20a"
+    }
+  },
+  "node": "v24.19.0",
+  "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+  "python": "Python 3.12.14",
+  "playwright": "1.62.1",
+  "realAndroid": false,
+  "realIME": false,
+  "SeaArtPixAIImages": false,
+  "testAdapterChange": "Only the normal subject body discriminator was corrected for motif count summaries; affected P01-P08 suites are rerun. Runner now captures adapter SHA before execution.",
+  "localGitHEADIsParent": true,
+  "finalCommitBinding": "Final PR head is checked out explicitly by CI; artifact SHA256.json records its exact source commit."
+}

@@ -8,6 +8,13 @@ on:
       - 'manifest.json'
       - 'scripts/build-current.py'
       - 'tests/v44-audit/**'
+      - 'tests/v44-remaining/**'
+      - 'tests/horror/**'
+      - 'tests/horror-auto/**'
+      - 'tests/integration/**'
+      - 'scripts/package-android-check.py'
+      - 'docs/v44-audit/**'
+      - 'validation/v44-remaining/**'
       - 'package*.json'
       - '.github/workflows/v44-audit.yml'
 permissions:
@@ -20,6 +27,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -34,3 +42,68 @@ jobs:
           path: .audit-tmp/
           include-hidden-files: true
           retention-days: 14
+          if-no-files-found: error
+
+  remaining:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:remaining
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v44-remaining-evidence
+          path: .audit-tmp/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14
+  stability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:stability
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v44-stability-evidence
+          path: .audit-tmp/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14
+  android-artifact:
+    needs: [audit, remaining, stability]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - run: python3 scripts/build-current.py --check
+      - run: python3 scripts/package-android-check.py .audit-tmp/Android
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SeaArt-v44-Android-Check
+          path: .audit-tmp/Android/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30

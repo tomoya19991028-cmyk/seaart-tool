@@ -11,6 +11,8 @@ python3 scripts/build-current.py /tmp/seaart-current.html
 cmp index.html /tmp/seaart-current.html
 npm run build:check
 npm run test:audit
+npm run test:remaining
+npm run test:stability
 ```
 
 出力先は新しいファイルを指定します。ビルドは既存ファイルと `index.html` への直接上書きを拒否します。
@@ -27,3 +29,5 @@ npm run test:audit
 保存namespace・既存データのバージョンは維持します。ダウンロードHTMLとHTTPSのPWAは保存領域が異なる場合があります。
 HTMLのコピーは、端末内の保存データのバックアップにはなりません。移動前にJSONを書き出してください。
 公開時は既存のGitHub Pages経路を利用します。検証fixtureの公開除外 `_config.yml` を保持してください。
+
+残試験の対応表・結果・Android確認版の作成方法は [残試験追補](docs/v44-audit/REMAINING_v44_残試験とAndroid確認版.md) と `tests/v44-remaining/README.md` を参照してください。
