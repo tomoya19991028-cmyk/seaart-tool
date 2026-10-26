@@ -2520,8 +2520,9 @@ const simpleLegacyDetail=Object.fromEntries(['weapon','armor','carry','effect','
 simpleLegacyDetail.effect.delete('steaming body');
 // New states remain in the existing detail/snapshot/export pipeline.
 for(const key of ['weapon','armor','carry','effect'])for(const [field,label,rows] of simpleBasic[key]){
- if(!detailOptions[field])detailOptions[field]={label,options:[]};
- for(const [value,name] of rows)if(!(key==='effect'&&field!=='effect'&&detailOptions.effect.options.some(x=>x[0]===value))&&!detailOptions[field].options.some(x=>x[0]===value))detailOptions[field].options.push([value,name,label]);
+ const optionLabel=field==='weaponState'?'装備状態':label;
+ if(!detailOptions[field])detailOptions[field]={label:optionLabel,options:[]};
+ for(const [value,name] of rows)if(!(key==='effect'&&field!=='effect'&&detailOptions.effect.options.some(x=>x[0]===value))&&!detailOptions[field].options.some(x=>x[0]===value))detailOptions[field].options.push([value,name,optionLabel]);
 }
 
 

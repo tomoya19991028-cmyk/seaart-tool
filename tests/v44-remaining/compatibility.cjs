@@ -9,8 +9,7 @@ await s.test('FIXED-independent-original-R1-twelve-datasets-retained',async()=>{
  let rows=0;for(const [field,entries]of Object.entries(expected.data.catalog))for(const row of entries){assert.deepEqual(d.catalog[field].find(r=>r.id===row.id),row,field+'/'+row.id);rows++}
  for(const field of ['characterBasicPresets','outfitSets','genders','creatureFeatureLabels'])for(const [key,value]of Object.entries(expected.data[field]))assert.deepEqual(d[field][key],value,field+'/'+key);
  for(const field of ['creatureBasicPresets','creatureCandidateBase','owners','creatureFields','creatureSpeciesGroups'])assert.deepEqual(d[field],expected.data[field],field);
- // The weapon specification intentionally renames this tab; values and rows remain exact.
- for(const [key,value]of Object.entries(expected.data.detailOptions)){assert.equal(d.detailOptions[key].label,key==='bust'?'胸の大きさ':key==='weaponState'?'装備・動作':value.label,'detail label '+key);for(const row of value.options){const wanted=key==='subjectRelation'&&row[0]==='facing each other'?['facing each other','向き合う','向き・姿勢']:row;assert(d.detailOptions[key].options.some(r=>JSON.stringify(r)===JSON.stringify(wanted)),'detail '+key+'/'+row[0])}}
+ for(const [key,value]of Object.entries(expected.data.detailOptions)){assert.equal(d.detailOptions[key].label,key==='bust'?'胸の大きさ':value.label,'detail label '+key);for(const row of value.options){const wanted=key==='subjectRelation'&&row[0]==='facing each other'?['facing each other','向き合う','向き・姿勢']:row;assert(d.detailOptions[key].options.some(r=>JSON.stringify(r)===JSON.stringify(wanted)),'detail '+key+'/'+row[0])}}
  for(const [id,value]of expected.data.adapters)assert.deepEqual(d.adapters.find(row=>row[0]===id)?.[1],value,'adapter '+id);
  return {fixedFixtureSHA256:hash(bytes),datasets:12,oldCatalogRows:rows,standardAdapters:expected.data.adapters.length,baselineNeverRewritten:true,oldFormattedFulltextReplacedByOriginalV44ReplayAndIndependentAttribution:true};
 });

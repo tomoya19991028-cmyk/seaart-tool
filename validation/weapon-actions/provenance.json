@@ -1,21 +1,22 @@
 {
   "baseMain": "69bcfe86408a991ce42c13876b274bda604a6d8d",
-  "productSHA256": "5f86de1f0da5c6902d9759c79eaf557b1ccc583a899a59dedee2dacaefeb6eb8",
-  "productBytes": 4423872,
+  "productSHA256": "1986251c5bffb5a28d89917c29555d166dd2f76adc48db8ffad7d421930740b3",
+  "productBytes": 4423953,
   "files": {
-    "index.html": "5f86de1f0da5c6902d9759c79eaf557b1ccc583a899a59dedee2dacaefeb6eb8",
+    "index.html": "1986251c5bffb5a28d89917c29555d166dd2f76adc48db8ffad7d421930740b3",
     "src/current/weapon-actions.js": "6a38c7bd8a7d8b3d9827947dee97a7f9543c35bc722ecf7b6a20ba7835cacb8e",
     "src/current/pose-actions.js": "d171f65f003c37127f521a564cad75cd47a6e7858002c790cc93c16cc6d1eb58",
-    "src/current/script-edits.json": "82c03fb289b87b489d0870cd85d8e3e9faa189dd954c499fdc06330114148281",
+    "src/current/script-edits.json": "da8b0c5b0bd147840d91477f94cd1c6e802a13e6a929eeca3164b574f1b38271",
     "src/current/page.html.in": "3974d48188b227fd7538de7c9e6de70362e6c34ec9a7795fbb646fed2d81bde7",
     "src/person-creature-unified-ui.js": "8893edbd07b56aff9042fdabfd6e18fecbe5e6fde6877018814c8f30c780d51f",
     "tests/weapon-actions/run.cjs": "ce68f3c78fa3b8a9fdaabd034f0e2b62f8e9ce0e861f3af686ed6e98683b82ee",
-    "tests/v44-remaining/compatibility.cjs": "790346d16fabb5b05f740806d87764ec7babc82ef27acef2cdc43038d58c3cbd",
+    "tests/v44-remaining/compatibility.cjs": "23f6492b3cc7b1087919d57199f36963e5ce183b18e961ce29be0b4020e66d31",
     "scripts/build-current.py": "91b1ed090fc3bdb2724bbb14cefea2cde37ddeaf1e1938fbde6212df4db11441"
   },
   "browserSuite": "browser-results.json",
   "CI": "The PR workflow checks out the exact head SHA. Its execution.json and executions.json record final-commit results; Android artifact records sourceCommit and HTML SHA.",
   "AndroidDeviceTested": false,
   "SeaArtPixAIImageGenerationTested": false,
-  "published": false
+  "published": false,
+  "legacyMetadata": "The original remaining compatibility comparison is unchanged and passes, including all old weaponState option labels and groups."
 }
