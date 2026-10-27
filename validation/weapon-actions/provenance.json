@@ -1,0 +1,30 @@
+{
+  "baseMain": "69bcfe86408a991ce42c13876b274bda604a6d8d",
+  "productSHA256": "ad2be8fb320e42da203589f6976e74b72629d29c333fcf35ae1516b7f48eda11",
+  "productBytes": 4426589,
+  "files": {
+    "index.html": "ad2be8fb320e42da203589f6976e74b72629d29c333fcf35ae1516b7f48eda11",
+    "src/current/weapon-actions.js": "05489f3df33e6de06d815dc7b9f08aa54a67c12a65eee020786bb687f7fa8a02",
+    "src/current/pose-actions.js": "6c6e1ea7b3eb9938577df26762cfa01ed2463106a1bb967dc23653f9d4310eda",
+    "src/current/script-edits.json": "3bda8a81802715d70544bc08a9920f0769c84a0334aec91539b1299ac5cab865",
+    "src/current/page.html.in": "3974d48188b227fd7538de7c9e6de70362e6c34ec9a7795fbb646fed2d81bde7",
+    "src/person-creature-unified-ui.js": "8893edbd07b56aff9042fdabfd6e18fecbe5e6fde6877018814c8f30c780d51f",
+    "tests/weapon-actions/run.cjs": "f554e8524c6c11ea45c1c131d4921305c14fa270b48b3810ead11de09d26c5c4",
+    "tests/v44-remaining/compatibility.cjs": "23f6492b3cc7b1087919d57199f36963e5ce183b18e961ce29be0b4020e66d31",
+    "scripts/build-current.py": "91b1ed090fc3bdb2724bbb14cefea2cde37ddeaf1e1938fbde6212df4db11441",
+    "tests/v44-remaining/replay.cjs": "777177e48c7b603001c1711c710f764e578c545d630384a204ca01cd869e9691"
+  },
+  "browserSuite": "browser-results.json",
+  "CI": "The PR workflow checks out the exact head SHA. Its execution.json and executions.json record final-commit results; Android artifact records sourceCommit and HTML SHA.",
+  "AndroidDeviceTested": false,
+  "SeaArtPixAIImageGenerationTested": false,
+  "published": false,
+  "legacyMetadata": "The original remaining compatibility comparison is unchanged and passes, including all old weaponState option labels and groups.",
+  "additiveCatalogProjection": "The inherited adapter excludes exactly twelve newly added weapon verb IDs from old full-table comparisons. Existing rows and immutable fixtures are unchanged; weapon suite checks all twelve IDs independently.",
+  "weaponCandidates": {
+    "defaultBaseTypes": 28,
+    "legacyAttributeVariantsRetained": 9,
+    "sourceCatalogValuesUnchanged": true,
+    "automaticEffectSelection": false
+  }
+}

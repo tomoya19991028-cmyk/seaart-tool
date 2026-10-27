@@ -24,8 +24,8 @@ def build():
  parser=InlineScripts(baseline.decode('utf-8').replace('\r\n','\n'));parser.feed(parser.text)
  edits=json.loads((ROOT/'src/current/script-edits.json').read_text());blocks=[]
  for index,entry in enumerate(manifest['scripts']):
-  if 'source'in entry:
-   body=(ROOT/entry['source']).read_text();body=body[:-1]if entry.get('trimFinalNewline')and body.endswith('\n')else body;body=entry.get('prefix','')+body+entry.get('suffix','')
+  if 'source'in entry or 'sources'in entry:
+   body='\n'.join((ROOT/source).read_text()for source in entry.get('sources',[entry.get('source')]));body=body[:-1]if entry.get('trimFinalNewline')and body.endswith('\n')else body;body=entry.get('prefix','')+body+entry.get('suffix','')
   else:
    lines=parser.rows[entry['baselineScript']].splitlines(keepends=True)
    for edit in reversed(edits.get(str(index),[])):

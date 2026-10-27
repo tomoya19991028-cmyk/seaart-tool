@@ -8,6 +8,8 @@ on:
       - 'manifest.json'
       - 'scripts/build-current.py'
       - 'tests/v44-audit/**'
+      - 'tests/weapon-actions/**'
+      - 'docs/weapon-actions/**'
       - 'tests/v44-remaining/**'
       - 'tests/horror/**'
       - 'tests/horror-auto/**'
@@ -35,6 +37,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:audit
+      - run: npm run test:weapons
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -102,7 +105,7 @@ jobs:
       - run: python3 scripts/package-android-check.py .audit-tmp/Android
       - uses: actions/upload-artifact@v4
         with:
-          name: SeaArt-v44-Android-Check
+          name: SeaArt-Weapon-Actions-Android-Check
           path: .audit-tmp/Android/
           include-hidden-files: true
           if-no-files-found: error
