@@ -20,3 +20,8 @@
 修正後は新しい出力へビルドし、差分を確認してから `index.html` を更新してください。
 新たなwrapperの追記で上書きせず、対応する既存ソースを修正し、関連試験を実行してください。
 過去版のビルダーが参照するJSONを現行用と取り違えないでください。
+
+`prependSources`は起点scriptの直前に同じscript内でソースを連結します。
+script 0では、保存処理の初期読み込みより前に`../vendor/lz-string-1.5.0.js`と
+`storage-journal.js`を読み込みます。圧縮対象は一時的な復旧journalだけです。
+通常の保存キー・JSON出力と旧journalの読み込みは維持します。

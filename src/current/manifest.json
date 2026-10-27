@@ -8,7 +8,11 @@
     {
       "id": null,
       "type": "",
-      "baselineScript": 0
+      "baselineScript": 0,
+      "prependSources": [
+        "src/vendor/lz-string-1.5.0.js",
+        "src/current/storage-journal.js"
+      ]
     },
     {
       "id": "recoveryUIAdapter",

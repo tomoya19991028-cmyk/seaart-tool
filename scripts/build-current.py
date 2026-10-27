@@ -32,6 +32,8 @@ def build():
     start,end=edit['startLine'],edit['endLine'];assert hashlib.sha256(''.join(lines[start:end]).encode()).hexdigest()==edit['oldSHA256'],f'Base context mismatch in script {index}'
     lines[start:end]=[edit['replacement']]
    body=''.join(lines)
+  if entry.get('prependSources'):
+   body='\n'.join((ROOT/source).read_text()for source in entry['prependSources'])+'\n'+body
   blocks.append(body)
  for source in manifest['managedJS']:
   old=original(source).decode().replace('\r\n','\n').strip();new=(ROOT/source).read_text().strip();hits=sum(b.count(old)for b in blocks);assert hits==1,f'Managed source span missing/duplicated: {source}'

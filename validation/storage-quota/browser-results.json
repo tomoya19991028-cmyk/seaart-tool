@@ -1,0 +1,240 @@
+{
+  "suite": "storage-quota",
+  "productSHA256": "5b7b758cc4c34d6c845b6e0bdbcc885bf921656ce1f9974cd85aedfad7d7a016",
+  "tests": [
+    {
+      "id": "STORAGE-journal-codec-unicode-and-legacy-roundtrip",
+      "status": "PASS",
+      "detail": {
+        "same": true,
+        "plainSame": true,
+        "unicode": true,
+        "plainCharacters": 809391,
+        "packedCharacters": 118124
+      }
+    },
+    {
+      "id": "STORAGE-real-browser-quota-old-writer-fails-compact-repeated-generation-succeeds",
+      "status": "PASS",
+      "detail": {
+        "quota": "QuotaExceededError",
+        "legacyFailure": {
+          "error": "QuotaExceededError",
+          "diskPreserved": true,
+          "historyPreserved": true,
+          "status": "プロンプトを生成しました（履歴は未保存）。ブラウザの保存容量が不足しています。"
+        },
+        "successes": [
+          {
+            "saved": true,
+            "status": "プロンプトを生成しました",
+            "history": 1,
+            "output": true
+          },
+          {
+            "saved": true,
+            "status": "プロンプトを生成しました",
+            "history": 2,
+            "output": true
+          },
+          {
+            "saved": true,
+            "status": "プロンプトを生成しました",
+            "history": 3,
+            "output": true
+          },
+          {
+            "saved": true,
+            "status": "プロンプトを生成しました",
+            "history": 4,
+            "output": true
+          },
+          {
+            "saved": true,
+            "status": "プロンプトを生成しました",
+            "history": 5,
+            "output": true
+          },
+          {
+            "saved": true,
+            "status": "プロンプトを生成しました",
+            "history": 6,
+            "output": true
+          },
+          {
+            "saved": true,
+            "status": "プロンプトを生成しました",
+            "history": 7,
+            "output": true
+          }
+        ],
+        "unrelatedKeysPreserved": true,
+        "favoritePreserved": true,
+        "workingExtra": "compact generation 6",
+        "reloadPreserved": true
+      }
+    },
+    {
+      "id": "STORAGE-all-six-write-boundaries-captured-with-compact-journal",
+      "status": "PASS",
+      "detail": {
+        "boundaries": [
+          "journal",
+          "settings",
+          "working",
+          "history",
+          "marker",
+          "journal"
+        ]
+      }
+    },
+    {
+      "id": "STORAGE-quota-at-each-write-rolls-back-and-retry-succeeds",
+      "status": "PASS",
+      "detail": [
+        {
+          "fault": "journal",
+          "injected": true,
+          "refused": true,
+          "unchanged": true,
+          "ready": true,
+          "retry": true
+        },
+        {
+          "fault": "settings",
+          "injected": true,
+          "refused": true,
+          "unchanged": true,
+          "ready": true,
+          "retry": true
+        },
+        {
+          "fault": "working",
+          "injected": true,
+          "refused": true,
+          "unchanged": true,
+          "ready": true,
+          "retry": true
+        },
+        {
+          "fault": "history",
+          "injected": true,
+          "refused": true,
+          "unchanged": true,
+          "ready": true,
+          "retry": true
+        },
+        {
+          "fault": "marker",
+          "injected": true,
+          "refused": true,
+          "unchanged": true,
+          "ready": true,
+          "retry": true
+        },
+        {
+          "fault": "journal-refresh",
+          "injected": true,
+          "refused": true,
+          "unchanged": true,
+          "ready": true,
+          "retry": true
+        }
+      ]
+    },
+    {
+      "id": "STORAGE-crash-recovery-compact-and-original-journals-all-boundaries",
+      "status": "PASS",
+      "detail": [
+        {
+          "encoding": "compact",
+          "step": 0,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "compact",
+          "step": 1,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "compact",
+          "step": 2,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "compact",
+          "step": 3,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "compact",
+          "step": 4,
+          "recovered": "next"
+        },
+        {
+          "encoding": "compact",
+          "step": 5,
+          "recovered": "next"
+        },
+        {
+          "encoding": "original",
+          "step": 0,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "original",
+          "step": 1,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "original",
+          "step": 2,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "original",
+          "step": 3,
+          "recovered": "previous"
+        },
+        {
+          "encoding": "original",
+          "step": 4,
+          "recovered": "next"
+        },
+        {
+          "encoding": "original",
+          "step": 5,
+          "recovered": "next"
+        }
+      ]
+    },
+    {
+      "id": "STORAGE-corrupt-and-unknown-compact-journal-never-deletes-data",
+      "status": "PASS",
+      "detail": [
+        {
+          "fault": "checksum",
+          "blocked": true,
+          "savedBytesPreserved": true
+        },
+        {
+          "fault": "truncated",
+          "blocked": true,
+          "savedBytesPreserved": true
+        },
+        {
+          "fault": "characters",
+          "blocked": true,
+          "savedBytesPreserved": true
+        },
+        {
+          "fault": "unknown",
+          "blocked": true,
+          "savedBytesPreserved": true
+        }
+      ]
+    }
+  ],
+  "realBrowserQuota": true,
+  "userData": false
+}

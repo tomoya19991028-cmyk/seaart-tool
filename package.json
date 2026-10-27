@@ -8,7 +8,8 @@
     "test:remaining": "node tests/v44-remaining/run.cjs",
     "test:stability": "REMAINING_MODE=stability node tests/v44-remaining/run.cjs",
     "package:android": "python3 scripts/package-android-check.py",
-    "test:weapons": "node tests/weapon-actions/run.cjs"
+    "test:weapons": "node tests/weapon-actions/run.cjs",
+    "test:storage": "node tests/storage/run.cjs"
   },
   "devDependencies": {
     "acorn": "8.15.0",

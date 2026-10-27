@@ -91,6 +91,24 @@
       "replacement": " afValidateSnapshotFields(value);for(const key of ['profiles','weights','scene','mangaState','mainCardSelections','cardPlacements'])if(value[key]!==undefined)afAssert(afObject(value[key]));for(const p of Object.values(value.profiles||{})){afAssert(afObject(p));validatePoseActionData(p);gvValidate(p);if(p.position!==undefined)afAssert(typeof p.position==='string')}\n"
     },
     {
+      "startLine": 985,
+      "endLine": 986,
+      "oldSHA256": "ccd5d064d41efc07cc551f8ef91d7626072886ff612c95b5895ed98a6686356d",
+      "replacement": "function afJournal(value){value=afDecodeJournal(value);afAssert(afObject(value)&&value.version===2&&value.namespace===actorFormStorageNamespace&&['pending','committed'].includes(value.phase)&&typeof value.transactionId==='string','復旧情報が不正です');afCheckBundle(value.next);afAssert(value.transactionId===value.next.marker.revision,'復旧transactionの識別子が一致しません');if(value.previous!==null){afCheckBundle(value.previous);afAssert(value.previous.marker.revision!==value.next.marker.revision)}return value}\n"
+    },
+    {
+      "startLine": 1022,
+      "endLine": 1023,
+      "oldSHA256": "c55a82aa727a2af57828f77dabebabecebb7f0e9ca5e491e314371e41c5eb14c",
+      "replacement": " const journal={version:2,namespace:actorFormStorageNamespace,transactionId:revision,phase:'pending',previous,next:bundle},journalText=afEncodeJournal(journal);let owns=false,committedText='',markerWritten=false;\n"
+    },
+    {
+      "startLine": 1026,
+      "endLine": 1027,
+      "oldSHA256": "ead4e8fb3daf0ee02fdc17ce29e34841b82b408d0067ebf67c9e6e54902d243d",
+      "replacement": "  journal.phase='committed';committedText=afEncodeJournal(journal);localStorage.setItem(actorFormStorageKeys.journal,committedText);checkOwner();afJournal(JSON.parse(committedText));actorFormLastBundle=bundle;actorFormStorageReady=true;actorFormStorageError='';actorExtensions=afCopy(working.actorExtensions);resultAccessHistoryIndex=accessIndex;try{localStorage.removeItem(actorFormStorageKeys.journal)}catch{}return true;\n"
+    },
+    {
       "startLine": 1057,
       "endLine": 1058,
       "oldSHA256": "9a226cefafd1fb7be1b883793c883e4a48e406a67916c28f5b9d780cb84d91b0",
