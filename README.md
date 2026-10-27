@@ -12,6 +12,7 @@ cmp index.html /tmp/seaart-current.html
 npm run build:check
 npm run test:audit
 npm run test:weapons
+npm run test:storage
 npm run test:remaining
 npm run test:stability
 ```
@@ -34,3 +35,5 @@ HTMLのコピーは、端末内の保存データのバックアップにはな�
 残試験の対応表・結果・Android確認版の作成方法は [残試験追補](docs/v44-audit/REMAINING_v44_残試験とAndroid確認版.md) と `tests/v44-remaining/README.md` を参照してください。
 
 武器の9分類・装備と使用動作の共用モデルは [実装仕様](docs/weapon-actions/IMPLEMENTATION.md)、Android確認項目は [確認表](docs/weapon-actions/ANDROID_CHECK.md) を参照してください。
+
+生成時の保存容量不足に対する復旧用データの圧縮は [保存容量の修正](docs/storage-quota/README.md) を参照してください。

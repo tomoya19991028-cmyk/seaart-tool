@@ -548,7 +548,553 @@ dialog{background:var(--bg);color:var(--text);border:1px solid var(--border);bor
 </details></div></div><div id="mangaPanels" class="mangaView"><p class="hint">ページと同じ配置です。コマをタップして内容を設定します。</p><div id="mangaPanelCards" aria-label="コマの内容を編集"></div></div><div id="mangaCompose" class="mangaView"><p class="hint">各コマをSeaArtで個別に生成し、画像を指定してください。ページ設定の配置で１枚に合成します。</p><div id="composeInfo" class="small"></div><div id="composeSlots"></div><canvas id="composeCanvas" aria-label="合成結果のプレビュー"></canvas><button id="saveComposedPage" type="button">合成した漫画をPNG保存</button><p class="small">画像はこの画面内でのみ保持します。ページを閉じると選び直しになります。</p></div><div id="mangaOutput" class="mangaView"><div id="mangaResults" class="section mangaResultsFlow"><p class="small mangaResultGuide">まずページ全体で生成し、崩れたコマだけ個別生成するのがおすすめです。</p><section class="mangaWholeResult" aria-labelledby="mangaWholeTitle"><div class="mangaResultHeading"><h3 id="mangaWholeTitle">ページ全体</h3><button id="mangaResultGenerate" type="button" class="secondary">生成・再生成</button></div><div class="mangaResultCopyActions"><button type="button" data-manga-copy="mangaPositive">Positiveをコピー</button><button type="button" class="secondary" data-manga-copy="mangaNegative">Negativeをコピー</button></div><p id="mangaPageResultEmpty" class="hint">「生成」で現在の設定からプロンプトを作成できます。</p><details id="mangaPagePromptDetails" class="mangaPromptDetails"><summary>プロンプト本文を確認</summary><div class="field"><label for="mangaPositive">ページ全体・Positive</label><textarea id="mangaPositive" class="output"></textarea></div><div class="field"><label for="mangaNegative">Negative</label><textarea id="mangaNegative" class="negative"></textarea></div></details></section><section class="mangaPanelResults" aria-labelledby="mangaPanelsResultTitle"><h3 id="mangaPanelsResultTitle">コマ別</h3><p class="small">ページ全体の生成で崩れたコマや、作り直したいコマだけ個別に生成できます。</p><p id="mangaIndividualEmpty" class="hint">「生成」でコマ別プロンプトも表示されます。</p><div id="mangaIndividual"></div></section><p id="mangaStatus" class="status" role="status" aria-live="polite"></p><button id="mangaResultCompose" type="button" class="secondary">画像合成へ →</button></div></div></section></main><dialog id="normalSceneDialog" class="utilityDialog candidateDialog" aria-labelledby="normalSceneTitle"><div class="dialogHead candidateHeader"><h2 id="normalSceneTitle">場面・演出</h2><button type="button" class="secondary" data-close="normalSceneDialog">閉じる</button></div><div id="normalScenePresetRow"><select id="normalScenePreset" aria-label="場面プリセット"><option value="">プリセットを選択</option></select><button id="normalSceneApply" type="button" class="secondary" disabled>適用</button></div><p id="normalScenePreview" class="hint"></p><div id="normalSceneTabs" class="simpleTabs" aria-label="場面の分類"></div><label for="normalSceneSearch">候補を検索</label><input id="normalSceneSearch" type="search" placeholder="日本語・英語で検索"><div id="normalSceneQuick" class="quickTabs candidateQuickTabs"><button type="button" data-quick="all">すべて</button><button type="button" data-quick="selected">選択中</button><button type="button" data-quick="favorite">★ お気に入り</button></div><p id="normalSceneCount" class="candidateCount"></p><div id="normalSceneList" class="candidateList"></div><label for="normalSceneExtra">場面の追加指定（英語）</label><input id="normalSceneExtra" maxlength="500" placeholder="細かな指定を入力"></dialog><dialog id="creatureDialog" class="utilityDialog candidateDialog" aria-labelledby="creatureDialogTitle"><div class="dialogHead"><h2 id="creatureDialogTitle">生物の設定</h2><button type="button" class="secondary" data-close="creatureDialog">閉じる</button></div><div id="creatureFieldTabs" class="segments" role="group" aria-label="設定項目"></div><div class="dialogBody"><label id="creatureSearchLabel" for="creatureSearch">候補を検索</label><input id="creatureSearch" type="search" placeholder="日本語・英語で検索"><div id="creatureQuickTabs" class="quickTabs" role="group" aria-label="生物候補の表示"><button type="button" data-quick="all">すべて</button><button type="button" data-quick="selected">選択中</button><button type="button" data-quick="favorite">★ お気に入り</button></div><p id="creatureCandidateCount"></p><div id="creatureChoices"></div></div></dialog><dialog id="editor"><form id="editForm"><h2 id="editorTitle">選択肢を追加</h2><div class="field"><label for="editCategory">項目</label><select id="editCategory"></select></div><div class="field"><label for="editName">日本語の表示名</label><input id="editName" required maxlength="150"></div><div class="field"><label for="editEnglish">英語タグ</label><input id="editEnglish" required maxlength="500"></div><div class="field"><label for="editGroup">作品名・グループ（任意）</label><input id="editGroup" maxlength="100"></div><p id="editError" class="status" role="alert"></p><div class="stack"><button type="submit">保存</button><button type="button" id="cancelEdit" class="secondary">キャンセル</button></div></form></dialog><dialog id="choiceDialog" aria-labelledby="choiceDialogTitle"><div class="row"><h2 id="choiceDialogTitle">項目を選ぶ</h2><button id="choiceSortOpen" type="button" class="secondary" aria-expanded="false" aria-controls="choiceSortMenu">並び順 ▾</button><button id="choiceDialogClose" type="button" class="secondary">閉じる</button><button id="sceneTimeToggle" type="button" class="secondary" hidden>時間帯へ →</button></div><div id="choiceSortMenu" hidden role="group" aria-label="並び順の選択"></div><label for="choiceDialogSearch">候補を検索</label><input id="choiceDialogSearch" type="search" placeholder="日本語・英語で検索"><div id="choiceQuickTabs" class="quickTabs" role="group" aria-label="候補の表示"><button type="button" data-quick="all">すべて</button><button type="button" data-quick="selected">選択中</button><button type="button" data-quick="favorite" aria-label="お気に入り">★ お気に入り</button><button type="button" data-tendency="female" hidden>女性</button><button type="button" data-tendency="male" hidden>男性</button></div><div id="characterFilters" class="characterFilters" hidden>
 <div class="characterFilterRow"><label>作品<select id="characterGroup"><option value="">すべての作品</option></select></label><div id="characterGenderWrap" role="group" aria-label="性別で絞り込み"><button type="button" data-gender="女性" aria-pressed="false">女性</button><button type="button" data-gender="男性" aria-pressed="false">男性</button><select id="characterGender" hidden aria-label="性別"><option value="">すべて</option><option value="女性">女性</option><option value="男性">男性</option><option value="性別なし">性別なし</option><option value="不明">性別未登録</option></select></div></div><select id="characterSort" hidden aria-label="並び順"><option value="original">登録順</option><option value="name">名前順</option><option value="group">作品名順</option><option value="gender">女性→男性順</option><option value="selected">選択中を先頭</option></select>
 
-</div><div id="globalHairFilter" class="hairTendencyFilter" hidden><label for="globalHairTendency">スタイルの傾向</label><select id="globalHairTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span></div><div id="globalOutfitFilter" class="hairTendencyFilter" hidden><label for="globalOutfitTendency">スタイルの傾向</label><select id="globalOutfitTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span></div><div id="characterMatchCount" class="small" aria-live="polite" hidden></div><div id="choiceDialogChoices"></div><div class="field" id="choiceWeightBox"><label for="choiceWeight">この項目の強調度</label><select id="choiceWeight"></select></div><p class="small">選択済みはカードに表示され、×で解除できます。</p></dialog><dialog id="personChoiceDialog" aria-labelledby="personChoiceTitle"><div class="row"><h2 id="personChoiceTitle">人物の設定を選ぶ</h2><button id="personSortOpen" class="secondary" type="button" aria-expanded="false" aria-controls="personSortMenu">並び順 ▾</button><button id="personChoiceClose" class="secondary" type="button">閉じる</button></div><div id="personSortMenu" role="group" aria-label="並び順の選択" hidden></div><label for="personChoiceSearch">候補を検索</label><input id="personChoiceSearch" type="search" placeholder="日本語・英語で検索"><div id="personQuickTabs" class="quickTabs" role="group" aria-label="人物候補の表示"><button type="button" data-quick="all">すべて</button><button type="button" data-quick="selected">選択中</button><button type="button" data-quick="favorite" aria-label="お気に入り">★ お気に入り</button><button type="button" data-tendency="female" hidden>女性</button><button type="button" data-tendency="male" hidden>男性</button></div><div id="personChoiceFilters" class="personChoiceFilters" hidden><label>分類<select id="personChoiceGroup"><option value="">すべて</option></select></label><select id="personChoiceSort" hidden aria-label="並び順"><option value="original">登録順</option><option value="name">名前順</option><option value="group">分類順</option><option value="selected">選択中を先頭</option></select></div><div id="personHairFilter" class="hairTendencyFilter" hidden><label for="personHairTendency">スタイルの傾向</label><select id="personHairTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span><label for="personHairKind">種類<select id="personHairKind"><option value="">すべて</option><option value="basic">基本髪型</option><option value="feature">髪の特徴</option></select></label></div><div id="personOutfitFilter" class="hairTendencyFilter" hidden><label for="personOutfitTendency">スタイルの傾向</label><select id="personOutfitTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span></div><div id="personChoiceCount" class="small" aria-live="polite" hidden></div><div id="personChoiceChoices"></div><p class="small">複数選択できます。選択中の内容は人物カードに表示されます。</p></dialog><dialog id="sceneChoiceDialog"><div class="row"><h3 id="sceneDialogTitle"></h3><button type="button" id="closeSceneDialog" class="secondary">完了</button></div><input id="sceneChoiceSearch" type="search" placeholder="日本語・英語で検索" aria-label="候補を検索"><div id="sceneChoiceList" class="sceneChoiceList"></div><button type="button" id="doneSceneDialog" class="secondary">選択を完了</button></dialog><dialog id="relationScreen" class="utilityDialog"><div class="dialogHead"><h2>人物の位置・関係</h2><button type="button" class="quiet" data-close="relationScreen">閉じる</button></div><div class="dialogBody"><div id="multiScene"><h2>複数人物の位置・関係・構図</h2><p class="small">各人物の位置は上の人物欄で設定できます。関係や構図は画像全体に適用します。</p><div class="sceneCards"><div class="sceneCard"><button type="button" id="openRelation">関係・動作　未設定</button><div id="relationChips" class="chips"></div><label for="relation" class="hidden">関係・動作</label><select id="relation"><option value="">指定なし</option><option value="friends">友人</option><option value="teammates">仲間</option><option value="rivals">ライバル</option><option value="siblings">兄弟・姉妹</option><option value="partners">パートナー</option><option value="facing each other">向かい合う</option><option value="back to back">背中合わせ</option><option value="holding hands">手をつなぐ</option><option value="talking to each other">会話する</option><option value="fighting side by side">共闘する</option></select></div><div class="sceneCard"><button type="button" id="openMultiComposition">複数人物の構図　未設定</button><div id="compositionChips" class="chips"></div><label for="multiComposition" class="hidden">複数人物の構図</label><select id="multiComposition"><option value="">指定なし</option><option value="side by side composition">横並び</option><option value="face to face composition">向かい合う構図</option><option value="one person in front, another behind">前後に並ぶ</option><option value="balanced group composition">均等に配置</option><option value="full-body group shot">全身の集合写真</option><option value="close-up two-shot">上半身のツーショット</option></select></div></div><div class="field"><label for="relationExtra">関係・構図の追加指定（英語）</label><input id="relationExtra" placeholder="例: the person on the left holds the other's hand"></div></div></div></dialog><dialog id="identityDialog" class="utilityDialog"><div class="dialogHead"><h2>人物の編集</h2><button type="button" class="quiet" data-close="identityDialog">閉じる</button></div><div class="dialogBody"><div id="identityContent"></div></div></dialog><dialog id="styleDialog" class="utilityDialog"><div class="dialogHead"><h2>線・色の表現</h2><button type="button" class="quiet" data-close="styleDialog">閉じる</button></div><div class="dialogBody"><div class="profileGrid"><div class="field"><label for="lineStyle">線の表現</label><select id="lineStyle"><option value="">指定なし</option><option value="clean lineart">くっきりした線画（従来の設定）</option><option value="bold outlines">太くはっきりした線</option><option value="soft lineart">柔らかい線</option><option value="thin lineart">細い線</option><option value="no lineart">線なし</option><option value="painterly rendering">塗り重視・線を控えめに</option></select></div><div class="field"><label for="colorStyle">色の表現</label><select id="colorStyle"><option value="">指定なし</option><option value="vibrant colors">鮮やかな色</option><option value="rich colors">深みのある色</option><option value="soft pastel colors">淡いパステルカラー</option><option value="high contrast colors">高コントラスト</option><option value="soft colors">柔らかい色合い</option><option value="pale colors">淡い色</option><option value="high saturation">高彩度</option><option value="low saturation">低彩度</option><option value="monochrome">白黒</option></select></div></div></div></dialog><dialog id="moodDialog" class="utilityDialog"><div class="dialogHead"><h2>雰囲気・演出</h2><button data-close="moodDialog" class="quiet">閉じる</button></div><div id="moodChoices" class="dialogBody"></div></dialog><dialog id="artDialog" class="utilityDialog"><div class="dialogHead"><h2>画風・タッチ</h2><button type="button" class="quiet" data-close="artDialog">閉じる</button></div><div class="dialogBody"><div id="artChoices"></div></div></dialog><dialog id="qualityDialog" class="utilityDialog"><div class="dialogHead"><h2>品質・ディテール</h2><button type="button" class="quiet" data-close="qualityDialog">閉じる</button></div><div class="dialogBody"><h3>品質</h3><div id="qualityLevel" class="segments"></div><h3>描き込み</h3><div id="detailLevel" class="segments"></div><h3>重点（複数可）</h3><div id="qualityFocus" class="segments wrap"></div></div></dialog><dialog id="tagsDialog" class="utilityDialog"><div class="dialogHead"><h2>追加の指定</h2><button type="button" class="quiet" data-close="tagsDialog">閉じる</button></div><div class="dialogBody"><div class="field"><label for="extra">追加の英語タグ</label><textarea id="extra" placeholder="例: cinematic light, detailed scenery"></textarea><div id="extraChips" class="chips" aria-label="追加した指定"></div></div><div class="field"><label for="customCharacter">簡易的に名前だけ追加（英語・任意）</label><input id="customCharacter" placeholder="例: Original Character"><p class="hint">衣装や外見まで設定する場合は、上の「オリジナル人物を追加」を使用してください。</p></div></div></dialog><dialog id="weightsDialog" class="utilityDialog"><div class="dialogHead"><h2>強調度</h2><button type="button" class="quiet" data-close="weightsDialog">閉じる</button></div><div class="dialogBody"><div class="detailBox" open=""><summary>選択中の項目の重み</summary><p class="small">1.0が通常です。上げるとその項目を強調します。使うモデルによって効き方は異なります。</p><div id="weightControls" class="weightList"></div><button id="resetAllWeights" class="secondary menuButton" type="button">すべての重みを1.0に戻す</button></div><div class="detailBox" open=""><summary>キャラ名の共通重み</summary><p class="small">個別に重みを指定していない人物に適用します。</p><div class="field"><label for="weight">キャラ名の重み <span id="weightValue">1.0</span></label><input type="range" id="weight" min="1" max="1.8" step="0.1" value="1.0"></div></div></div></dialog><dialog id="negativeDialog" class="utilityDialog"><div class="dialogHead"><h2>ネガティブ</h2><button type="button" class="quiet" data-close="negativeDialog">閉じる</button></div><div class="dialogBody"><div open=""><summary>ネガティブ項目を選ぶ</summary><div id="negativePresets" class="segments negativePresetBar" aria-label="ネガティブプリセット"><button type="button" data-negative-preset="standard">標準</button><button type="button" data-negative-preset="light">軽め</button><button type="button" data-negative-preset="custom">カスタム</button></div><div class="segments"><button id="negativeExpand" type="button">すべて展開</button><button id="negativeCollapse" type="button">すべて閉じる</button></div><div id="negativeChoices"></div><p class="hint">選択を変えたら「プロンプト生成」を押してください。直接編集した文章は生成時に置き換わります。</p></div></div></dialog><dialog id="layoutSettingsDialog" class="utilityDialog" aria-labelledby="layoutSettingsTitle"><div class="dialogHead"><h2 id="layoutSettingsTitle">選択画面の設定</h2><button type="button" class="quiet" data-close="layoutSettingsDialog">閉じる</button></div><div class="dialogBody"><p class="small">順序と表示を変更できます。非表示でも選択済みの設定は保持され、プロンプトに反映されます。変更は自動保存されます。</p><div id="selectionOrderList" aria-label="選択項目の表示順"></div><button id="resetSelectionOrder" class="secondary" type="button">順序・表示をデフォルトに戻す</button><p id="layoutSettingsStatus" class="small" role="status"></p></div></dialog><dialog id="orderDialog" class="utilityDialog"><div class="dialogHead"><h2>出力順</h2><button type="button" class="quiet" data-close="orderDialog">閉じる</button></div><div class="dialogBody"><div open=""><summary>プロンプトの順番を変更</summary><p class="small">優先したい項目を上に移動します。人物の設定は「キャラクター」に含まれます。</p><div id="order"></div><button id="resetOutputOrder" type="button" class="secondary menuButton">出力順をデフォルトに戻す</button></div></div></dialog><dialog id="libraryDialog" class="utilityDialog"><div class="dialogHead"><h2>保存・データ</h2><button type="button" class="quiet" data-close="libraryDialog">閉じる</button></div><div class="dialogBody"><div class="segments"><button data-library="favorites" type="button">お気に入り</button><button data-library="transfer" type="button">データ移動</button></div><div class="section" id="favoritesPane"><h2>お気に入り</h2><label for="favoriteName">保存名</label><input id="favoriteName" placeholder="例: 和服・桜・微笑み" maxlength="100"><button id="saveFavorite" style="margin-top:10px" type="button">名前を付けて保存</button><label for="favorites" style="margin-top:16px">保存した設定</label><select id="favorites"></select><div class="stack" style="margin-top:10px"><button id="loadFavorite" class="secondary" type="button">呼び出す</button><button id="deleteFavorite" class="secondary" type="button">削除</button></div></div><div class="section" id="transferPane"><h2>データの移動</h2><button id="exportAllExcel" type="button" style="width:100%;margin:8px 0">設定・全項目をExcelで書き出す</button><div class="stack"><button id="exportData" class="secondary" type="button">JSONバックアップ</button><button id="importData" class="secondary" type="button">JSONを読み込む</button></div><input id="backupFile" type="file" accept=".json,application/json" class="hidden"><div class="field"><label for="allImportCategory">Excel・CSVを取り込む／書き出す項目</label><select id="allImportCategory"></select><p class="hint">1列目＝日本語の表示名、2列目＝英語タグ、3列目＝グループ名（任意）。.xlsx・.csv・.tsvに対応します。</p><input id="allImportFile" type="file" accept=".xlsx,.csv,.tsv,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><button id="importAllExcel" class="secondary" type="button" style="width:100%;margin-top:10px">選択肢を追加</button><div class="stack" style="margin-top:8px"><button id="exportCategoryExcel" class="secondary" type="button">この項目をExcelで書き出す</button><button id="exportCategoryCsv" class="secondary" type="button">この項目をCSVで書き出す</button></div></div><p class="note">Excelには全項目の選択肢、現在の設定、生成済みプロンプト、お気に入り名を別シートで書き出します。Excelから選択肢を取り込む際は、項目ごとのファイルを使ってください。設定全体を復元する場合はJSONバックアップをご利用ください。</p><p id="storageStatus" class="status" role="status"></p></div></div></dialog><dialog id="mangaSceneDialog" class="utilityDialog"><div class="dialogHead"><h2 id="mangaSceneTitle">候補を選ぶ</h2><button type="button" class="quiet" data-close="mangaSceneDialog">閉じる</button></div><div class="dialogBody"><input id="mangaSceneSearch" type="search" placeholder="日本語・英語で検索" aria-label="候補を検索"><div id="mangaSceneList"></div></div></dialog><dialog id="mangaEditDialog" class="utilityDialog" aria-labelledby="mangaEditTitle"><div class="dialogHead"><h2 id="mangaEditTitle">コマを編集</h2><button type="button" class="quiet" data-close="mangaEditDialog">完了</button></div><div id="mangaEditTabs" role="tablist" aria-label="コマ編集の分類"><button id="mangaEditTab-scene" type="button" class="secondary" role="tab" data-manga-edit-group="scene"><span>場面</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-people" type="button" class="secondary" role="tab" data-manga-edit-group="people"><span>人物・生物</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-composition" type="button" class="secondary" role="tab" data-manga-edit-group="composition"><span>構図</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-effects" type="button" class="secondary" role="tab" data-manga-edit-group="effects"><span>演出</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-details" type="button" class="secondary" role="tab" data-manga-edit-group="details"><span>詳細</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button></div><div class="dialogBody"></div><div class="mangaEditNav"><button type="button" id="mangaEditPrev" class="secondary">← 前のコマ</button><button type="button" id="mangaEditNext" class="secondary">次のコマ →</button></div></dialog><dialog id="personOptionEditor" class="personOptionEditor" aria-labelledby="personOptionEditorTitle"><form id="personOptionEditForm"><h2 id="personOptionEditorTitle">人物の選択肢を編集</h2><label>日本語名<input id="personEditName" required></label><label>英語タグ<input id="personEditEnglish" required></label><label>分類（任意）<input id="personEditGroup"></label><p id="personEditError" class="small" role="alert"></p><div class="row"><button type="button" class="secondary" id="personOptionEditCancel">キャンセル</button><button type="submit">保存</button></div></form></dialog><dialog id="selectedOverviewDialog" aria-labelledby="selectedOverviewTitle"><div class="dialogHead"><h2 id="selectedOverviewTitle">選択一覧</h2><button type="button" class="quiet" id="selectedOverviewClose">閉じる</button></div><div class="overviewTools"><p class="overviewHint">強度を押すと 共通 → 強調 → 強く → 通常</p><label class="overviewShowAll"><input id="overviewShowAll" type="checkbox">未設定も表示</label></div><div id="selectedOverviewBody" class="reviewBody"></div><div class="overviewFoot"><button type="button" id="selectedOverviewDone">完了</button></div></dialog><dialog id="reviewDialog" aria-labelledby="reviewTitle"><div class="dialogHead"><h2 id="reviewTitle">生成前の設定確認</h2><button type="button" class="quiet" id="reviewClose">閉じる</button></div><div id="reviewBody" class="reviewBody"></div><div class="reviewActions"><button type="button" class="secondary" id="reviewChoices">選択を編集</button><button type="button" class="secondary" id="reviewPeople">人物を編集</button><button type="button" id="reviewGenerate">この設定で生成</button></div></dialog><footer class="actionBar"><button id="mobileGenerate" type="button">生成</button><button id="mobileCopy" class="secondary" type="button" aria-label="Positive Promptをコピー">＋ コピー</button><button id="mobileCopyNegative" class="secondary" type="button" aria-label="Negative Promptをコピー">− コピー</button><button id="mobileReset" class="secondary" type="button">リセット</button></footer><p id="status" class="status toast" role="status" aria-live="polite"></p><script>
+</div><div id="globalHairFilter" class="hairTendencyFilter" hidden><label for="globalHairTendency">スタイルの傾向</label><select id="globalHairTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span></div><div id="globalOutfitFilter" class="hairTendencyFilter" hidden><label for="globalOutfitTendency">スタイルの傾向</label><select id="globalOutfitTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span></div><div id="characterMatchCount" class="small" aria-live="polite" hidden></div><div id="choiceDialogChoices"></div><div class="field" id="choiceWeightBox"><label for="choiceWeight">この項目の強調度</label><select id="choiceWeight"></select></div><p class="small">選択済みはカードに表示され、×で解除できます。</p></dialog><dialog id="personChoiceDialog" aria-labelledby="personChoiceTitle"><div class="row"><h2 id="personChoiceTitle">人物の設定を選ぶ</h2><button id="personSortOpen" class="secondary" type="button" aria-expanded="false" aria-controls="personSortMenu">並び順 ▾</button><button id="personChoiceClose" class="secondary" type="button">閉じる</button></div><div id="personSortMenu" role="group" aria-label="並び順の選択" hidden></div><label for="personChoiceSearch">候補を検索</label><input id="personChoiceSearch" type="search" placeholder="日本語・英語で検索"><div id="personQuickTabs" class="quickTabs" role="group" aria-label="人物候補の表示"><button type="button" data-quick="all">すべて</button><button type="button" data-quick="selected">選択中</button><button type="button" data-quick="favorite" aria-label="お気に入り">★ お気に入り</button><button type="button" data-tendency="female" hidden>女性</button><button type="button" data-tendency="male" hidden>男性</button></div><div id="personChoiceFilters" class="personChoiceFilters" hidden><label>分類<select id="personChoiceGroup"><option value="">すべて</option></select></label><select id="personChoiceSort" hidden aria-label="並び順"><option value="original">登録順</option><option value="name">名前順</option><option value="group">分類順</option><option value="selected">選択中を先頭</option></select></div><div id="personHairFilter" class="hairTendencyFilter" hidden><label for="personHairTendency">スタイルの傾向</label><select id="personHairTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span><label for="personHairKind">種類<select id="personHairKind"><option value="">すべて</option><option value="basic">基本髪型</option><option value="feature">髪の特徴</option></select></label></div><div id="personOutfitFilter" class="hairTendencyFilter" hidden><label for="personOutfitTendency">スタイルの傾向</label><select id="personOutfitTendency"><option value="">すべて</option><option value="メンズ系">メンズ系</option><option value="レディース系">レディース系</option><option value="共通">共通</option></select><span>性別に関係なく選べます</span></div><div id="personChoiceCount" class="small" aria-live="polite" hidden></div><div id="personChoiceChoices"></div><p class="small">複数選択できます。選択中の内容は人物カードに表示されます。</p></dialog><dialog id="sceneChoiceDialog"><div class="row"><h3 id="sceneDialogTitle"></h3><button type="button" id="closeSceneDialog" class="secondary">完了</button></div><input id="sceneChoiceSearch" type="search" placeholder="日本語・英語で検索" aria-label="候補を検索"><div id="sceneChoiceList" class="sceneChoiceList"></div><button type="button" id="doneSceneDialog" class="secondary">選択を完了</button></dialog><dialog id="relationScreen" class="utilityDialog"><div class="dialogHead"><h2>人物の位置・関係</h2><button type="button" class="quiet" data-close="relationScreen">閉じる</button></div><div class="dialogBody"><div id="multiScene"><h2>複数人物の位置・関係・構図</h2><p class="small">各人物の位置は上の人物欄で設定できます。関係や構図は画像全体に適用します。</p><div class="sceneCards"><div class="sceneCard"><button type="button" id="openRelation">関係・動作　未設定</button><div id="relationChips" class="chips"></div><label for="relation" class="hidden">関係・動作</label><select id="relation"><option value="">指定なし</option><option value="friends">友人</option><option value="teammates">仲間</option><option value="rivals">ライバル</option><option value="siblings">兄弟・姉妹</option><option value="partners">パートナー</option><option value="facing each other">向かい合う</option><option value="back to back">背中合わせ</option><option value="holding hands">手をつなぐ</option><option value="talking to each other">会話する</option><option value="fighting side by side">共闘する</option></select></div><div class="sceneCard"><button type="button" id="openMultiComposition">複数人物の構図　未設定</button><div id="compositionChips" class="chips"></div><label for="multiComposition" class="hidden">複数人物の構図</label><select id="multiComposition"><option value="">指定なし</option><option value="side by side composition">横並び</option><option value="face to face composition">向かい合う構図</option><option value="one person in front, another behind">前後に並ぶ</option><option value="balanced group composition">均等に配置</option><option value="full-body group shot">全身の集合写真</option><option value="close-up two-shot">上半身のツーショット</option></select></div></div><div class="field"><label for="relationExtra">関係・構図の追加指定（英語）</label><input id="relationExtra" placeholder="例: the person on the left holds the other's hand"></div></div></div></dialog><dialog id="identityDialog" class="utilityDialog"><div class="dialogHead"><h2>人物の編集</h2><button type="button" class="quiet" data-close="identityDialog">閉じる</button></div><div class="dialogBody"><div id="identityContent"></div></div></dialog><dialog id="styleDialog" class="utilityDialog"><div class="dialogHead"><h2>線・色の表現</h2><button type="button" class="quiet" data-close="styleDialog">閉じる</button></div><div class="dialogBody"><div class="profileGrid"><div class="field"><label for="lineStyle">線の表現</label><select id="lineStyle"><option value="">指定なし</option><option value="clean lineart">くっきりした線画（従来の設定）</option><option value="bold outlines">太くはっきりした線</option><option value="soft lineart">柔らかい線</option><option value="thin lineart">細い線</option><option value="no lineart">線なし</option><option value="painterly rendering">塗り重視・線を控えめに</option></select></div><div class="field"><label for="colorStyle">色の表現</label><select id="colorStyle"><option value="">指定なし</option><option value="vibrant colors">鮮やかな色</option><option value="rich colors">深みのある色</option><option value="soft pastel colors">淡いパステルカラー</option><option value="high contrast colors">高コントラスト</option><option value="soft colors">柔らかい色合い</option><option value="pale colors">淡い色</option><option value="high saturation">高彩度</option><option value="low saturation">低彩度</option><option value="monochrome">白黒</option></select></div></div></div></dialog><dialog id="moodDialog" class="utilityDialog"><div class="dialogHead"><h2>雰囲気・演出</h2><button data-close="moodDialog" class="quiet">閉じる</button></div><div id="moodChoices" class="dialogBody"></div></dialog><dialog id="artDialog" class="utilityDialog"><div class="dialogHead"><h2>画風・タッチ</h2><button type="button" class="quiet" data-close="artDialog">閉じる</button></div><div class="dialogBody"><div id="artChoices"></div></div></dialog><dialog id="qualityDialog" class="utilityDialog"><div class="dialogHead"><h2>品質・ディテール</h2><button type="button" class="quiet" data-close="qualityDialog">閉じる</button></div><div class="dialogBody"><h3>品質</h3><div id="qualityLevel" class="segments"></div><h3>描き込み</h3><div id="detailLevel" class="segments"></div><h3>重点（複数可）</h3><div id="qualityFocus" class="segments wrap"></div></div></dialog><dialog id="tagsDialog" class="utilityDialog"><div class="dialogHead"><h2>追加の指定</h2><button type="button" class="quiet" data-close="tagsDialog">閉じる</button></div><div class="dialogBody"><div class="field"><label for="extra">追加の英語タグ</label><textarea id="extra" placeholder="例: cinematic light, detailed scenery"></textarea><div id="extraChips" class="chips" aria-label="追加した指定"></div></div><div class="field"><label for="customCharacter">簡易的に名前だけ追加（英語・任意）</label><input id="customCharacter" placeholder="例: Original Character"><p class="hint">衣装や外見まで設定する場合は、上の「オリジナル人物を追加」を使用してください。</p></div></div></dialog><dialog id="weightsDialog" class="utilityDialog"><div class="dialogHead"><h2>強調度</h2><button type="button" class="quiet" data-close="weightsDialog">閉じる</button></div><div class="dialogBody"><div class="detailBox" open=""><summary>選択中の項目の重み</summary><p class="small">1.0が通常です。上げるとその項目を強調します。使うモデルによって効き方は異なります。</p><div id="weightControls" class="weightList"></div><button id="resetAllWeights" class="secondary menuButton" type="button">すべての重みを1.0に戻す</button></div><div class="detailBox" open=""><summary>キャラ名の共通重み</summary><p class="small">個別に重みを指定していない人物に適用します。</p><div class="field"><label for="weight">キャラ名の重み <span id="weightValue">1.0</span></label><input type="range" id="weight" min="1" max="1.8" step="0.1" value="1.0"></div></div></div></dialog><dialog id="negativeDialog" class="utilityDialog"><div class="dialogHead"><h2>ネガティブ</h2><button type="button" class="quiet" data-close="negativeDialog">閉じる</button></div><div class="dialogBody"><div open=""><summary>ネガティブ項目を選ぶ</summary><div id="negativePresets" class="segments negativePresetBar" aria-label="ネガティブプリセット"><button type="button" data-negative-preset="standard">標準</button><button type="button" data-negative-preset="light">軽め</button><button type="button" data-negative-preset="custom">カスタム</button></div><div class="segments"><button id="negativeExpand" type="button">すべて展開</button><button id="negativeCollapse" type="button">すべて閉じる</button></div><div id="negativeChoices"></div><p class="hint">選択を変えたら「プロンプト生成」を押してください。直接編集した文章は生成時に置き換わります。</p></div></div></dialog><dialog id="layoutSettingsDialog" class="utilityDialog" aria-labelledby="layoutSettingsTitle"><div class="dialogHead"><h2 id="layoutSettingsTitle">選択画面の設定</h2><button type="button" class="quiet" data-close="layoutSettingsDialog">閉じる</button></div><div class="dialogBody"><p class="small">順序と表示を変更できます。非表示でも選択済みの設定は保持され、プロンプトに反映されます。変更は自動保存されます。</p><div id="selectionOrderList" aria-label="選択項目の表示順"></div><button id="resetSelectionOrder" class="secondary" type="button">順序・表示をデフォルトに戻す</button><p id="layoutSettingsStatus" class="small" role="status"></p></div></dialog><dialog id="orderDialog" class="utilityDialog"><div class="dialogHead"><h2>出力順</h2><button type="button" class="quiet" data-close="orderDialog">閉じる</button></div><div class="dialogBody"><div open=""><summary>プロンプトの順番を変更</summary><p class="small">優先したい項目を上に移動します。人物の設定は「キャラクター」に含まれます。</p><div id="order"></div><button id="resetOutputOrder" type="button" class="secondary menuButton">出力順をデフォルトに戻す</button></div></div></dialog><dialog id="libraryDialog" class="utilityDialog"><div class="dialogHead"><h2>保存・データ</h2><button type="button" class="quiet" data-close="libraryDialog">閉じる</button></div><div class="dialogBody"><div class="segments"><button data-library="favorites" type="button">お気に入り</button><button data-library="transfer" type="button">データ移動</button></div><div class="section" id="favoritesPane"><h2>お気に入り</h2><label for="favoriteName">保存名</label><input id="favoriteName" placeholder="例: 和服・桜・微笑み" maxlength="100"><button id="saveFavorite" style="margin-top:10px" type="button">名前を付けて保存</button><label for="favorites" style="margin-top:16px">保存した設定</label><select id="favorites"></select><div class="stack" style="margin-top:10px"><button id="loadFavorite" class="secondary" type="button">呼び出す</button><button id="deleteFavorite" class="secondary" type="button">削除</button></div></div><div class="section" id="transferPane"><h2>データの移動</h2><button id="exportAllExcel" type="button" style="width:100%;margin:8px 0">設定・全項目をExcelで書き出す</button><div class="stack"><button id="exportData" class="secondary" type="button">JSONバックアップ</button><button id="importData" class="secondary" type="button">JSONを読み込む</button></div><input id="backupFile" type="file" accept=".json,application/json" class="hidden"><div class="field"><label for="allImportCategory">Excel・CSVを取り込む／書き出す項目</label><select id="allImportCategory"></select><p class="hint">1列目＝日本語の表示名、2列目＝英語タグ、3列目＝グループ名（任意）。.xlsx・.csv・.tsvに対応します。</p><input id="allImportFile" type="file" accept=".xlsx,.csv,.tsv,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><button id="importAllExcel" class="secondary" type="button" style="width:100%;margin-top:10px">選択肢を追加</button><div class="stack" style="margin-top:8px"><button id="exportCategoryExcel" class="secondary" type="button">この項目をExcelで書き出す</button><button id="exportCategoryCsv" class="secondary" type="button">この項目をCSVで書き出す</button></div></div><p class="note">Excelには全項目の選択肢、現在の設定、生成済みプロンプト、お気に入り名を別シートで書き出します。Excelから選択肢を取り込む際は、項目ごとのファイルを使ってください。設定全体を復元する場合はJSONバックアップをご利用ください。</p><p id="storageStatus" class="status" role="status"></p></div></div></dialog><dialog id="mangaSceneDialog" class="utilityDialog"><div class="dialogHead"><h2 id="mangaSceneTitle">候補を選ぶ</h2><button type="button" class="quiet" data-close="mangaSceneDialog">閉じる</button></div><div class="dialogBody"><input id="mangaSceneSearch" type="search" placeholder="日本語・英語で検索" aria-label="候補を検索"><div id="mangaSceneList"></div></div></dialog><dialog id="mangaEditDialog" class="utilityDialog" aria-labelledby="mangaEditTitle"><div class="dialogHead"><h2 id="mangaEditTitle">コマを編集</h2><button type="button" class="quiet" data-close="mangaEditDialog">完了</button></div><div id="mangaEditTabs" role="tablist" aria-label="コマ編集の分類"><button id="mangaEditTab-scene" type="button" class="secondary" role="tab" data-manga-edit-group="scene"><span>場面</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-people" type="button" class="secondary" role="tab" data-manga-edit-group="people"><span>人物・生物</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-composition" type="button" class="secondary" role="tab" data-manga-edit-group="composition"><span>構図</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-effects" type="button" class="secondary" role="tab" data-manga-edit-group="effects"><span>演出</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button><button id="mangaEditTab-details" type="button" class="secondary" role="tab" data-manga-edit-group="details"><span>詳細</span><span class="mangaEditDot" aria-hidden="true" hidden></span></button></div><div class="dialogBody"></div><div class="mangaEditNav"><button type="button" id="mangaEditPrev" class="secondary">← 前のコマ</button><button type="button" id="mangaEditNext" class="secondary">次のコマ →</button></div></dialog><dialog id="personOptionEditor" class="personOptionEditor" aria-labelledby="personOptionEditorTitle"><form id="personOptionEditForm"><h2 id="personOptionEditorTitle">人物の選択肢を編集</h2><label>日本語名<input id="personEditName" required></label><label>英語タグ<input id="personEditEnglish" required></label><label>分類（任意）<input id="personEditGroup"></label><p id="personEditError" class="small" role="alert"></p><div class="row"><button type="button" class="secondary" id="personOptionEditCancel">キャンセル</button><button type="submit">保存</button></div></form></dialog><dialog id="selectedOverviewDialog" aria-labelledby="selectedOverviewTitle"><div class="dialogHead"><h2 id="selectedOverviewTitle">選択一覧</h2><button type="button" class="quiet" id="selectedOverviewClose">閉じる</button></div><div class="overviewTools"><p class="overviewHint">強度を押すと 共通 → 強調 → 強く → 通常</p><label class="overviewShowAll"><input id="overviewShowAll" type="checkbox">未設定も表示</label></div><div id="selectedOverviewBody" class="reviewBody"></div><div class="overviewFoot"><button type="button" id="selectedOverviewDone">完了</button></div></dialog><dialog id="reviewDialog" aria-labelledby="reviewTitle"><div class="dialogHead"><h2 id="reviewTitle">生成前の設定確認</h2><button type="button" class="quiet" id="reviewClose">閉じる</button></div><div id="reviewBody" class="reviewBody"></div><div class="reviewActions"><button type="button" class="secondary" id="reviewChoices">選択を編集</button><button type="button" class="secondary" id="reviewPeople">人物を編集</button><button type="button" id="reviewGenerate">この設定で生成</button></div></dialog><footer class="actionBar"><button id="mobileGenerate" type="button">生成</button><button id="mobileCopy" class="secondary" type="button" aria-label="Positive Promptをコピー">＋ コピー</button><button id="mobileCopyNegative" class="secondary" type="button" aria-label="Negative Promptをコピー">− コピー</button><button id="mobileReset" class="secondary" type="button">リセット</button></footer><p id="status" class="status toast" role="status" aria-live="polite"></p><script>/* Vendored from lz-string@1.5.0, libs/lz-string.js.
+MIT License
+
+Copyright (c) 2013 pieroxy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+// Copyright (c) 2013 Pieroxy <pieroxy@pieroxy.net>
+// This work is free. You can redistribute it and/or modify it
+// under the terms of the WTFPL, Version 2
+// For more information see LICENSE.txt or http://www.wtfpl.net/
+//
+// For more information, the home page:
+// http://pieroxy.net/blog/pages/lz-string/testing.html
+//
+// LZ-based compression algorithm, version 1.4.5
+var LZString = (function() {
+
+// private property
+var f = String.fromCharCode;
+var keyStrBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+var keyStrUriSafe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";
+var baseReverseDic = {};
+
+function getBaseValue(alphabet, character) {
+  if (!baseReverseDic[alphabet]) {
+    baseReverseDic[alphabet] = {};
+    for (var i=0 ; i<alphabet.length ; i++) {
+      baseReverseDic[alphabet][alphabet.charAt(i)] = i;
+    }
+  }
+  return baseReverseDic[alphabet][character];
+}
+
+var LZString = {
+  compressToBase64 : function (input) {
+    if (input == null) return "";
+    var res = LZString._compress(input, 6, function(a){return keyStrBase64.charAt(a);});
+    switch (res.length % 4) { // To produce valid Base64
+    default: // When could this happen ?
+    case 0 : return res;
+    case 1 : return res+"===";
+    case 2 : return res+"==";
+    case 3 : return res+"=";
+    }
+  },
+
+  decompressFromBase64 : function (input) {
+    if (input == null) return "";
+    if (input == "") return null;
+    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrBase64, input.charAt(index)); });
+  },
+
+  compressToUTF16 : function (input) {
+    if (input == null) return "";
+    return LZString._compress(input, 15, function(a){return f(a+32);}) + " ";
+  },
+
+  decompressFromUTF16: function (compressed) {
+    if (compressed == null) return "";
+    if (compressed == "") return null;
+    return LZString._decompress(compressed.length, 16384, function(index) { return compressed.charCodeAt(index) - 32; });
+  },
+
+  //compress into uint8array (UCS-2 big endian format)
+  compressToUint8Array: function (uncompressed) {
+    var compressed = LZString.compress(uncompressed);
+    var buf=new Uint8Array(compressed.length*2); // 2 bytes per character
+
+    for (var i=0, TotalLen=compressed.length; i<TotalLen; i++) {
+      var current_value = compressed.charCodeAt(i);
+      buf[i*2] = current_value >>> 8;
+      buf[i*2+1] = current_value % 256;
+    }
+    return buf;
+  },
+
+  //decompress from uint8array (UCS-2 big endian format)
+  decompressFromUint8Array:function (compressed) {
+    if (compressed===null || compressed===undefined){
+        return LZString.decompress(compressed);
+    } else {
+        var buf=new Array(compressed.length/2); // 2 bytes per character
+        for (var i=0, TotalLen=buf.length; i<TotalLen; i++) {
+          buf[i]=compressed[i*2]*256+compressed[i*2+1];
+        }
+
+        var result = [];
+        buf.forEach(function (c) {
+          result.push(f(c));
+        });
+        return LZString.decompress(result.join(''));
+
+    }
+
+  },
+
+
+  //compress into a string that is already URI encoded
+  compressToEncodedURIComponent: function (input) {
+    if (input == null) return "";
+    return LZString._compress(input, 6, function(a){return keyStrUriSafe.charAt(a);});
+  },
+
+  //decompress from an output of compressToEncodedURIComponent
+  decompressFromEncodedURIComponent:function (input) {
+    if (input == null) return "";
+    if (input == "") return null;
+    input = input.replace(/ /g, "+");
+    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrUriSafe, input.charAt(index)); });
+  },
+
+  compress: function (uncompressed) {
+    return LZString._compress(uncompressed, 16, function(a){return f(a);});
+  },
+  _compress: function (uncompressed, bitsPerChar, getCharFromInt) {
+    if (uncompressed == null) return "";
+    var i, value,
+        context_dictionary= {},
+        context_dictionaryToCreate= {},
+        context_c="",
+        context_wc="",
+        context_w="",
+        context_enlargeIn= 2, // Compensate for the first entry which should not count
+        context_dictSize= 3,
+        context_numBits= 2,
+        context_data=[],
+        context_data_val=0,
+        context_data_position=0,
+        ii;
+
+    for (ii = 0; ii < uncompressed.length; ii += 1) {
+      context_c = uncompressed.charAt(ii);
+      if (!Object.prototype.hasOwnProperty.call(context_dictionary,context_c)) {
+        context_dictionary[context_c] = context_dictSize++;
+        context_dictionaryToCreate[context_c] = true;
+      }
+
+      context_wc = context_w + context_c;
+      if (Object.prototype.hasOwnProperty.call(context_dictionary,context_wc)) {
+        context_w = context_wc;
+      } else {
+        if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+          if (context_w.charCodeAt(0)<256) {
+            for (i=0 ; i<context_numBits ; i++) {
+              context_data_val = (context_data_val << 1);
+              if (context_data_position == bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+            }
+            value = context_w.charCodeAt(0);
+            for (i=0 ; i<8 ; i++) {
+              context_data_val = (context_data_val << 1) | (value&1);
+              if (context_data_position == bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+              value = value >> 1;
+            }
+          } else {
+            value = 1;
+            for (i=0 ; i<context_numBits ; i++) {
+              context_data_val = (context_data_val << 1) | value;
+              if (context_data_position ==bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+              value = 0;
+            }
+            value = context_w.charCodeAt(0);
+            for (i=0 ; i<16 ; i++) {
+              context_data_val = (context_data_val << 1) | (value&1);
+              if (context_data_position == bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+              value = value >> 1;
+            }
+          }
+          context_enlargeIn--;
+          if (context_enlargeIn == 0) {
+            context_enlargeIn = Math.pow(2, context_numBits);
+            context_numBits++;
+          }
+          delete context_dictionaryToCreate[context_w];
+        } else {
+          value = context_dictionary[context_w];
+          for (i=0 ; i<context_numBits ; i++) {
+            context_data_val = (context_data_val << 1) | (value&1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = value >> 1;
+          }
+
+
+        }
+        context_enlargeIn--;
+        if (context_enlargeIn == 0) {
+          context_enlargeIn = Math.pow(2, context_numBits);
+          context_numBits++;
+        }
+        // Add wc to the dictionary.
+        context_dictionary[context_wc] = context_dictSize++;
+        context_w = String(context_c);
+      }
+    }
+
+    // Output the code for w.
+    if (context_w !== "") {
+      if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+        if (context_w.charCodeAt(0)<256) {
+          for (i=0 ; i<context_numBits ; i++) {
+            context_data_val = (context_data_val << 1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+          }
+          value = context_w.charCodeAt(0);
+          for (i=0 ; i<8 ; i++) {
+            context_data_val = (context_data_val << 1) | (value&1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = value >> 1;
+          }
+        } else {
+          value = 1;
+          for (i=0 ; i<context_numBits ; i++) {
+            context_data_val = (context_data_val << 1) | value;
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = 0;
+          }
+          value = context_w.charCodeAt(0);
+          for (i=0 ; i<16 ; i++) {
+            context_data_val = (context_data_val << 1) | (value&1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = value >> 1;
+          }
+        }
+        context_enlargeIn--;
+        if (context_enlargeIn == 0) {
+          context_enlargeIn = Math.pow(2, context_numBits);
+          context_numBits++;
+        }
+        delete context_dictionaryToCreate[context_w];
+      } else {
+        value = context_dictionary[context_w];
+        for (i=0 ; i<context_numBits ; i++) {
+          context_data_val = (context_data_val << 1) | (value&1);
+          if (context_data_position == bitsPerChar-1) {
+            context_data_position = 0;
+            context_data.push(getCharFromInt(context_data_val));
+            context_data_val = 0;
+          } else {
+            context_data_position++;
+          }
+          value = value >> 1;
+        }
+
+
+      }
+      context_enlargeIn--;
+      if (context_enlargeIn == 0) {
+        context_enlargeIn = Math.pow(2, context_numBits);
+        context_numBits++;
+      }
+    }
+
+    // Mark the end of the stream
+    value = 2;
+    for (i=0 ; i<context_numBits ; i++) {
+      context_data_val = (context_data_val << 1) | (value&1);
+      if (context_data_position == bitsPerChar-1) {
+        context_data_position = 0;
+        context_data.push(getCharFromInt(context_data_val));
+        context_data_val = 0;
+      } else {
+        context_data_position++;
+      }
+      value = value >> 1;
+    }
+
+    // Flush the last char
+    while (true) {
+      context_data_val = (context_data_val << 1);
+      if (context_data_position == bitsPerChar-1) {
+        context_data.push(getCharFromInt(context_data_val));
+        break;
+      }
+      else context_data_position++;
+    }
+    return context_data.join('');
+  },
+
+  decompress: function (compressed) {
+    if (compressed == null) return "";
+    if (compressed == "") return null;
+    return LZString._decompress(compressed.length, 32768, function(index) { return compressed.charCodeAt(index); });
+  },
+
+  _decompress: function (length, resetValue, getNextValue) {
+    var dictionary = [],
+        next,
+        enlargeIn = 4,
+        dictSize = 4,
+        numBits = 3,
+        entry = "",
+        result = [],
+        i,
+        w,
+        bits, resb, maxpower, power,
+        c,
+        data = {val:getNextValue(0), position:resetValue, index:1};
+
+    for (i = 0; i < 3; i += 1) {
+      dictionary[i] = i;
+    }
+
+    bits = 0;
+    maxpower = Math.pow(2,2);
+    power=1;
+    while (power!=maxpower) {
+      resb = data.val & data.position;
+      data.position >>= 1;
+      if (data.position == 0) {
+        data.position = resetValue;
+        data.val = getNextValue(data.index++);
+      }
+      bits |= (resb>0 ? 1 : 0) * power;
+      power <<= 1;
+    }
+
+    switch (next = bits) {
+      case 0:
+          bits = 0;
+          maxpower = Math.pow(2,8);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+        c = f(bits);
+        break;
+      case 1:
+          bits = 0;
+          maxpower = Math.pow(2,16);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+        c = f(bits);
+        break;
+      case 2:
+        return "";
+    }
+    dictionary[3] = c;
+    w = c;
+    result.push(c);
+    while (true) {
+      if (data.index > length) {
+        return "";
+      }
+
+      bits = 0;
+      maxpower = Math.pow(2,numBits);
+      power=1;
+      while (power!=maxpower) {
+        resb = data.val & data.position;
+        data.position >>= 1;
+        if (data.position == 0) {
+          data.position = resetValue;
+          data.val = getNextValue(data.index++);
+        }
+        bits |= (resb>0 ? 1 : 0) * power;
+        power <<= 1;
+      }
+
+      switch (c = bits) {
+        case 0:
+          bits = 0;
+          maxpower = Math.pow(2,8);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+
+          dictionary[dictSize++] = f(bits);
+          c = dictSize-1;
+          enlargeIn--;
+          break;
+        case 1:
+          bits = 0;
+          maxpower = Math.pow(2,16);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+          dictionary[dictSize++] = f(bits);
+          c = dictSize-1;
+          enlargeIn--;
+          break;
+        case 2:
+          return result.join('');
+      }
+
+      if (enlargeIn == 0) {
+        enlargeIn = Math.pow(2, numBits);
+        numBits++;
+      }
+
+      if (dictionary[c]) {
+        entry = dictionary[c];
+      } else {
+        if (c === dictSize) {
+          entry = w + w.charAt(0);
+        } else {
+          return null;
+        }
+      }
+      result.push(entry);
+
+      // Add w+entry[0] to the dictionary.
+      dictionary[dictSize++] = w + entry.charAt(0);
+      enlargeIn--;
+
+      w = entry;
+
+      if (enlargeIn == 0) {
+        enlargeIn = Math.pow(2, numBits);
+        numBits++;
+      }
+
+    }
+  }
+};
+  return LZString;
+})();
+
+if (typeof define === 'function' && define.amd) {
+  define(function () { return LZString; });
+} else if( typeof module !== 'undefined' && module != null ) {
+  module.exports = LZString
+} else if( typeof angular !== 'undefined' && angular != null ) {
+  angular.module('LZString', [])
+  .factory('LZString', function () {
+    return LZString;
+  });
+}
+
+// Recovery snapshots are temporary duplicates of the saved settings/history.
+// Compress only this journal: primary keys, backup JSON and recovery semantics
+// retain their existing formats. The codec is vendored lz-string 1.5.0 (MIT).
+function afEncodeJournal(journal){
+ const text=JSON.stringify(journal);
+ const packed=JSON.stringify({encoding:'seaart-journal-lz16-v1',characters:text.length,checksum:afHash(text),payload:LZString.compressToUTF16(text)});
+ return packed.length<text.length?packed:text;
+}
+function afDecodeJournal(value){
+ if(!afObject(value)||!Object.hasOwn(value,'encoding'))return value;
+ afAssert(value.encoding==='seaart-journal-lz16-v1'&&Number.isSafeInteger(value.characters)&&value.characters>0&&typeof value.checksum==='string'&&typeof value.payload==='string','復旧情報の圧縮形式が不正です');
+ const text=LZString.decompressFromUTF16(value.payload);
+ afAssert(typeof text==='string'&&text.length===value.characters&&afHash(text)===value.checksum,'復旧情報の完全性を確認できません');
+ return JSON.parse(text);
+}
+
+
 // Separate presentation preference does not alter working/save/export schemas.
 const legacyVisibilityKey='seaart-show-legacy-candidates-v1';
 let showLegacyCandidates=false;try{showLegacyCandidates=localStorage.getItem(legacyVisibilityKey)==='true'}catch{}
@@ -1637,7 +2183,7 @@ function afCheckBundle(bundle,namespace=actorFormStorageNamespace){
 function afReadBundleAt(keys){const marker=localStorage.getItem(keys.marker);if(!marker)return null;return afCheckBundle({marker:JSON.parse(marker),...Object.fromEntries(['settings','working','history'].map(k=>[k,localStorage.getItem(keys[k])]))},keys===actorFormStorageKeys?actorFormStorageNamespace:keys===actorFormMotifStorageKeys?actorFormMotifNamespace:keys===actorFormResultAccessStorageKeys?actorFormResultAccessNamespace:null)}
 function afReadDiskBundle(){return afReadBundleAt(actorFormStorageKeys)}
 function afBundleStartup(bundle,migrating=false){const settings=JSON.parse(bundle.settings);hLoadBundle(settings,JSON.parse(bundle.working).working);raStartup(settings,JSON.parse(bundle.working).working,JSON.parse(bundle.history).entries);settings.favorites=settings.favorites.map(w=>caNormalizeWorking(w,settings));actorFormCatalog=afValidateFormCatalog(settings.actorFormCatalog);const work=JSON.parse(bundle.working);work.working=caNormalizeWorking(work.working,settings);const history=JSON.parse(bundle.history).entries.map(h=>({...h,...(h.working?{working:caNormalizeWorking(h.working,settings)}:{})}));if(!migrating){actorFormLastBundle=bundle;actorFormStorageReady=true}return {settings,working:work,history,migrating}}
-function afJournal(value){afAssert(afObject(value)&&value.version===2&&value.namespace===actorFormStorageNamespace&&['pending','committed'].includes(value.phase)&&typeof value.transactionId==='string','復旧情報が不正です');afCheckBundle(value.next);afAssert(value.transactionId===value.next.marker.revision,'復旧transactionの識別子が一致しません');if(value.previous!==null){afCheckBundle(value.previous);afAssert(value.previous.marker.revision!==value.next.marker.revision)}return value}
+function afJournal(value){value=afDecodeJournal(value);afAssert(afObject(value)&&value.version===2&&value.namespace===actorFormStorageNamespace&&['pending','committed'].includes(value.phase)&&typeof value.transactionId==='string','復旧情報が不正です');afCheckBundle(value.next);afAssert(value.transactionId===value.next.marker.revision,'復旧transactionの識別子が一致しません');if(value.previous!==null){afCheckBundle(value.previous);afAssert(value.previous.marker.revision!==value.next.marker.revision)}return value}
 function afWriteBundle(bundle){for(const k of ['settings','working','history'])localStorage.setItem(actorFormStorageKeys[k],bundle[k]);localStorage.setItem(actorFormStorageKeys.marker,JSON.stringify(bundle.marker));afAssert(JSON.stringify(afReadDiskBundle())===JSON.stringify(bundle),'復旧の再読込検証に失敗しました')}
 function afReadMigrationBundle(keys,previousGeneration,namespace=null){
  if(!Object.values(keys).some(k=>localStorage.getItem(k)!==null))return null;
@@ -1674,11 +2220,11 @@ function afCommitBundle(settings,working,history){
  const revision=crypto.randomUUID(),bundle={marker:{version:1,storageNamespace:actorFormStorageNamespace,revision,hashes:{}}};for(const [key,value]of Object.entries({settings,working:{version:2,working},history:{version:2,entries:history}})){bundle[key]=JSON.stringify({...value,revision});bundle.marker.hashes[key]=afHash(bundle[key])}afCheckBundle(bundle);
  const previous=actorFormLastBundle,rawBefore=Object.fromEntries(Object.entries(actorFormStorageKeys).map(([k,key])=>[k,localStorage.getItem(key)])),disk=afReadDiskBundle();afAssert((disk?.marker.revision||null)===(previous?.marker.revision||null),'別の画面で保存が更新されました。再読み込みしてから編集してください');if(rawBefore.journal){const old=afJournal(JSON.parse(rawBefore.journal));afAssert(old.phase==='committed'&&old.next.marker.revision===previous?.marker.revision,'別の保存処理が進行中です')}
  if(previous&&['settings','working','history'].every(k=>{const old=JSON.parse(previous[k]),next=JSON.parse(bundle[k]);delete old.revision;delete next.revision;return JSON.stringify(old)===JSON.stringify(next)})){actorExtensions=afCopy(working.actorExtensions);return true}
- const journal={version:2,namespace:actorFormStorageNamespace,transactionId:revision,phase:'pending',previous,next:bundle},journalText=JSON.stringify(journal);let owns=false,committedText='',markerWritten=false;
+ const journal={version:2,namespace:actorFormStorageNamespace,transactionId:revision,phase:'pending',previous,next:bundle},journalText=afEncodeJournal(journal);let owns=false,committedText='',markerWritten=false;
  const checkOwner=()=>{afAssert(localStorage.getItem(actorFormStorageKeys.journal)===(committedText||journalText),'保存処理が競合しました');afAssert(localStorage.getItem(actorFormStorageKeys.marker)===(markerWritten?JSON.stringify(bundle.marker):rawBefore.marker),'別の画面で保存が更新されました')};
  actorFormCommitActive=true;try{localStorage.setItem(actorFormStorageKeys.journal,journalText);owns=true;checkOwner();for(const key of ['settings','working','history']){checkOwner();localStorage.setItem(actorFormStorageKeys[key],bundle[key])}for(const key of ['settings','working','history'])afAssert(localStorage.getItem(actorFormStorageKeys[key])===bundle[key],'保存の再読込検証に失敗しました');checkOwner();localStorage.setItem(actorFormStorageKeys.marker,JSON.stringify(bundle.marker));markerWritten=true;checkOwner();afAssert(JSON.stringify(afReadDiskBundle())===JSON.stringify(bundle),'保存確定の検証に失敗しました');
   // Always refresh the journal, including working, favorites and history extension v2/v3/v4.
-  journal.phase='committed';committedText=JSON.stringify(journal);localStorage.setItem(actorFormStorageKeys.journal,committedText);checkOwner();afJournal(JSON.parse(committedText));actorFormLastBundle=bundle;actorFormStorageReady=true;actorFormStorageError='';actorExtensions=afCopy(working.actorExtensions);resultAccessHistoryIndex=accessIndex;try{localStorage.removeItem(actorFormStorageKeys.journal)}catch{}return true;
+  journal.phase='committed';committedText=afEncodeJournal(journal);localStorage.setItem(actorFormStorageKeys.journal,committedText);checkOwner();afJournal(JSON.parse(committedText));actorFormLastBundle=bundle;actorFormStorageReady=true;actorFormStorageError='';actorExtensions=afCopy(working.actorExtensions);resultAccessHistoryIndex=accessIndex;try{localStorage.removeItem(actorFormStorageKeys.journal)}catch{}return true;
  }catch(error){actorFormStorageError=afStorageMessage(error);const raw=localStorage.getItem(actorFormStorageKeys.journal);if(owns&&(raw===journalText||raw===committedText)&&[rawBefore.marker,JSON.stringify(bundle.marker)].includes(localStorage.getItem(actorFormStorageKeys.marker))){try{for(const k of ['settings','working','history','marker','journal']){if(localStorage.getItem(actorFormStorageKeys[k])===rawBefore[k])continue;if(rawBefore[k]===null)localStorage.removeItem(actorFormStorageKeys[k]);else localStorage.setItem(actorFormStorageKeys[k],rawBefore[k])}}catch{actorFormStorageError+='。保存は停止中です。再読み込みしてください';actorFormStartup.blocked=true}}
   actorFormStorageReady=!!previous;if(!previous)actorFormStartup.blocked=true;throw error;
  }finally{actorFormCommitActive=false}
