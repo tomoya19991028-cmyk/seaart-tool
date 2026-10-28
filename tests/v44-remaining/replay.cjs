@@ -26,7 +26,7 @@ Module.prototype._compile=function(s,file){
  if(file.endsWith('/unified-ui/pwa.cjs')){
     s=one(s,"return hCanonical({working:captureWorking(),workspace:horrorWorkspace})", "const x={working:captureWorking(),workspace:horrorWorkspace};const fill=s=>{for(const k of ['soundEffect','reactionEffect']){if(s[k]===undefined)s[k]=[];}};fill(x.working.adultScene);for(const k of ['soundEffectText','reactionEffectText'])if(x.working.adultScene[k]===undefined)x.working.adultScene[k]='';for(const e of Object.values(x.working.actorExtensions.byActor))for(const mode of ['semi','full'])if(e.adult?.byMode?.[mode]?.scene)fill(e.adult.byMode[mode].scene);return hCanonical(x)");
  }
- const cache='seaart-tool-pwa-v44-audit-v1-http-cache-v1:/';
+ const cache='seaart-tool-pwa-background-effects-v1-http-cache-v1:/';
  if(['/card-tags/pwa.cjs','/normal-first/pwa.cjs','/unified-ui/pwa.cjs'].some(v=>file.endsWith(v)))s=s.replaceAll('seaart-tool-pwa-v5-tg-yugioh-phase1-v1-http-cache-v1',cache);
  if(file.endsWith('/creature-motif-person-pwa.cjs')){
   s=s.replaceAll('/workspace/seaart-r1-save-worktree',path.join(assets,'seaart-r1-save-worktree'));

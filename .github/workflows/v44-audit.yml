@@ -10,6 +10,8 @@ on:
       - 'tests/v44-audit/**'
       - 'tests/weapon-actions/**'
       - 'tests/storage/**'
+      - 'tests/background-effects/**'
+      - 'docs/background-effects/**'
       - 'docs/weapon-actions/**'
       - 'tests/v44-remaining/**'
       - 'tests/horror/**'
@@ -95,8 +97,32 @@ jobs:
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 14
+  background-effects:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:background-effects
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: background-effects-evidence
+          path: .audit-tmp/
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
+
   android-artifact:
-    needs: [audit, remaining, stability]
+    needs: [audit, remaining, stability, background-effects]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -104,10 +130,10 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
       - run: python3 scripts/build-current.py --check
-      - run: python3 scripts/package-android-check.py .audit-tmp/Android
+      - run: python3 scripts/package-android-check.py .audit-tmp/Android --profile background-effects
       - uses: actions/upload-artifact@v4
         with:
-          name: SeaArt-Weapon-Actions-Android-Check
+          name: SeaArt-Background-ScreenEffects-Android-Check
           path: .audit-tmp/Android/
           include-hidden-files: true
           if-no-files-found: error

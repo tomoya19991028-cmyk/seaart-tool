@@ -1,5 +1,5 @@
 const APP_SCOPE = new URL('./', self.registration.scope);
-const CACHE_NAME = 'seaart-tool-pwa-v44-audit-v1-http-cache-v1:' + APP_SCOPE.pathname;
+const CACHE_NAME = 'seaart-tool-pwa-background-effects-v1-http-cache-v1:' + APP_SCOPE.pathname;
 const isAppURL = url => url.origin === APP_SCOPE.origin && url.pathname.startsWith(APP_SCOPE.pathname);
 const APP_SHELL = [
   './',

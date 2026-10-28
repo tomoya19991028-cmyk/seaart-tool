@@ -11,7 +11,11 @@
       "baselineScript": 0,
       "prependSources": [
         "src/vendor/lz-string-1.5.0.js",
-        "src/current/storage-journal.js"
+        "src/current/storage-journal.js",
+        "src/current/environment-design-state.js",
+        "src/current/environment-design-output.js",
+        "src/current/environment-design-presets.js",
+        "src/current/environment-design-ui.js"
       ]
     },
     {

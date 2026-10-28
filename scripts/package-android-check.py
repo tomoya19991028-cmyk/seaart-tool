@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Create a review artifact only. No deploy, storage access, or product rewriting."""
 from pathlib import Path
-import hashlib,json,subprocess,sys,zipfile
+import argparse,hashlib,json,subprocess,sys,zipfile
 root=Path(__file__).resolve().parents[1]
-out=Path(sys.argv[1]).resolve();assert not out.exists(),'Use a fresh artifact directory';out.mkdir(parents=True)
+parser=argparse.ArgumentParser();parser.add_argument('output');parser.add_argument('--profile',choices=['weapons','background-effects'],default='weapons');args=parser.parse_args();background=args.profile=='background-effects'
+out=Path(args.output).resolve();assert not out.exists(),'Use a fresh artifact directory';out.mkdir(parents=True)
 commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root).decode().strip()
-source=root/'index.html';html=source.read_bytes();name='SeaArt_Weapon_Actions_Android_Check.html';(out/name).write_bytes(html)
+source=root/'index.html';html=source.read_bytes();name='SeaArt_Background_ScreenEffects_Android_Check.html' if background else 'SeaArt_Weapon_Actions_Android_Check.html';(out/name).write_bytes(html)
 files=['index.html','sw.js','manifest.json','icon-192.png','icon-512.png','icon-maskable-512.png']
 manifest={'sourceCommit':commit,'androidHTML':{'filename':name,'bytes':len(html),'sha256':hashlib.sha256(html).hexdigest()},'assets':{n:{'bytes':(root/n).stat().st_size,'sha256':hashlib.sha256((root/n).read_bytes()).hexdigest()}for n in files},'AndroidTested':False,'published':False}
 (out/'SHA256.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
@@ -24,10 +25,11 @@ GitHub PWA・Sites・ダウンロードHTML・簡易漫画UIのデータは自�
 
 短い確認表は同梱のAndroid確認.mdを参照。Android実機・実IME・SeaArt/PixAIの実画像は未確認です。
 '''
+if background:readme=readme.replace('武器・装備・動作','背景・風景・画面エフェクト').replace('SeaArt_Weapon_Actions_Android_Check.html',name).replace('新しい構造化ポーズ付き人型Creatureのデータ','背景・画面効果の新形式データ')
 (out/'README.txt').write_text(readme)
-check=root/'docs/weapon-actions/ANDROID_CHECK.md'
+check=root/('docs/background-effects/ANDROID_CHECK.md' if background else 'docs/weapon-actions/ANDROID_CHECK.md')
 (out/'Android確認.md').write_bytes(check.read_bytes())
-with zipfile.ZipFile(out/'SeaArt_Weapon_Actions_Android_Check_PWA_assets.zip','w',compression=zipfile.ZIP_DEFLATED)as z:
+with zipfile.ZipFile(out/(name.removesuffix('.html')+'_PWA_assets.zip'),'w',compression=zipfile.ZIP_DEFLATED)as z:
  for n in [name,'README.txt','SHA256.json','Android確認.md']:z.write(out/n,n)
  for n in files:z.write(root/n,'PWA_assets/'+n)
 assert (out/name).read_bytes()==source.read_bytes()
