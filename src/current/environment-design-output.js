@@ -17,17 +17,17 @@ function bdPlan(panel=null){
  const flat=[];for(const ref of effective.background.selected){const row=bdResolveRef(ref);if(!row){warnings.push((ref.name||'背景候補')+'は参照先が見つかりません');continue}if(layerIds.has(row.id)){warnings.push('共通背景「'+row.name+'」と層の指定が重複しています。層の指定を優先して出力します');continue}flat.push(weighted(({sparse:'sparse ',normal:'',dense:'dense '}[ref.density]||'')+row.value,'background'))}
  background.unshift(...flat,...(effective.background.text||[]));
  const landscapeOnly=effective.view==='landscape-only',composition=[],effects=[],ownedComposition=new Set(),ownedColors=new Set(),existingFlow=selected.composition.includes('composition-67')&&item('composition','composition-67')?.value==='sharp face, directional motion blur in the background';
- for(const d of bdEffectDefs)if(d.alias?.startsWith('color:'))for(const value of bdPaletteAliases[d.alias.slice(6)]||[])ownedColors.add(value);
+ for(const value of bdOwnedColorValues())ownedColors.add(value);
  for(const [id,setting]of Object.entries(effective.effects)){
   const def=bdEffectDef(id),row=bdEffectRow(id);if(!row){warnings.push((setting.name||'保存済みの画面効果')+'の参照先が見つかりません');continue}
   const alias=!setting.standalone&&def?.alias&&row.value===def.value&&(!def.alias.startsWith('composition:')||item('composition',def.alias.slice(12))?.value===def.value)?def.alias:null;
   if(alias?.startsWith('composition:'))ownedComposition.add(alias.slice(12));
   // A legacy compound retains its full text. Do not add another flow effect.
-  if(id==='screen-background-flow'&&existingFlow&&!landscapeOnly&&!setting.replaceCompound){continue}
+  if(id==='screen-background-flow'&&bdStockEffect(id)&&existingFlow&&!landscapeOnly&&!setting.replaceCompound){continue}
   if(alias?.startsWith('color:')&&!panel){continue}
   const text=bdEffectPhrase(id,setting);if(text)effects.push(explicitWeight(text,setting.weight??(alias?.startsWith('composition:')?globalTagWeight('composition',def.value):1)));
  }
- for(const id of selected.composition){const row=item('composition',id);if(!row)continue;if(ownedComposition.has(id))continue;if((effective.view||panel?.environmentOverrides?.view?.mode==='off')&&id==='composition-44'&&row.value==='environment-focused composition')continue;if(id==='composition-67'&&existingFlow&&(effective.effects['screen-background-flow']?.replaceCompound||(panel&&effective.effectsMode==='off'))){warnings.push('旧複合構図「顔は鮮明・背景に流れ」は保持し、この出力では使用しません');continue}if(panel&&id==='composition-21'&&row.value==='shallow depth of field'&&(effective.effectsMode==='off'||effective.effectsMode==='custom'))continue;if(landscapeOnly&&bdCompositionNeedsSubject(row)){warnings.push('人物用の構図「'+row.name+'」は風景のみでは出力しません');continue}composition.push(weighted(row.value,'composition'))}
+ for(const id of selected.composition){const row=item('composition',id);if(!row)continue;if(ownedComposition.has(id))continue;if((effective.view||panel?.environmentOverrides?.view?.mode==='off')&&id==='composition-44'&&row.value==='environment-focused composition')continue;if(id==='composition-67'&&existingFlow&&(effective.effects['screen-background-flow']?.replaceCompound||(panel&&effective.effectsMode==='off'))){warnings.push('旧複合構図「顔は鮮明・背景に流れ」は保持し、この出力では使用しません');continue}if(panel&&id==='composition-21'&&bdStockEffect('screen-background-blur')&&row.value==='shallow depth of field'&&(effective.effectsMode==='off'||effective.effectsMode==='custom'))continue;if(landscapeOnly&&bdCompositionNeedsSubject(row)){warnings.push('人物用の構図「'+row.name+'」は風景のみでは出力しません');continue}composition.push(weighted(row.value,'composition'))}
  if(effective.view)composition.push(explicitWeight([environmentDesign?.viewColor,bdViewTags[effective.view]].filter(Boolean).join(' '),environmentDesign?.viewWeight??(effective.view==='landscape'&&selected.composition.includes('composition-44')?globalTagWeight('composition','environment-focused composition'):1)));
  const channel=field=>(effective.background[field]||bdChannelRefs(field)).map(r=>bdResolveChannel(field,r)).filter(r=>{if(!r)warnings.push('コマの環境候補に参照先が見つからないものがあります');return !!r});
  const weather=channel('weather'),time=channel('time'),lighting=[];
@@ -62,7 +62,7 @@ function bdGenerateManga(){
  renderManga();const panels=mangaState.panels.slice(0,mangaState.count),plans=panels.map(bdPlan),people=mangaPeople(),creatureActors=mangaCreatures(),drawing=mangaDrawingSettings(),present=panels.map((p,i)=>plans[i].landscapeOnly?[]:subjectActors({panel:p,panelIndex:i,adult:!!mangaState.storyAdult,scopedActions:true,compactRelations:true}));
  const visiblePeople=new Set(present.flat().filter(a=>a.kind==='character').map(a=>a.id)),visibleCreatures=new Set(present.flat().filter(a=>a.kind==='creature').map(a=>a.id)),pagePeople=people.filter(p=>visiblePeople.has(p.id)),pageCreatures=creatureActors.filter(c=>visibleCreatures.has(c.id));
  const identities=new Map(pagePeople.map(p=>{const index=people.findIndex(a=>a.id===p.id),tags=profileTags(profiles[p.id]||{},{subjects:false,poses:false,expressions:false,placement:false,damage:false});return [p.id,`Character ${String.fromCharCode(65+index)}: ${p.tag}`+(tags.length?', '+tags.join(', '):'')]}));
- const commonDrawing=drawing.tags.filter(t=>!bdEffectDefs.some(d=>d.alias?.startsWith('color:')&&(bdPaletteAliases[d.alias.slice(6)]||[]).includes(t))),sceneParts=[],perPanel=[];
+ const sharedColorValues=new Set(bdOwnedColorValues()),commonDrawing=drawing.tags.filter(t=>!sharedColorValues.has(t)),sceneParts=[],perPanel=[];
  for(let i=0;i<panels.length;i++){
   const panel=panels[i],plan=plans[i],actors=present[i],ctx={panel,panelIndex:i,adult:!!mangaState.storyAdult,scopedActions:true,compactRelations:true},ps=people.filter(p=>actors.some(a=>a.kind==='character'&&a.id===p.id)),cs=creatureActors.filter(c=>actors.some(a=>a.kind==='creature'&&a.id===c.id));
   hMangaPanelContext(panel);
