@@ -20,7 +20,7 @@ function bdPlan(panel=null){
  for(const value of bdOwnedColorValues())ownedColors.add(value);
  for(const [id,setting]of Object.entries(effective.effects)){
   const def=bdEffectDef(id),row=bdEffectRow(id);if(!row){warnings.push((setting.name||'保存済みの画面効果')+'の参照先が見つかりません');continue}
-  const alias=!setting.standalone&&def?.alias&&row.value===def.value&&(!def.alias.startsWith('composition:')||item('composition',def.alias.slice(12))?.value===def.value)?def.alias:null;
+  const alias=def?.alias&&(!setting.standalone||def.alias.startsWith('composition:')||bdAliasActive(def))&&row.value===def.value&&(!def.alias.startsWith('composition:')||item('composition',def.alias.slice(12))?.value===def.value)?def.alias:null;
   if(alias?.startsWith('composition:'))ownedComposition.add(alias.slice(12));
   // A legacy compound retains its full text. Do not add another flow effect.
   if(id==='screen-background-flow'&&bdStockEffect(id)&&existingFlow&&!landscapeOnly&&!setting.replaceCompound){continue}

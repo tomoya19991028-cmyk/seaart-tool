@@ -16,7 +16,7 @@ function bdLegacyToggle(row,on){if(row.field!=='composition')return false;if(row
 
 function bdWriteEffects(effects){
  const wanted=bdCopy(effects),blur=bdEffectDef('screen-background-blur'),blurRow=item('composition','composition-21');
- if(blurRow?.value===blur.value&&bdStockEffect(blur.id)){selected.composition=selected.composition.filter(id=>id!=='composition-21');if(wanted[blur.id])selected.composition.push('composition-21')}else if(wanted[blur.id])wanted[blur.id].standalone=true;
+ if(blurRow?.value===blur.value&&bdStockEffect(blur.id)){selected.composition=selected.composition.filter(id=>id!=='composition-21');if(wanted[blur.id]){delete wanted[blur.id].standalone;selected.composition.push('composition-21')}}else if(wanted[blur.id])wanted[blur.id].standalone=true;
  const palettes=bdEffectDefs.filter(d=>d.alias?.startsWith('color:')&&bdStockEffect(d.id)),colors=palettes.some(d=>wanted[d.id])?Object.values(bdPaletteAliases).flat():bdOwnedColorValues();if(colors.includes($('colorStyle').value))$('colorStyle').value='';renderingExpressions=renderingExpressions.filter(v=>!colors.includes(v));
  for(const def of bdEffectDefs.filter(d=>d.alias?.startsWith('color:')))if(wanted[def.id]&&bdEffectRow(def.id)?.value===def.value){const value=wanted[def.id].value;$('colorStyle').value=(bdPaletteAliases[def.alias.slice(6)]||[]).includes(value)?value:def.value}
  bdEnsure().effects=wanted;

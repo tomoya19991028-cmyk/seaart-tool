@@ -1170,7 +1170,7 @@ function bdPlan(panel=null){
  for(const value of bdOwnedColorValues())ownedColors.add(value);
  for(const [id,setting]of Object.entries(effective.effects)){
   const def=bdEffectDef(id),row=bdEffectRow(id);if(!row){warnings.push((setting.name||'保存済みの画面効果')+'の参照先が見つかりません');continue}
-  const alias=!setting.standalone&&def?.alias&&row.value===def.value&&(!def.alias.startsWith('composition:')||item('composition',def.alias.slice(12))?.value===def.value)?def.alias:null;
+  const alias=def?.alias&&(!setting.standalone||def.alias.startsWith('composition:')||bdAliasActive(def))&&row.value===def.value&&(!def.alias.startsWith('composition:')||item('composition',def.alias.slice(12))?.value===def.value)?def.alias:null;
   if(alias?.startsWith('composition:'))ownedComposition.add(alias.slice(12));
   // A legacy compound retains its full text. Do not add another flow effect.
   if(id==='screen-background-flow'&&bdStockEffect(id)&&existingFlow&&!landscapeOnly&&!setting.replaceCompound){continue}
@@ -1295,7 +1295,7 @@ function bdLegacyToggle(row,on){if(row.field!=='composition')return false;if(row
 
 function bdWriteEffects(effects){
  const wanted=bdCopy(effects),blur=bdEffectDef('screen-background-blur'),blurRow=item('composition','composition-21');
- if(blurRow?.value===blur.value&&bdStockEffect(blur.id)){selected.composition=selected.composition.filter(id=>id!=='composition-21');if(wanted[blur.id])selected.composition.push('composition-21')}else if(wanted[blur.id])wanted[blur.id].standalone=true;
+ if(blurRow?.value===blur.value&&bdStockEffect(blur.id)){selected.composition=selected.composition.filter(id=>id!=='composition-21');if(wanted[blur.id]){delete wanted[blur.id].standalone;selected.composition.push('composition-21')}}else if(wanted[blur.id])wanted[blur.id].standalone=true;
  const palettes=bdEffectDefs.filter(d=>d.alias?.startsWith('color:')&&bdStockEffect(d.id)),colors=palettes.some(d=>wanted[d.id])?Object.values(bdPaletteAliases).flat():bdOwnedColorValues();if(colors.includes($('colorStyle').value))$('colorStyle').value='';renderingExpressions=renderingExpressions.filter(v=>!colors.includes(v));
  for(const def of bdEffectDefs.filter(d=>d.alias?.startsWith('color:')))if(wanted[def.id]&&bdEffectRow(def.id)?.value===def.value){const value=wanted[def.id].value;$('colorStyle').value=(bdPaletteAliases[def.alias.slice(6)]||[]).includes(value)?value:def.value}
  bdEnsure().effects=wanted;
