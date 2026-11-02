@@ -10,6 +10,8 @@ on:
       - 'tests/v44-audit/**'
       - 'tests/weapon-actions/**'
       - 'tests/storage/**'
+      - 'tests/ui-fast/**'
+      - 'scripts/pack-inline-manga.cjs'
       - 'docs/weapon-actions/**'
       - 'tests/v44-remaining/**'
       - 'tests/horror/**'
@@ -40,6 +42,7 @@ jobs:
       - run: npm run test:audit
       - run: npm run test:weapons
       - run: npm run test:storage
+      - run: npm run test:ui-fast
       - uses: actions/upload-artifact@v4
         if: always()
         with:

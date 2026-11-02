@@ -21,10 +21,10 @@ const {launch,pageFor,startServer,suite,assert}=require('../v44-audit/helpers.cj
     // Leave room for the compact journal and several generations, while the
     // former journal's duplicate catalog/settings exceed the real quota.
     for(let i=0;i<8;i++)localStorage.removeItem('__storage_quota_fill_'+(--filled));
-    const before=hCanonical({...localStorage}),history=hCanonical(promptHistory),encoder=afEncodeJournal;
+    const before=hCanonical({...localStorage}),history=hCanonical(promptHistory),encoder=wbEncodeJournalPair;
     let legacyFailure;
-    try{afEncodeJournal=JSON.stringify;$('extra').value='legacy writer should fail';$('generate').click();clearTimeout(workingSaveTimer);legacyFailure={error:afLastSaveError?.name,diskPreserved:before===hCanonical({...localStorage}),historyPreserved:history===hCanonical(promptHistory),output:$('positive').value,status:$('status').textContent}}
-    finally{afEncodeJournal=encoder}
+    try{wbEncodeJournalPair=journal=>Object.fromEntries(['pending','committed'].map(phase=>[phase,JSON.stringify({...journal,phase})]));$('extra').value='legacy writer should fail';$('generate').click();clearTimeout(workingSaveTimer);legacyFailure={error:afLastSaveError?.name,diskPreserved:before===hCanonical({...localStorage}),historyPreserved:history===hCanonical(promptHistory),output:$('positive').value,status:$('status').textContent}}
+    finally{wbEncodeJournalPair=encoder}
     const successes=[];for(let i=0;i<7;i++){$('extra').value='compact generation '+i;$('generate').click();clearTimeout(workingSaveTimer);successes.push({saved:!afLastSaveError,status:$('status').textContent,history:promptHistory.length,output:$('positive').value.includes('compact generation '+i)})}
     const preserved=Array.from({length:filled},(_,i)=>localStorage.getItem('__storage_quota_fill_'+i)===filler).every(Boolean);
     return {quota,legacyFailure,successes,unrelatedKeysPreserved:preserved,favoritePreserved:favorites.some(f=>f.name==='容量確認の保存設定'),workingExtra:JSON.parse(actorFormLastBundle.working).working.extra};

@@ -28,7 +28,7 @@
   };
 
   let page=0,owner='';
-  const pageSize=4,interactionTitle='性的接触・行為',effectsTitle='擬音・反応エフェクト';
+  const pageSize=Number.MAX_SAFE_INTEGER,interactionTitle='性的接触・行為',effectsTitle='擬音・反応エフェクト';
   const style=document.createElement('style');
   style.textContent='.adultDashboard{grid-template-rows:repeat(2,minmax(0,1fr))!important}.adultDashboardPager{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;flex:none;min-height:42px}.adultDashboardPager[hidden]{display:none!important}.adultDashboardPager button{min-height:40px;padding:6px 12px}.adultDashboardPager span{text-align:center;color:var(--muted);font-size:.85rem;white-space:nowrap}';
   document.head.append(style);

@@ -1,7 +1,7 @@
 # SeaArt Prompt Builder
 
 製品は `index.html`（単一HTML）、PWA資産は `sw.js`・`manifest.json`・3アイコンです。
-このブランチは、添付v44を仕様基準にした監査・修正版です。PRを作成してもmainや公開PWAは更新されません。
+この更新案は、添付UI Fast r5と同一のHTMLを保守ソースへ同期したものです。変更・試験・復旧方法は [UI Fast更新資料](docs/ui-fast/README.md) を参照してください。PRを作成してもmainや公開PWAは更新されません。
 
 ## 現行の保守・ビルド
 
@@ -13,6 +13,7 @@ npm run build:check
 npm run test:audit
 npm run test:weapons
 npm run test:storage
+npm run test:ui-fast
 npm run test:remaining
 npm run test:stability
 ```
