@@ -10,8 +10,13 @@
       "type": "",
       "baselineScript": 0,
       "prependSources": [
+        "src/current/ui-fast-scope-clothing.js",
         "src/vendor/lz-string-1.5.0.js",
-        "src/current/storage-journal.js"
+        "src/current/storage-journal.js",
+        "src/current/environment-design-state.js",
+        "src/current/environment-design-output.js",
+        "src/current/environment-design-presets.js",
+        "src/current/environment-design-ui.js"
       ]
     },
     {
@@ -40,9 +45,11 @@
       "baselineScript": 5
     },
     {
-      "id": "simpleMangaIntegration",
-      "type": "",
-      "baselineScript": 6
+      "id": "wbMangaPayload",
+      "type": "application/octet-stream",
+      "baselineScript": 6,
+      "pack": "lz-base64",
+      "decodedSHA256": "18595c3cd955247b9631ddd02c7d067e605663b01f1b7ed0488bcae2093c0b7c"
     },
     {
       "id": "actorFormStorageFoundation",
@@ -198,7 +205,10 @@
     {
       "id": "characterCandidateFilterV43Script",
       "type": "",
-      "source": "src/current/character-candidate-view.js"
+      "sources": [
+        "src/current/character-candidate-view.js",
+        "src/current/ui-fast-workbench.js"
+      ]
     }
   ],
   "managedJS": [
@@ -223,5 +233,6 @@
     "src/horror-catalog.json",
     "src/horror-story-presets.json",
     "src/horror-auto-definitions.json"
-  ]
+  ],
+  "upstreamUIFastR5SHA256": "6b2743e2c088811f9e7e2ff6c10eb7f146479ad7edbed355f7476695c1f5107f"
 }

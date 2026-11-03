@@ -42,6 +42,12 @@ def build():
   encode=lambda value:json.dumps(value,ensure_ascii=False,separators=(',',':'))
   old=encode(json.loads(original(source)));new=encode(json.loads((ROOT/source).read_text()));hits=sum(b.count(old)for b in blocks);assert hits==1,f'Managed JSON span missing/duplicated: {source}'
   blocks=[b.replace(old,new)for b in blocks]
+ for index,entry in enumerate(manifest['scripts']):
+  if entry.get('pack'):
+   assert entry['pack']=='lz-base64','Unsupported inline payload encoding'
+   body=blocks[index]
+   assert hashlib.sha256(body.encode('utf-8')).hexdigest()==entry['decodedSHA256'],'Decoded manga source SHA mismatch'
+   blocks[index]=subprocess.check_output(['node',str(ROOT/'scripts/pack-inline-manga.cjs')],input=body.encode('utf-8'),cwd=ROOT).decode('ascii')
  template=(ROOT/manifest['template']).read_text()
  for i,body in enumerate(blocks):
   token=f'@@SEAART_SCRIPT_{i:02d}@@';assert template.count(token)==1,f'Template slot {i} missing/duplicated';template=template.replace(token,body,1)

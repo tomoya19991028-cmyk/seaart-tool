@@ -1,5 +1,17 @@
 # v44の再現可能な製品ソース
 
+現行製品は添付 `SeaArt_UI_Fast_20261101_r5-2.html` と同一バイトです。
+`ui-fast-scope-clothing.js` と `ui-fast-workbench.js` は、そのHTMLに含まれる
+適用範囲・衣装データ・画面・性能処理を保守用に分離したものです。
+背景・画面効果は `environment-design-*.js` に分離しています。
+
+37個のscript要素のうち `wbMangaPayload` は実行コードではなく圧縮データです。
+ビルドは起点script 6にアンカー付き差分を適用して漫画ソースを復元し、
+展開後SHAを検証してから `scripts/pack-inline-manga.cjs` でLZ-base64へ変換します。
+品質検証ではこのデータを展開し、36個の直接実行scriptと合わせて構文を検証します。
+圧縮用のNode.jsがビルド時に必要です。製品の実行時に外部依存はありません。
+漫画ソースを編集した場合はmanifestの展開後SHAも確認・更新してください。
+
 `manifest.json` は37個のインラインscriptの実行順を定義します。
 起点は保存済みcommit `894d5fbfdfa65e68a50b77acdaa3e497ed31aeca` のHTMLです。
 そのSHA-256を検証したうえで、HTMLパーサーでscript境界を取り出します。Git履歴を含むcloneが必要です。

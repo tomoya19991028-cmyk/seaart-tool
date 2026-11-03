@@ -1,3 +1,4 @@
+const projected=require('../ui-fast/expected-data.cjs');
 const fs=require('fs'),cp=require('child_process'),zlib=require('zlib');
 const {launch,pageFor,startServer,suite,assert,hash,root}=require('../v44-audit/helpers.cjs');
 (async()=>{const s=suite('remaining-compatibility'),server=await startServer(),b=await launch();try{
@@ -5,12 +6,12 @@ const current=await pageFor(b,process.env.TARGET_URL||server.url),p=current.page
 await s.test('FIXED-independent-original-R1-twelve-datasets-retained',async()=>{
  const bytes=zlib.gunzipSync(fs.readFileSync('tests/fixtures/creature-motif-person-r1-original-baseline.json.gz'));assert.equal(hash(bytes),'e66ce65757f985a23c03d05f1d69d60d214e5169fc093abf72182cfda483d832');const expected=JSON.parse(bytes).after;
  assert.equal(hash(JSON.stringify(expected.outputs)),'7d283415876bc135f201d347063f641fa33ef7f0cc341843d050908195693b5d');
- const d=await p.evaluate(()=>({catalog,characterBasicPresets,detailOptions,outfitSets,genders:characterGenderByValue,creatureBasicPresets,creatureCandidateBase,owners:[...creatureFeatureOwnerIndex].map(([k,v])=>[k,[...v]]),adapters:[...afEnsureRegistry()],creatureFields,creatureFeatureLabels,creatureSpeciesGroups}));
+ const d=await p.evaluate(()=>({clothingData,catalog,characterBasicPresets,detailOptions,outfitSets,genders:characterGenderByValue,creatureBasicPresets,creatureCandidateBase,owners:[...creatureFeatureOwnerIndex].map(([k,v])=>[k,[...v]]),adapters:[...afEnsureRegistry()],creatureFields,creatureFeatureLabels,creatureSpeciesGroups}));
  let rows=0;for(const [field,entries]of Object.entries(expected.data.catalog))for(const row of entries){assert.deepEqual(d.catalog[field].find(r=>r.id===row.id),row,field+'/'+row.id);rows++}
- for(const field of ['characterBasicPresets','outfitSets','genders','creatureFeatureLabels'])for(const [key,value]of Object.entries(expected.data[field]))assert.deepEqual(d[field][key],value,field+'/'+key);
+ for(const field of ['characterBasicPresets','outfitSets','genders','creatureFeatureLabels'])for(const [key,value]of Object.entries(expected.data[field]))assert.deepEqual(d[field][key],field==='characterBasicPresets'?value.map(f=>projected.preset(key,f,d.clothingData)):value,field+'/'+key);
  for(const field of ['creatureBasicPresets','creatureCandidateBase','owners','creatureFields','creatureSpeciesGroups'])assert.deepEqual(d[field],expected.data[field],field);
- for(const [key,value]of Object.entries(expected.data.detailOptions)){assert.equal(d.detailOptions[key].label,key==='bust'?'胸の大きさ':value.label,'detail label '+key);for(const row of value.options){const wanted=key==='subjectRelation'&&row[0]==='facing each other'?['facing each other','向き合う','向き・姿勢']:row;assert(d.detailOptions[key].options.some(r=>JSON.stringify(r)===JSON.stringify(wanted)),'detail '+key+'/'+row[0])}}
- for(const [id,value]of expected.data.adapters)assert.deepEqual(d.adapters.find(row=>row[0]===id)?.[1],value,'adapter '+id);
+ for(const [key,value]of Object.entries(expected.data.detailOptions)){assert.equal(d.detailOptions[key].label,key==='bust'?'胸の大きさ':value.label,'detail label '+key);for(const row of value.options){const wanted=key==='subjectRelation'&&row[0]==='facing each other'?['facing each other','向き合う','向き・姿勢']:projected.detailRow(key,row,d.clothingData);assert(d.detailOptions[key].options.some(r=>JSON.stringify(r)===JSON.stringify(wanted)),'detail '+key+'/'+row[0])}}
+ for(const [id,value]of expected.data.adapters)assert.deepEqual(d.adapters.find(row=>row[0]===id)?.[1],value.uSpecific?{...value,uSpecific:projected.anatomy(value.uSpecific,d.clothingData)}:value,'adapter '+id);
  return {fixedFixtureSHA256:hash(bytes),datasets:12,oldCatalogRows:rows,standardAdapters:expected.data.adapters.length,baselineNeverRewritten:true,oldFormattedFulltextReplacedByOriginalV44ReplayAndIndependentAttribution:true};
 });
 await s.test('SAVE-known-empty-defaults-and-nonempty-sound-reaction-reload',async()=>{

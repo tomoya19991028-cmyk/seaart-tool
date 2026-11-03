@@ -1,3 +1,4 @@
+const expected=require('../ui-fast/expected-data.cjs');
 const cp=require('child_process'),{root,launch,pageFor,startServer,suite,assert}=require('./helpers.cjs');
 (async()=>{const s=suite('features'),server=await startServer(),browser=await launch();try{
  const current=await pageFor(browser,process.env.TARGET_URL||server.url);
@@ -5,10 +6,10 @@ const cp=require('child_process'),{root,launch,pageFor,startServer,suite,assert}
   const oldServer=await startServer({assetOverrides:{'index.html':cp.execFileSync('git',['show','894d5fbfdfa65e68a50b77acdaa3e497ed31aeca:index.html'],{cwd:root,maxBuffer:16*1024*1024})}});
   const old=await pageFor(browser,oldServer.url);
   try{
-   const collect=p=>p.evaluate(()=>({catalog,presets:characterBasicPresets,forms:personSpecificDefinitions,keys:actorFormStorageKeys}));
+   const collect=p=>p.evaluate(()=>({catalog,presets:characterBasicPresets,forms:personSpecificDefinitions,keys:actorFormStorageKeys,...(typeof clothingData==='undefined'?{}:{clothingData,vspoJPData})}));
    const before=await collect(old.page),after=await collect(current.page);let rows=0;
    for(const [field,entries]of Object.entries(before.catalog))for(const entry of entries){assert.deepEqual(after.catalog[field].find(r=>r.id===entry.id),entry,'old definition changed: '+field+'/'+entry.id);rows++}
-   assert.deepEqual(after.presets,before.presets);assert.deepEqual(after.forms,before.forms);assert.deepEqual(after.keys,before.keys);
+   assert.deepEqual(after.presets,expected.presets(before.presets,after.clothingData,after.vspoJPData));assert.deepEqual(after.forms,expected.forms(before.forms,after.clothingData));assert.deepEqual(after.keys,before.keys);
    return {oldCatalogRows:rows,characters:after.catalog.character.length,basicPresetOwners:Object.keys(after.presets).length,specificForms:after.forms.forms.length,storageNamespacesUnchanged:true};
   }finally{await old.context.close();await oldServer.close()}
  });
