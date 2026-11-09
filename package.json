@@ -10,7 +10,8 @@
     "package:android": "python3 scripts/package-android-check.py",
     "test:weapons": "node tests/weapon-actions/run.cjs",
     "test:storage": "node tests/storage/run.cjs",
-    "test:ui-fast": "node tests/ui-fast/run.cjs"
+    "test:ui-fast": "node tests/ui-fast/run.cjs",
+    "test:manga-outfits": "node -r ./tests/ui-fast/fail-fast.cjs tests/manga-outfits/run.cjs"
   },
   "devDependencies": {
     "acorn": "8.15.0",
