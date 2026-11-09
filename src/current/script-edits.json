@@ -691,10 +691,76 @@
   ],
   "6": [
     {
+      "startLine": 117,
+      "endLine": 117,
+      "oldSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacement": "const partFields={top:'upper',bottom:'lower',shoes:'feet',legwear:'legwear',head:'head',hands:'hands',accessory:'accessory'};\nconst fieldParts=Object.fromEntries(Object.entries(partFields).map(([k,v])=>[v,k]));\nfunction smWardrobeRows(key, owners=null){\n const rows=[];\n function add(source,id,name,tag,group){\n  if(owners&&maIsHidden(source,id))return;\n  const row=Object.freeze([name,tag,group||'']);\n  // The source ID can differ from the displayed or edited prompt tag.\n  const values=owners&&characterCandidateOwners(source,id);\n  if(values)owners.set(row,[...values]);\n  rows.push(row);\n }\n if(key==='outfit'){\n  for(const {id,name,value,group} of catalog.outfit)add('catalog:outfit',id,name,value,group);\n }else{\n  const field=partFields[key],source='detail:'+field;\n  for(const [id,name,group] of personPickerOptions(source,detailOptions[field]?.options||[])){\n   add(source,id,name,personOutputValue(source,id),group);\n  }\n  if(key==='accessory')for(const set of Object.values(outfitSets))for(const [f,raw] of Object.entries(set)){\n   if(Object.hasOwn(fieldParts,f))continue;\n   const value=outfitDetailValue(f,raw),row=detailOptions[f]?.options.find(x=>x[0]===value);\n   if(row&&!rows.some(x=>x[1]===value)){\n    add('detail:'+f,value,detailLabel(f,value),personOutputValue('detail:'+f,value),'セット付属品');\n   }\n  }\n }\n return Object.freeze(rows);\n}\n\n"
+    },
+    {
+      "startLine": 120,
+      "endLine": 121,
+      "oldSHA256": "73894fcf1a221553ea26842386dcce62e80f7645627e5cef503b640d65422950",
+      "replacement": " wardrobe:smWardrobeRows,\n"
+    },
+    {
+      "startLine": 134,
+      "endLine": 135,
+      "oldSHA256": "591263c01dd8f839578ce88fcc197aa05c5fc96555c8f19ed3274954de1cba6b",
+      "replacement": ""
+    },
+    {
       "startLine": 362,
       "endLine": 363,
       "oldSHA256": "01b63309ead079a66d216a2eb49f9afc83227f986a191f69d8303fec87733baf",
       "replacement": "function save(){try{localStorage.setItem(KEY,JSON.stringify(S));storageOK=true}catch{storageOK=false}let x=$('#saveStatus');if(!x&&!storageOK){x=document.createElement('p');x.id='saveStatus';x.className='muted';x.setAttribute('role','status');document.querySelector('.head').after(x)}if(x){x.hidden=storageOK;x.textContent=storageOK?'このブラウザに自動保存中':'自動保存できません。設定ファイルを保存してください'}for(const d of document.querySelectorAll('dialog')){let note=d.querySelector('[data-save-failure]');if(storageOK)note?.remove();else if(d.open){if(!note){note=document.createElement('p');note.dataset.saveFailure='true';note.setAttribute('role','status');(d.querySelector('.dialog-head')||d).append(note)}note.textContent=x.textContent}}const out=$('#specialOut');if(out)out.value=specialPrompt(S.page==='nsfw'?'nsfw':'simple')}\n"
+    },
+    {
+      "startLine": 382,
+      "endLine": 383,
+      "oldSHA256": "9df81a45294cf22087df6eaf6de760a24cdba15140212d838e6c68c933253a76",
+      "replacement": "function openChoices(t,options,fn,selected=[],config={}){\n pickerState={options,fn,selected,title:t,...config};\n $('#pickerTitle').textContent=t;$('#pickerSearch').value='';\n $('#picker').showModal();drawChoices();\n}\n"
+    },
+    {
+      "startLine": 525,
+      "endLine": 526,
+      "oldSHA256": "bbc6367c820dc8ce7b7efdc3dec2fa35b10832cd6d48acf4cb9462afc03f3c08",
+      "replacement": "function directOptions(f,store,single,adult,refresh,wardrobe=null){\n const character=single;\n const options=character?characterOptions(adult).map(c=>[c.label,c.tag]):wardrobe?.rows??f.options;\n const basis=genderBasis(store),filter=character?(store===S.simple&&f.id===7?'レディース向け':store===S.simple&&f.id===24?'メンズ向け':'すべて'):basis.gender==='男性'?'メンズ向け':basis.gender==='女性'?'レディース向け':'すべて';\n const direct={f,store,single,character,basis,filter,refresh,all:options,wardrobe};\n openChoices(f.label,options,o=>{\n  store[f.id]??=[];\n  const pick={label:o[0],tag:o[1],weight:1};\n  if(single||(store===S.simple&&[5,26].includes(f.id)))store[f.id]=[pick];\n  else if(!store[f.id].some(x=>x.tag===o[1]))store[f.id].push(pick);\n  save();refresh();\n },(store[f.id]||[]).map(x=>x.label),{direct,keepOpen:!single});\n}\n"
+    },
+    {
+      "startLine": 549,
+      "endLine": 550,
+      "oldSHA256": "d79900e255f1fbfae5575fd160a201162033335d00d9956c51919a17f5cc1ee7",
+      "replacement": "function wardrobeField(k){return {id:k,label:WARDROBE_LABELS[k],get options(){return B.wardrobe[k]}}}\n"
+    },
+    {
+      "startLine": 619,
+      "endLine": 619,
+      "oldSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacement": "function catalogViewRows(ps){\n const d=ps.direct,specific=d?.wardrobe?.specific;\n if(!specific||ps.favoriteOnly)return d?.all??ps.options;\n return d.all.filter(o=>ps.characterSpecific?specific.has(o):!specific.has(o)||selectedCandidate(ps,o));\n}\n"
+    },
+    {
+      "startLine": 620,
+      "endLine": 622,
+      "oldSHA256": "34ebdd1ff5969760c58ba052167188836ae256715e2d3b76ec53e8a9b80a95fa",
+      "replacement": " const d=ps.direct,q=$('#pickerSearch').value.trim().toLocaleLowerCase();\n const filtered=!!d&&!ps.characterSpecific&&(d.character||styleFilterField(d.f));\n const list=catalogViewRows(ps).filter(o=>(!filtered||filterAudience(catalogAudience(ps,o),d.filter))&&(!ps.tagFilter||catalogTags(o).includes(ps.tagFilter))&&(!ps.selectedOnly||selectedCandidate(ps,o))&&(!q||[...o,...catalogTags(o),...catalogMeta(o).aliases].join(' ').toLocaleLowerCase().includes(q)));\n"
+    },
+    {
+      "startLine": 629,
+      "endLine": 630,
+      "oldSHA256": "67f3030163fb53c85335727b616f950b8c8163b0c993311b4b7119cdc2949294",
+      "replacement": " const ps=pickerState;if(!ps)return;if(ps.direct?.character||ps.characterFilter)ps.tagFilter=characterFilterGroup(ps.tagFilter||'');const d=ps.direct,all=catalogViewRows(ps),body=$('#pickerBody');body.innerHTML='';ps.limit??=80;\n const hasAudience=d&&(d.character||styleFilterField(d.f));\n"
+    },
+    {
+      "startLine": 631,
+      "endLine": 632,
+      "oldSHA256": "1453bb6e8f929448a9dc5386abc7741dbd75ef5603d0b61cb383db7d46a8c7f9",
+      "replacement": " if(hasAudience){\n  const row=document.createElement('div');row.className='dialog-filters';\n  const filters=d.character?['すべて','メンズ向け','レディース向け','性別なし']:['すべて','メンズ向け','レディース向け'];\n  for(const filter of filters){\n   const label=d.character?({'メンズ向け':'男性','レディース向け':'女性'}[filter]||filter):filter;\n   const active=d.filter===filter&&!ps.characterSpecific&&!(d.wardrobe&&ps.favoriteOnly);\n   row.append(btn(label,()=>{d.filter=filter;ps.limit=80;drawChoices()},active?'primary':''));\n  }\n  body.append(row);\n }\n"
+    },
+    {
+      "startLine": 633,
+      "endLine": 634,
+      "oldSHA256": "7b082785021f8a3b7c6c86388e91ee781e0171423a42b39af48806c47a080352",
+      "replacement": "  const counts=new Map();\n  const audienceOptions=hasAudience&&!ps.characterSpecific?all.filter(o=>filterAudience(catalogAudience(ps,o),d.filter)):all;\n  audienceOptions.forEach(o=>catalogTags(o).forEach(tag=>counts.set(tag,(counts.get(tag)||0)+1)));\n"
     },
     {
       "startLine": 883,
@@ -745,10 +811,46 @@
       "replacement": "// Keep editable order and visibility across pages.\n"
     },
     {
+      "startLine": 1351,
+      "endLine": 1352,
+      "oldSHA256": "3967117025ffcf31f617f6d04cd3b83d12b69049e0535ac02999200d674e6aa9",
+      "replacement": "catalogList=function(ps){\n const specific=ps.characterSpecific&&(!ps.sort||ps.sort==='default')?ps.direct.wardrobe.specific:null;\n return cmCatalogBeforeFavoritePriority(ps).sort((a,b)=>{\n  const priority=specific?Number(specific.get(b).selected)-Number(specific.get(a).selected):0;\n  return priority||Number(isFavorite(b))-Number(isFavorite(a));\n });\n};\n"
+    },
+    {
+      "startLine": 1365,
+      "endLine": 1368,
+      "oldSHA256": "ba07644c7fa399cdfc1b8e2efc7864b52d72e3c12d7e75d5b18fc0f98c8315e5",
+      "replacement": " let audience=body.querySelector('.dialog-filters');\n if(!audience){\n  audience=cmNode('div','dialog-filters');\n  audience.append(btn('すべて',()=>drawChoices(),!ps.favoriteOnly&&!ps.characterSpecific?'primary':''));\n  body.prepend(audience);\n }\n if(audience.querySelector('.cm-list-favorite'))return;\n const hasSpecific=!!ps.direct?.wardrobe?.specific.size;\n for(const b of audience.querySelectorAll('button')){\n  const handler=b.onclick;\n  b.onclick=e=>{\n   if(hasSpecific&&(ps.characterSpecific||ps.favoriteOnly)){\n    ps.characterSpecific=false;ps.tagFilter='';ps.limit=80;\n   }\n   ps.favoriteOnly=false;\n   handler?.(e);\n  };\n }\n const favorite=btn('★お気に入り',()=>{\n  if(hasSpecific){ps.characterSpecific=false;ps.tagFilter=''}\n  ps.favoriteOnly=!ps.favoriteOnly;ps.limit=80;drawChoices();\n },'cm-list-favorite'+(ps.favoriteOnly?' primary':''));\n favorite.setAttribute('aria-pressed',String(!!ps.favoriteOnly));\n if(hasSpecific){\n  const specific=btn('キャラ固有',()=>{\n   ps.characterSpecific=!ps.characterSpecific;ps.favoriteOnly=false;ps.tagFilter='';ps.limit=80;\n   drawChoices();body.scrollTop=0;\n   body.querySelector('.cm-list-character')?.focus({preventScroll:true});\n  },'cm-list-character'+(ps.characterSpecific?' primary':''));\n  specific.setAttribute('aria-pressed',String(!!ps.characterSpecific));\n  audience.firstElementChild.after(favorite,specific);\n }else audience.append(favorite);\n"
+    },
+    {
       "startLine": 1504,
       "endLine": 1505,
       "oldSHA256": "66aa6c8a955d8300df52c3dc80f0f180b77f2071e60ace05f23788027e46a3b2",
       "replacement": "function bindSharedCard(c){\n if(!cmIsShared(c))return;\n const descriptor=Object.getOwnPropertyDescriptor(c,'options');\n if(!descriptor?.get||descriptor.get!==smuSharedBindings.get(c)){\n  liveProperty(c,'options',()=>cmReferenceOptions(c),false);\n  smuSharedBindings.set(c,Object.getOwnPropertyDescriptor(c,'options').get);\n }\n if(!sharedIds.has(String(c.id)))c.mode='list';\n if(c.id==='7'||c.id==='24'){c.mode='list';c.multiple=false}\n if(c.id==='12')c.label=c.label.replace(/服装/g,'衣装');\n}\n\n"
+    },
+    {
+      "startLine": 1506,
+      "endLine": 1508,
+      "oldSHA256": "62f25808a1e404e7c9ab05dac0629595f1fa60f2610b84c8ea16e9e8967882bf",
+      "replacement": "function smWardrobePicker(key,store){\n const owners=new Map(),rows=masters.wardrobe(key,owners),specific=new Map();\n if(!owners.size)return {rows,specific};\n const ownerKey=value=>catalogNorm(value.normalize('NFKC'));\n const names=new Map(catalog.character.map(c=>[ownerKey(c.value),c.name]));\n const selected=new Set([7,24].flatMap(id=>(store[id]||[]).map(x=>ownerKey(characterCanonicalValue(x.tag,x.label)))));\n for(const [row,values] of owners){\n  const keys=values.map(ownerKey);\n  specific.set(row,{selected:keys.some(key=>selected.has(key)),aliases:[...values,...keys.map(key=>names.get(key)).filter(Boolean)]});\n }\n return {rows,specific};\n}\n"
+    },
+    {
+      "startLine": 1509,
+      "endLine": 1510,
+      "oldSHA256": "5eea2f9f5cda6c9fa66ec125189348c1e5b42a00d6ade0e2798339c9b688dde7",
+      "replacement": "catalogMeta=function(o){\n const wardrobe=pickerState?.direct?.wardrobe;\n if(!wardrobe){\n  const meta=sharedCatalogMetaBefore(o);\n  return wardrobeOwners.has(pickerState?.direct?.store)&&o[2]?{...meta,tags:[o[2]]}:meta;\n }\n const meta=B.optionMetadata[catalogKey(o)]||{tags:[],aliases:[]},owner=wardrobe.specific.get(o);\n return {tags:o[2]?[o[2]]:meta.tags,aliases:owner?[...meta.aliases,...owner.aliases]:meta.aliases};\n};\n"
+    },
+    {
+      "startLine": 1531,
+      "endLine": 1535,
+      "oldSHA256": "bd42a228b43c912bbc0e535849e71d41ed1d4e8a9150aafe8cd847460f332b98",
+      "replacement": " const owner=wardrobeOwners.get(store),isOutfit=f.id==='outfit';\n const wardrobe=owner===S.simple&&(isOutfit||Object.hasOwn(partFields,f.id))?smWardrobePicker(f.id,owner):null;\n if(owner&&isOutfit){\n  const options=wardrobe?.rows??masters.wardrobe('outfit');\n  const direct={f,store,single:false,character:false,basis:genderBasis(store),filter:'すべて',refresh,all:options,wardrobe};\n  openChoices(f.label,options,o=>{\n   store.outfit=[{label:o[0],tag:o[1],weight:1}];\n   expandSharedWardrobe(store,true);save();refresh();\n  },(store.outfit||[]).map(x=>x.label),{direct,keepOpen:false});\n  return;\n"
+    },
+    {
+      "startLine": 1536,
+      "endLine": 1537,
+      "oldSHA256": "c8dafbaf40ed913651c3d232965e4fb9168b2b424391c0b494c652706bd2dcf0",
+      "replacement": " return sharedDirectBefore(f,store,single,adult,refresh,wardrobe);\n"
     },
     {
       "startLine": 1619,

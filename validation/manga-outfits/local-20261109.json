@@ -1,0 +1,352 @@
+{
+  "checkedAtUTC": "2026-11-09T12:36:39.821820+00:00",
+  "baselineCommit": "41dfacff31e4fa2f8b456b4ef3d463677f0dfad6",
+  "backupBranch": "backup/before-manga-outfits-20261109",
+  "attachmentSHA256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb",
+  "indexSHA256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb",
+  "all37ScriptsParse": true,
+  "unchangedOtherScripts": 36,
+  "results": {
+    "quality": {
+      "suite": "quality",
+      "productSHA256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb",
+      "tests": [
+        {
+          "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
+          "status": "PASS",
+          "detail": {
+            "scripts": 37,
+            "parseDiagnostics": []
+          }
+        },
+        {
+          "id": "JS-all37-inline-and-maintained-modules-parse",
+          "status": "PASS",
+          "detail": {
+            "inlineScripts": 37,
+            "reassignments": 1739
+          }
+        },
+        {
+          "id": "JSON-all-maintained-data-parse",
+          "status": "PASS",
+          "detail": {
+            "jsonFiles": 10
+          }
+        },
+        {
+          "id": "BUILD-clean-byte-identical-independent-output",
+          "status": "PASS",
+          "detail": {
+            "sha256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb",
+            "inputIsNotIndexHTML": true
+          }
+        },
+        {
+          "id": "PWA-manifest-relative-paths-shell-and-private-data-boundaries",
+          "status": "PASS",
+          "detail": {
+            "scope": "./",
+            "startURL": "./index.html",
+            "icons": 3
+          }
+        },
+        {
+          "id": "SAVE-namespace-version-and-latest-candidate-contract-retained",
+          "status": "PASS",
+          "detail": {
+            "savedNamespacesUnchanged": true,
+            "currentCandidateViewAllOwners": true
+          }
+        }
+      ],
+      "parseDiagnostics": [],
+      "sourceSHA256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb"
+    },
+    "existingSimpleManga": {
+      "suite": "remaining-simple-ui",
+      "productSHA256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb",
+      "tests": [
+        {
+          "id": "SM-person-edit-scene-copy-manga-type-and-generation-independent",
+          "status": "PASS",
+          "detail": {
+            "person": {
+              "label": "フリーナ（原神）",
+              "tag": "Furina (Genshin Impact)",
+              "weight": 1
+            },
+            "mangaType": {
+              "label": "通常",
+              "tag": "(rating:safe),",
+              "weight": 1
+            },
+            "scene": {
+              "label": "シンプルな背景",
+              "tag": "simple background",
+              "weight": 1,
+              "optionId": "cm-option-69d2ae84-9fee-4ded-bcf3-87b2e3ad7bd7"
+            },
+            "independentMain": true
+          }
+        },
+        {
+          "id": "SM-CSV-quoted-Japanese-BOM-duplicates-invalid-and-write-failure",
+          "status": "PASS",
+          "detail": {
+            "quotedCommaNewlineQuote": true,
+            "pastedBOM": true,
+            "duplicates": true,
+            "invalidAtomic": true,
+            "existingDiskAndRowsKeptOnQuota": true,
+            "unsavedRAMWarned": true
+          }
+        },
+        {
+          "id": "SM-own-JSON-named-save-reload-reset-cancel-and-restore",
+          "status": "PASS",
+          "detail": {
+            "ownJSON": true,
+            "namedSave": true,
+            "resetCancel": true,
+            "resetPreservesDefinitions": true,
+            "reload": true,
+            "JSONImport": true,
+            "mainJSONNotCompleteSimpleBackup": true
+          }
+        },
+        {
+          "id": "SM-invalid-own-JSON-and-return-do-not-change-main",
+          "status": "PASS",
+          "detail": {
+            "invalidImportSafe": true,
+            "mainUnchanged": true
+          }
+        }
+      ],
+      "privateShadowDOM": true,
+      "separateStorageKey": "seaart-studio-mobile-v2",
+      "noImagesGenerated": true
+    },
+    "mangaOutfits": {
+      "suite": "manga-outfits",
+      "productSHA256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb",
+      "tests": [
+        {
+          "id": "old-release-saved-character-wardrobe-main-and-own-JSON-survive-upgrade",
+          "status": "PASS",
+          "detail": {
+            "baseline": "41dfacff31e4fa2f8b456b4ef3d463677f0dfad6",
+            "oldWardrobeAndCharacterRetained": true,
+            "separateJSONRetained": true,
+            "mainUserDataRetained": true
+          }
+        },
+        {
+          "id": "all-eight-wardrobe-pickers-separate-generic-and-character-specific-candidates",
+          "status": "PASS",
+          "detail": {
+            "parts": [
+              {
+                "part": "outfit",
+                "ownedCandidates": 1099
+              },
+              {
+                "part": "top",
+                "ownedCandidates": 1035
+              },
+              {
+                "part": "bottom",
+                "ownedCandidates": 378
+              },
+              {
+                "part": "shoes",
+                "ownedCandidates": 239
+              },
+              {
+                "part": "legwear",
+                "ownedCandidates": 85
+              },
+              {
+                "part": "head",
+                "ownedCandidates": 352
+              },
+              {
+                "part": "hands",
+                "ownedCandidates": 64
+              },
+              {
+                "part": "accessory",
+                "ownedCandidates": 281
+              }
+            ],
+            "mainBytesRetained": true
+          }
+        },
+        {
+          "id": "character-alias-search-selected-owner-priority-favorites-and-filter-transitions",
+          "status": "PASS",
+          "detail": {
+            "JapaneseAndEnglishOwnerSearch": true,
+            "selectedOwnerFirst": true,
+            "favoriteAndAudienceSwitches": true,
+            "explicitSortRespected": true
+          }
+        },
+        {
+          "id": "multi-select-deduplication-weights-output-and-save-roundtrip-to-previous-release",
+          "status": "PASS",
+          "detail": {
+            "partMultiSelect": true,
+            "duplicateTagsPrevented": true,
+            "weightRetained": true,
+            "newOldNewRoundtrip": true,
+            "mainBytesRetained": true
+          }
+        },
+        {
+          "id": "shared-master-edits-and-hidden-candidates-reflect-live-without-resetting-saved-picks",
+          "status": "PASS",
+          "detail": {
+            "liveMainLabelAndTag": true,
+            "hiddenRowsExcluded": true,
+            "savedSelectionsRetained": true
+          }
+        }
+      ],
+      "previousRelease": "41dfacff31e4fa2f8b456b4ef3d463677f0dfad6",
+      "previousHTMLSHA256": "6b2743e2c088811f9e7e2ff6c10eb7f146479ad7edbed355f7476695c1f5107f",
+      "pageErrors": [],
+      "syntheticDataOnly": true
+    },
+    "pwa": {
+      "suite": "pwa",
+      "productSHA256": "2b89b0dffd63a5037ec0f6d5c068e2a226fee5c2a9cf6efa5b470c1f61cdd2eb",
+      "tests": [
+        {
+          "id": "PWA-old-main-load-and-synthetic-user-data",
+          "status": "PASS",
+          "detail": {
+            "namespace": {
+              "settings": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+              "working": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+              "history": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+              "marker": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+              "journal": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1"
+            },
+            "people": [
+              "original-pwa-audit"
+            ],
+            "creatures": [
+              "creature-pwa-audit"
+            ],
+            "favorites": 1
+          }
+        },
+        {
+          "id": "PWA-failed-update-keeps-old-worker-cache-and-data",
+          "status": "PASS",
+          "detail": {
+            "state": "redundant",
+            "cacheNames": [
+              "seaart-tool-pwa-ui-fast-r5-20261102-v1:/seaart-tool/",
+              "unrelated-project-sentinel"
+            ],
+            "controller": "http://127.0.0.1:39993/seaart-tool/sw.js"
+          }
+        },
+        {
+          "id": "PWA-successful-update-preserves-unrelated-cache",
+          "status": "PASS",
+          "detail": {
+            "state": "activated",
+            "names": [
+              "unrelated-project-sentinel",
+              "seaart-tool-pwa-manga-outfits-20261109-v1:/seaart-tool/"
+            ],
+            "scope": "http://127.0.0.1:39993/seaart-tool/",
+            "other": "keep this unrelated app"
+          }
+        },
+        {
+          "id": "PWA-new-screen-old-data-and-six-assets",
+          "status": "PASS",
+          "detail": {
+            "people": [
+              "original-pwa-audit"
+            ],
+            "creatures": [
+              "creature-pwa-audit"
+            ],
+            "hair": "blue hair",
+            "damage": [
+              "bruise"
+            ],
+            "favorites": [
+              "更新前の保存"
+            ],
+            "checks": [
+              {
+                "file": "index.html",
+                "status": 200,
+                "bytes": 4080934
+              },
+              {
+                "file": "sw.js",
+                "status": 200,
+                "bytes": 2909
+              },
+              {
+                "file": "manifest.json",
+                "status": 200,
+                "bytes": 762
+              },
+              {
+                "file": "icon-192.png",
+                "status": 200,
+                "bytes": 1369
+              },
+              {
+                "file": "icon-512.png",
+                "status": 200,
+                "bytes": 3717
+              },
+              {
+                "file": "icon-maskable-512.png",
+                "status": 200,
+                "bytes": 14905
+              }
+            ],
+            "skinCount": 37
+          }
+        },
+        {
+          "id": "PWA-offline-reload-edit-save-and-online-return",
+          "status": "PASS",
+          "detail": {
+            "offlineBootEditSaveReload": true,
+            "onlineReturn": true,
+            "physicalAndroid": false
+          }
+        },
+        {
+          "id": "PWA-foreign-cache-cannot-supply-app-request",
+          "status": "PASS",
+          "detail": {
+            "ownResponse": true,
+            "foreignPreserved": true
+          }
+        },
+        {
+          "id": "FILE-direct-open",
+          "status": "SKIP",
+          "reason": "Managed Chromium policy blocks file:// navigation; no bypass attempted"
+        }
+      ],
+      "publicUpdated": false,
+      "physicalAndroid": false
+    }
+  },
+  "testSourceSHA256": "dfac68f51960f0b7d879de639c00e727b57850dbe47278c6f54754ba9f2fd9d3",
+  "syntheticDataOnly": true
+}
