@@ -10,7 +10,7 @@ const waOutfitAdditions=[
  {id:'frilled-bikini',name:'フリルビキニ',value:'frilled bikini',group:'水着・スポーツ',parts:{upper:['frilled bikini top','フリルビキニの上'],lower:['frilled bikini bottom','フリルビキニの下']}},
  {id:'board-shorts',name:'サーフパンツ',value:'board shorts',group:'水着・スポーツ',parts:{lower:['board shorts','サーフパンツ']}},
  {id:'micro-bikini',name:'マイクロビキニ',value:'micro bikini',group:'水着・スポーツ',parts:{upper:['micro bikini top','マイクロビキニの上'],lower:['micro bikini bottom','マイクロビキニの下']}},
- {id:'reverse-bunny',name:'逆バニー',value:'reverse bunny suit',group:'バニー・コスプレ',parts:{upper:['reverse bunny suit','逆バニーの衣装本体'],head:['bunny ears','うさ耳カチューシャ'],hands:['wrist cuffs','カフス'],accessory:['detached collar with bow tie','付け襟・蝶ネクタイ']}},
+ {id:'reverse-bunny',name:'逆バニー',value:'reverse bunny suit',group:'バニー・コスプレ',parts:{upper:['reverse bunny suit','逆バニーの衣装本体'],head:['bunny ears','うさ耳'],hands:['wrist cuffs','カフス'],accessory:['detached collar with bow tie','付け襟・蝶ネクタイ']}},
  {id:'gothic-qipao',name:'白黒ゴシックチャイナ',value:'black and white gothic qipao',group:'中華・ファンタジー',parts:{upper:['white gothic cutout qipao with black trim','白黒ゴシックチャイナの衣装本体'],hands:['white wide detached sleeves with black trim','白黒ゴシックチャイナの付け袖'],accessory:['black decorative waist straps','黒いウエスト装飾ベルト']}},
  {id:'gothic-maid',name:'ゴシックメイド',value:'gothic maid outfit',group:'ゴシック・コスプレ',parts:{upper:['gothic frilled maid blouse','ゴシックメイドのフリルブラウス'],lower:['gothic maid skirt','ゴシックメイドのスカート'],head:['maid headdress','メイドカチューシャ'],accessory:['apron','エプロン']}},
  {id:'corset-dress',name:'コルセットドレス',value:'corset dress',group:'ゴシック・コスプレ',parts:{upper:['lace-up corset bodice','編み上げコルセット'],lower:['full dress skirt','ドレスのフレアスカート'],hands:['detached puff sleeves','パフスリーブの付け袖']}},

@@ -1,0 +1,456 @@
+{
+  "checkedAtUTC": "2026-11-13T23:45:48.901344+00:00",
+  "baselineCommit": "711147da3847a83fb23211aa7f7a0f348f316a4f",
+  "supersedesCandidate": "6c7e5525f75216c608f19c3700d86aabf48c0336",
+  "productSHA256": "7644e99623ac7982215c50ec6017fe400123ed67c68cd3f9101f448ebefbc880",
+  "correction": "Keep the existing bunny ears label うさ耳; compare every existing clothing-part tuple on upgrade.",
+  "testSourceSHA256": "98e6610e3b9877e64df64a2d5f5ea81085cc4abf2c5a0c5b1bf43f2662dd4210",
+  "results": {
+    "fixedOriginalData": {
+      "suite": "remaining-compatibility",
+      "productSHA256": "7644e99623ac7982215c50ec6017fe400123ed67c68cd3f9101f448ebefbc880",
+      "tests": [
+        {
+          "id": "FIXED-independent-original-R1-twelve-datasets-retained",
+          "status": "PASS",
+          "detail": {
+            "fixedFixtureSHA256": "e66ce65757f985a23c03d05f1d69d60d214e5169fc093abf72182cfda483d832",
+            "datasets": 12,
+            "oldCatalogRows": 3081,
+            "standardAdapters": 1444,
+            "baselineNeverRewritten": true,
+            "oldFormattedFulltextReplacedByOriginalV44ReplayAndIndependentAttribution": true
+          }
+        }
+      ],
+      "testDataOnly": true
+    },
+    "outfitSets": {
+      "suite": "outfit-sets",
+      "productSHA256": "7644e99623ac7982215c50ec6017fe400123ed67c68cd3f9101f448ebefbc880",
+      "tests": [
+        {
+          "id": "previous-main-user-data-and-all-existing-outfit-definitions-survive-update",
+          "status": "PASS",
+          "detail": {
+            "baseline": "711147da3847a83fb23211aa7f7a0f348f316a4f",
+            "existingOutfits": 1272,
+            "existingSets": 1275,
+            "existingPartRows": 2894,
+            "bunnyEarsLabel": "うさ耳",
+            "workingFavoritesHistoryOpaqueFields": true,
+            "unrelatedStorageRetained": true
+          }
+        },
+        {
+          "id": "all-21-sets-are-unique-shipped-candidates-with-editable-parts-and-valid-main-output",
+          "status": "PASS",
+          "detail": {
+            "sets": 21,
+            "details": [
+              {
+                "name": "スクール水着",
+                "value": "school swimsuit",
+                "parts": [
+                  "upper"
+                ],
+                "output": "school swimsuit"
+              },
+              {
+                "name": "競泳水着",
+                "value": "racing swimsuit",
+                "parts": [
+                  "upper"
+                ],
+                "output": "racing swimsuit"
+              },
+              {
+                "name": "セパレートスクール水着",
+                "value": "two-piece school swimsuit",
+                "parts": [
+                  "upper",
+                  "lower"
+                ],
+                "output": "school swimsuit top, school swim shorts"
+              },
+              {
+                "name": "タンキニ",
+                "value": "tankini",
+                "parts": [
+                  "upper",
+                  "lower"
+                ],
+                "output": "tankini top, bikini bottom"
+              },
+              {
+                "name": "ラッシュガードセット",
+                "value": "rash guard and swim shorts",
+                "parts": [
+                  "upper",
+                  "lower"
+                ],
+                "output": "long-sleeved rash guard, swim shorts"
+              },
+              {
+                "name": "ハイウエストビキニ",
+                "value": "high-waisted bikini",
+                "parts": [
+                  "upper",
+                  "lower"
+                ],
+                "output": "bikini top, high-waisted bikini bottom"
+              },
+              {
+                "name": "フリルビキニ",
+                "value": "frilled bikini",
+                "parts": [
+                  "upper",
+                  "lower"
+                ],
+                "output": "frilled bikini top, frilled bikini bottom"
+              },
+              {
+                "name": "サーフパンツ",
+                "value": "board shorts",
+                "parts": [
+                  "lower"
+                ],
+                "output": "board shorts"
+              },
+              {
+                "name": "マイクロビキニ",
+                "value": "micro bikini",
+                "parts": [
+                  "upper",
+                  "lower"
+                ],
+                "output": "micro bikini top, micro bikini bottom"
+              },
+              {
+                "name": "逆バニー",
+                "value": "reverse bunny suit",
+                "parts": [
+                  "upper",
+                  "head",
+                  "hands",
+                  "accessory"
+                ],
+                "output": "reverse bunny suit, bunny ears, wrist cuffs, detached collar with bow tie"
+              },
+              {
+                "name": "白黒ゴシックチャイナ",
+                "value": "black and white gothic qipao",
+                "parts": [
+                  "upper",
+                  "hands",
+                  "accessory"
+                ],
+                "output": "white gothic cutout qipao with black trim, white wide detached sleeves with black trim, black decorative waist straps"
+              },
+              {
+                "name": "ゴシックメイド",
+                "value": "gothic maid outfit",
+                "parts": [
+                  "upper",
+                  "lower",
+                  "head",
+                  "accessory"
+                ],
+                "output": "gothic frilled maid blouse, gothic maid skirt, maid headdress, apron"
+              },
+              {
+                "name": "コルセットドレス",
+                "value": "corset dress",
+                "parts": [
+                  "upper",
+                  "lower",
+                  "hands"
+                ],
+                "output": "lace-up corset bodice, full dress skirt, detached puff sleeves"
+              },
+              {
+                "name": "カットアウトドレス",
+                "value": "cutout dress",
+                "parts": [
+                  "upper"
+                ],
+                "output": "waist-cutout dress"
+              },
+              {
+                "name": "シスタードレス",
+                "value": "high-collared nun dress and veil",
+                "parts": [
+                  "upper",
+                  "head"
+                ],
+                "output": "high-collared nun dress, veil"
+              },
+              {
+                "name": "和風ゴシック",
+                "value": "wa gothic outfit",
+                "parts": [
+                  "upper",
+                  "lower",
+                  "accessory"
+                ],
+                "output": "gothic kimono-style top, frilled skirt, obi belt"
+              },
+              {
+                "name": "中華風戦闘服",
+                "value": "Chinese-style combat outfit",
+                "parts": [
+                  "upper",
+                  "lower",
+                  "hands"
+                ],
+                "output": "mandarin-collar combat top, martial arts trousers, decorative arm guards"
+              },
+              {
+                "name": "アラビアン風踊り子",
+                "value": "Arabian dancer outfit",
+                "parts": [
+                  "upper",
+                  "lower",
+                  "head"
+                ],
+                "output": "ornamented dancer top, harem pants, dancer veil"
+              },
+              {
+                "name": "ハーネスボディスーツ",
+                "value": "harness bodysuit",
+                "parts": [
+                  "upper",
+                  "accessory",
+                  "feet"
+                ],
+                "output": "harness bodysuit, boots, decorative harness straps"
+              },
+              {
+                "name": "サイバーボディスーツ",
+                "value": "cybernetic bodysuit",
+                "parts": [
+                  "upper",
+                  "hands",
+                  "accessory"
+                ],
+                "output": "futuristic bodysuit, futuristic armored bracers, glowing circuit ornaments"
+              },
+              {
+                "name": "騎士姫ドレス",
+                "value": "armored princess dress",
+                "parts": [
+                  "upper",
+                  "lower",
+                  "hands"
+                ],
+                "output": "dress bodice with breastplate, royal dress skirt, gauntlets"
+              }
+            ]
+          }
+        },
+        {
+          "id": "main-search-finds-all-21-sets-in-Japanese-and-English-and-selects-school-swimsuit",
+          "status": "PASS",
+          "detail": {
+            "JapaneseQueries": 21,
+            "EnglishQueries": 21,
+            "realMainSelection": true
+          }
+        },
+        {
+          "id": "set-expansion-preserves-manual-parts-colors-weights-exclusions-and-switches-untouched-parts",
+          "status": "PASS",
+          "detail": {
+            "manualPartsAndMetadata": true,
+            "unrelatedWeaponAndOpaqueField": true,
+            "inheritedColorAndWeight": true,
+            "switching": true,
+            "intentionalRemoval": true,
+            "qipaoRecoloring": true
+          }
+        },
+        {
+          "id": "manga-selects-and-generates-all-21-shared-sets-without-mutating-main",
+          "status": "PASS",
+          "detail": {
+            "sets": 21,
+            "schoolSwimsuit": true,
+            "microBikini": true,
+            "reverseBunny": true,
+            "qipao": true,
+            "mainBytesRetained": true
+          }
+        },
+        {
+          "id": "new-wardrobe-parts-weight-color-and-own-JSON-survive-save-reload-and-restore",
+          "status": "PASS",
+          "detail": {
+            "weight": 1.3,
+            "color": "blue",
+            "namedSave": true,
+            "JSONExportImport": true,
+            "reload": true
+          }
+        },
+        {
+          "id": "old-user-candidate-with-the-same-value-keeps-ID-edits-hidden-state-and-custom-set",
+          "status": "PASS",
+          "detail": {
+            "existingIDAndLabel": true,
+            "noDuplicateValue": true,
+            "customSetAndEditedOutput": true,
+            "hiddenState": true,
+            "profileRetained": true
+          }
+        }
+      ],
+      "baseline": "711147da3847a83fb23211aa7f7a0f348f316a4f",
+      "addedSets": [
+        [
+          "スクール水着",
+          "school swimsuit"
+        ],
+        [
+          "競泳水着",
+          "racing swimsuit"
+        ],
+        [
+          "セパレートスクール水着",
+          "two-piece school swimsuit"
+        ],
+        [
+          "タンキニ",
+          "tankini"
+        ],
+        [
+          "ラッシュガードセット",
+          "rash guard and swim shorts"
+        ],
+        [
+          "ハイウエストビキニ",
+          "high-waisted bikini"
+        ],
+        [
+          "フリルビキニ",
+          "frilled bikini"
+        ],
+        [
+          "サーフパンツ",
+          "board shorts"
+        ],
+        [
+          "マイクロビキニ",
+          "micro bikini"
+        ],
+        [
+          "逆バニー",
+          "reverse bunny suit"
+        ],
+        [
+          "白黒ゴシックチャイナ",
+          "black and white gothic qipao"
+        ],
+        [
+          "ゴシックメイド",
+          "gothic maid outfit"
+        ],
+        [
+          "コルセットドレス",
+          "corset dress"
+        ],
+        [
+          "カットアウトドレス",
+          "cutout dress"
+        ],
+        [
+          "シスタードレス",
+          "high-collared nun dress and veil"
+        ],
+        [
+          "和風ゴシック",
+          "wa gothic outfit"
+        ],
+        [
+          "中華風戦闘服",
+          "Chinese-style combat outfit"
+        ],
+        [
+          "アラビアン風踊り子",
+          "Arabian dancer outfit"
+        ],
+        [
+          "ハーネスボディスーツ",
+          "harness bodysuit"
+        ],
+        [
+          "サイバーボディスーツ",
+          "cybernetic bodysuit"
+        ],
+        [
+          "騎士姫ドレス",
+          "armored princess dress"
+        ]
+      ],
+      "syntheticDataOnly": true,
+      "pageErrors": [],
+      "storageSchemaUnchanged": true
+    },
+    "quality": {
+      "suite": "quality",
+      "productSHA256": "7644e99623ac7982215c50ec6017fe400123ed67c68cd3f9101f448ebefbc880",
+      "tests": [
+        {
+          "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
+          "status": "PASS",
+          "detail": {
+            "scripts": 37,
+            "parseDiagnostics": []
+          }
+        },
+        {
+          "id": "JS-all37-inline-and-maintained-modules-parse",
+          "status": "PASS",
+          "detail": {
+            "inlineScripts": 37,
+            "reassignments": 1739
+          }
+        },
+        {
+          "id": "JSON-all-maintained-data-parse",
+          "status": "PASS",
+          "detail": {
+            "jsonFiles": 10
+          }
+        },
+        {
+          "id": "BUILD-clean-byte-identical-independent-output",
+          "status": "PASS",
+          "detail": {
+            "sha256": "7644e99623ac7982215c50ec6017fe400123ed67c68cd3f9101f448ebefbc880",
+            "inputIsNotIndexHTML": true
+          }
+        },
+        {
+          "id": "PWA-manifest-relative-paths-shell-and-private-data-boundaries",
+          "status": "PASS",
+          "detail": {
+            "scope": "./",
+            "startURL": "./index.html",
+            "icons": 3
+          }
+        },
+        {
+          "id": "SAVE-namespace-version-and-latest-candidate-contract-retained",
+          "status": "PASS",
+          "detail": {
+            "savedNamespacesUnchanged": true,
+            "currentCandidateViewAllOwners": true
+          }
+        }
+      ],
+      "parseDiagnostics": [],
+      "sourceSHA256": "7644e99623ac7982215c50ec6017fe400123ed67c68cd3f9101f448ebefbc880"
+    }
+  },
+  "syntheticDataOnly": true
+}

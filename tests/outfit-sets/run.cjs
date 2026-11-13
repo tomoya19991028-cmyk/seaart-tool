@@ -16,13 +16,14 @@ const expected=[
   const close=()=>p.evaluate(()=>{for(const d of $('simpleMangaTool').shadowRoot.querySelectorAll('dialog[open]'))d.close()});
   const wardrobe=async part=>{await close();await r.locator('[data-card-id="12"]').getByRole('button',{name:'衣装・部位を選ぶ',exact:true}).click();await r.locator('[data-wardrobe-part="'+part+'"]').click()};
   const option=name=>picker.locator('.option-card').filter({has:p.getByText(name,{exact:true})});
-  let beforeUser,beforeCatalog,beforeSets;
+  let beforeUser,beforeCatalog,beforeSets,beforeDetails;
   await s.test('previous-main-user-data-and-all-existing-outfit-definitions-survive-update',async()=>{
    await p.evaluate(()=>{originalCharacters=[{id:'original-outfit-audit',name:'衣装追加の保存検証',type:'adult woman'}];profiles={'original-outfit-audit':{hairPrimary:catalog.hairColor.find(x=>x.value==='blue hair').id,outfit:[catalog.outfit.find(x=>x.value==='bikini').id],detail:{damage:['bruise'],weapon:['spear']},futureMetadata:{opaque:['retain','保持']}}};renderProfiles();$('extra').value='衣装追加前の保存内容';$('favoriteName').value='衣装追加前のお気に入り';$('saveFavorite').click();$('generate').click();if(!persist())throw Error('fixture save failed');clearTimeout(workingSaveTimer);localStorage.setItem('__outfit_unrelated','keep')});
-   beforeUser=await user();({catalog:beforeCatalog,sets:beforeSets}=await p.evaluate(()=>({catalog:catalog.outfit,sets:outfitSets})));
+   beforeUser=await user();({catalog:beforeCatalog,sets:beforeSets,details:beforeDetails}=await p.evaluate(()=>({catalog:catalog.outfit,sets:outfitSets,details:Object.fromEntries(['upper','lower','feet','legwear','head','hands','accessory'].map(k=>[k,detailOptions[k].options]))})));
    overrides['index.html']=candidate;await p.reload();await p.waitForFunction(()=>appReady&&actorFormStorageReady);assert.equal(hash(await user()),hash(beforeUser),'existing user state retained');assert.equal(await p.evaluate(()=>localStorage.getItem('__outfit_unrelated')),'keep');
-   const after=await p.evaluate(()=>({catalog:catalog.outfit,sets:outfitSets}));for(const row of beforeCatalog){const next=after.catalog.find(x=>x.id===row.id);assert(next,row.id+' retained');assert.equal(next.name,row.name);assert.equal(next.value,row.value)}for(const [value,parts]of Object.entries(beforeSets))assert.deepEqual(after.sets[value],parts,'old set retained '+value);
-   return {baseline,existingOutfits:beforeCatalog.length,existingSets:Object.keys(beforeSets).length,workingFavoritesHistoryOpaqueFields:true,unrelatedStorageRetained:true};
+   const after=await p.evaluate(()=>({catalog:catalog.outfit,sets:outfitSets,details:Object.fromEntries(['upper','lower','feet','legwear','head','hands','accessory'].map(k=>[k,detailOptions[k].options]))}));for(const row of beforeCatalog){const next=after.catalog.find(x=>x.id===row.id);assert(next,row.id+' retained');assert.equal(next.name,row.name);assert.equal(next.value,row.value)}for(const [value,parts]of Object.entries(beforeSets))assert.deepEqual(after.sets[value],parts,'old set retained '+value);
+   for(const [field,rows]of Object.entries(beforeDetails))for(const row of rows)assert.deepEqual(after.details[field].find(r=>r[0]===row[0]),row,'old part label/group retained '+field+'/'+row[0]);assert.deepEqual(after.details.head.find(r=>r[0]==='bunny ears'),['bunny ears','うさ耳','帽子・頭装備']);
+   return {baseline,existingOutfits:beforeCatalog.length,existingSets:Object.keys(beforeSets).length,existingPartRows:Object.values(beforeDetails).reduce((n,rows)=>n+rows.length,0),bunnyEarsLabel:'うさ耳',workingFavoritesHistoryOpaqueFields:true,unrelatedStorageRetained:true};
   });
   await s.test('all-21-sets-are-unique-shipped-candidates-with-editable-parts-and-valid-main-output',async()=>{
    const result=await p.evaluate(expected=>{
