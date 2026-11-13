@@ -1,0 +1,73 @@
+const fs=require('fs'),path=require('path'),cp=require('child_process');
+const {root,launch,pageFor,startServer,suite,assert,hash}=require('../v44-audit/helpers.cjs');
+const expected=[
+ ['スクール水着','school swimsuit'],['競泳水着','racing swimsuit'],['セパレートスクール水着','two-piece school swimsuit'],['タンキニ','tankini'],['ラッシュガードセット','rash guard and swim shorts'],['ハイウエストビキニ','high-waisted bikini'],['フリルビキニ','frilled bikini'],['サーフパンツ','board shorts'],['マイクロビキニ','micro bikini'],['逆バニー','reverse bunny suit'],['白黒ゴシックチャイナ','black and white gothic qipao'],['ゴシックメイド','gothic maid outfit'],['コルセットドレス','corset dress'],['カットアウトドレス','cutout dress'],['シスタードレス','high-collared nun dress and veil'],['和風ゴシック','wa gothic outfit'],['中華風戦闘服','Chinese-style combat outfit'],['アラビアン風踊り子','Arabian dancer outfit'],['ハーネスボディスーツ','harness bodysuit'],['サイバーボディスーツ','cybernetic bodysuit'],['騎士姫ドレス','armored princess dress']
+];
+(async()=>{
+ const s=suite('outfit-sets'),baseline='711147da3847a83fb23211aa7f7a0f348f316a4f';
+ const oldHTML=cp.execFileSync('git',['show',baseline+':index.html'],{cwd:root,maxBuffer:12*1024*1024}),candidate=fs.readFileSync(path.join(root,'index.html'));
+ const overrides={'index.html':oldHTML},server=await startServer({assetOverrides:overrides}),browser=await launch();let current;
+ try{
+  current=await pageFor(browser,server.url);const p=current.page,r=p.locator('#simpleMangaTool'),picker=r.locator('#picker');
+  const user=()=>p.evaluate(()=>hCanonical({working:captureWorking(),favorites,promptHistory,personOptionEdits,keys:actorFormStorageKeys}));
+  const snap=()=>p.evaluate(()=>$('simpleMangaTool').simpleManga.snapshot());
+  const mainBytes=()=>p.evaluate(()=>{clearTimeout(workingSaveTimer);return hCanonical({working:captureWorking(),keys:Object.fromEntries(Object.values(actorFormStorageKeys).map(k=>[k,localStorage.getItem(k)]))})});
+  const open=async()=>{await p.locator('#menuOpen').click();await p.locator('#menuSimpleManga').click()};
+  const close=()=>p.evaluate(()=>{for(const d of $('simpleMangaTool').shadowRoot.querySelectorAll('dialog[open]'))d.close()});
+  const wardrobe=async part=>{await close();await r.locator('[data-card-id="12"]').getByRole('button',{name:'衣装・部位を選ぶ',exact:true}).click();await r.locator('[data-wardrobe-part="'+part+'"]').click()};
+  const option=name=>picker.locator('.option-card').filter({has:p.getByText(name,{exact:true})});
+  let beforeUser,beforeCatalog,beforeSets;
+  await s.test('previous-main-user-data-and-all-existing-outfit-definitions-survive-update',async()=>{
+   await p.evaluate(()=>{originalCharacters=[{id:'original-outfit-audit',name:'衣装追加の保存検証',type:'adult woman'}];profiles={'original-outfit-audit':{hairPrimary:catalog.hairColor.find(x=>x.value==='blue hair').id,outfit:[catalog.outfit.find(x=>x.value==='bikini').id],detail:{damage:['bruise'],weapon:['spear']},futureMetadata:{opaque:['retain','保持']}}};renderProfiles();$('extra').value='衣装追加前の保存内容';$('favoriteName').value='衣装追加前のお気に入り';$('saveFavorite').click();$('generate').click();if(!persist())throw Error('fixture save failed');clearTimeout(workingSaveTimer);localStorage.setItem('__outfit_unrelated','keep')});
+   beforeUser=await user();({catalog:beforeCatalog,sets:beforeSets}=await p.evaluate(()=>({catalog:catalog.outfit,sets:outfitSets})));
+   overrides['index.html']=candidate;await p.reload();await p.waitForFunction(()=>appReady&&actorFormStorageReady);assert.equal(hash(await user()),hash(beforeUser),'existing user state retained');assert.equal(await p.evaluate(()=>localStorage.getItem('__outfit_unrelated')),'keep');
+   const after=await p.evaluate(()=>({catalog:catalog.outfit,sets:outfitSets}));for(const row of beforeCatalog){const next=after.catalog.find(x=>x.id===row.id);assert(next,row.id+' retained');assert.equal(next.name,row.name);assert.equal(next.value,row.value)}for(const [value,parts]of Object.entries(beforeSets))assert.deepEqual(after.sets[value],parts,'old set retained '+value);
+   return {baseline,existingOutfits:beforeCatalog.length,existingSets:Object.keys(beforeSets).length,workingFavoritesHistoryOpaqueFields:true,unrelatedStorageRetained:true};
+  });
+  await s.test('all-21-sets-are-unique-shipped-candidates-with-editable-parts-and-valid-main-output',async()=>{
+   const result=await p.evaluate(expected=>{
+    const check=(v,label)=>{if(!v)throw Error(label)},details=[];
+    for(const [name,value]of expected){const rows=catalog.outfit.filter(x=>x.value===value);check(rows.length===1,'unique '+name);const row=rows[0];check(row.name===name,'label '+name);check(maBuiltinCatalog.outfit.has(row.id),'shipped '+name);check(characterCandidateOwners('catalog:outfit',row.id)===null,'generic '+name);check(mbStandard.outfitSets[value],'foundation '+name);
+     const profile={outfit:[row.id],detail:{},futureMetadata:{keep:true}};expandOutfitSelection(profile);const parts=outfitSetForValue(value);check(parts&&Object.keys(parts).length,'parts '+name);
+     for(const [field,raw]of Object.entries(parts)){const tag=outfitDetailValue(field,raw);check(detailBuiltin[field].some(x=>x[0]===tag)&&detailOptions[field].options.some(x=>x[0]===tag),'part registered '+name+'/'+field);check(profile.detail[field]?.includes(tag),'part expanded '+name+'/'+field);check(detailLabel(field,tag)!==tag,'Japanese label '+tag)}
+     const output=profileTags(profile).join(', ');for(const [field,raw]of Object.entries(parts))check(output.includes(outfitDetailValue(field,raw)),'part output '+name+'/'+field);check(!/undefined|\[object Object\]/.test(output),'output '+name);details.push({name,value,parts:Object.keys(parts),output});
+    }
+    check(outfitSets['school swimsuit'].upper==='school swimsuit','required school swimsuit');check(!outfitSets['school swimsuit'].lower,'one-piece without duplicate bottom');check(outfitSets['two-piece school swimsuit'].lower==='school swim shorts','separate school swimsuit bottom');check(outfitSets['micro bikini'].upper==='micro bikini top'&&outfitSets['micro bikini'].lower==='micro bikini bottom','micro two-piece');check(Object.keys(outfitSets['board shorts']).join()==='lower','board shorts do not impose an upper garment');
+    return details;
+   },expected);return {sets:result.length,details:result};
+  });
+  await s.test('main-search-finds-all-21-sets-in-Japanese-and-English-and-selects-school-swimsuit',async()=>{
+   await p.evaluate(()=>openChoiceDialog('outfit'));const list=p.locator('#choiceDialogChoices');
+   for(const [name,value]of expected){for(const query of [name,value]){await p.locator('#choiceDialogSearch').fill(query);assert.equal(await list.getByText(name,{exact:true}).count(),1,'main search '+query)}}
+   await p.locator('#choiceDialogSearch').fill('スクール水着');await list.getByText('スクール水着',{exact:true}).click();assert(await p.evaluate(()=>selected.outfit.some(id=>item('outfit',id)?.value==='school swimsuit')));await p.evaluate(()=>$('choiceDialog').close());return {JapaneseQueries:21,EnglishQueries:21,realMainSelection:true};
+  });
+  await s.test('set-expansion-preserves-manual-parts-colors-weights-exclusions-and-switches-untouched-parts',async()=>{
+   return p.evaluate(()=>{
+    const check=(v,label)=>{if(!v)throw Error(label)},school=catalog.outfit.find(x=>x.value==='school swimsuit'),micro=catalog.outfit.find(x=>x.value==='micro bikini');
+    const profile={outfit:[school.id],detail:{upper:['t-shirt'],weapon:['spear']},detailCustom:{upper:'hand stitched trim'},itemWeights:{upper:{'t-shirt':1.3}},itemColors:{upper:{'t-shirt':{primary:'red'}}},futureMetadata:{keep:'保持'}};expandOutfitSelection(profile);check(profile.detail.upper.join()==='t-shirt','manual top retained');check(profile.detail.weapon.join()==='spear','weapon retained');check(profile.itemColors.upper['t-shirt'].primary==='red'&&profile.itemWeights.upper['t-shirt']===1.3,'manual metadata retained');
+    const fresh={outfit:[school.id],detail:{},itemColors:{outfit:{'school swimsuit':{primary:'blue'}}},itemWeights:{outfit:{'school swimsuit':1.2}}};expandOutfitSelection(fresh);check(profileTags(fresh).some(t=>t.includes('blue school swimsuit')&&t.includes(':1.2')),'inherited color and weight');fresh.outfit=[micro.id];expandOutfitSelection(fresh);check(fresh.detail.upper.join()==='micro bikini top'&&fresh.detail.lower.join()==='micro bikini bottom','untouched parts switch');fresh.detail.upper=[];fresh.outfitExcluded={'micro bikini':{upper:['micro bikini top']}};expandOutfitSelection(fresh);check(!fresh.detail.upper.length,'intentional removal retained');
+    const q={outfit:[catalog.outfit.find(x=>x.value==='black and white gothic qipao').id],detail:{}};expandOutfitSelection(q);const top=q.detail.upper[0];q.itemColors={upper:{[top]:{primary:'red'}}};const out=profileTags(q).join(', ');check(out.includes('red gothic cutout qipao')&&!out.includes('red white gothic'),'color replaces the default white prefix');
+    return {manualPartsAndMetadata:true,unrelatedWeaponAndOpaqueField:true,inheritedColorAndWeight:true,switching:true,intentionalRemoval:true,qipaoRecoloring:true};
+   });
+  });
+  await s.test('manga-selects-and-generates-all-21-shared-sets-without-mutating-main',async()=>{
+   await p.evaluate(()=>{if(!persist())throw Error('main save failed');clearTimeout(workingSaveTimer)});const before=await mainBytes();await open();
+   const mapping={upper:'top',lower:'bottom',feet:'shoes',legwear:'legwear',head:'head',hands:'hands',accessory:'accessory'};
+   for(const [name,value]of expected){await wardrobe('outfit');await picker.locator('#pickerSearch').fill(name);assert.equal(await option(name).count(),1,'manga generic candidate '+name);await option(name).click();const state=await snap();assert.equal(state.simple._wardrobe.outfit[0].tag,value);const parts=await p.evaluate(value=>outfitSetForValue(value),value);for(const [field,tag]of Object.entries(parts))assert(state.simple._wardrobe[mapping[field]].some(x=>x.tag===tag),name+'/'+field);const output=await p.evaluate(()=>$('simpleMangaTool').simpleManga.positive());for(const tag of Object.values(parts))assert(output.includes(tag),'manga output '+name);}
+   await close();assert.equal(hash(await mainBytes()),hash(before),'manga selections do not write main state');return {sets:21,schoolSwimsuit:true,microBikini:true,reverseBunny:true,qipao:true,mainBytesRetained:true};
+  });
+  await s.test('new-wardrobe-parts-weight-color-and-own-JSON-survive-save-reload-and-restore',async()=>{
+   await wardrobe('outfit');await picker.locator('#pickerSearch').fill('スクール水着');await option('スクール水着').click();await wardrobe('top');await picker.locator('#pickerSearch').fill('スクール水着');const row=await snap();assert.equal(row.simple._wardrobe.top.filter(x=>x.tag==='school swimsuit').length,1);await picker.getByLabel('スクール水着の重み',{exact:true}).selectOption('1.3');await close();
+   await r.locator('[data-card-id="12"]').getByRole('button',{name:'衣装・部位を選ぶ',exact:true}).click();await r.locator('[data-wardrobe-part="top"] .wardrobe-color-button').click();const blue=r.locator('.palette-grid').getByRole('button',{name:'青',exact:true});assert.equal(await blue.count(),1);await blue.click();await close();
+   const before=await snap();assert.equal(before.simple._wardrobe.top.find(x=>x.tag==='school swimsuit').weight,1.3);assert(before.simple._wardrobe.topColor.some(x=>x.tag==='blue'));await r.locator('#simpleData').click();const d=r.locator('dialog.option-editor');await d.locator('input').first().fill('追加水着の保存');await d.getByRole('button',{name:'名前を付けて保存',exact:true}).click();const download=p.waitForEvent('download');await r.getByRole('button',{name:'JSONバックアップ',exact:true}).click();const file=path.join(s.out,'synthetic-outfit-save.json');await (await download).saveAs(file);await close();const saved=await snap();await p.reload();await p.waitForFunction(()=>appReady&&actorFormStorageReady);await open();assert.deepEqual(await snap(),saved);
+   await r.locator('#simpleData').click();await r.locator('dialog.option-editor input[type=file]').setInputFiles(file);await p.waitForFunction(()=>$('simpleMangaTool').shadowRoot.querySelector('dialog.option-editor').open===false);assert.deepEqual(await snap(),saved);return {weight:1.3,color:'blue',namedSave:true,JSONExportImport:true,reload:true};
+  });
+  await s.test('old-user-candidate-with-the-same-value-keeps-ID-edits-hidden-state-and-custom-set',async()=>{
+   overrides['index.html']=oldHTML;const other=await pageFor(browser,server.url);try{const q=other.page;
+    const before=await q.evaluate(()=>{catalog.outfit.push({id:'custom-existing-school',name:'自分のスクール水着',value:'school swimsuit',group:'個人用'});detailBuiltin.upper.push(['custom school swim top','自分の水着トップス','個人用']);detailOptions.upper.options.push(['custom school swim top','自分の水着トップス','個人用']);outfitSets['school swimsuit']={upper:'custom school swim top'};mainMaintenance.hidden.push(maKey('catalog:outfit','custom-existing-school'));personOptionEdits['detail:upper|custom school swim top']={name:'編集済みトップス',value:'custom edited swim top',group:'個人用'};originalCharacters=[{id:'original-custom-outfit',name:'個人衣装',type:'adult woman'}];profiles={'original-custom-outfit':{outfit:['custom-existing-school'],detail:{upper:['custom school swim top']},outfitExpandedFrom:'school swimsuit',futureMetadata:{keep:'保持'}}};renderProfiles();mbRememberFoundations();if(!persist())throw Error('custom fixture save failed');clearTimeout(workingSaveTimer);return hCanonical({profile:profiles['original-custom-outfit'],edit:personOptionEdits['detail:upper|custom school swim top']})});
+    overrides['index.html']=candidate;await q.reload();await q.waitForFunction(()=>appReady&&actorFormStorageReady);const after=await q.evaluate(()=>({rows:catalog.outfit.filter(x=>x.value==='school swimsuit'),hidden:maIsHidden('catalog:outfit','custom-existing-school'),parts:outfitSets['school swimsuit'],state:hCanonical({profile:profiles['original-custom-outfit'],edit:personOptionEdits['detail:upper|custom school swim top']})}));assert.equal(after.rows.length,1);assert.equal(after.rows[0].id,'custom-existing-school');assert.equal(after.rows[0].name,'自分のスクール水着');assert(after.hidden);assert.deepEqual(after.parts,{upper:'custom school swim top'});assert.equal(after.state,before);assert.deepEqual(other.errors,[]);return {existingIDAndLabel:true,noDuplicateValue:true,customSetAndEditedOutput:true,hiddenState:true,profileRetained:true};
+   }finally{overrides['index.html']=candidate;await other.context.close()}
+  });
+  assert.deepEqual(current.errors,[]);s.save({baseline,addedSets:expected,syntheticDataOnly:true,pageErrors:current.errors,storageSchemaUnchanged:true});
+ }finally{if(current)await current.context.close();await browser.close();await server.close()}
+})().catch(e=>{console.error(e.stack);process.exitCode=1});
