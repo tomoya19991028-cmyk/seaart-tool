@@ -11,11 +11,13 @@ const mainDisk=p=>p.evaluate(()=>{clearTimeout(workingSaveTimer);return hCanonic
 const filterButtons='.quickTabs>button,.candidateQuickTabs>button,.simpleTabs>button,.dialog-filters>button,.smu-filters>button,.smu-audience>button,.bdTabs>button,.bdQuick>button';
 async function filterBounds(d){return d.evaluate((dialog,selector)=>{
  const frame=dialog.getBoundingClientRect();
- return [...dialog.querySelectorAll(selector)].filter(e=>e.checkVisibility()).map(e=>{
+ const buttons=[...dialog.querySelectorAll(selector)].filter(e=>e.checkVisibility());
+ return buttons.map(e=>{
   const r=e.getBoundingClientRect(),parent=e.parentElement.getBoundingClientRect();
-  return {name:e.textContent.trim(),left:r.left,right:r.right,width:r.width,height:r.height,font:getComputedStyle(e).fontSize,
+  return {name:e.textContent.trim(),left:r.left,right:r.right,top:r.top,width:r.width,height:r.height,font:getComputedStyle(e).fontSize,
    clipped:r.left<Math.max(frame.left,parent.left)-1||r.right>Math.min(frame.right,parent.right)+1,
-   textOverflow:e.scrollWidth>e.clientWidth+2||e.scrollHeight>e.clientHeight+2};
+   textOverflow:e.scrollWidth>e.clientWidth+2||e.scrollHeight>e.clientHeight+2,
+   overlap:buttons.some(other=>{if(other===e)return false;const o=other.getBoundingClientRect();return Math.min(r.right,o.right)-Math.max(r.left,o.left)>1&&Math.min(r.bottom,o.bottom)-Math.max(r.top,o.top)>1})};
  });
 },filterButtons)}
 async function enlargeFilterText(d){await d.evaluate((dialog,selector)=>{
@@ -69,7 +71,8 @@ async function metrics(d){return d.evaluate(el=>{const rect=e=>{const r=e.getBou
      if(largeText)await enlargeFilterText(d);
      const before=await q.evaluate(()=>hCanonical(profiles['original-selection-ui']));
      const rows=await filterBounds(d);assert.equal(rows.length,6,'all six outfit filters are visible');
-     assert(rows.every(x=>!x.clipped&&!x.textOverflow&&x.width>=43&&x.height>=39),'all filter buttons and labels fit '+JSON.stringify(rows));
+     assert(rows.every(x=>!x.clipped&&!x.textOverflow&&!x.overlap&&x.width>=43&&x.height>=39),'all filter buttons and labels fit without overlap '+JSON.stringify(rows));
+     assert(Math.max(...rows.slice(0,4).map(x=>x.top))-Math.min(...rows.slice(0,4).map(x=>x.top))<1,'four primary filters stay on one row');
      if(largeText)assert(rows.every(x=>x.font==='18px'),'actual filter text is enlarged');
      assert.equal(await d.locator('.pickedRow').count(),1,'selected outfit summary retained');
      const picked=await d.locator('.pickedRow').evaluate(e=>{const r=e.getBoundingClientRect(),d=e.closest('dialog').getBoundingClientRect();return {left:r.left,right:r.right,fits:r.left>=d.left&&r.right<=d.right}});assert(picked.fits);
@@ -78,7 +81,8 @@ async function metrics(d){return d.evaluate(el=>{const rect=e=>{const r=e.getBou
       const button=d.locator('#personQuickTabs '+selector);const box=await button.boundingBox();
       await button.tap({position:{x:box.width-4,y:box.height/2}});
       assert.equal(await button.getAttribute('aria-pressed'),'true','right edge activates '+selector);
-      assert((await filterBounds(d)).every(x=>!x.clipped&&!x.textOverflow),'redraw keeps filters inside frame');
+      const updated=await filterBounds(d);assert(updated.every(x=>!x.clipped&&!x.textOverflow&&!x.overlap),'redraw keeps filters inside frame without overlap');
+      assert(Math.max(...updated.slice(0,4).map(x=>x.top))-Math.min(...updated.slice(0,4).map(x=>x.top))<1,'redraw keeps four primary filters on one row');
      }
      assert.equal(await q.evaluate(()=>hCanonical(profiles['original-selection-ui'])),before,'filter operations preserve chosen outfit and metadata');
      assert.deepEqual(other.errors,[]);evidence.push({width,largeText,buttons:rows,selectedRow:picked,rightEdgeTouch:true,selectionRetained:true});
@@ -94,12 +98,12 @@ async function metrics(d){return d.evaluate(el=>{const rect=e=>{const r=e.getBou
      const q=other.page;await seed(q);
      for(const kind of ['background','catalog','person','creature','scene','relation','simple']){
       const d=await openFamily(q,kind);await d.locator('.selectionHead').waitFor();if(largeText)await enlargeFilterText(d);
-      const buttons=await filterBounds(d);assert(buttons.every(x=>!x.clipped&&!x.textOverflow),kind+' filters fit '+JSON.stringify(buttons));
+      const buttons=await filterBounds(d);assert(buttons.every(x=>!x.clipped&&!x.textOverflow&&!x.overlap),kind+' filters fit without overlap '+JSON.stringify(buttons));
       evidence.push({kind,largeText,buttons});await closeAll(q);
      }
      const r=await openManga(q);for(const kind of ['managed','legacy']){
       const d=await mangaPicker(q,r,kind);await d.locator('.selectionHead').waitFor();if(largeText)await enlargeFilterText(d);
-      const buttons=await filterBounds(d);assert(buttons.length>0,kind+' filter controls covered');assert(buttons.every(x=>!x.clipped&&!x.textOverflow),kind+' manga filters fit '+JSON.stringify(buttons));
+      const buttons=await filterBounds(d);assert(buttons.length>0,kind+' filter controls covered');assert(buttons.every(x=>!x.clipped&&!x.textOverflow&&!x.overlap),kind+' manga filters fit without overlap '+JSON.stringify(buttons));
       await q.screenshot({path:path.join(s.out,'filter-'+kind+(largeText?'-large':'')+'.png')});evidence.push({kind,largeText,buttons});await closeAll(q);
      }
      assert.deepEqual(other.errors,[]);
