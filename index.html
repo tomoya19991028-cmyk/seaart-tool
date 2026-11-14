@@ -1647,6 +1647,45 @@ function bdRenderEffectList(body,effective,include=()=>true){
 function bdEffectInspector(body,id,current){const d=bdEffectDef(id),row=bdEffectRow(id);if(!row)return;const box=node('section',undefined,'bdInspector'),pending=bdUI.pending[id]??={};box.id='bdEffectInspector';box.append(node('h3',row.name));if(d?.strength){box.append(bdSelect('強さ',[['',current?'旧指定（強さ未指定）':'未指定（まだ有効にしない）'],['weak','弱'],['medium','中'],['strong','強']],current?.strength||'',v=>v?bdSetEffect(id,{...current,...pending,strength:v}):bdSetEffect(id,null)))}if(d?.scope==='flex')box.append(bdSelect('効果の範囲',Object.entries(bdScopeNames),current?.scope||pending.scope||'all',v=>{pending.scope=v;if(current)bdSetEffect(id,{...current,scope:v})}));else box.append(node('p','範囲：'+bdScopeNames[d?.scope==='background'?'background':d?.scope==='foreground'?'foreground':'all'],'hint'));if(['screen-film-grain','screen-noise'].includes(id))box.append(bdSelect('粒の粗さ',[['','未指定'],['fine','細かい'],['medium','標準'],['coarse','粗い']],current?.grain||pending.grain||'',v=>{if(v)pending.grain=v;else delete pending.grain;if(current){const next={...current};if(v)next.grain=v;else delete next.grain;bdSetEffect(id,next)}}));box.append(node('p','強弱は英文による指示です。数値の重みやピクセル単位の適用範囲ではありません。','hint'),bdButton('設定を閉じる',()=>{bdUI.editingEffect=null;bdRenderList()}));body.append(box)}
 function bdEditEffectCandidate(row=null){let d=$('screenEffectCandidateEditor');if(d)d.remove();d=node('dialog');d.id='screenEffectCandidateEditor';d.className='bdDialog';const head=node('div',undefined,'bdHead'),body=node('div',undefined,'bdBody'),foot=node('div',undefined,'bdFooter');head.append(node('h2',row?'画面効果を編集':'画面効果を追加'));const name=node('input'),english=node('textarea'),group=node('select');name.value=row?.name||'';english.value=row?.value||'';name.setAttribute('aria-label','日本語名');english.setAttribute('aria-label','英語タグ');for(const v of ['光学','色調','ぼかし・動き','質感'])group.add(new Option(v,v));group.value=row?.group||bdUI.tab;group.setAttribute('aria-label','効果の分類');body.append(node('label','日本語名'),name,node('label','英語タグ'),english,node('label','分類'),group);if(row)body.append(bdButton(bdHidden('catalog:screenEffect',row.id)?'候補を再表示':'候補を非表示',()=>{bdHide('screenEffect',row.id);d.close()}));foot.append(bdButton('キャンセル',()=>d.close()),bdButton('保存',()=>{afAssert(name.value.trim()&&english.value.trim(),'日本語名と英語タグを入力してください');afAssert(!catalog.screenEffect.some(r=>r.id!==row?.id&&(r.name===name.value.trim()||r.value===english.value.trim())),'同じ名前または英語タグの候補があります');bdMutate('画面効果の候補を編集',()=>{if(row)Object.assign(catalog.screenEffect.find(r=>r.id===row.id),{name:name.value.trim(),value:english.value.trim(),group:group.value});else catalog.screenEffect.push({id:'screen-custom-'+crypto.randomUUID(),name:name.value.trim(),value:english.value.trim(),group:group.value})});d.close()}));d.append(head,body,foot);document.body.append(d);d.showModal()}
 
+// Shipped wardrobe definitions. Register before settings merge and foundation capture.
+// Tuples contain [prompt value, Japanese label]; colors remain editable per part.
+const waOutfitAdditions=[
+ {id:'school-swimsuit',name:'スクール水着',value:'school swimsuit',group:'水着・スポーツ',parts:{upper:['school swimsuit','スクール水着']}},
+ {id:'racing-swimsuit',name:'競泳水着',value:'racing swimsuit',group:'水着・スポーツ',parts:{upper:['racing swimsuit','競泳水着']}},
+ {id:'separate-school-swimsuit',name:'セパレートスクール水着',value:'two-piece school swimsuit',group:'水着・スポーツ',parts:{upper:['school swimsuit top','スクール水着のトップス'],lower:['school swim shorts','スクール水着のパンツ']}},
+ {id:'tankini',name:'タンキニ',value:'tankini',group:'水着・スポーツ',parts:{upper:['tankini top','タンキニのトップス'],lower:['bikini bottom','水着の下']}},
+ {id:'rash-guard-set',name:'ラッシュガードセット',value:'rash guard and swim shorts',group:'水着・スポーツ',parts:{upper:['long-sleeved rash guard','長袖ラッシュガード'],lower:['swim shorts','スイムパンツ']}},
+ {id:'high-waisted-bikini',name:'ハイウエストビキニ',value:'high-waisted bikini',group:'水着・スポーツ',parts:{upper:['bikini top','水着の上'],lower:['high-waisted bikini bottom','ハイウエストビキニの下']}},
+ {id:'frilled-bikini',name:'フリルビキニ',value:'frilled bikini',group:'水着・スポーツ',parts:{upper:['frilled bikini top','フリルビキニの上'],lower:['frilled bikini bottom','フリルビキニの下']}},
+ {id:'board-shorts',name:'サーフパンツ',value:'board shorts',group:'水着・スポーツ',parts:{lower:['board shorts','サーフパンツ']}},
+ {id:'micro-bikini',name:'マイクロビキニ',value:'micro bikini',group:'水着・スポーツ',parts:{upper:['micro bikini top','マイクロビキニの上'],lower:['micro bikini bottom','マイクロビキニの下']}},
+ {id:'reverse-bunny',name:'逆バニー',value:'reverse bunny suit',group:'バニー・コスプレ',parts:{upper:['reverse bunny suit','逆バニーの衣装本体'],head:['bunny ears','うさ耳'],hands:['wrist cuffs','カフス'],accessory:['detached collar with bow tie','付け襟・蝶ネクタイ']}},
+ {id:'gothic-qipao',name:'白黒ゴシックチャイナ',value:'black and white gothic qipao',group:'中華・ファンタジー',parts:{upper:['white gothic cutout qipao with black trim','白黒ゴシックチャイナの衣装本体'],hands:['white wide detached sleeves with black trim','白黒ゴシックチャイナの付け袖'],accessory:['black decorative waist straps','黒いウエスト装飾ベルト']}},
+ {id:'gothic-maid',name:'ゴシックメイド',value:'gothic maid outfit',group:'ゴシック・コスプレ',parts:{upper:['gothic frilled maid blouse','ゴシックメイドのフリルブラウス'],lower:['gothic maid skirt','ゴシックメイドのスカート'],head:['maid headdress','メイドカチューシャ'],accessory:['apron','エプロン']}},
+ {id:'corset-dress',name:'コルセットドレス',value:'corset dress',group:'ゴシック・コスプレ',parts:{upper:['lace-up corset bodice','編み上げコルセット'],lower:['full dress skirt','ドレスのフレアスカート'],hands:['detached puff sleeves','パフスリーブの付け袖']}},
+ {id:'cutout-dress',name:'カットアウトドレス',value:'cutout dress',group:'フォーマル・舞台',parts:{upper:['waist-cutout dress','ウエストカットアウトのドレス']}},
+ {id:'sister-dress',name:'シスタードレス',value:'high-collared nun dress and veil',group:'ゴシック・コスプレ',parts:{upper:['high-collared nun dress','立ち襟のシスタードレス'],head:['veil','ヴェール']}},
+ {id:'wa-gothic',name:'和風ゴシック',value:'wa gothic outfit',group:'和風・ファンタジー',parts:{upper:['gothic kimono-style top','和風ゴシックの着物風トップス'],lower:['frilled skirt','フリルスカート'],accessory:['obi belt','帯']}},
+ {id:'chinese-combat',name:'中華風戦闘服',value:'Chinese-style combat outfit',group:'中華・ファンタジー',parts:{upper:['mandarin-collar combat top','立ち襟の中華風戦闘トップス'],lower:['martial arts trousers','武術用パンツ'],hands:['decorative arm guards','装飾付きアームガード']}},
+ {id:'arabian-dancer',name:'アラビアン風踊り子',value:'Arabian dancer outfit',group:'フォーマル・舞台',parts:{upper:['ornamented dancer top','装飾付き踊り子トップス'],lower:['harem pants','ハーレムパンツ'],head:['dancer veil','踊り子のヴェール']}},
+ {id:'harness-bodysuit',name:'ハーネスボディスーツ',value:'harness bodysuit',group:'ゴシック・コスプレ',parts:{upper:['harness bodysuit','ハーネスボディスーツ本体'],accessory:['decorative harness straps','装飾ハーネス'],feet:['boots','ブーツ']}},
+ {id:'cyber-bodysuit',name:'サイバーボディスーツ',value:'cybernetic bodysuit',group:'SF・近未来',parts:{upper:['futuristic bodysuit','近未来ボディスーツ'],hands:['futuristic armored bracers','近未来の装甲アームガード'],accessory:['glowing circuit ornaments','発光する回路装飾']}},
+ {id:'armored-princess',name:'騎士姫ドレス',value:'armored princess dress',group:'ファンタジー・戦闘',parts:{upper:['dress bodice with breastplate','胸当て付きドレスの上半身'],lower:['royal dress skirt','騎士姫のドレススカート'],hands:['gauntlets','手甲']}}
+];
+function waRegisterOutfits(){
+ for(const entry of waOutfitAdditions){
+  if(!catalog.outfit.some(row=>row.value.toLowerCase()===entry.value.toLowerCase()))catalog.outfit.push({id:'outfit-extra-'+entry.id,name:entry.name,value:entry.value,group:entry.group});
+  const parts={};
+  for(const [field,[value,name]]of Object.entries(entry.parts)){
+   parts[field]=value;
+   outfitPartNames[value]??=name;
+   const group=field==='upper'?entry.group:field==='lower'?(/skirt/.test(value)?'スカート・ドレス':'パンツ'):field==='feet'?'靴':field==='head'?'帽子・頭装備':field==='hands'?'手袋・腕防具':'衣装装飾';
+   for(const store of [detailBuiltin[field],detailOptions[field].options])if(!store.some(row=>row[0]===value))store.push([value,name,group]);
+  }
+  outfitSets[entry.value]??=parts;
+ }
+}
+
 
 // Separate presentation preference does not alter working/save/export schemas.
 const legacyVisibilityKey='seaart-show-legacy-candidates-v1';
@@ -3742,6 +3781,9 @@ for(const [color,name]of itemColorPalette.filter(r=>r[0]))if(!catalog.lighting.s
 for(const [i,c]of personSpecificDefinitions.candidates.entries()){if(c.source.startsWith('catalog:')){const field=c.source.slice(8);if(!catalog[field].some(x=>x.id==='person-specific-'+i||x.value===c.value))catalog[field].push({id:'person-specific-'+i,name:c.name,value:c.value,group:c.group})}else{const field=c.source.slice(7);for(const store of [detailBuiltin[field],detailOptions[field].options])if(!store.some(x=>x[0]===c.value))store.push([c.value,c.name,c.group])}}
 
 for(const [value,parts]of Object.entries(personSpecificDefinitions.outfitSets))outfitSets[value]={...parts};
+
+// New shared wardrobe sets belong to the shipped maintenance foundations.
+waRegisterOutfits();
 
 // END HORROR BUILTIN_ADDITIONS
 const mbStandardSeed=maCopy({catalog,detailBuiltin,outfitSets});

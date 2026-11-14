@@ -16,7 +16,8 @@
         "src/current/environment-design-state.js",
         "src/current/environment-design-output.js",
         "src/current/environment-design-presets.js",
-        "src/current/environment-design-ui.js"
+        "src/current/environment-design-ui.js",
+        "src/current/outfit-additions.js"
       ]
     },
     {
