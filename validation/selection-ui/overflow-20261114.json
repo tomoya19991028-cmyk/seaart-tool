@@ -1,0 +1,2706 @@
+{
+  "checkedAtUTC": "2026-11-14T09:52:30.295733+00:00",
+  "baselineCommit": "1a49c692938229e5b5502d143382efed75a7fbe7",
+  "backupBranch": "backup/before-picker-overflow-20261114",
+  "productSHA256": "bb07f6fd3d1bda4edae1612e6243168df7768a99462123c5f427c222d2d26848",
+  "sourceSHA256": "bf060ce928bd24c20c8f56fca2e38f02ee9d7a595090b40748026ae72105a38c",
+  "swSHA256": "34682106baeae69f9e71b815c9f5521f9530eb88d5455e8f30a636bcbff507e8",
+  "syntheticDataOnly": true,
+  "physicalAndroid": false,
+  "simulatedFilterFontSizesPx": [
+    12,
+    18
+  ],
+  "before": [
+    {
+      "tag": "DIALOG",
+      "id": "personChoiceDialog",
+      "cls": "candidateDialog wbSheet selectionSheet selectionListMode",
+      "text": null,
+      "x": 8,
+      "right": 385,
+      "width": 377,
+      "client": 375,
+      "scroll": 399,
+      "css": {
+        "width": "377px",
+        "maxWidth": "377px",
+        "minWidth": "0px",
+        "marginLeft": "8px",
+        "marginRight": "8px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": "0 1 auto",
+        "gridColumn": "auto",
+        "overflow": "hidden",
+        "fontSize": "15px",
+        "padding": "0px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "personQuickTabs",
+      "cls": "quickTabs candidateQuickTabs fiveFilters characterQuickRow",
+      "text": null,
+      "x": 21,
+      "right": 396,
+      "width": 375,
+      "client": 375,
+      "scroll": 375,
+      "css": {
+        "width": "375px",
+        "maxWidth": "100%",
+        "minWidth": "0px",
+        "marginLeft": "12px",
+        "marginRight": "12px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": "0 0 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "15px",
+        "padding": "0px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "active",
+      "text": "すべて",
+      "x": 21,
+      "right": 97.25,
+      "width": 76.25,
+      "client": 74,
+      "scroll": 74,
+      "css": {
+        "width": "76.25px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 0 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "nowrap"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "選択中",
+      "x": 103.25,
+      "right": 180.84375,
+      "width": 77.59375,
+      "client": 76,
+      "scroll": 76,
+      "css": {
+        "width": "77.5938px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 0 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "nowrap"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "お気に入り",
+      "x": 186.84375,
+      "right": 288.421875,
+      "width": 101.578125,
+      "client": 100,
+      "scroll": 100,
+      "css": {
+        "width": "101.578px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 0 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "nowrap"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "personCharacterCandidates",
+      "cls": "secondary",
+      "text": "キャラ固有",
+      "x": 294.421875,
+      "right": 396,
+      "width": 101.578125,
+      "client": 100,
+      "scroll": 100,
+      "css": {
+        "width": "101.578px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 0 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "nowrap"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "レディース",
+      "x": 21,
+      "right": 216.890625,
+      "width": 195.890625,
+      "client": 194,
+      "scroll": 194,
+      "css": {
+        "width": "195.891px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 0 auto",
+        "gridColumn": "span 2",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "nowrap"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "メンズ",
+      "x": 222.890625,
+      "right": 396,
+      "width": 173.109375,
+      "client": 171,
+      "scroll": 171,
+      "css": {
+        "width": "173.109px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 0 auto",
+        "gridColumn": "span 2",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "nowrap"
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "personChoiceChoices",
+      "cls": "candidateList selectionCandidates",
+      "text": null,
+      "x": 9,
+      "right": 384,
+      "width": 375,
+      "client": 375,
+      "scroll": 375,
+      "css": {
+        "width": "375px",
+        "maxWidth": "none",
+        "minWidth": "auto",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 0%",
+        "gridColumn": "auto",
+        "overflow": "auto",
+        "fontSize": "15px",
+        "padding": "0px 12px 12px",
+        "whiteSpace": "normal"
+      }
+    }
+  ],
+  "after": [
+    {
+      "tag": "DIALOG",
+      "id": "personChoiceDialog",
+      "cls": "candidateDialog wbSheet selectionSheet selectionListMode",
+      "text": null,
+      "x": 8,
+      "right": 385,
+      "width": 377,
+      "client": 375,
+      "scroll": 375,
+      "css": {
+        "width": "377px",
+        "maxWidth": "377px",
+        "minWidth": "0px",
+        "marginLeft": "8px",
+        "marginRight": "8px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": "0 1 auto",
+        "gridColumn": "auto",
+        "overflow": "hidden",
+        "fontSize": "15px",
+        "padding": "0px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "personQuickTabs",
+      "cls": "quickTabs candidateQuickTabs fiveFilters characterQuickRow",
+      "text": null,
+      "x": 21,
+      "right": 372,
+      "width": 351,
+      "client": 351,
+      "scroll": 351,
+      "css": {
+        "width": "351px",
+        "maxWidth": "calc(100% - 24px)",
+        "minWidth": "0px",
+        "marginLeft": "12px",
+        "marginRight": "12px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": "0 0 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "15px",
+        "padding": "0px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "active",
+      "text": "すべて",
+      "x": 21,
+      "right": 91.25,
+      "width": 70.25,
+      "client": 68,
+      "scroll": 68,
+      "css": {
+        "width": "70.25px",
+        "maxWidth": "100%",
+        "minWidth": "44px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "選択中",
+      "x": 97.25,
+      "right": 168.84375,
+      "width": 71.59375,
+      "client": 70,
+      "scroll": 70,
+      "css": {
+        "width": "71.5938px",
+        "maxWidth": "100%",
+        "minWidth": "44px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "お気に入り",
+      "x": 174.84375,
+      "right": 270.421875,
+      "width": 95.578125,
+      "client": 94,
+      "scroll": 94,
+      "css": {
+        "width": "95.5781px",
+        "maxWidth": "100%",
+        "minWidth": "44px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "personCharacterCandidates",
+      "cls": "secondary",
+      "text": "キャラ固有",
+      "x": 276.421875,
+      "right": 372,
+      "width": 95.578125,
+      "client": 94,
+      "scroll": 94,
+      "css": {
+        "width": "95.5781px",
+        "maxWidth": "100%",
+        "minWidth": "44px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 auto",
+        "gridColumn": "auto",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "レディース",
+      "x": 21,
+      "right": 204.890625,
+      "width": 183.890625,
+      "client": 182,
+      "scroll": 182,
+      "css": {
+        "width": "183.891px",
+        "maxWidth": "100%",
+        "minWidth": "44px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 auto",
+        "gridColumn": "span 2",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "text": "メンズ",
+      "x": 210.890625,
+      "right": 372,
+      "width": 161.109375,
+      "client": 159,
+      "scroll": 159,
+      "css": {
+        "width": "161.109px",
+        "maxWidth": "100%",
+        "minWidth": "44px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 auto",
+        "gridColumn": "span 2",
+        "overflow": "visible",
+        "fontSize": "12px",
+        "padding": "8px 10px",
+        "whiteSpace": "normal"
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "personChoiceChoices",
+      "cls": "candidateList selectionCandidates",
+      "text": null,
+      "x": 9,
+      "right": 384,
+      "width": 375,
+      "client": 375,
+      "scroll": 375,
+      "css": {
+        "width": "375px",
+        "maxWidth": "none",
+        "minWidth": "auto",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "flex": "1 1 0%",
+        "gridColumn": "auto",
+        "overflow": "auto",
+        "fontSize": "15px",
+        "padding": "0px 12px 12px",
+        "whiteSpace": "normal"
+      }
+    }
+  ],
+  "summary": {
+    "PASS": 24,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "results": {
+    "targeted": {
+      "suite": "selection-ui",
+      "productSHA256": "bb07f6fd3d1bda4edae1612e6243168df7768a99462123c5f427c222d2d26848",
+      "tests": [
+        {
+          "id": "person-outfit-six-filters-fit-and-remain-clickable-with-saved-selection-and-large-text",
+          "status": "PASS",
+          "detail": {
+            "cases": [
+              {
+                "width": 320,
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 100.78125,
+                    "width": 79.78125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 106.78125,
+                    "right": 187.890625,
+                    "width": 81.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 193.890625,
+                    "right": 299,
+                    "width": 105.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 21,
+                    "right": 118.234375,
+                    "width": 97.234375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 124.234375,
+                    "right": 220.015625,
+                    "width": 95.78125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 226.015625,
+                    "right": 299,
+                    "width": 72.984375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ],
+                "selectedRow": {
+                  "left": 21,
+                  "right": 299,
+                  "fits": true
+                },
+                "rightEdgeTouch": true,
+                "selectionRetained": true
+              },
+              {
+                "width": 320,
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 96.34375,
+                    "width": 75.34375,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 102.34375,
+                    "right": 179.671875,
+                    "width": 77.328125,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 185.671875,
+                    "right": 299,
+                    "width": 113.328125,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 21,
+                    "right": 158.078125,
+                    "width": 137.078125,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 164.078125,
+                    "right": 299,
+                    "width": 134.921875,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ],
+                "selectedRow": {
+                  "left": 21,
+                  "right": 299,
+                  "fits": true
+                },
+                "rightEdgeTouch": true,
+                "selectionRetained": true
+              },
+              {
+                "width": 393,
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 91.25,
+                    "width": 70.25,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 97.25,
+                    "right": 168.84375,
+                    "width": 71.59375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 174.84375,
+                    "right": 270.421875,
+                    "width": 95.578125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 276.421875,
+                    "right": 372,
+                    "width": 95.578125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 21,
+                    "right": 204.890625,
+                    "width": 183.890625,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 210.890625,
+                    "right": 372,
+                    "width": 161.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ],
+                "selectedRow": {
+                  "left": 21,
+                  "right": 372,
+                  "fits": true
+                },
+                "rightEdgeTouch": true,
+                "selectionRetained": true
+              },
+              {
+                "width": 393,
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 120.6875,
+                    "width": 99.6875,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 126.6875,
+                    "right": 228.34375,
+                    "width": 101.65625,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 234.34375,
+                    "right": 372,
+                    "width": 137.65625,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 21,
+                    "right": 146.828125,
+                    "width": 125.828125,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 152.828125,
+                    "right": 276.515625,
+                    "width": 123.6875,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 282.515625,
+                    "right": 372,
+                    "width": 89.484375,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ],
+                "selectedRow": {
+                  "left": 21,
+                  "right": 372,
+                  "fits": true
+                },
+                "rightEdgeTouch": true,
+                "selectionRetained": true
+              },
+              {
+                "width": 430,
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 78.625,
+                    "width": 57.625,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 84.625,
+                    "right": 143.59375,
+                    "width": 58.96875,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 149.59375,
+                    "right": 232.546875,
+                    "width": 82.953125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 238.546875,
+                    "right": 321.5,
+                    "width": 82.953125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 327.5,
+                    "right": 409,
+                    "width": 81.5,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 21,
+                    "right": 409,
+                    "width": 388,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ],
+                "selectedRow": {
+                  "left": 21,
+                  "right": 409,
+                  "fits": true
+                },
+                "rightEdgeTouch": true,
+                "selectionRetained": true
+              },
+              {
+                "width": 430,
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 133.015625,
+                    "width": 112.015625,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 139.015625,
+                    "right": 253.015625,
+                    "width": 114,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 259.015625,
+                    "right": 409,
+                    "width": 149.984375,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 21,
+                    "right": 159.171875,
+                    "width": 138.171875,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 165.171875,
+                    "right": 301.1875,
+                    "width": 136.015625,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 307.1875,
+                    "right": 409,
+                    "width": 101.8125,
+                    "height": 42.296875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ],
+                "selectedRow": {
+                  "left": 21,
+                  "right": 409,
+                  "fits": true
+                },
+                "rightEdgeTouch": true,
+                "selectionRetained": true
+              }
+            ],
+            "physicalAndroid": false
+          }
+        },
+        {
+          "id": "main-and-both-manga-picker-filter-buttons-fit-at-narrow-width-and-large-text",
+          "status": "PASS",
+          "detail": {
+            "cases": [
+              {
+                "kind": "background",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "場所",
+                    "left": 31,
+                    "right": 93,
+                    "width": 62,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "風景構成",
+                    "left": 99,
+                    "right": 185,
+                    "width": 86,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "状態・細部",
+                    "left": 191,
+                    "right": 289,
+                    "width": 98,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "プリセット",
+                    "left": 31,
+                    "right": 289,
+                    "width": 258,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 31,
+                    "right": 104.109375,
+                    "width": 73.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 110.109375,
+                    "right": 184.5625,
+                    "width": 74.453125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 190.5625,
+                    "right": 289,
+                    "width": 98.4375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "catalog",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 84.59375,
+                    "width": 63.59375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 90.59375,
+                    "right": 155.53125,
+                    "width": 64.9375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★",
+                    "left": 161.53125,
+                    "right": 205.53125,
+                    "width": 44,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 211.53125,
+                    "right": 299,
+                    "width": 87.46875,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "person",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 95.734375,
+                    "width": 74.734375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 101.734375,
+                    "right": 177.8125,
+                    "width": 76.078125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★ お気に入り",
+                    "left": 183.8125,
+                    "right": 299,
+                    "width": 115.1875,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "creature",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "種類",
+                    "left": 21,
+                    "right": 101.65625,
+                    "width": 80.65625,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "タイプ",
+                    "left": 107.65625,
+                    "right": 200.328125,
+                    "width": 92.671875,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "大きさ",
+                    "left": 206.328125,
+                    "right": 299,
+                    "width": 92.671875,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 95.734375,
+                    "width": 74.734375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 101.734375,
+                    "right": 177.8125,
+                    "width": 76.078125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★ お気に入り",
+                    "left": 183.8125,
+                    "right": 299,
+                    "width": 115.1875,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "scene",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "状況",
+                    "left": 21,
+                    "right": 74,
+                    "width": 53,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "交流・関係",
+                    "left": 80,
+                    "right": 169,
+                    "width": 89,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "出来事",
+                    "left": 175,
+                    "right": 240,
+                    "width": 65,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "演出",
+                    "left": 246,
+                    "right": 299,
+                    "width": 53,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 95.734375,
+                    "width": 74.734375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 101.734375,
+                    "right": 177.8125,
+                    "width": 76.078125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★ お気に入り",
+                    "left": 183.8125,
+                    "right": 299,
+                    "width": 115.1875,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "relation",
+                "largeText": false,
+                "buttons": []
+              },
+              {
+                "kind": "simple",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "武器",
+                    "left": 21,
+                    "right": 139,
+                    "width": 118,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "装備・動作",
+                    "left": 145,
+                    "right": 299,
+                    "width": 154,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 96.78125,
+                    "width": 75.78125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 102.78125,
+                    "right": 179.890625,
+                    "width": 77.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★お気に入り",
+                    "left": 185.890625,
+                    "right": 299,
+                    "width": 113.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "managed",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 96.78125,
+                    "width": 75.78125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 102.78125,
+                    "right": 179.890625,
+                    "width": 77.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★お気に入り",
+                    "left": 185.890625,
+                    "right": 299,
+                    "width": 113.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 88,
+                    "width": 67,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "男性",
+                    "left": 94,
+                    "right": 150.34375,
+                    "width": 56.34375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "女性",
+                    "left": 156.34375,
+                    "right": 212.671875,
+                    "width": 56.328125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "性別なし",
+                    "left": 218.671875,
+                    "right": 299,
+                    "width": 80.328125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "legacy",
+                "largeText": false,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 88.78125,
+                    "width": 67.78125,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★お気に入り",
+                    "left": 94.78125,
+                    "right": 199.890625,
+                    "width": 105.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 205.890625,
+                    "right": 299,
+                    "width": 93.109375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ向け",
+                    "left": 21,
+                    "right": 145.59375,
+                    "width": 124.59375,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース向け",
+                    "left": 151.59375,
+                    "right": 299,
+                    "width": 147.40625,
+                    "height": 40,
+                    "font": "12px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "background",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "場所",
+                    "left": 31,
+                    "right": 139,
+                    "width": 108,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "風景構成",
+                    "left": 145,
+                    "right": 289,
+                    "width": 144,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "状態・細部",
+                    "left": 31,
+                    "right": 157,
+                    "width": 126,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "プリセット",
+                    "left": 163,
+                    "right": 289,
+                    "width": 126,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 31,
+                    "right": 156.015625,
+                    "width": 125.015625,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 162.015625,
+                    "right": 289,
+                    "width": 126.984375,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "お気に入り",
+                    "left": 31,
+                    "right": 289,
+                    "width": 258,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "catalog",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 120.34375,
+                    "width": 99.34375,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 126.34375,
+                    "right": 227.671875,
+                    "width": 101.328125,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★",
+                    "left": 233.671875,
+                    "right": 299,
+                    "width": 65.328125,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース",
+                    "left": 21,
+                    "right": 174.09375,
+                    "width": 153.09375,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ",
+                    "left": 180.09375,
+                    "right": 299,
+                    "width": 118.90625,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "person",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 156.015625,
+                    "width": 135.015625,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 162.015625,
+                    "right": 299,
+                    "width": 136.984375,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★ お気に入り",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "creature",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "種類",
+                    "left": 21,
+                    "right": 97.65625,
+                    "width": 76.65625,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "タイプ",
+                    "left": 103.65625,
+                    "right": 198.328125,
+                    "width": 94.671875,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "大きさ",
+                    "left": 204.328125,
+                    "right": 299,
+                    "width": 94.671875,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 156.015625,
+                    "width": 135.015625,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 162.015625,
+                    "right": 299,
+                    "width": 136.984375,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★ お気に入り",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "scene",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "状況",
+                    "left": 21,
+                    "right": 85.65625,
+                    "width": 64.65625,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "交流・関係",
+                    "left": 91.65625,
+                    "right": 210.328125,
+                    "width": 118.671875,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "出来事",
+                    "left": 216.328125,
+                    "right": 299,
+                    "width": 82.671875,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "演出",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 156.015625,
+                    "width": 135.015625,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 162.015625,
+                    "right": 299,
+                    "width": 136.984375,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★ お気に入り",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "relation",
+                "largeText": true,
+                "buttons": []
+              },
+              {
+                "kind": "simple",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "武器",
+                    "left": 21,
+                    "right": 130,
+                    "width": 109,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "装備・動作",
+                    "left": 136,
+                    "right": 299,
+                    "width": 163,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 156.015625,
+                    "width": 135.015625,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 162.015625,
+                    "right": 299,
+                    "width": 136.984375,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★お気に入り",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 40,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "managed",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 156.015625,
+                    "width": 135.015625,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "選択中",
+                    "left": 162.015625,
+                    "right": 299,
+                    "width": 136.984375,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★お気に入り",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 120.34375,
+                    "width": 99.34375,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "男性",
+                    "left": 126.34375,
+                    "right": 209.671875,
+                    "width": 83.328125,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "女性",
+                    "left": 215.671875,
+                    "right": 299,
+                    "width": 83.328125,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "性別なし",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              },
+              {
+                "kind": "legacy",
+                "largeText": true,
+                "buttons": [
+                  {
+                    "name": "すべて",
+                    "left": 21,
+                    "right": 129.015625,
+                    "width": 108.015625,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "★お気に入り",
+                    "left": 135.015625,
+                    "right": 299,
+                    "width": 163.984375,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "キャラ固有",
+                    "left": 21,
+                    "right": 157.171875,
+                    "width": 136.171875,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "メンズ向け",
+                    "left": 163.171875,
+                    "right": 299,
+                    "width": 135.828125,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  },
+                  {
+                    "name": "レディース向け",
+                    "left": 21,
+                    "right": 299,
+                    "width": 278,
+                    "height": 43.1875,
+                    "font": "18px",
+                    "clipped": false,
+                    "textOverflow": false
+                  }
+                ]
+              }
+            ],
+            "actualControlFontScaling": true
+          }
+        }
+      ],
+      "syntheticDataOnly": true,
+      "baseline": "1a49c692938229e5b5502d143382efed75a7fbe7",
+      "noCandidateOrStorageSchemaChanges": true,
+      "pageErrors": []
+    },
+    "existing": {
+      "suite": "selection-ui",
+      "productSHA256": "bb07f6fd3d1bda4edae1612e6243168df7768a99462123c5f427c222d2d26848",
+      "tests": [
+        {
+          "id": "previous-release-user-data-output-and-candidate-definitions-survive-UI-only-update",
+          "status": "PASS",
+          "detail": {
+            "baseline": "1a49c692938229e5b5502d143382efed75a7fbe7",
+            "workingFavoritesHistoryAndOpaqueData": true,
+            "allCandidateDefinitionsRetained": true,
+            "oldOnlyReloadControl": true,
+            "generatedTextRetained": true
+          }
+        },
+        {
+          "id": "main-picker-families-share-header-search-close-and-native-open-close-behavior",
+          "status": "PASS",
+          "detail": {
+            "families": [
+              {
+                "kind": "background",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 31,
+                  "y": 151,
+                  "width": 331,
+                  "height": 44,
+                  "right": 362,
+                  "bottom": 195,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "catalog",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 122,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 166,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "person",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 122,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 166,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "creature",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 218,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 262,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "scene",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 231.6875,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 275.6875,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "relation",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 96,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 140,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "simple",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 170,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 214,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "color",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": null,
+                "views": 0,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "quality",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": null,
+                "views": 0,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "horror",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": null,
+                "views": 0,
+                "styleCount": 1,
+                "nameLinked": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "list-card-switch-preserves-native-main-controls-selected-values-and-undo-history",
+          "status": "PASS",
+          "detail": {
+            "realNativeSelection": true,
+            "tenViewChanges": true,
+            "selectionAndUndoRetained": true
+          }
+        },
+        {
+          "id": "real-keyboard-search-keeps-focus-caret-and-result-behavior-in-main-and-both-manga-pickers",
+          "status": "PASS",
+          "detail": {
+            "mainKeyboard": true,
+            "mangaCharacterKeyboard": true,
+            "mangaWardrobeKeyboard": true
+          }
+        },
+        {
+          "id": "manga-view-switch-keeps-card-columns-favorites-generation-and-main-isolation",
+          "status": "PASS",
+          "detail": {
+            "cardColumnsRetained": true,
+            "favoritesAndSelectionsRetained": true,
+            "mainBytesRetained": true,
+            "generation": true
+          }
+        },
+        {
+          "id": "mobile-desktop-and-landscape-pickers-have-reachable-close-and-no-horizontal-overflow",
+          "status": "PASS",
+          "detail": {
+            "viewports": [
+              {
+                "viewport": {
+                  "width": 320,
+                  "height": 640
+                },
+                "families": 10
+              },
+              {
+                "viewport": {
+                  "width": 393,
+                  "height": 800
+                },
+                "families": 10
+              },
+              {
+                "viewport": {
+                  "width": 1024,
+                  "height": 900
+                },
+                "families": 10
+              },
+              {
+                "viewport": {
+                  "width": 844,
+                  "height": 390
+                },
+                "families": 10
+              }
+            ],
+            "physicalDevice": false
+          }
+        },
+        {
+          "id": "landscape-horror-features-scroll-only-the-body-and-remember-position",
+          "status": "PASS",
+          "detail": {
+            "viewports": [
+              {
+                "viewport": {
+                  "width": 640,
+                  "height": 360
+                },
+                "dialogScroll": false,
+                "bodyOverflowX": false,
+                "bodyScroll": true,
+                "scrollTop": 140,
+                "scrollRemembered": true
+              },
+              {
+                "viewport": {
+                  "width": 800,
+                  "height": 393
+                },
+                "dialogScroll": false,
+                "bodyOverflowX": false,
+                "bodyScroll": true,
+                "scrollTop": 140,
+                "scrollRemembered": true
+              },
+              {
+                "viewport": {
+                  "width": 800,
+                  "height": 430
+                },
+                "dialogScroll": false,
+                "bodyOverflowX": false,
+                "bodyScroll": true,
+                "scrollTop": 140,
+                "scrollRemembered": true
+              }
+            ],
+            "syntheticDataOnly": true
+          }
+        },
+        {
+          "id": "pose-editors-and-color-palettes-keep-their-specialized-controls",
+          "status": "PASS",
+          "detail": {
+            "structuredPoseKept": true,
+            "colorSwatchesKept": true,
+            "mangaPaletteHeader": true
+          }
+        },
+        {
+          "id": "picker-controls-work-without-the-newer-checkVisibility-browser-API",
+          "status": "PASS",
+          "detail": {
+            "nativeVisibilityFallback": true
+          }
+        },
+        {
+          "id": "repeated-native-redraws-do-not-duplicate-controls-and-save-reload-stays-compatible",
+          "status": "PASS",
+          "detail": {
+            "twelveRedraws": true,
+            "oneToolbarAndStyle": true,
+            "closedPickersReleased": true,
+            "mainAndMangaReload": true
+          }
+        }
+      ],
+      "syntheticDataOnly": true,
+      "baseline": "1a49c692938229e5b5502d143382efed75a7fbe7",
+      "noCandidateOrStorageSchemaChanges": true,
+      "pageErrors": []
+    },
+    "quality": {
+      "suite": "quality",
+      "productSHA256": "bb07f6fd3d1bda4edae1612e6243168df7768a99462123c5f427c222d2d26848",
+      "tests": [
+        {
+          "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
+          "status": "PASS",
+          "detail": {
+            "scripts": 37,
+            "parseDiagnostics": []
+          }
+        },
+        {
+          "id": "JS-all37-inline-and-maintained-modules-parse",
+          "status": "PASS",
+          "detail": {
+            "inlineScripts": 37,
+            "reassignments": 1742
+          }
+        },
+        {
+          "id": "JSON-all-maintained-data-parse",
+          "status": "PASS",
+          "detail": {
+            "jsonFiles": 10
+          }
+        },
+        {
+          "id": "BUILD-clean-byte-identical-independent-output",
+          "status": "PASS",
+          "detail": {
+            "sha256": "bb07f6fd3d1bda4edae1612e6243168df7768a99462123c5f427c222d2d26848",
+            "inputIsNotIndexHTML": true
+          }
+        },
+        {
+          "id": "PWA-manifest-relative-paths-shell-and-private-data-boundaries",
+          "status": "PASS",
+          "detail": {
+            "scope": "./",
+            "startURL": "./index.html",
+            "icons": 3
+          }
+        },
+        {
+          "id": "SAVE-namespace-version-and-latest-candidate-contract-retained",
+          "status": "PASS",
+          "detail": {
+            "savedNamespacesUnchanged": true,
+            "currentCandidateViewAllOwners": true
+          }
+        }
+      ],
+      "parseDiagnostics": [],
+      "sourceSHA256": "bb07f6fd3d1bda4edae1612e6243168df7768a99462123c5f427c222d2d26848"
+    },
+    "pwa": {
+      "suite": "pwa",
+      "productSHA256": "bb07f6fd3d1bda4edae1612e6243168df7768a99462123c5f427c222d2d26848",
+      "tests": [
+        {
+          "id": "PWA-old-main-load-and-synthetic-user-data",
+          "status": "PASS",
+          "detail": {
+            "namespace": {
+              "settings": "seaart-prompt-builder-v5-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+              "working": "SeaArt_working_state_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+              "history": "SeaArt_generated_prompts_v2-creature-adult-v1-result-access-v1-motif-person-v1-horror-v1",
+              "marker": "SeaArt_actor_forms_commit_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1",
+              "journal": "SeaArt_actor_forms_recovery_creature_adult_v1_result_access_v1_motif_person_v1_horror_v1"
+            },
+            "people": [
+              "original-pwa-audit"
+            ],
+            "creatures": [
+              "creature-pwa-audit"
+            ],
+            "favorites": 1
+          }
+        },
+        {
+          "id": "PWA-failed-update-keeps-old-worker-cache-and-data",
+          "status": "PASS",
+          "detail": {
+            "state": "redundant",
+            "cacheNames": [
+              "seaart-tool-pwa-picker-ui-20261114-v1:/seaart-tool/",
+              "unrelated-project-sentinel"
+            ],
+            "controller": "http://127.0.0.1:40623/seaart-tool/sw.js"
+          }
+        },
+        {
+          "id": "PWA-successful-update-preserves-unrelated-cache",
+          "status": "PASS",
+          "detail": {
+            "state": "activated",
+            "names": [
+              "unrelated-project-sentinel",
+              "seaart-tool-pwa-picker-ui-20261114-v2:/seaart-tool/"
+            ],
+            "scope": "http://127.0.0.1:40623/seaart-tool/",
+            "other": "keep this unrelated app"
+          }
+        },
+        {
+          "id": "PWA-new-screen-old-data-and-six-assets",
+          "status": "PASS",
+          "detail": {
+            "people": [
+              "original-pwa-audit"
+            ],
+            "creatures": [
+              "creature-pwa-audit"
+            ],
+            "hair": "blue hair",
+            "damage": [
+              "bruise"
+            ],
+            "favorites": [
+              "更新前の保存"
+            ],
+            "checks": [
+              {
+                "file": "index.html",
+                "status": 200,
+                "bytes": 4109957
+              },
+              {
+                "file": "sw.js",
+                "status": 200,
+                "bytes": 2905
+              },
+              {
+                "file": "manifest.json",
+                "status": 200,
+                "bytes": 762
+              },
+              {
+                "file": "icon-192.png",
+                "status": 200,
+                "bytes": 1369
+              },
+              {
+                "file": "icon-512.png",
+                "status": 200,
+                "bytes": 3717
+              },
+              {
+                "file": "icon-maskable-512.png",
+                "status": 200,
+                "bytes": 14905
+              }
+            ],
+            "skinCount": 37
+          }
+        },
+        {
+          "id": "PWA-offline-reload-edit-save-and-online-return",
+          "status": "PASS",
+          "detail": {
+            "offlineBootEditSaveReload": true,
+            "onlineReturn": true,
+            "physicalAndroid": false
+          }
+        },
+        {
+          "id": "PWA-foreign-cache-cannot-supply-app-request",
+          "status": "PASS",
+          "detail": {
+            "ownResponse": true,
+            "foreignPreserved": true
+          }
+        },
+        {
+          "id": "FILE-direct-open",
+          "status": "SKIP",
+          "reason": "Managed Chromium policy blocks file:// navigation; no bypass attempted"
+        }
+      ],
+      "publicUpdated": false,
+      "physicalAndroid": false
+    }
+  }
+}

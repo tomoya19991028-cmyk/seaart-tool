@@ -8,9 +8,23 @@ async function openManga(p){await p.locator('#menuOpen').click();await p.locator
 async function mangaPicker(p,r,kind){await closeAll(p);if(kind==='managed'){await r.locator('[data-card-id="7"] .cm-open-candidates').click();return r.locator('#managedCandidateDialog')}await r.locator('[data-card-id="12"]').getByRole('button',{name:'衣装・部位を選ぶ',exact:true}).click();await r.locator('[data-wardrobe-part="outfit"]').click();return r.locator('#picker')}
 const working=p=>p.evaluate(()=>hCanonical({working:captureWorking(),favorites,promptHistory,personOptionEdits,namespace:actorFormStorageKeys}));
 const mainDisk=p=>p.evaluate(()=>{clearTimeout(workingSaveTimer);return hCanonical({working:captureWorking(),keys:Object.fromEntries(Object.values(actorFormStorageKeys).map(k=>[k,localStorage.getItem(k)]))})});
+const filterButtons='.quickTabs>button,.candidateQuickTabs>button,.simpleTabs>button,.dialog-filters>button,.smu-filters>button,.smu-audience>button,.bdTabs>button,.bdQuick>button';
+async function filterBounds(d){return d.evaluate((dialog,selector)=>{
+ const frame=dialog.getBoundingClientRect();
+ return [...dialog.querySelectorAll(selector)].filter(e=>e.checkVisibility()).map(e=>{
+  const r=e.getBoundingClientRect(),parent=e.parentElement.getBoundingClientRect();
+  return {name:e.textContent.trim(),left:r.left,right:r.right,width:r.width,height:r.height,font:getComputedStyle(e).fontSize,
+   clipped:r.left<Math.max(frame.left,parent.left)-1||r.right>Math.min(frame.right,parent.right)+1,
+   textOverflow:e.scrollWidth>e.clientWidth+2||e.scrollHeight>e.clientHeight+2};
+ });
+},filterButtons)}
+async function enlargeFilterText(d){await d.evaluate((dialog,selector)=>{
+ // Simulate 150% text on the actual filter controls; root rem changes do not enlarge fixed px labels.
+ for(const button of dialog.querySelectorAll(selector))button.style.setProperty('font-size','18px','important');
+},filterButtons)}
 async function metrics(d){return d.evaluate(el=>{const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom}},head=el.querySelector('.selectionHead'),close=head?.querySelector('[data-selection-close]'),search=[...el.querySelectorAll('input[type=search],#pickerSearch')].find(e=>e.checkVisibility());return {sheet:el.classList.contains('selectionSheet'),rect:rect(el),clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,header:head?rect(head):null,close:close?rect(close):null,search:search?{...rect(search),font:getComputedStyle(search).fontSize}:null,views:el.querySelectorAll('.selectionView:not([hidden])').length,styleCount:el.getRootNode().querySelectorAll('#selectionDialogUIStyle').length,nameLinked:!!el.getAttribute('aria-label')||!!el.getAttribute('aria-labelledby')&&el.getAttribute('aria-labelledby').split(/\s+/).every(id=>!!el.getRootNode().getElementById(id))}})}
 (async()=>{
- const s=suite('selection-ui'),baseline='30f2d2709c552f3727e6a3c0b1ab27464d30de38',oldHTML=cp.execFileSync('git',['show',baseline+':index.html'],{cwd:root,maxBuffer:12*1024*1024});
+ const s=suite('selection-ui'),baseline='1a49c692938229e5b5502d143382efed75a7fbe7',oldHTML=cp.execFileSync('git',['show',baseline+':index.html'],{cwd:root,maxBuffer:12*1024*1024});
  const overrides={'index.html':oldHTML},server=await startServer({assetOverrides:overrides}),browser=await launch();let current;
  try{
   const filtered=process.env.TEST_IDS&&!process.env.TEST_IDS.split(',').includes('previous-release-user-data-output-and-candidate-definitions-survive-UI-only-update');if(filtered)overrides['index.html']=fs.readFileSync(path.join(root,'index.html'));
@@ -43,6 +57,55 @@ async function metrics(d){return d.evaluate(el=>{const rect=e=>{const r=e.getBou
    d=await mangaPicker(p,r,'legacy');await d.locator('#pickerSearch').fill('スクール水着');await d.locator('.option-card').filter({has:p.getByText('スクール水着',{exact:true})}).click();d=await mangaPicker(p,r,'legacy');await d.locator('#pickerSearch').fill('スクール水着');await d.locator('.option-card').filter({has:p.getByText('スクール水着',{exact:true})}).locator('.favorite-toggle').click();const before=await p.evaluate(()=>$('simpleMangaTool').simpleManga.snapshot());
    for(const kind of ['managed','legacy']){d=await mangaPicker(p,r,kind);await d.getByRole('button',{name:'候補をカードで表示',exact:true}).click();const cardLayout=await d.locator('.choice-card-grid').evaluate(e=>({display:getComputedStyle(e).display,columns:getComputedStyle(e).gridTemplateColumns}));assert.equal(cardLayout.display,'grid');assert(cardLayout.columns.split(' ').length>=2,kind+' original two-column cards retained');await d.getByRole('button',{name:'候補を一覧で表示',exact:true}).click();assert.equal(await d.locator('.choice-card-grid').evaluate(e=>getComputedStyle(e).display),'block');}
    assert.deepEqual(await p.evaluate(()=>$('simpleMangaTool').simpleManga.snapshot()),before);assert.equal(hash(await mainDisk(p)),hash(beforeMain));const positive=await p.evaluate(()=>$('simpleMangaTool').simpleManga.positive());assert(positive.includes('Furina')&&positive.includes('school swimsuit'));await closeAll(p);await r.locator('#simpleMainBack').click();return {cardColumnsRetained:true,favoritesAndSelectionsRetained:true,mainBytesRetained:true,generation:true};
+  });
+  await s.test('person-outfit-six-filters-fit-and-remain-clickable-with-saved-selection-and-large-text',async()=>{
+   const evidence=[];
+   for(const width of [320,393,430])for(const largeText of [false,true]){
+    const other=await pageFor(browser,server.url,{viewport:{width,height:800},isMobile:true,hasTouch:true});
+    try{
+     const q=other.page;await seed(q);
+     await q.evaluate(()=>{profiles['original-selection-ui'].outfit=[catalog.outfit.find(x=>x.value==='school uniform').id];renderProfiles();$('profiles').querySelector('[data-picker-source="catalog:outfit"]').pickerApi.open()});
+     const d=q.locator('#personChoiceDialog');await d.locator('.selectionHead').waitFor();
+     if(largeText)await enlargeFilterText(d);
+     const before=await q.evaluate(()=>hCanonical(profiles['original-selection-ui']));
+     const rows=await filterBounds(d);assert.equal(rows.length,6,'all six outfit filters are visible');
+     assert(rows.every(x=>!x.clipped&&!x.textOverflow&&x.width>=43&&x.height>=39),'all filter buttons and labels fit '+JSON.stringify(rows));
+     if(largeText)assert(rows.every(x=>x.font==='18px'),'actual filter text is enlarged');
+     assert.equal(await d.locator('.pickedRow').count(),1,'selected outfit summary retained');
+     const picked=await d.locator('.pickedRow').evaluate(e=>{const r=e.getBoundingClientRect(),d=e.closest('dialog').getBoundingClientRect();return {left:r.left,right:r.right,fits:r.left>=d.left&&r.right<=d.right}});assert(picked.fits);
+     await q.screenshot({path:path.join(s.out,'outfit-filters-'+width+(largeText?'-large':'')+'.png')});
+     for(const selector of ['[data-quick="selected"]','[data-quick="favorite"]','#personCharacterCandidates','[data-quick="all"]','[data-tendency="female"]','[data-tendency="male"]']){
+      const button=d.locator('#personQuickTabs '+selector);const box=await button.boundingBox();
+      await button.tap({position:{x:box.width-4,y:box.height/2}});
+      assert.equal(await button.getAttribute('aria-pressed'),'true','right edge activates '+selector);
+      assert((await filterBounds(d)).every(x=>!x.clipped&&!x.textOverflow),'redraw keeps filters inside frame');
+     }
+     assert.equal(await q.evaluate(()=>hCanonical(profiles['original-selection-ui'])),before,'filter operations preserve chosen outfit and metadata');
+     assert.deepEqual(other.errors,[]);evidence.push({width,largeText,buttons:rows,selectedRow:picked,rightEdgeTouch:true,selectionRetained:true});
+    }finally{await other.context.close()}
+   }
+   return {cases:evidence,physicalAndroid:false};
+  });
+  await s.test('main-and-both-manga-picker-filter-buttons-fit-at-narrow-width-and-large-text',async()=>{
+   const evidence=[];
+   for(const largeText of [false,true]){
+    const other=await pageFor(browser,server.url,{viewport:{width:320,height:800},isMobile:true,hasTouch:true});
+    try{
+     const q=other.page;await seed(q);
+     for(const kind of ['background','catalog','person','creature','scene','relation','simple']){
+      const d=await openFamily(q,kind);await d.locator('.selectionHead').waitFor();if(largeText)await enlargeFilterText(d);
+      const buttons=await filterBounds(d);assert(buttons.every(x=>!x.clipped&&!x.textOverflow),kind+' filters fit '+JSON.stringify(buttons));
+      evidence.push({kind,largeText,buttons});await closeAll(q);
+     }
+     const r=await openManga(q);for(const kind of ['managed','legacy']){
+      const d=await mangaPicker(q,r,kind);await d.locator('.selectionHead').waitFor();if(largeText)await enlargeFilterText(d);
+      const buttons=await filterBounds(d);assert(buttons.length>0,kind+' filter controls covered');assert(buttons.every(x=>!x.clipped&&!x.textOverflow),kind+' manga filters fit '+JSON.stringify(buttons));
+      await q.screenshot({path:path.join(s.out,'filter-'+kind+(largeText?'-large':'')+'.png')});evidence.push({kind,largeText,buttons});await closeAll(q);
+     }
+     assert.deepEqual(other.errors,[]);
+    }finally{await other.context.close()}
+   }
+   return {cases:evidence,actualControlFontScaling:true};
   });
   await s.test('mobile-desktop-and-landscape-pickers-have-reachable-close-and-no-horizontal-overflow',async()=>{
    const evidence=[];for(const viewport of [{width:320,height:640},{width:393,height:800},{width:1024,height:900},{width:844,height:390}]){const other=await pageFor(browser,server.url,{viewport});try{const q=other.page;await seed(q);for(const kind of ['background','catalog','person','creature','scene','color','quality','horror']){const d=await openFamily(q,kind);await d.locator('.selectionHead').waitFor();const m=await metrics(d);if(viewport.width===393&&kind==='catalog')await q.screenshot({path:path.join(s.out,'main-393x800.png')});assert(m.rect.x>=-1&&m.rect.right<=viewport.width+1,kind+' fits '+viewport.width);assert(m.scrollWidth<=m.clientWidth+2,kind+' no horizontal overflow '+viewport.width);assert(m.close.width>=43&&m.close.height>=43);assert(m.close.x>=m.rect.x&&m.close.right<=m.rect.right+1,kind+' close reachable');assert(m.close.y>=0&&m.close.bottom<=viewport.height+1,kind+' close on screen');await closeAll(q)}const rr=await openManga(q);for(const kind of ['managed','legacy']){const d=await mangaPicker(q,rr,kind);await d.locator('.selectionHead').waitFor();const m=await metrics(d);fs.writeFileSync(path.join(s.out,kind+'-'+viewport.width+'x'+viewport.height+'.json'),JSON.stringify(m,null,2));await q.screenshot({path:path.join(s.out,kind+'-'+viewport.width+'x'+viewport.height+'.png')});assert(m.scrollWidth<=m.clientWidth+2,kind+' manga width '+viewport.width+' '+JSON.stringify(m));assert(m.close.right<=viewport.width+1&&m.close.bottom<=viewport.height+1,kind+' manga close reachable');if(viewport.height>500){const h=await d.locator('.choice-card-grid').evaluate(e=>e.clientHeight);assert(h>=60,kind+' candidates remain visible');}await q.screenshot({path:path.join(s.out,kind+'-'+viewport.width+'x'+viewport.height+'.png')});await closeAll(q)}assert.deepEqual(other.errors,[]);evidence.push({viewport,families:10});}finally{await other.context.close()}}return {viewports:evidence,physicalDevice:false};
