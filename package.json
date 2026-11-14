@@ -12,7 +12,8 @@
     "test:storage": "node tests/storage/run.cjs",
     "test:ui-fast": "node tests/ui-fast/run.cjs",
     "test:manga-outfits": "node -r ./tests/ui-fast/fail-fast.cjs tests/manga-outfits/run.cjs",
-    "test:outfit-sets": "node -r ./tests/ui-fast/fail-fast.cjs tests/outfit-sets/run.cjs"
+    "test:outfit-sets": "node -r ./tests/ui-fast/fail-fast.cjs tests/outfit-sets/run.cjs",
+    "test:selection-ui": "node -r ./tests/ui-fast/fail-fast.cjs tests/selection-ui/run.cjs"
   },
   "devDependencies": {
     "acorn": "8.15.0",

@@ -13,6 +13,7 @@ on:
       - 'tests/ui-fast/**'
       - 'tests/manga-outfits/**'
       - 'tests/outfit-sets/**'
+      - 'tests/selection-ui/**'
       - 'scripts/pack-inline-manga.cjs'
       - 'docs/weapon-actions/**'
       - 'tests/v44-remaining/**'
@@ -47,6 +48,7 @@ jobs:
       - run: npm run test:ui-fast
       - run: npm run test:manga-outfits
       - run: npm run test:outfit-sets
+      - run: npm run test:selection-ui
       - uses: actions/upload-artifact@v4
         if: always()
         with:

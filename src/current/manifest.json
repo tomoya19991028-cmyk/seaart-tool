@@ -208,7 +208,8 @@
       "type": "",
       "sources": [
         "src/current/character-candidate-view.js",
-        "src/current/ui-fast-workbench.js"
+        "src/current/ui-fast-workbench.js",
+        "src/current/selection-dialog-ui.js"
       ]
     }
   ],
