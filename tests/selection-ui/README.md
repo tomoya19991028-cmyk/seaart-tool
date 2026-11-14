@@ -2,7 +2,7 @@
 
 Run `npm run test:selection-ui` with full Git history available. Use a new `RESULT_DIR` to retain results, viewport metrics and screenshots. The runner stops after its first failed case.
 
-The nine cases cover a same-origin upgrade, ten main dialog families, native selection/Undo behavior, real sequential keyboard input and caret retention, both manga picker types, original card columns, favorites and generation, four viewports including landscape, specialized pose/color controls, the visibility-API fallback, repeated redraws and save/reload.
+The ten cases cover a same-origin upgrade, ten main dialog families, native selection/Undo behavior, real sequential keyboard input and caret retention, both manga picker types, original card columns, favorites and generation, four viewports including landscape, specialized pose/color controls, the visibility-API fallback, repeated redraws and save/reload. The horror feature picker also checks body-only scrolling, a fixed close button and remembered scroll position at 640×360, 800×393 and 800×430. Keep the inherited horror-auto UI assertions unchanged.
 
 The upgrade uses a second browser context with identical saved input as an old-to-old reload control. Existing character-alias normalization changes catalog ordering during startup; compare the candidate with that control rather than requiring the unhydrated runtime catalog to equal a later reload. User working state, favorites, history and generated output are compared directly.
 

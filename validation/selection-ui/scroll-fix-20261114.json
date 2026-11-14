@@ -1,0 +1,750 @@
+{
+  "checkedAtUTC": "2026-11-14T06:28:29.171828+00:00",
+  "baselineCommit": "30f2d2709c552f3727e6a3c0b1ab27464d30de38",
+  "previousCandidateCommit": "5ebdb46b8c6a2abf3c1fae276e0ea2542e6e8987",
+  "previousFailedCI": "https://github.com/tomoya19991028-cmyk/seaart-tool/actions/runs/43550525449",
+  "productSHA256": "d944c6c61cae4d4444f0a73c31882e4d3dae9f7435c6747b5665433c34b68b9b",
+  "sourceSHA256": "69375431bc7e92df2c9a79996ba6ef7ae05be1ce4bafbd46c83e4618d5aa9589",
+  "change": "Exclude the horror dialog from whole-dialog landscape scrolling; preserve its native flex frame, body scrolling and scroll memory. All other product bytes unchanged except an explanatory comment.",
+  "unchangedInheritedAssertions": true,
+  "syntheticDataOnly": true,
+  "summary": {
+    "PASS": 28,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "results": {
+    "selectionUI": {
+      "suite": "selection-ui",
+      "productSHA256": "d944c6c61cae4d4444f0a73c31882e4d3dae9f7435c6747b5665433c34b68b9b",
+      "tests": [
+        {
+          "id": "previous-release-user-data-output-and-candidate-definitions-survive-UI-only-update",
+          "status": "PASS",
+          "detail": {
+            "baseline": "30f2d2709c552f3727e6a3c0b1ab27464d30de38",
+            "workingFavoritesHistoryAndOpaqueData": true,
+            "allCandidateDefinitionsRetained": true,
+            "oldOnlyReloadControl": true,
+            "generatedTextRetained": true
+          }
+        },
+        {
+          "id": "main-picker-families-share-header-search-close-and-native-open-close-behavior",
+          "status": "PASS",
+          "detail": {
+            "families": [
+              {
+                "kind": "background",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 31,
+                  "y": 151,
+                  "width": 331,
+                  "height": 44,
+                  "right": 362,
+                  "bottom": 195,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "catalog",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 122,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 166,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "person",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 122,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 166,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "creature",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 218,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 262,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "scene",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 231.6875,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 275.6875,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "relation",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 96,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 140,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "simple",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": {
+                  "x": 21,
+                  "y": 170,
+                  "width": 351,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 214,
+                  "font": "16px"
+                },
+                "views": 1,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "color",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": null,
+                "views": 0,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "quality",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": null,
+                "views": 0,
+                "styleCount": 1,
+                "nameLinked": true
+              },
+              {
+                "kind": "horror",
+                "sheet": true,
+                "rect": {
+                  "x": 8,
+                  "y": 16,
+                  "width": 377,
+                  "height": 784,
+                  "right": 385,
+                  "bottom": 800
+                },
+                "clientWidth": 375,
+                "scrollWidth": 375,
+                "header": {
+                  "x": 9,
+                  "y": 17,
+                  "width": 375,
+                  "height": 69,
+                  "right": 384,
+                  "bottom": 86
+                },
+                "close": {
+                  "x": 328,
+                  "y": 29,
+                  "width": 44,
+                  "height": 44,
+                  "right": 372,
+                  "bottom": 73
+                },
+                "search": null,
+                "views": 0,
+                "styleCount": 1,
+                "nameLinked": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "list-card-switch-preserves-native-main-controls-selected-values-and-undo-history",
+          "status": "PASS",
+          "detail": {
+            "realNativeSelection": true,
+            "tenViewChanges": true,
+            "selectionAndUndoRetained": true
+          }
+        },
+        {
+          "id": "real-keyboard-search-keeps-focus-caret-and-result-behavior-in-main-and-both-manga-pickers",
+          "status": "PASS",
+          "detail": {
+            "mainKeyboard": true,
+            "mangaCharacterKeyboard": true,
+            "mangaWardrobeKeyboard": true
+          }
+        },
+        {
+          "id": "manga-view-switch-keeps-card-columns-favorites-generation-and-main-isolation",
+          "status": "PASS",
+          "detail": {
+            "cardColumnsRetained": true,
+            "favoritesAndSelectionsRetained": true,
+            "mainBytesRetained": true,
+            "generation": true
+          }
+        },
+        {
+          "id": "mobile-desktop-and-landscape-pickers-have-reachable-close-and-no-horizontal-overflow",
+          "status": "PASS",
+          "detail": {
+            "viewports": [
+              {
+                "viewport": {
+                  "width": 320,
+                  "height": 640
+                },
+                "families": 10
+              },
+              {
+                "viewport": {
+                  "width": 393,
+                  "height": 800
+                },
+                "families": 10
+              },
+              {
+                "viewport": {
+                  "width": 1024,
+                  "height": 900
+                },
+                "families": 10
+              },
+              {
+                "viewport": {
+                  "width": 844,
+                  "height": 390
+                },
+                "families": 10
+              }
+            ],
+            "physicalDevice": false
+          }
+        },
+        {
+          "id": "landscape-horror-features-scroll-only-the-body-and-remember-position",
+          "status": "PASS",
+          "detail": {
+            "viewports": [
+              {
+                "viewport": {
+                  "width": 640,
+                  "height": 360
+                },
+                "dialogScroll": false,
+                "bodyOverflowX": false,
+                "bodyScroll": true,
+                "scrollTop": 140,
+                "scrollRemembered": true
+              },
+              {
+                "viewport": {
+                  "width": 800,
+                  "height": 393
+                },
+                "dialogScroll": false,
+                "bodyOverflowX": false,
+                "bodyScroll": true,
+                "scrollTop": 140,
+                "scrollRemembered": true
+              },
+              {
+                "viewport": {
+                  "width": 800,
+                  "height": 430
+                },
+                "dialogScroll": false,
+                "bodyOverflowX": false,
+                "bodyScroll": true,
+                "scrollTop": 140,
+                "scrollRemembered": true
+              }
+            ],
+            "syntheticDataOnly": true
+          }
+        },
+        {
+          "id": "pose-editors-and-color-palettes-keep-their-specialized-controls",
+          "status": "PASS",
+          "detail": {
+            "structuredPoseKept": true,
+            "colorSwatchesKept": true,
+            "mangaPaletteHeader": true
+          }
+        },
+        {
+          "id": "picker-controls-work-without-the-newer-checkVisibility-browser-API",
+          "status": "PASS",
+          "detail": {
+            "nativeVisibilityFallback": true
+          }
+        },
+        {
+          "id": "repeated-native-redraws-do-not-duplicate-controls-and-save-reload-stays-compatible",
+          "status": "PASS",
+          "detail": {
+            "twelveRedraws": true,
+            "oneToolbarAndStyle": true,
+            "closedPickersReleased": true,
+            "mainAndMangaReload": true
+          }
+        }
+      ],
+      "syntheticDataOnly": true,
+      "baseline": "30f2d2709c552f3727e6a3c0b1ab27464d30de38",
+      "noCandidateOrStorageSchemaChanges": true,
+      "pageErrors": []
+    },
+    "horrorCurrentUI": {
+      "tests": [
+        {
+          "id": "AU-360x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-360x800-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-393x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-393x800-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-430x640-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-430x800-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-640x360-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-800x393-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-800x430-1",
+          "passed": true,
+          "scale": 1,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-360x800-1.5",
+          "passed": true,
+          "scale": 1.5,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-393x800-1.5",
+          "passed": true,
+          "scale": 1.5,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        },
+        {
+          "id": "AU-430x800-1.5",
+          "passed": true,
+          "scale": 1.5,
+          "directTouch": true,
+          "autoRemovalUndo": true,
+          "compactAndScroll": true,
+          "stagedPanelSave": true
+        }
+      ],
+      "physicalDevice": false,
+      "publicOrigin": false
+    },
+    "quality": {
+      "suite": "quality",
+      "productSHA256": "d944c6c61cae4d4444f0a73c31882e4d3dae9f7435c6747b5665433c34b68b9b",
+      "tests": [
+        {
+          "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
+          "status": "PASS",
+          "detail": {
+            "scripts": 37,
+            "parseDiagnostics": []
+          }
+        },
+        {
+          "id": "JS-all37-inline-and-maintained-modules-parse",
+          "status": "PASS",
+          "detail": {
+            "inlineScripts": 37,
+            "reassignments": 1742
+          }
+        },
+        {
+          "id": "JSON-all-maintained-data-parse",
+          "status": "PASS",
+          "detail": {
+            "jsonFiles": 10
+          }
+        },
+        {
+          "id": "BUILD-clean-byte-identical-independent-output",
+          "status": "PASS",
+          "detail": {
+            "sha256": "d944c6c61cae4d4444f0a73c31882e4d3dae9f7435c6747b5665433c34b68b9b",
+            "inputIsNotIndexHTML": true
+          }
+        },
+        {
+          "id": "PWA-manifest-relative-paths-shell-and-private-data-boundaries",
+          "status": "PASS",
+          "detail": {
+            "scope": "./",
+            "startURL": "./index.html",
+            "icons": 3
+          }
+        },
+        {
+          "id": "SAVE-namespace-version-and-latest-candidate-contract-retained",
+          "status": "PASS",
+          "detail": {
+            "savedNamespacesUnchanged": true,
+            "currentCandidateViewAllOwners": true
+          }
+        }
+      ],
+      "parseDiagnostics": [],
+      "sourceSHA256": "d944c6c61cae4d4444f0a73c31882e4d3dae9f7435c6747b5665433c34b68b9b"
+    }
+  },
+  "excludedDirectLegacyInvocation": {
+    "file": ".audit-tmp/selection-ui-scroll-fix-horror/results.json",
+    "reason": "The immutable legacy file was first invoked directly without the existing current-spec replay adapter. It expects 44px scalar buttons, while the released UI uses 38px, as already documented in the unchanged adapter. This is an invalid invocation for the current UI; all 12 cases were then run successfully through the exact existing CI adapter. Neither legacy assertions nor the adapter were edited."
+  }
+}

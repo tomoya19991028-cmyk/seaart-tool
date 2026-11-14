@@ -47,6 +47,40 @@ async function metrics(d){return d.evaluate(el=>{const rect=e=>{const r=e.getBou
   await s.test('mobile-desktop-and-landscape-pickers-have-reachable-close-and-no-horizontal-overflow',async()=>{
    const evidence=[];for(const viewport of [{width:320,height:640},{width:393,height:800},{width:1024,height:900},{width:844,height:390}]){const other=await pageFor(browser,server.url,{viewport});try{const q=other.page;await seed(q);for(const kind of ['background','catalog','person','creature','scene','color','quality','horror']){const d=await openFamily(q,kind);await d.locator('.selectionHead').waitFor();const m=await metrics(d);if(viewport.width===393&&kind==='catalog')await q.screenshot({path:path.join(s.out,'main-393x800.png')});assert(m.rect.x>=-1&&m.rect.right<=viewport.width+1,kind+' fits '+viewport.width);assert(m.scrollWidth<=m.clientWidth+2,kind+' no horizontal overflow '+viewport.width);assert(m.close.width>=43&&m.close.height>=43);assert(m.close.x>=m.rect.x&&m.close.right<=m.rect.right+1,kind+' close reachable');assert(m.close.y>=0&&m.close.bottom<=viewport.height+1,kind+' close on screen');await closeAll(q)}const rr=await openManga(q);for(const kind of ['managed','legacy']){const d=await mangaPicker(q,rr,kind);await d.locator('.selectionHead').waitFor();const m=await metrics(d);fs.writeFileSync(path.join(s.out,kind+'-'+viewport.width+'x'+viewport.height+'.json'),JSON.stringify(m,null,2));await q.screenshot({path:path.join(s.out,kind+'-'+viewport.width+'x'+viewport.height+'.png')});assert(m.scrollWidth<=m.clientWidth+2,kind+' manga width '+viewport.width+' '+JSON.stringify(m));assert(m.close.right<=viewport.width+1&&m.close.bottom<=viewport.height+1,kind+' manga close reachable');if(viewport.height>500){const h=await d.locator('.choice-card-grid').evaluate(e=>e.clientHeight);assert(h>=60,kind+' candidates remain visible');}await q.screenshot({path:path.join(s.out,kind+'-'+viewport.width+'x'+viewport.height+'.png')});await closeAll(q)}assert.deepEqual(other.errors,[]);evidence.push({viewport,families:10});}finally{await other.context.close()}}return {viewports:evidence,physicalDevice:false};
   });
+  await s.test('landscape-horror-features-scroll-only-the-body-and-remember-position',async()=>{
+   const evidence=[];
+   for(const viewport of [{width:640,height:360},{width:800,height:393},{width:800,height:430}]){
+    const other=await pageFor(browser,server.url,{viewport,isMobile:true,hasTouch:true});
+    try{
+     const q=other.page;await seed(q);
+     await q.evaluate(()=>{
+      hActorRef='person:original-selection-ui';
+      hSetActor(hActorRef,{state:'partial',primaryTypeId:'horror-type-beast',autoFeatures:{version:1,enabled:true,excludedIds:[]}});
+      showMobileTab('horror');hPage=1;hRender();
+     });
+     await q.locator('[data-horror-card="6"]').tap();
+     const body=q.locator('#horrorDialogBody'),close=q.locator('#horrorDialogClose');
+     const before=await close.boundingBox();
+     await body.getByLabel('候補を検索',{exact:true}).fill('寄生体');
+     assert.equal(await body.locator('.hFeatureQuick:visible').count(),1);
+     await body.getByLabel('候補を検索',{exact:true}).fill('');
+     await body.evaluate(e=>{e.scrollTop=140});
+     const m=await q.evaluate(()=>{const d=hDialog,b=$('horrorDialogBody');return {
+      dialogScroll:d.scrollHeight>d.clientHeight+1,bodyOverflowX:b.scrollWidth>b.clientWidth+1,
+      bodyScroll:b.scrollHeight>b.clientHeight,scrollTop:b.scrollTop
+     }});
+     assert(!m.dialogScroll&&!m.bodyOverflowX,'fixed dialog with no horizontal overflow');
+     assert(m.bodyScroll&&m.scrollTop>0,'candidate body can scroll');
+     const after=await close.boundingBox();assert(Math.abs(before.y-after.y)<1,'header stays fixed');
+     assert(after.y>=0&&after.y+after.height<=viewport.height,'close remains on screen');
+     await q.screenshot({path:path.join(s.out,'horror-'+viewport.width+'x'+viewport.height+'.png')});
+     await close.tap();await q.locator('[data-horror-card="6"]').tap();
+     await q.waitForFunction(()=>$('horrorDialogBody').scrollTop>0);
+     assert.deepEqual(other.errors,[]);evidence.push({viewport,...m,scrollRemembered:true});
+    }finally{await other.context.close()}
+   }
+   return {viewports:evidence,syntheticDataOnly:true};
+  });
   await s.test('pose-editors-and-color-palettes-keep-their-specialized-controls',async()=>{
    let d=await openFamily(p,'catalog');await d.getByRole('button',{name:'候補をカードで表示',exact:true}).click();await closeAll(p);
    await p.evaluate(()=>$('profiles').querySelector('[data-picker-source="catalog:pose"]').pickerApi.open());d=p.locator('#personChoiceDialog');if(await d.locator('#poseComposeTabs').isVisible()){assert.equal(await d.locator('.selectionView:not([hidden])').count(),0);assert(!(await d.evaluate(e=>e.classList.contains('selectionCardMode'))))}await closeAll(p);
