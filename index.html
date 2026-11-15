@@ -12098,6 +12098,24 @@ const urLowStyle=node('style');urLowStyle.textContent='@media(max-height:450px){
 .paTargetKinds{display:flex;flex-wrap:wrap;gap:6px}.paTargetKinds button{min-height:36px;flex:1 1 42%}.paTargetKinds .active{color:var(--accent);background:var(--accent-dark)}
 .paNotice{font-size:.8rem;line-height:1.6;color:var(--muted);white-space:normal}.paPreview{padding:10px;border:1px solid var(--border);border-radius:10px;line-height:1.6;overflow-wrap:anywhere}.paWarning{color:#f2cf87}
 .paTools{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.paTools button{min-height:34px}.paLegacy{border-top:1px solid var(--border);margin-top:14px;padding-top:10px}
+#personChoiceDialog[data-pose-atomic=true]>.paTabs{box-sizing:border-box;width:auto!important;max-width:calc(100% - 24px);min-width:0;margin:8px 12px}
+#personChoiceDialog[data-pose-atomic=true]>.paTabs button{min-width:0;min-height:44px;height:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated,.paSelectedCards){border:1px solid var(--selection-line,var(--border));border-radius:10px;margin:8px 0;padding:0 10px;min-width:0;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated>summary,.paSelectedSummary){display:block!important;list-style:none;min-height:44px;padding:10px 0;box-sizing:border-box;cursor:pointer;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated,.paSelectedCards)>summary::before{content:'▸';margin-right:6px;color:var(--selection-accent,var(--accent))}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated,.paSelectedCards)[open]>summary::before{content:'▾'}
+#personChoiceDialog[data-pose-atomic=true] .paPoseCard{border:1px solid var(--selection-line,var(--border));border-radius:9px;padding:10px;margin:8px 0;background:var(--selection-raised,var(--surface));min-width:0;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] .paCardHeading{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-width:0}
+#personChoiceDialog[data-pose-atomic=true] .paCardType{font-size:11px;color:var(--selection-accent,var(--accent));flex:none}
+#personChoiceDialog[data-pose-atomic=true] .paCardTitle{font-size:14px;line-height:1.5;overflow-wrap:anywhere;min-width:0}
+#personChoiceDialog[data-pose-atomic=true] .paCardDetail{font-size:13px;line-height:1.6;margin:6px 0 8px;overflow-wrap:anywhere;white-space:normal}
+#personChoiceDialog[data-pose-atomic=true] .paCardActions{display:flex;flex-wrap:wrap;gap:6px}
+#personChoiceDialog[data-pose-atomic=true] .paCardActions>button{flex:1 1 65px;min-width:44px;min-height:44px;max-width:100%;height:auto;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] .paActionGrid button{min-height:44px;min-width:0;max-width:100%;height:auto;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] .paActionGrid .quickStar{flex:none;min-width:44px;width:44px;padding:6px}
+#personChoiceDialog[data-pose-atomic=true] .paBaseSection{border-top:1px solid var(--selection-line,var(--border));margin-top:8px}
+#personChoiceDialog[data-pose-atomic=true] .paBaseSection .paAdd.active{border-color:var(--selection-accent,var(--accent));background:var(--selection-raised,var(--surface));color:var(--selection-accent,var(--accent))}
+#personChoiceDialog[data-pose-atomic=true] .paTools>button{min-height:44px;min-width:44px;height:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
 .personPicker[data-atomic-pose] .personLaunch>strong,.personPicker[data-atomic-pose] .personLaunch>small{flex-shrink:0;line-height:1.5}.personPicker[data-atomic-pose] .personSelectedName{white-space:normal;overflow-wrap:anywhere}.personPicker[data-atomic-pose] .chips:empty{display:none}
 #personChoiceDialog[data-pose-atomic] #personChoiceChoices{min-height:0;overflow-y:auto;overflow-x:hidden}#personChoiceDialog[data-pose-atomic] [data-subject-control]{display:none!important}
 </style>
@@ -12602,6 +12620,26 @@ function paAdd(action,template=null){
  },'動作を追加');
 }
 function paRemove(id){if(!paReady())return;paEdit(()=>{const p=paSession.p;p.poseActions=paRows(p).filter(a=>a.id!==id);const used=new Set(paRows(p).map(a=>a.groupId));p.poseGroups=(p.poseGroups||[]).filter(g=>used.has(g.id));},'動作を解除')}
+function paSelectBase(action){
+ if(!paReady())return;const p=paSession.p,d=paDefinitions.get(action);if(!d?.base)return;
+ const bases=paRows(p).filter(a=>paDefinition(a)?.base),same=bases.find(a=>a.action===action);
+ if(same){paSession.active=same.id;paSession.tab='target';$('personChoiceSearch').value='';paDraw();$('personChoiceChoices').scrollTop=0;return}
+ const current=bases.find(a=>a.id===paSession.active)||bases[0];
+ paEdit(()=>{
+  const a=current||{id:'pa-'+crypto.randomUUID(),action};
+  a.action=action;
+  // Retain identity, grouping, shared target, weight, color and opaque metadata.
+  // Only action-specific options that the newly chosen posture cannot use are cleared.
+  if(!d.parts)delete a.movingPart;else if(!paPartOptions(d.parts).some(r=>r[0]===a.movingPart)){if(d.defaultPart)a.movingPart=d.defaultPart;else delete a.movingPart}
+  if(!d.orientation)delete a.orientation;
+  if(!d.styles?.includes(a.style))delete a.style;
+  if(!d.direction)delete a.direction;
+  if(!d.phase)delete a.phase;
+  if(action!=='sit')delete a.targetRelation;
+  if(!current){p.poseActions??=[];p.poseActions.push(a)}
+  paSession.active=a.id;paSession.tab='action';$('personChoiceSearch').value='';usageRemember('person:ポーズ・体勢','pose-v39-'+action);
+ },current?'基本姿勢を変更':'基本姿勢を設定');
+}
 function paOpenExisting(field){
  const id=paSession?.ownerId,editor=paSession?.actorEditor;$('personChoiceDialog').close();
  if(editor&&creatureHumanEditorState){const s=creatureHumanEditorState;s.tab=field==='armor'?'clothing':'equipment';s.page=field==='armor'?1:0;renderCreatureHumanEditor();$('creatureHumanEditorGrid')?.querySelector('[data-editor-card="'+field+'"] .personLaunch')?.click();return}
@@ -12610,8 +12648,12 @@ function paOpenExisting(field){
  const card=[...$('profiles').querySelectorAll('[data-detail-field]')].find(c=>c.dataset.detailField===key&&c.closest('[data-person-id]')?.dataset.personId===personKey);
  card?.querySelector('.personLaunch')?.click();
 }
-function paTools(root){
- const bar=node('div',undefined,'paTools');bar.append(paButton('武器',()=>paOpenExisting('weapon')),paButton('盾・防具',()=>paOpenExisting('armor')),paButton('携帯品',()=>paOpenExisting('carry')),paButton('エフェクト',()=>paOpenExisting('effect')),paButton('位置・関係',()=>{$('personChoiceDialog').close();$('openRelations').click()}));root.append(bar);
+function paTools(root,collapsed=false){
+ const bar=node('div',undefined,'paTools');bar.append(paButton('武器',()=>paOpenExisting('weapon')),paButton('盾・防具',()=>paOpenExisting('armor')),paButton('携帯品',()=>paOpenExisting('carry')),paButton('エフェクト',()=>paOpenExisting('effect')),paButton('位置・関係',()=>{$('personChoiceDialog').close();$('openRelations').click()}));
+ if(!collapsed){root.append(bar);return}
+ const details=node('details',undefined,'paRelated');details.dataset.poseRelated='';details.open=!!paSession?.relatedOpen;
+ details.append(node('summary','関連設定（武器・携帯品など）'),bar,node('p','物を持つ・構える状態は装備カードで設定できます。部位・相手・場所は、選択した動作の編集で指定できます。','paNotice'));
+ details.ontoggle=()=>{if(details.isConnected&&paReady())paSession.relatedOpen=details.open};root.append(details);
 }
 function paField(root,label,rows,value,onchange,key=''){
  const wrap=node('label',label),select=node('select');select.setAttribute('aria-label',label);if(key)select.dataset.poseField=key;
@@ -12641,8 +12683,31 @@ function paKinds(d){
  if(!['object','object-body'].includes(d.targetType))rows.push(['actor','人物・生物']);return rows;
 }
 function paSelectedRow(a,index){
- const p=paSession.p,wrap=node('div',undefined,'paSelected'),name=paSummary(a,p),edit=paButton((index+1)+'. '+name,()=>{paSession.active=a.id;paSession.tab='target';$('personChoiceSearch').value='';paDraw()},'secondary paEdit'),remove=paButton('×',()=>paRemove(a.id));
- edit.dataset.poseEdit=a.id;remove.dataset.poseRemove=a.id;remove.setAttribute('aria-label',name+'を解除');wrap.append(edit,remove);return wrap;
+ const p=paSession.p,name=paName(a),summary=paSummary(a,p),wrap=node('article',undefined,'paPoseCard'),type=paDefinition(a)?.base?'基本姿勢':'追加動作';wrap.dataset.poseCard=a.id;
+ const head=node('div',undefined,'paCardHeading');head.append(node('span',type,'paCardType'),node('strong',(index+1)+'. '+name,'paCardTitle'));wrap.append(head);
+ let detail=summary.startsWith(name+' → ')?summary.slice(name.length+3):summary===name?(paDefinition(a)?.base?'場所などは任意で指定できます。':'部位・対象などを編集できます。'):summary;
+ const moving=paPart(a.movingPart)?.[1],target=a.target&&(paResolve(a.target,p)?.name||'対象不在');if(moving&&target)detail=detail.replace(moving+'・'+target,moving+' → '+target);
+ const info=node('p',detail,'paCardDetail');if(paProblem(a,p))info.classList.add('paWarning');wrap.append(info);
+ const actions=node('div',undefined,'paCardActions'),edit=paButton('編集',()=>{paSession.active=a.id;paSession.tab='target';$('personChoiceSearch').value='';paDraw();$('personChoiceChoices').scrollTop=0});
+ edit.dataset.poseEdit=a.id;edit.setAttribute('aria-label',summary+'を編集');actions.append(edit);
+ if(!a.weaponAction&&paDefinitions.has(a.action)){const copy=paButton('複製',()=>paAdd(a.action,a));copy.dataset.poseDuplicate=a.id;copy.setAttribute('aria-label',summary+'を複製');actions.append(copy)}
+ const remove=paButton('解除',()=>paRemove(a.id));remove.dataset.poseRemove=a.id;remove.setAttribute('aria-label',summary+'を解除');actions.append(remove);wrap.append(actions);return wrap;
+}
+function paDrawSelected(root,actions){
+ const selected=personQuickMode==='selected',section=node(selected?'section':'details',undefined,'paSelectedCards');section.dataset.poseSelected='';
+ const bases=actions.filter(a=>paDefinition(a)?.base).length,label='選択中 '+actions.length+'件 · 基本姿勢 '+bases+'／追加動作 '+(actions.length-bases);
+ section.append(node(selected?'h3':'summary',label,selected?'paGroup':'paSelectedSummary'));
+ if(!selected){section.open=paSession.selectedOpen!==false;section.ontoggle=()=>{if(section.isConnected&&paReady())paSession.selectedOpen=section.open}}
+ actions.forEach((a,i)=>section.append(paSelectedRow(a,i)));root.append(section);
+}
+function paActionChoices(root,definitions,basic=false){
+ const grid=node('div',undefined,'paActionGrid');if(basic)grid.dataset.poseBaseGrid='';root.append(grid);
+ for(const d of definitions){
+  const chosen=basic&&paRows(paSession.p).some(a=>paDefinition(a)?.base&&a.action===d.id),line=node('div',undefined,'paSelected');
+  const b=paButton((basic?'':'＋ ')+d.name,()=>basic?paSelectBase(d.id):paAdd(d.id),'secondary paAdd');b.style.flex='1';b.dataset.poseAdd=d.id;
+  if(basic){b.dataset.poseBase=d.id;b.setAttribute('aria-pressed',String(chosen));b.classList.toggle('active',chosen)}
+  const kind='person:ポーズ・体勢',star=paButton(usageFavorite(kind,'pose-v39-'+d.id)?'★':'☆',()=>{toggleUsageFavorite(kind,'pose-v39-'+d.id);paDraw()},'quiet quickStar');star.setAttribute('aria-label',d.name+'のお気に入り');star.setAttribute('aria-pressed',String(usageFavorite(kind,'pose-v39-'+d.id)));line.append(b,star);grid.append(line);
+ }
 }
 function paCompatibility(root){
  const p=paSession.p,ids=asList(p.pose);if(!ids.length)return;
@@ -12651,15 +12716,21 @@ function paCompatibility(root){
 }
 function paDrawActions(root){
  const p=paSession.p,q=$('personChoiceSearch').value.normalize('NFKC').toLowerCase().trim(),group=$('personChoiceGroup').value,kind='person:ポーズ・体勢',sort=$('personChoiceSort').value;
- const actions=paRows(p);if(personQuickMode!=='favorite'&&actions.length){root.append(node('h3','選択した動作 · '+actions.length,'paGroup'));actions.forEach((a,i)=>root.append(paSelectedRow(a,i)))}
+ const actions=paRows(p);if(personQuickMode!=='favorite'&&actions.length)paDrawSelected(root,actions);
  if(personQuickMode==='selected'){paCompatibility(root);if(!actions.length&&!asList(p.pose).length)root.append(node('p','動作は未選択です。','paNotice'));$('personChoiceCount').textContent=actions.length+'件の動作を選択';return}
- paTools(root);root.append(node('p','＋で動作を追加し、対象タブで部位・相手・場所を指定します。同じ動作も複数追加できます。物を持つ・構える状態は装備カードで設定できます。','paNotice'));
+ paTools(root,true);
  let definitions=[...paDefinitions.values()].filter(d=>!maIsHidden('catalog:pose','pose-v39-'+d.id)&&(!group||d.group===group)&&(d.name+' '+d.value+' '+d.group).normalize('NFKC').toLowerCase().includes(q)&&(personQuickMode!=='favorite'||usageFavorite(kind,'pose-v39-'+d.id)));
  if(sort==='name')definitions.sort((a,b)=>a.name.localeCompare(b.name,'ja'));
  if(sort==='selected')definitions.sort((a,b)=>Number(actions.some(x=>x.action===b.id))-Number(actions.some(x=>x.action===a.id)));
- let last='',grid;for(const d of definitions){if(last!==d.group||sort==='name'){last=d.group;root.append(node('h3',d.group,'paGroup'));grid=node('div',undefined,'paActionGrid');root.append(grid)}
-  const line=node('div',undefined,'paSelected'),b=paButton('＋ '+d.name,()=>paAdd(d.id),'secondary paAdd'),star=paButton(usageFavorite(kind,'pose-v39-'+d.id)?'★':'☆',()=>{toggleUsageFavorite(kind,'pose-v39-'+d.id);paDraw()},'quiet quickStar');b.style.flex='1';b.dataset.poseAdd=d.id;star.setAttribute('aria-label',d.name+'のお気に入り');star.setAttribute('aria-pressed',String(usageFavorite(kind,'pose-v39-'+d.id)));line.append(b,star);grid.append(line);
+ const bases=definitions.filter(d=>d.base),storedBases=actions.filter(a=>paDefinition(a)?.base);
+ if(bases.length){const section=node('section',undefined,'paBaseSection');section.dataset.poseBaseSection='';section.append(node('h3','基本姿勢（通常1つ）','paGroup'));
+  const editing=storedBases.find(a=>a.id===paSession.active)||storedBases[0];
+  section.append(node('p',storedBases.length>1?'保存済みの基本姿勢を'+storedBases.length+'件保持しています。選び直すと「'+paName(editing)+'」だけを変更します。':storedBases.length?'選び直すと基本姿勢だけを変更します。追加動作はそのままです。':'基本姿勢を選び、追加動作を組み合わせられます。','paNotice'));
+  paActionChoices(section,bases,true);root.append(section);
  }
+ const groups=[];for(const d of definitions.filter(d=>!d.base)){let group=groups.at(-1);if(!group||group.name!==d.group||sort==='name'){group={name:d.group,rows:[]};groups.push(group)}group.rows.push(d)}
+ if(groups.length)root.append(node('h3','追加動作（複数選択可）','paGroup paAdditionalHeading'));
+ for(const {name,rows}of groups){root.append(node('h3',name==='基本の姿勢'?'支え・休息の動作':name,'paGroup'));paActionChoices(root,rows)}
  // User-added or edited English stays available; stock composites are compatibility-only.
  const custom=catalog.pose.filter(r=>!r.id.startsWith('pose-v39-')&&!relocatedPoseValues.has(r.value)&&(!paData.stock[r.id]||r.value!==paData.stock[r.id].value||personOptionEdits['catalog:pose|'+r.id]?.value&&personOptionEdits['catalog:pose|'+r.id].value!==paData.stock[r.id].value)&&!asList(p.pose).includes(r.id)&&!maIsHidden('catalog:pose',r.id)&&(!group||group==='追加・編集した候補')&&(r.name+' '+r.value).normalize('NFKC').toLowerCase().includes(q));
  if(custom.length){root.append(node('h3','追加・編集した候補','paGroup'));const grid=node('div',undefined,'paActionGrid');for(const r of custom)grid.append(paButton('＋ '+r.name,()=>paEdit(()=>{p.pose=[...new Set([...asList(p.pose),r.id])]},'追加ポーズを選択'),'secondary paAdd'));root.append(grid)}

@@ -641,6 +641,24 @@ dialog{background:var(--bg);color:var(--text);border:1px solid var(--border);bor
 .paTargetKinds{display:flex;flex-wrap:wrap;gap:6px}.paTargetKinds button{min-height:36px;flex:1 1 42%}.paTargetKinds .active{color:var(--accent);background:var(--accent-dark)}
 .paNotice{font-size:.8rem;line-height:1.6;color:var(--muted);white-space:normal}.paPreview{padding:10px;border:1px solid var(--border);border-radius:10px;line-height:1.6;overflow-wrap:anywhere}.paWarning{color:#f2cf87}
 .paTools{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.paTools button{min-height:34px}.paLegacy{border-top:1px solid var(--border);margin-top:14px;padding-top:10px}
+#personChoiceDialog[data-pose-atomic=true]>.paTabs{box-sizing:border-box;width:auto!important;max-width:calc(100% - 24px);min-width:0;margin:8px 12px}
+#personChoiceDialog[data-pose-atomic=true]>.paTabs button{min-width:0;min-height:44px;height:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated,.paSelectedCards){border:1px solid var(--selection-line,var(--border));border-radius:10px;margin:8px 0;padding:0 10px;min-width:0;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated>summary,.paSelectedSummary){display:block!important;list-style:none;min-height:44px;padding:10px 0;box-sizing:border-box;cursor:pointer;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated,.paSelectedCards)>summary::before{content:'▸';margin-right:6px;color:var(--selection-accent,var(--accent))}
+#personChoiceDialog[data-pose-atomic=true] :is(.paRelated,.paSelectedCards)[open]>summary::before{content:'▾'}
+#personChoiceDialog[data-pose-atomic=true] .paPoseCard{border:1px solid var(--selection-line,var(--border));border-radius:9px;padding:10px;margin:8px 0;background:var(--selection-raised,var(--surface));min-width:0;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] .paCardHeading{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-width:0}
+#personChoiceDialog[data-pose-atomic=true] .paCardType{font-size:11px;color:var(--selection-accent,var(--accent));flex:none}
+#personChoiceDialog[data-pose-atomic=true] .paCardTitle{font-size:14px;line-height:1.5;overflow-wrap:anywhere;min-width:0}
+#personChoiceDialog[data-pose-atomic=true] .paCardDetail{font-size:13px;line-height:1.6;margin:6px 0 8px;overflow-wrap:anywhere;white-space:normal}
+#personChoiceDialog[data-pose-atomic=true] .paCardActions{display:flex;flex-wrap:wrap;gap:6px}
+#personChoiceDialog[data-pose-atomic=true] .paCardActions>button{flex:1 1 65px;min-width:44px;min-height:44px;max-width:100%;height:auto;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] .paActionGrid button{min-height:44px;min-width:0;max-width:100%;height:auto;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+#personChoiceDialog[data-pose-atomic=true] .paActionGrid .quickStar{flex:none;min-width:44px;width:44px;padding:6px}
+#personChoiceDialog[data-pose-atomic=true] .paBaseSection{border-top:1px solid var(--selection-line,var(--border));margin-top:8px}
+#personChoiceDialog[data-pose-atomic=true] .paBaseSection .paAdd.active{border-color:var(--selection-accent,var(--accent));background:var(--selection-raised,var(--surface));color:var(--selection-accent,var(--accent))}
+#personChoiceDialog[data-pose-atomic=true] .paTools>button{min-height:44px;min-width:44px;height:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
 .personPicker[data-atomic-pose] .personLaunch>strong,.personPicker[data-atomic-pose] .personLaunch>small{flex-shrink:0;line-height:1.5}.personPicker[data-atomic-pose] .personSelectedName{white-space:normal;overflow-wrap:anywhere}.personPicker[data-atomic-pose] .chips:empty{display:none}
 #personChoiceDialog[data-pose-atomic] #personChoiceChoices{min-height:0;overflow-y:auto;overflow-x:hidden}#personChoiceDialog[data-pose-atomic] [data-subject-control]{display:none!important}
 </style>
