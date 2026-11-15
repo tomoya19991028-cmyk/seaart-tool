@@ -11,3 +11,9 @@ The first four person filters must share one row before and after redraw, includ
 The upgrade uses a second browser context with identical saved input as an old-to-old reload control. Existing character-alias normalization changes catalog ordering during startup; compare the candidate with that control rather than requiring the unhydrated runtime catalog to equal a later reload. User working state, favorites, history and generated output are compared directly.
 
 `TEST_IDS` supports targeted cases and initializes a fresh candidate fixture when the upgrade case is omitted. All fixtures are synthetic and service workers are blocked. The separate PWA suite verifies real service-worker upgrade/offline behavior. Screenshots cover 320×640, 393×800, 1024×900 and 844×390; no physical device is claimed.
+
+## Compact picker chrome
+
+`npm run test:compact-picker` checks the upgrade from `083672810ccf301552d861546ae550a2a53f9694`, preserved working data/named saves/history/output, increased candidate height, field-specific counts independent of search, native category/sort/view controls, manga redraws, staged horror close/save, and fixed bottom controls at five viewports with actual enlarged chrome text. Existing view-switch tests open the intentionally collapsed display-settings disclosure first; selection and overflow assertions remain intact.
+
+Native menus stay inside their original manga actions host so its cleanup can remove obsolete controls. The lower close button clicks the existing header close, retaining its immediate/staged semantics. Candidate dialogs show a native-state count; specialized settings without a well-defined item count show editing status instead. Horror's explicit save/cancel controls remain present, and closing does not apply drafts.

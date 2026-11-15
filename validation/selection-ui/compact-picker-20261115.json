@@ -1,0 +1,276 @@
+{
+  "baseline": "083672810ccf301552d861546ae550a2a53f9694",
+  "htmlSHA256": "f6d178be8d27de8c7324154b6249d4828720ee70e2cc24a9d4c47408e142df94",
+  "localCounts": {
+    "PASS": 45,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "syntheticDataOnly": true,
+  "physicalDeviceTested": false,
+  "sourceCompatibility": {
+    "baseline": "083672810ccf301552d861546ae550a2a53f9694",
+    "htmlSHA256": "f6d178be8d27de8c7324154b6249d4828720ee70e2cc24a9d4c47408e142df94",
+    "scriptCount": 37,
+    "changedScriptIndices": [
+      36
+    ],
+    "unchangedOtherScripts": 36,
+    "onlyMaintainedPresentationModuleReplaced": true,
+    "packedMangaPayloadUnchanged": true,
+    "storageCodeAndCandidateDefinitionsUnchanged": true
+  },
+  "candidateAreaAt393x800": {
+    "beforeHeight": 414,
+    "afterHeight": 468
+  },
+  "suites": [
+    {
+      "name": "compact-picker",
+      "counts": {
+        "PASS": 7,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "latest-release-upgrade-preserves-data-output-and-expands-candidate-area",
+          "status": "PASS"
+        },
+        {
+          "id": "footer-count-is-live-and-independent-of-search-filters-and-pagination",
+          "status": "PASS"
+        },
+        {
+          "id": "display-settings-retain-native-classification-sort-view-and-user-data",
+          "status": "PASS"
+        },
+        {
+          "id": "background-and-manga-redraws-retain-settings-counts-and-native-close",
+          "status": "PASS"
+        },
+        {
+          "id": "draft-dialog-bottom-close-discards-without-implicitly-saving",
+          "status": "PASS"
+        },
+        {
+          "id": "specialized-palettes-keep-visible-swatch-area-and-bottom-close",
+          "status": "PASS"
+        },
+        {
+          "id": "compact-header-settings-and-bottom-controls-fit-and-remain-visible-while-scrolling",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "selection-ui",
+      "counts": {
+        "PASS": 12,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "previous-release-user-data-output-and-candidate-definitions-survive-UI-only-update",
+          "status": "PASS"
+        },
+        {
+          "id": "main-picker-families-share-header-search-close-and-native-open-close-behavior",
+          "status": "PASS"
+        },
+        {
+          "id": "list-card-switch-preserves-native-main-controls-selected-values-and-undo-history",
+          "status": "PASS"
+        },
+        {
+          "id": "real-keyboard-search-keeps-focus-caret-and-result-behavior-in-main-and-both-manga-pickers",
+          "status": "PASS"
+        },
+        {
+          "id": "manga-view-switch-keeps-card-columns-favorites-generation-and-main-isolation",
+          "status": "PASS"
+        },
+        {
+          "id": "person-outfit-six-filters-fit-and-remain-clickable-with-saved-selection-and-large-text",
+          "status": "PASS"
+        },
+        {
+          "id": "main-and-both-manga-picker-filter-buttons-fit-at-narrow-width-and-large-text",
+          "status": "PASS"
+        },
+        {
+          "id": "mobile-desktop-and-landscape-pickers-have-reachable-close-and-no-horizontal-overflow",
+          "status": "PASS"
+        },
+        {
+          "id": "landscape-horror-features-scroll-only-the-body-and-remember-position",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-editors-and-color-palettes-keep-their-specialized-controls",
+          "status": "PASS"
+        },
+        {
+          "id": "picker-controls-work-without-the-newer-checkVisibility-browser-API",
+          "status": "PASS"
+        },
+        {
+          "id": "repeated-native-redraws-do-not-duplicate-controls-and-save-reload-stays-compatible",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "pose-builder",
+      "counts": {
+        "PASS": 8,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "previous-release-multiple-postures-metadata-output-and-candidate-definitions-survive-upgrade",
+          "status": "PASS"
+        },
+        {
+          "id": "base-selector-changes-one-record-retains-additional-actions-and-supports-one-step-undo",
+          "status": "PASS"
+        },
+        {
+          "id": "cards-edit-left-right-targets-duplicate-independently-remove-and-undo",
+          "status": "PASS"
+        },
+        {
+          "id": "explicit-base-duplication-is-kept-and-changing-one-never-deletes-another-saved-base",
+          "status": "PASS"
+        },
+        {
+          "id": "all-definitions-search-favorites-name-order-and-related-shortcuts-remain-available",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-cards-generation-named-save-history-working-JSON-and-reload-retain-IDs-and-metadata",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-controls-fit-mobile-desktop-landscape-and-enlarged-text-with-reachable-close",
+          "status": "PASS"
+        },
+        {
+          "id": "creature-editor-base-change-is-staged-cancelable-and-saved-without-changing-main-people",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "storage-quota",
+      "counts": {
+        "PASS": 6,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "STORAGE-journal-codec-unicode-and-legacy-roundtrip",
+          "status": "PASS"
+        },
+        {
+          "id": "STORAGE-real-browser-quota-old-writer-fails-compact-repeated-generation-succeeds",
+          "status": "PASS"
+        },
+        {
+          "id": "STORAGE-all-six-write-boundaries-captured-with-compact-journal",
+          "status": "PASS"
+        },
+        {
+          "id": "STORAGE-quota-at-each-write-rolls-back-and-retry-succeeds",
+          "status": "PASS"
+        },
+        {
+          "id": "STORAGE-crash-recovery-compact-and-original-journals-all-boundaries",
+          "status": "PASS"
+        },
+        {
+          "id": "STORAGE-corrupt-and-unknown-compact-journal-never-deletes-data",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "quality",
+      "counts": {
+        "PASS": 6,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
+          "status": "PASS"
+        },
+        {
+          "id": "JS-all37-inline-and-maintained-modules-parse",
+          "status": "PASS"
+        },
+        {
+          "id": "JSON-all-maintained-data-parse",
+          "status": "PASS"
+        },
+        {
+          "id": "BUILD-clean-byte-identical-independent-output",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-manifest-relative-paths-shell-and-private-data-boundaries",
+          "status": "PASS"
+        },
+        {
+          "id": "SAVE-namespace-version-and-latest-candidate-contract-retained",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "pwa",
+      "counts": {
+        "PASS": 6,
+        "FAIL": 0,
+        "SKIP": 1
+      },
+      "tests": [
+        {
+          "id": "PWA-old-main-load-and-synthetic-user-data",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-failed-update-keeps-old-worker-cache-and-data",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-successful-update-preserves-unrelated-cache",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-new-screen-old-data-and-six-assets",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-offline-reload-edit-save-and-online-return",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-foreign-cache-cannot-supply-app-request",
+          "status": "PASS"
+        },
+        {
+          "id": "FILE-direct-open",
+          "status": "SKIP"
+        }
+      ]
+    }
+  ],
+  "restoreBranch": "backup/before-compact-picker-20261115",
+  "fileDirectOpenSkip": "Managed Chromium blocks file://; no bypass attempted",
+  "ci": "Pending final-commit GitHub checks"
+}
