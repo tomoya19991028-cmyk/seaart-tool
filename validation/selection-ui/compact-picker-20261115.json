@@ -1,0 +1,383 @@
+{
+  "baseline": "083672810ccf301552d861546ae550a2a53f9694",
+  "htmlSHA256": "e6ef3037bd9bc7af99d686655fad67ea3893f64ea010ccac8ff19a64d208aeb5",
+  "localCounts": {
+    "PASS": 66,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "syntheticDataOnly": true,
+  "physicalDeviceTested": false,
+  "sourceCompatibility": {
+    "baseline": "083672810ccf301552d861546ae550a2a53f9694",
+    "htmlSHA256": "e6ef3037bd9bc7af99d686655fad67ea3893f64ea010ccac8ff19a64d208aeb5",
+    "scriptCount": 37,
+    "changedScriptIndices": [
+      36
+    ],
+    "unchangedOtherScripts": 36,
+    "onlyMaintainedPresentationModuleReplaced": true,
+    "packedMangaPayloadUnchanged": true,
+    "storageCodeAndCandidateDefinitionsUnchanged": true
+  },
+  "candidateAreaAt393x800": {
+    "beforeHeight": 414,
+    "afterHeight": 468
+  },
+  "toolbar": "Classification, sorting, list and cards on one row, including 320px and 18px controls in main and both manga pickers",
+  "priorCIFailureResolved": "Whole-UI test explicitly clicks the bottom Close button. Manga test opens Display settings before selecting native sort. Existing layout/selection/weight/order/favorite/upgrade assertions are retained. Both affected suites pass.",
+  "suites": [
+    {
+      "name": "compact-picker",
+      "counts": {
+        "PASS": 8,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "latest-release-upgrade-preserves-data-output-and-expands-candidate-area",
+          "status": "PASS"
+        },
+        {
+          "id": "footer-count-is-live-and-independent-of-search-filters-and-pagination",
+          "status": "PASS"
+        },
+        {
+          "id": "display-settings-retain-native-classification-sort-view-and-user-data",
+          "status": "PASS"
+        },
+        {
+          "id": "background-and-manga-redraws-retain-settings-counts-and-native-close",
+          "status": "PASS"
+        },
+        {
+          "id": "draft-dialog-bottom-close-discards-without-implicitly-saving",
+          "status": "PASS"
+        },
+        {
+          "id": "character-and-both-manga-toolbars-stay-on-one-row-with-large-text",
+          "status": "PASS"
+        },
+        {
+          "id": "specialized-palettes-keep-visible-swatch-area-and-bottom-close",
+          "status": "PASS"
+        },
+        {
+          "id": "compact-header-settings-and-bottom-controls-fit-and-remain-visible-while-scrolling",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "selection-ui",
+      "counts": {
+        "PASS": 12,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "previous-release-user-data-output-and-candidate-definitions-survive-UI-only-update",
+          "status": "PASS"
+        },
+        {
+          "id": "main-picker-families-share-header-search-close-and-native-open-close-behavior",
+          "status": "PASS"
+        },
+        {
+          "id": "list-card-switch-preserves-native-main-controls-selected-values-and-undo-history",
+          "status": "PASS"
+        },
+        {
+          "id": "real-keyboard-search-keeps-focus-caret-and-result-behavior-in-main-and-both-manga-pickers",
+          "status": "PASS"
+        },
+        {
+          "id": "manga-view-switch-keeps-card-columns-favorites-generation-and-main-isolation",
+          "status": "PASS"
+        },
+        {
+          "id": "person-outfit-six-filters-fit-and-remain-clickable-with-saved-selection-and-large-text",
+          "status": "PASS"
+        },
+        {
+          "id": "main-and-both-manga-picker-filter-buttons-fit-at-narrow-width-and-large-text",
+          "status": "PASS"
+        },
+        {
+          "id": "mobile-desktop-and-landscape-pickers-have-reachable-close-and-no-horizontal-overflow",
+          "status": "PASS"
+        },
+        {
+          "id": "landscape-horror-features-scroll-only-the-body-and-remember-position",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-editors-and-color-palettes-keep-their-specialized-controls",
+          "status": "PASS"
+        },
+        {
+          "id": "picker-controls-work-without-the-newer-checkVisibility-browser-API",
+          "status": "PASS"
+        },
+        {
+          "id": "repeated-native-redraws-do-not-duplicate-controls-and-save-reload-stays-compatible",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "ui",
+      "counts": {
+        "PASS": 14,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-hair-nine-modes-colors-and-eye-isolation",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-lighting-three-tabs-and-five-effect-tabs",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-skin-palette-select-card-remove-and-Undo",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-320x640",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-360x740",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-393x800",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-412x915",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-844x390",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-1280x900",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-393x800-font200",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-393x400-font150-keyboard-mock",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "quality",
+      "counts": {
+        "PASS": 6,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
+          "status": "PASS"
+        },
+        {
+          "id": "JS-all37-inline-and-maintained-modules-parse",
+          "status": "PASS"
+        },
+        {
+          "id": "JSON-all-maintained-data-parse",
+          "status": "PASS"
+        },
+        {
+          "id": "BUILD-clean-byte-identical-independent-output",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-manifest-relative-paths-shell-and-private-data-boundaries",
+          "status": "PASS"
+        },
+        {
+          "id": "SAVE-namespace-version-and-latest-candidate-contract-retained",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "pwa",
+      "counts": {
+        "PASS": 6,
+        "FAIL": 0,
+        "SKIP": 1
+      },
+      "tests": [
+        {
+          "id": "PWA-old-main-load-and-synthetic-user-data",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-failed-update-keeps-old-worker-cache-and-data",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-successful-update-preserves-unrelated-cache",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-new-screen-old-data-and-six-assets",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-offline-reload-edit-save-and-online-return",
+          "status": "PASS"
+        },
+        {
+          "id": "PWA-foreign-cache-cannot-supply-app-request",
+          "status": "PASS"
+        },
+        {
+          "id": "FILE-direct-open",
+          "status": "SKIP"
+        }
+      ]
+    },
+    {
+      "name": "manga-outfits",
+      "counts": {
+        "PASS": 5,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "old-release-saved-character-wardrobe-main-and-own-JSON-survive-upgrade",
+          "status": "PASS"
+        },
+        {
+          "id": "all-eight-wardrobe-pickers-separate-generic-and-character-specific-candidates",
+          "status": "PASS"
+        },
+        {
+          "id": "character-alias-search-selected-owner-priority-favorites-and-filter-transitions",
+          "status": "PASS"
+        },
+        {
+          "id": "multi-select-deduplication-weights-output-and-save-roundtrip-to-previous-release",
+          "status": "PASS"
+        },
+        {
+          "id": "shared-master-edits-and-hidden-candidates-reflect-live-without-resetting-saved-picks",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "outfit-sets",
+      "counts": {
+        "PASS": 7,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "previous-main-user-data-and-all-existing-outfit-definitions-survive-update",
+          "status": "PASS"
+        },
+        {
+          "id": "all-21-sets-are-unique-shipped-candidates-with-editable-parts-and-valid-main-output",
+          "status": "PASS"
+        },
+        {
+          "id": "main-search-finds-all-21-sets-in-Japanese-and-English-and-selects-school-swimsuit",
+          "status": "PASS"
+        },
+        {
+          "id": "set-expansion-preserves-manual-parts-colors-weights-exclusions-and-switches-untouched-parts",
+          "status": "PASS"
+        },
+        {
+          "id": "manga-selects-and-generates-all-21-shared-sets-without-mutating-main",
+          "status": "PASS"
+        },
+        {
+          "id": "new-wardrobe-parts-weight-color-and-own-JSON-survive-save-reload-and-restore",
+          "status": "PASS"
+        },
+        {
+          "id": "old-user-candidate-with-the-same-value-keeps-ID-edits-hidden-state-and-custom-set",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "pose-builder",
+      "counts": {
+        "PASS": 8,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "previous-release-multiple-postures-metadata-output-and-candidate-definitions-survive-upgrade",
+          "status": "PASS"
+        },
+        {
+          "id": "base-selector-changes-one-record-retains-additional-actions-and-supports-one-step-undo",
+          "status": "PASS"
+        },
+        {
+          "id": "cards-edit-left-right-targets-duplicate-independently-remove-and-undo",
+          "status": "PASS"
+        },
+        {
+          "id": "explicit-base-duplication-is-kept-and-changing-one-never-deletes-another-saved-base",
+          "status": "PASS"
+        },
+        {
+          "id": "all-definitions-search-favorites-name-order-and-related-shortcuts-remain-available",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-cards-generation-named-save-history-working-JSON-and-reload-retain-IDs-and-metadata",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-controls-fit-mobile-desktop-landscape-and-enlarged-text-with-reachable-close",
+          "status": "PASS"
+        },
+        {
+          "id": "creature-editor-base-change-is-staged-cancelable-and-saved-without-changing-main-people",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "restoreBranch": "backup/before-compact-picker-20261115",
+  "fileDirectOpenSkip": "Managed Chromium blocks file://; no bypass attempted",
+  "prepublishPublicFlowRehearsal": "PASS: main/manga/pose/filters/keyboard/save/history/reload/offline, no page errors",
+  "ci": "Pending checks on final remote commit"
+}
