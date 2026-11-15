@@ -2,7 +2,7 @@
   "baseline": "083672810ccf301552d861546ae550a2a53f9694",
   "htmlSHA256": "e6ef3037bd9bc7af99d686655fad67ea3893f64ea010ccac8ff19a64d208aeb5",
   "localCounts": {
-    "PASS": 46,
+    "PASS": 66,
     "FAIL": 0,
     "SKIP": 1
   },
@@ -25,7 +25,7 @@
     "afterHeight": 468
   },
   "toolbar": "Classification, sorting, list and cards on one row, including 320px and 18px controls in main and both manga pickers",
-  "priorCIFailureResolved": "Whole-UI test now explicitly clicks the bottom close button. Layout, selection, enlarged-font and palette assertions are unchanged; all 14 cases pass.",
+  "priorCIFailureResolved": "Whole-UI test explicitly clicks the bottom Close button. Manga test opens Display settings before selecting native sort. Existing layout/selection/weight/order/favorite/upgrade assertions are retained. Both affected suites pass.",
   "suites": [
     {
       "name": "compact-picker",
@@ -262,6 +262,116 @@
         {
           "id": "FILE-direct-open",
           "status": "SKIP"
+        }
+      ]
+    },
+    {
+      "name": "manga-outfits",
+      "counts": {
+        "PASS": 5,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "old-release-saved-character-wardrobe-main-and-own-JSON-survive-upgrade",
+          "status": "PASS"
+        },
+        {
+          "id": "all-eight-wardrobe-pickers-separate-generic-and-character-specific-candidates",
+          "status": "PASS"
+        },
+        {
+          "id": "character-alias-search-selected-owner-priority-favorites-and-filter-transitions",
+          "status": "PASS"
+        },
+        {
+          "id": "multi-select-deduplication-weights-output-and-save-roundtrip-to-previous-release",
+          "status": "PASS"
+        },
+        {
+          "id": "shared-master-edits-and-hidden-candidates-reflect-live-without-resetting-saved-picks",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "outfit-sets",
+      "counts": {
+        "PASS": 7,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "previous-main-user-data-and-all-existing-outfit-definitions-survive-update",
+          "status": "PASS"
+        },
+        {
+          "id": "all-21-sets-are-unique-shipped-candidates-with-editable-parts-and-valid-main-output",
+          "status": "PASS"
+        },
+        {
+          "id": "main-search-finds-all-21-sets-in-Japanese-and-English-and-selects-school-swimsuit",
+          "status": "PASS"
+        },
+        {
+          "id": "set-expansion-preserves-manual-parts-colors-weights-exclusions-and-switches-untouched-parts",
+          "status": "PASS"
+        },
+        {
+          "id": "manga-selects-and-generates-all-21-shared-sets-without-mutating-main",
+          "status": "PASS"
+        },
+        {
+          "id": "new-wardrobe-parts-weight-color-and-own-JSON-survive-save-reload-and-restore",
+          "status": "PASS"
+        },
+        {
+          "id": "old-user-candidate-with-the-same-value-keeps-ID-edits-hidden-state-and-custom-set",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "pose-builder",
+      "counts": {
+        "PASS": 8,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": [
+        {
+          "id": "previous-release-multiple-postures-metadata-output-and-candidate-definitions-survive-upgrade",
+          "status": "PASS"
+        },
+        {
+          "id": "base-selector-changes-one-record-retains-additional-actions-and-supports-one-step-undo",
+          "status": "PASS"
+        },
+        {
+          "id": "cards-edit-left-right-targets-duplicate-independently-remove-and-undo",
+          "status": "PASS"
+        },
+        {
+          "id": "explicit-base-duplication-is-kept-and-changing-one-never-deletes-another-saved-base",
+          "status": "PASS"
+        },
+        {
+          "id": "all-definitions-search-favorites-name-order-and-related-shortcuts-remain-available",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-cards-generation-named-save-history-working-JSON-and-reload-retain-IDs-and-metadata",
+          "status": "PASS"
+        },
+        {
+          "id": "pose-controls-fit-mobile-desktop-landscape-and-enlarged-text-with-reachable-close",
+          "status": "PASS"
+        },
+        {
+          "id": "creature-editor-base-change-is-staged-cancelable-and-saved-without-changing-main-people",
+          "status": "PASS"
         }
       ]
     }
