@@ -277,7 +277,7 @@ function paSelectBase(action){
   if(!d.styles?.includes(a.style))delete a.style;
   if(!d.direction)delete a.direction;
   if(!d.phase)delete a.phase;
-  if(action!=='sit')delete a.targetRelation;
+  if(!d.surface)delete a.targetRelation;
   if(!current){p.poseActions??=[];p.poseActions.push(a)}
   paSession.active=a.id;paSession.tab='action';$('personChoiceSearch').value='';usageRemember('person:ポーズ・体勢','pose-v39-'+action);
  },current?'基本姿勢を変更':'基本姿勢を設定');

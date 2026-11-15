@@ -1,9 +1,9 @@
 {
-  "checkedAtUTC": "2026-11-15T01:45:49.059526+00:00",
+  "checkedAtUTC": "2026-11-15T01:58:24.380526+00:00",
   "baselineCommit": "205d765bd33f4f70a51f9aa98b15fea7be52685d",
   "backupBranch": "backup/before-pose-builder-20261115",
-  "productSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
-  "poseSourceSHA256": "8e7c87df507fa565a721d1c1811a1f8c67e82fd456bbe9dbf948541e3e639fda",
+  "productSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
+  "poseSourceSHA256": "2be26d3ce125fd876d17e2b7ed72c3a73a6d26811adcd94a68b55c0779d7b63c",
   "templateSHA256": "3b06d6e60e5ba365e61c212c768d439079c343fa026b2970cc94e67582caa81f",
   "summary": {
     "PASS": 57,
@@ -21,12 +21,13 @@
     "other36ScriptsByteIdentical": true,
     "scripts": 37
   },
+  "spatialRelationsRetainedOnBaseChange": true,
   "syntheticDataOnly": true,
   "physicalAndroid": false,
   "results": {
     "poseBuilder": {
       "suite": "pose-builder",
-      "productSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
+      "productSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
       "tests": [
         {
           "id": "previous-release-multiple-postures-metadata-output-and-candidate-definitions-survive-upgrade",
@@ -43,10 +44,10 @@
           "id": "base-selector-changes-one-record-retains-additional-actions-and-supports-one-step-undo",
           "status": "PASS",
           "detail": {
-            "sameID": "pa-88927391-1f6b-4c55-87fb-b8231e03ef4a",
+            "sameID": "pa-264f174f-a71c-4a2b-8dd2-971e12a35ae8",
             "oneBase": true,
             "additionalActionsAndOtherOwnerRetained": true,
-            "sharedTargetAndMetadata": true,
+            "sharedTargetSpatialRelationAndMetadata": true,
             "oneUndo": true
           }
         },
@@ -195,7 +196,7 @@
     },
     "quality": {
       "suite": "quality",
-      "productSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
+      "productSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
       "tests": [
         {
           "id": "HTML-parse-script-boundaries-and-unique-static-IDs",
@@ -224,7 +225,7 @@
           "id": "BUILD-clean-byte-identical-independent-output",
           "status": "PASS",
           "detail": {
-            "sha256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
+            "sha256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
             "inputIsNotIndexHTML": true
           }
         },
@@ -247,11 +248,11 @@
         }
       ],
       "parseDiagnostics": [],
-      "sourceSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e"
+      "sourceSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0"
     },
     "pwa": {
       "suite": "pwa",
-      "productSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
+      "productSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
       "tests": [
         {
           "id": "PWA-old-main-load-and-synthetic-user-data",
@@ -282,7 +283,7 @@
               "seaart-tool-pwa-picker-ui-20261114-v2:/seaart-tool/",
               "unrelated-project-sentinel"
             ],
-            "controller": "http://127.0.0.1:36681/seaart-tool/sw.js"
+            "controller": "http://127.0.0.1:39617/seaart-tool/sw.js"
           }
         },
         {
@@ -294,7 +295,7 @@
               "unrelated-project-sentinel",
               "seaart-tool-pwa-pose-builder-20261115-v1:/seaart-tool/"
             ],
-            "scope": "http://127.0.0.1:36681/seaart-tool/",
+            "scope": "http://127.0.0.1:39617/seaart-tool/",
             "other": "keep this unrelated app"
           }
         },
@@ -319,7 +320,7 @@
               {
                 "file": "index.html",
                 "status": 200,
-                "bytes": 4118000
+                "bytes": 4117996
               },
               {
                 "file": "sw.js",
@@ -378,7 +379,7 @@
     },
     "existingUI": {
       "suite": "ui",
-      "productSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
+      "productSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
       "tests": [
         {
           "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
@@ -937,7 +938,7 @@
     },
     "weapons": {
       "suite": "weapon-actions",
-      "productSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
+      "productSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
       "tests": [
         {
           "id": "WEAPONS-taxonomy-normal-custom-hidden-and-favorites",
@@ -1069,7 +1070,7 @@
           "id": "WEAPONS-shared-instance-edit-and-one-step-Undo",
           "status": "PASS",
           "detail": {
-            "sameID": "pa-44ea8ec8-4705-4329-8822-d80454f2151e",
+            "sameID": "pa-74857b12-b2a7-4b74-9f45-6ce3d54f0336",
             "independentActions": 3,
             "oneUndo": true
           }
@@ -1090,7 +1091,7 @@
             "ordinary": "pulling the string of their bow to full draw and aiming their bow toward Creature B",
             "absent": "pulling the string of their bow to full draw and aiming their bow",
             "effective": {
-              "id": "pa-d676c1fd-3114-4732-8648-dad554531b7e",
+              "id": "pa-c9cee87e-9c70-49c4-965d-47074d5407a9",
               "action": "pull",
               "weaponAction": "bow-aim",
               "use": {
@@ -1147,7 +1148,7 @@
           "id": "WEAPONS-Creature-transient-save-capture-and-remap",
           "status": "PASS",
           "detail": {
-            "sameID": "pa-9844aef5-3028-44df-8257-3108ac8fd1bc",
+            "sameID": "pa-cb1329c2-9f0d-4ec8-8c9f-06f25778a3c7",
             "creatureSaved": true,
             "familyCaptured": true,
             "remap": true
@@ -1207,7 +1208,7 @@
     },
     "selectionUI": {
       "suite": "selection-ui",
-      "productSHA256": "8e877df110d4e73461eb71ba889c470d8204cc3927be05ecae5fc2985688f90e",
+      "productSHA256": "51b85638119c3d1090aa14bfd3424a3389e00e5c1f97b7fc197accdcace491c0",
       "tests": [
         {
           "id": "previous-release-user-data-output-and-candidate-definitions-survive-UI-only-update",
