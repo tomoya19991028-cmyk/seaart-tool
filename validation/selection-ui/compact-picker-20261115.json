@@ -1,8 +1,8 @@
 {
   "baseline": "083672810ccf301552d861546ae550a2a53f9694",
-  "htmlSHA256": "f6d178be8d27de8c7324154b6249d4828720ee70e2cc24a9d4c47408e142df94",
+  "htmlSHA256": "e6ef3037bd9bc7af99d686655fad67ea3893f64ea010ccac8ff19a64d208aeb5",
   "localCounts": {
-    "PASS": 45,
+    "PASS": 46,
     "FAIL": 0,
     "SKIP": 1
   },
@@ -10,7 +10,7 @@
   "physicalDeviceTested": false,
   "sourceCompatibility": {
     "baseline": "083672810ccf301552d861546ae550a2a53f9694",
-    "htmlSHA256": "f6d178be8d27de8c7324154b6249d4828720ee70e2cc24a9d4c47408e142df94",
+    "htmlSHA256": "e6ef3037bd9bc7af99d686655fad67ea3893f64ea010ccac8ff19a64d208aeb5",
     "scriptCount": 37,
     "changedScriptIndices": [
       36
@@ -24,11 +24,13 @@
     "beforeHeight": 414,
     "afterHeight": 468
   },
+  "toolbar": "Classification, sorting, list and cards on one row, including 320px and 18px controls in main and both manga pickers",
+  "priorCIFailureResolved": "Whole-UI test now explicitly clicks the bottom close button. Layout, selection, enlarged-font and palette assertions are unchanged; all 14 cases pass.",
   "suites": [
     {
       "name": "compact-picker",
       "counts": {
-        "PASS": 7,
+        "PASS": 8,
         "FAIL": 0,
         "SKIP": 0
       },
@@ -51,6 +53,10 @@
         },
         {
           "id": "draft-dialog-bottom-close-discards-without-implicitly-saving",
+          "status": "PASS"
+        },
+        {
+          "id": "character-and-both-manga-toolbars-stay-on-one-row-with-large-text",
           "status": "PASS"
         },
         {
@@ -122,77 +128,67 @@
       ]
     },
     {
-      "name": "pose-builder",
+      "name": "ui",
       "counts": {
-        "PASS": 8,
+        "PASS": 14,
         "FAIL": 0,
         "SKIP": 0
       },
       "tests": [
         {
-          "id": "previous-release-multiple-postures-metadata-output-and-candidate-definitions-survive-upgrade",
+          "id": "UI-cross-owner-candidate-select-switch-remove-and-shared-node",
           "status": "PASS"
         },
         {
-          "id": "base-selector-changes-one-record-retains-additional-actions-and-supports-one-step-undo",
+          "id": "UI-queued-close-keeps-shared-control-in-current-dialog",
           "status": "PASS"
         },
         {
-          "id": "cards-edit-left-right-targets-duplicate-independently-remove-and-undo",
+          "id": "UI-hair-nine-modes-colors-and-eye-isolation",
           "status": "PASS"
         },
         {
-          "id": "explicit-base-duplication-is-kept-and-changing-one-never-deletes-another-saved-base",
+          "id": "UI-lighting-three-tabs-and-five-effect-tabs",
           "status": "PASS"
         },
         {
-          "id": "all-definitions-search-favorites-name-order-and-related-shortcuts-remain-available",
+          "id": "UI-pose-independent-actions-body-and-optional-target-kinds",
           "status": "PASS"
         },
         {
-          "id": "pose-cards-generation-named-save-history-working-JSON-and-reload-retain-IDs-and-metadata",
+          "id": "UI-skin-palette-select-card-remove-and-Undo",
           "status": "PASS"
         },
         {
-          "id": "pose-controls-fit-mobile-desktop-landscape-and-enlarged-text-with-reachable-close",
+          "id": "UI-layout-320x640",
           "status": "PASS"
         },
         {
-          "id": "creature-editor-base-change-is-staged-cancelable-and-saved-without-changing-main-people",
-          "status": "PASS"
-        }
-      ]
-    },
-    {
-      "name": "storage-quota",
-      "counts": {
-        "PASS": 6,
-        "FAIL": 0,
-        "SKIP": 0
-      },
-      "tests": [
-        {
-          "id": "STORAGE-journal-codec-unicode-and-legacy-roundtrip",
+          "id": "UI-layout-360x740",
           "status": "PASS"
         },
         {
-          "id": "STORAGE-real-browser-quota-old-writer-fails-compact-repeated-generation-succeeds",
+          "id": "UI-layout-393x800",
           "status": "PASS"
         },
         {
-          "id": "STORAGE-all-six-write-boundaries-captured-with-compact-journal",
+          "id": "UI-layout-412x915",
           "status": "PASS"
         },
         {
-          "id": "STORAGE-quota-at-each-write-rolls-back-and-retry-succeeds",
+          "id": "UI-layout-844x390",
           "status": "PASS"
         },
         {
-          "id": "STORAGE-crash-recovery-compact-and-original-journals-all-boundaries",
+          "id": "UI-layout-1280x900",
           "status": "PASS"
         },
         {
-          "id": "STORAGE-corrupt-and-unknown-compact-journal-never-deletes-data",
+          "id": "UI-layout-393x800-font200",
+          "status": "PASS"
+        },
+        {
+          "id": "UI-layout-393x400-font150-keyboard-mock",
           "status": "PASS"
         }
       ]
@@ -272,5 +268,6 @@
   ],
   "restoreBranch": "backup/before-compact-picker-20261115",
   "fileDirectOpenSkip": "Managed Chromium blocks file://; no bypass attempted",
-  "ci": "Pending final-commit GitHub checks"
+  "prepublishPublicFlowRehearsal": "PASS: main/manga/pose/filters/keyboard/save/history/reload/offline, no page errors",
+  "ci": "Pending checks on final remote commit"
 }
