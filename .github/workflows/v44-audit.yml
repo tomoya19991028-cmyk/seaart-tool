@@ -51,6 +51,7 @@ jobs:
       - run: npm run test:outfit-sets
       - run: npm run test:selection-ui
       - run: npm run test:compact-picker
+      - run: npm run test:category-scroll
       - run: npm run test:pose-builder
       - uses: actions/upload-artifact@v4
         if: always()
